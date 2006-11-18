@@ -1,0 +1,373 @@
+Microsoft (R) Help Compiler
+HCRTF 4.03.0002
+Copyright (c) Microsoft Corp 1990 - 1995. All rights reserved.
+speaker workshop.hpj
+    HC3037: Warning: c:\speakerworkshop\hlp\Speaker Workshop.hm : 
+	The map value for "HIDR_AUDDATATYPE1" is the same as the map value for "HIDR_TOOLCHART".
+    HC1003: Note: topic #1 of c:\speakerworkshop\hlp\.\Speaker Workshop.rtf : 
+	A paragraph marker is formatted as a hidden character.
+    HC3025: Warning: topic #5 of c:\speakerworkshop\hlp\.\Speaker Workshop.rtf : 
+	Jump to undefined Topic ID: "HID_FOLDER".
+    HC3025: Warning: topic #13 of c:\speakerworkshop\hlp\.\Speaker Workshop.rtf : 
+	Jump to undefined Topic ID: "HID_DRVRMSR_FARFIELD".
+    HC3025: Warning: topic #13 of c:\speakerworkshop\hlp\.\Speaker Workshop.rtf : 
+	Jump to undefined Topic ID: "HID_DRVRMSR_PRINT_30DEG".
+    HC3025: Warning: topic #13 of c:\speakerworkshop\hlp\.\Speaker Workshop.rtf : 
+	Jump to undefined Topic ID: "HID_DRVRMSR_PRINT_60DEG".
+    HC3025: Warning: topic #14 of c:\speakerworkshop\hlp\.\Speaker Workshop.rtf : 
+	Jump to undefined Topic ID: "HID_ENCLCALC_CONE".
+    HC3025: Warning: topic #12 of c:\speakerworkshop\hlp\.\Speaker Workshop.rtf : 
+	Jump to undefined Topic ID: "HID_DRIVER_ESTIMATE".
+    HC3025: Warning: topic #14 of c:\speakerworkshop\hlp\.\Speaker Workshop.rtf : 
+	Jump to undefined Topic ID: "HID_ENCLCALC_TRANSIENT".
+    HC3025: Warning: topic #13 of c:\speakerworkshop\hlp\.\Speaker Workshop.rtf : 
+	Jump to undefined Topic ID: "HID_DRVRMSR_PULSE".
+    HC3025: Warning: topic #14 of c:\speakerworkshop\hlp\.\Speaker Workshop.rtf : 
+	Jump to undefined Topic ID: "HID_ENCLCALC_GROUP".
+    HC3025: Warning: topic #15 of c:\speakerworkshop\hlp\.\Speaker Workshop.rtf : 
+	Jump to undefined Topic ID: "HID_NETWORK_INS_RESISTOR".
+    HC3025: Warning: topic #15 of c:\speakerworkshop\hlp\.\Speaker Workshop.rtf : 
+	Jump to undefined Topic ID: "HID_NETWORK_INS_CAPACITOR".
+    HC3025: Warning: topic #5 of c:\speakerworkshop\hlp\.\Speaker Workshop.rtf : 
+	Jump to undefined Topic ID: "HID_NETWORK".
+    HC3025: Warning: topic #15 of c:\speakerworkshop\hlp\.\Speaker Workshop.rtf : 
+	Jump to undefined Topic ID: "HID_NETWORK_INS_CROSSOVER".
+    HC3025: Warning: topic #13 of c:\speakerworkshop\hlp\.\Speaker Workshop.rtf : 
+	Jump to undefined Topic ID: "HID_DRVRMSR_IMPSEALED".
+    HC3025: Warning: topic #6 of c:\speakerworkshop\hlp\.\Speaker Workshop.rtf : 
+	Jump to undefined Topic ID: "HID_OPTIONS_TUNED".
+    HC3025: Warning: topic #15 of c:\speakerworkshop\hlp\.\Speaker Workshop.rtf : 
+	Jump to undefined Topic ID: "HID_NETWORK_CALCRESPONSE".
+    HC3025: Warning: topic #15 of c:\speakerworkshop\hlp\.\Speaker Workshop.rtf : 
+	Jump to undefined Topic ID: "HID_NETWORK_INS_INDUCTOR".
+    HC3025: Warning: topic #6 of c:\speakerworkshop\hlp\.\Speaker Workshop.rtf : 
+	Jump to undefined Topic ID: "HID_OPTIONS_CALIBRATE".
+    HC3025: Warning: topic #16 of c:\speakerworkshop\hlp\.\Speaker Workshop.rtf : 
+	Jump to undefined Topic ID: "HID_SOUND_RECORD".
+    HC3025: Warning: topic #16 of c:\speakerworkshop\hlp\.\Speaker Workshop.rtf : 
+	Jump to undefined Topic ID: "HID_SOUND_LOOPPLAY".
+    HC3025: Warning: topic #6 of c:\speakerworkshop\hlp\.\Speaker Workshop.rtf : 
+	Jump to undefined Topic ID: "HID_OPTIONS_PREFERENCES".
+    HC3025: Warning: topic #14 of c:\speakerworkshop\hlp\.\Speaker Workshop.rtf : 
+	Jump to undefined Topic ID: "HID_ENCLCALC_IMPEDANCE".
+    HC3025: Warning: topic #13 of c:\speakerworkshop\hlp\.\Speaker Workshop.rtf : 
+	Jump to undefined Topic ID: "HID_DRVRMSR_ONAXIS".
+    HC3025: Warning: topic #13 of c:\speakerworkshop\hlp\.\Speaker Workshop.rtf : 
+	Jump to undefined Topic ID: "HID_DRVRMSR_PRINT_NEARFIELD".
+    HC3025: Warning: topic #14 of c:\speakerworkshop\hlp\.\Speaker Workshop.rtf : 
+	Jump to undefined Topic ID: "HID_ENCLCALC_SEALED".
+    HC3025: Warning: topic #10 of c:\speakerworkshop\hlp\.\Speaker Workshop.rtf : 
+	Jump to undefined Topic ID: "HID_CALC_FREQRESPONSE".
+    HC3025: Warning: topic #11 of c:\speakerworkshop\hlp\.\Speaker Workshop.rtf : 
+	Jump to undefined Topic ID: "HID_TRANS_MAKECHART".
+    HC3025: Warning: topic #5 of c:\speakerworkshop\hlp\.\Speaker Workshop.rtf : 
+	Jump to undefined Topic ID: "HID_SIGNAL".
+    HC3025: Warning: topic #14 of c:\speakerworkshop\hlp\.\Speaker Workshop.rtf : 
+	Jump to undefined Topic ID: "HID_ENCLCALC_VENTED".
+    HC3025: Warning: topic #10 of c:\speakerworkshop\hlp\.\Speaker Workshop.rtf : 
+	Jump to undefined Topic ID: "HID_CALC_COIMBINE".
+    HC3025: Warning: topic #16 of c:\speakerworkshop\hlp\.\Speaker Workshop.rtf : 
+	Jump to undefined Topic ID: "HID_SOUND_PLAY".
+    HC3025: Warning: topic #16 of c:\speakerworkshop\hlp\.\Speaker Workshop.rtf : 
+	Jump to undefined Topic ID: "HID_SOUND_STOP".
+    HC3025: Warning: topic #3 of c:\speakerworkshop\hlp\.\Speaker Workshop.rtf : 
+	Jump to undefined Topic ID: "HID_EDIT_DELETE".
+    HC3025: Warning: topic #16 of c:\speakerworkshop\hlp\.\Speaker Workshop.rtf : 
+	Jump to undefined Topic ID: "HID_SOUND_PLAYAGAIN".
+    HC3025: Warning: topic #15 of c:\speakerworkshop\hlp\.\Speaker Workshop.rtf : 
+	Jump to undefined Topic ID: "HID_NETWORK_MATCHRESPONSE".
+    HC3025: Warning: topic #13 of c:\speakerworkshop\hlp\.\Speaker Workshop.rtf : 
+	Jump to undefined Topic ID: "HID_DRVRMSR_IMPEDANCE".
+    HC3025: Warning: topic #16 of c:\speakerworkshop\hlp\.\Speaker Workshop.rtf : 
+	Jump to undefined Topic ID: "HID_SOUND_LOOPRECORD".
+    HC3025: Warning: topic #6 of c:\speakerworkshop\hlp\.\Speaker Workshop.rtf : 
+	Jump to undefined Topic ID: "HID_OPTIONS_PASSIVE".
+    HC3025: Warning: topic #15 of c:\speakerworkshop\hlp\.\Speaker Workshop.rtf : 
+	Jump to undefined Topic ID: "HID_NETWORK_INS_COMPENSATION".
+    HC3025: Warning: topic #16 of c:\speakerworkshop\hlp\.\Speaker Workshop.rtf : 
+	Jump to undefined Topic ID: "HID_SOUND_RECORDAGAIN".
+    HC3025: Warning: topic #14 of c:\speakerworkshop\hlp\.\Speaker Workshop.rtf : 
+	Jump to undefined Topic ID: "HID_ENCLCALC_FREQUENCY".
+    HC3025: Warning: topic #13 of c:\speakerworkshop\hlp\.\Speaker Workshop.rtf : 
+	Jump to undefined Topic ID: "HID_DRVRMSR_IMPFREEAIR".
+    HC3025: Warning: topic #5 of c:\speakerworkshop\hlp\.\Speaker Workshop.rtf : 
+	Jump to undefined Topic ID: "HID_DRIVER".
+    HC3025: Warning: topic #15 of c:\speakerworkshop\hlp\.\Speaker Workshop.rtf : 
+	Jump to undefined Topic ID: "HID_NETWORK_PERTURB".
+    HC3025: Warning: topic #5 of c:\speakerworkshop\hlp\.\Speaker Workshop.rtf : 
+	Jump to undefined Topic ID: "HID_ENCLOSURE".
+    HC3025: Warning: topic #5 of c:\speakerworkshop\hlp\.\Speaker Workshop.rtf : 
+	Jump to undefined Topic ID: "HID_CHART".
+    HC1010: Note: 
+	The following mapped Topic IDs were not used in any topic:
+	HIDD_BURST
+	HIDD_CHGEN
+	HIDD_NOISE
+	HIDD_PULSE
+	HIDD_SWEEP
+	HIDD_TONES
+	HIDD_XCADD
+	HIDD_XCIMP
+	HIDD_XFFFT
+	HID_SOUND_CONVERTTODATA
+	HIDR_TOOLNETWORK
+	HID_CALCULATE_PERTURB
+	HIDD_XFTRUNCATE
+	HID_CALCULATE_FREQUENCYRESPONSE
+	HID_MEASURE_IMPEDANCE
+	HID_MEASURE_MICROPHONERESPONSE
+	HIDD_USERWAVE
+	HIDD_PREFGENERAL
+	HID_NETWORK_CHANGE
+	HID_AREA_METERS
+	HIDD_PREFCHART
+	HIDD_PREFDEBUG
+	HID_VOL_LITRES
+	HID_CALCULATE_IFFT
+	HIDD_CHDATA
+	HIDD_CHGRID
+	HIDD_ENCLPARMS
+	HID_VOL_METERS
+	HIDD_CAL_VOL_BEGIN
+	HID_VOL_FEET
+	HIDD_PLAYSOUND
+	HIDR_MSUBVOLUME
+	HIDD_PREFACOUSTIC
+	HIDD_PREFREFERENCE
+	HIDD_VUMETER
+	HIDD_DSDATA
+	HID_VIEW_ZOOM
+	HID_CALCULATE_IMPEDANCE
+	HID_MSR_FREQ_30
+	HID_MSR_FREQ_60
+	HID_RESOURCE_NEW_NETWORK
+	HIDD_CALCPASSIVE
+	HID_EDIT_TEMP
+	HID_AREA_FEET
+	HID_SHOW_LEFTINPUT
+	HIDD_AUDCHKIN
+	HIDD_SELECTOBJECT
+	HID_CALC_CORRELATE
+	HID_LIN_CM
+	HID_LIN_MM
+	HID_CHART_NOTE
+	HIDR_COMPHORZ1
+	HIDR_COMPHORZ2
+	HIDR_COMPHORZ3
+	HIDD_LPAD
+	HIDD_SINE
+	HID_WIZARD_CHECKSOUNDCARD
+	HIDR_COMPVERT1
+	HIDR_COMPVERT2
+	HIDR_COMPVERT3
+	HID_OPTIONS_TUNED
+	HID_OPTIONS_CALCULATOR_DISTANCE
+	HID_NETWORK_COMPENSATION
+	HID_CALCULATE_COMBINE
+	HIDD_ANNOTATE
+	HID_MEASURE_PULSERESPONSE
+	HID_MEASURE_GATED
+	HIDD_XFSMOOTH
+	HID_MEASURE_FARFIELD
+	HIDR_TOOLSIGNAL
+	HIDD_XFSPLICE
+	HID_VIEW_RESOURCEBAR
+	HIDD_CAL_IMP_JIG1
+	HIDD_CAL_IMP_JIG2
+	HIDD_CAL_IMP_LIST
+	HIDD_DRVEQUIV
+	HID_MEASURE_FREEAIR
+	HID_RESOURCE_NEW_DRIVER
+	HID_TRANSFORM_FILTER
+	HIDP_OLE_INIT_FAILED
+	HID_CALCULATE_TRANSIENTRESPONSE
+	HID_RESOURCE_OPEN
+	HIDD_VOLUMECALC
+	HIDD_PASSIVERESULT
+	HID_OPTIONS_CALIBRATE
+	HID_SOUND_RECORD
+	HIDD_TIMEDIST
+	HID_RESOURCE_NEW_DATASET
+	HID_NETWORK_ADD_RESISTOR
+	HID_MEASURE_PASSIVECOMPONENT
+	HIDD_NETGENERAL
+	HID_GEN_MEASURE_IMPEDANCE
+	HID_OPTIONS_PREFERENCES
+	HID_VIEW_ZOOMALL
+	HID_VIEW_ZOOMOUT
+	HID_CANCEL_EDIT_SRVR
+	HIDR_TOOLCHART
+	HID_RESOURCE_NEW_FOLDER
+	HID_CALCULATE_DRIVERPARAMETERS
+	HID_RESOURCE_EXPORT
+	HIDR_MTREEVIEW
+	HID_MSR_FREQ_ONAXIS
+	HIDD_PREFNETWORK
+	HID_TRANSFORM_CHART
+	HID_TRANSFORM_DELAY
+	HID_TRANSFORM_LIMIT
+	HID_TRANSFORM_INVERT
+	HID_TRANSFORM_SCALE
+	HIDD_MLS
+	HIDD_CAL_BRD_END
+	HIDD_CAL_BRD_JIG
+	HIDD_CROSSOVER
+	HIDD_COMPENSATION
+	HID_CALCULATE_SPLICE
+	HIDD_AUDIOCHECK
+	HID_OPTIONS_WIZARD_CHECKSOUNDCARD
+	HID_DRIVER_SETEQUIVALENCE
+	HID_NETWORK_ADD_INDUCTOR
+	HID_RESOURCE_IMPORT
+	HID_MEASURE_INTERMODULATIONDISTORTION
+	HID_NETWORK_ADD_CAPACITOR
+	HID_LIN_FEET
+	HIDD_CAL_LP_END
+	HIDD_CAL_LP_JIG
+	HID_OPTIONS_VOLUME
+	HIDD_ENCLGENERAL
+	HID_AREA_CM
+	HID_AREA_MM
+	HIDD_MSRINTERMOD
+	HID_SOUND_LOOP
+	HID_SOUND_PLAY
+	HID_SOUND_STOP
+	HIDD_DOCGENERAL
+	HIDR_MSUBCHARTVIEW
+	HIDD_DRGENERAL
+	HID_MEASURE_DISTORTION
+	HIDD_DRDATAS
+	HID_NETWORK_OPTIMIZE
+	HIDD_CALCSEALED
+	HIDD_PREFMARKER
+	HID_CALC_BANDAIR
+	HIDR_MGENVIEW
+	HIDD_DRPARMS
+	HID_SHOW_BOTHINPUT
+	HIDD_CAL_IMP_END
+	HID_VOL_CM
+	HID_VOL_MM
+	HIDD_CALCMERGE
+	HID_EDIT_CHARTPROPERTIES
+	HID_CALCULATE_CONEEXCURSION
+	HIDD_CALCTUNED
+	HIDD_XFDELAY
+	HIDD_CALCBANDAIR
+	HIDD_ROOMGENERAL
+	HIDD_XFLIMIT
+	HIDD_PREFTRANSFORM
+	HIDD_XFSCALE
+	HID_CALCULATE_GROUPDELAY
+	HIDD_CAL_IMP_BEGIN
+	HIDD_XFWATERFALL
+	HID_EDIT_DELETE
+	HIDD_SAWTOOTH
+	HIDD_RECORD
+	HIDD_RENAME
+	HIDD_CALCBANDCHAMBER
+	HID_MEASURE_GATEFREQ
+	HID_NETWORK_LPAD
+	HIDD_LOCATIONS
+	HID_SOUND_PLAYAGAIN
+	HIDD_FLDGENERAL
+	HIDD_CAL_AMP_BEGIN
+	HIDD_ROOMLIST
+	HIDD_ROOMWALL
+	HID_VIEW_VUMETER
+	HID_SHOW_OUTPUT
+	HIDD_CALCVENTED
+	HIDD_ROOTVIEW
+	HIDD_SQUARE
+	HID_NETWORK_CREATEGOAL
+	HIDR_TOOLENCL
+	HIDD_XFCORRELATE
+	HID_TRANSFORM_TRUNCATE
+	HIDD_NOTCHFILTER
+	HIDD_MSRDISTORT
+	HIDR_MTESTVIEW
+	HID_MEASURE_SEALED
+	HID_LIN_INCHES
+	HID_CALCULATE_FREQUENCY
+	HID_TRANSFORM_SMOOTH
+	HIDD_DRVRESTIMATE
+	HID_OPTIONS_SAVEREGISTRY
+	HID_SOUND_LOOPRECORD
+	HIDR_MSUBAREA
+	HIDD_CROSSOPT
+	HIDR_TOOLDRIVER
+	HIDD_CALIBRATE
+	HIDD_CAL_VOL_END
+	HID_CALCULATE_FFT
+	HID_RESOURCE_NEW_ENCLOSURE
+	HID_CHART_ADDNOTE
+	HIDD_PERTURB
+	HID_RESOURCE_NEW_SIGNAL
+	HID_CALC_SEALED
+	HID_RESOURCE_RENAME
+	HIDD_CAL_BRD_BEGIN
+	HID_EDIT_INSERT
+	HIDR_AUDTESTYPE_SRVR_EMB
+	HIDD_WARNDEFAULT
+	HIDD_WARBLE
+	HIDD_CAL_AMP_END
+	HIDR_MSUBLINEAR
+	HIDD_AUDCHKOUT
+	HID_OPTIONS_PASSIVE
+	HID_CALCULATE_WATERFALL
+	HIDD_NETOPTIMIZE
+	HID_LIN_METER
+	HID_EDIT_USEDEFAULT
+	HID_NETWORK_GRID_2X2
+	HID_NETWORK_GRID_4X4
+	HID_NETWORK_GRID_8X8
+	HID_NETWORK_GRID_OFF
+	HIDD_XFFILTER
+	HIDD_PREFIMPEDANCE
+	HIDD_XFCALCFREQ
+	HIDD_DSGENERAL
+	HIDD_XFIFFT
+	HID_NETWORK_STOCK
+	HIDD_NETLIST
+	HID_NETWORK_ADD_DRIVER
+	HID_MEASURE_TIMERESPONSE
+	HIDR_MNETVIEW
+	HIDD_GENGENERAL
+	HIDD_NETLAYOUT
+	HID_SOUND_RECORDAGAIN
+	HID_CALC_BANDCHAMBER
+	HIDD_PREFMEASURE
+	HID_CALC_VENTED
+	HID_MEASURE_MASS
+	HID_MEASURE_PORT
+	HID_EDIT_CHARTDEFAULT
+	HIDD_CAL_LP_BEGIN
+	HIDD_CHARTPROP
+	HID_WIZARD_SETVOLUME
+	HID_OPTIONS_DISTANCE
+	HIDD_XFINVERT
+	HIDR_AUDTESTYPE_SRVR_IP
+	HID_SHOW_RIGHTINPUT
+	HIDD_GRPDELAY
+	HIDD_CREATEGOAL
+	HID_AREA_INCHES
+	HID_CALC_MERGE
+	HIDD_NETDRIVE
+	HIDD_ADDDRIVER
+	HID_RESOURCE_NEW_CHART
+	HIDD_ADDPASSIVE
+	HID_MEASURE_FREQUENCYRESPONSE
+	HID_RESOURCE_NEW_ROOM
+	HIDD_DISABLE48K
+	HID_MEASURE_NEARFIELD
+	HID_VOL_INCHES
+99	Topics
+128	Jumps
+60	Keywords
+25	Bitmaps
+
+
+Created c:\speakerworkshop\SpkrWork.hlp, 50,273 bytes
+Bitmaps: 6,472 bytes
+Hall+Zeck compression decreased help file by 31,302 bytes.
+Compile time: 0 minutes, 1 second
+2 notes, 47 warnings

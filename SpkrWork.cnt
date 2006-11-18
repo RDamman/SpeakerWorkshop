@@ -1,0 +1,49 @@
+:Base .\SpkrWork.hlp
+:Title Speaker Workshop Help
+1 Change Log=HID_CHANGELOG
+1 Things still to be done...=HID_TBD
+1 Using Speaker Workshop
+2 Overview=main_Overview
+2 Cables and Connectors=main_Cables
+2 Hardware Requirements=main_Hardware
+2 The main screen=main_Display
+2 The project tree=main_Tree
+2 Calibrating Speaker Workshop=main_Calibration
+2 Using Speaker Workshop=main_Using
+2 Editing charts with the mouse=main_Chart_Edit
+2 Editing networks with the mouse=main_Network_Edit
+2 Using English and Metric Units=main_Units
+1 How to...
+2 Design and Build a Speaker Overview=how_Overview
+2 Measure Driver Impedance=how_MsrDriverZ
+2 Find T/S Parameters=how_FindTSParms
+2 Design an Enclosure=how_DesignBox
+2 Measure Driver Acoustic Response=how_MsrAcoustic
+2 Design the Crossover=how_DesignXOver
+2 Measure a Component=how_MsrComponent
+1 General Menus
+2 File menu=menu_file
+2 Edit menu=menu_edit
+2 View menu=menu_view
+2 Resource menu=menu_Resource
+2 Options menu=menu_Options
+2 Window menu=menu_window
+2 Help menu=menu_help
+1 Resource Types
+2 Charts=rsrc_Chart
+2 Datasets=rsrc_Dataset
+2 Drivers=rsrc_Driver
+2 Enclosures=rsrc_Enclosure
+2 Folders=rsrc_Folder
+2 Networks=rsrc_Network
+2 Signals=rsrc_Signal
+1 Resource Specific Menus
+2 Chart menu                     charts=menu_Chart
+2 Calculate menu              datasets=menu_calculate
+2 Transform menu                  "=menu_transform
+2 Driver menu                   drivers=menu_driver
+2 Measure menu               "=menu_drvrmsr
+2 Calculate menu             enclosures=menu_EnclCalc
+2 Network menu               networks=menu_Network
+2 Sound menu                  signals=menu_sound
+2 Measure menu                "=menu_Measure

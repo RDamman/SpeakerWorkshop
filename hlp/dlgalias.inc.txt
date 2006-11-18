@@ -1,0 +1,72 @@
+; -----------------------------------------------------
+;		Dialogs
+; -----------------------------------------------------
+; HIDD_ABOUTBOX 			= HIDD_ABOUTBOX                
+; HIDD_ADDPASSIVE       	= HIDD_ADDPASSIVE               
+; HIDD_CALCBANDAIR      	= HIDD_CALCBANDAIR              
+; HIDD_CALCBANDCHAMBER  	= HIDD_CALCBANDCHAMBER           
+; HIDD_CALCDRIVER       	= HIDD_CALCDRIVER               
+; HIDD_CALCPASSIVE      	= HIDD_CALCPASSIVE              
+ HIDD_ENCLCALC_SEALED      	=		HIDD_CALCSEALED                
+ HIDD_CALCTUNED				=		HIDD_OPTIONS_TUNED            
+ HIDD_CALCVENTED			=		HIDD_ENCLCALC_VENTED          
+ HIDD_CALIBRATE            	=		HIDD_OPTIONS_CALIBRATE         
+; HIDD_CHDATA            	= HIDD_CHDATA                   
+; HIDD_CHGEN             	= HIDD_CHGEN                    
+; HIDD_CHGRID            	= HIDD_CHGRID                   
+;HIDD_COMPENSATION         	=		HIDD_NETWORK_INS_COMPENSATION  
+; HIDD_CROSSOPT            	= HIDD_CROSSOPT                 
+ HIDD_CROSSOVER            	=		HIDD_NETWORK_INS_CROSSOVER     
+; HIDD_DRDATAS             	= HIDD_DRDATAS                  
+; HIDD_DRGENERAL           	= HIDD_DRGENERAL                
+; HIDD_DRPARMS             	= HIDD_DRPARMS                  
+ HIDD_DRVRESTIMATE         	=		HIDD_DRIVER_ESTIMATE           
+; HIDD_DSDATA              	= HIDD_DSDATA                   
+; HIDD_DSGENERAL           	= HIDD_DSGENERAL                
+; HIDD_ENCLGENERAL         	= HIDD_ENCLGENERAL              
+; HIDD_ENCLPARMS           	= HIDD_ENCLPARMS                
+; HIDD_GENGENERAL          	= HIDD_GENGENERAL               
+ HIDD_GRPDELAY             	=		HIDD_DELAY                     
+; HIDD_LOCATIONS           	= HIDD_LOCATIONS                
+; HIDD_MLS                 	= HIDD_MLS                      
+ HIDD_MSRDISTORT           	=		HIDD_MSR_HARMONIC              
+;HIDD_NETDRIVE            	= HIDD_NETDRIVE                 
+;HIDD_NETGENERAL          	= HIDD_NETGENERAL               
+;HIDD_NETLAYOUT           	= HIDD_NETLAYOUT                
+;HIDD_NETLIST             	= HIDD_NETLIST                  
+; HIDD_NOISE               	= HIDD_NOISE                    
+; HIDD_NOTCHFILTER         	= HIDD_NOTCHFILTER              
+; HIDD_PASSIVERESULT       	= HIDD_PASSIVERESULT            
+ HIDD_PERTURB              	= HIDD_NETWORK_PERTURB           
+ HIDD_PLAYSOUND            	= HIDD_SOUND_PLAY                
+; HIDD_PULSE               	= HIDD_PULSE                    
+ HIDD_RECORD               	= HIDD_SOUND_RECORD              
+; HIDD_RENAME              	= HIDD_RENAME                   
+; HIDD_ROOMGENERAL         	= HIDD_ROOMGENERAL              
+; HIDD_ROOMLIST            	= HIDD_ROOMLIST                 
+; HIDD_ROOMWALL            	= HIDD_ROOMWALL                 
+; HIDD_SAWTOOTH            	= HIDD_SAWTOOTH                 
+; HIDD_SELECTOBJECT        	= HIDD_SELECTOBJECT             
+; HIDD_SINE                	= HIDD_SINE                     
+; HIDD_SQUARE              	= HIDD_SQUARE                   
+; HIDD_SWEEP               	= HIDD_SWEEP                    
+; HIDD_TONES               	= HIDD_TONES                    
+; HIDD_USERWAVE            	= HIDD_USERWAVE                 
+; HIDD_WARBLE              	= HIDD_WARBLE                   
+ HIDD_XCADD               	= HIDD_CALC_COMBINE              
+ HIDD_XCIMP                	= HIDD_CALC_IMPEDANCE            
+ HIDD_XFCALCFREQ           	= HIDD_CALC_FREQRESP             
+ HIDD_XFDELAY              	= HIDD_TRANS_DELAY               
+ HIDD_XFFFT                	= HIDD_CALC_FFT                  
+ HIDD_XFFILTER             	= HIDD_TRANS_FILTER              
+ HIDD_XFIFFT               	= HIDD_CALC_IFFT                 
+ HIDD_XFINVERT             	= HIDD_TRANS_INVERT              
+ HIDD_XFLIMIT              	= HIDD_TRANS_LIMIT               
+ HIDD_XFSCALE              	= HIDD_TRANS_SCALE               
+ HIDD_XFSMOOTH             	= HIDD_TRANS_SMOOTH              
+ HIDD_XFSPLICE             	= HIDD_CALC_SPLICE               
+ HIDD_XFTRUNCATE 			= HIDD_TRANS_TRUNCATE           
+
+; -----------------------------------------------------
+;		Menus
+; -----------------------------------------------------

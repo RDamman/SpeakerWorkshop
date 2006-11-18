@@ -1,0 +1,2450 @@
+// audtest.odl : type library source for audtest.exe
+
+// This file will be processed by the Make Type Library (mktyplib) tool to
+// produce the type library (audtest.tlb).
+
+[ uuid(018FC421-7EE6-11CE-BC27-444553540000), version(1.0) ]
+library audtest
+{
+	importlib("stdole32.tlb");
+	
+	//  Primary dispatch interface for CAudtestDoc
+	
+	[ uuid(018FC422-7EE6-11CE-BC27-444553540000) ]
+	dispinterface IAudtes
+	{
+		properties:
+			// NOTE - ClassWizard will maintain property information here.
+			//    Use extreme caution when editing this section.
+			//{{AFX_ODL_PROP(CAudtestDoc)
+			//}}AFX_ODL_PROP
+			
+		methods:
+			// NOTE - ClassWizard will maintain method information here.
+			//    Use extreme caution when editing this section.
+			//{{AFX_ODL_METHOD(CAudtestDoc)
+			//}}AFX_ODL_METHOD
+
+	};
+
+	//  Class information for CAudtestDoc
+	
+	[ uuid(018FC420-7EE6-11CE-BC27-444553540000) ]
+	coclass CAudtestDoc
+	{
+		[default] dispinterface IAudtes;
+	};
+
+
+	//  Primary dispatch interface for CDlgSweep
+	
+	[ uuid(A21C48A2-7EEB-11CE-BC27-444553540000) ]
+	dispinterface IDlgSweep
+	{
+		properties:
+			// NOTE - ClassWizard will maintain property information here.
+			//    Use extreme caution when editing this section.
+			//{{AFX_ODL_PROP(CDlgSweep)
+			//}}AFX_ODL_PROP
+			
+		methods:
+			// NOTE - ClassWizard will maintain method information here.
+			//    Use extreme caution when editing this section.
+			//{{AFX_ODL_METHOD(CDlgSweep)
+			//}}AFX_ODL_METHOD
+
+	};
+
+	//  Class information for CDlgSweep
+
+	[ uuid(A21C48A3-7EEB-11CE-BC27-444553540000) ]
+	coclass CDlgSweep
+	{
+		[default] dispinterface IDlgSweep;
+	};
+
+
+	//  Primary dispatch interface for CDlgSine
+	
+	[ uuid(F83EBB20-7EEE-11CE-BC27-444553540000) ]
+	dispinterface IDlgSine
+	{
+		properties:
+			// NOTE - ClassWizard will maintain property information here.
+			//    Use extreme caution when editing this section.
+			//{{AFX_ODL_PROP(CDlgSine)
+			//}}AFX_ODL_PROP
+			
+		methods:
+			// NOTE - ClassWizard will maintain method information here.
+			//    Use extreme caution when editing this section.
+			//{{AFX_ODL_METHOD(CDlgSine)
+			//}}AFX_ODL_METHOD
+
+	};
+
+	//  Class information for CDlgSine
+
+	[ uuid(F83EBB21-7EEE-11CE-BC27-444553540000) ]
+	coclass CDlgSine
+	{
+		[default] dispinterface IDlgSine;
+	};
+
+
+	//  Primary dispatch interface for CDlgGenerator
+	
+	[ uuid(F83EBB22-7EEE-11CE-BC27-444553540000) ]
+	dispinterface IDlgGenerator
+	{
+		properties:
+			// NOTE - ClassWizard will maintain property information here.
+			//    Use extreme caution when editing this section.
+			//{{AFX_ODL_PROP(CDlgGenerator)
+			//}}AFX_ODL_PROP
+			
+		methods:
+			// NOTE - ClassWizard will maintain method information here.
+			//    Use extreme caution when editing this section.
+			//{{AFX_ODL_METHOD(CDlgGenerator)
+			//}}AFX_ODL_METHOD
+
+	};
+
+	//  Class information for CDlgGenerator
+
+	[ uuid(F83EBB23-7EEE-11CE-BC27-444553540000) ]
+	coclass CDlgGenerator
+	{
+		[default] dispinterface IDlgGenerator;
+	};
+
+
+	//  Primary dispatch interface for CDlgPulse
+	
+	[ uuid(26CA4F80-8486-11CE-BC27-444553540000) ]
+	dispinterface IDlgPulse
+	{
+		properties:
+			// NOTE - ClassWizard will maintain property information here.
+			//    Use extreme caution when editing this section.
+			//{{AFX_ODL_PROP(CDlgPulse)
+			//}}AFX_ODL_PROP
+			
+		methods:
+			// NOTE - ClassWizard will maintain method information here.
+			//    Use extreme caution when editing this section.
+			//{{AFX_ODL_METHOD(CDlgPulse)
+			//}}AFX_ODL_METHOD
+
+	};
+
+	//  Class information for CDlgPulse
+
+	[ uuid(26CA4F81-8486-11CE-BC27-444553540000) ]
+	coclass CDlgPulse
+	{
+		[default] dispinterface IDlgPulse;
+	};
+
+
+	//  Primary dispatch interface for CDlgMls
+	
+	[ uuid(26CA4F82-8486-11CE-BC27-444553540000) ]
+	dispinterface IDlgMls
+	{
+		properties:
+			// NOTE - ClassWizard will maintain property information here.
+			//    Use extreme caution when editing this section.
+			//{{AFX_ODL_PROP(CDlgMls)
+			//}}AFX_ODL_PROP
+			
+		methods:
+			// NOTE - ClassWizard will maintain method information here.
+			//    Use extreme caution when editing this section.
+			//{{AFX_ODL_METHOD(CDlgMls)
+			//}}AFX_ODL_METHOD
+
+	};
+
+	//  Class information for CDlgMls
+
+	[ uuid(26CA4F83-8486-11CE-BC27-444553540000) ]
+	coclass CDlgMls
+	{
+		[default] dispinterface IDlgMls;
+	};
+
+
+	//  Primary dispatch interface for CDlgDsGeneral
+	
+	[ uuid(1711C9C0-8615-11CE-BC27-444553540000) ]
+	dispinterface IDlgDsGeneral
+	{
+		properties:
+			// NOTE - ClassWizard will maintain property information here.
+			//    Use extreme caution when editing this section.
+			//{{AFX_ODL_PROP(CDlgDsGeneral)
+			//}}AFX_ODL_PROP
+			
+		methods:
+			// NOTE - ClassWizard will maintain method information here.
+			//    Use extreme caution when editing this section.
+			//{{AFX_ODL_METHOD(CDlgDsGeneral)
+			//}}AFX_ODL_METHOD
+
+	};
+
+	//  Class information for CDlgDsGeneral
+
+	[ uuid(1711C9C1-8615-11CE-BC27-444553540000) ]
+	coclass CDlgDsGeneral
+	{
+		[default] dispinterface IDlgDsGeneral;
+	};
+
+
+	//  Primary dispatch interface for CDlgDataset
+	
+	[ uuid(1711C9C2-8615-11CE-BC27-444553540000) ]
+	dispinterface IDlgDataset
+	{
+		properties:
+			// NOTE - ClassWizard will maintain property information here.
+			//    Use extreme caution when editing this section.
+			//{{AFX_ODL_PROP(CDlgDataset)
+			//}}AFX_ODL_PROP
+			
+		methods:
+			// NOTE - ClassWizard will maintain method information here.
+			//    Use extreme caution when editing this section.
+			//{{AFX_ODL_METHOD(CDlgDataset)
+			//}}AFX_ODL_METHOD
+
+	};
+
+	//  Class information for CDlgDataset
+
+	[ uuid(1711C9C3-8615-11CE-BC27-444553540000) ]
+	coclass CDlgDataset
+	{
+		[default] dispinterface IDlgDataset;
+	};
+
+
+	//  Primary dispatch interface for CDlgChart
+	
+	[ uuid(74689AE0-8F93-11CE-BC27-444553540000) ]
+	dispinterface IDlgChart
+	{
+		properties:
+			// NOTE - ClassWizard will maintain property information here.
+			//    Use extreme caution when editing this section.
+			//{{AFX_ODL_PROP(CDlgChart)
+			//}}AFX_ODL_PROP
+			
+		methods:
+			// NOTE - ClassWizard will maintain method information here.
+			//    Use extreme caution when editing this section.
+			//{{AFX_ODL_METHOD(CDlgChart)
+			//}}AFX_ODL_METHOD
+
+	};
+
+	//  Class information for CDlgChart
+
+	[ uuid(74689AE1-8F93-11CE-BC27-444553540000) ]
+	coclass CDlgChart
+	{
+		[default] dispinterface IDlgChart;
+	};
+
+
+	//  Primary dispatch interface for CDlgDataLines
+	
+	[ uuid(74689AE2-8F93-11CE-BC27-444553540000) ]
+	dispinterface IDlgDataLines
+	{
+		properties:
+			// NOTE - ClassWizard will maintain property information here.
+			//    Use extreme caution when editing this section.
+			//{{AFX_ODL_PROP(CDlgDataLines)
+			//}}AFX_ODL_PROP
+			
+		methods:
+			// NOTE - ClassWizard will maintain method information here.
+			//    Use extreme caution when editing this section.
+			//{{AFX_ODL_METHOD(CDlgDataLines)
+			//}}AFX_ODL_METHOD
+
+	};
+
+	//  Class information for CDlgDataLines
+
+	[ uuid(74689AE3-8F93-11CE-BC27-444553540000) ]
+	coclass CDlgDataLines
+	{
+		[default] dispinterface IDlgDataLines;
+	};
+
+
+	//  Primary dispatch interface for CDlgGrid
+	
+	[ uuid(BD25DFE0-8F98-11CE-BC27-444553540000) ]
+	dispinterface IDlgGrid
+	{
+		properties:
+			// NOTE - ClassWizard will maintain property information here.
+			//    Use extreme caution when editing this section.
+			//{{AFX_ODL_PROP(CDlgGrid)
+			//}}AFX_ODL_PROP
+			
+		methods:
+			// NOTE - ClassWizard will maintain method information here.
+			//    Use extreme caution when editing this section.
+			//{{AFX_ODL_METHOD(CDlgGrid)
+			//}}AFX_ODL_METHOD
+
+	};
+
+	//  Class information for CDlgGrid
+
+	[ uuid(BD25DFE1-8F98-11CE-BC27-444553540000) ]
+	coclass CDlgGrid
+	{
+		[default] dispinterface IDlgGrid;
+	};
+
+
+	//  Primary dispatch interface for CDlgChGen
+	
+	[ uuid(BD25DFE2-8F98-11CE-BC27-444553540000) ]
+	dispinterface IDlgChGen
+	{
+		properties:
+			// NOTE - ClassWizard will maintain property information here.
+			//    Use extreme caution when editing this section.
+			//{{AFX_ODL_PROP(CDlgChGen)
+			//}}AFX_ODL_PROP
+			
+		methods:
+			// NOTE - ClassWizard will maintain method information here.
+			//    Use extreme caution when editing this section.
+			//{{AFX_ODL_METHOD(CDlgChGen)
+			//}}AFX_ODL_METHOD
+
+	};
+
+	//  Class information for CDlgChGen
+
+	[ uuid(BD25DFE3-8F98-11CE-BC27-444553540000) ]
+	coclass CDlgChGen
+	{
+		[default] dispinterface IDlgChGen;
+	};
+
+
+	//  Primary dispatch interface for CDlgChData
+	
+	[ uuid(BD25DFE4-8F98-11CE-BC27-444553540000) ]
+	dispinterface IDlgChData
+	{
+		properties:
+			// NOTE - ClassWizard will maintain property information here.
+			//    Use extreme caution when editing this section.
+			//{{AFX_ODL_PROP(CDlgChData)
+			//}}AFX_ODL_PROP
+			
+		methods:
+			// NOTE - ClassWizard will maintain method information here.
+			//    Use extreme caution when editing this section.
+			//{{AFX_ODL_METHOD(CDlgChData)
+			//}}AFX_ODL_METHOD
+
+	};
+
+	//  Class information for CDlgChData
+
+	[ uuid(BD25DFE5-8F98-11CE-BC27-444553540000) ]
+	coclass CDlgChData
+	{
+		[default] dispinterface IDlgChData;
+	};
+
+
+	//  Primary dispatch interface for CAddChartData
+	
+	[ uuid(1EAA3880-9D11-11CE-BC2D-444553540000) ]
+	dispinterface IAddChartData
+	{
+		properties:
+			// NOTE - ClassWizard will maintain property information here.
+			//    Use extreme caution when editing this section.
+			//{{AFX_ODL_PROP(CAddChartData)
+			//}}AFX_ODL_PROP
+			
+		methods:
+			// NOTE - ClassWizard will maintain method information here.
+			//    Use extreme caution when editing this section.
+			//{{AFX_ODL_METHOD(CAddChartData)
+			//}}AFX_ODL_METHOD
+
+	};
+
+	//  Class information for CAddChartData
+
+	[ uuid(1EAA3881-9D11-11CE-BC2D-444553540000) ]
+	coclass CAddChartData
+	{
+		[default] dispinterface IAddChartData;
+	};
+
+
+	//  Primary dispatch interface for CDlgXfLimit
+	
+	[ uuid(33F08180-A27B-11CE-BC2F-444553540000) ]
+	dispinterface IDlgXfLimit
+	{
+		properties:
+			// NOTE - ClassWizard will maintain property information here.
+			//    Use extreme caution when editing this section.
+			//{{AFX_ODL_PROP(CDlgXfLimit)
+			//}}AFX_ODL_PROP
+			
+		methods:
+			// NOTE - ClassWizard will maintain method information here.
+			//    Use extreme caution when editing this section.
+			//{{AFX_ODL_METHOD(CDlgXfLimit)
+			//}}AFX_ODL_METHOD
+
+	};
+
+	//  Class information for CDlgXfLimit
+
+	[ uuid(33F08181-A27B-11CE-BC2F-444553540000) ]
+	coclass CDlgXfLimit
+	{
+		[default] dispinterface IDlgXfLimit;
+	};
+
+
+	//  Primary dispatch interface for CDlgXfScale
+	
+	[ uuid(43E4E880-A341-11CE-BC2F-444553540000) ]
+	dispinterface IDlgXfScale
+	{
+		properties:
+			// NOTE - ClassWizard will maintain property information here.
+			//    Use extreme caution when editing this section.
+			//{{AFX_ODL_PROP(CDlgXfScale)
+			//}}AFX_ODL_PROP
+			
+		methods:
+			// NOTE - ClassWizard will maintain method information here.
+			//    Use extreme caution when editing this section.
+			//{{AFX_ODL_METHOD(CDlgXfScale)
+			//}}AFX_ODL_METHOD
+
+	};
+
+	//  Class information for CDlgXfScale
+
+	[ uuid(43E4E881-A341-11CE-BC2F-444553540000) ]
+	coclass CDlgXfScale
+	{
+		[default] dispinterface IDlgXfScale;
+	};
+
+
+	//  Primary dispatch interface for CDlgXfTruncate
+	
+	[ uuid(72906560-A350-11CE-BC2F-444553540000) ]
+	dispinterface IDlgXfTruncate
+	{
+		properties:
+			// NOTE - ClassWizard will maintain property information here.
+			//    Use extreme caution when editing this section.
+			//{{AFX_ODL_PROP(CDlgXfTruncate)
+			//}}AFX_ODL_PROP
+			
+		methods:
+			// NOTE - ClassWizard will maintain method information here.
+			//    Use extreme caution when editing this section.
+			//{{AFX_ODL_METHOD(CDlgXfTruncate)
+			//}}AFX_ODL_METHOD
+
+	};
+
+	//  Class information for CDlgXfTruncate
+
+	[ uuid(72906561-A350-11CE-BC2F-444553540000) ]
+	coclass CDlgXfTruncate
+	{
+		[default] dispinterface IDlgXfTruncate;
+	};
+
+
+	//  Primary dispatch interface for CDlgXfDelay
+	
+	[ uuid(5E601C00-A393-11CE-BC2F-444553540000) ]
+	dispinterface IDlgXfDelay
+	{
+		properties:
+			// NOTE - ClassWizard will maintain property information here.
+			//    Use extreme caution when editing this section.
+			//{{AFX_ODL_PROP(CDlgXfDelay)
+			//}}AFX_ODL_PROP
+			
+		methods:
+			// NOTE - ClassWizard will maintain method information here.
+			//    Use extreme caution when editing this section.
+			//{{AFX_ODL_METHOD(CDlgXfDelay)
+			//}}AFX_ODL_METHOD
+
+	};
+
+	//  Class information for CDlgXfDelay
+
+	[ uuid(5E601C01-A393-11CE-BC2F-444553540000) ]
+	coclass CDlgXfDelay
+	{
+		[default] dispinterface IDlgXfDelay;
+	};
+
+
+	//  Primary dispatch interface for CDlgXfSmooth
+	
+	[ uuid(5E601C02-A393-11CE-BC2F-444553540000) ]
+	dispinterface IDlgXfSmooth
+	{
+		properties:
+			// NOTE - ClassWizard will maintain property information here.
+			//    Use extreme caution when editing this section.
+			//{{AFX_ODL_PROP(CDlgXfSmooth)
+			//}}AFX_ODL_PROP
+			
+		methods:
+			// NOTE - ClassWizard will maintain method information here.
+			//    Use extreme caution when editing this section.
+			//{{AFX_ODL_METHOD(CDlgXfSmooth)
+			//}}AFX_ODL_METHOD
+
+	};
+
+	//  Class information for CDlgXfSmooth
+
+	[ uuid(5E601C03-A393-11CE-BC2F-444553540000) ]
+	coclass CDlgXfSmooth
+	{
+		[default] dispinterface IDlgXfSmooth;
+	};
+
+
+
+
+	//  Primary dispatch interface for CDlgDsDataset
+	
+	[ uuid(A018E4C0-BAC6-11CE-B1C7-444553540000) ]
+	dispinterface IDlgDsDataset
+	{
+		properties:
+			// NOTE - ClassWizard will maintain property information here.
+			//    Use extreme caution when editing this section.
+			//{{AFX_ODL_PROP(CDlgDsDataset)
+			//}}AFX_ODL_PROP
+			
+		methods:
+			// NOTE - ClassWizard will maintain method information here.
+			//    Use extreme caution when editing this section.
+			//{{AFX_ODL_METHOD(CDlgDsDataset)
+			//}}AFX_ODL_METHOD
+
+	};
+
+	//  Class information for CDlgDsDataset
+
+	[ uuid(A018E4C1-BAC6-11CE-B1C7-444553540000) ]
+	coclass CDlgDsDataset
+	{
+		[default] dispinterface IDlgDsDataset;
+	};
+
+
+	//  Primary dispatch interface for CDlgNetList
+	
+	[ uuid(EF83D5C0-BCFF-11CE-B1C8-444553540000) ]
+	dispinterface IDlgNetList
+	{
+		properties:
+			// NOTE - ClassWizard will maintain property information here.
+			//    Use extreme caution when editing this section.
+			//{{AFX_ODL_PROP(CDlgNetList)
+			//}}AFX_ODL_PROP
+			
+		methods:
+			// NOTE - ClassWizard will maintain method information here.
+			//    Use extreme caution when editing this section.
+			//{{AFX_ODL_METHOD(CDlgNetList)
+			//}}AFX_ODL_METHOD
+
+	};
+
+	//  Class information for CDlgNetList
+
+	[ uuid(EF83D5C1-BCFF-11CE-B1C8-444553540000) ]
+	coclass CDlgNetList
+	{
+		[default] dispinterface IDlgNetList;
+	};
+
+
+	//  Primary dispatch interface for CDlgNetGeneral
+	
+	[ uuid(EF83D5C2-BCFF-11CE-B1C8-444553540000) ]
+	dispinterface IDlgNetGeneral
+	{
+		properties:
+			// NOTE - ClassWizard will maintain property information here.
+			//    Use extreme caution when editing this section.
+			//{{AFX_ODL_PROP(CDlgNetGeneral)
+			//}}AFX_ODL_PROP
+			
+		methods:
+			// NOTE - ClassWizard will maintain method information here.
+			//    Use extreme caution when editing this section.
+			//{{AFX_ODL_METHOD(CDlgNetGeneral)
+			//}}AFX_ODL_METHOD
+
+	};
+
+	//  Class information for CDlgNetGeneral
+
+	[ uuid(EF83D5C3-BCFF-11CE-B1C8-444553540000) ]
+	coclass CDlgNetGeneral
+	{
+		[default] dispinterface IDlgNetGeneral;
+	};
+
+
+	//  Primary dispatch interface for CDlgNetDriver
+	
+	[ uuid(EF83D5C4-BCFF-11CE-B1C8-444553540000) ]
+	dispinterface IDlgNetDriver
+	{
+		properties:
+			// NOTE - ClassWizard will maintain property information here.
+			//    Use extreme caution when editing this section.
+			//{{AFX_ODL_PROP(CDlgNetDriver)
+			//}}AFX_ODL_PROP
+			
+		methods:
+			// NOTE - ClassWizard will maintain method information here.
+			//    Use extreme caution when editing this section.
+			//{{AFX_ODL_METHOD(CDlgNetDriver)
+			//}}AFX_ODL_METHOD
+
+	};
+
+	//  Class information for CDlgNetDriver
+
+	[ uuid(EF83D5C5-BCFF-11CE-B1C8-444553540000) ]
+	coclass CDlgNetDriver
+	{
+		[default] dispinterface IDlgNetDriver;
+	};
+
+
+	//  Primary dispatch interface for CDlgNetwork
+	
+	[ uuid(0B496760-BD01-11CE-B1C8-444553540000) ]
+	dispinterface IDlgNetwork
+	{
+		properties:
+			// NOTE - ClassWizard will maintain property information here.
+			//    Use extreme caution when editing this section.
+			//{{AFX_ODL_PROP(CDlgNetwork)
+			//}}AFX_ODL_PROP
+			
+		methods:
+			// NOTE - ClassWizard will maintain method information here.
+			//    Use extreme caution when editing this section.
+			//{{AFX_ODL_METHOD(CDlgNetwork)
+			//}}AFX_ODL_METHOD
+
+	};
+
+	//  Class information for CDlgNetwork
+
+	[ uuid(0B496761-BD01-11CE-B1C8-444553540000) ]
+	coclass CDlgNetwork
+	{
+		[default] dispinterface IDlgNetwork;
+	};
+
+
+	//  Primary dispatch interface for CDlgRoomGeneral
+	
+	[ uuid(D46A8480-BD10-11CE-B1C8-444553540000) ]
+	dispinterface IDlgRoomGeneral
+	{
+		properties:
+			// NOTE - ClassWizard will maintain property information here.
+			//    Use extreme caution when editing this section.
+			//{{AFX_ODL_PROP(CDlgRoomGeneral)
+			//}}AFX_ODL_PROP
+			
+		methods:
+			// NOTE - ClassWizard will maintain method information here.
+			//    Use extreme caution when editing this section.
+			//{{AFX_ODL_METHOD(CDlgRoomGeneral)
+			//}}AFX_ODL_METHOD
+
+	};
+
+	//  Class information for CDlgRoomGeneral
+
+	[ uuid(D46A8481-BD10-11CE-B1C8-444553540000) ]
+	coclass CDlgRoomGeneral
+	{
+		[default] dispinterface IDlgRoomGeneral;
+	};
+
+
+	//  Primary dispatch interface for CDlgRoomBoxes
+	
+	[ uuid(D46A8482-BD10-11CE-B1C8-444553540000) ]
+	dispinterface IDlgRoomBoxes
+	{
+		properties:
+			// NOTE - ClassWizard will maintain property information here.
+			//    Use extreme caution when editing this section.
+			//{{AFX_ODL_PROP(CDlgRoomBoxes)
+			//}}AFX_ODL_PROP
+			
+		methods:
+			// NOTE - ClassWizard will maintain method information here.
+			//    Use extreme caution when editing this section.
+			//{{AFX_ODL_METHOD(CDlgRoomBoxes)
+			//}}AFX_ODL_METHOD
+
+	};
+
+	//  Class information for CDlgRoomBoxes
+
+	[ uuid(D46A8483-BD10-11CE-B1C8-444553540000) ]
+	coclass CDlgRoomBoxes
+	{
+		[default] dispinterface IDlgRoomBoxes;
+	};
+
+
+	//  Primary dispatch interface for CDlgRoomWall
+	
+	[ uuid(D46A8484-BD10-11CE-B1C8-444553540000) ]
+	dispinterface IDlgRoomWall
+	{
+		properties:
+			// NOTE - ClassWizard will maintain property information here.
+			//    Use extreme caution when editing this section.
+			//{{AFX_ODL_PROP(CDlgRoomWall)
+			//}}AFX_ODL_PROP
+			
+		methods:
+			// NOTE - ClassWizard will maintain method information here.
+			//    Use extreme caution when editing this section.
+			//{{AFX_ODL_METHOD(CDlgRoomWall)
+			//}}AFX_ODL_METHOD
+
+	};
+
+	//  Class information for CDlgRoomWall
+
+	[ uuid(D46A8485-BD10-11CE-B1C8-444553540000) ]
+	coclass CDlgRoomWall
+	{
+		[default] dispinterface IDlgRoomWall;
+	};
+
+
+	//  Primary dispatch interface for CDlgRoom
+	
+	[ uuid(D46A8486-BD10-11CE-B1C8-444553540000) ]
+	dispinterface IDlgRoom
+	{
+		properties:
+			// NOTE - ClassWizard will maintain property information here.
+			//    Use extreme caution when editing this section.
+			//{{AFX_ODL_PROP(CDlgRoom)
+			//}}AFX_ODL_PROP
+			
+		methods:
+			// NOTE - ClassWizard will maintain method information here.
+			//    Use extreme caution when editing this section.
+			//{{AFX_ODL_METHOD(CDlgRoom)
+			//}}AFX_ODL_METHOD
+
+	};
+
+	//  Class information for CDlgRoom
+
+	[ uuid(D46A8487-BD10-11CE-B1C8-444553540000) ]
+	coclass CDlgRoom
+	{
+		[default] dispinterface IDlgRoom;
+	};
+
+
+	//  Primary dispatch interface for CDlgLocations
+	
+	[ uuid(09D96940-C10A-11CE-B1C8-444553540000) ]
+	dispinterface IDlgLocations
+	{
+		properties:
+			// NOTE - ClassWizard will maintain property information here.
+			//    Use extreme caution when editing this section.
+			//{{AFX_ODL_PROP(CDlgLocations)
+			//}}AFX_ODL_PROP
+			
+		methods:
+			// NOTE - ClassWizard will maintain method information here.
+			//    Use extreme caution when editing this section.
+			//{{AFX_ODL_METHOD(CDlgLocations)
+			//}}AFX_ODL_METHOD
+
+	};
+
+	//  Class information for CDlgLocations
+
+	[ uuid(09D96941-C10A-11CE-B1C8-444553540000) ]
+	coclass CDlgLocations
+	{
+		[default] dispinterface IDlgLocations;
+	};
+
+
+	//  Primary dispatch interface for CDlgGenGeneral
+	
+	[ uuid(4AF654E0-C1FC-11CE-B1C8-444553540000) ]
+	dispinterface IDlgGenGeneral
+	{
+		properties:
+			// NOTE - ClassWizard will maintain property information here.
+			//    Use extreme caution when editing this section.
+			//{{AFX_ODL_PROP(CDlgGenGeneral)
+			//}}AFX_ODL_PROP
+			
+		methods:
+			// NOTE - ClassWizard will maintain method information here.
+			//    Use extreme caution when editing this section.
+			//{{AFX_ODL_METHOD(CDlgGenGeneral)
+			//}}AFX_ODL_METHOD
+
+	};
+
+	//  Class information for CDlgGenGeneral
+
+	[ uuid(4AF654E1-C1FC-11CE-B1C8-444553540000) ]
+	coclass CDlgGenGeneral
+	{
+		[default] dispinterface IDlgGenGeneral;
+	};
+
+
+	//  Primary dispatch interface for CDlgXfIfft
+	
+	[ uuid(8510D420-C283-11CE-B1C8-444553540000) ]
+	dispinterface IDlgXfIfft
+	{
+		properties:
+			// NOTE - ClassWizard will maintain property information here.
+			//    Use extreme caution when editing this section.
+			//{{AFX_ODL_PROP(CDlgXfIfft)
+			//}}AFX_ODL_PROP
+			
+		methods:
+			// NOTE - ClassWizard will maintain method information here.
+			//    Use extreme caution when editing this section.
+			//{{AFX_ODL_METHOD(CDlgXfIfft)
+			//}}AFX_ODL_METHOD
+
+	};
+
+	//  Class information for CDlgXfIfft
+
+	[ uuid(8510D421-C283-11CE-B1C8-444553540000) ]
+	coclass CDlgXfIfft
+	{
+		[default] dispinterface IDlgXfIfft;
+	};
+
+
+	//  Primary dispatch interface for CDlgXfFft
+	
+	[ uuid(B5EBC940-C294-11CE-B1C8-444553540000) ]
+	dispinterface IDlgXfFft
+	{
+		properties:
+			// NOTE - ClassWizard will maintain property information here.
+			//    Use extreme caution when editing this section.
+			//{{AFX_ODL_PROP(CDlgXfFft)
+			//}}AFX_ODL_PROP
+			
+		methods:
+			// NOTE - ClassWizard will maintain method information here.
+			//    Use extreme caution when editing this section.
+			//{{AFX_ODL_METHOD(CDlgXfFft)
+			//}}AFX_ODL_METHOD
+
+	};
+
+	//  Class information for CDlgXfFft
+
+	[ uuid(B5EBC941-C294-11CE-B1C8-444553540000) ]
+	coclass CDlgXfFft
+	{
+		[default] dispinterface IDlgXfFft;
+	};
+
+
+	//  Primary dispatch interface for CDlgRecord
+	
+	[ uuid(AB427A00-C39F-11CE-B1C8-444553540000) ]
+	dispinterface IDlgRecord
+	{
+		properties:
+			// NOTE - ClassWizard will maintain property information here.
+			//    Use extreme caution when editing this section.
+			//{{AFX_ODL_PROP(CDlgRecord)
+			//}}AFX_ODL_PROP
+			
+		methods:
+			// NOTE - ClassWizard will maintain method information here.
+			//    Use extreme caution when editing this section.
+			//{{AFX_ODL_METHOD(CDlgRecord)
+			//}}AFX_ODL_METHOD
+
+	};
+
+	//  Class information for CDlgRecord
+
+	[ uuid(AB427A01-C39F-11CE-B1C8-444553540000) ]
+	coclass CDlgRecord
+	{
+		[default] dispinterface IDlgRecord;
+	};
+
+
+	//  Primary dispatch interface for CDlgXcImpedance
+	
+	[ uuid(A6726FE0-C556-11CE-B1C8-444553540000) ]
+	dispinterface IDlgXcImpedance
+	{
+		properties:
+			// NOTE - ClassWizard will maintain property information here.
+			//    Use extreme caution when editing this section.
+			//{{AFX_ODL_PROP(CDlgXcImpedance)
+			//}}AFX_ODL_PROP
+			
+		methods:
+			// NOTE - ClassWizard will maintain method information here.
+			//    Use extreme caution when editing this section.
+			//{{AFX_ODL_METHOD(CDlgXcImpedance)
+			//}}AFX_ODL_METHOD
+
+	};
+
+	//  Class information for CDlgXcImpedance
+
+	[ uuid(A6726FE1-C556-11CE-B1C8-444553540000) ]
+	coclass CDlgXcImpedance
+	{
+		[default] dispinterface IDlgXcImpedance;
+	};
+
+
+	//  Primary dispatch interface for CDlgPrefTransform
+	
+	[ uuid(37A70D20-C757-11CE-B1C9-444553540000) ]
+	dispinterface IDlgPrefTransform
+	{
+		properties:
+			// NOTE - ClassWizard will maintain property information here.
+			//    Use extreme caution when editing this section.
+			//{{AFX_ODL_PROP(CDlgPrefTransform)
+			//}}AFX_ODL_PROP
+			
+		methods:
+			// NOTE - ClassWizard will maintain method information here.
+			//    Use extreme caution when editing this section.
+			//{{AFX_ODL_METHOD(CDlgPrefTransform)
+			//}}AFX_ODL_METHOD
+
+	};
+
+	//  Class information for CDlgPrefTransform
+
+	[ uuid(37A70D21-C757-11CE-B1C9-444553540000) ]
+	coclass CDlgPrefTransform
+	{
+		[default] dispinterface IDlgPrefTransform;
+	};
+
+
+	//  Primary dispatch interface for CDlgPlaySound
+	
+	[ uuid(80FF7480-E9E9-11CE-B1CB-444553540000) ]
+	dispinterface IDlgPlaySound
+	{
+		properties:
+			// NOTE - ClassWizard will maintain property information here.
+			//    Use extreme caution when editing this section.
+			//{{AFX_ODL_PROP(CDlgPlaySound)
+			//}}AFX_ODL_PROP
+			
+		methods:
+			// NOTE - ClassWizard will maintain method information here.
+			//    Use extreme caution when editing this section.
+			//{{AFX_ODL_METHOD(CDlgPlaySound)
+			//}}AFX_ODL_METHOD
+
+	};
+
+	//  Class information for CDlgPlaySound
+
+	[ uuid(80FF7481-E9E9-11CE-B1CB-444553540000) ]
+	coclass CDlgPlaySound
+	{
+		[default] dispinterface IDlgPlaySound;
+	};
+
+
+	//  Primary dispatch interface for CDlgPrefNetwork
+	
+	[ uuid(DC271960-EDB0-11CE-B1CB-444553540000) ]
+	dispinterface IDlgPrefNetwork
+	{
+		properties:
+			// NOTE - ClassWizard will maintain property information here.
+			//    Use extreme caution when editing this section.
+			//{{AFX_ODL_PROP(CDlgPrefNetwork)
+			//}}AFX_ODL_PROP
+			
+		methods:
+			// NOTE - ClassWizard will maintain method information here.
+			//    Use extreme caution when editing this section.
+			//{{AFX_ODL_METHOD(CDlgPrefNetwork)
+			//}}AFX_ODL_METHOD
+
+	};
+
+	//  Class information for CDlgPrefNetwork
+
+	[ uuid(DC271961-EDB0-11CE-B1CB-444553540000) ]
+	coclass CDlgPrefNetwork
+	{
+		[default] dispinterface IDlgPrefNetwork;
+	};
+
+
+	//  Primary dispatch interface for CDlgPassiveProp
+	
+	[ uuid(F5FCE180-EE78-11CE-B1CB-444553540000) ]
+	dispinterface IDlgPassiveProp
+	{
+		properties:
+			// NOTE - ClassWizard will maintain property information here.
+			//    Use extreme caution when editing this section.
+			//{{AFX_ODL_PROP(CDlgPassiveProp)
+			//}}AFX_ODL_PROP
+			
+		methods:
+			// NOTE - ClassWizard will maintain method information here.
+			//    Use extreme caution when editing this section.
+			//{{AFX_ODL_METHOD(CDlgPassiveProp)
+			//}}AFX_ODL_METHOD
+
+	};
+
+	//  Class information for CDlgPassiveProp
+
+	[ uuid(F5FCE181-EE78-11CE-B1CB-444553540000) ]
+	coclass CDlgPassiveProp
+	{
+		[default] dispinterface IDlgPassiveProp;
+	};
+
+
+	//  Primary dispatch interface for CDlgPerturb
+	
+	[ uuid(25A108A0-F1DD-11CE-B1CB-444553540000) ]
+	dispinterface IDlgPerturb
+	{
+		properties:
+			// NOTE - ClassWizard will maintain property information here.
+			//    Use extreme caution when editing this section.
+			//{{AFX_ODL_PROP(CDlgPerturb)
+			//}}AFX_ODL_PROP
+			
+		methods:
+			// NOTE - ClassWizard will maintain method information here.
+			//    Use extreme caution when editing this section.
+			//{{AFX_ODL_METHOD(CDlgPerturb)
+			//}}AFX_ODL_METHOD
+
+	};
+
+	//  Class information for CDlgPerturb
+
+	[ uuid(25A108A1-F1DD-11CE-B1CB-444553540000) ]
+	coclass CDlgPerturb
+	{
+		[default] dispinterface IDlgPerturb;
+	};
+
+
+	//  Primary dispatch interface for CDlgXfCorrelate
+	
+	[ uuid(62C3A720-F47A-11CE-B1CB-444553540000) ]
+	dispinterface IDlgXfCorrelate
+	{
+		properties:
+			// NOTE - ClassWizard will maintain property information here.
+			//    Use extreme caution when editing this section.
+			//{{AFX_ODL_PROP(CDlgXfCorrelate)
+			//}}AFX_ODL_PROP
+			
+		methods:
+			// NOTE - ClassWizard will maintain method information here.
+			//    Use extreme caution when editing this section.
+			//{{AFX_ODL_METHOD(CDlgXfCorrelate)
+			//}}AFX_ODL_METHOD
+
+	};
+
+	//  Class information for CDlgXfCorrelate
+
+	[ uuid(62C3A721-F47A-11CE-B1CB-444553540000) ]
+	coclass CDlgXfCorrelate
+	{
+		[default] dispinterface IDlgXfCorrelate;
+	};
+
+
+	//  Primary dispatch interface for CDlgDriver
+	
+	[ uuid(C7800800-F5B7-11CE-B1CB-444553540000) ]
+	dispinterface IDlgDriver
+	{
+		properties:
+			// NOTE - ClassWizard will maintain property information here.
+			//    Use extreme caution when editing this section.
+			//{{AFX_ODL_PROP(CDlgDriver)
+			//}}AFX_ODL_PROP
+			
+		methods:
+			// NOTE - ClassWizard will maintain method information here.
+			//    Use extreme caution when editing this section.
+			//{{AFX_ODL_METHOD(CDlgDriver)
+			//}}AFX_ODL_METHOD
+
+	};
+
+	//  Class information for CDlgDriver
+
+	[ uuid(C7800801-F5B7-11CE-B1CB-444553540000) ]
+	coclass CDlgDriver
+	{
+		[default] dispinterface IDlgDriver;
+	};
+
+
+	//  Primary dispatch interface for CDlgDrData
+	
+	[ uuid(C7800802-F5B7-11CE-B1CB-444553540000) ]
+	dispinterface IDlgDrData
+	{
+		properties:
+			// NOTE - ClassWizard will maintain property information here.
+			//    Use extreme caution when editing this section.
+			//{{AFX_ODL_PROP(CDlgDrData)
+			//}}AFX_ODL_PROP
+			
+		methods:
+			// NOTE - ClassWizard will maintain method information here.
+			//    Use extreme caution when editing this section.
+			//{{AFX_ODL_METHOD(CDlgDrData)
+			//}}AFX_ODL_METHOD
+
+	};
+
+	//  Class information for CDlgDrData
+
+	[ uuid(C7800803-F5B7-11CE-B1CB-444553540000) ]
+	coclass CDlgDrData
+	{
+		[default] dispinterface IDlgDrData;
+	};
+
+
+	//  Primary dispatch interface for CDlgDrGeneral
+	
+	[ uuid(C7800804-F5B7-11CE-B1CB-444553540000) ]
+	dispinterface IDlgDrGeneral
+	{
+		properties:
+			// NOTE - ClassWizard will maintain property information here.
+			//    Use extreme caution when editing this section.
+			//{{AFX_ODL_PROP(CDlgDrGeneral)
+			//}}AFX_ODL_PROP
+			
+		methods:
+			// NOTE - ClassWizard will maintain method information here.
+			//    Use extreme caution when editing this section.
+			//{{AFX_ODL_METHOD(CDlgDrGeneral)
+			//}}AFX_ODL_METHOD
+
+	};
+
+	//  Class information for CDlgDrGeneral
+
+	[ uuid(C7800805-F5B7-11CE-B1CB-444553540000) ]
+	coclass CDlgDrGeneral
+	{
+		[default] dispinterface IDlgDrGeneral;
+	};
+
+
+	//  Primary dispatch interface for CDlgDrParms
+	
+	[ uuid(C7800806-F5B7-11CE-B1CB-444553540000) ]
+	dispinterface IDlgDrParms
+	{
+		properties:
+			// NOTE - ClassWizard will maintain property information here.
+			//    Use extreme caution when editing this section.
+			//{{AFX_ODL_PROP(CDlgDrParms)
+			//}}AFX_ODL_PROP
+			
+		methods:
+			// NOTE - ClassWizard will maintain method information here.
+			//    Use extreme caution when editing this section.
+			//{{AFX_ODL_METHOD(CDlgDrParms)
+			//}}AFX_ODL_METHOD
+
+	};
+
+	//  Class information for CDlgDrParms
+
+	[ uuid(C7800807-F5B7-11CE-B1CB-444553540000) ]
+	coclass CDlgDrParms
+	{
+		[default] dispinterface IDlgDrParms;
+	};
+
+
+	//  Primary dispatch interface for CDlgSelectObject
+	
+	[ uuid(DDE21BA0-F6CB-11CE-B1CB-444553540000) ]
+	dispinterface IDlgSelectObject
+	{
+		properties:
+			// NOTE - ClassWizard will maintain property information here.
+			//    Use extreme caution when editing this section.
+			//{{AFX_ODL_PROP(CDlgSelectObject)
+			//}}AFX_ODL_PROP
+			
+		methods:
+			// NOTE - ClassWizard will maintain method information here.
+			//    Use extreme caution when editing this section.
+			//{{AFX_ODL_METHOD(CDlgSelectObject)
+			//}}AFX_ODL_METHOD
+
+	};
+
+	//  Class information for CDlgSelectObject
+
+	[ uuid(DDE21BA1-F6CB-11CE-B1CB-444553540000) ]
+	coclass CDlgSelectObject
+	{
+		[default] dispinterface IDlgSelectObject;
+	};
+
+
+	//  Primary dispatch interface for CDlgSimpleBox
+	
+	[ uuid(CA31E040-F996-11CE-B1CB-444553540000) ]
+	dispinterface IDlgSimpleBox
+	{
+		properties:
+			// NOTE - ClassWizard will maintain property information here.
+			//    Use extreme caution when editing this section.
+			//{{AFX_ODL_PROP(CDlgSimpleBox)
+			//}}AFX_ODL_PROP
+			
+		methods:
+			// NOTE - ClassWizard will maintain method information here.
+			//    Use extreme caution when editing this section.
+			//{{AFX_ODL_METHOD(CDlgSimpleBox)
+			//}}AFX_ODL_METHOD
+
+	};
+
+	//  Class information for CDlgSimpleBox
+
+	[ uuid(CA31E041-F996-11CE-B1CB-444553540000) ]
+	coclass CDlgSimpleBox
+	{
+		[default] dispinterface IDlgSimpleBox;
+	};
+
+
+	//  Primary dispatch interface for CDlgEnGeneral
+	
+	[ uuid(97906F80-DB7E-11CD-B1CC-444553540000) ]
+	dispinterface IDlgEnGeneral
+	{
+		properties:
+			// NOTE - ClassWizard will maintain property information here.
+			//    Use extreme caution when editing this section.
+			//{{AFX_ODL_PROP(CDlgEnGeneral)
+			//}}AFX_ODL_PROP
+			
+		methods:
+			// NOTE - ClassWizard will maintain method information here.
+			//    Use extreme caution when editing this section.
+			//{{AFX_ODL_METHOD(CDlgEnGeneral)
+			//}}AFX_ODL_METHOD
+
+	};
+
+	//  Class information for CDlgEnGeneral
+
+	[ uuid(97906F81-DB7E-11CD-B1CC-444553540000) ]
+	coclass CDlgEnGeneral
+	{
+		[default] dispinterface IDlgEnGeneral;
+	};
+
+
+	//  Primary dispatch interface for CDlgEnParms
+	
+	[ uuid(97906F82-DB7E-11CD-B1CC-444553540000) ]
+	dispinterface IDlgEnParms
+	{
+		properties:
+			// NOTE - ClassWizard will maintain property information here.
+			//    Use extreme caution when editing this section.
+			//{{AFX_ODL_PROP(CDlgEnParms)
+			//}}AFX_ODL_PROP
+			
+		methods:
+			// NOTE - ClassWizard will maintain method information here.
+			//    Use extreme caution when editing this section.
+			//{{AFX_ODL_METHOD(CDlgEnParms)
+			//}}AFX_ODL_METHOD
+
+	};
+
+	//  Class information for CDlgEnParms
+
+	[ uuid(97906F83-DB7E-11CD-B1CC-444553540000) ]
+	coclass CDlgEnParms
+	{
+		[default] dispinterface IDlgEnParms;
+	};
+
+
+	//  Primary dispatch interface for CDlgEnclosure
+	
+	[ uuid(1C2F3DC0-DB7F-11CD-B1CC-444553540000) ]
+	dispinterface IDlgEnclosure
+	{
+		properties:
+			// NOTE - ClassWizard will maintain property information here.
+			//    Use extreme caution when editing this section.
+			//{{AFX_ODL_PROP(CDlgEnclosure)
+			//}}AFX_ODL_PROP
+			
+		methods:
+			// NOTE - ClassWizard will maintain method information here.
+			//    Use extreme caution when editing this section.
+			//{{AFX_ODL_METHOD(CDlgEnclosure)
+			//}}AFX_ODL_METHOD
+
+	};
+
+	//  Class information for CDlgEnclosure
+
+	[ uuid(1C2F3DC1-DB7F-11CD-B1CC-444553540000) ]
+	coclass CDlgEnclosure
+	{
+		[default] dispinterface IDlgEnclosure;
+	};
+
+
+	//  Primary dispatch interface for CDlgPrefChart
+	
+	[ uuid(A418ED40-00A3-11CF-B1CD-444553540000) ]
+	dispinterface IDlgPrefChart
+	{
+		properties:
+			// NOTE - ClassWizard will maintain property information here.
+			//    Use extreme caution when editing this section.
+			//{{AFX_ODL_PROP(CDlgPrefChart)
+			//}}AFX_ODL_PROP
+			
+		methods:
+			// NOTE - ClassWizard will maintain method information here.
+			//    Use extreme caution when editing this section.
+			//{{AFX_ODL_METHOD(CDlgPrefChart)
+			//}}AFX_ODL_METHOD
+
+	};
+
+	//  Class information for CDlgPrefChart
+
+	[ uuid(A418ED41-00A3-11CF-B1CD-444553540000) ]
+	coclass CDlgPrefChart
+	{
+		[default] dispinterface IDlgPrefChart;
+	};
+
+
+	//  Primary dispatch interface for CDlgGenUserDef
+	
+	[ uuid(96916B20-029C-11CF-B1CD-444553540000) ]
+	dispinterface IDlgGenUserDef
+	{
+		properties:
+			// NOTE - ClassWizard will maintain property information here.
+			//    Use extreme caution when editing this section.
+			//{{AFX_ODL_PROP(CDlgGenUserDef)
+			//}}AFX_ODL_PROP
+			
+		methods:
+			// NOTE - ClassWizard will maintain method information here.
+			//    Use extreme caution when editing this section.
+			//{{AFX_ODL_METHOD(CDlgGenUserDef)
+			//}}AFX_ODL_METHOD
+
+	};
+
+	//  Class information for CDlgGenUserDef
+
+	[ uuid(96916B21-029C-11CF-B1CD-444553540000) ]
+	coclass CDlgGenUserDef
+	{
+		[default] dispinterface IDlgGenUserDef;
+	};
+
+
+	//  Primary dispatch interface for CDlgGenWarble
+	
+	[ uuid(96916B22-029C-11CF-B1CD-444553540000) ]
+	dispinterface IDlgGenWarble
+	{
+		properties:
+			// NOTE - ClassWizard will maintain property information here.
+			//    Use extreme caution when editing this section.
+			//{{AFX_ODL_PROP(CDlgGenWarble)
+			//}}AFX_ODL_PROP
+			
+		methods:
+			// NOTE - ClassWizard will maintain method information here.
+			//    Use extreme caution when editing this section.
+			//{{AFX_ODL_METHOD(CDlgGenWarble)
+			//}}AFX_ODL_METHOD
+
+	};
+
+	//  Class information for CDlgGenWarble
+
+	[ uuid(96916B23-029C-11CF-B1CD-444553540000) ]
+	coclass CDlgGenWarble
+	{
+		[default] dispinterface IDlgGenWarble;
+	};
+
+
+	//  Primary dispatch interface for CDlgXfInvert
+	
+	[ uuid(F34C3880-0676-11CF-B1CD-444553540000) ]
+	dispinterface IDlgXfInvert
+	{
+		properties:
+			// NOTE - ClassWizard will maintain property information here.
+			//    Use extreme caution when editing this section.
+			//{{AFX_ODL_PROP(CDlgXfInvert)
+			//}}AFX_ODL_PROP
+			
+		methods:
+			// NOTE - ClassWizard will maintain method information here.
+			//    Use extreme caution when editing this section.
+			//{{AFX_ODL_METHOD(CDlgXfInvert)
+			//}}AFX_ODL_METHOD
+
+	};
+
+	//  Class information for CDlgXfInvert
+
+	[ uuid(F34C3881-0676-11CF-B1CD-444553540000) ]
+	coclass CDlgXfInvert
+	{
+		[default] dispinterface IDlgXfInvert;
+	};
+
+
+	//  Primary dispatch interface for CDlgMsrPassive
+	
+	[ uuid(544800A0-09B1-11CF-B1CD-444553540000) ]
+	dispinterface IDlgMsrPassive
+	{
+		properties:
+			// NOTE - ClassWizard will maintain property information here.
+			//    Use extreme caution when editing this section.
+			//{{AFX_ODL_PROP(CDlgMsrPassive)
+			//}}AFX_ODL_PROP
+			
+		methods:
+			// NOTE - ClassWizard will maintain method information here.
+			//    Use extreme caution when editing this section.
+			//{{AFX_ODL_METHOD(CDlgMsrPassive)
+			//}}AFX_ODL_METHOD
+
+	};
+
+	//  Class information for CDlgMsrPassive
+
+	[ uuid(544800A1-09B1-11CF-B1CD-444553540000) ]
+	coclass CDlgMsrPassive
+	{
+		[default] dispinterface IDlgMsrPassive;
+	};
+
+
+	//  Primary dispatch interface for CDlgCalcSealed
+	
+	[ uuid(785A3500-0AE5-11CF-B1CD-444553540000) ]
+	dispinterface IDlgCalcSealed
+	{
+		properties:
+			// NOTE - ClassWizard will maintain property information here.
+			//    Use extreme caution when editing this section.
+			//{{AFX_ODL_PROP(CDlgCalcSealed)
+			//}}AFX_ODL_PROP
+			
+		methods:
+			// NOTE - ClassWizard will maintain method information here.
+			//    Use extreme caution when editing this section.
+			//{{AFX_ODL_METHOD(CDlgCalcSealed)
+			//}}AFX_ODL_METHOD
+
+	};
+
+	//  Class information for CDlgCalcSealed
+
+	[ uuid(785A3501-0AE5-11CF-B1CD-444553540000) ]
+	coclass CDlgCalcSealed
+	{
+		[default] dispinterface IDlgCalcSealed;
+	};
+
+
+	//  Primary dispatch interface for CDlgCalcBandAir
+	
+	[ uuid(785A3502-0AE5-11CF-B1CD-444553540000) ]
+	dispinterface IDlgCalcBandAir
+	{
+		properties:
+			// NOTE - ClassWizard will maintain property information here.
+			//    Use extreme caution when editing this section.
+			//{{AFX_ODL_PROP(CDlgCalcBandAir)
+			//}}AFX_ODL_PROP
+			
+		methods:
+			// NOTE - ClassWizard will maintain method information here.
+			//    Use extreme caution when editing this section.
+			//{{AFX_ODL_METHOD(CDlgCalcBandAir)
+			//}}AFX_ODL_METHOD
+
+	};
+
+	//  Class information for CDlgCalcBandAir
+
+	[ uuid(785A3503-0AE5-11CF-B1CD-444553540000) ]
+	coclass CDlgCalcBandAir
+	{
+		[default] dispinterface IDlgCalcBandAir;
+	};
+
+
+	//  Primary dispatch interface for CDlgCalcBandChamber
+	
+	[ uuid(785A3504-0AE5-11CF-B1CD-444553540000) ]
+	dispinterface IDlgCalcBandChamber
+	{
+		properties:
+			// NOTE - ClassWizard will maintain property information here.
+			//    Use extreme caution when editing this section.
+			//{{AFX_ODL_PROP(CDlgCalcBandChamber)
+			//}}AFX_ODL_PROP
+			
+		methods:
+			// NOTE - ClassWizard will maintain method information here.
+			//    Use extreme caution when editing this section.
+			//{{AFX_ODL_METHOD(CDlgCalcBandChamber)
+			//}}AFX_ODL_METHOD
+
+	};
+
+	//  Class information for CDlgCalcBandChamber
+
+	[ uuid(785A3505-0AE5-11CF-B1CD-444553540000) ]
+	coclass CDlgCalcBandChamber
+	{
+		[default] dispinterface IDlgCalcBandChamber;
+	};
+
+
+	//  Primary dispatch interface for CDlgCalcVented
+	
+	[ uuid(785A3506-0AE5-11CF-B1CD-444553540000) ]
+	dispinterface IDlgCalcVented
+	{
+		properties:
+			// NOTE - ClassWizard will maintain property information here.
+			//    Use extreme caution when editing this section.
+			//{{AFX_ODL_PROP(CDlgCalcVented)
+			//}}AFX_ODL_PROP
+			
+		methods:
+			// NOTE - ClassWizard will maintain method information here.
+			//    Use extreme caution when editing this section.
+			//{{AFX_ODL_METHOD(CDlgCalcVented)
+			//}}AFX_ODL_METHOD
+
+	};
+
+	//  Class information for CDlgCalcVented
+
+	[ uuid(785A3507-0AE5-11CF-B1CD-444553540000) ]
+	coclass CDlgCalcVented
+	{
+		[default] dispinterface IDlgCalcVented;
+	};
+
+
+	//  Primary dispatch interface for CDlgFilter
+	
+	[ uuid(E4A434A0-0EE5-11CF-B1CD-444553540000) ]
+	dispinterface IDlgFilter
+	{
+		properties:
+			// NOTE - ClassWizard will maintain property information here.
+			//    Use extreme caution when editing this section.
+			//{{AFX_ODL_PROP(CDlgFilter)
+			//}}AFX_ODL_PROP
+			
+		methods:
+			// NOTE - ClassWizard will maintain method information here.
+			//    Use extreme caution when editing this section.
+			//{{AFX_ODL_METHOD(CDlgFilter)
+			//}}AFX_ODL_METHOD
+
+	};
+
+	//  Class information for CDlgFilter
+
+	[ uuid(E4A434A1-0EE5-11CF-B1CD-444553540000) ]
+	coclass CDlgFilter
+	{
+		[default] dispinterface IDlgFilter;
+	};
+
+
+	//  Primary dispatch interface for CDlgPrefMeasure
+	
+	[ uuid(51FCD7A0-1242-11CF-B1CD-444553540000) ]
+	dispinterface IDlgPrefMeasure
+	{
+		properties:
+			// NOTE - ClassWizard will maintain property information here.
+			//    Use extreme caution when editing this section.
+			//{{AFX_ODL_PROP(CDlgPrefMeasure)
+			//}}AFX_ODL_PROP
+			
+		methods:
+			// NOTE - ClassWizard will maintain method information here.
+			//    Use extreme caution when editing this section.
+			//{{AFX_ODL_METHOD(CDlgPrefMeasure)
+			//}}AFX_ODL_METHOD
+
+	};
+
+	//  Class information for CDlgPrefMeasure
+
+	[ uuid(51FCD7A1-1242-11CF-B1CD-444553540000) ]
+	coclass CDlgPrefMeasure
+	{
+		[default] dispinterface IDlgPrefMeasure;
+	};
+
+
+	//  Primary dispatch interface for CDlgTree
+	
+	[ uuid(48089AA1-2B82-11CF-AA03-444553540000) ]
+	dispinterface IDlgTree
+	{
+		properties:
+			// NOTE - ClassWizard will maintain property information here.
+			//    Use extreme caution when editing this section.
+			//{{AFX_ODL_PROP(CDlgTree)
+			//}}AFX_ODL_PROP
+			
+		methods:
+			// NOTE - ClassWizard will maintain method information here.
+			//    Use extreme caution when editing this section.
+			//{{AFX_ODL_METHOD(CDlgTree)
+			[id(1)] void SetParameters(IUnknown* pRoot);
+			//}}AFX_ODL_METHOD
+
+	};
+
+	//  Class information for CDlgTree
+
+	[ uuid(48089AA2-2B82-11CF-AA03-444553540000) ]
+	coclass CDlgTree
+	{
+		[default] dispinterface IDlgTree;
+	};
+
+
+	//  Primary dispatch interface for CDlgXfFilter
+	
+	[ uuid(930EAE20-5B5E-11CF-AA04-444553540000) ]
+	dispinterface IDlgXfFilter
+	{
+		properties:
+			// NOTE - ClassWizard will maintain property information here.
+			//    Use extreme caution when editing this section.
+			//{{AFX_ODL_PROP(CDlgXfFilter)
+			//}}AFX_ODL_PROP
+			
+		methods:
+			// NOTE - ClassWizard will maintain method information here.
+			//    Use extreme caution when editing this section.
+			//{{AFX_ODL_METHOD(CDlgXfFilter)
+			//}}AFX_ODL_METHOD
+
+	};
+
+	//  Class information for CDlgXfFilter
+
+	[ uuid(930EAE21-5B5E-11CF-AA04-444553540000) ]
+	coclass CDlgXfFilter
+	{
+		[default] dispinterface IDlgXfFilter;
+	};
+
+
+	//  Primary dispatch interface for CDlgFilterLow
+	
+	[ uuid(B2CCFBC0-5B60-11CF-AA04-444553540000) ]
+	dispinterface IDlgFilterLow
+	{
+		properties:
+			// NOTE - ClassWizard will maintain property information here.
+			//    Use extreme caution when editing this section.
+			//{{AFX_ODL_PROP(CDlgFilterLow)
+			//}}AFX_ODL_PROP
+			
+		methods:
+			// NOTE - ClassWizard will maintain method information here.
+			//    Use extreme caution when editing this section.
+			//{{AFX_ODL_METHOD(CDlgFilterLow)
+			//}}AFX_ODL_METHOD
+
+	};
+
+	//  Class information for CDlgFilterLow
+
+	[ uuid(B2CCFBC1-5B60-11CF-AA04-444553540000) ]
+	coclass CDlgFilterLow
+	{
+		[default] dispinterface IDlgFilterLow;
+	};
+
+
+	//  Primary dispatch interface for CdlgFilterHigh
+	
+	[ uuid(B2CCFBC2-5B60-11CF-AA04-444553540000) ]
+	dispinterface IdlgFilterHigh
+	{
+		properties:
+			// NOTE - ClassWizard will maintain property information here.
+			//    Use extreme caution when editing this section.
+			//{{AFX_ODL_PROP(CdlgFilterHigh)
+			//}}AFX_ODL_PROP
+			
+		methods:
+			// NOTE - ClassWizard will maintain method information here.
+			//    Use extreme caution when editing this section.
+			//{{AFX_ODL_METHOD(CdlgFilterHigh)
+			//}}AFX_ODL_METHOD
+
+	};
+
+	//  Class information for CdlgFilterHigh
+
+	[ uuid(B2CCFBC3-5B60-11CF-AA04-444553540000) ]
+	coclass CdlgFilterHigh
+	{
+		[default] dispinterface IdlgFilterHigh;
+	};
+
+
+	//  Primary dispatch interface for CdlgFilterStop
+	
+	[ uuid(B2CCFBC4-5B60-11CF-AA04-444553540000) ]
+	dispinterface IdlgFilterStop
+	{
+		properties:
+			// NOTE - ClassWizard will maintain property information here.
+			//    Use extreme caution when editing this section.
+			//{{AFX_ODL_PROP(CdlgFilterStop)
+			//}}AFX_ODL_PROP
+			
+		methods:
+			// NOTE - ClassWizard will maintain method information here.
+			//    Use extreme caution when editing this section.
+			//{{AFX_ODL_METHOD(CdlgFilterStop)
+			//}}AFX_ODL_METHOD
+
+	};
+
+	//  Class information for CdlgFilterStop
+
+	[ uuid(B2CCFBC5-5B60-11CF-AA04-444553540000) ]
+	coclass CdlgFilterStop
+	{
+		[default] dispinterface IdlgFilterStop;
+	};
+
+
+	//  Primary dispatch interface for CDlgFilterPass
+	
+	[ uuid(B2CCFBC6-5B60-11CF-AA04-444553540000) ]
+	dispinterface IDlgFilterPass
+	{
+		properties:
+			// NOTE - ClassWizard will maintain property information here.
+			//    Use extreme caution when editing this section.
+			//{{AFX_ODL_PROP(CDlgFilterPass)
+			//}}AFX_ODL_PROP
+			
+		methods:
+			// NOTE - ClassWizard will maintain method information here.
+			//    Use extreme caution when editing this section.
+			//{{AFX_ODL_METHOD(CDlgFilterPass)
+			//}}AFX_ODL_METHOD
+
+	};
+
+	//  Class information for CDlgFilterPass
+
+	[ uuid(B2CCFBC7-5B60-11CF-AA04-444553540000) ]
+	coclass CDlgFilterPass
+	{
+		[default] dispinterface IDlgFilterPass;
+	};
+
+
+	//  Primary dispatch interface for CDlgMsrDistort
+	
+	[ uuid(11B046E0-666C-11CF-AA04-444553540000) ]
+	dispinterface IDlgMsrDistort
+	{
+		properties:
+			// NOTE - ClassWizard will maintain property information here.
+			//    Use extreme caution when editing this section.
+			//{{AFX_ODL_PROP(CDlgMsrDistort)
+			//}}AFX_ODL_PROP
+			
+		methods:
+			// NOTE - ClassWizard will maintain method information here.
+			//    Use extreme caution when editing this section.
+			//{{AFX_ODL_METHOD(CDlgMsrDistort)
+			//}}AFX_ODL_METHOD
+
+	};
+
+	//  Class information for CDlgMsrDistort
+
+	[ uuid(11B046E1-666C-11CF-AA04-444553540000) ]
+	coclass CDlgMsrDistort
+	{
+		[default] dispinterface IDlgMsrDistort;
+	};
+
+
+	//  Primary dispatch interface for CDlgPrefReference
+	
+	[ uuid(A308C900-6D10-11CF-AA04-444553540000) ]
+	dispinterface IDlgPrefReference
+	{
+		properties:
+			// NOTE - ClassWizard will maintain property information here.
+			//    Use extreme caution when editing this section.
+			//{{AFX_ODL_PROP(CDlgPrefReference)
+			//}}AFX_ODL_PROP
+			
+		methods:
+			// NOTE - ClassWizard will maintain method information here.
+			//    Use extreme caution when editing this section.
+			//{{AFX_ODL_METHOD(CDlgPrefReference)
+			//}}AFX_ODL_METHOD
+
+	};
+
+	//  Class information for CDlgPrefReference
+
+	[ uuid(A308C901-6D10-11CF-AA04-444553540000) ]
+	coclass CDlgPrefReference
+	{
+		[default] dispinterface IDlgPrefReference;
+	};
+
+
+	//  Primary dispatch interface for CDlgCalibrate
+	
+	[ uuid(235663A0-7627-11CF-AA04-444553540000) ]
+	dispinterface IDlgCalibrate
+	{
+		properties:
+			// NOTE - ClassWizard will maintain property information here.
+			//    Use extreme caution when editing this section.
+			//{{AFX_ODL_PROP(CDlgCalibrate)
+			//}}AFX_ODL_PROP
+			
+		methods:
+			// NOTE - ClassWizard will maintain method information here.
+			//    Use extreme caution when editing this section.
+			//{{AFX_ODL_METHOD(CDlgCalibrate)
+			//}}AFX_ODL_METHOD
+
+	};
+
+	//  Class information for CDlgCalibrate
+
+	[ uuid(235663A1-7627-11CF-AA04-444553540000) ]
+	coclass CDlgCalibrate
+	{
+		[default] dispinterface IDlgCalibrate;
+	};
+
+
+	//  Primary dispatch interface for CDlgCalcTuned
+	
+	[ uuid(B4D31A40-78D3-11CF-AA04-444553540000) ]
+	dispinterface IDlgCalcTuned
+	{
+		properties:
+			// NOTE - ClassWizard will maintain property information here.
+			//    Use extreme caution when editing this section.
+			//{{AFX_ODL_PROP(CDlgCalcTuned)
+			//}}AFX_ODL_PROP
+			
+		methods:
+			// NOTE - ClassWizard will maintain method information here.
+			//    Use extreme caution when editing this section.
+			//{{AFX_ODL_METHOD(CDlgCalcTuned)
+			//}}AFX_ODL_METHOD
+
+	};
+
+	//  Class information for CDlgCalcTuned
+
+	[ uuid(B4D31A41-78D3-11CF-AA04-444553540000) ]
+	coclass CDlgCalcTuned
+	{
+		[default] dispinterface IDlgCalcTuned;
+	};
+
+
+	//  Primary dispatch interface for CDlgCalcPassive
+	
+	[ uuid(B4D31A42-78D3-11CF-AA04-444553540000) ]
+	dispinterface IDlgCalcPassive
+	{
+		properties:
+			// NOTE - ClassWizard will maintain property information here.
+			//    Use extreme caution when editing this section.
+			//{{AFX_ODL_PROP(CDlgCalcPassive)
+			//}}AFX_ODL_PROP
+			
+		methods:
+			// NOTE - ClassWizard will maintain method information here.
+			//    Use extreme caution when editing this section.
+			//{{AFX_ODL_METHOD(CDlgCalcPassive)
+			//}}AFX_ODL_METHOD
+
+	};
+
+	//  Class information for CDlgCalcPassive
+
+	[ uuid(B4D31A43-78D3-11CF-AA04-444553540000) ]
+	coclass CDlgCalcPassive
+	{
+		[default] dispinterface IDlgCalcPassive;
+	};
+
+
+	//  Primary dispatch interface for CDlgPrefMarker
+	
+	[ uuid(F0549AC0-7EC4-11CF-AA04-444553540000) ]
+	dispinterface IDlgPrefMarker
+	{
+		properties:
+			// NOTE - ClassWizard will maintain property information here.
+			//    Use extreme caution when editing this section.
+			//{{AFX_ODL_PROP(CDlgPrefMarker)
+			//}}AFX_ODL_PROP
+			
+		methods:
+			// NOTE - ClassWizard will maintain method information here.
+			//    Use extreme caution when editing this section.
+			//{{AFX_ODL_METHOD(CDlgPrefMarker)
+			//}}AFX_ODL_METHOD
+
+	};
+
+	//  Class information for CDlgPrefMarker
+
+	[ uuid(F0549AC1-7EC4-11CF-AA04-444553540000) ]
+	coclass CDlgPrefMarker
+	{
+		[default] dispinterface IDlgPrefMarker;
+	};
+
+
+	//  Primary dispatch interface for CDlgOptXover
+	
+	[ uuid(1B6B9BA0-895B-11CF-AA04-444553540000) ]
+	dispinterface IDlgOptXover
+	{
+		properties:
+			// NOTE - ClassWizard will maintain property information here.
+			//    Use extreme caution when editing this section.
+			//{{AFX_ODL_PROP(CDlgOptXover)
+			//}}AFX_ODL_PROP
+			
+		methods:
+			// NOTE - ClassWizard will maintain method information here.
+			//    Use extreme caution when editing this section.
+			//{{AFX_ODL_METHOD(CDlgOptXover)
+			//}}AFX_ODL_METHOD
+
+	};
+
+	//  Class information for CDlgOptXover
+
+	[ uuid(1B6B9BA1-895B-11CF-AA04-444553540000) ]
+	coclass DLGOPTXOVER
+	{
+		[default] dispinterface IDlgOptXover;
+	};
+
+
+	//  Primary dispatch interface for CDlgCrossover
+	
+	[ uuid(1B6B9BA2-895B-11CF-AA04-444553540000) ]
+	dispinterface IDlgCrossover
+	{
+		properties:
+			// NOTE - ClassWizard will maintain property information here.
+			//    Use extreme caution when editing this section.
+			//{{AFX_ODL_PROP(CDlgCrossover)
+			//}}AFX_ODL_PROP
+			
+		methods:
+			// NOTE - ClassWizard will maintain method information here.
+			//    Use extreme caution when editing this section.
+			//{{AFX_ODL_METHOD(CDlgCrossover)
+			//}}AFX_ODL_METHOD
+
+	};
+
+	//  Class information for CDlgCrossover
+
+	[ uuid(1B6B9BA3-895B-11CF-AA04-444553540000) ]
+	coclass DLGCROSSOVER
+	{
+		[default] dispinterface IDlgCrossover;
+	};
+
+
+	//  Primary dispatch interface for CDlgAddPassive
+	
+	[ uuid(615486C0-8967-11CF-AA04-444553540000) ]
+	dispinterface IDlgAddPassive
+	{
+		properties:
+			// NOTE - ClassWizard will maintain property information here.
+			//    Use extreme caution when editing this section.
+			//{{AFX_ODL_PROP(CDlgAddPassive)
+			//}}AFX_ODL_PROP
+			
+		methods:
+			// NOTE - ClassWizard will maintain method information here.
+			//    Use extreme caution when editing this section.
+			//{{AFX_ODL_METHOD(CDlgAddPassive)
+			//}}AFX_ODL_METHOD
+
+	};
+
+	//  Class information for CDlgAddPassive
+
+	[ uuid(615486C1-8967-11CF-AA04-444553540000) ]
+	coclass DLGADDPASSIVE
+	{
+		[default] dispinterface IDlgAddPassive;
+	};
+
+
+	//  Primary dispatch interface for CDlgZobel
+	
+	[ uuid(5401F4E0-897F-11CF-AA04-444553540000) ]
+	dispinterface IDlgZobel
+	{
+		properties:
+			// NOTE - ClassWizard will maintain property information here.
+			//    Use extreme caution when editing this section.
+			//{{AFX_ODL_PROP(CDlgZobel)
+			//}}AFX_ODL_PROP
+			
+		methods:
+			// NOTE - ClassWizard will maintain method information here.
+			//    Use extreme caution when editing this section.
+			//{{AFX_ODL_METHOD(CDlgZobel)
+			//}}AFX_ODL_METHOD
+
+	};
+
+	//  Class information for CDlgZobel
+
+	[ uuid(5401F4E1-897F-11CF-AA04-444553540000) ]
+	coclass DLGZOBEL
+	{
+		[default] dispinterface IDlgZobel;
+	};
+
+
+	//  Primary dispatch interface for CDlgNotch
+	
+	[ uuid(5401F4E2-897F-11CF-AA04-444553540000) ]
+	dispinterface IDlgNotch
+	{
+		properties:
+			// NOTE - ClassWizard will maintain property information here.
+			//    Use extreme caution when editing this section.
+			//{{AFX_ODL_PROP(CDlgNotch)
+			//}}AFX_ODL_PROP
+			
+		methods:
+			// NOTE - ClassWizard will maintain method information here.
+			//    Use extreme caution when editing this section.
+			//{{AFX_ODL_METHOD(CDlgNotch)
+			//}}AFX_ODL_METHOD
+
+	};
+
+	//  Class information for CDlgNotch
+
+	[ uuid(5401F4E3-897F-11CF-AA04-444553540000) ]
+	coclass DLGNOTCH
+	{
+		[default] dispinterface IDlgNotch;
+	};
+
+
+	//  Primary dispatch interface for CDlgNetLayout
+	
+	[ uuid(A9092EE0-8AEC-11CF-AA04-444553540000) ]
+	dispinterface IDlgNetLayout
+	{
+		properties:
+			// NOTE - ClassWizard will maintain property information here.
+			//    Use extreme caution when editing this section.
+			//{{AFX_ODL_PROP(CDlgNetLayout)
+			//}}AFX_ODL_PROP
+			
+		methods:
+			// NOTE - ClassWizard will maintain method information here.
+			//    Use extreme caution when editing this section.
+			//{{AFX_ODL_METHOD(CDlgNetLayout)
+			//}}AFX_ODL_METHOD
+
+	};
+
+	//  Class information for CDlgNetLayout
+
+	[ uuid(A9092EE1-8AEC-11CF-AA04-444553540000) ]
+	coclass DLGNETLAYOUT
+	{
+		[default] dispinterface IDlgNetLayout;
+	};
+
+
+	//  Primary dispatch interface for CDlgDriverEstimate
+	
+	[ uuid(2D835140-A4CF-11CF-AA03-444553540000) ]
+	dispinterface IDlgDriverEstimate
+	{
+		properties:
+			// NOTE - ClassWizard will maintain property information here.
+			//    Use extreme caution when editing this section.
+			//{{AFX_ODL_PROP(CDlgDriverEstimate)
+			//}}AFX_ODL_PROP
+			
+		methods:
+			// NOTE - ClassWizard will maintain method information here.
+			//    Use extreme caution when editing this section.
+			//{{AFX_ODL_METHOD(CDlgDriverEstimate)
+			//}}AFX_ODL_METHOD
+
+	};
+
+	//  Class information for CDlgDriverEstimate
+
+	[ uuid(2D835141-A4CF-11CF-AA03-444553540000) ]
+	coclass DLGDRIVERESTIMATE
+	{
+		[default] dispinterface IDlgDriverEstimate;
+	};
+
+
+	//  Primary dispatch interface for CDlgXfSplice
+	
+	[ uuid(86088380-A862-11CF-AA03-444553540000) ]
+	dispinterface IDlgXfSplice
+	{
+		properties:
+			// NOTE - ClassWizard will maintain property information here.
+			//    Use extreme caution when editing this section.
+			//{{AFX_ODL_PROP(CDlgXfSplice)
+			//}}AFX_ODL_PROP
+			
+		methods:
+			// NOTE - ClassWizard will maintain method information here.
+			//    Use extreme caution when editing this section.
+			//{{AFX_ODL_METHOD(CDlgXfSplice)
+			//}}AFX_ODL_METHOD
+
+	};
+
+	//  Class information for CDlgXfSplice
+
+	[ uuid(86088381-A862-11CF-AA03-444553540000) ]
+	coclass DLGXFSPLICE
+	{
+		[default] dispinterface IDlgXfSplice;
+	};
+
+
+	//  Primary dispatch interface for CDlgPrefImpedance
+	
+	[ uuid(57BA63E0-AFDD-11CF-AA03-444553540000) ]
+	dispinterface IDlgPrefImpedance
+	{
+		properties:
+			// NOTE - ClassWizard will maintain property information here.
+			//    Use extreme caution when editing this section.
+			//{{AFX_ODL_PROP(CDlgPrefImpedance)
+			//}}AFX_ODL_PROP
+			
+		methods:
+			// NOTE - ClassWizard will maintain method information here.
+			//    Use extreme caution when editing this section.
+			//{{AFX_ODL_METHOD(CDlgPrefImpedance)
+			//}}AFX_ODL_METHOD
+
+	};
+
+	//  Class information for CDlgPrefImpedance
+
+	[ uuid(57BA63E1-AFDD-11CF-AA03-444553540000) ]
+	coclass DLGPREFIMPEDANCE
+	{
+		[default] dispinterface IDlgPrefImpedance;
+	};
+
+
+	//  Primary dispatch interface for CDlgPrefGeneral
+	
+	[ uuid(013D3B80-3171-11D0-AA04-444553540000) ]
+	dispinterface IDlgPrefGeneral
+	{
+		properties:
+			// NOTE - ClassWizard will maintain property information here.
+			//    Use extreme caution when editing this section.
+			//{{AFX_ODL_PROP(CDlgPrefGeneral)
+			//}}AFX_ODL_PROP
+			
+		methods:
+			// NOTE - ClassWizard will maintain method information here.
+			//    Use extreme caution when editing this section.
+			//{{AFX_ODL_METHOD(CDlgPrefGeneral)
+			//}}AFX_ODL_METHOD
+
+	};
+
+	//  Class information for CDlgPrefGeneral
+
+	[ uuid(013D3B81-3171-11D0-AA04-444553540000) ]
+	coclass DLGPREFGENERAL
+	{
+		[default] dispinterface IDlgPrefGeneral;
+	};
+
+
+	//  Primary dispatch interface for CDlgCalJig3
+	
+	[ uuid(DA743AC0-338D-11D0-AA04-444553540000) ]
+	dispinterface IDlgCalJig3
+	{
+		properties:
+			// NOTE - ClassWizard will maintain property information here.
+			//    Use extreme caution when editing this section.
+			//{{AFX_ODL_PROP(CDlgCalJig3)
+			//}}AFX_ODL_PROP
+			
+		methods:
+			// NOTE - ClassWizard will maintain method information here.
+			//    Use extreme caution when editing this section.
+			//{{AFX_ODL_METHOD(CDlgCalJig3)
+			//}}AFX_ODL_METHOD
+
+	};
+
+	//  Class information for CDlgCalJig3
+
+	[ uuid(DA743AC1-338D-11D0-AA04-444553540000) ]
+	coclass DLGCALJIG3
+	{
+		[default] dispinterface IDlgCalJig3;
+	};
+
+
+	//  Primary dispatch interface for CDlgWizLoop
+	
+	[ uuid(1E22DC40-3519-11D0-AA04-444553540000) ]
+	dispinterface IDlgWizLoop
+	{
+		properties:
+			// NOTE - ClassWizard will maintain property information here.
+			//    Use extreme caution when editing this section.
+			//{{AFX_ODL_PROP(CDlgWizLoop)
+			//}}AFX_ODL_PROP
+			
+		methods:
+			// NOTE - ClassWizard will maintain method information here.
+			//    Use extreme caution when editing this section.
+			//{{AFX_ODL_METHOD(CDlgWizLoop)
+			//}}AFX_ODL_METHOD
+
+	};
+
+	//  Class information for CDlgWizLoop
+
+	[ uuid(1E22DC41-3519-11D0-AA04-444553540000) ]
+	coclass DLGWIZLOOP
+	{
+		[default] dispinterface IDlgWizLoop;
+	};
+
+
+	//  Primary dispatch interface for CDlgWizLoopBegin
+	
+	[ uuid(1E22DC42-3519-11D0-AA04-444553540000) ]
+	dispinterface IDlgWizLoopBegin
+	{
+		properties:
+			// NOTE - ClassWizard will maintain property information here.
+			//    Use extreme caution when editing this section.
+			//{{AFX_ODL_PROP(CDlgWizLoopBegin)
+			//}}AFX_ODL_PROP
+			
+		methods:
+			// NOTE - ClassWizard will maintain method information here.
+			//    Use extreme caution when editing this section.
+			//{{AFX_ODL_METHOD(CDlgWizLoopBegin)
+			//}}AFX_ODL_METHOD
+
+	};
+
+	//  Class information for CDlgWizLoopBegin
+
+	[ uuid(1E22DC43-3519-11D0-AA04-444553540000) ]
+	coclass DLGWIZLPBEGIN
+	{
+		[default] dispinterface IDlgWizLoopBegin;
+	};
+
+
+	//  Primary dispatch interface for CDlgCalWizLoopEnd
+	
+	[ uuid(1E22DC44-3519-11D0-AA04-444553540000) ]
+	dispinterface IDlgCalWizLoopEnd
+	{
+		properties:
+			// NOTE - ClassWizard will maintain property information here.
+			//    Use extreme caution when editing this section.
+			//{{AFX_ODL_PROP(CDlgCalWizLoopEnd)
+			//}}AFX_ODL_PROP
+			
+		methods:
+			// NOTE - ClassWizard will maintain method information here.
+			//    Use extreme caution when editing this section.
+			//{{AFX_ODL_METHOD(CDlgCalWizLoopEnd)
+			//}}AFX_ODL_METHOD
+
+	};
+
+	//  Class information for CDlgCalWizLoopEnd
+
+	[ uuid(1E22DC45-3519-11D0-AA04-444553540000) ]
+	coclass DLGCALWIZLOOPEND
+	{
+		[default] dispinterface IDlgCalWizLoopEnd;
+	};
+
+
+	//  Primary dispatch interface for CDlgCalLoopJig
+	
+	[ uuid(1E22DC46-3519-11D0-AA04-444553540000) ]
+	dispinterface IDlgCalLoopJig
+	{
+		properties:
+			// NOTE - ClassWizard will maintain property information here.
+			//    Use extreme caution when editing this section.
+			//{{AFX_ODL_PROP(CDlgCalLoopJig)
+			//}}AFX_ODL_PROP
+			
+		methods:
+			// NOTE - ClassWizard will maintain method information here.
+			//    Use extreme caution when editing this section.
+			//{{AFX_ODL_METHOD(CDlgCalLoopJig)
+			//}}AFX_ODL_METHOD
+
+	};
+
+	//  Class information for CDlgCalLoopJig
+
+	[ uuid(1E22DC47-3519-11D0-AA04-444553540000) ]
+	coclass DLGCALLOOPJIG
+	{
+		[default] dispinterface IDlgCalLoopJig;
+	};
+
+	//{{AFX_APPEND_ODL}}
+};
