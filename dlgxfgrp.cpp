@@ -241,9 +241,9 @@ int nend = m_nEnd + 1;	// go 1 more to be non-inclusive
 	{
 	CString csform, cstart, cend;
 		csform.GetBuffer(1024);	// this could be pretty long
-		cstart.Format( "%f", cdsource->DataAt( dataFreq, nstart));
-		cend.Format( "%f", cdsource->DataAt( dataFreq, nend-1));
-		csform.Format( IDS_GRPDDESC, (LPCSTR )cdsource->GetName(), (LPCSTR )cstart, (LPCSTR )cend);
+		cstart.Format(_T("%f"), cdsource->DataAt( dataFreq, nstart));
+		cend.Format(_T("%f"), cdsource->DataAt( dataFreq, nend-1));
+		csform.Format( IDS_GRPDDESC, (LPCTSTR )cdsource->GetName(), (LPCTSTR )cstart, (LPCTSTR )cend);
 	cdnew->SetDescription( csform);
 	}
 

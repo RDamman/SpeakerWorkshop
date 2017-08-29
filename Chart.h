@@ -85,7 +85,7 @@ private:
 
 // Attribute set/get
 public:
-	void	AddStringData( LPCSTR lpNew, COLORREF rgbNew);
+	void	AddStringData( LPCTSTR lpNew, COLORREF rgbNew);
 	void	ClearStringData( void)		{ m_pcNames.RemoveAll(); m_pcColors.RemoveAll(); }
 
 // Operations
@@ -254,14 +254,14 @@ public:
 	void		ToMiniChart( CMiniChart *pMini);
 	void		FromMiniChart( CMiniChart *pMini);
 	CString		&GetTitle()					{ return m_csTitle;	}
-	void		SetTitle(LPCSTR lpSet)		{ m_csTitle = lpSet; }
+	void		SetTitle(LPCTSTR lpSet)		{ m_csTitle = lpSet; }
 	void		SetTitle(CString &csSet)	{ m_csTitle = csSet; }
 	CDataLine  *GetDataAt( int i);
 	CDataSet   *GetDatasetAt( int i);
 	CGrid	   *GetGrid( eCoord ecGrid);
 	CDataTag	*AddNote( CDataTag &cTag);			// add a new note
 	void		DeleteNote( CDataTag *pTag);		// delete a note
-	void		CreateDefault(LPCSTR szName, UNITMSR uUom );	// for a single object qk chart
+	void		CreateDefault(LPCTSTR szName, UNITMSR uUom );	// for a single object qk chart
 	int			Attach( DWORD dwID, BOOL bUsePhase = FALSE);		// attach a dataset
 	void		Detach( DWORD dwID);		// detach a dataset
 	void		DetachAll( void);			// detach all datasets

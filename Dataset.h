@@ -86,8 +86,8 @@ public:
 			float PhaseValueAt( int nCoord, int nMethod = 0);			// extrapolate to a value
 			float PhaseValueAt( float fCoord, int nMethod = 0);			// extrapolate to a value
 
-	virtual int	Import( LPCSTR szFileName);								// import some data
-	virtual int Export( LPCSTR szFileName);								// export some data
+	virtual int	Import(CString sFile);								// import some data
+	virtual int Export(CString sFile);								// export some data
 	virtual void GetFilter( CString& csExt, CString& csFilter);
 
 	virtual float Minimum(DATASEL ndWhich);

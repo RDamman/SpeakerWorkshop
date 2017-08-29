@@ -112,8 +112,8 @@ public:
 	int			GetSampleRate(void )			{ return m_nSampleRate; }
 	void		SetSampleRate(int nNew);
 
-	virtual int	Import( LPCSTR szFileName);				// import some data
-	virtual int Export( LPCSTR szFileName);				// export some data
+	virtual int	Import(CString sFile);				// import some data
+	virtual int Export(CString sFile);				// export some data
 	virtual	void BuildDataSets( void);
 	virtual BOOL	CreateChart( CNamed *cBase = NULL);			// build a new chart object to be graphed
 	virtual void GetFilter( CString& csExt, CString& csFilter);

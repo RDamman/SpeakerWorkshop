@@ -66,7 +66,7 @@ void CDlgLocations::DoDataExchange(CDataExchange* pDX)
 	if (! pDX->m_bSaveAndValidate)			// are we moving data to the dbox?
 		{
 		int i;
-		char cnum[40];
+		CString cnum;
 
 			m_clList.ResetContent();
 			for ( i=0; i<m_cszNames.GetSize(); i++)
@@ -75,25 +75,25 @@ void CDlgLocations::DoDataExchange(CDataExchange* pDX)
 			m_clListFirst.ResetContent();
 			for ( i=0; i<m_cfList.GetSize(); i++)
 				{
-				sprintf( cnum, "%6.2f", m_cfList.GetAt(i));
+				cnum.Format(_T("%6.2f"), m_cfList.GetAt(i));
 				m_clListFirst.AddString( cnum);
 				}
 			m_clListLast.ResetContent();
 			for ( i=0; i<m_cfLast.GetSize(); i++)
 				{
-				sprintf( cnum, "%6.2f", m_cfLast.GetAt(i));
+					cnum.Format(_T("%6.2f"), m_cfLast.GetAt(i));
 				m_clListLast.AddString( cnum);
 				}
 			m_clListDelta.ResetContent();
 			for ( i=0; i<m_cfDelta.GetSize(); i++)
 				{
-				sprintf( cnum, "%6.2f", m_cfDelta.GetAt(i));
+					cnum.Format(_T("%6.2f"), m_cfDelta.GetAt(i));
 				m_clListDelta.AddString( cnum);
 				}
 			m_clListDelta2.ResetContent();
 			for ( i=0; i<m_cfDelta2.GetSize(); i++)
 				{
-				sprintf( cnum, "%6.2f", m_cfDelta2.GetAt(i));
+					cnum.Format(_T("%6.2f"), m_cfDelta2.GetAt(i));
 				m_clListDelta2.AddString( cnum);
 				}
 		}
@@ -273,9 +273,7 @@ int ndatasets = cc->GetDataCount();
 			}
 		}
 
-	char ss[30];
-	sprintf( ss, "%6.2f", fx);
-	m_csFreqFirst = ss;
+	m_csFreqFirst.Format(_T("%6.2f"), fx);
 
 	UpdateData( FALSE);
 

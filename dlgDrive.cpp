@@ -65,8 +65,8 @@ END_DISPATCH_MAP()
 void CDlgDriver::UseDriver( CDriver *pcData)
 {
 	m_cGeneral.UseGeneral( pcData);
-	DBG_TWO( "[DlgDriver.UseDriver] Document set to %s", m_pDoc->GetPathName());
-	DBG_TWO( "[DlgDriver.UseDriver] Root set to: %s", m_pDoc->GetRoot()->GetName());
+	DBG_TWO(_T("[DlgDriver.UseDriver] Document set to %s"), m_pDoc->GetPathName());
+	DBG_TWO(_T("[DlgDriver.UseDriver] Root set to: %s"), m_pDoc->GetRoot()->GetName());
 	m_cDatas.UseDatas( m_pDoc->GetRoot(), pcData);
 	m_cParms.UseParms( pcData);
 }

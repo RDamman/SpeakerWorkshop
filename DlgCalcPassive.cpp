@@ -167,18 +167,18 @@ float fomega = (float )(2 * ONEPI * m_fFreq);
 		{
 		case 0 :			// capacitor
 			if (m_fValue)
-				m_csAmp.Format( "%f", (float )(1.0f / (m_fValue * fomega)));
+				m_csAmp.Format(_T("%f"), (float )(1.0f / (m_fValue * fomega)));
 			else
-				m_csAmp.Format( "%f", 1000000.0f);
+				m_csAmp.Format(_T("%f"), 1000000.0f);
 			m_csImaginary = "-" + m_csAmp;
-			m_csReal.Format( "%f", 0.0f);
-			m_csPhase.Format( "%f", -90.0f);
+			m_csReal.Format(_T("%f"), 0.0f);
+			m_csPhase.Format(_T("%f"), -90.0f);
 			break;
 		case 1 :			// inductor
-			m_csAmp.Format( "%f", (float )(m_fValue * fomega));
+			m_csAmp.Format(_T("%f"), (float )(m_fValue * fomega));
 			m_csImaginary = m_csAmp;
-			m_csReal.Format( "%f", 0.0f);
-			m_csPhase.Format( "%f", 90.0f);
+			m_csReal.Format(_T("%f"), 0.0f);
+			m_csPhase.Format(_T("%f"), 90.0f);
 			break;
 		case 2 :			// resistor (removed from dbox mz)
 			break;
@@ -205,12 +205,12 @@ void CDlgCalcPassive::OnRadio()
 
 	UpdateData( TRUE);
 	{
-	char *pout;
+	TCHAR *pout;
 
 		if ( IsDlgButtonChecked( IDC_RADIO1))
-			pout = "F";		// capacitor was checked, use farads
+			pout = _T("F");		// capacitor was checked, use farads
 		else
-			pout = "H";		// inductors was checked, use Henries
+			pout = _T("H");		// inductors was checked, use Henries
 
 		SetDlgItemText(IDC_UNITS, pout);
 	}

@@ -458,7 +458,7 @@ void CGenerator::Dump(CDumpContext& dc) const
 
 #endif //_DEBUG
 
-int	CGenerator::Import( LPCSTR szFileName)								// import some data
+int	CGenerator::Import(CString sFile)								// import some data
 {
 int nresult = 0;
 
@@ -467,10 +467,10 @@ int nresult = 0;
 		m_pWave = new CMMWave();
 		}
 
-	nresult = m_pWave->LoadWave( szFileName);	// this does all the editing of m_pWave for us
+	nresult = m_pWave->LoadWave(sFile);	// this does all the editing of m_pWave for us
 	if ( ! nresult)			// it worked
 		{
-		m_csUserDefName = szFileName;
+		m_csUserDefName = sFile;
 		m_nType = gtUserDef;
 		m_nSampleRate = m_pWave->GetSamplesPerSecond();
 		}
@@ -478,7 +478,7 @@ int nresult = 0;
 }
 
 
-int CGenerator::Export( LPCSTR szFileName)								// export some data
+int CGenerator::Export(CString sFile)								// export some data
 {
 	if ( ! m_pWave)
 		CreateWave( 100);			// 1/10th of a second
@@ -486,7 +486,7 @@ int CGenerator::Export( LPCSTR szFileName)								// export some data
 	if ( ! m_pWave)
 		return 1;
 
-	m_pWave->SaveWave( szFileName);
+	m_pWave->SaveWave( sFile);
 	return 0;
 }
 

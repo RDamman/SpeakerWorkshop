@@ -109,7 +109,7 @@ void CDlgXfIfft::OnOK()
 	{
 	m_nStyle = GetCheckedRadioButton( IDC_USEENTIRE, IDC_USECUSTOM) - IDC_USEENTIRE;
 	m_nSampleStyle = GetCheckedRadioButton( IDC_RADIO1, IDC_RADIO2) - IDC_RADIO1;
-	sscanf( m_csSampleRate, "%d", &m_nSampleRate);
+	m_nSampleRate = _ttoi(m_csSampleRate);
 
 	CAudtestApp *capp = (CAudtestApp *)AfxGetApp();
 	IFFTINFO fi;
@@ -143,21 +143,21 @@ BOOL CDlgXfIfft::OnInitDialog()
 CStatic *cctrl;
 CString cs;
 
-	cs.Format( "%d", (int )m_fStartMarker);
+	cs.Format(_T("%d"), (int)m_fStartMarker);
 	cctrl = (CStatic *)GetDlgItem( IDC_MARKLOW);
 	cctrl->SetWindowText( cs);
-	cs.Format( "%d", (int )m_fEndMarker);
+	cs.Format(_T("%d"), (int)m_fEndMarker);
 	cctrl = (CStatic *)GetDlgItem( IDC_MARKHIGH);
 	cctrl->SetWindowText( cs);
 
-	cs.Format( "%d", m_nDefaultRate);
+	cs.Format(_T("%d"), m_nDefaultRate);
 	cctrl = (CStatic *)GetDlgItem( IDC_SAMPLE);
 	cctrl->SetWindowText( cs);
 
 	CheckRadioButton( IDC_USEENTIRE, IDC_USECUSTOM, IDC_USEENTIRE + m_nStyle);
 	CheckRadioButton( IDC_RADIO1, IDC_RADIO2, IDC_RADIO1 + m_nSampleStyle);
 
-	m_csSampleRate.Format( "%d", m_nSampleRate);
+	m_csSampleRate.Format(_T("%d"), m_nSampleRate);
 
 	UpdateData( FALSE);		// set it now
 	

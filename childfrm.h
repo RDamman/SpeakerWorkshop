@@ -17,7 +17,7 @@ protected:
 	CString	m_csTitle;			// title of this window...
 public:
 	DWORD	GetTarget();
-	void	SetTarget(DWORD dwNew, LPCSTR lpszTitle);
+	void	SetTarget(DWORD dwNew, LPCTSTR lpszTitle);
 
 // Operations
 public:

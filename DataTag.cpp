@@ -162,7 +162,7 @@ void CDataTag::SetDataset( int iNew)
 // ---------------------------------------------------------------------------
 //		SetText
 // ---------------------------------------------------------------------------
-void CDataTag::SetText( LPCSTR strText)
+void CDataTag::SetText( LPCTSTR strText)
 {
 	m_strText = strText;
 }
@@ -288,7 +288,7 @@ CDlgNote cdlg( pParent);
 //		set_ClipRect
 //			this is from Microsoft sample code
 // ------------------------------------------------------------------
-static set_ClipRect(CDC *pDC, CRect &cRect)
+static void set_ClipRect(CDC *pDC, CRect &cRect)
 {
 CRgn rgn;
 CRect rectClip = cRect;
@@ -513,7 +513,7 @@ CRect rcdraw;
 //		ParseString
 //				parse the input string
 // ---------------------------------------------------------------------------
-void	CDataTag::ParseString( CString &strOut, LPCSTR strIn)
+void	CDataTag::ParseString( CString &strOut, LPCTSTR strIn)
 {
 CString strA;
 CString strleft;

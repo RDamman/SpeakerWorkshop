@@ -261,8 +261,8 @@ float fdata, fphase;
 
 	{
 	CString csform, cres;
-		cres.Format( "%f", m_fFreq);
-		csform.Format( IDS_SPLICEDESC, (LPCSTR )cdSource->GetName(), (LPCSTR )cother->GetName(), (LPCSTR )cres);
+		cres.Format(_T("%f"), m_fFreq);
+		csform.Format( IDS_SPLICEDESC, (LPCTSTR )cdSource->GetName(), (LPCTSTR )cother->GetName(), (LPCTSTR )cres);
 	cdnew->SetDescription( csform);
 	}
 

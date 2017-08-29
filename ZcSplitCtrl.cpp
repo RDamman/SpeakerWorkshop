@@ -97,10 +97,10 @@ void ZcSplitCtrl::OnLButtonDown(UINT nFlags, CPoint point)
 BOOL ZcSplitCtrl::Create(LPCTSTR lpszClassName, LPCTSTR lpszWindowName, DWORD dwStyle, const RECT& rect, CWnd* pParentWnd, UINT nID, CCreateContext* pContext) 
 {
 	// TODO: Add your specialized code here and/or call the base class
-char szname[100];
+    CString szname;
 static DWORD dw_size = 0;
 
-	sprintf(szname, "zSplit%d", dw_size++);
+	szname.Format(_T("zSplit%d"), dw_size++);
 
 	return CWnd::Create(csclass_Name, szname, WS_VISIBLE | WS_CHILD, rect, pParentWnd, nID, pContext);
 }

@@ -120,10 +120,10 @@ CString cs;
 DRVRESTIMATEINFO def;
 CAudtestApp *capp = (CAudtestApp *)AfxGetApp();
 
-	cs.Format( "%d", (int )m_fStartMarker);
+cs.Format(_T("%d"), (int)m_fStartMarker);
 	cctrl = (CStatic *)GetDlgItem( IDC_MARKLOW);
 	cctrl->SetWindowText( cs);
-	cs.Format( "%d", (int )m_fEndMarker);
+	cs.Format(_T("%d"), (int)m_fEndMarker);
 	cctrl = (CStatic *)GetDlgItem( IDC_MARKHIGH);
 	cctrl->SetWindowText( cs);
 

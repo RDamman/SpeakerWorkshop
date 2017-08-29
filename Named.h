@@ -131,8 +131,8 @@ public:
 
 	CNamed  *FindByID( DWORD dwID);				// look through the tree for this one...
 	bool	SetPointerByID( CNamed *pNew);		// use this pointer with this id
-	CNamed  *FindByName( LPCSTR lpszName, BOOL bAll = TRUE);		// look through the tree for this one...
-	CNamed	*CreateByName( LPCSTR lpszName, NAMETYPES nType);	// look it up and don't build if it exists, else build it
+	CNamed  *FindByName( LPCTSTR lpszName, BOOL bAll = TRUE);		// look through the tree for this one...
+	CNamed	*CreateByName( LPCTSTR lpszName, NAMETYPES nType);	// look it up and don't build if it exists, else build it
 	virtual CDialog *GetDialog();		// get the properties dialog
 	virtual void DialogInit( CDialog *pcDlg);			// initialize the dialog
 	virtual NAMETYPES GetType() const;
@@ -140,8 +140,8 @@ public:
 
 	virtual CDocument *GetDocument( void);
 												// ------------------------ import/export
-	virtual int	Import( LPCSTR szFileName);								// import some data
-	virtual int Export( LPCSTR szFileName);								// export some data
+	virtual int	Import(CString sFile);								// import some data
+	virtual int Export(CString sFile);								// export some data
 	virtual void GetFilter( CString& csExt, CString& csFilter);
 
 // For use at a higher level

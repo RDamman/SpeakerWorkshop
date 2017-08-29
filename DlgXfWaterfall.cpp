@@ -141,7 +141,7 @@ CWnd *pstat = GetDlgItem( IDC_NPOINTS);	// get the static item
 
 CString csnum;
 
-	csnum.Format( "%d", 1 + nend - nstart);
+	csnum.Format(_T("%d"), 1 + nend - nstart);
 	pstat->SetWindowText( csnum);
 
 }

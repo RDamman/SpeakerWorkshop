@@ -1,3 +1,7 @@
+#pragma once
+
+#include "resource.h"
+
 // audtest.h : main header file for the AUDTEST application
 //
 
@@ -10,14 +14,13 @@
 	#error include 'stdafx.h' before including this file for PCH
 #endif
 
-#include "resource.h"       // main symbols
 
 #ifdef _DEBUG
 #define new DEBUG_NEW
 #endif
 
-extern const char * const cNullString;
-extern const char * const cNullUnicode;
+extern const TCHAR * const cNullString;
+extern const TCHAR * const cNullUnicode;
 
 #define VerboseUpdateData( x)	VerbalUpdateData( this, x)
 
@@ -276,12 +279,12 @@ public:
 	void 	SetFftWindow(int nNew);
 	void	SetInPlace( BOOL bBinary, BOOL bNew);
 	void	SetIncrement( BOOL bBinary, BOOL bNew);
-	static void	GetLastImport( CString &csImport);
-	static void	SetLastImport( LPCTSTR csImport);
-	static void	GetLastExport( CString &csImport);
-	static void	SetLastExport( LPCTSTR csImport);
-	static void	GetLastFile( CString &csFile);
-	static void	SetLastFile( LPCTSTR csFile);
+	static CString GetLastImport();
+	static void	SetLastImport(CString sFile);
+	static CString GetLastExport();
+	static void	SetLastExport(CString sFile);
+	static CString	GetLastFile();
+	static void	SetLastFile(CString sFile);
 	static void	SetMeasures( LPTESTMSR lpInput);
 	static void	GetMeasures( LPTESTMSR lpInput);
 	static void SetRecordingInfo( RECORDINGINFO *pNew);
@@ -351,13 +354,13 @@ public:
 	static int	GetDocCounter( void);
 
 	void	FixRegistry( void);
-	void	DumpRegistry( LPCSTR lpszFileName = (LPCSTR )NULL);
-	int		WriteProfileFloat( LPCSTR lpszAppName, LPCSTR lpszName, float fData);
-	float	GetProfileFloat( LPCSTR lpszAppName, LPCSTR lpszName, float fDefault );
+	void	DumpRegistry( LPCTSTR lpszFileName = (LPCTSTR )NULL);
+	int		WriteProfileFloat( LPCTSTR lpszAppName, LPCTSTR lpszName, float fData);
+	float	GetProfileFloat( LPCTSTR lpszAppName, LPCTSTR lpszName, float fDefault );
 	int		WriteRegistry( UINT lpszName, CObject *pSource);
 	int		ReadRegistry( UINT uidName, CObject *pDest);
-	int		WriteRegistry( LPCSTR lpszName, const void *pStruct, int nStructSize);
-	int		ReadRegistry( LPCSTR lpszName, void *pStruct, int nStructSize);
+	int		WriteRegistry( LPCTSTR lpszName, const void *pStruct, int nStructSize);
+	int		ReadRegistry( LPCTSTR lpszName, void *pStruct, int nStructSize);
 	int		WriteRegistry( UINT uidName, const void *pStruct, int nStructSize);
 	int		ReadRegistry( UINT uidName, void *pStruct, int nStructSize);
 

@@ -24,6 +24,7 @@
 #ifdef _DEBUG
 #undef THIS_FILE
 static char BASED_CODE THIS_FILE[] = __FILE__;
+
 #endif
 
 /////////////////////////////////////////////////////////////////////////////
@@ -207,7 +208,7 @@ CFolder *croot = (CFolder *)m_cRoot;
 
 	{
 	CString csz;
-	csz.Format("Invalid Named Object Reference: %s", GetName());
+	csz.Format(_T("Invalid Named Object Reference: %s"), GetName());
 	AfxMessageBox(csz);
 	}
 
@@ -305,12 +306,12 @@ void CNamed::Serialize(CArchive& ar)
 
 // ----------------------------------------------------------------------------
 
-int	CNamed::Import( LPCSTR )								// import some data
+int	CNamed::Import(CString )								// import some data
 {
 	return 0;			// didn't do anything
 }
 
-int CNamed::Export( LPCSTR )								// export some data
+int CNamed::Export(CString )								// export some data
 {
 	return 0;			// didn't do anything
 }
@@ -332,7 +333,7 @@ void CNamed::SetName( const CString &szIn)
 void CNamed::SetDescription( const CString &szIn)
 {
 #if _DEBUG
-	m_szDescription.Format("ID (%d) @", (int )GetID());
+	m_szDescription.Format(_T("ID (%d) @"), (int )GetID());
 	m_szDescription += szIn;
 #else
  	m_szDescription = szIn;
@@ -370,7 +371,7 @@ CFolder *proot = (CFolder *)GetRootObject();
 }
 
 
-CNamed  *CNamed::FindByName( LPCSTR lpszName, BOOL bAll)		// look through the tree for this one...
+CNamed  *CNamed::FindByName( LPCTSTR lpszName, BOOL bAll)		// look through the tree for this one...
 {
 CFolder *pfold = (CFolder *)GetRootObject();
 CFolder *pparent;
@@ -388,7 +389,7 @@ CFolder *pparent;
 	return pparent->GetItemByName( lpszName, FALSE);
 }
 
-CNamed  *CNamed::CreateByName( LPCSTR lpszName, NAMETYPES nType)		// look through the tree for this one...
+CNamed  *CNamed::CreateByName( LPCTSTR lpszName, NAMETYPES nType)		// look through the tree for this one...
 {
 CNamed *cnam;
 CFolder *cparent;

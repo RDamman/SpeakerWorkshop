@@ -69,7 +69,7 @@ public:
 	void	SetVertical(BOOL bSet)		{ m_bIsVertical = bSet;	}
 	void	SetTopLeft( BOOL bSet)		{ m_bIsTopLeft = bSet; }
 	BOOL	IsTopLeft(void )			{ return m_bIsTopLeft; }
-	void	SetTitle( LPCSTR lpszNew)	{ m_szTitle = lpszNew;	}
+	void	SetTitle( LPCTSTR lpszNew)	{ m_szTitle = lpszNew;	}
 	CString &GetTitle()					{ return m_szTitle;		}
 	BOOL	GetAuto( int nWhich)		{ return ( nWhich ? m_bAutoScale : m_bAutoTic); }
 	void	SetAuto( int nWhich, BOOL bNew)		{ if ( nWhich) m_bAutoScale =bNew; else m_bAutoTic = bNew; }

@@ -52,8 +52,8 @@ public:
 	void ConvertToData(CObject *pcLeft, CObject *pcRight, BOOL bTruncate);	// convert to datasets...
 	void ConvertFromData(CObject *pcLeft, CObject *pcRight);	// convert from datasets...
 
-	int  SaveWave( const char*  pszFileName);
-	int  LoadWave( const char*  pszFileName);
+	int  SaveWave(CString sFileName);
+	int  LoadWave(CString sFileName);
 //
 	int PlayWave(CWnd *cWindow,  float fVolume, float fBalance = 50.0f, int nLoops = 1);
 

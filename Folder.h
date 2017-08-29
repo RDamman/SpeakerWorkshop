@@ -30,7 +30,7 @@ public:
 	void RemoveItem( DWORD dwID);						// non-destructive item removal
 	void DeleteAllTemps( void);							// delete the temporary items
 	CNamed *GetItem( DWORD dwID, BOOL bSubs = TRUE);	// find an item by ID, return ptr
-	CNamed *GetItemByName( LPCSTR lpszName, BOOL bSubs = TRUE);	// find an item by name, return ptr
+	CNamed *GetItemByName( LPCTSTR lpszName, BOOL bSubs = TRUE);	// find an item by name, return ptr
 	CNamed *GetItemAt( int nPos);						// get item from list
 	int	 GetSize( bool bSubs);
 	CNamedArray *GetItemList();

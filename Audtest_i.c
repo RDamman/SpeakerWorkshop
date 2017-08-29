@@ -1,25 +1,25 @@
 
-#pragma warning( disable: 4049 )  /* more than 64k source lines */
 
 /* this ALWAYS GENERATED file contains the IIDs and CLSIDs */
 
 /* link this file in with the server and any clients */
 
 
- /* File created by MIDL compiler version 6.00.0347 */
-/* at Sat Sep 28 13:23:34 2002
+ /* File created by MIDL compiler version 8.00.0603 */
+/* at Tue Aug 29 22:16:40 2017
  */
 /* Compiler settings for Audtest.odl:
-    Os, W1, Zp8, env=Win32 (32b run)
-    protocol : dce , ms_ext, c_ext
+    Oicf, W1, Zp8, env=Win32 (32b run), target_arch=X86 8.00.0603 
+    protocol : dce , ms_ext, c_ext, robust
     error checks: allocation ref bounds_check enum stub_data 
     VC __declspec() decoration level: 
          __declspec(uuid()), __declspec(selectany), __declspec(novtable)
          DECLSPEC_UUID(), MIDL_INTERFACE()
 */
-//@@MIDL_FILE_HEADING(  )
+/* @@MIDL_FILE_HEADING(  ) */
 
-#if !defined(_M_IA64) && !defined(_M_AMD64)
+#pragma warning( disable: 4049 )  /* more than 64k source lines */
+
 
 #ifdef __cplusplus
 extern "C"{
@@ -598,6 +598,4 @@ MIDL_DEFINE_GUID(CLSID, CLSID_DLGCALLOOPJIG,0x1E22DC47,0x3519,0x11D0,0xAA,0x04,0
 #endif
 
 
-
-#endif /* !defined(_M_IA64) && !defined(_M_AMD64)*/
 

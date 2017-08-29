@@ -91,8 +91,8 @@ BOOL CDlgGenGeneral::OnInitDialog()
 		m_cDataRates.ResetContent();
 		for ( i=0; i<prate->GetSize(); i++)
 			{
-			char cs[20];
-				sprintf(cs, "%d", (int )prate->GetAt(i) );
+			CString cs;
+				cs.Format(_T("%d"), (int )prate->GetAt(i) );
 			m_cDataRates.AddString( cs);
 			}
 	UpdateData( FALSE);			// get the control set

@@ -46,7 +46,7 @@ void CDlgMls::DoDataExchange(CDataExchange* pDX)
 	CPropertyPage::DoDataExchange(pDX);
 
 	if ( ! pDX->m_bSaveAndValidate )
-		m_csSize.Format( "%d", (int )m_dwNumber);
+		m_csSize.Format(_T("%d"), (int)m_dwNumber);
 	
 	//{{AFX_DATA_MAP(CDlgMls)
 	DDX_Control(pDX, IDC_SAMPLESIZE, m_clSize);

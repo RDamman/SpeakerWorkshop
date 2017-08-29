@@ -1,4 +1,4 @@
-cle// fxfont.cpp : implementation of the CFxFont classes
+// fxfont.cpp : implementation of the CFxFont classes
 //		subroutines for character i/o using fonts
 
 
@@ -20,7 +20,7 @@ IMPLEMENT_SERIAL(CFxFont, CObject, VERSIONABLE_SCHEMA | 237)
 // CFxFont construction/destruction
 static LOGFONT base_lf = {14,0,0,0,400,FALSE,FALSE,FALSE,ANSI_CHARSET,
 			  OUT_CHARACTER_PRECIS, CLIP_CHARACTER_PRECIS,
-			  PROOF_QUALITY, DEFAULT_PITCH | FF_DONTCARE , "Arial"};
+			  PROOF_QUALITY, DEFAULT_PITCH | FF_DONTCARE , _T("Arial")};
 
 CFxFont::CFxFont() : m_csStyleName()
 {
@@ -70,11 +70,11 @@ DWORD dw;
 
 int   CFxFont::EditProperties(CWnd *pWnd )	// bring up properties dbox
 {
-CFontDialog	cfd( &m_lFont, CF_TTONLY | CF_BOTH | CF_EFFECTS | CF_INITTOLOGFONTSTRUCT | CF_USESTYLE, NULL, pWnd);
-int nret;
-char szstyle[200];
+	CFontDialog	cfd( &m_lFont, CF_TTONLY | CF_BOTH | CF_EFFECTS | CF_INITTOLOGFONTSTRUCT | CF_USESTYLE, NULL, pWnd);
+	int nret;
+	TCHAR szstyle[200];
 
-	strcpy( szstyle, (LPCSTR )m_csStyleName);
+	wcscpy( szstyle, (LPCTSTR )m_csStyleName);
 	cfd.m_cf.lpszStyle = szstyle;
 	cfd.m_cf.rgbColors = m_rgbFont;
 	nret = cfd.DoModal();
@@ -256,11 +256,7 @@ void CFxFont::SetCurrentFont( CFont *cfNew)
 
 void CFxFont::GetPrettyName(CString& csDest)
 {
-char szout[200];
-	
-		sprintf( szout, "%s %s %dpt", m_lFont.lfFaceName, (LPCSTR )m_csStyleName, m_nHeight/10);
-
-		csDest = szout;
+	csDest.Format(_T("%s %s %dpt"), m_lFont.lfFaceName, (LPCTSTR)m_csStyleName, m_nHeight / 10);
 }
 
 void CFxFont::GetFontName(CString& csDest)
@@ -393,7 +389,7 @@ typedef struct tagFXFONTINFO
 	COLORREF	rgb;
 	int			nHeight;
 	WORD		wEffect;			// not yet used
-	char		szStyle[30];		// random max???
+	TCHAR		szStyle[30];		// random max???
 } FXFONTINFO;
 
 
@@ -424,7 +420,7 @@ UINT idcs[NUMFONTTYPES] = { IDS_CHARTTITLE, IDS_CHARTSUBTITLE, IDS_CHARTAXISTITL
 	finfo.lFont = m_lFont;
 	finfo.rgb = m_rgbFont;
 	finfo.nHeight = m_nHeight;
-	strcpy( finfo.szStyle, (LPCSTR )m_csStyleName);
+	wcscpy( finfo.szStyle, (LPCTSTR )m_csStyleName);
 
 	capp->WriteRegistry(idcs[nName], &finfo, sizeof(finfo));
 

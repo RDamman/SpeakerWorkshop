@@ -388,9 +388,9 @@ int nend = m_nEnd + 1;	// go 1 more to be non-inclusive
 	{
 	CString csform, cstart, cend;
 		csform.GetBuffer(1024);	// this could be pretty long
-		cstart.Format( "%f", cdsource->DataAt( dataFreq, nstart));
-		cend.Format( "%f", cdsource->DataAt( dataFreq, nend-1));
-		csform.Format( IDS_IFFTDESC, (LPCSTR )cdsource->GetName(), (LPCSTR )cstart, (LPCSTR )cend);
+		cstart.Format(_T("%f"), cdsource->DataAt( dataFreq, nstart));
+		cend.Format(_T("%f"), cdsource->DataAt( dataFreq, nend-1));
+		csform.Format(IDS_IFFTDESC, (LPCTSTR)cdsource->GetName(), (LPCTSTR)cstart, (LPCTSTR)cend);
 	cdnew->SetDescription( csform);
 	}
 
@@ -465,7 +465,7 @@ int nwindow = m_nWindow;
 	{
 	CString csform;
 		csform.GetBuffer(1024);	// this could be pretty long
-		csform.Format( IDS_FFTDESC, (LPCSTR )cdsource->GetName(), nstart, nend-1, nwindow);
+		csform.Format( IDS_FFTDESC, (LPCTSTR )cdsource->GetName(), nstart, nend-1, nwindow);
 	cdnew->SetDescription( csform);
 	}
 

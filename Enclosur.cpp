@@ -703,7 +703,7 @@ CEnclosure *cenc;
 	if ( ! pbase)
 		return 1;
 
-	cenc = (CEnclosure *)pbase->CreateByName( "Compare", ntEnclosure);	// build compare enclosure
+	cenc = (CEnclosure *)pbase->CreateByName(_T("Compare"), ntEnclosure);	// build compare enclosure
 	if ( ! cenc)
 		return 2;
 

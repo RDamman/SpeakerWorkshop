@@ -719,20 +719,19 @@ INT32 dw;
 
 
 
-static DWORD get_Line( CFile& cIn, LPSTR szBuf, DWORD dwAvail)
+static ULONGLONG get_Line(CFile& cIn, LPTSTR szBuf, ULONGLONG dwAvail)
 {
-int noff = 0;
+	int noff = 0;
+	char cHelp;
 
-	while( dwAvail && 1 != *szBuf)		// data left and not end of buffer
+	while (dwAvail && (*szBuf != 1))		// data left and not end of buffer
 		{
-			cIn.Read(szBuf,1);
+			cIn.Read(&cHelp, 1);
+			*szBuf = cHelp;
 			dwAvail--;
-			if ( '\n' ==  *szBuf)
-				{
-				*szBuf = '\0';
-				return dwAvail;
-				}
-			if ( noff || ! isspace( *szBuf))			// remove leading white space
+			if ('\n' == *szBuf)
+				break;
+			if ( noff || ! iswspace( *szBuf))			// remove leading white space
 			{
 				szBuf++;
 				noff = 1;			// we have a non-blank
@@ -772,30 +771,25 @@ void CDataSet::CopyHeader( CDataSet *cdSource)
 //					Import
 // read a dataset from a file
 // --------------------------------------------------------------
-int CDataSet::Import( LPCSTR szFileName)
+int CDataSet::Import(CString szFileName)
 {
-CFile file;
-CFileException fe;
-float fdelta = (float)-1;
-float fstart = (float)-1;
-DWORD dwleft;
-char szbuf[200];
-const char *szext;
-int nread;
+	CStdioFile file;
+	CFileException fe;
+	float fdelta = (float)-1;
+	float fstart = (float)-1;
+	ULONGLONG dwleft;
+	TCHAR szbuf[200];
+	const TCHAR *szext;
+	int nread;
 
 	memset( szbuf, 0, 200);
 	szbuf[199] = (char)1;		// flag byte
 
-	if (!file.Open(szFileName, 
-					CFile::modeRead | CFile::shareDenyNone,
-					&fe))
-		{
+	if (!file.Open(szFileName, CFile::modeRead | CFile::shareDenyNone | CFile::typeBinary, &fe))
 		return 1;
-		}
 
-
-	if ( 3 < strlen( szFileName))
-		szext = szFileName + strlen(szFileName) - 3;
+	if (wcslen( szFileName) > 3)
+		szext = ((LPCTSTR)szFileName)+ (wcslen(szFileName) - 3);
 	else
 		szext = szFileName;
 
@@ -808,22 +802,22 @@ int nread;
 	m_ciPhase.RemoveAll();
 	dwleft = file.GetLength();
 
-	if ( ! stricmp( "imp", szext))		// imp time file
+	if ( ! wcscmp(_T("imp"), szext))		// imp time file
 		{
 		int ntotal;
 		float fsample;
 						// read line 1
 		dwleft = get_Line( file, szbuf, dwleft);			// # of data points
-		sscanf( szbuf, "%d", &ntotal);
+		swscanf_s( szbuf, _T("%d"), &ntotal);
 		dwleft = get_Line( file, szbuf, dwleft);			// same as # data pts ???
 		dwleft = get_Line( file, szbuf, dwleft);			// sampling freq
-		sscanf( szbuf, "%f", &fsample);
+		swscanf_s( szbuf, _T("%f"), &fsample);
 		dwleft = get_Line( file, szbuf, dwleft);			// random "1"??
 
 		while( dwleft && ntotal--)
 			{
 			dwleft = get_Line( file, szbuf, dwleft);
-			if ( 1 == sscanf( szbuf, "%f", &famp))
+			if (swscanf_s( szbuf, _T("%f"), &famp) == 1)
 				{
 				famp *= 16384;			// make it more appropriate for us
 				m_ciData.Add( FTOI(famp));
@@ -837,8 +831,8 @@ int nread;
 		SetDelta( (float )(1000 / fsample));	// ??? 1000 / fsample?
 		}
 	else
-	if ( (! stricmp( "frd", szext))	||	// frd (frequency) file
-		 (! stricmp( "zma", szext))  )	// zma (impedance)
+	if ( (! wcsicmp(_T("frd"), szext))	||	// frd (frequency) file
+		 (! wcsicmp(_T("zma"), szext))  )	// zma (impedance)
 		{	
 		freq = 10.0f;
 		famp = 1.0f;
@@ -850,7 +844,7 @@ int nread;
 			if ( dwleft)
 			{
 				if ( '*' != szbuf[0])		// it's not a comment
-					nread = sscanf( szbuf, "%f %f %f", &freq, &famp, &fphase);
+					nread = swscanf_s( szbuf, _T("%f %f %f"), &freq, &famp, &fphase);
 			}
 			else
 				nread =  3;		// abrupt stop
@@ -864,7 +858,7 @@ int nread;
 			if ( dwleft)
 			{
 				if ( '*' != szbuf[0])		// it's not a comment
-					nread = sscanf( szbuf, "%f %f %f", &freq, &famp, &fphase);
+					nread = swscanf_s( szbuf, _T("%f %f %f"), &freq, &famp, &fphase);
 			}
 			else
 				nread =  3;		// abrupt stop
@@ -878,16 +872,16 @@ int nread;
 
 		SetDataEasy( freq, famp, fphase);
 
-		while( dwleft && freq < 22050.0f)		// if it goes past 22k skip it
+		while( dwleft) // && freq < 22050.0f)		// if it goes past 22k skip it
 			{
 			dwleft = get_Line( file, szbuf, dwleft);
-			if ( 3 == sscanf( szbuf, "%f %f %f", &freq, &famp, &fphase))
+			if (swscanf_s( szbuf, _T("%f %f %f"), &freq, &famp, &fphase) == 3)
 				SetDataEasy( freq, famp, fphase);
 			}
 		file.Close();
 
 
-		if ( ! stricmp( "frd", szext))		// frd (frequency) file
+		if ( ! wcsicmp(_T("frd"), szext))		// frd (frequency) file
 			{
 //			float fmin, fmax, fact;
 //			int i, ncount;
@@ -927,7 +921,7 @@ int nread;
 	{
 	CString csimp;
 
-		csimp.Format( IDS_IMPORTED, szFileName, ctime( &m_tTime) );
+		csimp.Format( IDS_IMPORTED, szFileName, _wctime( &m_tTime) );
 		SetDescription( csimp);
 	}
 
@@ -943,21 +937,30 @@ int nread;
 
 }
 
+void writeFileAnsi(CStdioFile &fileIn, LPCTSTR caIn)
+{
+	CString sUit = caIn;
+	fileIn.Write(CT2A(sUit), sUit.GetLength());
+//	fileIn.Write(sUit, sUit.GetLength());
+}
+
+
+
 // --------------------------------------------------------------
-//					Import
-// read a dataset from a file
+//					Export
+// write a dataset to a file
 // --------------------------------------------------------------
-int CDataSet::Export( LPCSTR szFileName)
+int CDataSet::Export(CString szFileName)
 {
 CStdioFile file;
 CFileException fe;
-char szbufr[200];
+TCHAR szbufr[200];
 int nsize;
 int i;
 CSetLocale csl( LC_ALL, 0);
 
 	if (!file.Open(szFileName, 
-					CFile::modeCreate | CFile::modeWrite | CFile::shareExclusive,
+					CFile::modeCreate | CFile::modeWrite | CFile::shareExclusive | CFile::typeBinary,
 					&fe))
 		{
 		return 1;
@@ -979,8 +982,8 @@ CSetLocale csl( LC_ALL, 0);
 				famp = DataAt( dataAmp, i);
 				freq = DataAt( dataFreq, i);
 				fphase = DataAt( dataPhase, i);
-				sprintf( szbufr, "%f %f %f\n", freq, famp, fphase);
-				file.WriteString( szbufr);
+				swprintf_s( szbufr, _T("%f %f %f\n"), freq, famp, fphase);
+				writeFileAnsi(file, szbufr);
 				}
 			break;
 		case uomTime :					// time file (imp)
@@ -995,33 +998,33 @@ CSetLocale csl( LC_ALL, 0);
 			else
 			if ( 512 <= nsize)
 				nsize = 512;
-			sprintf( szbufr, "%d\n", nsize);
-			file.WriteString( szbufr);
-			file.WriteString( szbufr);		// ?????
-			sprintf( szbufr, "%15.12f\n", 1 / (GetDelta()/1000) );	// sampling rate
-			file.WriteString( szbufr);
-			sprintf( szbufr, "1\n");		// ????
-			file.WriteString( szbufr);
+			swprintf_s( szbufr, _T("%d\n"), nsize);
+			writeFileAnsi(file, szbufr);
+			writeFileAnsi(file, szbufr);		// ?????
+			swprintf_s( szbufr, _T("%15.12f\n"), 1 / (GetDelta()/1000) );	// sampling rate
+			writeFileAnsi(file, szbufr);
+			swprintf_s( szbufr, _T("1\n"));		// ????
+			writeFileAnsi(file, szbufr);
 			for ( i=0; i<nsize; i++)
 				{
 				INT32 in = GetDataAt( i);
 				famp = ITOF( in );
 					famp /= 32767;			// put it back into +-2 terms
-				sprintf( szbufr, "%15.12f\n", famp);
-				file.WriteString( szbufr);
+				swprintf_s( szbufr, _T("%15.12f\n"), famp);
+				writeFileAnsi(file, szbufr);
 				}
-			strcpy( szbufr, GetName()+"\n" );
-			file.WriteString( szbufr);
-			sprintf( szbufr, "1\n");
-			file.WriteString( szbufr);
-			sprintf( szbufr, "          12:12:12  01/02/95\n");
-			file.WriteString( szbufr);		// this should be date and time
-			sprintf( szbufr, "0\n");		// now the starting marker			
-			file.WriteString( szbufr);		// this should be date and time
-			sprintf( szbufr, "%d\n", nsize-1);		// now the ending marker
-			file.WriteString( szbufr);		// this should be date and time
-			sprintf( szbufr, "1.0000000E+00\n");		// u must be kidding
-			file.WriteString( szbufr);		// 
+			wcscpy( szbufr, GetName()+"\n" );
+			writeFileAnsi(file, szbufr);
+			swprintf_s( szbufr, _T("1\n"));
+			writeFileAnsi(file, szbufr);
+			swprintf_s( szbufr, _T("          12:12:12  01/02/95\n"));
+			writeFileAnsi(file, szbufr);		// this should be date and time
+			swprintf_s( szbufr, _T("0\n"));		// now the starting marker			
+			writeFileAnsi(file, szbufr);		// this should be date and time
+			swprintf_s( szbufr, _T("%d\n"), nsize-1);		// now the ending marker
+			writeFileAnsi(file, szbufr);		// this should be date and time
+			swprintf_s( szbufr, _T("1.0000000E+00\n"));		// u must be kidding
+			writeFileAnsi(file, szbufr);		// 
 			break;
 		case uomOhms :					// impedance file
 			for ( i=0; i<nsize; i++)
@@ -1029,8 +1032,8 @@ CSetLocale csl( LC_ALL, 0);
 				famp = DataAt( dataAmp, i);
 				freq = DataAt( dataFreq, i);
 				fphase = DataAt( dataPhase, i);
-				sprintf( szbufr, "%f %f %f\n", freq, famp, fphase);
-				file.WriteString( szbufr);
+				swprintf_s( szbufr, _T("%f %f %f\n"), freq, famp, fphase);
+				writeFileAnsi(file, szbufr);
 				}
 			break;
 		default :
@@ -1226,7 +1229,7 @@ int noldp = m_ciPhase.GetSize();
 	catch( CException *e)
 		{
 		    // Handle the exception locally
-		AfxMessageBox("Insufficient Memory");
+		AfxMessageBox(_T("Insufficient Memory"));
 		e->Delete();
 		if ( noldd != nNewSize || noldp != nNewPhase)
 			SetSize( noldd, noldp);

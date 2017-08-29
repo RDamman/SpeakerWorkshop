@@ -4,6 +4,7 @@
 #ifdef _DEBUG
 #undef THIS_FILE
 static char BASED_CODE THIS_FILE[] = __FILE__;
+
 #endif
 
 
@@ -20,8 +21,8 @@ static char BASED_CODE THIS_FILE[] = __FILE__;
 // ----------------------------------------------------------------
 // the null strings to save on global storage
 
-const char * const cNullString = "";
-const char * const cNullUnicode = _T("");
+const TCHAR * const cNullString = _T("");
+const TCHAR * const cNullUnicode = _T("");
 
 // ----------------------------------------------------------------
 
@@ -51,11 +52,11 @@ BOOL bsign = nValue < 0;
 		nValue = -nValue;
 
 	if ( nValue > 1000000)		// million
-		csDest.Format( "%d,%03d,%03d", nValue/1000000, (nValue % 1000000) / 1000, nValue % 1000);
+		csDest.Format(_T("%d,%03d,%03d"), nValue / 1000000, (nValue % 1000000) / 1000, nValue % 1000);
 	else if ( nValue > 1000)
-		csDest.Format( "%d,%03d", nValue/1000, nValue % 1000);
+		csDest.Format(_T("%d,%03d"), nValue / 1000, nValue % 1000);
 	else
-		csDest.Format( "%d", nValue);
+		csDest.Format(_T("%d"), nValue);
 
 }
 
@@ -70,9 +71,9 @@ void  FullFormatValue( CString &csDest, float fValue, int nDecimal)
 {
 CString csunit;
 float fsub;
-char szout[100];
-char szform[100];;
-const char *szdigit = "0123456789";
+CString szout;
+CString szform;
+const TCHAR *szdigit = _T("0123456789");
 
 	if ( fValue == 0.0f)			// value is 00000
 		{
@@ -85,12 +86,11 @@ const char *szdigit = "0123456789";
 		{
 		fsub = fValue;
 		csunit = cNullString;
-		strcpy( szform,"%.0f ");
+		szform = "%.0f ";
 		}
 	else if ( nDecimal > 0)		// # of decimal places
 		{
-		strcpy( szform,"%.2f ");
-		szform[2] = (char )(nDecimal + '0');
+			szform.Format(_T("%%.%df"), nDecimal);
 		}
 	else						// number of digits
 		{
@@ -98,36 +98,30 @@ const char *szdigit = "0123456789";
 		int ndigits;
 
 		ndigits = -nDecimal;		// put into > 0
-		strcpy( szform,"%.3f ");		// 3 isn't retained
 
+		int iDigits = 0;
 		if ( fab > 100)
 			{
 			if ( ndigits > 3)
-				szform[2] = szdigit[ndigits - 3];
-			else
-				szform[2] = '0';
+				iDigits = ndigits - 3;
 			}
 		else if ( fab > 10)
 			{
 			if ( ndigits > 2)
-				szform[2] = szdigit[ndigits - 2];
-			else
-				szform[2] = '0';
+				iDigits = ndigits - 2;
 			}
 		else if ( fab > 1)
 			{
 			if ( ndigits > 1)
-				szform[2] = szdigit[ndigits - 1];
-			else
-				szform[2] = '0';
+				iDigits = ndigits - 1;
 			}
 		else 
 			{
-			szform[2] = szdigit[ndigits];
+				iDigits = ndigits;
 			}
-		}
-
-	sprintf( szout, szform, fsub);
+		szform.Format(_T("%%.%df "), iDigits);
+	}
+	szout.Format(szform, fsub);
 	csDest = szout + csunit;		// append the unit of measure (K, m, ...)
 }
 
@@ -185,7 +179,7 @@ double dv = fabs( fValue);
 float UnformatValue( float fValue, CString& csUnit)
 {
 double dval;
-char c;
+TCHAR c;
 
 	csUnit.TrimLeft();
 
@@ -232,7 +226,7 @@ CString csc;
 CString csout;
 TCHAR c;
 
-	csdigit.Format("%.9f", 1.023456789);		// all of the digits and the (possibly localized) decimal point
+	csdigit.Format(_T("%.9f"), 1.023456789);		// all of the digits and the (possibly localized) decimal point
 	csdigit += ".,";		// allow both period and comma always
 
 	csc = csValue;
@@ -271,7 +265,7 @@ TCHAR c;
 float UnformatValue(CString& csValue)
 {
 double dval;
-char c;
+TCHAR c;
 float fvalue;
 
 	csValue.TrimRight();
@@ -286,7 +280,7 @@ float fvalue;
 	CString csdigit;
 	int i = -1;
 
-		csdigit.Format("%.9f", 1.023456789);		// all of the digits and the (possibly localized) decimal point
+		csdigit.Format(_T("%.9f"), 1.023456789);		// all of the digits and the (possibly localized) decimal point
 		if ( TCHAR(',') == csdigit[1])				// use a comma
 			i = csValue.Find( TCHAR('.'));			// found a .
 		else if ( TCHAR('.') == csdigit[1])			// use a .
@@ -296,7 +290,7 @@ float fvalue;
 			csValue.SetAt(i, csdigit[1]);				// move it in there
 	}
 
-	sscanf( (LPCSTR )csValue, "%f", &fvalue);
+	swscanf_s( (LPCTSTR )csValue, _T("%f"), &fvalue);
 	switch( c)
 		{
 		case 'M' :
@@ -345,7 +339,7 @@ int i, nsize;
 
 void	KillArray( CObArray *cKill)
 {
-int i;
+	int i;
 
 	for ( i=cKill->GetSize(); i; i--)
 	{

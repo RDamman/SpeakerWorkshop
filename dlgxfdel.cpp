@@ -122,7 +122,7 @@ BOOL CDlgXfDelay::OnInitDialog()
 
 	CDialog::OnInitDialog();
 
-	m_txtDelay.SetWindowText("");		// turn off the display
+	m_txtDelay.SetWindowTextW((LPCTSTR)"");		// turn off the display
 	
 	return TRUE;  // return TRUE unless you set the focus to a control
 	              // EXCEPTION: OCX Property Pages should return FALSE

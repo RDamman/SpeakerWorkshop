@@ -50,7 +50,7 @@ void	CSplitterBar::Create(CWnd *pParent, RECT& rcout, int nID)
 		cssplit_Name = AfxRegisterWndClass( CS_PARENTDC, hsplit);
 		}
 
-	CWnd::Create(cssplit_Name, "zSplitBar", WS_VISIBLE | WS_CHILD, rcout, pParent, nID, NULL);
+	CWnd::Create(cssplit_Name, _T("zSplitBar"), WS_VISIBLE | WS_CHILD, rcout, pParent, nID, NULL);
 }
 
 void CSplitterBar::OnPaint() 

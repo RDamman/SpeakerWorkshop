@@ -393,7 +393,7 @@ void CMainFrame::CloseProgressBar( void)
 		return;			// do nothing
 
 	m_wndProgress.ShowWindow( SW_HIDE);
-	m_wndStatusBar.SetPaneText(0, "");
+	m_wndStatusBar.SetPaneText(0, _T(""));
 	m_wndStatusBar.UpdateWindow();
 }
 
@@ -410,7 +410,7 @@ void CMainFrame::OnClose()
 
 		GetWindowPlacement( &wp);
 
-		capp->WriteRegistry( "WindowPlace", &wp, sizeof( wp));
+		capp->WriteRegistry(_T("WindowPlace"), &wp, sizeof( wp));
 
 	}
 

@@ -26,6 +26,7 @@
 #ifdef _DEBUG
 #undef THIS_FILE
 static char BASED_CODE THIS_FILE[] = __FILE__;
+
 #endif
 
 
@@ -35,18 +36,17 @@ static char BASED_CODE THIS_FILE[] = __FILE__;
 
 IMPLEMENT_SERIAL(CNetwork, CNamed, VERSIONABLE_SCHEMA | 250)
 
-static DWORD get_Line( CFile& cIn, LPSTR szBuf, DWORD dwAvail)
+static ULONGLONG get_Line(CFile& cIn, LPTSTR szBuf, ULONGLONG dwAvail)
 {
-	while( dwAvail && 1 != *szBuf)		// data left and not end of buffer
+	char cHelp;
+	while (dwAvail && (*szBuf != 1))		// data left and not end of buffer
 		{
-		cIn.Read(szBuf,1);
-		dwAvail--;
-		if ( '\n' ==  *szBuf)
-			{
-			*szBuf = '\0';
-			return dwAvail;
-			}
-		szBuf++;
+			cIn.Read(&cHelp, 1);
+			dwAvail--;
+			*szBuf = cHelp;
+			if (*szBuf == '\n')
+				break;
+			szBuf++;
 		}
 
 	*szBuf = '\0';
@@ -1021,17 +1021,17 @@ ZpPassive *zp;
 //					Import
 // read a network from a file
 // --------------------------------------------------------------
-int CNetwork::Import( LPCSTR szFileName)
+int CNetwork::Import(CString sFile)
 {
 CFile file;
 CFileException fe;
-DWORD dwleft;
-char szbuf[200];
+ULONGLONG dwleft;
+TCHAR szbuf[200];
 
 	memset( szbuf, 0, 200);
-	szbuf[199] = (char)1;		// flag byte
+	szbuf[199] = (TCHAR)1;		// flag byte
 
-	if (!file.Open(szFileName, 
+	if (!file.Open(sFile, 
 					CFile::modeRead | CFile::shareDenyNone,
 					&fe))
 		{
@@ -1107,7 +1107,7 @@ char szbuf[200];
 
 		tt = GetLastEdit();
 
-		csimp.Format( IDS_IMPORTED, szFileName, ctime( &tt) );
+		csimp.Format( IDS_IMPORTED, sFile, _wctime( &tt) );
 
 		SetDescription( csimp);
 	}
@@ -1116,7 +1116,7 @@ char szbuf[200];
 	{
 	CFileStatus cfs;
 
-		CFile::GetStatus( szFileName, cfs);
+		CFile::GetStatus( sFile, cfs);
 		SetCreated( cfs.m_ctime.GetTime() );			// creation date and time
 	}
 
@@ -1127,44 +1127,37 @@ char szbuf[200];
 //					Export
 // write a network into a file
 // --------------------------------------------------------------
-int CNetwork::Export( LPCSTR szFileName)
+int CNetwork::Export(CString sFile)
 {
 CStdioFile file;
 CFileException fe;
-char szbufr[200];
 int nsize;
 int i;
 
-	if (!file.Open(szFileName, 
-					CFile::modeCreate | CFile::modeWrite | CFile::shareExclusive,
-					&fe))
-		{
+	if (!file.Open(sFile, CFile::modeCreate | CFile::modeWrite | CFile::shareExclusive, &fe))
 		return 1;
-		}
 
 	TRY
 	{
 	ZpPassive *pcpassive;
 	CSetLocale( LC_ALL, 0);
-
 	nsize = m_cDiscretes.GetSize();
 	for ( i=0; i<nsize; i++)
 		{
 		pcpassive = (ZpPassive *)GetDiscrete(i);
-
-		if ( ! pcpassive->ExportLine( szbufr))
-			file.WriteString( szbufr);
+		CString sHelp = pcpassive->ExportLine();
+		CT2A ascii(sHelp, 1252); // codepage 1252
+		file.Write(ascii.m_psz, strlen(ascii.m_psz));
 		}
 	
 	ZpDriver *pcdriver;
-
 	nsize = m_cDrivers.GetSize();
 	for ( i=0; i<nsize; i++)
 		{
 		pcdriver = (ZpDriver *)GetDriver(i);
-
-		if ( ! pcdriver->ExportLine( szbufr))
-			file.WriteString( szbufr);
+		CString sHelp = pcdriver->ExportLine();
+		CT2A ascii(sHelp, 1252); // codepage 1252
+		file.Write(ascii.m_psz, strlen(ascii.m_psz));
 		}
 	
 	}
@@ -1412,19 +1405,19 @@ int ntotal;
 			{
 			case 4 :
 				pnew = new ZpInductor;
-				pnew->SetName("L2");
+				pnew->SetName(_T("L2"));
 				car[3] = pnew;
 			case 3 :
 				pnew = new ZpCapacitor;
-				pnew->SetName("C2");
+				pnew->SetName(_T("C2"));
 				car[2] = pnew;
 			case 2 :
 				pnew = new ZpInductor;
-				pnew->SetName("L1");
+				pnew->SetName(_T("L1"));
 				car[1] = pnew;
 			case 1 :
 				pnew = new ZpCapacitor;
-				pnew->SetName("C1");
+				pnew->SetName(_T("C1"));
 				car[0] = pnew;
 				break;
 			default:
@@ -1437,19 +1430,19 @@ int ntotal;
 			{
 			case 4 :
 				pnew = new ZpCapacitor;
-				pnew->SetName("C2");
+				pnew->SetName(_T("C2"));
 				car[3] = pnew;
 			case 3 :
 				pnew = new ZpInductor;
-				pnew->SetName("L2");
+				pnew->SetName(_T("L2"));
 				car[2] = pnew;
 			case 2 :
 				pnew = new ZpCapacitor;
-				pnew->SetName("C1");
+				pnew->SetName(_T("C1"));
 				car[1] = pnew;
 			case 1 :
 				pnew = new ZpInductor;
-				pnew->SetName("L1");
+				pnew->SetName(_T("L1"));
 				car[0] = pnew;
 				break;
 			default:
@@ -1669,12 +1662,12 @@ int ntotal;
 	r2 = r2 * fDCRes / (1 - r2);		// the actual formula (see p118 in LDC)
 
 	pnew = new ZpResistor;		// first part of lpad
-	pnew->SetName("Rp1");
+	pnew->SetName(_T("Rp1"));
 	pnew->SetValue( fDCRes - 1 / ( 1/r2 + 1/fDCRes));
 	pnew->SetLabeling( 3);
 	car[0] = pnew;
 	pnew = new ZpResistor;		// first part of lpad
-	pnew->SetName("Rp2");
+	pnew->SetName(_T("Rp2"));
 	pnew->SetLabeling( 6);
 	pnew->SetNode(1,0);			// make it to ground
 	pnew->SetValue( r2);
@@ -2042,7 +2035,7 @@ int nerr;
 	if ( nType)			// resonant peak rlc circuit
 		{
 		pnew = new ZpInductor;
-		pnew->SetName("Lz1");
+		pnew->SetName(_T("Lz1"));
 		car[2] = pnew;
 		car[3] = NULL;
 		}
@@ -2052,10 +2045,10 @@ int nerr;
 		}
 
 	pnew = new ZpCapacitor;
-	pnew->SetName("Cz1");
+	pnew->SetName(_T("Cz1"));
 	car[1] = pnew;
 	pnew = new ZpResistor;
-	pnew->SetName("Rz1");
+	pnew->SetName(_T("Rz1"));
 	car[0] = pnew;
 
 

@@ -244,7 +244,7 @@ static int do_HitButton( CFolder *cRoot, CString& csName, DWORD& dwID, UNITMSR u
 CDlgSelectObject cdlg;
 int nrslt;
 
-	DBG_PRINT("[DlgDrDat.doHit] Select built...");
+	DBG_PRINT(_T("[DlgDrDat.doHit] Select built..."));
 
 #if ALLOW_DBG
 	if ( dwID)
@@ -254,38 +254,38 @@ int nrslt;
 		if ( cnam && cnam->IsType( ntDataSet, uomAny))
 			{
 			csname = cnam->GetFullName();
-			DBG_TWO("Dataset named %s", (LPCSTR )csname);
+			DBG_TWO(_T("Dataset named %s"), (LPCTSTR )csname);
 			}
 		else
 			if ( ! cnam)
-				DBG_PRINT("[DlgDrDat.doHit] Item not found");
+				DBG_PRINT(_T("[DlgDrDat.doHit] Item not found"));
 			else
-				DBG_PRINT("[DlgDrDat.doHit] Not a dataset");
+				DBG_PRINT(_T("[DlgDrDat.doHit] Not a dataset"));
 		switch( uom)
 			{
 			case uomTime :
-				DBG_PRINT("[DlgDrDat.doHit] Using time");
+				DBG_PRINT(_T("[DlgDrDat.doHit] Using time"));
 				break;
 			case uomFreq :
-				DBG_PRINT("[DlgDrDat.doHit] Using frequency");
+				DBG_PRINT(_T("[DlgDrDat.doHit] Using frequency"));
 				break;
 			case uomOhms :
-				DBG_PRINT("[DlgDrDat.doHit] Using ohms");
+				DBG_PRINT(_T("[DlgDrDat.doHit] Using ohms"));
 				break;
 			}
 		}
 	else
-		DBG_PRINT("[DlgDrDat.doHit] Null item id");
-	DBG_TWO("[DlgDrDat.doHit] Root Object: %s", cRoot->GetName());
+		DBG_PRINT(_T("[DlgDrDat.doHit] Null item id"));
+	DBG_TWO(_T("[DlgDrDat.doHit] Root Object: %s"), cRoot->GetName());
 #endif
 
 	cdlg.SetParms( cRoot, dwID, ntDataSet, uom);
 	
-	DBG_PRINT("[DlgDrDat.doHit] Parameters set");
+	DBG_PRINT(_T("[DlgDrDat.doHit] Parameters set"));
 
 	nrslt = cdlg.DoModal();
 
-	DBG_PRINT("[DlgDrDat.doHit] SelectObject dialog executed");
+	DBG_PRINT(_T("[DlgDrDat.doHit] SelectObject dialog executed"));
 
 	if ( IDOK == nrslt)
 		{

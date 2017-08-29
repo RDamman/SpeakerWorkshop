@@ -293,9 +293,9 @@ void CAudtestView::OnUpdate(CView* pSender, LPARAM lHint, CObject* pHint)
 		InvalidateRect( NULL);			// if !lHint, or it's us invalidate everything
 		if ( (DWORD )lHint == GetTarget())
 		{
-			DBG_PRINT("Resetting Target");
+			DBG_PRINT(_T("Resetting Target"));
 			ResetTarget();
-			DBG_PRINT("Reset target");
+			DBG_PRINT(_T("Reset target"));
 		}
 	}
 
@@ -360,14 +360,14 @@ CString csuffix;
 CString cstitle;
 
 CFileDialog cdlg( TRUE, NULL, NULL, OFN_FILEMUSTEXIST | OFN_PATHMUSTEXIST, 
-		"Network (*.CIR)|*.CIR|Frequency (*.FRD)|*.FRD|Text (*.TXT)|*.TXT|Wave (*.WAV)|*.WAV|Impedance (*.ZMA)|*.ZMA|Time (*.IMP)|*.IMP|All Files (*.*)|*.*||",
+		_T("Network (*.CIR)|*.CIR|Frequency (*.FRD)|*.FRD|Text (*.TXT)|*.TXT|Wave (*.WAV)|*.WAV|Impedance (*.ZMA)|*.ZMA|Time (*.IMP)|*.IMP|All Files (*.*)|*.*||"),
 		 this );
 
 	cstitle.LoadString( IDS_IMPORT);
 
-    cdlg.m_ofn.lpstrTitle = (LPCSTR )cstitle;
+    cdlg.m_ofn.lpstrTitle = (LPCTSTR )cstitle;
 
-	CAudtestApp::GetLastImport( csimport);			// get last file imported
+	csimport = CAudtestApp::GetLastImport();			// get last file imported
 	if ( csimport.GetLength() > 3)
 	{			// look for a suffix
 	int idot = csimport.ReverseFind(TCHAR('.'));	// find the last period
@@ -419,9 +419,9 @@ CFileDialog cdlg( TRUE, NULL, NULL, OFN_FILEMUSTEXIST | OFN_PATHMUSTEXIST,
 				cnam = new CDataSet;
 			}
 		cnam->Import( cdlg.GetPathName());
-		DBG_PRINT("Did import");
+		DBG_PRINT(_T("Did import"));
 		cnam->SetName( cdlg.GetFileName());
-		DBG_PRINT("Did set name");
+		DBG_PRINT(_T("Did set name"));
 
 		csimport = cdlg.GetPathName();
 		CAudtestApp::SetLastImport( csimport);
@@ -430,10 +430,10 @@ CFileDialog cdlg( TRUE, NULL, NULL, OFN_FILEMUSTEXIST | OFN_PATHMUSTEXIST,
 		pDoc->InsertNewObject( pDoc->GetRoot(), cnam);
 		}
 //		pDoc->GetRoot()->AddItem( cnam);
-		DBG_PRINT("Did add item");
+		DBG_PRINT(_T("Did add item"));
 		pDoc->EndWaitCursor();
 		pDoc->UpdateAll( NULL, cnam->GetID());
-		DBG_PRINT("Did update all");
+		DBG_PRINT(_T("Did update all"));
 		}
 	
 }
@@ -708,7 +708,7 @@ CSize csz;
 
 	if ( pDC == m_pDrawDC)			// we've done it already?
 		return;
-	csz = pDC->GetTextExtent( "000", 3);
+	csz = pDC->GetTextExtent(_T("000"), 3);
 	m_iCharWidth = csz.cx / 3;			// size of a zero
 	m_iCharHeight = csz.cy;				// height of a zero
 	m_pDrawDC = pDC;					// save so we know we did it
@@ -732,10 +732,10 @@ int ioldmode;
 
 	csi.LoadString( pField->uidPrompt);		// get the string
 	pDC->TextOut( m_iCharWidth*pField->iX, m_iCharHeight*pField->iY, csi);
-	csformat.Format("%%%d.0f", m_ptFloatFormat.x - m_ptFloatFormat.y);		// total size
+	csformat.Format(_T("%%%d.0f"), m_ptFloatFormat.x - m_ptFloatFormat.y);		// total size
 	csi.Format(csformat, fVar);
 	csz2 = pDC->GetTextExtent( csi);				// get char size and decimal point location
-	csformat.Format("%%%d.%df", m_ptFloatFormat.x, m_ptFloatFormat.y);
+	csformat.Format(_T("%%%d.%df"), m_ptFloatFormat.x, m_ptFloatFormat.y);
 	csi.Format(csformat, fVar);
 				//move to the left by cx to get decimals to line up
 	pDC->TextOut( m_iCharWidth*pField->iX + iOffset - csz2.cx, 
@@ -767,7 +767,7 @@ int ioldmode;
 
 	csi.LoadString( pField->uidPrompt);		// get the string
 	pDC->TextOut( m_iCharWidth*pField->iX, m_iCharHeight*pField->iY, csi);
-	csformat.Format("%%%dd", m_iIntFormat);		// total size
+	csformat.Format(_T("%%%dd"), m_iIntFormat);		// total size
 	csi.Format(csformat, iVar);
 	csz2 = pDC->GetTextExtent( csi);				// get char size and decimal point location
 				//move to the left by cx to get decimals to line up
@@ -1714,10 +1714,10 @@ int nheight;
 			csdatetime = theTime.Format("%c");
 		}
 
-	cshead.Format( "Speaker Workshop  %s  %s  %s", (LPCSTR )csfilename, (LPCSTR )csname, (LPCSTR )csdatetime);
+		cshead.Format(_T("Speaker Workshop  %s  %s  %s"), (LPCTSTR)csfilename, (LPCTSTR)csname, (LPCTSTR)csdatetime);
 	}
 
-	nheight = pDC->DrawText( (LPCSTR )cshead, -1, &rc, DT_NOPREFIX | DT_SINGLELINE | DT_CENTER | DT_BOTTOM);
+	nheight = pDC->DrawText( (LPCTSTR )cshead, -1, &rc, DT_NOPREFIX | DT_SINGLELINE | DT_CENTER | DT_BOTTOM);
 
 	if ( cfold)
 		pDC->SelectObject( cfold);

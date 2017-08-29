@@ -106,7 +106,7 @@ UINT uid;
 	CStatic *cst = (CStatic *)GetDlgItem( uid);
 	CString csval;
 
-		csval.Format( "%.0f", fValue);
+	csval.Format(_T("%.0f"), fValue);
 
 		if ( cst)
 			cst->SetWindowText( csval);

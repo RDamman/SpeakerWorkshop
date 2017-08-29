@@ -76,7 +76,7 @@ BOOL CDlgSelectObject::OnInitDialog()
 {
 RECT rect;
 
-	DBG_PRINT("[dlgSelect.Init] Begin");
+	DBG_PRINT(_T("[dlgSelect.Init] Begin"));
 
 	CDialog::OnInitDialog();
 	
@@ -86,18 +86,18 @@ RECT rect;
 	ScreenToClient( &rect);
 	::InflateRect(&rect, -2, -2);
 
-	DBG_PRINT("[dlgSelect.Init] Create Tree");
+	DBG_PRINT(_T("[dlgSelect.Init] Create Tree"));
 
 	if ( m_cTree.Create( rect, this,  0x103))
 		{
-		DBG_PRINT("[dlgSelect.Init] Tree created");
+		DBG_PRINT(_T("[dlgSelect.Init] Tree created"));
 		m_cTree.SetFilter( m_nSelect, m_nUOM);
-		DBG_PRINT("[dlgSelect.Init] Rebuild Tree");
+		DBG_PRINT(_T("[dlgSelect.Init] Rebuild Tree"));
 		m_cTree.RebuildTree( m_cRoot, 0);
-		DBG_PRINT("[dlgSelect.Init] Tree built");
+		DBG_PRINT(_T("[dlgSelect.Init] Tree built"));
 		}
 
-	DBG_PRINT("[dlgSelect.Init] Tree done");
+	DBG_PRINT(_T("[dlgSelect.Init] Tree done"));
 
 	{
 	CString cstitle;
@@ -144,13 +144,13 @@ RECT rect;
 			}
 	}
 	
-	DBG_PRINT("[dlgSelect.Init] Preenable");
+	DBG_PRINT(_T("[dlgSelect.Init] Preenable"));
 	{
 	CWnd *pwnd = GetDlgItem( IDOK);
 	if ( pwnd)
 		pwnd->EnableWindow( FALSE);
 	}
-	DBG_PRINT("[dlgSelect.Init] Init complete");
+	DBG_PRINT(_T("[dlgSelect.Init] Init complete"));
 
 	return TRUE;  // return TRUE unless you set the focus to a control
 	              // EXCEPTION: OCX Property Pages should return FALSE
@@ -270,14 +270,14 @@ LRESULT CDlgSelectObject::WindowProc(UINT message, WPARAM wParam, LPARAM lParam)
 				if ( m_dwLastSel != cname->GetID())
 					{
 					time_t t;
-					DBG_PRINT("[dlgSelect.WinProc] New Selection");
+					DBG_PRINT(_T("[dlgSelect.WinProc] New Selection"));
 					m_dwLastSel = cname->GetID();
 
 					m_csDescript = cname->GetDescription();
 					t = cname->GetCreated();
-					m_csCreated	 = ctime( &t);
+					m_csCreated = _wctime(&t);
 					t = cname->GetLastEdit();
-					m_csEdited = ctime( &t);
+					m_csEdited = _wctime( &t);
 
 					ballow = (m_nSelect == ntAny) || cname->IsType( m_nSelect, m_nUOM);
 

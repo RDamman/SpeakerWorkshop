@@ -17,6 +17,7 @@
 #ifdef _DEBUG
 #undef THIS_FILE
 static char BASED_CODE THIS_FILE[] = __FILE__;
+
 #endif
 
 #define TWOPI	(2 * ONEPI)
@@ -161,7 +162,7 @@ void ZpPassive::Serialize(CArchive& ar)
 
 }
 
-static int parse_String( CString& cIn, CString& cParse, LPCSTR szCompare)
+static int parse_String( CString& cIn, CString& cParse, LPCTSTR szCompare)
 {
 CString cs;
 int nf;
@@ -181,32 +182,36 @@ int nf;
 
 }
 
-int		ZpPassive::ImportLine( LPCSTR szLine)
+int		ZpPassive::ImportLine( LPCTSTR szLine)
 {
 CString cin = szLine;
 CString cs;
 int nout;
 
+if ((cin.GetLength() > 0) && (cin[cin.GetLength() - 1] == '\r'))
+	cin = cin.Left(cin.GetLength() - 1);
+
 	cin = cin.Right( cin.GetLength() - 2);
-	if ( parse_String( cin, cs, "$N_"))
+	if ( parse_String( cin, cs, _T("$N_")))
 		{
 		cs.TrimRight();					// null this out
 		SetName( cs);
 		}
 
 	cin = cin.Right( cin.GetLength() - 3);
-	if ( parse_String( cin, cs, "$N_"))
+	if ( parse_String( cin, cs, _T("$N_")))
 		{
-		sscanf( (LPCSTR )cs, "%d", &nout);
+		swscanf_s( (LPCTSTR )cs, _T("%d"), &nout);
 		SetNode( 0, nout);
 		}
 
 	cin = cin.Right( cin.GetLength() - 3);
 		{
 		int np1, np2, nor;
-		char csval[40];
+		TCHAR csval[40];
 
-		sscanf( (LPCSTR )cin, "%d %s %d %d %d", &nout, csval, &np1, &np2, &nor);
+		_stscanf((LPCTSTR)cin, _T("%d%39s%d%d%d"), &nout, &csval[0], &np1, &np2, &nor);
+//		swscanf_s((LPCTSTR)cin, _T("%d%39s%d%d%d"), &nout, &csval[0], &np1, &np2, &nor);
 		SetNode( 1, nout);
 		cs = csval;
 		SetValue( UnformatValue( cs));
@@ -221,32 +226,32 @@ int nout;
 	return 0;
 }
 
-int		ZpPassive::ExportLine( LPSTR szLine)
+CString	ZpPassive::ExportLine()
 {
-float fval;
-CString csval;
+	float fval;
+	CString csval, sResult;
+	TCHAR cType;
 
-	fval = FormatValue((float )GetValue(), csval);
-	sprintf( szLine, "X_%s $N_%04d $N_%04d %.2f%s %d %d %d\n", 
-		GetName(), GetNode(0), GetNode(1),
-		fval, (LPCSTR )csval, GetPosition(0), GetPosition(1),
+	switch (GetType())
+	{
+	case ptResistor:
+		cType = 'R';
+		break;
+	case ptCapacitor:
+		cType = 'C';
+		break;
+	case ptInductor:
+		cType = 'L';
+		break;
+	default:
+		ASSERT(0);
+	}
+	fval = FormatValue((float)GetValue(), csval);
+	sResult.Format(_T("%c_%s $N_%04d $N_%04d %.2f%s %d %d %d\n"),
+		cType, GetName(), GetNode(0), GetNode(1),
+		fval, (LPCTSTR )csval, GetPosition(0), GetPosition(1),
 		GetOrientation() ? 1 : 0);
-	switch( GetType() )
-		{
-		case ptResistor :
-			szLine[0] = 'R';
-			break;
-		case ptCapacitor :
-			szLine[0] = 'C';
-			break;
-		case ptInductor :
-			szLine[0] = 'L';
-			break;
-		default :
-			ASSERT(0);
-		}
-
-	return 0;
+	return sResult;
 }
 
 // make a duplicate of this one and return its address
@@ -425,9 +430,9 @@ int ndigits;
 				{
 				CRect rctest = rcdraw;
 				rcdraw.top = rcdraw.bottom - 
-							 pcDC->DrawText( (LPCSTR )csdraw, -1, rctest, DT_NOPREFIX | DT_CENTER | DT_CALCRECT);
+							 pcDC->DrawText( (LPCTSTR )csdraw, -1, rctest, DT_NOPREFIX | DT_CENTER | DT_CALCRECT);
 				}
-				pcDC->DrawText( (LPCSTR )csdraw, -1, rcdraw, DT_NOPREFIX | DT_CENTER);
+				pcDC->DrawText( (LPCTSTR )csdraw, -1, rcdraw, DT_NOPREFIX | DT_CENTER);
 				break;
 			case 2 :		// both bottom
 				if ( ! csvalue.IsEmpty())
@@ -459,7 +464,7 @@ int ndigits;
 				{
 				CRect rctest = rcdraw;
 				rcdraw.top = rcdraw.bottom - 
-							 pcDC->DrawText( (LPCSTR )csdraw, -1, rctest, DT_NOPREFIX | DT_RIGHT | DT_CALCRECT) / 2;
+							 pcDC->DrawText( (LPCTSTR )csdraw, -1, rctest, DT_NOPREFIX | DT_RIGHT | DT_CALCRECT) / 2;
 				rcdraw.bottom = rcdraw.top + 100;
 				}
 				pcDC->DrawText( csdraw, -1, rcdraw, DT_NOPREFIX | DT_RIGHT);
@@ -473,13 +478,13 @@ int ndigits;
 				{
 				CRect rctest = rcdraw;
 				rcdraw.top = rcdraw.bottom - 
-							 pcDC->DrawText( (LPCSTR )csdraw, -1, rctest, DT_NOPREFIX | DT_LEFT | DT_CALCRECT) / 2;
+							 pcDC->DrawText( (LPCTSTR )csdraw, -1, rctest, DT_NOPREFIX | DT_LEFT | DT_CALCRECT) / 2;
 				rcdraw.bottom = rcdraw.top + 100;
 				}
-				pcDC->DrawText( (LPCSTR )csdraw, -1, rcdraw, DT_NOPREFIX | DT_LEFT);
+				pcDC->DrawText( (LPCTSTR )csdraw, -1, rcdraw, DT_NOPREFIX | DT_LEFT);
 				break;
 			default :		// split
-				pcDC->DrawText( (LPCSTR )csdraw, -1, rcdraw, DT_NORM | DT_VCENTER | DT_RIGHT); 
+				pcDC->DrawText( (LPCTSTR )csdraw, -1, rcdraw, DT_NORM | DT_VCENTER | DT_RIGHT); 
 				if ( ! csvalue.IsEmpty())
 					{
 					rcdraw.left = rcobj.right + 4;
@@ -524,9 +529,9 @@ POINT ZpPassive::GetDrawSize()
 //		GetValueSuffix
 //			default to nothing
 // ----------------------------------------------------------------------
-LPCSTR	ZpPassive::GetValueSuffix( void)	// get the label suffix
+LPCTSTR	ZpPassive::GetValueSuffix( void)	// get the label suffix
 {
-	return "";
+	return _T("");
 }
 
 
@@ -1122,28 +1127,23 @@ BYTE ZpGenerator::GetOrientation( void)
 }
 
 
-int		ZpGenerator::ImportLine( LPCSTR szLine)
+int		ZpGenerator::ImportLine( LPCTSTR szLine)
 {
 
 	return ZpPassive::ImportLine( szLine);
 
 }
 
-int		ZpGenerator::ExportLine( LPSTR szLine)
+CString	ZpGenerator::ExportLine()
 {
-float fval;
-CString csval;
+	CString csval, sResult;
 
-	fval = FormatValue((float )GetValue(), csval);
-
-	sprintf( szLine, "X_%s $N_%04d $N_%04d %.2f%s %d %d %d\n", 
-		GetName(), GetNode(0), GetNode(1),
-		fval, (LPCSTR )csval, GetPosition(0), GetPosition(1),
+	float fval = FormatValue((float)GetValue(), csval);
+	sResult.Format(_T("%c_%s $N_%04d $N_%04d %.2f%s %d %d %d\n"), 
+		'V', GetName(), GetNode(0), GetNode(1),
+		fval, (LPCTSTR )csval, GetPosition(0), GetPosition(1),
 		GetOrientation() ? 1 : 0);
-
-	szLine[0] = 'V';
-
-	return 0;
+	return sResult;
 }
 
 
@@ -1282,25 +1282,21 @@ void ZpDriver::Serialize(CArchive& ar)
 
 }
 
-int		ZpDriver::ImportLine( LPCSTR /* szLine */)
+int		ZpDriver::ImportLine( LPCTSTR /* szLine */)
 {
 	return 0;
 }
 
-int		ZpDriver::ExportLine( LPSTR szLine)
+CString	ZpDriver::ExportLine()
 {
-float fval;
-CString csval;
+	CString csval, sResult;
 
-	fval = FormatValue((float )GetValue(), csval);
-	sprintf( szLine, "X_%s $N_%04d $N_%04d %.2f%s %d %d %d\n", 
-		GetName(), GetNode(0), GetNode(1),
-		fval, (LPCSTR )csval, GetPosition(0), GetPosition(1),
+	float fval = FormatValue((float )GetValue(), csval);
+	sResult.Format(_T("%c_%s $N_%04d $N_%04d %.2f%s %d %d %d\n"), 
+		'D', GetName(), GetNode(0), GetNode(1),
+		fval, (LPCTSTR )csval, GetPosition(0), GetPosition(1),
 		GetOrientation() ? 1 : 0);
-
-	szLine[0] = 'D';
-
-	return 0;
+	return sResult;
 }
 
 
@@ -1397,7 +1393,7 @@ CString cserr;
 			if ( bShow)
 				{
 				AfxFormatString1( cserr, IDS_NOFREQ, pdrive->GetName());
-				AfxMessageBox( (LPCSTR )cserr);
+				AfxMessageBox( (LPCTSTR )cserr);
 				}
 			return 3;
 			}
@@ -1406,7 +1402,7 @@ CString cserr;
 			if ( bShow)
 				{
 				AfxFormatString1( cserr, IDS_NOIMP, pdrive->GetName());
-				AfxMessageBox( (LPCSTR )cserr);
+				AfxMessageBox( (LPCTSTR )cserr);
 				}
 			return 4;
 			}

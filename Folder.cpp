@@ -149,7 +149,7 @@ int i;
 	return -1;		// we didn't find one
 }
 
-static int get_PosByName( CNamedArray *pArray, LPCSTR lpszNewName)
+static int get_PosByName( CNamedArray *pArray, LPCTSTR lpszNewName)
 {
 int nsize = pArray->GetSize();
 int i;
@@ -404,7 +404,7 @@ CNamed *cget;
 
 
 					// find an item by ID.  bSubs == TRUE if search subfolders
-CNamed *CFolder::GetItemByName( LPCSTR lpszName, BOOL bSubs)
+CNamed *CFolder::GetItemByName( LPCTSTR lpszName, BOOL bSubs)
 {
 int npos = get_PosByName( &m_coArray, lpszName);
 

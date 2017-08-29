@@ -15,6 +15,7 @@
 #ifdef _DEBUG
 #undef THIS_FILE
 static char BASED_CODE THIS_FILE[] = __FILE__;
+
 #endif
 
 #include "dataset.h"
@@ -56,7 +57,7 @@ static int build_Format( CString& cFormat, float fMin, float fMax, float fMajor)
 {
 int nsize = 0;		// no chars yet
 float ftot;
-char szf[3];
+TCHAR szf[3];
 int ntot;
 float fmin, fmax;
 int nmax, nmin;
@@ -107,7 +108,7 @@ int nmax, nmin;
 
 	szf[0] = '%';
 	szf[2] = '\0';
-	szf[1] = (char )('0' + nsize);			// set up the string
+	szf[1] = (TCHAR )('0' + nsize);			// set up the string
 	cFormat = szf;
 
 	if ( fmax > 1000000)					// we'll be M'ing this
@@ -147,7 +148,7 @@ static int build_DumbLogFormat( CString& cFormat, float fMin, float fMax, float 
 {
 int nsize = 0;		// no chars yet
 float ftot;
-char *szf = "% ";
+TCHAR *szf = _T("% ");
 int ntot;
 float fmin, fmax;
 int nmax, nmin;
@@ -195,7 +196,7 @@ int nmax, nmin;
 
 	nsize += ntot;
 
-	szf[1] = (char )('0' + nsize);			// set up the string
+	szf[1] = (TCHAR )('0' + nsize);			// set up the string
 	cFormat = szf;
 
 	{
@@ -246,7 +247,7 @@ float fbase;
 float ft;
 int npre;
 int npost;
-char csuffix;
+TCHAR csuffix;
 
 				// figure out the suffix first
 	if ( fValue >= 1000000.0f)		// million
@@ -283,9 +284,9 @@ char csuffix;
 		npost = -npost;		// use these
 
 //	if ( csuffix != ' ')
-//		cFormat.Format( "%%%d.%df%c%%c", npre + npost, npost, csuffix);
+//		cFormat.Format(_T("%%%d.%df%c%%c"), npre + npost, npost, csuffix);
 //	else
-		cFormat.Format( "%%%d.%df%%c", npre + npost, npost);
+	cFormat.Format(_T("%%%d.%df%%c"), npre + npost, npost);
 
 }
 
@@ -293,8 +294,8 @@ char csuffix;
 // draw the actual #
 static void draw_Number( CDC *pDC, LPRECT lpRcDraw, CString& cFormat, float fNumber, UINT uStyle)
 {
-char sznew[100];
-float fabs;
+	CString sznew;
+	float fabs;
 
 	if ( fNumber < 0)
 		fabs = -fNumber;
@@ -302,14 +303,13 @@ float fabs;
 		fabs = fNumber;
 
 	if ( fabs >= 1000000)
-		sprintf( sznew, cFormat, fNumber/1000000, 'M');
+		sznew.Format(cFormat, fNumber/1000000, 'M');
+	else if ( fabs >= 1000)
+		sznew.Format(cFormat, fNumber / 1000, 'K');
 	else
-	if ( fabs >= 1000)
-		sprintf( sznew, cFormat, fNumber/1000, 'K');
-	else
-		sprintf( sznew, cFormat, fNumber, ' ');
+		sznew.Format(cFormat, fNumber, ' ');
 
-	pDC->DrawText(sznew, strlen(sznew), lpRcDraw, uStyle | DT_SINGLELINE);
+	pDC->DrawText(sznew, sznew.GetLength(), lpRcDraw, uStyle | DT_SINGLELINE);
 
 }
 
@@ -875,7 +875,7 @@ int nout;
 		}
 	else			// not vertical, just return character height
 		{
-		nout = pDC->DrawText( "999", -1, rcDraw, DT_TOP | DT_LEFT | DT_SINGLELINE | DT_CALCRECT);
+		nout = pDC->DrawText(_T("999"), -1, rcDraw, DT_TOP | DT_LEFT | DT_SINGLELINE | DT_CALCRECT);
 		}
 
 	pDC->SelectObject( cfold);

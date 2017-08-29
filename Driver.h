@@ -115,6 +115,10 @@ public:
 	void	ConvertDQtoDP( DRIVEPARM &DP, DRIVEEQUIV &DQ);
 	int		UseDriverEquiv(CDataSet *cDest, DRIVEEQUIV &DQ );			// calc thiele stuff and return .estimate
 
+	virtual int	Import(CString sFile);								// import some data
+	virtual int Export(CString sFile);								// export some data
+	virtual void GetFilter(CString& csExt, CString& csFilter);
+
 private:
 
 // Implementation

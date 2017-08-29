@@ -634,7 +634,7 @@ bool bdone = FALSE;
 
 			if ( fright < (0.99999f * flast))		// improvement
 			{
-				DBG_INT("added resonant data for %d", i);
+				DBG_INT(_T("added resonant data for %d"), i);
 				driveq = dq;
 				flast = fright;
 				if ( ndiv[i] < 8)
@@ -816,7 +816,7 @@ float fend = cFree->Maximum( dataFreq);
 			fleft = calc_IndError(dq, cFree, fStart, fend);
 			if ( fleft < fcurerror)				// we did improve!
 				{
-				DBG_INT("added inductive data for %d", i);
+				DBG_INT(_T("added inductive data for %d"), i);
 				driveq = dq;
 				fcurerror = fleft;
 				}
@@ -1552,5 +1552,18 @@ CSubChart *cch;
 	return TRUE;
 }
 
+void CDriver::GetFilter(CString& csExt, CString& csFilter)
+{
+	csExt = "DRV";
+	csFilter = "Driver Files (*.DRV)|*.DRV|All Files (*.*)|*.*||";
+}
 
+int	CDriver::Import(CString sFile)								// import some data
+{
+	return 0;			// didn't do anything
+}
 
+int CDriver::Export(CString sFile)								// export some data
+{
+	return 0;			// didn't do anything
+}

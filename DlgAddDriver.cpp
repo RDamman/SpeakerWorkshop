@@ -33,7 +33,7 @@ typedef struct tagDRIVERINFO
 	DWORD	dwDriverID;
 	BOOL	bFlipPolarity;
 	BOOL	bIndieResponse;
-	char	szDrName[MAXCHARLENGTH];
+	TCHAR	szDrName[MAXCHARLENGTH];
 } DRIVERINFO;
 
 
@@ -200,7 +200,7 @@ void CDlgAddDriver::OnOK()
 		pf.dwDriverID = m_dwDriverID;
 		pf.fOffset = m_fOffset;
 		if ( MAXCHARLENGTH > m_strName.GetLength())
-			strcpy( pf.szDrName, (LPCSTR )m_strName);
+			wcscpy( pf.szDrName, (LPCTSTR )m_strName);
 		else
 			pf.szDrName[0] = '\0';
 		

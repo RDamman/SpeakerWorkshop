@@ -256,11 +256,11 @@ int CTreeBar::OnCreate(LPCREATESTRUCT lpCreateStruct)
 	if (CzSuperBar::OnCreate(lpCreateStruct) == -1)
 		return -1;
 	
-static DWORD dw_size = 0;
-char szname[100];
-RECT rcout;
+	static DWORD dw_size = 0;
+	CString szname;
+	RECT rcout;
 
-	sprintf(szname, "zSplit%d", dw_size++);
+	szname.Format(_T("zSplit%d"), dw_size++);
 	rcout.left = rcout.top = 0;
 	rcout.right = rcout.bottom = 10;		// random and irrelevant
 

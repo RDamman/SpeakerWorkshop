@@ -35,7 +35,7 @@ static UINT get_Format()
  	if ( ui_ClipFormat)
 		return ui_ClipFormat;
 
-	ui_ClipFormat = RegisterClipboardFormat("Speaker Workshop Resource");
+	ui_ClipFormat = RegisterClipboardFormat(_T("Speaker Workshop Resource"));
 
 	return ui_ClipFormat;
 }
@@ -269,13 +269,13 @@ CFolder *pparent;
 		{
 		CString cname = cnew->GetName();
 		CString ctest = cname;
-		char szout[20];
+		CString szout;
 		int i;
 
 			cnew->SetName("absolute gibberish");
 			for ( i=1; pparent->FindByName( cname); i++)		// we have one!
 				{
-				sprintf(szout, ".%d", i);
+				szout.Format(_T(".%d"), i);
 				cname = ctest + szout;
 				}
 			cnew->SetName(cname);

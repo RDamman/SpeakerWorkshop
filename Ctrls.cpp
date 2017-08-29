@@ -103,7 +103,7 @@ int n;
 	CzComboBox::InitDialog( pBox);
 
 		for ( i=0; i<NLINEWIDTH; i++)
-			n = m_pBox->AddString(" ");
+			n = m_pBox->AddString(_T(" "));
 }
 
 void CLineStyleBox::DrawItem(LPDRAWITEMSTRUCT lpDrawItemStruct) 
@@ -184,7 +184,7 @@ int i;
 	CzComboBox::InitDialog( pBox);
 
 		for ( i=0; i<NLINESTYLE; i++)
-			m_pBox->AddString(" ");
+			m_pBox->AddString(_T(" "));
 }
 
 
@@ -260,7 +260,7 @@ int i;
 	CzComboBox::InitDialog( pBox);
 
 		for ( i=0; i<NLINECOLOR; i++)
-			m_pBox->AddString(" ");
+			m_pBox->AddString(_T(" "));
 }
 
 int CColorBox::SetSelection( COLORREF rgbUse)

@@ -191,7 +191,7 @@ UINT uids[] = { IDC_RESSTATIC, IDC_RESSUFFIX, IDC_SPIN2, IDC_RESISTANCE };
 	}
 
 	CComboBox *psrc = (CComboBox *)GetDlgItem( IDC_COMPTYPE);
-	char sz[50];
+	TCHAR sz[50];
 	psrc->GetLBText( i, sz);
 	m_csType = sz;
 

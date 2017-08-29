@@ -202,7 +202,7 @@ WORD w = FILE_VERSION;
 	if ( ! ar.IsStoring())			// loading code, update the system variable
 		{
 		CNamed *psys;
-		psys = m_cRoot.GetItemByName("System", FALSE);
+		psys = m_cRoot.GetItemByName(_T("System"), FALSE);
 		if ( psys && (ntFolder == psys->GetType()) )
 			m_dwSystem = psys->GetID();
 		}
@@ -229,34 +229,27 @@ void CAudtestDoc::Dump(CDumpContext& dc) const
 
 static CString get_NewObjName(CDocument *pDoc, UINT iType)
 {
-char sz[100];			// the output string
 CString cstitle;
 CString csobj;
 CWnd *cParent;
 
-	{
 	POSITION pos = pDoc->GetFirstViewPosition();
 	cParent = pDoc->GetNextView( pos);
-	}
 
 	cstitle.LoadString( IDS_NEWRESOURCE);
 	csobj.LoadString( iType);
 
-	sprintf( sz, (LPCSTR )cstitle, (LPCSTR )csobj);
-
-	{
 	CDlgRename cdlg( cParent);
 
-	cdlg.m_csTitle = sz;
+	cdlg.m_csTitle.Format(cstitle, csobj);
 	cdlg.m_csName.LoadString( IDS_DEFAULTNEW);
 
 	if ( IDOK == cdlg.DoModal())
 		return cdlg.m_csName;
 	else
-		{
+	{
 		csobj = cNullString;			//  .LoadString( IDS_DEFAULTNEW);
 		return csobj;
-		}
 	}
 }
 
@@ -326,7 +319,7 @@ void CAudtestDoc::UpdateAll( CView* pSender, LPARAM lHint, CObject* pHint )
 	if ( cmain && cmain->IsKindOf(RUNTIME_CLASS( CMainFrame))) 
 		((CMainFrame *)cmain)->UpdateTree( pSender, lHint, pHint);
 	}
-	DBG_PRINT("Did Update Tree");
+	DBG_PRINT(_T("Did Update Tree"));
 
 	COleServerDoc::UpdateAllViews( pSender, lHint, pHint);
 }
@@ -428,7 +421,7 @@ TESTCAL tcal;
 CNamed *CAudtestDoc::GetDefaultGenerator(void )
 {
 CNamed *pout= NULL;
-char *szm = "Measurement";
+TCHAR *szm = _T("Measurement");
 
 	if ( m_dwGenerator)
 		pout = GetByID( m_dwGenerator);
@@ -465,7 +458,7 @@ CString CAudtestDoc::GetFullTextName( CNamed *cTarget)
 CString cs = GetTitle();
 CString cs2;					// type name
 
-	if (! cs.Right(4).CompareNoCase(".swd") )		// it is an swd file
+	if (! cs.Right(4).CompareNoCase(_T(".swd")) )		// it is an swd file
 		cs = cs.Left( cs.GetLength() - 4);			// strip the suffix
 	if ( CAudtestApp::GetShowLongTitle())
 		cs += ":" + cTarget->GetName();						// name
@@ -655,7 +648,7 @@ CString csout;
 	else
 		{
 		pCmdUI->Enable( FALSE);
-		pCmdUI->SetText( "&Redo");
+		pCmdUI->SetText(_T("&Redo"));
 		}	
 }
 
@@ -682,7 +675,7 @@ CString csout;
 	else
 		{
 		pCmdUI->Enable( FALSE);
-		pCmdUI->SetText( "&Undo");
+		pCmdUI->SetText(_T("&Undo"));
 		}	
 	
 }
@@ -691,13 +684,12 @@ CString csout;
 
 BOOL CAudtestDoc::OnSaveDocument(LPCTSTR lpszPathName) 
 {
-BOOL bout;
+	BOOL bout;
 
-		// clean up the document undo stack
+	// clean up the document undo stack
 	FlushUndo();
 
 	bout = COleServerDoc::OnSaveDocument(lpszPathName);
-
 	if ( ! bout)
 		return FALSE;
 
@@ -809,7 +801,7 @@ int i;
 // -------------------------------------------------------------------------
 //		BuildBaseChart
 // -------------------------------------------------------------------------
-CNamed *CAudtestDoc::BuildBaseChart(CNamed *pParent, LPCSTR szName, CDWordArray &cdwIDs)
+CNamed *CAudtestDoc::BuildBaseChart(CNamed *pParent, LPCTSTR szName, CDWordArray &cdwIDs)
 {
 CChart *pchart;
 CString csname;
@@ -982,9 +974,9 @@ CString cstitle;
 
 	cstitle.LoadString( IDS_EXPORT);
 
-    cdlg.m_ofn.lpstrTitle = (LPCSTR )cstitle;
+    cdlg.m_ofn.lpstrTitle = (LPCTSTR )cstitle;
 
-	CAudtestApp::GetLastExport( csexport);			// get last file imported
+	csexport = CAudtestApp::GetLastExport();			// get last file imported
 	{			// get the initial directory
 	CString csdir;
 
@@ -994,7 +986,7 @@ CString cstitle;
 			if ( islash >= 0)
 				csexport = csexport.Left( islash);			// up to the last slash is the directory
 			else
-				csexport = "";			// empty it
+				csexport = _T("");			// empty it
 		}
 		cdlg.m_ofn.lpstrInitialDir = csexport;
 	}

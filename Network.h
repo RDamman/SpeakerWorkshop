@@ -54,8 +54,8 @@ public:
 	void			DoDraw( CDC *pDC, LPCRECT lpWhere);
 	void			GetBounds( CRect& rcBound, BOOL bSelect);
 
-	virtual int	Import( LPCSTR szFileName);								// import some data
-	virtual int Export( LPCSTR szFileName);								// export some data
+	virtual int	Import(CString sFile);								// import some data
+	virtual int Export(CString sFile);								// export some data
 	virtual void GetFilter( CString& csExt, CString& csFilter);
 							// subobject functions
 	CObject 		*GetClosest( LPPOINT pcPos);

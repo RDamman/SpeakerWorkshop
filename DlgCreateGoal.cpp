@@ -97,7 +97,7 @@ void CDlgCreateGoal::copy_String( int nWhich)
 {
 CComboBox *pwnd = (CComboBox *)GetDlgItem( IDC_XOVERTYPE);
 CComboBox *psrc = (CComboBox *)GetDlgItem( IDC_XOVERALL);		// all of the strings are here....
-char sz[200];
+TCHAR sz[200];
 
 	psrc->GetLBText( nWhich, sz);
 	pwnd->AddString( sz);				// butterworth

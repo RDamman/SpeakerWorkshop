@@ -187,8 +187,8 @@ float fq;
 			}
 		}
 
-	m_csFreq.Format("%f", fres);
-	m_csQ.Format("%f", fq);
+	m_csFreq.Format(_T("%f"), fres);
+	m_csQ.Format(_T("%f"), fq);
 
 	UpdateData( FALSE);
 }

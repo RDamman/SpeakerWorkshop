@@ -88,7 +88,7 @@ CString csvalue;
 	cst = (CStatic *)GetDlgItem( uID);
 	if ( ! cst)
 		ASSERT( 0);			// whoa
-	csvalue.Format( "%.1f", fValue);
+	csvalue.Format(_T("%.1f"), fValue);
 	cst->SetWindowText( csvalue);
 
 }

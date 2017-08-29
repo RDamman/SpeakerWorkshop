@@ -1,0 +1,506 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project DefaultTargets="Build" ToolsVersion="12.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup Label="ProjectConfigurations">
+    <ProjectConfiguration Include="Debug|Win32">
+      <Configuration>Debug</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Release|Win32">
+      <Configuration>Release</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+  </ItemGroup>
+  <PropertyGroup Label="Globals">
+    <ProjectGuid>{7CE7FAFE-3AC5-475D-81F1-9CF7349550A9}</ProjectGuid>
+    <Keyword>Win32Proj</Keyword>
+    <RootNamespace>SpeakerWorkshop</RootNamespace>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.Default.props" />
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'" Label="Configuration">
+    <ConfigurationType>Application</ConfigurationType>
+    <UseDebugLibraries>true</UseDebugLibraries>
+    <CharacterSet>Unicode</CharacterSet>
+    <UseOfMfc>Static</UseOfMfc>
+    <PlatformToolset>v120</PlatformToolset>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'" Label="Configuration">
+    <ConfigurationType>Application</ConfigurationType>
+    <UseDebugLibraries>false</UseDebugLibraries>
+    <WholeProgramOptimization>true</WholeProgramOptimization>
+    <CharacterSet>Unicode</CharacterSet>
+    <PlatformToolset>v120</PlatformToolset>
+    <UseOfMfc>Static</UseOfMfc>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.props" />
+  <ImportGroup Label="ExtensionSettings">
+  </ImportGroup>
+  <ImportGroup Label="PropertySheets" Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <ImportGroup Label="PropertySheets" Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <PropertyGroup Label="UserMacros" />
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+    <LinkIncremental>true</LinkIncremental>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+    <LinkIncremental>false</LinkIncremental>
+  </PropertyGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+    <ClCompile>
+      <PrecompiledHeader>Use</PrecompiledHeader>
+      <WarningLevel>Level3</WarningLevel>
+      <Optimization>Disabled</Optimization>
+      <PreprocessorDefinitions>WIN32;_DEBUG;_WINDOWS;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+    </ClCompile>
+    <Link>
+      <SubSystem>Windows</SubSystem>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+    </Link>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+    <ClCompile>
+      <WarningLevel>Level3</WarningLevel>
+      <PrecompiledHeader>Use</PrecompiledHeader>
+      <Optimization>MaxSpeed</Optimization>
+      <FunctionLevelLinking>true</FunctionLevelLinking>
+      <IntrinsicFunctions>true</IntrinsicFunctions>
+      <PreprocessorDefinitions>WIN32;NDEBUG;_WINDOWS;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <CompileAs>Default</CompileAs>
+    </ClCompile>
+    <Link>
+      <SubSystem>Windows</SubSystem>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+      <EnableCOMDATFolding>true</EnableCOMDATFolding>
+      <OptimizeReferences>true</OptimizeReferences>
+    </Link>
+  </ItemDefinitionGroup>
+  <ItemGroup>
+    <None Include="Audtest.ico" />
+    <None Include="ReadMe.txt" />
+    <None Include="res\arrow.cur" />
+    <None Include="res\arrowcop.cur" />
+    <None Include="res\cursor1.cur" />
+    <None Include="res\mover.cur" />
+    <None Include="res\mover1.cur" />
+    <None Include="res\nodrop.cur" />
+    <None Include="res\smallcro.cur" />
+    <None Include="res\uniter.cur" />
+    <None Include="small.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="audtedoc.h" />
+    <ClInclude Include="Audtest.h" />
+    <ClInclude Include="audtest_h.h" />
+    <ClInclude Include="audtevw.h" />
+    <ClInclude Include="audtree.h" />
+    <ClInclude Include="BarNetwork.h" />
+    <ClInclude Include="Chart.h" />
+    <ClInclude Include="childfrm.h" />
+    <ClInclude Include="clipbd.h" />
+    <ClInclude Include="ColorButton.h" />
+    <ClInclude Include="Complex.h" />
+    <ClInclude Include="Ctrls.h" />
+    <ClInclude Include="Dataset.h" />
+    <ClInclude Include="DataTag.h" />
+    <ClInclude Include="Debug.h" />
+    <ClInclude Include="dibapi.h" />
+    <ClInclude Include="DlgAddDriver.h" />
+    <ClInclude Include="DlgAddPassive.h" />
+    <ClInclude Include="dlgaudiocheck.h" />
+    <ClInclude Include="DlgBurst.h" />
+    <ClInclude Include="DlgCalcMerge.h" />
+    <ClInclude Include="DlgCalcPassive.h" />
+    <ClInclude Include="DlgCalcTuned.h" />
+    <ClInclude Include="DlgCalibrate.h" />
+    <ClInclude Include="dlgCalWizAmp.h" />
+    <ClInclude Include="DlgCalWizBrd.h" />
+    <ClInclude Include="DlgCalWizImp.h" />
+    <ClInclude Include="DlgCalWizLp.h" />
+    <ClInclude Include="DlgCalWizVol.h" />
+    <ClInclude Include="dlgcbox.h" />
+    <ClInclude Include="DLGCHART.H" />
+    <ClInclude Include="DlgChartProp.h" />
+    <ClInclude Include="dlgchdat.h" />
+    <ClInclude Include="dlgchgen.h" />
+    <ClInclude Include="DlgCreateGoal.h" />
+    <ClInclude Include="DlgCrossover.h" />
+    <ClInclude Include="Dlgdatas.h" />
+    <ClInclude Include="DlgDefWr.h" />
+    <ClInclude Include="DlgDisable48K.h" />
+    <ClInclude Include="DlgDoc.h" />
+    <ClInclude Include="DlgDocGe.h" />
+    <ClInclude Include="dlgdrdat.h" />
+    <ClInclude Include="dlgdrgen.h" />
+    <ClInclude Include="dlgdrive.h" />
+    <ClInclude Include="dlgdrpar.h" />
+    <ClInclude Include="DlgDrvEquiv.h" />
+    <ClInclude Include="dlgdsdat.h" />
+    <ClInclude Include="Dlgdsgen.h" />
+    <ClInclude Include="DlgDvEst.h" />
+    <ClInclude Include="dlgenclo.h" />
+    <ClInclude Include="dlgengen.h" />
+    <ClInclude Include="dlgenpar.h" />
+    <ClInclude Include="dlgfilte.h" />
+    <ClInclude Include="DlgFldGe.h" />
+    <ClInclude Include="DlgFolder.h" />
+    <ClInclude Include="Dlggener.h" />
+    <ClInclude Include="dlggenge.h" />
+    <ClInclude Include="dlggenus.h" />
+    <ClInclude Include="dlggrid.h" />
+    <ClInclude Include="dlglocat.h" />
+    <ClInclude Include="DlgLPad.h" />
+    <ClInclude Include="Dlgmls.h" />
+    <ClInclude Include="DlgMsrDistort.h" />
+    <ClInclude Include="DlgMsrIn.h" />
+    <ClInclude Include="dlgmsrpa.h" />
+    <ClInclude Include="dlgnetdr.h" />
+    <ClInclude Include="dlgnetge.h" />
+    <ClInclude Include="DlgNetLayout.h" />
+    <ClInclude Include="dlgnetli.h" />
+    <ClInclude Include="DlgNetOptimize.h" />
+    <ClInclude Include="dlgnetwo.h" />
+    <ClInclude Include="dlgnoise.h" />
+    <ClInclude Include="DlgNotch.h" />
+    <ClInclude Include="DlgNote.h" />
+    <ClInclude Include="DlgOptXover.h" />
+    <ClInclude Include="dlgpertu.h" />
+    <ClInclude Include="dlgplays.h" />
+    <ClInclude Include="dlgprcha.h" />
+    <ClInclude Include="DlgPrefAcoustic.h" />
+    <ClInclude Include="DlgPrefDebug.h" />
+    <ClInclude Include="dlgPrefer.h" />
+    <ClInclude Include="DlgPrefGe.h" />
+    <ClInclude Include="dlgprefm.h" />
+    <ClInclude Include="DlgPrefMarker.h" />
+    <ClInclude Include="dlgprefn.h" />
+    <ClInclude Include="DlgPrefReference.h" />
+    <ClInclude Include="DlgPrfIm.h" />
+    <ClInclude Include="dlgprtra.h" />
+    <ClInclude Include="dlgpulse.h" />
+    <ClInclude Include="dlgrecor.h" />
+    <ClInclude Include="dlgrenam.h" />
+    <ClInclude Include="dlgrmbox.h" />
+    <ClInclude Include="dlgrmgen.h" />
+    <ClInclude Include="dlgrmwal.h" />
+    <ClInclude Include="dlgroom.h" />
+    <ClInclude Include="DlgRoot.h" />
+    <ClInclude Include="dlgsawto.h" />
+    <ClInclude Include="dlgselec.h" />
+    <ClInclude Include="Dlgsine.h" />
+    <ClInclude Include="DlgSplice.h" />
+    <ClInclude Include="dlgsquar.h" />
+    <ClInclude Include="dlgsweep.h" />
+    <ClInclude Include="DlgTimeDist.h" />
+    <ClInclude Include="dlgtones.h" />
+    <ClInclude Include="DlgVolumeCalc.h" />
+    <ClInclude Include="DlgVuMeter.h" />
+    <ClInclude Include="dlgxcadd.h" />
+    <ClInclude Include="dlgxcimp.h" />
+    <ClInclude Include="dlgxfcor.h" />
+    <ClInclude Include="dlgxfdel.h" />
+    <ClInclude Include="dlgxffft.h" />
+    <ClInclude Include="dlgXfFrq.h" />
+    <ClInclude Include="dlgxfGrp.h" />
+    <ClInclude Include="dlgxfiff.h" />
+    <ClInclude Include="dlgxfinv.h" />
+    <ClInclude Include="dlgxflim.h" />
+    <ClInclude Include="dlgxfsca.h" />
+    <ClInclude Include="dlgxfsmo.h" />
+    <ClInclude Include="dlgxftru.h" />
+    <ClInclude Include="DlgXfWaterfall.h" />
+    <ClInclude Include="DlgZobel.h" />
+    <ClInclude Include="DrawObj.h" />
+    <ClInclude Include="Driver.h" />
+    <ClInclude Include="Enclosur.h" />
+    <ClInclude Include="filter.h" />
+    <ClInclude Include="Folder.h" />
+    <ClInclude Include="fxfont.h" />
+    <ClInclude Include="Generat.h" />
+    <ClInclude Include="Grid.h" />
+    <ClInclude Include="IPFRAME.H" />
+    <ClInclude Include="mainfrm.h" />
+    <ClInclude Include="mmWave.h" />
+    <ClInclude Include="Named.h" />
+    <ClInclude Include="NetClip.h" />
+    <ClInclude Include="NetOptimize.h" />
+    <ClInclude Include="Network.h" />
+    <ClInclude Include="opcode.h" />
+    <ClInclude Include="opitem.h" />
+    <ClInclude Include="opRecord.h" />
+    <ClInclude Include="Passive.h" />
+    <ClInclude Include="Resource.h" />
+    <ClInclude Include="Room.h" />
+    <ClInclude Include="SetLocale.h" />
+    <ClInclude Include="Splash.h" />
+    <ClInclude Include="SplitBar.h" />
+    <ClInclude Include="Srvritem.h" />
+    <ClInclude Include="stdafx.h" />
+    <ClInclude Include="targetver.h" />
+    <ClInclude Include="treectrl.h" />
+    <ClInclude Include="TrueDialogBar.h" />
+    <ClInclude Include="Utils.h" />
+    <ClInclude Include="vwchart.h" />
+    <ClInclude Include="vwdata.h" />
+    <ClInclude Include="vwdrive.h" />
+    <ClInclude Include="vwencl.h" />
+    <ClInclude Include="vwgen.h" />
+    <ClInclude Include="vwNet.h" />
+    <ClInclude Include="vwroom.h" />
+    <ClInclude Include="vwtree.h" />
+    <ClInclude Include="Xform.h" />
+    <ClInclude Include="Xformall.h" />
+    <ClInclude Include="XformGoal.h" />
+    <ClInclude Include="ZcSplitCtrl.h" />
+    <ClInclude Include="zformedt.h" />
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="audtedoc.cpp" />
+    <ClCompile Include="Audtest.cpp" />
+    <ClCompile Include="Audtest_i.c">
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">NotUsing</PrecompiledHeader>
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">NotUsing</PrecompiledHeader>
+    </ClCompile>
+    <ClCompile Include="audtevw.cpp" />
+    <ClCompile Include="BarNetwork.cpp" />
+    <ClCompile Include="Chart.cpp" />
+    <ClCompile Include="Chart2.cpp" />
+    <ClCompile Include="ChildFrm.cpp" />
+    <ClCompile Include="Clipbd.cpp" />
+    <ClCompile Include="ColorButton.cpp" />
+    <ClCompile Include="Complex.cpp" />
+    <ClCompile Include="Ctrls.cpp" />
+    <ClCompile Include="DataSet.cpp" />
+    <ClCompile Include="DataTag.cpp" />
+    <ClCompile Include="Debug.cpp" />
+    <ClCompile Include="dibapi.cpp" />
+    <ClCompile Include="DlgAddDriver.cpp" />
+    <ClCompile Include="DlgAddPassive.cpp" />
+    <ClCompile Include="DlgAudioCheck.cpp" />
+    <ClCompile Include="DlgBurst.cpp" />
+    <ClCompile Include="DlgCalcMerge.cpp" />
+    <ClCompile Include="DlgCalcPassive.cpp" />
+    <ClCompile Include="DlgCalcTuned.cpp" />
+    <ClCompile Include="DlgCalibrate.cpp" />
+    <ClCompile Include="DlgCalWizAmp.cpp" />
+    <ClCompile Include="DlgCalWizBrd.cpp" />
+    <ClCompile Include="DlgCalWizImp.cpp" />
+    <ClCompile Include="DlgCalWizLp.cpp" />
+    <ClCompile Include="DlgCalWizVol.cpp" />
+    <ClCompile Include="dlgcbox.cpp" />
+    <ClCompile Include="dlgChart.cpp" />
+    <ClCompile Include="DlgChartProp.cpp" />
+    <ClCompile Include="dlgchdat.cpp" />
+    <ClCompile Include="dlgchgen.cpp" />
+    <ClCompile Include="DlgCreateGoal.cpp" />
+    <ClCompile Include="DlgCrossover.cpp" />
+    <ClCompile Include="dlgDataS.cpp" />
+    <ClCompile Include="DlgDefWr.cpp" />
+    <ClCompile Include="DlgDisable48K.cpp" />
+    <ClCompile Include="DlgDoc.cpp" />
+    <ClCompile Include="DlgDocGe.cpp" />
+    <ClCompile Include="dlgdrdat.cpp" />
+    <ClCompile Include="dlgdrgen.cpp" />
+    <ClCompile Include="dlgDrive.cpp" />
+    <ClCompile Include="dlgdrpar.cpp" />
+    <ClCompile Include="DlgDrvEquiv.cpp" />
+    <ClCompile Include="dlgDsDat.cpp" />
+    <ClCompile Include="dlgDsGen.cpp" />
+    <ClCompile Include="DlgDvEst.cpp" />
+    <ClCompile Include="dlgEnclo.cpp" />
+    <ClCompile Include="dlgengen.cpp" />
+    <ClCompile Include="dlgenpar.cpp" />
+    <ClCompile Include="dlgfilte.cpp" />
+    <ClCompile Include="DlgFldGe.cpp" />
+    <ClCompile Include="DlgFolder.cpp" />
+    <ClCompile Include="dlgGener.cpp" />
+    <ClCompile Include="dlggenge.cpp" />
+    <ClCompile Include="dlggenus.cpp" />
+    <ClCompile Include="dlggrid.cpp" />
+    <ClCompile Include="dlglocat.cpp" />
+    <ClCompile Include="DlgLPad.cpp" />
+    <ClCompile Include="dlgmls.cpp" />
+    <ClCompile Include="DlgMsrDistort.cpp" />
+    <ClCompile Include="DlgMsrIn.cpp" />
+    <ClCompile Include="dlgMsrPa.cpp" />
+    <ClCompile Include="dlgnetdr.cpp" />
+    <ClCompile Include="dlgNetGe.cpp" />
+    <ClCompile Include="DlgNetLayout.cpp" />
+    <ClCompile Include="dlgnetli.cpp" />
+    <ClCompile Include="DlgNetOptimize.cpp" />
+    <ClCompile Include="dlgNetwo.cpp" />
+    <ClCompile Include="dlgnoise.cpp" />
+    <ClCompile Include="DlgNotch.cpp" />
+    <ClCompile Include="DlgNote.cpp" />
+    <ClCompile Include="DlgOptXover.cpp" />
+    <ClCompile Include="dlgpertu.cpp" />
+    <ClCompile Include="dlgPlayS.cpp" />
+    <ClCompile Include="dlgprcha.cpp" />
+    <ClCompile Include="DlgPrefAcoustic.cpp" />
+    <ClCompile Include="DlgPrefDebug.cpp" />
+    <ClCompile Include="dlgPrefer.cpp" />
+    <ClCompile Include="DlgPrefGe.cpp" />
+    <ClCompile Include="dlgprefm.cpp" />
+    <ClCompile Include="DlgPrefMarker.cpp" />
+    <ClCompile Include="dlgprefn.cpp" />
+    <ClCompile Include="DlgPrefReference.cpp" />
+    <ClCompile Include="DlgPrfIm.cpp" />
+    <ClCompile Include="dlgprtra.cpp" />
+    <ClCompile Include="dlgpulse.cpp" />
+    <ClCompile Include="dlgrecor.cpp" />
+    <ClCompile Include="dlgRenam.cpp" />
+    <ClCompile Include="dlgrmbox.cpp" />
+    <ClCompile Include="dlgRmGen.cpp" />
+    <ClCompile Include="dlgRmWal.cpp" />
+    <ClCompile Include="dlgRoom.cpp" />
+    <ClCompile Include="DlgRoot.cpp" />
+    <ClCompile Include="dlgsawto.cpp" />
+    <ClCompile Include="dlgSelec.cpp" />
+    <ClCompile Include="dlgSine.cpp" />
+    <ClCompile Include="DlgSplice.cpp" />
+    <ClCompile Include="dlgsquar.cpp" />
+    <ClCompile Include="dlgSweep.cpp" />
+    <ClCompile Include="DlgTimeDist.cpp" />
+    <ClCompile Include="dlgTones.cpp" />
+    <ClCompile Include="DlgVolumeCalc.cpp" />
+    <ClCompile Include="DlgVuMeter.cpp" />
+    <ClCompile Include="dlgxcadd.cpp" />
+    <ClCompile Include="dlgxcimp.cpp" />
+    <ClCompile Include="dlgxfcor.cpp" />
+    <ClCompile Include="dlgxfdel.cpp" />
+    <ClCompile Include="dlgxffft.cpp" />
+    <ClCompile Include="dlgXfFrq.cpp" />
+    <ClCompile Include="dlgxfgrp.cpp" />
+    <ClCompile Include="dlgxfiff.cpp" />
+    <ClCompile Include="dlgxfinv.cpp" />
+    <ClCompile Include="dlgxflim.cpp" />
+    <ClCompile Include="dlgxfsca.cpp" />
+    <ClCompile Include="dlgxfsmo.cpp" />
+    <ClCompile Include="dlgxftru.cpp" />
+    <ClCompile Include="DlgXfWaterfall.cpp" />
+    <ClCompile Include="DlgZobel.cpp" />
+    <ClCompile Include="DrawObj.cpp" />
+    <ClCompile Include="Driver.cpp" />
+    <ClCompile Include="Enclosur.cpp" />
+    <ClCompile Include="Filter.cpp" />
+    <ClCompile Include="Folder.cpp" />
+    <ClCompile Include="FxFont.cpp" />
+    <ClCompile Include="Generat.cpp" />
+    <ClCompile Include="Grid.cpp" />
+    <ClCompile Include="ipFrame.cpp" />
+    <ClCompile Include="lzrw1.cpp" />
+    <ClCompile Include="mainFrm.cpp" />
+    <ClCompile Include="mmWave.cpp" />
+    <ClCompile Include="mmwOps.cpp" />
+    <ClCompile Include="Named.cpp" />
+    <ClCompile Include="NetClip.cpp" />
+    <ClCompile Include="NetOps.cpp" />
+    <ClCompile Include="NetOptimize.cpp" />
+    <ClCompile Include="Network.cpp" />
+    <ClCompile Include="OpCode.cpp" />
+    <ClCompile Include="opItem.cpp" />
+    <ClCompile Include="opRecord.cpp" />
+    <ClCompile Include="Passive.cpp" />
+    <ClCompile Include="Room.cpp" />
+    <ClCompile Include="SetLocale.cpp" />
+    <ClCompile Include="Splash.cpp" />
+    <ClCompile Include="SplitBar.cpp" />
+    <ClCompile Include="srvrItem.cpp" />
+    <ClCompile Include="stdafx.cpp">
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">Create</PrecompiledHeader>
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">Create</PrecompiledHeader>
+    </ClCompile>
+    <ClCompile Include="treectrl.cpp" />
+    <ClCompile Include="TrueDialogBar.cpp" />
+    <ClCompile Include="Utils.cpp" />
+    <ClCompile Include="ViewRecd.cpp" />
+    <ClCompile Include="vwchart.cpp" />
+    <ClCompile Include="vwdata.cpp" />
+    <ClCompile Include="vwdrive.cpp" />
+    <ClCompile Include="vwencl.cpp" />
+    <ClCompile Include="vwgen.cpp" />
+    <ClCompile Include="vwNet.cpp" />
+    <ClCompile Include="vwroom.cpp" />
+    <ClCompile Include="vwtree.cpp" />
+    <ClCompile Include="xForm.cpp" />
+    <ClCompile Include="xFormBig.cpp" />
+    <ClCompile Include="XformGoal.cpp" />
+    <ClCompile Include="ZcSplitCtrl.cpp" />
+    <ClCompile Include="zFormEdt.cpp" />
+  </ItemGroup>
+  <ItemGroup>
+    <ResourceCompile Include="Audtest.rc" />
+  </ItemGroup>
+  <ItemGroup>
+    <Midl Include="Audtest.odl" />
+  </ItemGroup>
+  <ItemGroup>
+    <Text Include="Text.txt" />
+  </ItemGroup>
+  <ItemGroup>
+    <Image Include="res\audtedoc.ico" />
+    <Image Include="res\audtest.ico" />
+    <Image Include="res\bandpass.bmp" />
+    <Image Include="res\bandstop.bmp" />
+    <Image Include="res\bitmap1.bmp" />
+    <Image Include="res\bmp00001.bmp" />
+    <Image Include="res\bmp00002.bmp" />
+    <Image Include="res\bmp00003.bmp" />
+    <Image Include="res\bmp00004.bmp" />
+    <Image Include="res\bmp00005.bmp" />
+    <Image Include="res\bmp00006.bmp" />
+    <Image Include="res\chkduplex.ico" />
+    <Image Include="res\chkin.ico" />
+    <Image Include="res\chkout.ico" />
+    <Image Include="res\highpass.bmp" />
+    <Image Include="res\ico00001.ico" />
+    <Image Include="res\ico00002.ico" />
+    <Image Include="res\ico00003.ico" />
+    <Image Include="res\ico00004.ico" />
+    <Image Include="res\ico00005.ico" />
+    <Image Include="res\idr_chart.ico" />
+    <Image Include="res\idr_comp.ico" />
+    <Image Include="res\idr_data.ico" />
+    <Image Include="res\idr_drive.ico" />
+    <Image Include="res\idr_encl.ico" />
+    <Image Include="res\idr_gen.ico" />
+    <Image Include="res\idr_net.ico" />
+    <Image Include="res\idr_room.ico" />
+    <Image Include="res\idr_tree.ico" />
+    <Image Include="res\itoolbar.bmp" />
+    <Image Include="res\lowpass1.bmp" />
+    <Image Include="res\lowpass2.bmp" />
+    <Image Include="res\lowpass3.bmp" />
+    <Image Include="res\resistor.bmp" />
+    <Image Include="res\splsh256.bmp" />
+    <Image Include="res\Toolbar.bmp" />
+    <Image Include="res\toolchar.bmp" />
+    <Image Include="res\tooldriv.bmp" />
+    <Image Include="res\toolencl.bmp" />
+    <Image Include="res\toolnetw.bmp" />
+    <Image Include="res\toolsign.bmp" />
+    <Image Include="res\treelist.bmp" />
+    <Image Include="res\wiz_amp_.bmp" />
+    <Image Include="res\wiz_brd_.bmp" />
+    <Image Include="res\wiz_cal4.bmp" />
+    <Image Include="res\wiz_lp_b.bmp" />
+    <Image Include="RES\Wz_impbe.bmp" />
+    <Image Include="RES\Wz_impj1.bmp" />
+    <Image Include="RES\Wz_impj2.bmp" />
+    <Image Include="RES\Wz_lp1.bmp" />
+    <Image Include="res\xvhigh3.bmp" />
+    <Image Include="res\xvhigh4.bmp" />
+  </ItemGroup>
+  <ItemGroup>
+    <Manifest Include="SpeakerWorkshop.exe.manifest" />
+  </ItemGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
+  <ImportGroup Label="ExtensionTargets">
+  </ImportGroup>
+  <ProjectExtensions>
+    <VisualStudio>
+      <UserProperties RESOURCE_FILE="Audtest.rc" />
+    </VisualStudio>
+  </ProjectExtensions>
+</Project>

@@ -28,7 +28,7 @@ END_MESSAGE_MAP()
 
 CChildFrame::CChildFrame()
 {
-	SetTarget( 0, ":Root");
+	SetTarget( 0, _T(":Root"));
 }
 
 CChildFrame::~CChildFrame()
@@ -70,7 +70,7 @@ DWORD CChildFrame::GetTarget()
 	return m_dwTarget;
 }
 
-void CChildFrame::SetTarget( DWORD dwNew, LPCSTR lpszTitle)
+void CChildFrame::SetTarget( DWORD dwNew, LPCTSTR lpszTitle)
 {
 	m_dwTarget = dwNew;
 	m_csTitle = lpszTitle;
@@ -83,7 +83,7 @@ BOOL CChildFrame::PreCreateWindow(CREATESTRUCT& cs)
 	// TODO: Add your specialized code here and/or call the base class
 
 	cs.style &= ~FWS_ADDTOTITLE;			// let me create the window titles
-	cs.lpszName = (LPCSTR )m_csTitle;		// ???
+	cs.lpszName = (LPCTSTR )m_csTitle;		// ???
 
 	return CMDIChildWnd::PreCreateWindow(cs);
 }

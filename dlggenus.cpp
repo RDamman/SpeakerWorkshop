@@ -69,8 +69,8 @@ END_DISPATCH_MAP()
 
 void CDlgGenUserDef::OnBrowsewave() 
 {
-CFileDialog cfd(TRUE, "Wav", NULL, OFN_HIDEREADONLY, 
-					"Wave files|*.WAV|All files|*.*||", this );
+CFileDialog cfd(TRUE, _T("Wav"), NULL, OFN_HIDEREADONLY, 
+					_T("Wave files|*.WAV|All files|*.*||"), this );
 
 	if ( IDOK == cfd.DoModal())
 		{

@@ -30,7 +30,7 @@ private:
 protected:
 					// ---------------- attributes
 public:
-	void	SetName( LPCSTR pszNew)					{ m_csName = pszNew; }
+	void	SetName( LPCTSTR pszNew)					{ m_csName = pszNew; }
 	CString& GetName()								{ return m_csName; }
 	double 	GetValue()								{ return m_dValue; }
 	void   	SetValue(double dNew)					{ m_dValue = dNew; }
@@ -64,15 +64,15 @@ public:
 
 					 // ------ drawing stuff
 	virtual POINT	GetDrawSize(void);		// get the draw size
-	virtual LPCSTR	GetValueSuffix( void);	// get the label suffix
+	virtual LPCTSTR	GetValueSuffix( void);	// get the label suffix
 
 	virtual BYTE	GetOrientation(int nWhich);		// get orientation of each end
 	virtual	BYTE	GetOrientation(void)			{ return m_byOrient;	}
 					// ---------------- operators
 	const ZpPassive& operator= (const ZpPassive& cIn);
 	virtual	int		EditProperties();
-	virtual int		ImportLine( LPCSTR szLine);
-	virtual int		ExportLine( LPSTR szLine);
+	virtual int		ImportLine( LPCTSTR szLine);
+	virtual CString	ExportLine();
 
 					// ----------------implementation
 	virtual void DoDraw( CDC *pDC, LPCRECT lpRcDraw = (LPRECT )NULL);	// draw the object
@@ -143,7 +143,7 @@ public:
 	virtual void Impedance(ZComplex &ZcOut, double dFreq);
 	virtual void DoDraw( CDC *pDC, LPCRECT lpRcDraw = (LPRECT )NULL);	// draw the object
 	virtual POINT	GetDrawSize();		// get the draw size
-	virtual LPCSTR	GetValueSuffix( void)	{ return "F"; }	// get the label suffix
+	virtual LPCTSTR	GetValueSuffix( void)	{ return _T("F"); }	// get the label suffix
 
 
 public:
@@ -177,7 +177,7 @@ public:
 	virtual void Impedance(ZComplex &ZcOut, double dFreq);
 	virtual void DoDraw( CDC *pDC, LPCRECT lpRcDraw = (LPRECT )NULL);	// draw the object
 	virtual POINT	GetDrawSize();		// get the draw size
-	virtual LPCSTR	GetValueSuffix( void)	{ return "H"; }	// get the label suffix
+	virtual LPCTSTR	GetValueSuffix( void)	{ return _T("H"); }	// get the label suffix
 
 public:
 	ZpInductor();
@@ -209,8 +209,8 @@ public:
 	virtual void Impedance(ZComplex &ZcOut, double dFreq);
 	virtual void DoDraw( CDC *pDC, LPCRECT lpRcDraw = (LPRECT )NULL);	// draw the object
 	virtual POINT	GetDrawSize();		// get the draw size
-	virtual int		ImportLine( LPCSTR szLine);
-	virtual int		ExportLine( LPSTR szLine);
+	virtual int		ImportLine( LPCTSTR szLine);
+	virtual CString	ExportLine();
 	virtual BYTE	GetOrientation(int nWhich);		// get orientation of each end
 	virtual	BYTE	GetOrientation(void);
 
@@ -250,8 +250,8 @@ public:
 	virtual void Impedance(ZComplex &ZcOut, double dFreq);
 	virtual void Response( ZComplex &ZcOut, double dFreq);
 	virtual double ResponseDb( double dFreq);
-	virtual int		ImportLine( LPCSTR szLine);
-	virtual int		ExportLine( LPSTR szLine);
+	virtual int		ImportLine( LPCTSTR szLine);
+	virtual CString	ExportLine();
 
 	BOOL	IsNotValid( CFolder *pRoot, BOOL bShow = FALSE);		// will this work for network calcs????
 

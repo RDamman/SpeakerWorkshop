@@ -19,6 +19,7 @@
 #ifdef _DEBUG
 #undef THIS_FILE
 static char BASED_CODE THIS_FILE[] = __FILE__;
+
 #endif
 
 static CImageList cimg_ViewList;
@@ -106,10 +107,10 @@ BOOL ZcTreeCtrl::Create(const RECT& rect, CWnd* pParentWnd, UINT nID, CCreateCon
 {
 BOOL bout;
 static DWORD dw_size = 0;
-char szname[100];
+CString szname;
 RECT rcout;
 
-	sprintf(szname, "zTree%d", dw_size++);
+	szname.Format(_T("zTree%d"), dw_size++);
 
 	bout = CWnd::Create(csclass_Name, szname, WS_VISIBLE | WS_CHILD, rect, pParentWnd, nID, pContext);
 
@@ -164,7 +165,7 @@ HTREEITEM hroot;
 	tvi.hParent = hParent;
 	tvi.hInsertAfter = TVI_SORT;
 	tvi.item.mask = TVIF_TEXT | TVIF_PARAM | TVIF_IMAGE | TVIF_SELECTEDIMAGE;
-	tvi.item.pszText = (LPSTR )(LPCSTR )pcRoot->GetName();
+	tvi.item.pszText = (LPTSTR)(LPCTSTR)pcRoot->GetName();
 	tvi.item.iImage = ntFolder*2;	// folder
 	tvi.item.iSelectedImage = ntFolder*2;	// folder
 	tvi.item.lParam = pcRoot->GetID();
@@ -189,7 +190,7 @@ HTREEITEM hroot;
 				tvi.hParent = hroot;
 				tvi.hInsertAfter = TVI_SORT;
 				tvi.item.mask = TVIF_TEXT | TVIF_PARAM | TVIF_IMAGE | TVIF_SELECTEDIMAGE;
-				tvi.item.pszText = (LPSTR )(LPCSTR )cnam->GetName();
+				tvi.item.pszText = (LPTSTR)(LPCTSTR)cnam->GetName();
 				iadd = cnam->IsTemporary() ? 1 : 0;
 				if ( ntDataSet == cnam->GetType() )
 					{
@@ -279,7 +280,7 @@ int iadd;
 		cs = cRoot->GetDocument()->GetTitle();
 		if ( cs.GetLength() > 4)			// suffix removal...
 			{
-			if (! cs.Right( 4).CompareNoCase( ".aud"))
+			if (! cs.Right( 4).CompareNoCase(_T(".aud")))
 				cs = cs.Left( cs.GetLength() - 4);
 			}
 		cRoot->SetName( cs);
@@ -298,7 +299,7 @@ int iadd;
 				tvi.hParent = hparent;
 				tvi.hInsertAfter = TVI_SORT;
 				tvi.item.mask = TVIF_TEXT | TVIF_PARAM | TVIF_IMAGE | TVIF_SELECTEDIMAGE;
-				tvi.item.pszText = (LPSTR )(LPCSTR )cnam->GetName();
+				tvi.item.pszText = (LPTSTR)(LPCTSTR)cnam->GetName();
 				tvi.item.lParam = cnam->GetID();
 				iadd = cnam->IsTemporary() ? 1 : 0;
 				if ( ntDataSet == cnam->GetType() )
@@ -597,18 +598,18 @@ CNamed *cdest;
 				}
 
 			int nout;
-			char csout[50];
+			CString csout;
 			CFolder *cparent = m_cTargetRoot->GetParent( m_dwTargetID);
 
 			for ( i = csnew.GetLength(); i > 0; i--)
 				if ( ! isdigit( csnew.GetAt(i-1)))
 					break;
-			sscanf( (LPCSTR )csnew.Right( csnew.GetLength()-i), "%d", &nout);
+			swscanf_s( (LPCTSTR )csnew.Right( csnew.GetLength()-i), _T("%d"), &nout);
 
 			do					// increment past all existing names like this
 				{
 				nout++;
-				sprintf( csout, "%d", nout);
+				csout.Format(_T("%d"), nout);
 				csnew = csnew.Left( i) + csout;
 				} while( cparent->GetItemByName( csnew, FALSE) );
 

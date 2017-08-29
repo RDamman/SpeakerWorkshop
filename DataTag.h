@@ -51,7 +51,7 @@ public:
 	int		GetDataset( void)	const		 { return m_iDataset; }
 	void	SetDataset( int iNew);
 	void	GetText( CString &strText) const { strText = m_strText; }
-	void	SetText( LPCSTR strText);
+	void	SetText( LPCTSTR strText);
 	float	GetValue( void)	const			 { return m_fXValue; }
 	void	SetValue( float fNew);
 	void	SetTextOffset( const CPoint &cPoint);	// set the text offset 
@@ -59,7 +59,7 @@ public:
 	CDataSet *GetDataPointer( void);
 
 private:
-	void	ParseString( CString &strOut, LPCSTR strIn);	// parse the input string
+	void	ParseString( CString &strOut, LPCTSTR strIn);	// parse the input string
 
 	// --------------- construction
 public:

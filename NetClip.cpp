@@ -39,7 +39,7 @@ static UINT get_Format()
  	if ( ui_NetClipFormat)
 		return ui_NetClipFormat;
 
-	ui_NetClipFormat = ::RegisterClipboardFormat("Speaker Workshop Network");
+	ui_NetClipFormat = ::RegisterClipboardFormat(_T("Speaker Workshop Network"));
 
 	return ui_NetClipFormat;
 }
@@ -70,7 +70,7 @@ HENHMETAFILE hmf;
 					// -- build the metafile
 	{
 	CRect rcdraw( 0,0,20000,20000);					// 8" square
-	char csname[150] = "SpkrWork\0Metafile\0\0";
+	TCHAR csname[150] = _T("SpkrWork\0Metafile\0\0");
 	HDC hdcMeta = CreateEnhMetaFile ((HDC )NULL, NULL, (LPCRECT )rcdraw, csname) ;			// build a memory metafile
 	CDC *pdc = CDC::FromHandle( hdcMeta);
  

@@ -27,6 +27,7 @@
 #ifdef _DEBUG
 #undef THIS_FILE
 static char BASED_CODE THIS_FILE[] = __FILE__;
+
 #endif
 
 // ///////////////////////////////////////////////////////
@@ -37,7 +38,7 @@ static char BASED_CODE THIS_FILE[] = __FILE__;
 //				Opcode Rename
 // ///////////////////////////////////////////////////////
 
-COpRename::COpRename( CNamed *cTarget, LPCSTR lpNew) : COpCode( cTarget), m_csOldName(), m_csNewName() 
+COpRename::COpRename( CNamed *cTarget, LPCTSTR lpNew) : COpCode( cTarget), m_csOldName(), m_csNewName() 
 {
 	m_csOldName = cTarget->GetName();
 	m_csNewName = lpNew;
@@ -331,7 +332,7 @@ UINT COpChange::GetNameID(void)
 	return IDOP_CHANGE;
 }
 
-static swap_ID( CNamed *cThere, CNamed *cNew)
+static void swap_ID( CNamed *cThere, CNamed *cNew)
 {
 DWORD dwid, dwid2;
 CNamed *pname;
@@ -676,7 +677,7 @@ int COpCheckpoint::DoRedo( void)
 // ///////////////////////////////////////////////////////
 
 
-COpFindOrCreate::COpFindOrCreate(CNamed *cTarget, LPCSTR lpszNewName, NAMETYPES ntNewType) : COpMulti( cTarget), m_csName()
+COpFindOrCreate::COpFindOrCreate(CNamed *cTarget, LPCTSTR lpszNewName, NAMETYPES ntNewType) : COpMulti( cTarget), m_csName()
 {
 
 	m_csName = lpszNewName;
@@ -964,7 +965,7 @@ float fstart, fend;
 
 		if ( pcrefer)		// do the same processing with the reference set
 		{
-			csname.Format( "%s.fft", pcrefer->GetName());
+			csname.Format(_T("%s.fft"), pcrefer->GetName());
 			ccr = new COpFindOrCreate( pfolder, csname, ntDataSet);
 			PrivateQueue( ccr);			// do it
 			preferfft = (CDataSet *)ccr->GetFound();
@@ -986,7 +987,7 @@ float fstart, fend;
 		for ( i=0; i<m_sWater.iSamples; i++)
 		{
 			ShowProgressBar( (100 * i) / m_sWater.iSamples);
-			csname.Format( "%s.W.%d", pcinput->GetName(), i+1);
+			csname.Format(_T("%s.W.%d"), pcinput->GetName(), i + 1);
 			ccr = new COpFindOrCreate( pfolder, csname, ntDataSet);
 			PrivateQueue( ccr);			// do it
 			pdata = (CDataSet *)ccr->GetFound();

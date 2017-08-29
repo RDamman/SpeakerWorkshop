@@ -32,7 +32,7 @@ public:
 // Implementation
 public:
 	int m_nLine;
-	void AddLine( LPCSTR lpNew);
+	void AddLine( LPCTSTR lpNew);
 	virtual ~CDebug();
 
 	// Generated message map functions
@@ -61,9 +61,9 @@ public:
 // Operations
 public:
 	static CTopDebug * GetDebugObj( void);
-	void PrintTwo(LPCSTR lpcsOut, LPCSTR lpcsO2);
-	void PrintInt(LPCSTR lpcsOut, int nOut);
-	void PrintString( LPCSTR lpcsOut);
+	void PrintTwo(LPCTSTR lpcsOut, LPCTSTR lpcsO2);
+	void PrintInt(LPCTSTR lpcsOut, int nOut);
+	void PrintString( LPCTSTR lpcsOut);
 	void SetDebugLevel( int nNewLevel);
 	int GetDebugLevel( void);
 	void Init(CWnd *pParent);

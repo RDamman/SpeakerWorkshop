@@ -82,7 +82,7 @@ public:
 	void			DeleteTheTemps( void);		// delete the temporary items
 								// Methods
 						//create a new chart in the tree near pparent using name szname with the list of ids
-	CNamed			*BuildBaseChart(CNamed *pParent, LPCSTR szName, CDWordArray &cdwIDs);
+	CNamed			*BuildBaseChart(CNamed *pParent, LPCTSTR szName, CDWordArray &cdwIDs);
 
 // -----------------------------------------------------------------------
 

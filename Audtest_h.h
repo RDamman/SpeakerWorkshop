@@ -1,33 +1,39 @@
 
-#pragma warning( disable: 4049 )  /* more than 64k source lines */
 
 /* this ALWAYS GENERATED file contains the definitions for the interfaces */
 
 
- /* File created by MIDL compiler version 6.00.0347 */
-/* at Sat Sep 28 13:23:34 2002
+ /* File created by MIDL compiler version 8.00.0603 */
+/* at Tue Aug 29 22:16:40 2017
  */
 /* Compiler settings for Audtest.odl:
-    Os, W1, Zp8, env=Win32 (32b run)
-    protocol : dce , ms_ext, c_ext
+    Oicf, W1, Zp8, env=Win32 (32b run), target_arch=X86 8.00.0603 
+    protocol : dce , ms_ext, c_ext, robust
     error checks: allocation ref bounds_check enum stub_data 
     VC __declspec() decoration level: 
          __declspec(uuid()), __declspec(selectany), __declspec(novtable)
          DECLSPEC_UUID(), MIDL_INTERFACE()
 */
-//@@MIDL_FILE_HEADING(  )
+/* @@MIDL_FILE_HEADING(  ) */
+
+#pragma warning( disable: 4049 )  /* more than 64k source lines */
 
 
 /* verify that the <rpcndr.h> version is high enough to compile this file*/
 #ifndef __REQUIRED_RPCNDR_H_VERSION__
-#define __REQUIRED_RPCNDR_H_VERSION__ 440
+#define __REQUIRED_RPCNDR_H_VERSION__ 475
 #endif
 
 #include "rpc.h"
 #include "rpcndr.h"
 
-#ifndef __audtest_h_h__
-#define __audtest_h_h__
+#ifndef __RPCNDR_H_VERSION__
+#error this stub requires an updated version of <rpcndr.h>
+#endif // __RPCNDR_H_VERSION__
+
+
+#ifndef __Audtest_h_h__
+#define __Audtest_h_h__
 
 #if defined(_MSC_VER) && (_MSC_VER >= 1020)
 #pragma once
@@ -38,6 +44,7 @@
 #ifndef __IAudtes_FWD_DEFINED__
 #define __IAudtes_FWD_DEFINED__
 typedef interface IAudtes IAudtes;
+
 #endif 	/* __IAudtes_FWD_DEFINED__ */
 
 
@@ -56,6 +63,7 @@ typedef struct CAudtestDoc CAudtestDoc;
 #ifndef __IDlgSweep_FWD_DEFINED__
 #define __IDlgSweep_FWD_DEFINED__
 typedef interface IDlgSweep IDlgSweep;
+
 #endif 	/* __IDlgSweep_FWD_DEFINED__ */
 
 
@@ -74,6 +82,7 @@ typedef struct CDlgSweep CDlgSweep;
 #ifndef __IDlgSine_FWD_DEFINED__
 #define __IDlgSine_FWD_DEFINED__
 typedef interface IDlgSine IDlgSine;
+
 #endif 	/* __IDlgSine_FWD_DEFINED__ */
 
 
@@ -92,6 +101,7 @@ typedef struct CDlgSine CDlgSine;
 #ifndef __IDlgGenerator_FWD_DEFINED__
 #define __IDlgGenerator_FWD_DEFINED__
 typedef interface IDlgGenerator IDlgGenerator;
+
 #endif 	/* __IDlgGenerator_FWD_DEFINED__ */
 
 
@@ -110,6 +120,7 @@ typedef struct CDlgGenerator CDlgGenerator;
 #ifndef __IDlgPulse_FWD_DEFINED__
 #define __IDlgPulse_FWD_DEFINED__
 typedef interface IDlgPulse IDlgPulse;
+
 #endif 	/* __IDlgPulse_FWD_DEFINED__ */
 
 
@@ -128,6 +139,7 @@ typedef struct CDlgPulse CDlgPulse;
 #ifndef __IDlgMls_FWD_DEFINED__
 #define __IDlgMls_FWD_DEFINED__
 typedef interface IDlgMls IDlgMls;
+
 #endif 	/* __IDlgMls_FWD_DEFINED__ */
 
 
@@ -146,6 +158,7 @@ typedef struct CDlgMls CDlgMls;
 #ifndef __IDlgDsGeneral_FWD_DEFINED__
 #define __IDlgDsGeneral_FWD_DEFINED__
 typedef interface IDlgDsGeneral IDlgDsGeneral;
+
 #endif 	/* __IDlgDsGeneral_FWD_DEFINED__ */
 
 
@@ -164,6 +177,7 @@ typedef struct CDlgDsGeneral CDlgDsGeneral;
 #ifndef __IDlgDataset_FWD_DEFINED__
 #define __IDlgDataset_FWD_DEFINED__
 typedef interface IDlgDataset IDlgDataset;
+
 #endif 	/* __IDlgDataset_FWD_DEFINED__ */
 
 
@@ -182,6 +196,7 @@ typedef struct CDlgDataset CDlgDataset;
 #ifndef __IDlgChart_FWD_DEFINED__
 #define __IDlgChart_FWD_DEFINED__
 typedef interface IDlgChart IDlgChart;
+
 #endif 	/* __IDlgChart_FWD_DEFINED__ */
 
 
@@ -200,6 +215,7 @@ typedef struct CDlgChart CDlgChart;
 #ifndef __IDlgDataLines_FWD_DEFINED__
 #define __IDlgDataLines_FWD_DEFINED__
 typedef interface IDlgDataLines IDlgDataLines;
+
 #endif 	/* __IDlgDataLines_FWD_DEFINED__ */
 
 
@@ -218,6 +234,7 @@ typedef struct CDlgDataLines CDlgDataLines;
 #ifndef __IDlgGrid_FWD_DEFINED__
 #define __IDlgGrid_FWD_DEFINED__
 typedef interface IDlgGrid IDlgGrid;
+
 #endif 	/* __IDlgGrid_FWD_DEFINED__ */
 
 
@@ -236,6 +253,7 @@ typedef struct CDlgGrid CDlgGrid;
 #ifndef __IDlgChGen_FWD_DEFINED__
 #define __IDlgChGen_FWD_DEFINED__
 typedef interface IDlgChGen IDlgChGen;
+
 #endif 	/* __IDlgChGen_FWD_DEFINED__ */
 
 
@@ -254,6 +272,7 @@ typedef struct CDlgChGen CDlgChGen;
 #ifndef __IDlgChData_FWD_DEFINED__
 #define __IDlgChData_FWD_DEFINED__
 typedef interface IDlgChData IDlgChData;
+
 #endif 	/* __IDlgChData_FWD_DEFINED__ */
 
 
@@ -272,6 +291,7 @@ typedef struct CDlgChData CDlgChData;
 #ifndef __IAddChartData_FWD_DEFINED__
 #define __IAddChartData_FWD_DEFINED__
 typedef interface IAddChartData IAddChartData;
+
 #endif 	/* __IAddChartData_FWD_DEFINED__ */
 
 
@@ -290,6 +310,7 @@ typedef struct CAddChartData CAddChartData;
 #ifndef __IDlgXfLimit_FWD_DEFINED__
 #define __IDlgXfLimit_FWD_DEFINED__
 typedef interface IDlgXfLimit IDlgXfLimit;
+
 #endif 	/* __IDlgXfLimit_FWD_DEFINED__ */
 
 
@@ -308,6 +329,7 @@ typedef struct CDlgXfLimit CDlgXfLimit;
 #ifndef __IDlgXfScale_FWD_DEFINED__
 #define __IDlgXfScale_FWD_DEFINED__
 typedef interface IDlgXfScale IDlgXfScale;
+
 #endif 	/* __IDlgXfScale_FWD_DEFINED__ */
 
 
@@ -326,6 +348,7 @@ typedef struct CDlgXfScale CDlgXfScale;
 #ifndef __IDlgXfTruncate_FWD_DEFINED__
 #define __IDlgXfTruncate_FWD_DEFINED__
 typedef interface IDlgXfTruncate IDlgXfTruncate;
+
 #endif 	/* __IDlgXfTruncate_FWD_DEFINED__ */
 
 
@@ -344,6 +367,7 @@ typedef struct CDlgXfTruncate CDlgXfTruncate;
 #ifndef __IDlgXfDelay_FWD_DEFINED__
 #define __IDlgXfDelay_FWD_DEFINED__
 typedef interface IDlgXfDelay IDlgXfDelay;
+
 #endif 	/* __IDlgXfDelay_FWD_DEFINED__ */
 
 
@@ -362,6 +386,7 @@ typedef struct CDlgXfDelay CDlgXfDelay;
 #ifndef __IDlgXfSmooth_FWD_DEFINED__
 #define __IDlgXfSmooth_FWD_DEFINED__
 typedef interface IDlgXfSmooth IDlgXfSmooth;
+
 #endif 	/* __IDlgXfSmooth_FWD_DEFINED__ */
 
 
@@ -380,6 +405,7 @@ typedef struct CDlgXfSmooth CDlgXfSmooth;
 #ifndef __IDlgDsDataset_FWD_DEFINED__
 #define __IDlgDsDataset_FWD_DEFINED__
 typedef interface IDlgDsDataset IDlgDsDataset;
+
 #endif 	/* __IDlgDsDataset_FWD_DEFINED__ */
 
 
@@ -398,6 +424,7 @@ typedef struct CDlgDsDataset CDlgDsDataset;
 #ifndef __IDlgNetList_FWD_DEFINED__
 #define __IDlgNetList_FWD_DEFINED__
 typedef interface IDlgNetList IDlgNetList;
+
 #endif 	/* __IDlgNetList_FWD_DEFINED__ */
 
 
@@ -416,6 +443,7 @@ typedef struct CDlgNetList CDlgNetList;
 #ifndef __IDlgNetGeneral_FWD_DEFINED__
 #define __IDlgNetGeneral_FWD_DEFINED__
 typedef interface IDlgNetGeneral IDlgNetGeneral;
+
 #endif 	/* __IDlgNetGeneral_FWD_DEFINED__ */
 
 
@@ -434,6 +462,7 @@ typedef struct CDlgNetGeneral CDlgNetGeneral;
 #ifndef __IDlgNetDriver_FWD_DEFINED__
 #define __IDlgNetDriver_FWD_DEFINED__
 typedef interface IDlgNetDriver IDlgNetDriver;
+
 #endif 	/* __IDlgNetDriver_FWD_DEFINED__ */
 
 
@@ -452,6 +481,7 @@ typedef struct CDlgNetDriver CDlgNetDriver;
 #ifndef __IDlgNetwork_FWD_DEFINED__
 #define __IDlgNetwork_FWD_DEFINED__
 typedef interface IDlgNetwork IDlgNetwork;
+
 #endif 	/* __IDlgNetwork_FWD_DEFINED__ */
 
 
@@ -470,6 +500,7 @@ typedef struct CDlgNetwork CDlgNetwork;
 #ifndef __IDlgRoomGeneral_FWD_DEFINED__
 #define __IDlgRoomGeneral_FWD_DEFINED__
 typedef interface IDlgRoomGeneral IDlgRoomGeneral;
+
 #endif 	/* __IDlgRoomGeneral_FWD_DEFINED__ */
 
 
@@ -488,6 +519,7 @@ typedef struct CDlgRoomGeneral CDlgRoomGeneral;
 #ifndef __IDlgRoomBoxes_FWD_DEFINED__
 #define __IDlgRoomBoxes_FWD_DEFINED__
 typedef interface IDlgRoomBoxes IDlgRoomBoxes;
+
 #endif 	/* __IDlgRoomBoxes_FWD_DEFINED__ */
 
 
@@ -506,6 +538,7 @@ typedef struct CDlgRoomBoxes CDlgRoomBoxes;
 #ifndef __IDlgRoomWall_FWD_DEFINED__
 #define __IDlgRoomWall_FWD_DEFINED__
 typedef interface IDlgRoomWall IDlgRoomWall;
+
 #endif 	/* __IDlgRoomWall_FWD_DEFINED__ */
 
 
@@ -524,6 +557,7 @@ typedef struct CDlgRoomWall CDlgRoomWall;
 #ifndef __IDlgRoom_FWD_DEFINED__
 #define __IDlgRoom_FWD_DEFINED__
 typedef interface IDlgRoom IDlgRoom;
+
 #endif 	/* __IDlgRoom_FWD_DEFINED__ */
 
 
@@ -542,6 +576,7 @@ typedef struct CDlgRoom CDlgRoom;
 #ifndef __IDlgLocations_FWD_DEFINED__
 #define __IDlgLocations_FWD_DEFINED__
 typedef interface IDlgLocations IDlgLocations;
+
 #endif 	/* __IDlgLocations_FWD_DEFINED__ */
 
 
@@ -560,6 +595,7 @@ typedef struct CDlgLocations CDlgLocations;
 #ifndef __IDlgGenGeneral_FWD_DEFINED__
 #define __IDlgGenGeneral_FWD_DEFINED__
 typedef interface IDlgGenGeneral IDlgGenGeneral;
+
 #endif 	/* __IDlgGenGeneral_FWD_DEFINED__ */
 
 
@@ -578,6 +614,7 @@ typedef struct CDlgGenGeneral CDlgGenGeneral;
 #ifndef __IDlgXfIfft_FWD_DEFINED__
 #define __IDlgXfIfft_FWD_DEFINED__
 typedef interface IDlgXfIfft IDlgXfIfft;
+
 #endif 	/* __IDlgXfIfft_FWD_DEFINED__ */
 
 
@@ -596,6 +633,7 @@ typedef struct CDlgXfIfft CDlgXfIfft;
 #ifndef __IDlgXfFft_FWD_DEFINED__
 #define __IDlgXfFft_FWD_DEFINED__
 typedef interface IDlgXfFft IDlgXfFft;
+
 #endif 	/* __IDlgXfFft_FWD_DEFINED__ */
 
 
@@ -614,6 +652,7 @@ typedef struct CDlgXfFft CDlgXfFft;
 #ifndef __IDlgRecord_FWD_DEFINED__
 #define __IDlgRecord_FWD_DEFINED__
 typedef interface IDlgRecord IDlgRecord;
+
 #endif 	/* __IDlgRecord_FWD_DEFINED__ */
 
 
@@ -632,6 +671,7 @@ typedef struct CDlgRecord CDlgRecord;
 #ifndef __IDlgXcImpedance_FWD_DEFINED__
 #define __IDlgXcImpedance_FWD_DEFINED__
 typedef interface IDlgXcImpedance IDlgXcImpedance;
+
 #endif 	/* __IDlgXcImpedance_FWD_DEFINED__ */
 
 
@@ -650,6 +690,7 @@ typedef struct CDlgXcImpedance CDlgXcImpedance;
 #ifndef __IDlgPrefTransform_FWD_DEFINED__
 #define __IDlgPrefTransform_FWD_DEFINED__
 typedef interface IDlgPrefTransform IDlgPrefTransform;
+
 #endif 	/* __IDlgPrefTransform_FWD_DEFINED__ */
 
 
@@ -668,6 +709,7 @@ typedef struct CDlgPrefTransform CDlgPrefTransform;
 #ifndef __IDlgPlaySound_FWD_DEFINED__
 #define __IDlgPlaySound_FWD_DEFINED__
 typedef interface IDlgPlaySound IDlgPlaySound;
+
 #endif 	/* __IDlgPlaySound_FWD_DEFINED__ */
 
 
@@ -686,6 +728,7 @@ typedef struct CDlgPlaySound CDlgPlaySound;
 #ifndef __IDlgPrefNetwork_FWD_DEFINED__
 #define __IDlgPrefNetwork_FWD_DEFINED__
 typedef interface IDlgPrefNetwork IDlgPrefNetwork;
+
 #endif 	/* __IDlgPrefNetwork_FWD_DEFINED__ */
 
 
@@ -704,6 +747,7 @@ typedef struct CDlgPrefNetwork CDlgPrefNetwork;
 #ifndef __IDlgPassiveProp_FWD_DEFINED__
 #define __IDlgPassiveProp_FWD_DEFINED__
 typedef interface IDlgPassiveProp IDlgPassiveProp;
+
 #endif 	/* __IDlgPassiveProp_FWD_DEFINED__ */
 
 
@@ -722,6 +766,7 @@ typedef struct CDlgPassiveProp CDlgPassiveProp;
 #ifndef __IDlgPerturb_FWD_DEFINED__
 #define __IDlgPerturb_FWD_DEFINED__
 typedef interface IDlgPerturb IDlgPerturb;
+
 #endif 	/* __IDlgPerturb_FWD_DEFINED__ */
 
 
@@ -740,6 +785,7 @@ typedef struct CDlgPerturb CDlgPerturb;
 #ifndef __IDlgXfCorrelate_FWD_DEFINED__
 #define __IDlgXfCorrelate_FWD_DEFINED__
 typedef interface IDlgXfCorrelate IDlgXfCorrelate;
+
 #endif 	/* __IDlgXfCorrelate_FWD_DEFINED__ */
 
 
@@ -758,6 +804,7 @@ typedef struct CDlgXfCorrelate CDlgXfCorrelate;
 #ifndef __IDlgDriver_FWD_DEFINED__
 #define __IDlgDriver_FWD_DEFINED__
 typedef interface IDlgDriver IDlgDriver;
+
 #endif 	/* __IDlgDriver_FWD_DEFINED__ */
 
 
@@ -776,6 +823,7 @@ typedef struct CDlgDriver CDlgDriver;
 #ifndef __IDlgDrData_FWD_DEFINED__
 #define __IDlgDrData_FWD_DEFINED__
 typedef interface IDlgDrData IDlgDrData;
+
 #endif 	/* __IDlgDrData_FWD_DEFINED__ */
 
 
@@ -794,6 +842,7 @@ typedef struct CDlgDrData CDlgDrData;
 #ifndef __IDlgDrGeneral_FWD_DEFINED__
 #define __IDlgDrGeneral_FWD_DEFINED__
 typedef interface IDlgDrGeneral IDlgDrGeneral;
+
 #endif 	/* __IDlgDrGeneral_FWD_DEFINED__ */
 
 
@@ -812,6 +861,7 @@ typedef struct CDlgDrGeneral CDlgDrGeneral;
 #ifndef __IDlgDrParms_FWD_DEFINED__
 #define __IDlgDrParms_FWD_DEFINED__
 typedef interface IDlgDrParms IDlgDrParms;
+
 #endif 	/* __IDlgDrParms_FWD_DEFINED__ */
 
 
@@ -830,6 +880,7 @@ typedef struct CDlgDrParms CDlgDrParms;
 #ifndef __IDlgSelectObject_FWD_DEFINED__
 #define __IDlgSelectObject_FWD_DEFINED__
 typedef interface IDlgSelectObject IDlgSelectObject;
+
 #endif 	/* __IDlgSelectObject_FWD_DEFINED__ */
 
 
@@ -848,6 +899,7 @@ typedef struct CDlgSelectObject CDlgSelectObject;
 #ifndef __IDlgSimpleBox_FWD_DEFINED__
 #define __IDlgSimpleBox_FWD_DEFINED__
 typedef interface IDlgSimpleBox IDlgSimpleBox;
+
 #endif 	/* __IDlgSimpleBox_FWD_DEFINED__ */
 
 
@@ -866,6 +918,7 @@ typedef struct CDlgSimpleBox CDlgSimpleBox;
 #ifndef __IDlgEnGeneral_FWD_DEFINED__
 #define __IDlgEnGeneral_FWD_DEFINED__
 typedef interface IDlgEnGeneral IDlgEnGeneral;
+
 #endif 	/* __IDlgEnGeneral_FWD_DEFINED__ */
 
 
@@ -884,6 +937,7 @@ typedef struct CDlgEnGeneral CDlgEnGeneral;
 #ifndef __IDlgEnParms_FWD_DEFINED__
 #define __IDlgEnParms_FWD_DEFINED__
 typedef interface IDlgEnParms IDlgEnParms;
+
 #endif 	/* __IDlgEnParms_FWD_DEFINED__ */
 
 
@@ -902,6 +956,7 @@ typedef struct CDlgEnParms CDlgEnParms;
 #ifndef __IDlgEnclosure_FWD_DEFINED__
 #define __IDlgEnclosure_FWD_DEFINED__
 typedef interface IDlgEnclosure IDlgEnclosure;
+
 #endif 	/* __IDlgEnclosure_FWD_DEFINED__ */
 
 
@@ -920,6 +975,7 @@ typedef struct CDlgEnclosure CDlgEnclosure;
 #ifndef __IDlgPrefChart_FWD_DEFINED__
 #define __IDlgPrefChart_FWD_DEFINED__
 typedef interface IDlgPrefChart IDlgPrefChart;
+
 #endif 	/* __IDlgPrefChart_FWD_DEFINED__ */
 
 
@@ -938,6 +994,7 @@ typedef struct CDlgPrefChart CDlgPrefChart;
 #ifndef __IDlgGenUserDef_FWD_DEFINED__
 #define __IDlgGenUserDef_FWD_DEFINED__
 typedef interface IDlgGenUserDef IDlgGenUserDef;
+
 #endif 	/* __IDlgGenUserDef_FWD_DEFINED__ */
 
 
@@ -956,6 +1013,7 @@ typedef struct CDlgGenUserDef CDlgGenUserDef;
 #ifndef __IDlgGenWarble_FWD_DEFINED__
 #define __IDlgGenWarble_FWD_DEFINED__
 typedef interface IDlgGenWarble IDlgGenWarble;
+
 #endif 	/* __IDlgGenWarble_FWD_DEFINED__ */
 
 
@@ -974,6 +1032,7 @@ typedef struct CDlgGenWarble CDlgGenWarble;
 #ifndef __IDlgXfInvert_FWD_DEFINED__
 #define __IDlgXfInvert_FWD_DEFINED__
 typedef interface IDlgXfInvert IDlgXfInvert;
+
 #endif 	/* __IDlgXfInvert_FWD_DEFINED__ */
 
 
@@ -992,6 +1051,7 @@ typedef struct CDlgXfInvert CDlgXfInvert;
 #ifndef __IDlgMsrPassive_FWD_DEFINED__
 #define __IDlgMsrPassive_FWD_DEFINED__
 typedef interface IDlgMsrPassive IDlgMsrPassive;
+
 #endif 	/* __IDlgMsrPassive_FWD_DEFINED__ */
 
 
@@ -1010,6 +1070,7 @@ typedef struct CDlgMsrPassive CDlgMsrPassive;
 #ifndef __IDlgCalcSealed_FWD_DEFINED__
 #define __IDlgCalcSealed_FWD_DEFINED__
 typedef interface IDlgCalcSealed IDlgCalcSealed;
+
 #endif 	/* __IDlgCalcSealed_FWD_DEFINED__ */
 
 
@@ -1028,6 +1089,7 @@ typedef struct CDlgCalcSealed CDlgCalcSealed;
 #ifndef __IDlgCalcBandAir_FWD_DEFINED__
 #define __IDlgCalcBandAir_FWD_DEFINED__
 typedef interface IDlgCalcBandAir IDlgCalcBandAir;
+
 #endif 	/* __IDlgCalcBandAir_FWD_DEFINED__ */
 
 
@@ -1046,6 +1108,7 @@ typedef struct CDlgCalcBandAir CDlgCalcBandAir;
 #ifndef __IDlgCalcBandChamber_FWD_DEFINED__
 #define __IDlgCalcBandChamber_FWD_DEFINED__
 typedef interface IDlgCalcBandChamber IDlgCalcBandChamber;
+
 #endif 	/* __IDlgCalcBandChamber_FWD_DEFINED__ */
 
 
@@ -1064,6 +1127,7 @@ typedef struct CDlgCalcBandChamber CDlgCalcBandChamber;
 #ifndef __IDlgCalcVented_FWD_DEFINED__
 #define __IDlgCalcVented_FWD_DEFINED__
 typedef interface IDlgCalcVented IDlgCalcVented;
+
 #endif 	/* __IDlgCalcVented_FWD_DEFINED__ */
 
 
@@ -1082,6 +1146,7 @@ typedef struct CDlgCalcVented CDlgCalcVented;
 #ifndef __IDlgFilter_FWD_DEFINED__
 #define __IDlgFilter_FWD_DEFINED__
 typedef interface IDlgFilter IDlgFilter;
+
 #endif 	/* __IDlgFilter_FWD_DEFINED__ */
 
 
@@ -1100,6 +1165,7 @@ typedef struct CDlgFilter CDlgFilter;
 #ifndef __IDlgPrefMeasure_FWD_DEFINED__
 #define __IDlgPrefMeasure_FWD_DEFINED__
 typedef interface IDlgPrefMeasure IDlgPrefMeasure;
+
 #endif 	/* __IDlgPrefMeasure_FWD_DEFINED__ */
 
 
@@ -1118,6 +1184,7 @@ typedef struct CDlgPrefMeasure CDlgPrefMeasure;
 #ifndef __IDlgTree_FWD_DEFINED__
 #define __IDlgTree_FWD_DEFINED__
 typedef interface IDlgTree IDlgTree;
+
 #endif 	/* __IDlgTree_FWD_DEFINED__ */
 
 
@@ -1136,6 +1203,7 @@ typedef struct CDlgTree CDlgTree;
 #ifndef __IDlgXfFilter_FWD_DEFINED__
 #define __IDlgXfFilter_FWD_DEFINED__
 typedef interface IDlgXfFilter IDlgXfFilter;
+
 #endif 	/* __IDlgXfFilter_FWD_DEFINED__ */
 
 
@@ -1154,6 +1222,7 @@ typedef struct CDlgXfFilter CDlgXfFilter;
 #ifndef __IDlgFilterLow_FWD_DEFINED__
 #define __IDlgFilterLow_FWD_DEFINED__
 typedef interface IDlgFilterLow IDlgFilterLow;
+
 #endif 	/* __IDlgFilterLow_FWD_DEFINED__ */
 
 
@@ -1172,6 +1241,7 @@ typedef struct CDlgFilterLow CDlgFilterLow;
 #ifndef __IdlgFilterHigh_FWD_DEFINED__
 #define __IdlgFilterHigh_FWD_DEFINED__
 typedef interface IdlgFilterHigh IdlgFilterHigh;
+
 #endif 	/* __IdlgFilterHigh_FWD_DEFINED__ */
 
 
@@ -1190,6 +1260,7 @@ typedef struct CdlgFilterHigh CdlgFilterHigh;
 #ifndef __IdlgFilterStop_FWD_DEFINED__
 #define __IdlgFilterStop_FWD_DEFINED__
 typedef interface IdlgFilterStop IdlgFilterStop;
+
 #endif 	/* __IdlgFilterStop_FWD_DEFINED__ */
 
 
@@ -1208,6 +1279,7 @@ typedef struct CdlgFilterStop CdlgFilterStop;
 #ifndef __IDlgFilterPass_FWD_DEFINED__
 #define __IDlgFilterPass_FWD_DEFINED__
 typedef interface IDlgFilterPass IDlgFilterPass;
+
 #endif 	/* __IDlgFilterPass_FWD_DEFINED__ */
 
 
@@ -1226,6 +1298,7 @@ typedef struct CDlgFilterPass CDlgFilterPass;
 #ifndef __IDlgMsrDistort_FWD_DEFINED__
 #define __IDlgMsrDistort_FWD_DEFINED__
 typedef interface IDlgMsrDistort IDlgMsrDistort;
+
 #endif 	/* __IDlgMsrDistort_FWD_DEFINED__ */
 
 
@@ -1244,6 +1317,7 @@ typedef struct CDlgMsrDistort CDlgMsrDistort;
 #ifndef __IDlgPrefReference_FWD_DEFINED__
 #define __IDlgPrefReference_FWD_DEFINED__
 typedef interface IDlgPrefReference IDlgPrefReference;
+
 #endif 	/* __IDlgPrefReference_FWD_DEFINED__ */
 
 
@@ -1262,6 +1336,7 @@ typedef struct CDlgPrefReference CDlgPrefReference;
 #ifndef __IDlgCalibrate_FWD_DEFINED__
 #define __IDlgCalibrate_FWD_DEFINED__
 typedef interface IDlgCalibrate IDlgCalibrate;
+
 #endif 	/* __IDlgCalibrate_FWD_DEFINED__ */
 
 
@@ -1280,6 +1355,7 @@ typedef struct CDlgCalibrate CDlgCalibrate;
 #ifndef __IDlgCalcTuned_FWD_DEFINED__
 #define __IDlgCalcTuned_FWD_DEFINED__
 typedef interface IDlgCalcTuned IDlgCalcTuned;
+
 #endif 	/* __IDlgCalcTuned_FWD_DEFINED__ */
 
 
@@ -1298,6 +1374,7 @@ typedef struct CDlgCalcTuned CDlgCalcTuned;
 #ifndef __IDlgCalcPassive_FWD_DEFINED__
 #define __IDlgCalcPassive_FWD_DEFINED__
 typedef interface IDlgCalcPassive IDlgCalcPassive;
+
 #endif 	/* __IDlgCalcPassive_FWD_DEFINED__ */
 
 
@@ -1316,6 +1393,7 @@ typedef struct CDlgCalcPassive CDlgCalcPassive;
 #ifndef __IDlgPrefMarker_FWD_DEFINED__
 #define __IDlgPrefMarker_FWD_DEFINED__
 typedef interface IDlgPrefMarker IDlgPrefMarker;
+
 #endif 	/* __IDlgPrefMarker_FWD_DEFINED__ */
 
 
@@ -1334,6 +1412,7 @@ typedef struct CDlgPrefMarker CDlgPrefMarker;
 #ifndef __IDlgOptXover_FWD_DEFINED__
 #define __IDlgOptXover_FWD_DEFINED__
 typedef interface IDlgOptXover IDlgOptXover;
+
 #endif 	/* __IDlgOptXover_FWD_DEFINED__ */
 
 
@@ -1352,6 +1431,7 @@ typedef struct DLGOPTXOVER DLGOPTXOVER;
 #ifndef __IDlgCrossover_FWD_DEFINED__
 #define __IDlgCrossover_FWD_DEFINED__
 typedef interface IDlgCrossover IDlgCrossover;
+
 #endif 	/* __IDlgCrossover_FWD_DEFINED__ */
 
 
@@ -1370,6 +1450,7 @@ typedef struct DLGCROSSOVER DLGCROSSOVER;
 #ifndef __IDlgAddPassive_FWD_DEFINED__
 #define __IDlgAddPassive_FWD_DEFINED__
 typedef interface IDlgAddPassive IDlgAddPassive;
+
 #endif 	/* __IDlgAddPassive_FWD_DEFINED__ */
 
 
@@ -1388,6 +1469,7 @@ typedef struct DLGADDPASSIVE DLGADDPASSIVE;
 #ifndef __IDlgZobel_FWD_DEFINED__
 #define __IDlgZobel_FWD_DEFINED__
 typedef interface IDlgZobel IDlgZobel;
+
 #endif 	/* __IDlgZobel_FWD_DEFINED__ */
 
 
@@ -1406,6 +1488,7 @@ typedef struct DLGZOBEL DLGZOBEL;
 #ifndef __IDlgNotch_FWD_DEFINED__
 #define __IDlgNotch_FWD_DEFINED__
 typedef interface IDlgNotch IDlgNotch;
+
 #endif 	/* __IDlgNotch_FWD_DEFINED__ */
 
 
@@ -1424,6 +1507,7 @@ typedef struct DLGNOTCH DLGNOTCH;
 #ifndef __IDlgNetLayout_FWD_DEFINED__
 #define __IDlgNetLayout_FWD_DEFINED__
 typedef interface IDlgNetLayout IDlgNetLayout;
+
 #endif 	/* __IDlgNetLayout_FWD_DEFINED__ */
 
 
@@ -1442,6 +1526,7 @@ typedef struct DLGNETLAYOUT DLGNETLAYOUT;
 #ifndef __IDlgDriverEstimate_FWD_DEFINED__
 #define __IDlgDriverEstimate_FWD_DEFINED__
 typedef interface IDlgDriverEstimate IDlgDriverEstimate;
+
 #endif 	/* __IDlgDriverEstimate_FWD_DEFINED__ */
 
 
@@ -1460,6 +1545,7 @@ typedef struct DLGDRIVERESTIMATE DLGDRIVERESTIMATE;
 #ifndef __IDlgXfSplice_FWD_DEFINED__
 #define __IDlgXfSplice_FWD_DEFINED__
 typedef interface IDlgXfSplice IDlgXfSplice;
+
 #endif 	/* __IDlgXfSplice_FWD_DEFINED__ */
 
 
@@ -1478,6 +1564,7 @@ typedef struct DLGXFSPLICE DLGXFSPLICE;
 #ifndef __IDlgPrefImpedance_FWD_DEFINED__
 #define __IDlgPrefImpedance_FWD_DEFINED__
 typedef interface IDlgPrefImpedance IDlgPrefImpedance;
+
 #endif 	/* __IDlgPrefImpedance_FWD_DEFINED__ */
 
 
@@ -1496,6 +1583,7 @@ typedef struct DLGPREFIMPEDANCE DLGPREFIMPEDANCE;
 #ifndef __IDlgPrefGeneral_FWD_DEFINED__
 #define __IDlgPrefGeneral_FWD_DEFINED__
 typedef interface IDlgPrefGeneral IDlgPrefGeneral;
+
 #endif 	/* __IDlgPrefGeneral_FWD_DEFINED__ */
 
 
@@ -1514,6 +1602,7 @@ typedef struct DLGPREFGENERAL DLGPREFGENERAL;
 #ifndef __IDlgCalJig3_FWD_DEFINED__
 #define __IDlgCalJig3_FWD_DEFINED__
 typedef interface IDlgCalJig3 IDlgCalJig3;
+
 #endif 	/* __IDlgCalJig3_FWD_DEFINED__ */
 
 
@@ -1532,6 +1621,7 @@ typedef struct DLGCALJIG3 DLGCALJIG3;
 #ifndef __IDlgWizLoop_FWD_DEFINED__
 #define __IDlgWizLoop_FWD_DEFINED__
 typedef interface IDlgWizLoop IDlgWizLoop;
+
 #endif 	/* __IDlgWizLoop_FWD_DEFINED__ */
 
 
@@ -1550,6 +1640,7 @@ typedef struct DLGWIZLOOP DLGWIZLOOP;
 #ifndef __IDlgWizLoopBegin_FWD_DEFINED__
 #define __IDlgWizLoopBegin_FWD_DEFINED__
 typedef interface IDlgWizLoopBegin IDlgWizLoopBegin;
+
 #endif 	/* __IDlgWizLoopBegin_FWD_DEFINED__ */
 
 
@@ -1568,6 +1659,7 @@ typedef struct DLGWIZLPBEGIN DLGWIZLPBEGIN;
 #ifndef __IDlgCalWizLoopEnd_FWD_DEFINED__
 #define __IDlgCalWizLoopEnd_FWD_DEFINED__
 typedef interface IDlgCalWizLoopEnd IDlgCalWizLoopEnd;
+
 #endif 	/* __IDlgCalWizLoopEnd_FWD_DEFINED__ */
 
 
@@ -1586,6 +1678,7 @@ typedef struct DLGCALWIZLOOPEND DLGCALWIZLOOPEND;
 #ifndef __IDlgCalLoopJig_FWD_DEFINED__
 #define __IDlgCalLoopJig_FWD_DEFINED__
 typedef interface IDlgCalLoopJig IDlgCalLoopJig;
+
 #endif 	/* __IDlgCalLoopJig_FWD_DEFINED__ */
 
 
@@ -1605,8 +1698,6 @@ typedef struct DLGCALLOOPJIG DLGCALLOOPJIG;
 extern "C"{
 #endif 
 
-void * __RPC_USER MIDL_user_allocate(size_t);
-void __RPC_USER MIDL_user_free( void * ); 
 
 
 #ifndef __audtest_LIBRARY_DEFINED__
@@ -1616,7 +1707,7 @@ void __RPC_USER MIDL_user_free( void * );
 /* [version][uuid] */ 
 
 
-DEFINE_GUID(LIBID_audtest,0x018FC421,0x7EE6,0x11CE,0xBC,0x27,0x44,0x45,0x53,0x54,0x00,0x00);
+EXTERN_C const IID LIBID_audtest;
 
 #ifndef __IAudtes_DISPINTERFACE_DEFINED__
 #define __IAudtes_DISPINTERFACE_DEFINED__
@@ -1625,7 +1716,7 @@ DEFINE_GUID(LIBID_audtest,0x018FC421,0x7EE6,0x11CE,0xBC,0x27,0x44,0x45,0x53,0x54
 /* [uuid] */ 
 
 
-DEFINE_GUID(DIID_IAudtes,0x018FC422,0x7EE6,0x11CE,0xBC,0x27,0x44,0x45,0x53,0x54,0x00,0x00);
+EXTERN_C const IID DIID_IAudtes;
 
 #if defined(__cplusplus) && !defined(CINTERFACE)
 
@@ -1643,7 +1734,8 @@ DEFINE_GUID(DIID_IAudtes,0x018FC422,0x7EE6,0x11CE,0xBC,0x27,0x44,0x45,0x53,0x54,
         HRESULT ( STDMETHODCALLTYPE *QueryInterface )( 
             IAudtes * This,
             /* [in] */ REFIID riid,
-            /* [iid_is][out] */ void **ppvObject);
+            /* [annotation][iid_is][out] */ 
+            _COM_Outptr_  void **ppvObject);
         
         ULONG ( STDMETHODCALLTYPE *AddRef )( 
             IAudtes * This);
@@ -1665,20 +1757,28 @@ DEFINE_GUID(DIID_IAudtes,0x018FC422,0x7EE6,0x11CE,0xBC,0x27,0x44,0x45,0x53,0x54,
             IAudtes * This,
             /* [in] */ REFIID riid,
             /* [size_is][in] */ LPOLESTR *rgszNames,
-            /* [in] */ UINT cNames,
+            /* [range][in] */ UINT cNames,
             /* [in] */ LCID lcid,
             /* [size_is][out] */ DISPID *rgDispId);
         
         /* [local] */ HRESULT ( STDMETHODCALLTYPE *Invoke )( 
             IAudtes * This,
-            /* [in] */ DISPID dispIdMember,
-            /* [in] */ REFIID riid,
-            /* [in] */ LCID lcid,
-            /* [in] */ WORD wFlags,
-            /* [out][in] */ DISPPARAMS *pDispParams,
-            /* [out] */ VARIANT *pVarResult,
-            /* [out] */ EXCEPINFO *pExcepInfo,
-            /* [out] */ UINT *puArgErr);
+            /* [annotation][in] */ 
+            _In_  DISPID dispIdMember,
+            /* [annotation][in] */ 
+            _In_  REFIID riid,
+            /* [annotation][in] */ 
+            _In_  LCID lcid,
+            /* [annotation][in] */ 
+            _In_  WORD wFlags,
+            /* [annotation][out][in] */ 
+            _In_  DISPPARAMS *pDispParams,
+            /* [annotation][out] */ 
+            _Out_opt_  VARIANT *pVarResult,
+            /* [annotation][out] */ 
+            _Out_opt_  EXCEPINFO *pExcepInfo,
+            /* [annotation][out] */ 
+            _Out_opt_  UINT *puArgErr);
         
         END_INTERFACE
     } IAudtesVtbl;
@@ -1694,26 +1794,26 @@ DEFINE_GUID(DIID_IAudtes,0x018FC422,0x7EE6,0x11CE,0xBC,0x27,0x44,0x45,0x53,0x54,
 
 
 #define IAudtes_QueryInterface(This,riid,ppvObject)	\
-    (This)->lpVtbl -> QueryInterface(This,riid,ppvObject)
+    ( (This)->lpVtbl -> QueryInterface(This,riid,ppvObject) ) 
 
 #define IAudtes_AddRef(This)	\
-    (This)->lpVtbl -> AddRef(This)
+    ( (This)->lpVtbl -> AddRef(This) ) 
 
 #define IAudtes_Release(This)	\
-    (This)->lpVtbl -> Release(This)
+    ( (This)->lpVtbl -> Release(This) ) 
 
 
 #define IAudtes_GetTypeInfoCount(This,pctinfo)	\
-    (This)->lpVtbl -> GetTypeInfoCount(This,pctinfo)
+    ( (This)->lpVtbl -> GetTypeInfoCount(This,pctinfo) ) 
 
 #define IAudtes_GetTypeInfo(This,iTInfo,lcid,ppTInfo)	\
-    (This)->lpVtbl -> GetTypeInfo(This,iTInfo,lcid,ppTInfo)
+    ( (This)->lpVtbl -> GetTypeInfo(This,iTInfo,lcid,ppTInfo) ) 
 
 #define IAudtes_GetIDsOfNames(This,riid,rgszNames,cNames,lcid,rgDispId)	\
-    (This)->lpVtbl -> GetIDsOfNames(This,riid,rgszNames,cNames,lcid,rgDispId)
+    ( (This)->lpVtbl -> GetIDsOfNames(This,riid,rgszNames,cNames,lcid,rgDispId) ) 
 
 #define IAudtes_Invoke(This,dispIdMember,riid,lcid,wFlags,pDispParams,pVarResult,pExcepInfo,puArgErr)	\
-    (This)->lpVtbl -> Invoke(This,dispIdMember,riid,lcid,wFlags,pDispParams,pVarResult,pExcepInfo,puArgErr)
+    ( (This)->lpVtbl -> Invoke(This,dispIdMember,riid,lcid,wFlags,pDispParams,pVarResult,pExcepInfo,puArgErr) ) 
 
 #endif /* COBJMACROS */
 
@@ -1724,7 +1824,7 @@ DEFINE_GUID(DIID_IAudtes,0x018FC422,0x7EE6,0x11CE,0xBC,0x27,0x44,0x45,0x53,0x54,
 #endif 	/* __IAudtes_DISPINTERFACE_DEFINED__ */
 
 
-DEFINE_GUID(CLSID_CAudtestDoc,0x018FC420,0x7EE6,0x11CE,0xBC,0x27,0x44,0x45,0x53,0x54,0x00,0x00);
+EXTERN_C const CLSID CLSID_CAudtestDoc;
 
 #ifdef __cplusplus
 
@@ -1739,7 +1839,7 @@ CAudtestDoc;
 /* [uuid] */ 
 
 
-DEFINE_GUID(DIID_IDlgSweep,0xA21C48A2,0x7EEB,0x11CE,0xBC,0x27,0x44,0x45,0x53,0x54,0x00,0x00);
+EXTERN_C const IID DIID_IDlgSweep;
 
 #if defined(__cplusplus) && !defined(CINTERFACE)
 
@@ -1757,7 +1857,8 @@ DEFINE_GUID(DIID_IDlgSweep,0xA21C48A2,0x7EEB,0x11CE,0xBC,0x27,0x44,0x45,0x53,0x5
         HRESULT ( STDMETHODCALLTYPE *QueryInterface )( 
             IDlgSweep * This,
             /* [in] */ REFIID riid,
-            /* [iid_is][out] */ void **ppvObject);
+            /* [annotation][iid_is][out] */ 
+            _COM_Outptr_  void **ppvObject);
         
         ULONG ( STDMETHODCALLTYPE *AddRef )( 
             IDlgSweep * This);
@@ -1779,20 +1880,28 @@ DEFINE_GUID(DIID_IDlgSweep,0xA21C48A2,0x7EEB,0x11CE,0xBC,0x27,0x44,0x45,0x53,0x5
             IDlgSweep * This,
             /* [in] */ REFIID riid,
             /* [size_is][in] */ LPOLESTR *rgszNames,
-            /* [in] */ UINT cNames,
+            /* [range][in] */ UINT cNames,
             /* [in] */ LCID lcid,
             /* [size_is][out] */ DISPID *rgDispId);
         
         /* [local] */ HRESULT ( STDMETHODCALLTYPE *Invoke )( 
             IDlgSweep * This,
-            /* [in] */ DISPID dispIdMember,
-            /* [in] */ REFIID riid,
-            /* [in] */ LCID lcid,
-            /* [in] */ WORD wFlags,
-            /* [out][in] */ DISPPARAMS *pDispParams,
-            /* [out] */ VARIANT *pVarResult,
-            /* [out] */ EXCEPINFO *pExcepInfo,
-            /* [out] */ UINT *puArgErr);
+            /* [annotation][in] */ 
+            _In_  DISPID dispIdMember,
+            /* [annotation][in] */ 
+            _In_  REFIID riid,
+            /* [annotation][in] */ 
+            _In_  LCID lcid,
+            /* [annotation][in] */ 
+            _In_  WORD wFlags,
+            /* [annotation][out][in] */ 
+            _In_  DISPPARAMS *pDispParams,
+            /* [annotation][out] */ 
+            _Out_opt_  VARIANT *pVarResult,
+            /* [annotation][out] */ 
+            _Out_opt_  EXCEPINFO *pExcepInfo,
+            /* [annotation][out] */ 
+            _Out_opt_  UINT *puArgErr);
         
         END_INTERFACE
     } IDlgSweepVtbl;
@@ -1808,26 +1917,26 @@ DEFINE_GUID(DIID_IDlgSweep,0xA21C48A2,0x7EEB,0x11CE,0xBC,0x27,0x44,0x45,0x53,0x5
 
 
 #define IDlgSweep_QueryInterface(This,riid,ppvObject)	\
-    (This)->lpVtbl -> QueryInterface(This,riid,ppvObject)
+    ( (This)->lpVtbl -> QueryInterface(This,riid,ppvObject) ) 
 
 #define IDlgSweep_AddRef(This)	\
-    (This)->lpVtbl -> AddRef(This)
+    ( (This)->lpVtbl -> AddRef(This) ) 
 
 #define IDlgSweep_Release(This)	\
-    (This)->lpVtbl -> Release(This)
+    ( (This)->lpVtbl -> Release(This) ) 
 
 
 #define IDlgSweep_GetTypeInfoCount(This,pctinfo)	\
-    (This)->lpVtbl -> GetTypeInfoCount(This,pctinfo)
+    ( (This)->lpVtbl -> GetTypeInfoCount(This,pctinfo) ) 
 
 #define IDlgSweep_GetTypeInfo(This,iTInfo,lcid,ppTInfo)	\
-    (This)->lpVtbl -> GetTypeInfo(This,iTInfo,lcid,ppTInfo)
+    ( (This)->lpVtbl -> GetTypeInfo(This,iTInfo,lcid,ppTInfo) ) 
 
 #define IDlgSweep_GetIDsOfNames(This,riid,rgszNames,cNames,lcid,rgDispId)	\
-    (This)->lpVtbl -> GetIDsOfNames(This,riid,rgszNames,cNames,lcid,rgDispId)
+    ( (This)->lpVtbl -> GetIDsOfNames(This,riid,rgszNames,cNames,lcid,rgDispId) ) 
 
 #define IDlgSweep_Invoke(This,dispIdMember,riid,lcid,wFlags,pDispParams,pVarResult,pExcepInfo,puArgErr)	\
-    (This)->lpVtbl -> Invoke(This,dispIdMember,riid,lcid,wFlags,pDispParams,pVarResult,pExcepInfo,puArgErr)
+    ( (This)->lpVtbl -> Invoke(This,dispIdMember,riid,lcid,wFlags,pDispParams,pVarResult,pExcepInfo,puArgErr) ) 
 
 #endif /* COBJMACROS */
 
@@ -1838,7 +1947,7 @@ DEFINE_GUID(DIID_IDlgSweep,0xA21C48A2,0x7EEB,0x11CE,0xBC,0x27,0x44,0x45,0x53,0x5
 #endif 	/* __IDlgSweep_DISPINTERFACE_DEFINED__ */
 
 
-DEFINE_GUID(CLSID_CDlgSweep,0xA21C48A3,0x7EEB,0x11CE,0xBC,0x27,0x44,0x45,0x53,0x54,0x00,0x00);
+EXTERN_C const CLSID CLSID_CDlgSweep;
 
 #ifdef __cplusplus
 
@@ -1853,7 +1962,7 @@ CDlgSweep;
 /* [uuid] */ 
 
 
-DEFINE_GUID(DIID_IDlgSine,0xF83EBB20,0x7EEE,0x11CE,0xBC,0x27,0x44,0x45,0x53,0x54,0x00,0x00);
+EXTERN_C const IID DIID_IDlgSine;
 
 #if defined(__cplusplus) && !defined(CINTERFACE)
 
@@ -1871,7 +1980,8 @@ DEFINE_GUID(DIID_IDlgSine,0xF83EBB20,0x7EEE,0x11CE,0xBC,0x27,0x44,0x45,0x53,0x54
         HRESULT ( STDMETHODCALLTYPE *QueryInterface )( 
             IDlgSine * This,
             /* [in] */ REFIID riid,
-            /* [iid_is][out] */ void **ppvObject);
+            /* [annotation][iid_is][out] */ 
+            _COM_Outptr_  void **ppvObject);
         
         ULONG ( STDMETHODCALLTYPE *AddRef )( 
             IDlgSine * This);
@@ -1893,20 +2003,28 @@ DEFINE_GUID(DIID_IDlgSine,0xF83EBB20,0x7EEE,0x11CE,0xBC,0x27,0x44,0x45,0x53,0x54
             IDlgSine * This,
             /* [in] */ REFIID riid,
             /* [size_is][in] */ LPOLESTR *rgszNames,
-            /* [in] */ UINT cNames,
+            /* [range][in] */ UINT cNames,
             /* [in] */ LCID lcid,
             /* [size_is][out] */ DISPID *rgDispId);
         
         /* [local] */ HRESULT ( STDMETHODCALLTYPE *Invoke )( 
             IDlgSine * This,
-            /* [in] */ DISPID dispIdMember,
-            /* [in] */ REFIID riid,
-            /* [in] */ LCID lcid,
-            /* [in] */ WORD wFlags,
-            /* [out][in] */ DISPPARAMS *pDispParams,
-            /* [out] */ VARIANT *pVarResult,
-            /* [out] */ EXCEPINFO *pExcepInfo,
-            /* [out] */ UINT *puArgErr);
+            /* [annotation][in] */ 
+            _In_  DISPID dispIdMember,
+            /* [annotation][in] */ 
+            _In_  REFIID riid,
+            /* [annotation][in] */ 
+            _In_  LCID lcid,
+            /* [annotation][in] */ 
+            _In_  WORD wFlags,
+            /* [annotation][out][in] */ 
+            _In_  DISPPARAMS *pDispParams,
+            /* [annotation][out] */ 
+            _Out_opt_  VARIANT *pVarResult,
+            /* [annotation][out] */ 
+            _Out_opt_  EXCEPINFO *pExcepInfo,
+            /* [annotation][out] */ 
+            _Out_opt_  UINT *puArgErr);
         
         END_INTERFACE
     } IDlgSineVtbl;
@@ -1922,26 +2040,26 @@ DEFINE_GUID(DIID_IDlgSine,0xF83EBB20,0x7EEE,0x11CE,0xBC,0x27,0x44,0x45,0x53,0x54
 
 
 #define IDlgSine_QueryInterface(This,riid,ppvObject)	\
-    (This)->lpVtbl -> QueryInterface(This,riid,ppvObject)
+    ( (This)->lpVtbl -> QueryInterface(This,riid,ppvObject) ) 
 
 #define IDlgSine_AddRef(This)	\
-    (This)->lpVtbl -> AddRef(This)
+    ( (This)->lpVtbl -> AddRef(This) ) 
 
 #define IDlgSine_Release(This)	\
-    (This)->lpVtbl -> Release(This)
+    ( (This)->lpVtbl -> Release(This) ) 
 
 
 #define IDlgSine_GetTypeInfoCount(This,pctinfo)	\
-    (This)->lpVtbl -> GetTypeInfoCount(This,pctinfo)
+    ( (This)->lpVtbl -> GetTypeInfoCount(This,pctinfo) ) 
 
 #define IDlgSine_GetTypeInfo(This,iTInfo,lcid,ppTInfo)	\
-    (This)->lpVtbl -> GetTypeInfo(This,iTInfo,lcid,ppTInfo)
+    ( (This)->lpVtbl -> GetTypeInfo(This,iTInfo,lcid,ppTInfo) ) 
 
 #define IDlgSine_GetIDsOfNames(This,riid,rgszNames,cNames,lcid,rgDispId)	\
-    (This)->lpVtbl -> GetIDsOfNames(This,riid,rgszNames,cNames,lcid,rgDispId)
+    ( (This)->lpVtbl -> GetIDsOfNames(This,riid,rgszNames,cNames,lcid,rgDispId) ) 
 
 #define IDlgSine_Invoke(This,dispIdMember,riid,lcid,wFlags,pDispParams,pVarResult,pExcepInfo,puArgErr)	\
-    (This)->lpVtbl -> Invoke(This,dispIdMember,riid,lcid,wFlags,pDispParams,pVarResult,pExcepInfo,puArgErr)
+    ( (This)->lpVtbl -> Invoke(This,dispIdMember,riid,lcid,wFlags,pDispParams,pVarResult,pExcepInfo,puArgErr) ) 
 
 #endif /* COBJMACROS */
 
@@ -1952,7 +2070,7 @@ DEFINE_GUID(DIID_IDlgSine,0xF83EBB20,0x7EEE,0x11CE,0xBC,0x27,0x44,0x45,0x53,0x54
 #endif 	/* __IDlgSine_DISPINTERFACE_DEFINED__ */
 
 
-DEFINE_GUID(CLSID_CDlgSine,0xF83EBB21,0x7EEE,0x11CE,0xBC,0x27,0x44,0x45,0x53,0x54,0x00,0x00);
+EXTERN_C const CLSID CLSID_CDlgSine;
 
 #ifdef __cplusplus
 
@@ -1967,7 +2085,7 @@ CDlgSine;
 /* [uuid] */ 
 
 
-DEFINE_GUID(DIID_IDlgGenerator,0xF83EBB22,0x7EEE,0x11CE,0xBC,0x27,0x44,0x45,0x53,0x54,0x00,0x00);
+EXTERN_C const IID DIID_IDlgGenerator;
 
 #if defined(__cplusplus) && !defined(CINTERFACE)
 
@@ -1985,7 +2103,8 @@ DEFINE_GUID(DIID_IDlgGenerator,0xF83EBB22,0x7EEE,0x11CE,0xBC,0x27,0x44,0x45,0x53
         HRESULT ( STDMETHODCALLTYPE *QueryInterface )( 
             IDlgGenerator * This,
             /* [in] */ REFIID riid,
-            /* [iid_is][out] */ void **ppvObject);
+            /* [annotation][iid_is][out] */ 
+            _COM_Outptr_  void **ppvObject);
         
         ULONG ( STDMETHODCALLTYPE *AddRef )( 
             IDlgGenerator * This);
@@ -2007,20 +2126,28 @@ DEFINE_GUID(DIID_IDlgGenerator,0xF83EBB22,0x7EEE,0x11CE,0xBC,0x27,0x44,0x45,0x53
             IDlgGenerator * This,
             /* [in] */ REFIID riid,
             /* [size_is][in] */ LPOLESTR *rgszNames,
-            /* [in] */ UINT cNames,
+            /* [range][in] */ UINT cNames,
             /* [in] */ LCID lcid,
             /* [size_is][out] */ DISPID *rgDispId);
         
         /* [local] */ HRESULT ( STDMETHODCALLTYPE *Invoke )( 
             IDlgGenerator * This,
-            /* [in] */ DISPID dispIdMember,
-            /* [in] */ REFIID riid,
-            /* [in] */ LCID lcid,
-            /* [in] */ WORD wFlags,
-            /* [out][in] */ DISPPARAMS *pDispParams,
-            /* [out] */ VARIANT *pVarResult,
-            /* [out] */ EXCEPINFO *pExcepInfo,
-            /* [out] */ UINT *puArgErr);
+            /* [annotation][in] */ 
+            _In_  DISPID dispIdMember,
+            /* [annotation][in] */ 
+            _In_  REFIID riid,
+            /* [annotation][in] */ 
+            _In_  LCID lcid,
+            /* [annotation][in] */ 
+            _In_  WORD wFlags,
+            /* [annotation][out][in] */ 
+            _In_  DISPPARAMS *pDispParams,
+            /* [annotation][out] */ 
+            _Out_opt_  VARIANT *pVarResult,
+            /* [annotation][out] */ 
+            _Out_opt_  EXCEPINFO *pExcepInfo,
+            /* [annotation][out] */ 
+            _Out_opt_  UINT *puArgErr);
         
         END_INTERFACE
     } IDlgGeneratorVtbl;
@@ -2036,26 +2163,26 @@ DEFINE_GUID(DIID_IDlgGenerator,0xF83EBB22,0x7EEE,0x11CE,0xBC,0x27,0x44,0x45,0x53
 
 
 #define IDlgGenerator_QueryInterface(This,riid,ppvObject)	\
-    (This)->lpVtbl -> QueryInterface(This,riid,ppvObject)
+    ( (This)->lpVtbl -> QueryInterface(This,riid,ppvObject) ) 
 
 #define IDlgGenerator_AddRef(This)	\
-    (This)->lpVtbl -> AddRef(This)
+    ( (This)->lpVtbl -> AddRef(This) ) 
 
 #define IDlgGenerator_Release(This)	\
-    (This)->lpVtbl -> Release(This)
+    ( (This)->lpVtbl -> Release(This) ) 
 
 
 #define IDlgGenerator_GetTypeInfoCount(This,pctinfo)	\
-    (This)->lpVtbl -> GetTypeInfoCount(This,pctinfo)
+    ( (This)->lpVtbl -> GetTypeInfoCount(This,pctinfo) ) 
 
 #define IDlgGenerator_GetTypeInfo(This,iTInfo,lcid,ppTInfo)	\
-    (This)->lpVtbl -> GetTypeInfo(This,iTInfo,lcid,ppTInfo)
+    ( (This)->lpVtbl -> GetTypeInfo(This,iTInfo,lcid,ppTInfo) ) 
 
 #define IDlgGenerator_GetIDsOfNames(This,riid,rgszNames,cNames,lcid,rgDispId)	\
-    (This)->lpVtbl -> GetIDsOfNames(This,riid,rgszNames,cNames,lcid,rgDispId)
+    ( (This)->lpVtbl -> GetIDsOfNames(This,riid,rgszNames,cNames,lcid,rgDispId) ) 
 
 #define IDlgGenerator_Invoke(This,dispIdMember,riid,lcid,wFlags,pDispParams,pVarResult,pExcepInfo,puArgErr)	\
-    (This)->lpVtbl -> Invoke(This,dispIdMember,riid,lcid,wFlags,pDispParams,pVarResult,pExcepInfo,puArgErr)
+    ( (This)->lpVtbl -> Invoke(This,dispIdMember,riid,lcid,wFlags,pDispParams,pVarResult,pExcepInfo,puArgErr) ) 
 
 #endif /* COBJMACROS */
 
@@ -2066,7 +2193,7 @@ DEFINE_GUID(DIID_IDlgGenerator,0xF83EBB22,0x7EEE,0x11CE,0xBC,0x27,0x44,0x45,0x53
 #endif 	/* __IDlgGenerator_DISPINTERFACE_DEFINED__ */
 
 
-DEFINE_GUID(CLSID_CDlgGenerator,0xF83EBB23,0x7EEE,0x11CE,0xBC,0x27,0x44,0x45,0x53,0x54,0x00,0x00);
+EXTERN_C const CLSID CLSID_CDlgGenerator;
 
 #ifdef __cplusplus
 
@@ -2081,7 +2208,7 @@ CDlgGenerator;
 /* [uuid] */ 
 
 
-DEFINE_GUID(DIID_IDlgPulse,0x26CA4F80,0x8486,0x11CE,0xBC,0x27,0x44,0x45,0x53,0x54,0x00,0x00);
+EXTERN_C const IID DIID_IDlgPulse;
 
 #if defined(__cplusplus) && !defined(CINTERFACE)
 
@@ -2099,7 +2226,8 @@ DEFINE_GUID(DIID_IDlgPulse,0x26CA4F80,0x8486,0x11CE,0xBC,0x27,0x44,0x45,0x53,0x5
         HRESULT ( STDMETHODCALLTYPE *QueryInterface )( 
             IDlgPulse * This,
             /* [in] */ REFIID riid,
-            /* [iid_is][out] */ void **ppvObject);
+            /* [annotation][iid_is][out] */ 
+            _COM_Outptr_  void **ppvObject);
         
         ULONG ( STDMETHODCALLTYPE *AddRef )( 
             IDlgPulse * This);
@@ -2121,20 +2249,28 @@ DEFINE_GUID(DIID_IDlgPulse,0x26CA4F80,0x8486,0x11CE,0xBC,0x27,0x44,0x45,0x53,0x5
             IDlgPulse * This,
             /* [in] */ REFIID riid,
             /* [size_is][in] */ LPOLESTR *rgszNames,
-            /* [in] */ UINT cNames,
+            /* [range][in] */ UINT cNames,
             /* [in] */ LCID lcid,
             /* [size_is][out] */ DISPID *rgDispId);
         
         /* [local] */ HRESULT ( STDMETHODCALLTYPE *Invoke )( 
             IDlgPulse * This,
-            /* [in] */ DISPID dispIdMember,
-            /* [in] */ REFIID riid,
-            /* [in] */ LCID lcid,
-            /* [in] */ WORD wFlags,
-            /* [out][in] */ DISPPARAMS *pDispParams,
-            /* [out] */ VARIANT *pVarResult,
-            /* [out] */ EXCEPINFO *pExcepInfo,
-            /* [out] */ UINT *puArgErr);
+            /* [annotation][in] */ 
+            _In_  DISPID dispIdMember,
+            /* [annotation][in] */ 
+            _In_  REFIID riid,
+            /* [annotation][in] */ 
+            _In_  LCID lcid,
+            /* [annotation][in] */ 
+            _In_  WORD wFlags,
+            /* [annotation][out][in] */ 
+            _In_  DISPPARAMS *pDispParams,
+            /* [annotation][out] */ 
+            _Out_opt_  VARIANT *pVarResult,
+            /* [annotation][out] */ 
+            _Out_opt_  EXCEPINFO *pExcepInfo,
+            /* [annotation][out] */ 
+            _Out_opt_  UINT *puArgErr);
         
         END_INTERFACE
     } IDlgPulseVtbl;
@@ -2150,26 +2286,26 @@ DEFINE_GUID(DIID_IDlgPulse,0x26CA4F80,0x8486,0x11CE,0xBC,0x27,0x44,0x45,0x53,0x5
 
 
 #define IDlgPulse_QueryInterface(This,riid,ppvObject)	\
-    (This)->lpVtbl -> QueryInterface(This,riid,ppvObject)
+    ( (This)->lpVtbl -> QueryInterface(This,riid,ppvObject) ) 
 
 #define IDlgPulse_AddRef(This)	\
-    (This)->lpVtbl -> AddRef(This)
+    ( (This)->lpVtbl -> AddRef(This) ) 
 
 #define IDlgPulse_Release(This)	\
-    (This)->lpVtbl -> Release(This)
+    ( (This)->lpVtbl -> Release(This) ) 
 
 
 #define IDlgPulse_GetTypeInfoCount(This,pctinfo)	\
-    (This)->lpVtbl -> GetTypeInfoCount(This,pctinfo)
+    ( (This)->lpVtbl -> GetTypeInfoCount(This,pctinfo) ) 
 
 #define IDlgPulse_GetTypeInfo(This,iTInfo,lcid,ppTInfo)	\
-    (This)->lpVtbl -> GetTypeInfo(This,iTInfo,lcid,ppTInfo)
+    ( (This)->lpVtbl -> GetTypeInfo(This,iTInfo,lcid,ppTInfo) ) 
 
 #define IDlgPulse_GetIDsOfNames(This,riid,rgszNames,cNames,lcid,rgDispId)	\
-    (This)->lpVtbl -> GetIDsOfNames(This,riid,rgszNames,cNames,lcid,rgDispId)
+    ( (This)->lpVtbl -> GetIDsOfNames(This,riid,rgszNames,cNames,lcid,rgDispId) ) 
 
 #define IDlgPulse_Invoke(This,dispIdMember,riid,lcid,wFlags,pDispParams,pVarResult,pExcepInfo,puArgErr)	\
-    (This)->lpVtbl -> Invoke(This,dispIdMember,riid,lcid,wFlags,pDispParams,pVarResult,pExcepInfo,puArgErr)
+    ( (This)->lpVtbl -> Invoke(This,dispIdMember,riid,lcid,wFlags,pDispParams,pVarResult,pExcepInfo,puArgErr) ) 
 
 #endif /* COBJMACROS */
 
@@ -2180,7 +2316,7 @@ DEFINE_GUID(DIID_IDlgPulse,0x26CA4F80,0x8486,0x11CE,0xBC,0x27,0x44,0x45,0x53,0x5
 #endif 	/* __IDlgPulse_DISPINTERFACE_DEFINED__ */
 
 
-DEFINE_GUID(CLSID_CDlgPulse,0x26CA4F81,0x8486,0x11CE,0xBC,0x27,0x44,0x45,0x53,0x54,0x00,0x00);
+EXTERN_C const CLSID CLSID_CDlgPulse;
 
 #ifdef __cplusplus
 
@@ -2195,7 +2331,7 @@ CDlgPulse;
 /* [uuid] */ 
 
 
-DEFINE_GUID(DIID_IDlgMls,0x26CA4F82,0x8486,0x11CE,0xBC,0x27,0x44,0x45,0x53,0x54,0x00,0x00);
+EXTERN_C const IID DIID_IDlgMls;
 
 #if defined(__cplusplus) && !defined(CINTERFACE)
 
@@ -2213,7 +2349,8 @@ DEFINE_GUID(DIID_IDlgMls,0x26CA4F82,0x8486,0x11CE,0xBC,0x27,0x44,0x45,0x53,0x54,
         HRESULT ( STDMETHODCALLTYPE *QueryInterface )( 
             IDlgMls * This,
             /* [in] */ REFIID riid,
-            /* [iid_is][out] */ void **ppvObject);
+            /* [annotation][iid_is][out] */ 
+            _COM_Outptr_  void **ppvObject);
         
         ULONG ( STDMETHODCALLTYPE *AddRef )( 
             IDlgMls * This);
@@ -2235,20 +2372,28 @@ DEFINE_GUID(DIID_IDlgMls,0x26CA4F82,0x8486,0x11CE,0xBC,0x27,0x44,0x45,0x53,0x54,
             IDlgMls * This,
             /* [in] */ REFIID riid,
             /* [size_is][in] */ LPOLESTR *rgszNames,
-            /* [in] */ UINT cNames,
+            /* [range][in] */ UINT cNames,
             /* [in] */ LCID lcid,
             /* [size_is][out] */ DISPID *rgDispId);
         
         /* [local] */ HRESULT ( STDMETHODCALLTYPE *Invoke )( 
             IDlgMls * This,
-            /* [in] */ DISPID dispIdMember,
-            /* [in] */ REFIID riid,
-            /* [in] */ LCID lcid,
-            /* [in] */ WORD wFlags,
-            /* [out][in] */ DISPPARAMS *pDispParams,
-            /* [out] */ VARIANT *pVarResult,
-            /* [out] */ EXCEPINFO *pExcepInfo,
-            /* [out] */ UINT *puArgErr);
+            /* [annotation][in] */ 
+            _In_  DISPID dispIdMember,
+            /* [annotation][in] */ 
+            _In_  REFIID riid,
+            /* [annotation][in] */ 
+            _In_  LCID lcid,
+            /* [annotation][in] */ 
+            _In_  WORD wFlags,
+            /* [annotation][out][in] */ 
+            _In_  DISPPARAMS *pDispParams,
+            /* [annotation][out] */ 
+            _Out_opt_  VARIANT *pVarResult,
+            /* [annotation][out] */ 
+            _Out_opt_  EXCEPINFO *pExcepInfo,
+            /* [annotation][out] */ 
+            _Out_opt_  UINT *puArgErr);
         
         END_INTERFACE
     } IDlgMlsVtbl;
@@ -2264,26 +2409,26 @@ DEFINE_GUID(DIID_IDlgMls,0x26CA4F82,0x8486,0x11CE,0xBC,0x27,0x44,0x45,0x53,0x54,
 
 
 #define IDlgMls_QueryInterface(This,riid,ppvObject)	\
-    (This)->lpVtbl -> QueryInterface(This,riid,ppvObject)
+    ( (This)->lpVtbl -> QueryInterface(This,riid,ppvObject) ) 
 
 #define IDlgMls_AddRef(This)	\
-    (This)->lpVtbl -> AddRef(This)
+    ( (This)->lpVtbl -> AddRef(This) ) 
 
 #define IDlgMls_Release(This)	\
-    (This)->lpVtbl -> Release(This)
+    ( (This)->lpVtbl -> Release(This) ) 
 
 
 #define IDlgMls_GetTypeInfoCount(This,pctinfo)	\
-    (This)->lpVtbl -> GetTypeInfoCount(This,pctinfo)
+    ( (This)->lpVtbl -> GetTypeInfoCount(This,pctinfo) ) 
 
 #define IDlgMls_GetTypeInfo(This,iTInfo,lcid,ppTInfo)	\
-    (This)->lpVtbl -> GetTypeInfo(This,iTInfo,lcid,ppTInfo)
+    ( (This)->lpVtbl -> GetTypeInfo(This,iTInfo,lcid,ppTInfo) ) 
 
 #define IDlgMls_GetIDsOfNames(This,riid,rgszNames,cNames,lcid,rgDispId)	\
-    (This)->lpVtbl -> GetIDsOfNames(This,riid,rgszNames,cNames,lcid,rgDispId)
+    ( (This)->lpVtbl -> GetIDsOfNames(This,riid,rgszNames,cNames,lcid,rgDispId) ) 
 
 #define IDlgMls_Invoke(This,dispIdMember,riid,lcid,wFlags,pDispParams,pVarResult,pExcepInfo,puArgErr)	\
-    (This)->lpVtbl -> Invoke(This,dispIdMember,riid,lcid,wFlags,pDispParams,pVarResult,pExcepInfo,puArgErr)
+    ( (This)->lpVtbl -> Invoke(This,dispIdMember,riid,lcid,wFlags,pDispParams,pVarResult,pExcepInfo,puArgErr) ) 
 
 #endif /* COBJMACROS */
 
@@ -2294,7 +2439,7 @@ DEFINE_GUID(DIID_IDlgMls,0x26CA4F82,0x8486,0x11CE,0xBC,0x27,0x44,0x45,0x53,0x54,
 #endif 	/* __IDlgMls_DISPINTERFACE_DEFINED__ */
 
 
-DEFINE_GUID(CLSID_CDlgMls,0x26CA4F83,0x8486,0x11CE,0xBC,0x27,0x44,0x45,0x53,0x54,0x00,0x00);
+EXTERN_C const CLSID CLSID_CDlgMls;
 
 #ifdef __cplusplus
 
@@ -2309,7 +2454,7 @@ CDlgMls;
 /* [uuid] */ 
 
 
-DEFINE_GUID(DIID_IDlgDsGeneral,0x1711C9C0,0x8615,0x11CE,0xBC,0x27,0x44,0x45,0x53,0x54,0x00,0x00);
+EXTERN_C const IID DIID_IDlgDsGeneral;
 
 #if defined(__cplusplus) && !defined(CINTERFACE)
 
@@ -2327,7 +2472,8 @@ DEFINE_GUID(DIID_IDlgDsGeneral,0x1711C9C0,0x8615,0x11CE,0xBC,0x27,0x44,0x45,0x53
         HRESULT ( STDMETHODCALLTYPE *QueryInterface )( 
             IDlgDsGeneral * This,
             /* [in] */ REFIID riid,
-            /* [iid_is][out] */ void **ppvObject);
+            /* [annotation][iid_is][out] */ 
+            _COM_Outptr_  void **ppvObject);
         
         ULONG ( STDMETHODCALLTYPE *AddRef )( 
             IDlgDsGeneral * This);
@@ -2349,20 +2495,28 @@ DEFINE_GUID(DIID_IDlgDsGeneral,0x1711C9C0,0x8615,0x11CE,0xBC,0x27,0x44,0x45,0x53
             IDlgDsGeneral * This,
             /* [in] */ REFIID riid,
             /* [size_is][in] */ LPOLESTR *rgszNames,
-            /* [in] */ UINT cNames,
+            /* [range][in] */ UINT cNames,
             /* [in] */ LCID lcid,
             /* [size_is][out] */ DISPID *rgDispId);
         
         /* [local] */ HRESULT ( STDMETHODCALLTYPE *Invoke )( 
             IDlgDsGeneral * This,
-            /* [in] */ DISPID dispIdMember,
-            /* [in] */ REFIID riid,
-            /* [in] */ LCID lcid,
-            /* [in] */ WORD wFlags,
-            /* [out][in] */ DISPPARAMS *pDispParams,
-            /* [out] */ VARIANT *pVarResult,
-            /* [out] */ EXCEPINFO *pExcepInfo,
-            /* [out] */ UINT *puArgErr);
+            /* [annotation][in] */ 
+            _In_  DISPID dispIdMember,
+            /* [annotation][in] */ 
+            _In_  REFIID riid,
+            /* [annotation][in] */ 
+            _In_  LCID lcid,
+            /* [annotation][in] */ 
+            _In_  WORD wFlags,
+            /* [annotation][out][in] */ 
+            _In_  DISPPARAMS *pDispParams,
+            /* [annotation][out] */ 
+            _Out_opt_  VARIANT *pVarResult,
+            /* [annotation][out] */ 
+            _Out_opt_  EXCEPINFO *pExcepInfo,
+            /* [annotation][out] */ 
+            _Out_opt_  UINT *puArgErr);
         
         END_INTERFACE
     } IDlgDsGeneralVtbl;
@@ -2378,26 +2532,26 @@ DEFINE_GUID(DIID_IDlgDsGeneral,0x1711C9C0,0x8615,0x11CE,0xBC,0x27,0x44,0x45,0x53
 
 
 #define IDlgDsGeneral_QueryInterface(This,riid,ppvObject)	\
-    (This)->lpVtbl -> QueryInterface(This,riid,ppvObject)
+    ( (This)->lpVtbl -> QueryInterface(This,riid,ppvObject) ) 
 
 #define IDlgDsGeneral_AddRef(This)	\
-    (This)->lpVtbl -> AddRef(This)
+    ( (This)->lpVtbl -> AddRef(This) ) 
 
 #define IDlgDsGeneral_Release(This)	\
-    (This)->lpVtbl -> Release(This)
+    ( (This)->lpVtbl -> Release(This) ) 
 
 
 #define IDlgDsGeneral_GetTypeInfoCount(This,pctinfo)	\
-    (This)->lpVtbl -> GetTypeInfoCount(This,pctinfo)
+    ( (This)->lpVtbl -> GetTypeInfoCount(This,pctinfo) ) 
 
 #define IDlgDsGeneral_GetTypeInfo(This,iTInfo,lcid,ppTInfo)	\
-    (This)->lpVtbl -> GetTypeInfo(This,iTInfo,lcid,ppTInfo)
+    ( (This)->lpVtbl -> GetTypeInfo(This,iTInfo,lcid,ppTInfo) ) 
 
 #define IDlgDsGeneral_GetIDsOfNames(This,riid,rgszNames,cNames,lcid,rgDispId)	\
-    (This)->lpVtbl -> GetIDsOfNames(This,riid,rgszNames,cNames,lcid,rgDispId)
+    ( (This)->lpVtbl -> GetIDsOfNames(This,riid,rgszNames,cNames,lcid,rgDispId) ) 
 
 #define IDlgDsGeneral_Invoke(This,dispIdMember,riid,lcid,wFlags,pDispParams,pVarResult,pExcepInfo,puArgErr)	\
-    (This)->lpVtbl -> Invoke(This,dispIdMember,riid,lcid,wFlags,pDispParams,pVarResult,pExcepInfo,puArgErr)
+    ( (This)->lpVtbl -> Invoke(This,dispIdMember,riid,lcid,wFlags,pDispParams,pVarResult,pExcepInfo,puArgErr) ) 
 
 #endif /* COBJMACROS */
 
@@ -2408,7 +2562,7 @@ DEFINE_GUID(DIID_IDlgDsGeneral,0x1711C9C0,0x8615,0x11CE,0xBC,0x27,0x44,0x45,0x53
 #endif 	/* __IDlgDsGeneral_DISPINTERFACE_DEFINED__ */
 
 
-DEFINE_GUID(CLSID_CDlgDsGeneral,0x1711C9C1,0x8615,0x11CE,0xBC,0x27,0x44,0x45,0x53,0x54,0x00,0x00);
+EXTERN_C const CLSID CLSID_CDlgDsGeneral;
 
 #ifdef __cplusplus
 
@@ -2423,7 +2577,7 @@ CDlgDsGeneral;
 /* [uuid] */ 
 
 
-DEFINE_GUID(DIID_IDlgDataset,0x1711C9C2,0x8615,0x11CE,0xBC,0x27,0x44,0x45,0x53,0x54,0x00,0x00);
+EXTERN_C const IID DIID_IDlgDataset;
 
 #if defined(__cplusplus) && !defined(CINTERFACE)
 
@@ -2441,7 +2595,8 @@ DEFINE_GUID(DIID_IDlgDataset,0x1711C9C2,0x8615,0x11CE,0xBC,0x27,0x44,0x45,0x53,0
         HRESULT ( STDMETHODCALLTYPE *QueryInterface )( 
             IDlgDataset * This,
             /* [in] */ REFIID riid,
-            /* [iid_is][out] */ void **ppvObject);
+            /* [annotation][iid_is][out] */ 
+            _COM_Outptr_  void **ppvObject);
         
         ULONG ( STDMETHODCALLTYPE *AddRef )( 
             IDlgDataset * This);
@@ -2463,20 +2618,28 @@ DEFINE_GUID(DIID_IDlgDataset,0x1711C9C2,0x8615,0x11CE,0xBC,0x27,0x44,0x45,0x53,0
             IDlgDataset * This,
             /* [in] */ REFIID riid,
             /* [size_is][in] */ LPOLESTR *rgszNames,
-            /* [in] */ UINT cNames,
+            /* [range][in] */ UINT cNames,
             /* [in] */ LCID lcid,
             /* [size_is][out] */ DISPID *rgDispId);
         
         /* [local] */ HRESULT ( STDMETHODCALLTYPE *Invoke )( 
             IDlgDataset * This,
-            /* [in] */ DISPID dispIdMember,
-            /* [in] */ REFIID riid,
-            /* [in] */ LCID lcid,
-            /* [in] */ WORD wFlags,
-            /* [out][in] */ DISPPARAMS *pDispParams,
-            /* [out] */ VARIANT *pVarResult,
-            /* [out] */ EXCEPINFO *pExcepInfo,
-            /* [out] */ UINT *puArgErr);
+            /* [annotation][in] */ 
+            _In_  DISPID dispIdMember,
+            /* [annotation][in] */ 
+            _In_  REFIID riid,
+            /* [annotation][in] */ 
+            _In_  LCID lcid,
+            /* [annotation][in] */ 
+            _In_  WORD wFlags,
+            /* [annotation][out][in] */ 
+            _In_  DISPPARAMS *pDispParams,
+            /* [annotation][out] */ 
+            _Out_opt_  VARIANT *pVarResult,
+            /* [annotation][out] */ 
+            _Out_opt_  EXCEPINFO *pExcepInfo,
+            /* [annotation][out] */ 
+            _Out_opt_  UINT *puArgErr);
         
         END_INTERFACE
     } IDlgDatasetVtbl;
@@ -2492,26 +2655,26 @@ DEFINE_GUID(DIID_IDlgDataset,0x1711C9C2,0x8615,0x11CE,0xBC,0x27,0x44,0x45,0x53,0
 
 
 #define IDlgDataset_QueryInterface(This,riid,ppvObject)	\
-    (This)->lpVtbl -> QueryInterface(This,riid,ppvObject)
+    ( (This)->lpVtbl -> QueryInterface(This,riid,ppvObject) ) 
 
 #define IDlgDataset_AddRef(This)	\
-    (This)->lpVtbl -> AddRef(This)
+    ( (This)->lpVtbl -> AddRef(This) ) 
 
 #define IDlgDataset_Release(This)	\
-    (This)->lpVtbl -> Release(This)
+    ( (This)->lpVtbl -> Release(This) ) 
 
 
 #define IDlgDataset_GetTypeInfoCount(This,pctinfo)	\
-    (This)->lpVtbl -> GetTypeInfoCount(This,pctinfo)
+    ( (This)->lpVtbl -> GetTypeInfoCount(This,pctinfo) ) 
 
 #define IDlgDataset_GetTypeInfo(This,iTInfo,lcid,ppTInfo)	\
-    (This)->lpVtbl -> GetTypeInfo(This,iTInfo,lcid,ppTInfo)
+    ( (This)->lpVtbl -> GetTypeInfo(This,iTInfo,lcid,ppTInfo) ) 
 
 #define IDlgDataset_GetIDsOfNames(This,riid,rgszNames,cNames,lcid,rgDispId)	\
-    (This)->lpVtbl -> GetIDsOfNames(This,riid,rgszNames,cNames,lcid,rgDispId)
+    ( (This)->lpVtbl -> GetIDsOfNames(This,riid,rgszNames,cNames,lcid,rgDispId) ) 
 
 #define IDlgDataset_Invoke(This,dispIdMember,riid,lcid,wFlags,pDispParams,pVarResult,pExcepInfo,puArgErr)	\
-    (This)->lpVtbl -> Invoke(This,dispIdMember,riid,lcid,wFlags,pDispParams,pVarResult,pExcepInfo,puArgErr)
+    ( (This)->lpVtbl -> Invoke(This,dispIdMember,riid,lcid,wFlags,pDispParams,pVarResult,pExcepInfo,puArgErr) ) 
 
 #endif /* COBJMACROS */
 
@@ -2522,7 +2685,7 @@ DEFINE_GUID(DIID_IDlgDataset,0x1711C9C2,0x8615,0x11CE,0xBC,0x27,0x44,0x45,0x53,0
 #endif 	/* __IDlgDataset_DISPINTERFACE_DEFINED__ */
 
 
-DEFINE_GUID(CLSID_CDlgDataset,0x1711C9C3,0x8615,0x11CE,0xBC,0x27,0x44,0x45,0x53,0x54,0x00,0x00);
+EXTERN_C const CLSID CLSID_CDlgDataset;
 
 #ifdef __cplusplus
 
@@ -2537,7 +2700,7 @@ CDlgDataset;
 /* [uuid] */ 
 
 
-DEFINE_GUID(DIID_IDlgChart,0x74689AE0,0x8F93,0x11CE,0xBC,0x27,0x44,0x45,0x53,0x54,0x00,0x00);
+EXTERN_C const IID DIID_IDlgChart;
 
 #if defined(__cplusplus) && !defined(CINTERFACE)
 
@@ -2555,7 +2718,8 @@ DEFINE_GUID(DIID_IDlgChart,0x74689AE0,0x8F93,0x11CE,0xBC,0x27,0x44,0x45,0x53,0x5
         HRESULT ( STDMETHODCALLTYPE *QueryInterface )( 
             IDlgChart * This,
             /* [in] */ REFIID riid,
-            /* [iid_is][out] */ void **ppvObject);
+            /* [annotation][iid_is][out] */ 
+            _COM_Outptr_  void **ppvObject);
         
         ULONG ( STDMETHODCALLTYPE *AddRef )( 
             IDlgChart * This);
@@ -2577,20 +2741,28 @@ DEFINE_GUID(DIID_IDlgChart,0x74689AE0,0x8F93,0x11CE,0xBC,0x27,0x44,0x45,0x53,0x5
             IDlgChart * This,
             /* [in] */ REFIID riid,
             /* [size_is][in] */ LPOLESTR *rgszNames,
-            /* [in] */ UINT cNames,
+            /* [range][in] */ UINT cNames,
             /* [in] */ LCID lcid,
             /* [size_is][out] */ DISPID *rgDispId);
         
         /* [local] */ HRESULT ( STDMETHODCALLTYPE *Invoke )( 
             IDlgChart * This,
-            /* [in] */ DISPID dispIdMember,
-            /* [in] */ REFIID riid,
-            /* [in] */ LCID lcid,
-            /* [in] */ WORD wFlags,
-            /* [out][in] */ DISPPARAMS *pDispParams,
-            /* [out] */ VARIANT *pVarResult,
-            /* [out] */ EXCEPINFO *pExcepInfo,
-            /* [out] */ UINT *puArgErr);
+            /* [annotation][in] */ 
+            _In_  DISPID dispIdMember,
+            /* [annotation][in] */ 
+            _In_  REFIID riid,
+            /* [annotation][in] */ 
+            _In_  LCID lcid,
+            /* [annotation][in] */ 
+            _In_  WORD wFlags,
+            /* [annotation][out][in] */ 
+            _In_  DISPPARAMS *pDispParams,
+            /* [annotation][out] */ 
+            _Out_opt_  VARIANT *pVarResult,
+            /* [annotation][out] */ 
+            _Out_opt_  EXCEPINFO *pExcepInfo,
+            /* [annotation][out] */ 
+            _Out_opt_  UINT *puArgErr);
         
         END_INTERFACE
     } IDlgChartVtbl;
@@ -2606,26 +2778,26 @@ DEFINE_GUID(DIID_IDlgChart,0x74689AE0,0x8F93,0x11CE,0xBC,0x27,0x44,0x45,0x53,0x5
 
 
 #define IDlgChart_QueryInterface(This,riid,ppvObject)	\
-    (This)->lpVtbl -> QueryInterface(This,riid,ppvObject)
+    ( (This)->lpVtbl -> QueryInterface(This,riid,ppvObject) ) 
 
 #define IDlgChart_AddRef(This)	\
-    (This)->lpVtbl -> AddRef(This)
+    ( (This)->lpVtbl -> AddRef(This) ) 
 
 #define IDlgChart_Release(This)	\
-    (This)->lpVtbl -> Release(This)
+    ( (This)->lpVtbl -> Release(This) ) 
 
 
 #define IDlgChart_GetTypeInfoCount(This,pctinfo)	\
-    (This)->lpVtbl -> GetTypeInfoCount(This,pctinfo)
+    ( (This)->lpVtbl -> GetTypeInfoCount(This,pctinfo) ) 
 
 #define IDlgChart_GetTypeInfo(This,iTInfo,lcid,ppTInfo)	\
-    (This)->lpVtbl -> GetTypeInfo(This,iTInfo,lcid,ppTInfo)
+    ( (This)->lpVtbl -> GetTypeInfo(This,iTInfo,lcid,ppTInfo) ) 
 
 #define IDlgChart_GetIDsOfNames(This,riid,rgszNames,cNames,lcid,rgDispId)	\
-    (This)->lpVtbl -> GetIDsOfNames(This,riid,rgszNames,cNames,lcid,rgDispId)
+    ( (This)->lpVtbl -> GetIDsOfNames(This,riid,rgszNames,cNames,lcid,rgDispId) ) 
 
 #define IDlgChart_Invoke(This,dispIdMember,riid,lcid,wFlags,pDispParams,pVarResult,pExcepInfo,puArgErr)	\
-    (This)->lpVtbl -> Invoke(This,dispIdMember,riid,lcid,wFlags,pDispParams,pVarResult,pExcepInfo,puArgErr)
+    ( (This)->lpVtbl -> Invoke(This,dispIdMember,riid,lcid,wFlags,pDispParams,pVarResult,pExcepInfo,puArgErr) ) 
 
 #endif /* COBJMACROS */
 
@@ -2636,7 +2808,7 @@ DEFINE_GUID(DIID_IDlgChart,0x74689AE0,0x8F93,0x11CE,0xBC,0x27,0x44,0x45,0x53,0x5
 #endif 	/* __IDlgChart_DISPINTERFACE_DEFINED__ */
 
 
-DEFINE_GUID(CLSID_CDlgChart,0x74689AE1,0x8F93,0x11CE,0xBC,0x27,0x44,0x45,0x53,0x54,0x00,0x00);
+EXTERN_C const CLSID CLSID_CDlgChart;
 
 #ifdef __cplusplus
 
@@ -2651,7 +2823,7 @@ CDlgChart;
 /* [uuid] */ 
 
 
-DEFINE_GUID(DIID_IDlgDataLines,0x74689AE2,0x8F93,0x11CE,0xBC,0x27,0x44,0x45,0x53,0x54,0x00,0x00);
+EXTERN_C const IID DIID_IDlgDataLines;
 
 #if defined(__cplusplus) && !defined(CINTERFACE)
 
@@ -2669,7 +2841,8 @@ DEFINE_GUID(DIID_IDlgDataLines,0x74689AE2,0x8F93,0x11CE,0xBC,0x27,0x44,0x45,0x53
         HRESULT ( STDMETHODCALLTYPE *QueryInterface )( 
             IDlgDataLines * This,
             /* [in] */ REFIID riid,
-            /* [iid_is][out] */ void **ppvObject);
+            /* [annotation][iid_is][out] */ 
+            _COM_Outptr_  void **ppvObject);
         
         ULONG ( STDMETHODCALLTYPE *AddRef )( 
             IDlgDataLines * This);
@@ -2691,20 +2864,28 @@ DEFINE_GUID(DIID_IDlgDataLines,0x74689AE2,0x8F93,0x11CE,0xBC,0x27,0x44,0x45,0x53
             IDlgDataLines * This,
             /* [in] */ REFIID riid,
             /* [size_is][in] */ LPOLESTR *rgszNames,
-            /* [in] */ UINT cNames,
+            /* [range][in] */ UINT cNames,
             /* [in] */ LCID lcid,
             /* [size_is][out] */ DISPID *rgDispId);
         
         /* [local] */ HRESULT ( STDMETHODCALLTYPE *Invoke )( 
             IDlgDataLines * This,
-            /* [in] */ DISPID dispIdMember,
-            /* [in] */ REFIID riid,
-            /* [in] */ LCID lcid,
-            /* [in] */ WORD wFlags,
-            /* [out][in] */ DISPPARAMS *pDispParams,
-            /* [out] */ VARIANT *pVarResult,
-            /* [out] */ EXCEPINFO *pExcepInfo,
-            /* [out] */ UINT *puArgErr);
+            /* [annotation][in] */ 
+            _In_  DISPID dispIdMember,
+            /* [annotation][in] */ 
+            _In_  REFIID riid,
+            /* [annotation][in] */ 
+            _In_  LCID lcid,
+            /* [annotation][in] */ 
+            _In_  WORD wFlags,
+            /* [annotation][out][in] */ 
+            _In_  DISPPARAMS *pDispParams,
+            /* [annotation][out] */ 
+            _Out_opt_  VARIANT *pVarResult,
+            /* [annotation][out] */ 
+            _Out_opt_  EXCEPINFO *pExcepInfo,
+            /* [annotation][out] */ 
+            _Out_opt_  UINT *puArgErr);
         
         END_INTERFACE
     } IDlgDataLinesVtbl;
@@ -2720,26 +2901,26 @@ DEFINE_GUID(DIID_IDlgDataLines,0x74689AE2,0x8F93,0x11CE,0xBC,0x27,0x44,0x45,0x53
 
 
 #define IDlgDataLines_QueryInterface(This,riid,ppvObject)	\
-    (This)->lpVtbl -> QueryInterface(This,riid,ppvObject)
+    ( (This)->lpVtbl -> QueryInterface(This,riid,ppvObject) ) 
 
 #define IDlgDataLines_AddRef(This)	\
-    (This)->lpVtbl -> AddRef(This)
+    ( (This)->lpVtbl -> AddRef(This) ) 
 
 #define IDlgDataLines_Release(This)	\
-    (This)->lpVtbl -> Release(This)
+    ( (This)->lpVtbl -> Release(This) ) 
 
 
 #define IDlgDataLines_GetTypeInfoCount(This,pctinfo)	\
-    (This)->lpVtbl -> GetTypeInfoCount(This,pctinfo)
+    ( (This)->lpVtbl -> GetTypeInfoCount(This,pctinfo) ) 
 
 #define IDlgDataLines_GetTypeInfo(This,iTInfo,lcid,ppTInfo)	\
-    (This)->lpVtbl -> GetTypeInfo(This,iTInfo,lcid,ppTInfo)
+    ( (This)->lpVtbl -> GetTypeInfo(This,iTInfo,lcid,ppTInfo) ) 
 
 #define IDlgDataLines_GetIDsOfNames(This,riid,rgszNames,cNames,lcid,rgDispId)	\
-    (This)->lpVtbl -> GetIDsOfNames(This,riid,rgszNames,cNames,lcid,rgDispId)
+    ( (This)->lpVtbl -> GetIDsOfNames(This,riid,rgszNames,cNames,lcid,rgDispId) ) 
 
 #define IDlgDataLines_Invoke(This,dispIdMember,riid,lcid,wFlags,pDispParams,pVarResult,pExcepInfo,puArgErr)	\
-    (This)->lpVtbl -> Invoke(This,dispIdMember,riid,lcid,wFlags,pDispParams,pVarResult,pExcepInfo,puArgErr)
+    ( (This)->lpVtbl -> Invoke(This,dispIdMember,riid,lcid,wFlags,pDispParams,pVarResult,pExcepInfo,puArgErr) ) 
 
 #endif /* COBJMACROS */
 
@@ -2750,7 +2931,7 @@ DEFINE_GUID(DIID_IDlgDataLines,0x74689AE2,0x8F93,0x11CE,0xBC,0x27,0x44,0x45,0x53
 #endif 	/* __IDlgDataLines_DISPINTERFACE_DEFINED__ */
 
 
-DEFINE_GUID(CLSID_CDlgDataLines,0x74689AE3,0x8F93,0x11CE,0xBC,0x27,0x44,0x45,0x53,0x54,0x00,0x00);
+EXTERN_C const CLSID CLSID_CDlgDataLines;
 
 #ifdef __cplusplus
 
@@ -2765,7 +2946,7 @@ CDlgDataLines;
 /* [uuid] */ 
 
 
-DEFINE_GUID(DIID_IDlgGrid,0xBD25DFE0,0x8F98,0x11CE,0xBC,0x27,0x44,0x45,0x53,0x54,0x00,0x00);
+EXTERN_C const IID DIID_IDlgGrid;
 
 #if defined(__cplusplus) && !defined(CINTERFACE)
 
@@ -2783,7 +2964,8 @@ DEFINE_GUID(DIID_IDlgGrid,0xBD25DFE0,0x8F98,0x11CE,0xBC,0x27,0x44,0x45,0x53,0x54
         HRESULT ( STDMETHODCALLTYPE *QueryInterface )( 
             IDlgGrid * This,
             /* [in] */ REFIID riid,
-            /* [iid_is][out] */ void **ppvObject);
+            /* [annotation][iid_is][out] */ 
+            _COM_Outptr_  void **ppvObject);
         
         ULONG ( STDMETHODCALLTYPE *AddRef )( 
             IDlgGrid * This);
@@ -2805,20 +2987,28 @@ DEFINE_GUID(DIID_IDlgGrid,0xBD25DFE0,0x8F98,0x11CE,0xBC,0x27,0x44,0x45,0x53,0x54
             IDlgGrid * This,
             /* [in] */ REFIID riid,
             /* [size_is][in] */ LPOLESTR *rgszNames,
-            /* [in] */ UINT cNames,
+            /* [range][in] */ UINT cNames,
             /* [in] */ LCID lcid,
             /* [size_is][out] */ DISPID *rgDispId);
         
         /* [local] */ HRESULT ( STDMETHODCALLTYPE *Invoke )( 
             IDlgGrid * This,
-            /* [in] */ DISPID dispIdMember,
-            /* [in] */ REFIID riid,
-            /* [in] */ LCID lcid,
-            /* [in] */ WORD wFlags,
-            /* [out][in] */ DISPPARAMS *pDispParams,
-            /* [out] */ VARIANT *pVarResult,
-            /* [out] */ EXCEPINFO *pExcepInfo,
-            /* [out] */ UINT *puArgErr);
+            /* [annotation][in] */ 
+            _In_  DISPID dispIdMember,
+            /* [annotation][in] */ 
+            _In_  REFIID riid,
+            /* [annotation][in] */ 
+            _In_  LCID lcid,
+            /* [annotation][in] */ 
+            _In_  WORD wFlags,
+            /* [annotation][out][in] */ 
+            _In_  DISPPARAMS *pDispParams,
+            /* [annotation][out] */ 
+            _Out_opt_  VARIANT *pVarResult,
+            /* [annotation][out] */ 
+            _Out_opt_  EXCEPINFO *pExcepInfo,
+            /* [annotation][out] */ 
+            _Out_opt_  UINT *puArgErr);
         
         END_INTERFACE
     } IDlgGridVtbl;
@@ -2834,26 +3024,26 @@ DEFINE_GUID(DIID_IDlgGrid,0xBD25DFE0,0x8F98,0x11CE,0xBC,0x27,0x44,0x45,0x53,0x54
 
 
 #define IDlgGrid_QueryInterface(This,riid,ppvObject)	\
-    (This)->lpVtbl -> QueryInterface(This,riid,ppvObject)
+    ( (This)->lpVtbl -> QueryInterface(This,riid,ppvObject) ) 
 
 #define IDlgGrid_AddRef(This)	\
-    (This)->lpVtbl -> AddRef(This)
+    ( (This)->lpVtbl -> AddRef(This) ) 
 
 #define IDlgGrid_Release(This)	\
-    (This)->lpVtbl -> Release(This)
+    ( (This)->lpVtbl -> Release(This) ) 
 
 
 #define IDlgGrid_GetTypeInfoCount(This,pctinfo)	\
-    (This)->lpVtbl -> GetTypeInfoCount(This,pctinfo)
+    ( (This)->lpVtbl -> GetTypeInfoCount(This,pctinfo) ) 
 
 #define IDlgGrid_GetTypeInfo(This,iTInfo,lcid,ppTInfo)	\
-    (This)->lpVtbl -> GetTypeInfo(This,iTInfo,lcid,ppTInfo)
+    ( (This)->lpVtbl -> GetTypeInfo(This,iTInfo,lcid,ppTInfo) ) 
 
 #define IDlgGrid_GetIDsOfNames(This,riid,rgszNames,cNames,lcid,rgDispId)	\
-    (This)->lpVtbl -> GetIDsOfNames(This,riid,rgszNames,cNames,lcid,rgDispId)
+    ( (This)->lpVtbl -> GetIDsOfNames(This,riid,rgszNames,cNames,lcid,rgDispId) ) 
 
 #define IDlgGrid_Invoke(This,dispIdMember,riid,lcid,wFlags,pDispParams,pVarResult,pExcepInfo,puArgErr)	\
-    (This)->lpVtbl -> Invoke(This,dispIdMember,riid,lcid,wFlags,pDispParams,pVarResult,pExcepInfo,puArgErr)
+    ( (This)->lpVtbl -> Invoke(This,dispIdMember,riid,lcid,wFlags,pDispParams,pVarResult,pExcepInfo,puArgErr) ) 
 
 #endif /* COBJMACROS */
 
@@ -2864,7 +3054,7 @@ DEFINE_GUID(DIID_IDlgGrid,0xBD25DFE0,0x8F98,0x11CE,0xBC,0x27,0x44,0x45,0x53,0x54
 #endif 	/* __IDlgGrid_DISPINTERFACE_DEFINED__ */
 
 
-DEFINE_GUID(CLSID_CDlgGrid,0xBD25DFE1,0x8F98,0x11CE,0xBC,0x27,0x44,0x45,0x53,0x54,0x00,0x00);
+EXTERN_C const CLSID CLSID_CDlgGrid;
 
 #ifdef __cplusplus
 
@@ -2879,7 +3069,7 @@ CDlgGrid;
 /* [uuid] */ 
 
 
-DEFINE_GUID(DIID_IDlgChGen,0xBD25DFE2,0x8F98,0x11CE,0xBC,0x27,0x44,0x45,0x53,0x54,0x00,0x00);
+EXTERN_C const IID DIID_IDlgChGen;
 
 #if defined(__cplusplus) && !defined(CINTERFACE)
 
@@ -2897,7 +3087,8 @@ DEFINE_GUID(DIID_IDlgChGen,0xBD25DFE2,0x8F98,0x11CE,0xBC,0x27,0x44,0x45,0x53,0x5
         HRESULT ( STDMETHODCALLTYPE *QueryInterface )( 
             IDlgChGen * This,
             /* [in] */ REFIID riid,
-            /* [iid_is][out] */ void **ppvObject);
+            /* [annotation][iid_is][out] */ 
+            _COM_Outptr_  void **ppvObject);
         
         ULONG ( STDMETHODCALLTYPE *AddRef )( 
             IDlgChGen * This);
@@ -2919,20 +3110,28 @@ DEFINE_GUID(DIID_IDlgChGen,0xBD25DFE2,0x8F98,0x11CE,0xBC,0x27,0x44,0x45,0x53,0x5
             IDlgChGen * This,
             /* [in] */ REFIID riid,
             /* [size_is][in] */ LPOLESTR *rgszNames,
-            /* [in] */ UINT cNames,
+            /* [range][in] */ UINT cNames,
             /* [in] */ LCID lcid,
             /* [size_is][out] */ DISPID *rgDispId);
         
         /* [local] */ HRESULT ( STDMETHODCALLTYPE *Invoke )( 
             IDlgChGen * This,
-            /* [in] */ DISPID dispIdMember,
-            /* [in] */ REFIID riid,
-            /* [in] */ LCID lcid,
-            /* [in] */ WORD wFlags,
-            /* [out][in] */ DISPPARAMS *pDispParams,
-            /* [out] */ VARIANT *pVarResult,
-            /* [out] */ EXCEPINFO *pExcepInfo,
-            /* [out] */ UINT *puArgErr);
+            /* [annotation][in] */ 
+            _In_  DISPID dispIdMember,
+            /* [annotation][in] */ 
+            _In_  REFIID riid,
+            /* [annotation][in] */ 
+            _In_  LCID lcid,
+            /* [annotation][in] */ 
+            _In_  WORD wFlags,
+            /* [annotation][out][in] */ 
+            _In_  DISPPARAMS *pDispParams,
+            /* [annotation][out] */ 
+            _Out_opt_  VARIANT *pVarResult,
+            /* [annotation][out] */ 
+            _Out_opt_  EXCEPINFO *pExcepInfo,
+            /* [annotation][out] */ 
+            _Out_opt_  UINT *puArgErr);
         
         END_INTERFACE
     } IDlgChGenVtbl;
@@ -2948,26 +3147,26 @@ DEFINE_GUID(DIID_IDlgChGen,0xBD25DFE2,0x8F98,0x11CE,0xBC,0x27,0x44,0x45,0x53,0x5
 
 
 #define IDlgChGen_QueryInterface(This,riid,ppvObject)	\
-    (This)->lpVtbl -> QueryInterface(This,riid,ppvObject)
+    ( (This)->lpVtbl -> QueryInterface(This,riid,ppvObject) ) 
 
 #define IDlgChGen_AddRef(This)	\
-    (This)->lpVtbl -> AddRef(This)
+    ( (This)->lpVtbl -> AddRef(This) ) 
 
 #define IDlgChGen_Release(This)	\
-    (This)->lpVtbl -> Release(This)
+    ( (This)->lpVtbl -> Release(This) ) 
 
 
 #define IDlgChGen_GetTypeInfoCount(This,pctinfo)	\
-    (This)->lpVtbl -> GetTypeInfoCount(This,pctinfo)
+    ( (This)->lpVtbl -> GetTypeInfoCount(This,pctinfo) ) 
 
 #define IDlgChGen_GetTypeInfo(This,iTInfo,lcid,ppTInfo)	\
-    (This)->lpVtbl -> GetTypeInfo(This,iTInfo,lcid,ppTInfo)
+    ( (This)->lpVtbl -> GetTypeInfo(This,iTInfo,lcid,ppTInfo) ) 
 
 #define IDlgChGen_GetIDsOfNames(This,riid,rgszNames,cNames,lcid,rgDispId)	\
-    (This)->lpVtbl -> GetIDsOfNames(This,riid,rgszNames,cNames,lcid,rgDispId)
+    ( (This)->lpVtbl -> GetIDsOfNames(This,riid,rgszNames,cNames,lcid,rgDispId) ) 
 
 #define IDlgChGen_Invoke(This,dispIdMember,riid,lcid,wFlags,pDispParams,pVarResult,pExcepInfo,puArgErr)	\
-    (This)->lpVtbl -> Invoke(This,dispIdMember,riid,lcid,wFlags,pDispParams,pVarResult,pExcepInfo,puArgErr)
+    ( (This)->lpVtbl -> Invoke(This,dispIdMember,riid,lcid,wFlags,pDispParams,pVarResult,pExcepInfo,puArgErr) ) 
 
 #endif /* COBJMACROS */
 
@@ -2978,7 +3177,7 @@ DEFINE_GUID(DIID_IDlgChGen,0xBD25DFE2,0x8F98,0x11CE,0xBC,0x27,0x44,0x45,0x53,0x5
 #endif 	/* __IDlgChGen_DISPINTERFACE_DEFINED__ */
 
 
-DEFINE_GUID(CLSID_CDlgChGen,0xBD25DFE3,0x8F98,0x11CE,0xBC,0x27,0x44,0x45,0x53,0x54,0x00,0x00);
+EXTERN_C const CLSID CLSID_CDlgChGen;
 
 #ifdef __cplusplus
 
@@ -2993,7 +3192,7 @@ CDlgChGen;
 /* [uuid] */ 
 
 
-DEFINE_GUID(DIID_IDlgChData,0xBD25DFE4,0x8F98,0x11CE,0xBC,0x27,0x44,0x45,0x53,0x54,0x00,0x00);
+EXTERN_C const IID DIID_IDlgChData;
 
 #if defined(__cplusplus) && !defined(CINTERFACE)
 
@@ -3011,7 +3210,8 @@ DEFINE_GUID(DIID_IDlgChData,0xBD25DFE4,0x8F98,0x11CE,0xBC,0x27,0x44,0x45,0x53,0x
         HRESULT ( STDMETHODCALLTYPE *QueryInterface )( 
             IDlgChData * This,
             /* [in] */ REFIID riid,
-            /* [iid_is][out] */ void **ppvObject);
+            /* [annotation][iid_is][out] */ 
+            _COM_Outptr_  void **ppvObject);
         
         ULONG ( STDMETHODCALLTYPE *AddRef )( 
             IDlgChData * This);
@@ -3033,20 +3233,28 @@ DEFINE_GUID(DIID_IDlgChData,0xBD25DFE4,0x8F98,0x11CE,0xBC,0x27,0x44,0x45,0x53,0x
             IDlgChData * This,
             /* [in] */ REFIID riid,
             /* [size_is][in] */ LPOLESTR *rgszNames,
-            /* [in] */ UINT cNames,
+            /* [range][in] */ UINT cNames,
             /* [in] */ LCID lcid,
             /* [size_is][out] */ DISPID *rgDispId);
         
         /* [local] */ HRESULT ( STDMETHODCALLTYPE *Invoke )( 
             IDlgChData * This,
-            /* [in] */ DISPID dispIdMember,
-            /* [in] */ REFIID riid,
-            /* [in] */ LCID lcid,
-            /* [in] */ WORD wFlags,
-            /* [out][in] */ DISPPARAMS *pDispParams,
-            /* [out] */ VARIANT *pVarResult,
-            /* [out] */ EXCEPINFO *pExcepInfo,
-            /* [out] */ UINT *puArgErr);
+            /* [annotation][in] */ 
+            _In_  DISPID dispIdMember,
+            /* [annotation][in] */ 
+            _In_  REFIID riid,
+            /* [annotation][in] */ 
+            _In_  LCID lcid,
+            /* [annotation][in] */ 
+            _In_  WORD wFlags,
+            /* [annotation][out][in] */ 
+            _In_  DISPPARAMS *pDispParams,
+            /* [annotation][out] */ 
+            _Out_opt_  VARIANT *pVarResult,
+            /* [annotation][out] */ 
+            _Out_opt_  EXCEPINFO *pExcepInfo,
+            /* [annotation][out] */ 
+            _Out_opt_  UINT *puArgErr);
         
         END_INTERFACE
     } IDlgChDataVtbl;
@@ -3062,26 +3270,26 @@ DEFINE_GUID(DIID_IDlgChData,0xBD25DFE4,0x8F98,0x11CE,0xBC,0x27,0x44,0x45,0x53,0x
 
 
 #define IDlgChData_QueryInterface(This,riid,ppvObject)	\
-    (This)->lpVtbl -> QueryInterface(This,riid,ppvObject)
+    ( (This)->lpVtbl -> QueryInterface(This,riid,ppvObject) ) 
 
 #define IDlgChData_AddRef(This)	\
-    (This)->lpVtbl -> AddRef(This)
+    ( (This)->lpVtbl -> AddRef(This) ) 
 
 #define IDlgChData_Release(This)	\
-    (This)->lpVtbl -> Release(This)
+    ( (This)->lpVtbl -> Release(This) ) 
 
 
 #define IDlgChData_GetTypeInfoCount(This,pctinfo)	\
-    (This)->lpVtbl -> GetTypeInfoCount(This,pctinfo)
+    ( (This)->lpVtbl -> GetTypeInfoCount(This,pctinfo) ) 
 
 #define IDlgChData_GetTypeInfo(This,iTInfo,lcid,ppTInfo)	\
-    (This)->lpVtbl -> GetTypeInfo(This,iTInfo,lcid,ppTInfo)
+    ( (This)->lpVtbl -> GetTypeInfo(This,iTInfo,lcid,ppTInfo) ) 
 
 #define IDlgChData_GetIDsOfNames(This,riid,rgszNames,cNames,lcid,rgDispId)	\
-    (This)->lpVtbl -> GetIDsOfNames(This,riid,rgszNames,cNames,lcid,rgDispId)
+    ( (This)->lpVtbl -> GetIDsOfNames(This,riid,rgszNames,cNames,lcid,rgDispId) ) 
 
 #define IDlgChData_Invoke(This,dispIdMember,riid,lcid,wFlags,pDispParams,pVarResult,pExcepInfo,puArgErr)	\
-    (This)->lpVtbl -> Invoke(This,dispIdMember,riid,lcid,wFlags,pDispParams,pVarResult,pExcepInfo,puArgErr)
+    ( (This)->lpVtbl -> Invoke(This,dispIdMember,riid,lcid,wFlags,pDispParams,pVarResult,pExcepInfo,puArgErr) ) 
 
 #endif /* COBJMACROS */
 
@@ -3092,7 +3300,7 @@ DEFINE_GUID(DIID_IDlgChData,0xBD25DFE4,0x8F98,0x11CE,0xBC,0x27,0x44,0x45,0x53,0x
 #endif 	/* __IDlgChData_DISPINTERFACE_DEFINED__ */
 
 
-DEFINE_GUID(CLSID_CDlgChData,0xBD25DFE5,0x8F98,0x11CE,0xBC,0x27,0x44,0x45,0x53,0x54,0x00,0x00);
+EXTERN_C const CLSID CLSID_CDlgChData;
 
 #ifdef __cplusplus
 
@@ -3107,7 +3315,7 @@ CDlgChData;
 /* [uuid] */ 
 
 
-DEFINE_GUID(DIID_IAddChartData,0x1EAA3880,0x9D11,0x11CE,0xBC,0x2D,0x44,0x45,0x53,0x54,0x00,0x00);
+EXTERN_C const IID DIID_IAddChartData;
 
 #if defined(__cplusplus) && !defined(CINTERFACE)
 
@@ -3125,7 +3333,8 @@ DEFINE_GUID(DIID_IAddChartData,0x1EAA3880,0x9D11,0x11CE,0xBC,0x2D,0x44,0x45,0x53
         HRESULT ( STDMETHODCALLTYPE *QueryInterface )( 
             IAddChartData * This,
             /* [in] */ REFIID riid,
-            /* [iid_is][out] */ void **ppvObject);
+            /* [annotation][iid_is][out] */ 
+            _COM_Outptr_  void **ppvObject);
         
         ULONG ( STDMETHODCALLTYPE *AddRef )( 
             IAddChartData * This);
@@ -3147,20 +3356,28 @@ DEFINE_GUID(DIID_IAddChartData,0x1EAA3880,0x9D11,0x11CE,0xBC,0x2D,0x44,0x45,0x53
             IAddChartData * This,
             /* [in] */ REFIID riid,
             /* [size_is][in] */ LPOLESTR *rgszNames,
-            /* [in] */ UINT cNames,
+            /* [range][in] */ UINT cNames,
             /* [in] */ LCID lcid,
             /* [size_is][out] */ DISPID *rgDispId);
         
         /* [local] */ HRESULT ( STDMETHODCALLTYPE *Invoke )( 
             IAddChartData * This,
-            /* [in] */ DISPID dispIdMember,
-            /* [in] */ REFIID riid,
-            /* [in] */ LCID lcid,
-            /* [in] */ WORD wFlags,
-            /* [out][in] */ DISPPARAMS *pDispParams,
-            /* [out] */ VARIANT *pVarResult,
-            /* [out] */ EXCEPINFO *pExcepInfo,
-            /* [out] */ UINT *puArgErr);
+            /* [annotation][in] */ 
+            _In_  DISPID dispIdMember,
+            /* [annotation][in] */ 
+            _In_  REFIID riid,
+            /* [annotation][in] */ 
+            _In_  LCID lcid,
+            /* [annotation][in] */ 
+            _In_  WORD wFlags,
+            /* [annotation][out][in] */ 
+            _In_  DISPPARAMS *pDispParams,
+            /* [annotation][out] */ 
+            _Out_opt_  VARIANT *pVarResult,
+            /* [annotation][out] */ 
+            _Out_opt_  EXCEPINFO *pExcepInfo,
+            /* [annotation][out] */ 
+            _Out_opt_  UINT *puArgErr);
         
         END_INTERFACE
     } IAddChartDataVtbl;
@@ -3176,26 +3393,26 @@ DEFINE_GUID(DIID_IAddChartData,0x1EAA3880,0x9D11,0x11CE,0xBC,0x2D,0x44,0x45,0x53
 
 
 #define IAddChartData_QueryInterface(This,riid,ppvObject)	\
-    (This)->lpVtbl -> QueryInterface(This,riid,ppvObject)
+    ( (This)->lpVtbl -> QueryInterface(This,riid,ppvObject) ) 
 
 #define IAddChartData_AddRef(This)	\
-    (This)->lpVtbl -> AddRef(This)
+    ( (This)->lpVtbl -> AddRef(This) ) 
 
 #define IAddChartData_Release(This)	\
-    (This)->lpVtbl -> Release(This)
+    ( (This)->lpVtbl -> Release(This) ) 
 
 
 #define IAddChartData_GetTypeInfoCount(This,pctinfo)	\
-    (This)->lpVtbl -> GetTypeInfoCount(This,pctinfo)
+    ( (This)->lpVtbl -> GetTypeInfoCount(This,pctinfo) ) 
 
 #define IAddChartData_GetTypeInfo(This,iTInfo,lcid,ppTInfo)	\
-    (This)->lpVtbl -> GetTypeInfo(This,iTInfo,lcid,ppTInfo)
+    ( (This)->lpVtbl -> GetTypeInfo(This,iTInfo,lcid,ppTInfo) ) 
 
 #define IAddChartData_GetIDsOfNames(This,riid,rgszNames,cNames,lcid,rgDispId)	\
-    (This)->lpVtbl -> GetIDsOfNames(This,riid,rgszNames,cNames,lcid,rgDispId)
+    ( (This)->lpVtbl -> GetIDsOfNames(This,riid,rgszNames,cNames,lcid,rgDispId) ) 
 
 #define IAddChartData_Invoke(This,dispIdMember,riid,lcid,wFlags,pDispParams,pVarResult,pExcepInfo,puArgErr)	\
-    (This)->lpVtbl -> Invoke(This,dispIdMember,riid,lcid,wFlags,pDispParams,pVarResult,pExcepInfo,puArgErr)
+    ( (This)->lpVtbl -> Invoke(This,dispIdMember,riid,lcid,wFlags,pDispParams,pVarResult,pExcepInfo,puArgErr) ) 
 
 #endif /* COBJMACROS */
 
@@ -3206,7 +3423,7 @@ DEFINE_GUID(DIID_IAddChartData,0x1EAA3880,0x9D11,0x11CE,0xBC,0x2D,0x44,0x45,0x53
 #endif 	/* __IAddChartData_DISPINTERFACE_DEFINED__ */
 
 
-DEFINE_GUID(CLSID_CAddChartData,0x1EAA3881,0x9D11,0x11CE,0xBC,0x2D,0x44,0x45,0x53,0x54,0x00,0x00);
+EXTERN_C const CLSID CLSID_CAddChartData;
 
 #ifdef __cplusplus
 
@@ -3221,7 +3438,7 @@ CAddChartData;
 /* [uuid] */ 
 
 
-DEFINE_GUID(DIID_IDlgXfLimit,0x33F08180,0xA27B,0x11CE,0xBC,0x2F,0x44,0x45,0x53,0x54,0x00,0x00);
+EXTERN_C const IID DIID_IDlgXfLimit;
 
 #if defined(__cplusplus) && !defined(CINTERFACE)
 
@@ -3239,7 +3456,8 @@ DEFINE_GUID(DIID_IDlgXfLimit,0x33F08180,0xA27B,0x11CE,0xBC,0x2F,0x44,0x45,0x53,0
         HRESULT ( STDMETHODCALLTYPE *QueryInterface )( 
             IDlgXfLimit * This,
             /* [in] */ REFIID riid,
-            /* [iid_is][out] */ void **ppvObject);
+            /* [annotation][iid_is][out] */ 
+            _COM_Outptr_  void **ppvObject);
         
         ULONG ( STDMETHODCALLTYPE *AddRef )( 
             IDlgXfLimit * This);
@@ -3261,20 +3479,28 @@ DEFINE_GUID(DIID_IDlgXfLimit,0x33F08180,0xA27B,0x11CE,0xBC,0x2F,0x44,0x45,0x53,0
             IDlgXfLimit * This,
             /* [in] */ REFIID riid,
             /* [size_is][in] */ LPOLESTR *rgszNames,
-            /* [in] */ UINT cNames,
+            /* [range][in] */ UINT cNames,
             /* [in] */ LCID lcid,
             /* [size_is][out] */ DISPID *rgDispId);
         
         /* [local] */ HRESULT ( STDMETHODCALLTYPE *Invoke )( 
             IDlgXfLimit * This,
-            /* [in] */ DISPID dispIdMember,
-            /* [in] */ REFIID riid,
-            /* [in] */ LCID lcid,
-            /* [in] */ WORD wFlags,
-            /* [out][in] */ DISPPARAMS *pDispParams,
-            /* [out] */ VARIANT *pVarResult,
-            /* [out] */ EXCEPINFO *pExcepInfo,
-            /* [out] */ UINT *puArgErr);
+            /* [annotation][in] */ 
+            _In_  DISPID dispIdMember,
+            /* [annotation][in] */ 
+            _In_  REFIID riid,
+            /* [annotation][in] */ 
+            _In_  LCID lcid,
+            /* [annotation][in] */ 
+            _In_  WORD wFlags,
+            /* [annotation][out][in] */ 
+            _In_  DISPPARAMS *pDispParams,
+            /* [annotation][out] */ 
+            _Out_opt_  VARIANT *pVarResult,
+            /* [annotation][out] */ 
+            _Out_opt_  EXCEPINFO *pExcepInfo,
+            /* [annotation][out] */ 
+            _Out_opt_  UINT *puArgErr);
         
         END_INTERFACE
     } IDlgXfLimitVtbl;
@@ -3290,26 +3516,26 @@ DEFINE_GUID(DIID_IDlgXfLimit,0x33F08180,0xA27B,0x11CE,0xBC,0x2F,0x44,0x45,0x53,0
 
 
 #define IDlgXfLimit_QueryInterface(This,riid,ppvObject)	\
-    (This)->lpVtbl -> QueryInterface(This,riid,ppvObject)
+    ( (This)->lpVtbl -> QueryInterface(This,riid,ppvObject) ) 
 
 #define IDlgXfLimit_AddRef(This)	\
-    (This)->lpVtbl -> AddRef(This)
+    ( (This)->lpVtbl -> AddRef(This) ) 
 
 #define IDlgXfLimit_Release(This)	\
-    (This)->lpVtbl -> Release(This)
+    ( (This)->lpVtbl -> Release(This) ) 
 
 
 #define IDlgXfLimit_GetTypeInfoCount(This,pctinfo)	\
-    (This)->lpVtbl -> GetTypeInfoCount(This,pctinfo)
+    ( (This)->lpVtbl -> GetTypeInfoCount(This,pctinfo) ) 
 
 #define IDlgXfLimit_GetTypeInfo(This,iTInfo,lcid,ppTInfo)	\
-    (This)->lpVtbl -> GetTypeInfo(This,iTInfo,lcid,ppTInfo)
+    ( (This)->lpVtbl -> GetTypeInfo(This,iTInfo,lcid,ppTInfo) ) 
 
 #define IDlgXfLimit_GetIDsOfNames(This,riid,rgszNames,cNames,lcid,rgDispId)	\
-    (This)->lpVtbl -> GetIDsOfNames(This,riid,rgszNames,cNames,lcid,rgDispId)
+    ( (This)->lpVtbl -> GetIDsOfNames(This,riid,rgszNames,cNames,lcid,rgDispId) ) 
 
 #define IDlgXfLimit_Invoke(This,dispIdMember,riid,lcid,wFlags,pDispParams,pVarResult,pExcepInfo,puArgErr)	\
-    (This)->lpVtbl -> Invoke(This,dispIdMember,riid,lcid,wFlags,pDispParams,pVarResult,pExcepInfo,puArgErr)
+    ( (This)->lpVtbl -> Invoke(This,dispIdMember,riid,lcid,wFlags,pDispParams,pVarResult,pExcepInfo,puArgErr) ) 
 
 #endif /* COBJMACROS */
 
@@ -3320,7 +3546,7 @@ DEFINE_GUID(DIID_IDlgXfLimit,0x33F08180,0xA27B,0x11CE,0xBC,0x2F,0x44,0x45,0x53,0
 #endif 	/* __IDlgXfLimit_DISPINTERFACE_DEFINED__ */
 
 
-DEFINE_GUID(CLSID_CDlgXfLimit,0x33F08181,0xA27B,0x11CE,0xBC,0x2F,0x44,0x45,0x53,0x54,0x00,0x00);
+EXTERN_C const CLSID CLSID_CDlgXfLimit;
 
 #ifdef __cplusplus
 
@@ -3335,7 +3561,7 @@ CDlgXfLimit;
 /* [uuid] */ 
 
 
-DEFINE_GUID(DIID_IDlgXfScale,0x43E4E880,0xA341,0x11CE,0xBC,0x2F,0x44,0x45,0x53,0x54,0x00,0x00);
+EXTERN_C const IID DIID_IDlgXfScale;
 
 #if defined(__cplusplus) && !defined(CINTERFACE)
 
@@ -3353,7 +3579,8 @@ DEFINE_GUID(DIID_IDlgXfScale,0x43E4E880,0xA341,0x11CE,0xBC,0x2F,0x44,0x45,0x53,0
         HRESULT ( STDMETHODCALLTYPE *QueryInterface )( 
             IDlgXfScale * This,
             /* [in] */ REFIID riid,
-            /* [iid_is][out] */ void **ppvObject);
+            /* [annotation][iid_is][out] */ 
+            _COM_Outptr_  void **ppvObject);
         
         ULONG ( STDMETHODCALLTYPE *AddRef )( 
             IDlgXfScale * This);
@@ -3375,20 +3602,28 @@ DEFINE_GUID(DIID_IDlgXfScale,0x43E4E880,0xA341,0x11CE,0xBC,0x2F,0x44,0x45,0x53,0
             IDlgXfScale * This,
             /* [in] */ REFIID riid,
             /* [size_is][in] */ LPOLESTR *rgszNames,
-            /* [in] */ UINT cNames,
+            /* [range][in] */ UINT cNames,
             /* [in] */ LCID lcid,
             /* [size_is][out] */ DISPID *rgDispId);
         
         /* [local] */ HRESULT ( STDMETHODCALLTYPE *Invoke )( 
             IDlgXfScale * This,
-            /* [in] */ DISPID dispIdMember,
-            /* [in] */ REFIID riid,
-            /* [in] */ LCID lcid,
-            /* [in] */ WORD wFlags,
-            /* [out][in] */ DISPPARAMS *pDispParams,
-            /* [out] */ VARIANT *pVarResult,
-            /* [out] */ EXCEPINFO *pExcepInfo,
-            /* [out] */ UINT *puArgErr);
+            /* [annotation][in] */ 
+            _In_  DISPID dispIdMember,
+            /* [annotation][in] */ 
+            _In_  REFIID riid,
+            /* [annotation][in] */ 
+            _In_  LCID lcid,
+            /* [annotation][in] */ 
+            _In_  WORD wFlags,
+            /* [annotation][out][in] */ 
+            _In_  DISPPARAMS *pDispParams,
+            /* [annotation][out] */ 
+            _Out_opt_  VARIANT *pVarResult,
+            /* [annotation][out] */ 
+            _Out_opt_  EXCEPINFO *pExcepInfo,
+            /* [annotation][out] */ 
+            _Out_opt_  UINT *puArgErr);
         
         END_INTERFACE
     } IDlgXfScaleVtbl;
@@ -3404,26 +3639,26 @@ DEFINE_GUID(DIID_IDlgXfScale,0x43E4E880,0xA341,0x11CE,0xBC,0x2F,0x44,0x45,0x53,0
 
 
 #define IDlgXfScale_QueryInterface(This,riid,ppvObject)	\
-    (This)->lpVtbl -> QueryInterface(This,riid,ppvObject)
+    ( (This)->lpVtbl -> QueryInterface(This,riid,ppvObject) ) 
 
 #define IDlgXfScale_AddRef(This)	\
-    (This)->lpVtbl -> AddRef(This)
+    ( (This)->lpVtbl -> AddRef(This) ) 
 
 #define IDlgXfScale_Release(This)	\
-    (This)->lpVtbl -> Release(This)
+    ( (This)->lpVtbl -> Release(This) ) 
 
 
 #define IDlgXfScale_GetTypeInfoCount(This,pctinfo)	\
-    (This)->lpVtbl -> GetTypeInfoCount(This,pctinfo)
+    ( (This)->lpVtbl -> GetTypeInfoCount(This,pctinfo) ) 
 
 #define IDlgXfScale_GetTypeInfo(This,iTInfo,lcid,ppTInfo)	\
-    (This)->lpVtbl -> GetTypeInfo(This,iTInfo,lcid,ppTInfo)
+    ( (This)->lpVtbl -> GetTypeInfo(This,iTInfo,lcid,ppTInfo) ) 
 
 #define IDlgXfScale_GetIDsOfNames(This,riid,rgszNames,cNames,lcid,rgDispId)	\
-    (This)->lpVtbl -> GetIDsOfNames(This,riid,rgszNames,cNames,lcid,rgDispId)
+    ( (This)->lpVtbl -> GetIDsOfNames(This,riid,rgszNames,cNames,lcid,rgDispId) ) 
 
 #define IDlgXfScale_Invoke(This,dispIdMember,riid,lcid,wFlags,pDispParams,pVarResult,pExcepInfo,puArgErr)	\
-    (This)->lpVtbl -> Invoke(This,dispIdMember,riid,lcid,wFlags,pDispParams,pVarResult,pExcepInfo,puArgErr)
+    ( (This)->lpVtbl -> Invoke(This,dispIdMember,riid,lcid,wFlags,pDispParams,pVarResult,pExcepInfo,puArgErr) ) 
 
 #endif /* COBJMACROS */
 
@@ -3434,7 +3669,7 @@ DEFINE_GUID(DIID_IDlgXfScale,0x43E4E880,0xA341,0x11CE,0xBC,0x2F,0x44,0x45,0x53,0
 #endif 	/* __IDlgXfScale_DISPINTERFACE_DEFINED__ */
 
 
-DEFINE_GUID(CLSID_CDlgXfScale,0x43E4E881,0xA341,0x11CE,0xBC,0x2F,0x44,0x45,0x53,0x54,0x00,0x00);
+EXTERN_C const CLSID CLSID_CDlgXfScale;
 
 #ifdef __cplusplus
 
@@ -3449,7 +3684,7 @@ CDlgXfScale;
 /* [uuid] */ 
 
 
-DEFINE_GUID(DIID_IDlgXfTruncate,0x72906560,0xA350,0x11CE,0xBC,0x2F,0x44,0x45,0x53,0x54,0x00,0x00);
+EXTERN_C const IID DIID_IDlgXfTruncate;
 
 #if defined(__cplusplus) && !defined(CINTERFACE)
 
@@ -3467,7 +3702,8 @@ DEFINE_GUID(DIID_IDlgXfTruncate,0x72906560,0xA350,0x11CE,0xBC,0x2F,0x44,0x45,0x5
         HRESULT ( STDMETHODCALLTYPE *QueryInterface )( 
             IDlgXfTruncate * This,
             /* [in] */ REFIID riid,
-            /* [iid_is][out] */ void **ppvObject);
+            /* [annotation][iid_is][out] */ 
+            _COM_Outptr_  void **ppvObject);
         
         ULONG ( STDMETHODCALLTYPE *AddRef )( 
             IDlgXfTruncate * This);
@@ -3489,20 +3725,28 @@ DEFINE_GUID(DIID_IDlgXfTruncate,0x72906560,0xA350,0x11CE,0xBC,0x2F,0x44,0x45,0x5
             IDlgXfTruncate * This,
             /* [in] */ REFIID riid,
             /* [size_is][in] */ LPOLESTR *rgszNames,
-            /* [in] */ UINT cNames,
+            /* [range][in] */ UINT cNames,
             /* [in] */ LCID lcid,
             /* [size_is][out] */ DISPID *rgDispId);
         
         /* [local] */ HRESULT ( STDMETHODCALLTYPE *Invoke )( 
             IDlgXfTruncate * This,
-            /* [in] */ DISPID dispIdMember,
-            /* [in] */ REFIID riid,
-            /* [in] */ LCID lcid,
-            /* [in] */ WORD wFlags,
-            /* [out][in] */ DISPPARAMS *pDispParams,
-            /* [out] */ VARIANT *pVarResult,
-            /* [out] */ EXCEPINFO *pExcepInfo,
-            /* [out] */ UINT *puArgErr);
+            /* [annotation][in] */ 
+            _In_  DISPID dispIdMember,
+            /* [annotation][in] */ 
+            _In_  REFIID riid,
+            /* [annotation][in] */ 
+            _In_  LCID lcid,
+            /* [annotation][in] */ 
+            _In_  WORD wFlags,
+            /* [annotation][out][in] */ 
+            _In_  DISPPARAMS *pDispParams,
+            /* [annotation][out] */ 
+            _Out_opt_  VARIANT *pVarResult,
+            /* [annotation][out] */ 
+            _Out_opt_  EXCEPINFO *pExcepInfo,
+            /* [annotation][out] */ 
+            _Out_opt_  UINT *puArgErr);
         
         END_INTERFACE
     } IDlgXfTruncateVtbl;
@@ -3518,26 +3762,26 @@ DEFINE_GUID(DIID_IDlgXfTruncate,0x72906560,0xA350,0x11CE,0xBC,0x2F,0x44,0x45,0x5
 
 
 #define IDlgXfTruncate_QueryInterface(This,riid,ppvObject)	\
-    (This)->lpVtbl -> QueryInterface(This,riid,ppvObject)
+    ( (This)->lpVtbl -> QueryInterface(This,riid,ppvObject) ) 
 
 #define IDlgXfTruncate_AddRef(This)	\
-    (This)->lpVtbl -> AddRef(This)
+    ( (This)->lpVtbl -> AddRef(This) ) 
 
 #define IDlgXfTruncate_Release(This)	\
-    (This)->lpVtbl -> Release(This)
+    ( (This)->lpVtbl -> Release(This) ) 
 
 
 #define IDlgXfTruncate_GetTypeInfoCount(This,pctinfo)	\
-    (This)->lpVtbl -> GetTypeInfoCount(This,pctinfo)
+    ( (This)->lpVtbl -> GetTypeInfoCount(This,pctinfo) ) 
 
 #define IDlgXfTruncate_GetTypeInfo(This,iTInfo,lcid,ppTInfo)	\
-    (This)->lpVtbl -> GetTypeInfo(This,iTInfo,lcid,ppTInfo)
+    ( (This)->lpVtbl -> GetTypeInfo(This,iTInfo,lcid,ppTInfo) ) 
 
 #define IDlgXfTruncate_GetIDsOfNames(This,riid,rgszNames,cNames,lcid,rgDispId)	\
-    (This)->lpVtbl -> GetIDsOfNames(This,riid,rgszNames,cNames,lcid,rgDispId)
+    ( (This)->lpVtbl -> GetIDsOfNames(This,riid,rgszNames,cNames,lcid,rgDispId) ) 
 
 #define IDlgXfTruncate_Invoke(This,dispIdMember,riid,lcid,wFlags,pDispParams,pVarResult,pExcepInfo,puArgErr)	\
-    (This)->lpVtbl -> Invoke(This,dispIdMember,riid,lcid,wFlags,pDispParams,pVarResult,pExcepInfo,puArgErr)
+    ( (This)->lpVtbl -> Invoke(This,dispIdMember,riid,lcid,wFlags,pDispParams,pVarResult,pExcepInfo,puArgErr) ) 
 
 #endif /* COBJMACROS */
 
@@ -3548,7 +3792,7 @@ DEFINE_GUID(DIID_IDlgXfTruncate,0x72906560,0xA350,0x11CE,0xBC,0x2F,0x44,0x45,0x5
 #endif 	/* __IDlgXfTruncate_DISPINTERFACE_DEFINED__ */
 
 
-DEFINE_GUID(CLSID_CDlgXfTruncate,0x72906561,0xA350,0x11CE,0xBC,0x2F,0x44,0x45,0x53,0x54,0x00,0x00);
+EXTERN_C const CLSID CLSID_CDlgXfTruncate;
 
 #ifdef __cplusplus
 
@@ -3563,7 +3807,7 @@ CDlgXfTruncate;
 /* [uuid] */ 
 
 
-DEFINE_GUID(DIID_IDlgXfDelay,0x5E601C00,0xA393,0x11CE,0xBC,0x2F,0x44,0x45,0x53,0x54,0x00,0x00);
+EXTERN_C const IID DIID_IDlgXfDelay;
 
 #if defined(__cplusplus) && !defined(CINTERFACE)
 
@@ -3581,7 +3825,8 @@ DEFINE_GUID(DIID_IDlgXfDelay,0x5E601C00,0xA393,0x11CE,0xBC,0x2F,0x44,0x45,0x53,0
         HRESULT ( STDMETHODCALLTYPE *QueryInterface )( 
             IDlgXfDelay * This,
             /* [in] */ REFIID riid,
-            /* [iid_is][out] */ void **ppvObject);
+            /* [annotation][iid_is][out] */ 
+            _COM_Outptr_  void **ppvObject);
         
         ULONG ( STDMETHODCALLTYPE *AddRef )( 
             IDlgXfDelay * This);
@@ -3603,20 +3848,28 @@ DEFINE_GUID(DIID_IDlgXfDelay,0x5E601C00,0xA393,0x11CE,0xBC,0x2F,0x44,0x45,0x53,0
             IDlgXfDelay * This,
             /* [in] */ REFIID riid,
             /* [size_is][in] */ LPOLESTR *rgszNames,
-            /* [in] */ UINT cNames,
+            /* [range][in] */ UINT cNames,
             /* [in] */ LCID lcid,
             /* [size_is][out] */ DISPID *rgDispId);
         
         /* [local] */ HRESULT ( STDMETHODCALLTYPE *Invoke )( 
             IDlgXfDelay * This,
-            /* [in] */ DISPID dispIdMember,
-            /* [in] */ REFIID riid,
-            /* [in] */ LCID lcid,
-            /* [in] */ WORD wFlags,
-            /* [out][in] */ DISPPARAMS *pDispParams,
-            /* [out] */ VARIANT *pVarResult,
-            /* [out] */ EXCEPINFO *pExcepInfo,
-            /* [out] */ UINT *puArgErr);
+            /* [annotation][in] */ 
+            _In_  DISPID dispIdMember,
+            /* [annotation][in] */ 
+            _In_  REFIID riid,
+            /* [annotation][in] */ 
+            _In_  LCID lcid,
+            /* [annotation][in] */ 
+            _In_  WORD wFlags,
+            /* [annotation][out][in] */ 
+            _In_  DISPPARAMS *pDispParams,
+            /* [annotation][out] */ 
+            _Out_opt_  VARIANT *pVarResult,
+            /* [annotation][out] */ 
+            _Out_opt_  EXCEPINFO *pExcepInfo,
+            /* [annotation][out] */ 
+            _Out_opt_  UINT *puArgErr);
         
         END_INTERFACE
     } IDlgXfDelayVtbl;
@@ -3632,26 +3885,26 @@ DEFINE_GUID(DIID_IDlgXfDelay,0x5E601C00,0xA393,0x11CE,0xBC,0x2F,0x44,0x45,0x53,0
 
 
 #define IDlgXfDelay_QueryInterface(This,riid,ppvObject)	\
-    (This)->lpVtbl -> QueryInterface(This,riid,ppvObject)
+    ( (This)->lpVtbl -> QueryInterface(This,riid,ppvObject) ) 
 
 #define IDlgXfDelay_AddRef(This)	\
-    (This)->lpVtbl -> AddRef(This)
+    ( (This)->lpVtbl -> AddRef(This) ) 
 
 #define IDlgXfDelay_Release(This)	\
-    (This)->lpVtbl -> Release(This)
+    ( (This)->lpVtbl -> Release(This) ) 
 
 
 #define IDlgXfDelay_GetTypeInfoCount(This,pctinfo)	\
-    (This)->lpVtbl -> GetTypeInfoCount(This,pctinfo)
+    ( (This)->lpVtbl -> GetTypeInfoCount(This,pctinfo) ) 
 
 #define IDlgXfDelay_GetTypeInfo(This,iTInfo,lcid,ppTInfo)	\
-    (This)->lpVtbl -> GetTypeInfo(This,iTInfo,lcid,ppTInfo)
+    ( (This)->lpVtbl -> GetTypeInfo(This,iTInfo,lcid,ppTInfo) ) 
 
 #define IDlgXfDelay_GetIDsOfNames(This,riid,rgszNames,cNames,lcid,rgDispId)	\
-    (This)->lpVtbl -> GetIDsOfNames(This,riid,rgszNames,cNames,lcid,rgDispId)
+    ( (This)->lpVtbl -> GetIDsOfNames(This,riid,rgszNames,cNames,lcid,rgDispId) ) 
 
 #define IDlgXfDelay_Invoke(This,dispIdMember,riid,lcid,wFlags,pDispParams,pVarResult,pExcepInfo,puArgErr)	\
-    (This)->lpVtbl -> Invoke(This,dispIdMember,riid,lcid,wFlags,pDispParams,pVarResult,pExcepInfo,puArgErr)
+    ( (This)->lpVtbl -> Invoke(This,dispIdMember,riid,lcid,wFlags,pDispParams,pVarResult,pExcepInfo,puArgErr) ) 
 
 #endif /* COBJMACROS */
 
@@ -3662,7 +3915,7 @@ DEFINE_GUID(DIID_IDlgXfDelay,0x5E601C00,0xA393,0x11CE,0xBC,0x2F,0x44,0x45,0x53,0
 #endif 	/* __IDlgXfDelay_DISPINTERFACE_DEFINED__ */
 
 
-DEFINE_GUID(CLSID_CDlgXfDelay,0x5E601C01,0xA393,0x11CE,0xBC,0x2F,0x44,0x45,0x53,0x54,0x00,0x00);
+EXTERN_C const CLSID CLSID_CDlgXfDelay;
 
 #ifdef __cplusplus
 
@@ -3677,7 +3930,7 @@ CDlgXfDelay;
 /* [uuid] */ 
 
 
-DEFINE_GUID(DIID_IDlgXfSmooth,0x5E601C02,0xA393,0x11CE,0xBC,0x2F,0x44,0x45,0x53,0x54,0x00,0x00);
+EXTERN_C const IID DIID_IDlgXfSmooth;
 
 #if defined(__cplusplus) && !defined(CINTERFACE)
 
@@ -3695,7 +3948,8 @@ DEFINE_GUID(DIID_IDlgXfSmooth,0x5E601C02,0xA393,0x11CE,0xBC,0x2F,0x44,0x45,0x53,
         HRESULT ( STDMETHODCALLTYPE *QueryInterface )( 
             IDlgXfSmooth * This,
             /* [in] */ REFIID riid,
-            /* [iid_is][out] */ void **ppvObject);
+            /* [annotation][iid_is][out] */ 
+            _COM_Outptr_  void **ppvObject);
         
         ULONG ( STDMETHODCALLTYPE *AddRef )( 
             IDlgXfSmooth * This);
@@ -3717,20 +3971,28 @@ DEFINE_GUID(DIID_IDlgXfSmooth,0x5E601C02,0xA393,0x11CE,0xBC,0x2F,0x44,0x45,0x53,
             IDlgXfSmooth * This,
             /* [in] */ REFIID riid,
             /* [size_is][in] */ LPOLESTR *rgszNames,
-            /* [in] */ UINT cNames,
+            /* [range][in] */ UINT cNames,
             /* [in] */ LCID lcid,
             /* [size_is][out] */ DISPID *rgDispId);
         
         /* [local] */ HRESULT ( STDMETHODCALLTYPE *Invoke )( 
             IDlgXfSmooth * This,
-            /* [in] */ DISPID dispIdMember,
-            /* [in] */ REFIID riid,
-            /* [in] */ LCID lcid,
-            /* [in] */ WORD wFlags,
-            /* [out][in] */ DISPPARAMS *pDispParams,
-            /* [out] */ VARIANT *pVarResult,
-            /* [out] */ EXCEPINFO *pExcepInfo,
-            /* [out] */ UINT *puArgErr);
+            /* [annotation][in] */ 
+            _In_  DISPID dispIdMember,
+            /* [annotation][in] */ 
+            _In_  REFIID riid,
+            /* [annotation][in] */ 
+            _In_  LCID lcid,
+            /* [annotation][in] */ 
+            _In_  WORD wFlags,
+            /* [annotation][out][in] */ 
+            _In_  DISPPARAMS *pDispParams,
+            /* [annotation][out] */ 
+            _Out_opt_  VARIANT *pVarResult,
+            /* [annotation][out] */ 
+            _Out_opt_  EXCEPINFO *pExcepInfo,
+            /* [annotation][out] */ 
+            _Out_opt_  UINT *puArgErr);
         
         END_INTERFACE
     } IDlgXfSmoothVtbl;
@@ -3746,26 +4008,26 @@ DEFINE_GUID(DIID_IDlgXfSmooth,0x5E601C02,0xA393,0x11CE,0xBC,0x2F,0x44,0x45,0x53,
 
 
 #define IDlgXfSmooth_QueryInterface(This,riid,ppvObject)	\
-    (This)->lpVtbl -> QueryInterface(This,riid,ppvObject)
+    ( (This)->lpVtbl -> QueryInterface(This,riid,ppvObject) ) 
 
 #define IDlgXfSmooth_AddRef(This)	\
-    (This)->lpVtbl -> AddRef(This)
+    ( (This)->lpVtbl -> AddRef(This) ) 
 
 #define IDlgXfSmooth_Release(This)	\
-    (This)->lpVtbl -> Release(This)
+    ( (This)->lpVtbl -> Release(This) ) 
 
 
 #define IDlgXfSmooth_GetTypeInfoCount(This,pctinfo)	\
-    (This)->lpVtbl -> GetTypeInfoCount(This,pctinfo)
+    ( (This)->lpVtbl -> GetTypeInfoCount(This,pctinfo) ) 
 
 #define IDlgXfSmooth_GetTypeInfo(This,iTInfo,lcid,ppTInfo)	\
-    (This)->lpVtbl -> GetTypeInfo(This,iTInfo,lcid,ppTInfo)
+    ( (This)->lpVtbl -> GetTypeInfo(This,iTInfo,lcid,ppTInfo) ) 
 
 #define IDlgXfSmooth_GetIDsOfNames(This,riid,rgszNames,cNames,lcid,rgDispId)	\
-    (This)->lpVtbl -> GetIDsOfNames(This,riid,rgszNames,cNames,lcid,rgDispId)
+    ( (This)->lpVtbl -> GetIDsOfNames(This,riid,rgszNames,cNames,lcid,rgDispId) ) 
 
 #define IDlgXfSmooth_Invoke(This,dispIdMember,riid,lcid,wFlags,pDispParams,pVarResult,pExcepInfo,puArgErr)	\
-    (This)->lpVtbl -> Invoke(This,dispIdMember,riid,lcid,wFlags,pDispParams,pVarResult,pExcepInfo,puArgErr)
+    ( (This)->lpVtbl -> Invoke(This,dispIdMember,riid,lcid,wFlags,pDispParams,pVarResult,pExcepInfo,puArgErr) ) 
 
 #endif /* COBJMACROS */
 
@@ -3776,7 +4038,7 @@ DEFINE_GUID(DIID_IDlgXfSmooth,0x5E601C02,0xA393,0x11CE,0xBC,0x2F,0x44,0x45,0x53,
 #endif 	/* __IDlgXfSmooth_DISPINTERFACE_DEFINED__ */
 
 
-DEFINE_GUID(CLSID_CDlgXfSmooth,0x5E601C03,0xA393,0x11CE,0xBC,0x2F,0x44,0x45,0x53,0x54,0x00,0x00);
+EXTERN_C const CLSID CLSID_CDlgXfSmooth;
 
 #ifdef __cplusplus
 
@@ -3791,7 +4053,7 @@ CDlgXfSmooth;
 /* [uuid] */ 
 
 
-DEFINE_GUID(DIID_IDlgDsDataset,0xA018E4C0,0xBAC6,0x11CE,0xB1,0xC7,0x44,0x45,0x53,0x54,0x00,0x00);
+EXTERN_C const IID DIID_IDlgDsDataset;
 
 #if defined(__cplusplus) && !defined(CINTERFACE)
 
@@ -3809,7 +4071,8 @@ DEFINE_GUID(DIID_IDlgDsDataset,0xA018E4C0,0xBAC6,0x11CE,0xB1,0xC7,0x44,0x45,0x53
         HRESULT ( STDMETHODCALLTYPE *QueryInterface )( 
             IDlgDsDataset * This,
             /* [in] */ REFIID riid,
-            /* [iid_is][out] */ void **ppvObject);
+            /* [annotation][iid_is][out] */ 
+            _COM_Outptr_  void **ppvObject);
         
         ULONG ( STDMETHODCALLTYPE *AddRef )( 
             IDlgDsDataset * This);
@@ -3831,20 +4094,28 @@ DEFINE_GUID(DIID_IDlgDsDataset,0xA018E4C0,0xBAC6,0x11CE,0xB1,0xC7,0x44,0x45,0x53
             IDlgDsDataset * This,
             /* [in] */ REFIID riid,
             /* [size_is][in] */ LPOLESTR *rgszNames,
-            /* [in] */ UINT cNames,
+            /* [range][in] */ UINT cNames,
             /* [in] */ LCID lcid,
             /* [size_is][out] */ DISPID *rgDispId);
         
         /* [local] */ HRESULT ( STDMETHODCALLTYPE *Invoke )( 
             IDlgDsDataset * This,
-            /* [in] */ DISPID dispIdMember,
-            /* [in] */ REFIID riid,
-            /* [in] */ LCID lcid,
-            /* [in] */ WORD wFlags,
-            /* [out][in] */ DISPPARAMS *pDispParams,
-            /* [out] */ VARIANT *pVarResult,
-            /* [out] */ EXCEPINFO *pExcepInfo,
-            /* [out] */ UINT *puArgErr);
+            /* [annotation][in] */ 
+            _In_  DISPID dispIdMember,
+            /* [annotation][in] */ 
+            _In_  REFIID riid,
+            /* [annotation][in] */ 
+            _In_  LCID lcid,
+            /* [annotation][in] */ 
+            _In_  WORD wFlags,
+            /* [annotation][out][in] */ 
+            _In_  DISPPARAMS *pDispParams,
+            /* [annotation][out] */ 
+            _Out_opt_  VARIANT *pVarResult,
+            /* [annotation][out] */ 
+            _Out_opt_  EXCEPINFO *pExcepInfo,
+            /* [annotation][out] */ 
+            _Out_opt_  UINT *puArgErr);
         
         END_INTERFACE
     } IDlgDsDatasetVtbl;
@@ -3860,26 +4131,26 @@ DEFINE_GUID(DIID_IDlgDsDataset,0xA018E4C0,0xBAC6,0x11CE,0xB1,0xC7,0x44,0x45,0x53
 
 
 #define IDlgDsDataset_QueryInterface(This,riid,ppvObject)	\
-    (This)->lpVtbl -> QueryInterface(This,riid,ppvObject)
+    ( (This)->lpVtbl -> QueryInterface(This,riid,ppvObject) ) 
 
 #define IDlgDsDataset_AddRef(This)	\
-    (This)->lpVtbl -> AddRef(This)
+    ( (This)->lpVtbl -> AddRef(This) ) 
 
 #define IDlgDsDataset_Release(This)	\
-    (This)->lpVtbl -> Release(This)
+    ( (This)->lpVtbl -> Release(This) ) 
 
 
 #define IDlgDsDataset_GetTypeInfoCount(This,pctinfo)	\
-    (This)->lpVtbl -> GetTypeInfoCount(This,pctinfo)
+    ( (This)->lpVtbl -> GetTypeInfoCount(This,pctinfo) ) 
 
 #define IDlgDsDataset_GetTypeInfo(This,iTInfo,lcid,ppTInfo)	\
-    (This)->lpVtbl -> GetTypeInfo(This,iTInfo,lcid,ppTInfo)
+    ( (This)->lpVtbl -> GetTypeInfo(This,iTInfo,lcid,ppTInfo) ) 
 
 #define IDlgDsDataset_GetIDsOfNames(This,riid,rgszNames,cNames,lcid,rgDispId)	\
-    (This)->lpVtbl -> GetIDsOfNames(This,riid,rgszNames,cNames,lcid,rgDispId)
+    ( (This)->lpVtbl -> GetIDsOfNames(This,riid,rgszNames,cNames,lcid,rgDispId) ) 
 
 #define IDlgDsDataset_Invoke(This,dispIdMember,riid,lcid,wFlags,pDispParams,pVarResult,pExcepInfo,puArgErr)	\
-    (This)->lpVtbl -> Invoke(This,dispIdMember,riid,lcid,wFlags,pDispParams,pVarResult,pExcepInfo,puArgErr)
+    ( (This)->lpVtbl -> Invoke(This,dispIdMember,riid,lcid,wFlags,pDispParams,pVarResult,pExcepInfo,puArgErr) ) 
 
 #endif /* COBJMACROS */
 
@@ -3890,7 +4161,7 @@ DEFINE_GUID(DIID_IDlgDsDataset,0xA018E4C0,0xBAC6,0x11CE,0xB1,0xC7,0x44,0x45,0x53
 #endif 	/* __IDlgDsDataset_DISPINTERFACE_DEFINED__ */
 
 
-DEFINE_GUID(CLSID_CDlgDsDataset,0xA018E4C1,0xBAC6,0x11CE,0xB1,0xC7,0x44,0x45,0x53,0x54,0x00,0x00);
+EXTERN_C const CLSID CLSID_CDlgDsDataset;
 
 #ifdef __cplusplus
 
@@ -3905,7 +4176,7 @@ CDlgDsDataset;
 /* [uuid] */ 
 
 
-DEFINE_GUID(DIID_IDlgNetList,0xEF83D5C0,0xBCFF,0x11CE,0xB1,0xC8,0x44,0x45,0x53,0x54,0x00,0x00);
+EXTERN_C const IID DIID_IDlgNetList;
 
 #if defined(__cplusplus) && !defined(CINTERFACE)
 
@@ -3923,7 +4194,8 @@ DEFINE_GUID(DIID_IDlgNetList,0xEF83D5C0,0xBCFF,0x11CE,0xB1,0xC8,0x44,0x45,0x53,0
         HRESULT ( STDMETHODCALLTYPE *QueryInterface )( 
             IDlgNetList * This,
             /* [in] */ REFIID riid,
-            /* [iid_is][out] */ void **ppvObject);
+            /* [annotation][iid_is][out] */ 
+            _COM_Outptr_  void **ppvObject);
         
         ULONG ( STDMETHODCALLTYPE *AddRef )( 
             IDlgNetList * This);
@@ -3945,20 +4217,28 @@ DEFINE_GUID(DIID_IDlgNetList,0xEF83D5C0,0xBCFF,0x11CE,0xB1,0xC8,0x44,0x45,0x53,0
             IDlgNetList * This,
             /* [in] */ REFIID riid,
             /* [size_is][in] */ LPOLESTR *rgszNames,
-            /* [in] */ UINT cNames,
+            /* [range][in] */ UINT cNames,
             /* [in] */ LCID lcid,
             /* [size_is][out] */ DISPID *rgDispId);
         
         /* [local] */ HRESULT ( STDMETHODCALLTYPE *Invoke )( 
             IDlgNetList * This,
-            /* [in] */ DISPID dispIdMember,
-            /* [in] */ REFIID riid,
-            /* [in] */ LCID lcid,
-            /* [in] */ WORD wFlags,
-            /* [out][in] */ DISPPARAMS *pDispParams,
-            /* [out] */ VARIANT *pVarResult,
-            /* [out] */ EXCEPINFO *pExcepInfo,
-            /* [out] */ UINT *puArgErr);
+            /* [annotation][in] */ 
+            _In_  DISPID dispIdMember,
+            /* [annotation][in] */ 
+            _In_  REFIID riid,
+            /* [annotation][in] */ 
+            _In_  LCID lcid,
+            /* [annotation][in] */ 
+            _In_  WORD wFlags,
+            /* [annotation][out][in] */ 
+            _In_  DISPPARAMS *pDispParams,
+            /* [annotation][out] */ 
+            _Out_opt_  VARIANT *pVarResult,
+            /* [annotation][out] */ 
+            _Out_opt_  EXCEPINFO *pExcepInfo,
+            /* [annotation][out] */ 
+            _Out_opt_  UINT *puArgErr);
         
         END_INTERFACE
     } IDlgNetListVtbl;
@@ -3974,26 +4254,26 @@ DEFINE_GUID(DIID_IDlgNetList,0xEF83D5C0,0xBCFF,0x11CE,0xB1,0xC8,0x44,0x45,0x53,0
 
 
 #define IDlgNetList_QueryInterface(This,riid,ppvObject)	\
-    (This)->lpVtbl -> QueryInterface(This,riid,ppvObject)
+    ( (This)->lpVtbl -> QueryInterface(This,riid,ppvObject) ) 
 
 #define IDlgNetList_AddRef(This)	\
-    (This)->lpVtbl -> AddRef(This)
+    ( (This)->lpVtbl -> AddRef(This) ) 
 
 #define IDlgNetList_Release(This)	\
-    (This)->lpVtbl -> Release(This)
+    ( (This)->lpVtbl -> Release(This) ) 
 
 
 #define IDlgNetList_GetTypeInfoCount(This,pctinfo)	\
-    (This)->lpVtbl -> GetTypeInfoCount(This,pctinfo)
+    ( (This)->lpVtbl -> GetTypeInfoCount(This,pctinfo) ) 
 
 #define IDlgNetList_GetTypeInfo(This,iTInfo,lcid,ppTInfo)	\
-    (This)->lpVtbl -> GetTypeInfo(This,iTInfo,lcid,ppTInfo)
+    ( (This)->lpVtbl -> GetTypeInfo(This,iTInfo,lcid,ppTInfo) ) 
 
 #define IDlgNetList_GetIDsOfNames(This,riid,rgszNames,cNames,lcid,rgDispId)	\
-    (This)->lpVtbl -> GetIDsOfNames(This,riid,rgszNames,cNames,lcid,rgDispId)
+    ( (This)->lpVtbl -> GetIDsOfNames(This,riid,rgszNames,cNames,lcid,rgDispId) ) 
 
 #define IDlgNetList_Invoke(This,dispIdMember,riid,lcid,wFlags,pDispParams,pVarResult,pExcepInfo,puArgErr)	\
-    (This)->lpVtbl -> Invoke(This,dispIdMember,riid,lcid,wFlags,pDispParams,pVarResult,pExcepInfo,puArgErr)
+    ( (This)->lpVtbl -> Invoke(This,dispIdMember,riid,lcid,wFlags,pDispParams,pVarResult,pExcepInfo,puArgErr) ) 
 
 #endif /* COBJMACROS */
 
@@ -4004,7 +4284,7 @@ DEFINE_GUID(DIID_IDlgNetList,0xEF83D5C0,0xBCFF,0x11CE,0xB1,0xC8,0x44,0x45,0x53,0
 #endif 	/* __IDlgNetList_DISPINTERFACE_DEFINED__ */
 
 
-DEFINE_GUID(CLSID_CDlgNetList,0xEF83D5C1,0xBCFF,0x11CE,0xB1,0xC8,0x44,0x45,0x53,0x54,0x00,0x00);
+EXTERN_C const CLSID CLSID_CDlgNetList;
 
 #ifdef __cplusplus
 
@@ -4019,7 +4299,7 @@ CDlgNetList;
 /* [uuid] */ 
 
 
-DEFINE_GUID(DIID_IDlgNetGeneral,0xEF83D5C2,0xBCFF,0x11CE,0xB1,0xC8,0x44,0x45,0x53,0x54,0x00,0x00);
+EXTERN_C const IID DIID_IDlgNetGeneral;
 
 #if defined(__cplusplus) && !defined(CINTERFACE)
 
@@ -4037,7 +4317,8 @@ DEFINE_GUID(DIID_IDlgNetGeneral,0xEF83D5C2,0xBCFF,0x11CE,0xB1,0xC8,0x44,0x45,0x5
         HRESULT ( STDMETHODCALLTYPE *QueryInterface )( 
             IDlgNetGeneral * This,
             /* [in] */ REFIID riid,
-            /* [iid_is][out] */ void **ppvObject);
+            /* [annotation][iid_is][out] */ 
+            _COM_Outptr_  void **ppvObject);
         
         ULONG ( STDMETHODCALLTYPE *AddRef )( 
             IDlgNetGeneral * This);
@@ -4059,20 +4340,28 @@ DEFINE_GUID(DIID_IDlgNetGeneral,0xEF83D5C2,0xBCFF,0x11CE,0xB1,0xC8,0x44,0x45,0x5
             IDlgNetGeneral * This,
             /* [in] */ REFIID riid,
             /* [size_is][in] */ LPOLESTR *rgszNames,
-            /* [in] */ UINT cNames,
+            /* [range][in] */ UINT cNames,
             /* [in] */ LCID lcid,
             /* [size_is][out] */ DISPID *rgDispId);
         
         /* [local] */ HRESULT ( STDMETHODCALLTYPE *Invoke )( 
             IDlgNetGeneral * This,
-            /* [in] */ DISPID dispIdMember,
-            /* [in] */ REFIID riid,
-            /* [in] */ LCID lcid,
-            /* [in] */ WORD wFlags,
-            /* [out][in] */ DISPPARAMS *pDispParams,
-            /* [out] */ VARIANT *pVarResult,
-            /* [out] */ EXCEPINFO *pExcepInfo,
-            /* [out] */ UINT *puArgErr);
+            /* [annotation][in] */ 
+            _In_  DISPID dispIdMember,
+            /* [annotation][in] */ 
+            _In_  REFIID riid,
+            /* [annotation][in] */ 
+            _In_  LCID lcid,
+            /* [annotation][in] */ 
+            _In_  WORD wFlags,
+            /* [annotation][out][in] */ 
+            _In_  DISPPARAMS *pDispParams,
+            /* [annotation][out] */ 
+            _Out_opt_  VARIANT *pVarResult,
+            /* [annotation][out] */ 
+            _Out_opt_  EXCEPINFO *pExcepInfo,
+            /* [annotation][out] */ 
+            _Out_opt_  UINT *puArgErr);
         
         END_INTERFACE
     } IDlgNetGeneralVtbl;
@@ -4088,26 +4377,26 @@ DEFINE_GUID(DIID_IDlgNetGeneral,0xEF83D5C2,0xBCFF,0x11CE,0xB1,0xC8,0x44,0x45,0x5
 
 
 #define IDlgNetGeneral_QueryInterface(This,riid,ppvObject)	\
-    (This)->lpVtbl -> QueryInterface(This,riid,ppvObject)
+    ( (This)->lpVtbl -> QueryInterface(This,riid,ppvObject) ) 
 
 #define IDlgNetGeneral_AddRef(This)	\
-    (This)->lpVtbl -> AddRef(This)
+    ( (This)->lpVtbl -> AddRef(This) ) 
 
 #define IDlgNetGeneral_Release(This)	\
-    (This)->lpVtbl -> Release(This)
+    ( (This)->lpVtbl -> Release(This) ) 
 
 
 #define IDlgNetGeneral_GetTypeInfoCount(This,pctinfo)	\
-    (This)->lpVtbl -> GetTypeInfoCount(This,pctinfo)
+    ( (This)->lpVtbl -> GetTypeInfoCount(This,pctinfo) ) 
 
 #define IDlgNetGeneral_GetTypeInfo(This,iTInfo,lcid,ppTInfo)	\
-    (This)->lpVtbl -> GetTypeInfo(This,iTInfo,lcid,ppTInfo)
+    ( (This)->lpVtbl -> GetTypeInfo(This,iTInfo,lcid,ppTInfo) ) 
 
 #define IDlgNetGeneral_GetIDsOfNames(This,riid,rgszNames,cNames,lcid,rgDispId)	\
-    (This)->lpVtbl -> GetIDsOfNames(This,riid,rgszNames,cNames,lcid,rgDispId)
+    ( (This)->lpVtbl -> GetIDsOfNames(This,riid,rgszNames,cNames,lcid,rgDispId) ) 
 
 #define IDlgNetGeneral_Invoke(This,dispIdMember,riid,lcid,wFlags,pDispParams,pVarResult,pExcepInfo,puArgErr)	\
-    (This)->lpVtbl -> Invoke(This,dispIdMember,riid,lcid,wFlags,pDispParams,pVarResult,pExcepInfo,puArgErr)
+    ( (This)->lpVtbl -> Invoke(This,dispIdMember,riid,lcid,wFlags,pDispParams,pVarResult,pExcepInfo,puArgErr) ) 
 
 #endif /* COBJMACROS */
 
@@ -4118,7 +4407,7 @@ DEFINE_GUID(DIID_IDlgNetGeneral,0xEF83D5C2,0xBCFF,0x11CE,0xB1,0xC8,0x44,0x45,0x5
 #endif 	/* __IDlgNetGeneral_DISPINTERFACE_DEFINED__ */
 
 
-DEFINE_GUID(CLSID_CDlgNetGeneral,0xEF83D5C3,0xBCFF,0x11CE,0xB1,0xC8,0x44,0x45,0x53,0x54,0x00,0x00);
+EXTERN_C const CLSID CLSID_CDlgNetGeneral;
 
 #ifdef __cplusplus
 
@@ -4133,7 +4422,7 @@ CDlgNetGeneral;
 /* [uuid] */ 
 
 
-DEFINE_GUID(DIID_IDlgNetDriver,0xEF83D5C4,0xBCFF,0x11CE,0xB1,0xC8,0x44,0x45,0x53,0x54,0x00,0x00);
+EXTERN_C const IID DIID_IDlgNetDriver;
 
 #if defined(__cplusplus) && !defined(CINTERFACE)
 
@@ -4151,7 +4440,8 @@ DEFINE_GUID(DIID_IDlgNetDriver,0xEF83D5C4,0xBCFF,0x11CE,0xB1,0xC8,0x44,0x45,0x53
         HRESULT ( STDMETHODCALLTYPE *QueryInterface )( 
             IDlgNetDriver * This,
             /* [in] */ REFIID riid,
-            /* [iid_is][out] */ void **ppvObject);
+            /* [annotation][iid_is][out] */ 
+            _COM_Outptr_  void **ppvObject);
         
         ULONG ( STDMETHODCALLTYPE *AddRef )( 
             IDlgNetDriver * This);
@@ -4173,20 +4463,28 @@ DEFINE_GUID(DIID_IDlgNetDriver,0xEF83D5C4,0xBCFF,0x11CE,0xB1,0xC8,0x44,0x45,0x53
             IDlgNetDriver * This,
             /* [in] */ REFIID riid,
             /* [size_is][in] */ LPOLESTR *rgszNames,
-            /* [in] */ UINT cNames,
+            /* [range][in] */ UINT cNames,
             /* [in] */ LCID lcid,
             /* [size_is][out] */ DISPID *rgDispId);
         
         /* [local] */ HRESULT ( STDMETHODCALLTYPE *Invoke )( 
             IDlgNetDriver * This,
-            /* [in] */ DISPID dispIdMember,
-            /* [in] */ REFIID riid,
-            /* [in] */ LCID lcid,
-            /* [in] */ WORD wFlags,
-            /* [out][in] */ DISPPARAMS *pDispParams,
-            /* [out] */ VARIANT *pVarResult,
-            /* [out] */ EXCEPINFO *pExcepInfo,
-            /* [out] */ UINT *puArgErr);
+            /* [annotation][in] */ 
+            _In_  DISPID dispIdMember,
+            /* [annotation][in] */ 
+            _In_  REFIID riid,
+            /* [annotation][in] */ 
+            _In_  LCID lcid,
+            /* [annotation][in] */ 
+            _In_  WORD wFlags,
+            /* [annotation][out][in] */ 
+            _In_  DISPPARAMS *pDispParams,
+            /* [annotation][out] */ 
+            _Out_opt_  VARIANT *pVarResult,
+            /* [annotation][out] */ 
+            _Out_opt_  EXCEPINFO *pExcepInfo,
+            /* [annotation][out] */ 
+            _Out_opt_  UINT *puArgErr);
         
         END_INTERFACE
     } IDlgNetDriverVtbl;
@@ -4202,26 +4500,26 @@ DEFINE_GUID(DIID_IDlgNetDriver,0xEF83D5C4,0xBCFF,0x11CE,0xB1,0xC8,0x44,0x45,0x53
 
 
 #define IDlgNetDriver_QueryInterface(This,riid,ppvObject)	\
-    (This)->lpVtbl -> QueryInterface(This,riid,ppvObject)
+    ( (This)->lpVtbl -> QueryInterface(This,riid,ppvObject) ) 
 
 #define IDlgNetDriver_AddRef(This)	\
-    (This)->lpVtbl -> AddRef(This)
+    ( (This)->lpVtbl -> AddRef(This) ) 
 
 #define IDlgNetDriver_Release(This)	\
-    (This)->lpVtbl -> Release(This)
+    ( (This)->lpVtbl -> Release(This) ) 
 
 
 #define IDlgNetDriver_GetTypeInfoCount(This,pctinfo)	\
-    (This)->lpVtbl -> GetTypeInfoCount(This,pctinfo)
+    ( (This)->lpVtbl -> GetTypeInfoCount(This,pctinfo) ) 
 
 #define IDlgNetDriver_GetTypeInfo(This,iTInfo,lcid,ppTInfo)	\
-    (This)->lpVtbl -> GetTypeInfo(This,iTInfo,lcid,ppTInfo)
+    ( (This)->lpVtbl -> GetTypeInfo(This,iTInfo,lcid,ppTInfo) ) 
 
 #define IDlgNetDriver_GetIDsOfNames(This,riid,rgszNames,cNames,lcid,rgDispId)	\
-    (This)->lpVtbl -> GetIDsOfNames(This,riid,rgszNames,cNames,lcid,rgDispId)
+    ( (This)->lpVtbl -> GetIDsOfNames(This,riid,rgszNames,cNames,lcid,rgDispId) ) 
 
 #define IDlgNetDriver_Invoke(This,dispIdMember,riid,lcid,wFlags,pDispParams,pVarResult,pExcepInfo,puArgErr)	\
-    (This)->lpVtbl -> Invoke(This,dispIdMember,riid,lcid,wFlags,pDispParams,pVarResult,pExcepInfo,puArgErr)
+    ( (This)->lpVtbl -> Invoke(This,dispIdMember,riid,lcid,wFlags,pDispParams,pVarResult,pExcepInfo,puArgErr) ) 
 
 #endif /* COBJMACROS */
 
@@ -4232,7 +4530,7 @@ DEFINE_GUID(DIID_IDlgNetDriver,0xEF83D5C4,0xBCFF,0x11CE,0xB1,0xC8,0x44,0x45,0x53
 #endif 	/* __IDlgNetDriver_DISPINTERFACE_DEFINED__ */
 
 
-DEFINE_GUID(CLSID_CDlgNetDriver,0xEF83D5C5,0xBCFF,0x11CE,0xB1,0xC8,0x44,0x45,0x53,0x54,0x00,0x00);
+EXTERN_C const CLSID CLSID_CDlgNetDriver;
 
 #ifdef __cplusplus
 
@@ -4247,7 +4545,7 @@ CDlgNetDriver;
 /* [uuid] */ 
 
 
-DEFINE_GUID(DIID_IDlgNetwork,0x0B496760,0xBD01,0x11CE,0xB1,0xC8,0x44,0x45,0x53,0x54,0x00,0x00);
+EXTERN_C const IID DIID_IDlgNetwork;
 
 #if defined(__cplusplus) && !defined(CINTERFACE)
 
@@ -4265,7 +4563,8 @@ DEFINE_GUID(DIID_IDlgNetwork,0x0B496760,0xBD01,0x11CE,0xB1,0xC8,0x44,0x45,0x53,0
         HRESULT ( STDMETHODCALLTYPE *QueryInterface )( 
             IDlgNetwork * This,
             /* [in] */ REFIID riid,
-            /* [iid_is][out] */ void **ppvObject);
+            /* [annotation][iid_is][out] */ 
+            _COM_Outptr_  void **ppvObject);
         
         ULONG ( STDMETHODCALLTYPE *AddRef )( 
             IDlgNetwork * This);
@@ -4287,20 +4586,28 @@ DEFINE_GUID(DIID_IDlgNetwork,0x0B496760,0xBD01,0x11CE,0xB1,0xC8,0x44,0x45,0x53,0
             IDlgNetwork * This,
             /* [in] */ REFIID riid,
             /* [size_is][in] */ LPOLESTR *rgszNames,
-            /* [in] */ UINT cNames,
+            /* [range][in] */ UINT cNames,
             /* [in] */ LCID lcid,
             /* [size_is][out] */ DISPID *rgDispId);
         
         /* [local] */ HRESULT ( STDMETHODCALLTYPE *Invoke )( 
             IDlgNetwork * This,
-            /* [in] */ DISPID dispIdMember,
-            /* [in] */ REFIID riid,
-            /* [in] */ LCID lcid,
-            /* [in] */ WORD wFlags,
-            /* [out][in] */ DISPPARAMS *pDispParams,
-            /* [out] */ VARIANT *pVarResult,
-            /* [out] */ EXCEPINFO *pExcepInfo,
-            /* [out] */ UINT *puArgErr);
+            /* [annotation][in] */ 
+            _In_  DISPID dispIdMember,
+            /* [annotation][in] */ 
+            _In_  REFIID riid,
+            /* [annotation][in] */ 
+            _In_  LCID lcid,
+            /* [annotation][in] */ 
+            _In_  WORD wFlags,
+            /* [annotation][out][in] */ 
+            _In_  DISPPARAMS *pDispParams,
+            /* [annotation][out] */ 
+            _Out_opt_  VARIANT *pVarResult,
+            /* [annotation][out] */ 
+            _Out_opt_  EXCEPINFO *pExcepInfo,
+            /* [annotation][out] */ 
+            _Out_opt_  UINT *puArgErr);
         
         END_INTERFACE
     } IDlgNetworkVtbl;
@@ -4316,26 +4623,26 @@ DEFINE_GUID(DIID_IDlgNetwork,0x0B496760,0xBD01,0x11CE,0xB1,0xC8,0x44,0x45,0x53,0
 
 
 #define IDlgNetwork_QueryInterface(This,riid,ppvObject)	\
-    (This)->lpVtbl -> QueryInterface(This,riid,ppvObject)
+    ( (This)->lpVtbl -> QueryInterface(This,riid,ppvObject) ) 
 
 #define IDlgNetwork_AddRef(This)	\
-    (This)->lpVtbl -> AddRef(This)
+    ( (This)->lpVtbl -> AddRef(This) ) 
 
 #define IDlgNetwork_Release(This)	\
-    (This)->lpVtbl -> Release(This)
+    ( (This)->lpVtbl -> Release(This) ) 
 
 
 #define IDlgNetwork_GetTypeInfoCount(This,pctinfo)	\
-    (This)->lpVtbl -> GetTypeInfoCount(This,pctinfo)
+    ( (This)->lpVtbl -> GetTypeInfoCount(This,pctinfo) ) 
 
 #define IDlgNetwork_GetTypeInfo(This,iTInfo,lcid,ppTInfo)	\
-    (This)->lpVtbl -> GetTypeInfo(This,iTInfo,lcid,ppTInfo)
+    ( (This)->lpVtbl -> GetTypeInfo(This,iTInfo,lcid,ppTInfo) ) 
 
 #define IDlgNetwork_GetIDsOfNames(This,riid,rgszNames,cNames,lcid,rgDispId)	\
-    (This)->lpVtbl -> GetIDsOfNames(This,riid,rgszNames,cNames,lcid,rgDispId)
+    ( (This)->lpVtbl -> GetIDsOfNames(This,riid,rgszNames,cNames,lcid,rgDispId) ) 
 
 #define IDlgNetwork_Invoke(This,dispIdMember,riid,lcid,wFlags,pDispParams,pVarResult,pExcepInfo,puArgErr)	\
-    (This)->lpVtbl -> Invoke(This,dispIdMember,riid,lcid,wFlags,pDispParams,pVarResult,pExcepInfo,puArgErr)
+    ( (This)->lpVtbl -> Invoke(This,dispIdMember,riid,lcid,wFlags,pDispParams,pVarResult,pExcepInfo,puArgErr) ) 
 
 #endif /* COBJMACROS */
 
@@ -4346,7 +4653,7 @@ DEFINE_GUID(DIID_IDlgNetwork,0x0B496760,0xBD01,0x11CE,0xB1,0xC8,0x44,0x45,0x53,0
 #endif 	/* __IDlgNetwork_DISPINTERFACE_DEFINED__ */
 
 
-DEFINE_GUID(CLSID_CDlgNetwork,0x0B496761,0xBD01,0x11CE,0xB1,0xC8,0x44,0x45,0x53,0x54,0x00,0x00);
+EXTERN_C const CLSID CLSID_CDlgNetwork;
 
 #ifdef __cplusplus
 
@@ -4361,7 +4668,7 @@ CDlgNetwork;
 /* [uuid] */ 
 
 
-DEFINE_GUID(DIID_IDlgRoomGeneral,0xD46A8480,0xBD10,0x11CE,0xB1,0xC8,0x44,0x45,0x53,0x54,0x00,0x00);
+EXTERN_C const IID DIID_IDlgRoomGeneral;
 
 #if defined(__cplusplus) && !defined(CINTERFACE)
 
@@ -4379,7 +4686,8 @@ DEFINE_GUID(DIID_IDlgRoomGeneral,0xD46A8480,0xBD10,0x11CE,0xB1,0xC8,0x44,0x45,0x
         HRESULT ( STDMETHODCALLTYPE *QueryInterface )( 
             IDlgRoomGeneral * This,
             /* [in] */ REFIID riid,
-            /* [iid_is][out] */ void **ppvObject);
+            /* [annotation][iid_is][out] */ 
+            _COM_Outptr_  void **ppvObject);
         
         ULONG ( STDMETHODCALLTYPE *AddRef )( 
             IDlgRoomGeneral * This);
@@ -4401,20 +4709,28 @@ DEFINE_GUID(DIID_IDlgRoomGeneral,0xD46A8480,0xBD10,0x11CE,0xB1,0xC8,0x44,0x45,0x
             IDlgRoomGeneral * This,
             /* [in] */ REFIID riid,
             /* [size_is][in] */ LPOLESTR *rgszNames,
-            /* [in] */ UINT cNames,
+            /* [range][in] */ UINT cNames,
             /* [in] */ LCID lcid,
             /* [size_is][out] */ DISPID *rgDispId);
         
         /* [local] */ HRESULT ( STDMETHODCALLTYPE *Invoke )( 
             IDlgRoomGeneral * This,
-            /* [in] */ DISPID dispIdMember,
-            /* [in] */ REFIID riid,
-            /* [in] */ LCID lcid,
-            /* [in] */ WORD wFlags,
-            /* [out][in] */ DISPPARAMS *pDispParams,
-            /* [out] */ VARIANT *pVarResult,
-            /* [out] */ EXCEPINFO *pExcepInfo,
-            /* [out] */ UINT *puArgErr);
+            /* [annotation][in] */ 
+            _In_  DISPID dispIdMember,
+            /* [annotation][in] */ 
+            _In_  REFIID riid,
+            /* [annotation][in] */ 
+            _In_  LCID lcid,
+            /* [annotation][in] */ 
+            _In_  WORD wFlags,
+            /* [annotation][out][in] */ 
+            _In_  DISPPARAMS *pDispParams,
+            /* [annotation][out] */ 
+            _Out_opt_  VARIANT *pVarResult,
+            /* [annotation][out] */ 
+            _Out_opt_  EXCEPINFO *pExcepInfo,
+            /* [annotation][out] */ 
+            _Out_opt_  UINT *puArgErr);
         
         END_INTERFACE
     } IDlgRoomGeneralVtbl;
@@ -4430,26 +4746,26 @@ DEFINE_GUID(DIID_IDlgRoomGeneral,0xD46A8480,0xBD10,0x11CE,0xB1,0xC8,0x44,0x45,0x
 
 
 #define IDlgRoomGeneral_QueryInterface(This,riid,ppvObject)	\
-    (This)->lpVtbl -> QueryInterface(This,riid,ppvObject)
+    ( (This)->lpVtbl -> QueryInterface(This,riid,ppvObject) ) 
 
 #define IDlgRoomGeneral_AddRef(This)	\
-    (This)->lpVtbl -> AddRef(This)
+    ( (This)->lpVtbl -> AddRef(This) ) 
 
 #define IDlgRoomGeneral_Release(This)	\
-    (This)->lpVtbl -> Release(This)
+    ( (This)->lpVtbl -> Release(This) ) 
 
 
 #define IDlgRoomGeneral_GetTypeInfoCount(This,pctinfo)	\
-    (This)->lpVtbl -> GetTypeInfoCount(This,pctinfo)
+    ( (This)->lpVtbl -> GetTypeInfoCount(This,pctinfo) ) 
 
 #define IDlgRoomGeneral_GetTypeInfo(This,iTInfo,lcid,ppTInfo)	\
-    (This)->lpVtbl -> GetTypeInfo(This,iTInfo,lcid,ppTInfo)
+    ( (This)->lpVtbl -> GetTypeInfo(This,iTInfo,lcid,ppTInfo) ) 
 
 #define IDlgRoomGeneral_GetIDsOfNames(This,riid,rgszNames,cNames,lcid,rgDispId)	\
-    (This)->lpVtbl -> GetIDsOfNames(This,riid,rgszNames,cNames,lcid,rgDispId)
+    ( (This)->lpVtbl -> GetIDsOfNames(This,riid,rgszNames,cNames,lcid,rgDispId) ) 
 
 #define IDlgRoomGeneral_Invoke(This,dispIdMember,riid,lcid,wFlags,pDispParams,pVarResult,pExcepInfo,puArgErr)	\
-    (This)->lpVtbl -> Invoke(This,dispIdMember,riid,lcid,wFlags,pDispParams,pVarResult,pExcepInfo,puArgErr)
+    ( (This)->lpVtbl -> Invoke(This,dispIdMember,riid,lcid,wFlags,pDispParams,pVarResult,pExcepInfo,puArgErr) ) 
 
 #endif /* COBJMACROS */
 
@@ -4460,7 +4776,7 @@ DEFINE_GUID(DIID_IDlgRoomGeneral,0xD46A8480,0xBD10,0x11CE,0xB1,0xC8,0x44,0x45,0x
 #endif 	/* __IDlgRoomGeneral_DISPINTERFACE_DEFINED__ */
 
 
-DEFINE_GUID(CLSID_CDlgRoomGeneral,0xD46A8481,0xBD10,0x11CE,0xB1,0xC8,0x44,0x45,0x53,0x54,0x00,0x00);
+EXTERN_C const CLSID CLSID_CDlgRoomGeneral;
 
 #ifdef __cplusplus
 
@@ -4475,7 +4791,7 @@ CDlgRoomGeneral;
 /* [uuid] */ 
 
 
-DEFINE_GUID(DIID_IDlgRoomBoxes,0xD46A8482,0xBD10,0x11CE,0xB1,0xC8,0x44,0x45,0x53,0x54,0x00,0x00);
+EXTERN_C const IID DIID_IDlgRoomBoxes;
 
 #if defined(__cplusplus) && !defined(CINTERFACE)
 
@@ -4493,7 +4809,8 @@ DEFINE_GUID(DIID_IDlgRoomBoxes,0xD46A8482,0xBD10,0x11CE,0xB1,0xC8,0x44,0x45,0x53
         HRESULT ( STDMETHODCALLTYPE *QueryInterface )( 
             IDlgRoomBoxes * This,
             /* [in] */ REFIID riid,
-            /* [iid_is][out] */ void **ppvObject);
+            /* [annotation][iid_is][out] */ 
+            _COM_Outptr_  void **ppvObject);
         
         ULONG ( STDMETHODCALLTYPE *AddRef )( 
             IDlgRoomBoxes * This);
@@ -4515,20 +4832,28 @@ DEFINE_GUID(DIID_IDlgRoomBoxes,0xD46A8482,0xBD10,0x11CE,0xB1,0xC8,0x44,0x45,0x53
             IDlgRoomBoxes * This,
             /* [in] */ REFIID riid,
             /* [size_is][in] */ LPOLESTR *rgszNames,
-            /* [in] */ UINT cNames,
+            /* [range][in] */ UINT cNames,
             /* [in] */ LCID lcid,
             /* [size_is][out] */ DISPID *rgDispId);
         
         /* [local] */ HRESULT ( STDMETHODCALLTYPE *Invoke )( 
             IDlgRoomBoxes * This,
-            /* [in] */ DISPID dispIdMember,
-            /* [in] */ REFIID riid,
-            /* [in] */ LCID lcid,
-            /* [in] */ WORD wFlags,
-            /* [out][in] */ DISPPARAMS *pDispParams,
-            /* [out] */ VARIANT *pVarResult,
-            /* [out] */ EXCEPINFO *pExcepInfo,
-            /* [out] */ UINT *puArgErr);
+            /* [annotation][in] */ 
+            _In_  DISPID dispIdMember,
+            /* [annotation][in] */ 
+            _In_  REFIID riid,
+            /* [annotation][in] */ 
+            _In_  LCID lcid,
+            /* [annotation][in] */ 
+            _In_  WORD wFlags,
+            /* [annotation][out][in] */ 
+            _In_  DISPPARAMS *pDispParams,
+            /* [annotation][out] */ 
+            _Out_opt_  VARIANT *pVarResult,
+            /* [annotation][out] */ 
+            _Out_opt_  EXCEPINFO *pExcepInfo,
+            /* [annotation][out] */ 
+            _Out_opt_  UINT *puArgErr);
         
         END_INTERFACE
     } IDlgRoomBoxesVtbl;
@@ -4544,26 +4869,26 @@ DEFINE_GUID(DIID_IDlgRoomBoxes,0xD46A8482,0xBD10,0x11CE,0xB1,0xC8,0x44,0x45,0x53
 
 
 #define IDlgRoomBoxes_QueryInterface(This,riid,ppvObject)	\
-    (This)->lpVtbl -> QueryInterface(This,riid,ppvObject)
+    ( (This)->lpVtbl -> QueryInterface(This,riid,ppvObject) ) 
 
 #define IDlgRoomBoxes_AddRef(This)	\
-    (This)->lpVtbl -> AddRef(This)
+    ( (This)->lpVtbl -> AddRef(This) ) 
 
 #define IDlgRoomBoxes_Release(This)	\
-    (This)->lpVtbl -> Release(This)
+    ( (This)->lpVtbl -> Release(This) ) 
 
 
 #define IDlgRoomBoxes_GetTypeInfoCount(This,pctinfo)	\
-    (This)->lpVtbl -> GetTypeInfoCount(This,pctinfo)
+    ( (This)->lpVtbl -> GetTypeInfoCount(This,pctinfo) ) 
 
 #define IDlgRoomBoxes_GetTypeInfo(This,iTInfo,lcid,ppTInfo)	\
-    (This)->lpVtbl -> GetTypeInfo(This,iTInfo,lcid,ppTInfo)
+    ( (This)->lpVtbl -> GetTypeInfo(This,iTInfo,lcid,ppTInfo) ) 
 
 #define IDlgRoomBoxes_GetIDsOfNames(This,riid,rgszNames,cNames,lcid,rgDispId)	\
-    (This)->lpVtbl -> GetIDsOfNames(This,riid,rgszNames,cNames,lcid,rgDispId)
+    ( (This)->lpVtbl -> GetIDsOfNames(This,riid,rgszNames,cNames,lcid,rgDispId) ) 
 
 #define IDlgRoomBoxes_Invoke(This,dispIdMember,riid,lcid,wFlags,pDispParams,pVarResult,pExcepInfo,puArgErr)	\
-    (This)->lpVtbl -> Invoke(This,dispIdMember,riid,lcid,wFlags,pDispParams,pVarResult,pExcepInfo,puArgErr)
+    ( (This)->lpVtbl -> Invoke(This,dispIdMember,riid,lcid,wFlags,pDispParams,pVarResult,pExcepInfo,puArgErr) ) 
 
 #endif /* COBJMACROS */
 
@@ -4574,7 +4899,7 @@ DEFINE_GUID(DIID_IDlgRoomBoxes,0xD46A8482,0xBD10,0x11CE,0xB1,0xC8,0x44,0x45,0x53
 #endif 	/* __IDlgRoomBoxes_DISPINTERFACE_DEFINED__ */
 
 
-DEFINE_GUID(CLSID_CDlgRoomBoxes,0xD46A8483,0xBD10,0x11CE,0xB1,0xC8,0x44,0x45,0x53,0x54,0x00,0x00);
+EXTERN_C const CLSID CLSID_CDlgRoomBoxes;
 
 #ifdef __cplusplus
 
@@ -4589,7 +4914,7 @@ CDlgRoomBoxes;
 /* [uuid] */ 
 
 
-DEFINE_GUID(DIID_IDlgRoomWall,0xD46A8484,0xBD10,0x11CE,0xB1,0xC8,0x44,0x45,0x53,0x54,0x00,0x00);
+EXTERN_C const IID DIID_IDlgRoomWall;
 
 #if defined(__cplusplus) && !defined(CINTERFACE)
 
@@ -4607,7 +4932,8 @@ DEFINE_GUID(DIID_IDlgRoomWall,0xD46A8484,0xBD10,0x11CE,0xB1,0xC8,0x44,0x45,0x53,
         HRESULT ( STDMETHODCALLTYPE *QueryInterface )( 
             IDlgRoomWall * This,
             /* [in] */ REFIID riid,
-            /* [iid_is][out] */ void **ppvObject);
+            /* [annotation][iid_is][out] */ 
+            _COM_Outptr_  void **ppvObject);
         
         ULONG ( STDMETHODCALLTYPE *AddRef )( 
             IDlgRoomWall * This);
@@ -4629,20 +4955,28 @@ DEFINE_GUID(DIID_IDlgRoomWall,0xD46A8484,0xBD10,0x11CE,0xB1,0xC8,0x44,0x45,0x53,
             IDlgRoomWall * This,
             /* [in] */ REFIID riid,
             /* [size_is][in] */ LPOLESTR *rgszNames,
-            /* [in] */ UINT cNames,
+            /* [range][in] */ UINT cNames,
             /* [in] */ LCID lcid,
             /* [size_is][out] */ DISPID *rgDispId);
         
         /* [local] */ HRESULT ( STDMETHODCALLTYPE *Invoke )( 
             IDlgRoomWall * This,
-            /* [in] */ DISPID dispIdMember,
-            /* [in] */ REFIID riid,
-            /* [in] */ LCID lcid,
-            /* [in] */ WORD wFlags,
-            /* [out][in] */ DISPPARAMS *pDispParams,
-            /* [out] */ VARIANT *pVarResult,
-            /* [out] */ EXCEPINFO *pExcepInfo,
-            /* [out] */ UINT *puArgErr);
+            /* [annotation][in] */ 
+            _In_  DISPID dispIdMember,
+            /* [annotation][in] */ 
+            _In_  REFIID riid,
+            /* [annotation][in] */ 
+            _In_  LCID lcid,
+            /* [annotation][in] */ 
+            _In_  WORD wFlags,
+            /* [annotation][out][in] */ 
+            _In_  DISPPARAMS *pDispParams,
+            /* [annotation][out] */ 
+            _Out_opt_  VARIANT *pVarResult,
+            /* [annotation][out] */ 
+            _Out_opt_  EXCEPINFO *pExcepInfo,
+            /* [annotation][out] */ 
+            _Out_opt_  UINT *puArgErr);
         
         END_INTERFACE
     } IDlgRoomWallVtbl;
@@ -4658,26 +4992,26 @@ DEFINE_GUID(DIID_IDlgRoomWall,0xD46A8484,0xBD10,0x11CE,0xB1,0xC8,0x44,0x45,0x53,
 
 
 #define IDlgRoomWall_QueryInterface(This,riid,ppvObject)	\
-    (This)->lpVtbl -> QueryInterface(This,riid,ppvObject)
+    ( (This)->lpVtbl -> QueryInterface(This,riid,ppvObject) ) 
 
 #define IDlgRoomWall_AddRef(This)	\
-    (This)->lpVtbl -> AddRef(This)
+    ( (This)->lpVtbl -> AddRef(This) ) 
 
 #define IDlgRoomWall_Release(This)	\
-    (This)->lpVtbl -> Release(This)
+    ( (This)->lpVtbl -> Release(This) ) 
 
 
 #define IDlgRoomWall_GetTypeInfoCount(This,pctinfo)	\
-    (This)->lpVtbl -> GetTypeInfoCount(This,pctinfo)
+    ( (This)->lpVtbl -> GetTypeInfoCount(This,pctinfo) ) 
 
 #define IDlgRoomWall_GetTypeInfo(This,iTInfo,lcid,ppTInfo)	\
-    (This)->lpVtbl -> GetTypeInfo(This,iTInfo,lcid,ppTInfo)
+    ( (This)->lpVtbl -> GetTypeInfo(This,iTInfo,lcid,ppTInfo) ) 
 
 #define IDlgRoomWall_GetIDsOfNames(This,riid,rgszNames,cNames,lcid,rgDispId)	\
-    (This)->lpVtbl -> GetIDsOfNames(This,riid,rgszNames,cNames,lcid,rgDispId)
+    ( (This)->lpVtbl -> GetIDsOfNames(This,riid,rgszNames,cNames,lcid,rgDispId) ) 
 
 #define IDlgRoomWall_Invoke(This,dispIdMember,riid,lcid,wFlags,pDispParams,pVarResult,pExcepInfo,puArgErr)	\
-    (This)->lpVtbl -> Invoke(This,dispIdMember,riid,lcid,wFlags,pDispParams,pVarResult,pExcepInfo,puArgErr)
+    ( (This)->lpVtbl -> Invoke(This,dispIdMember,riid,lcid,wFlags,pDispParams,pVarResult,pExcepInfo,puArgErr) ) 
 
 #endif /* COBJMACROS */
 
@@ -4688,7 +5022,7 @@ DEFINE_GUID(DIID_IDlgRoomWall,0xD46A8484,0xBD10,0x11CE,0xB1,0xC8,0x44,0x45,0x53,
 #endif 	/* __IDlgRoomWall_DISPINTERFACE_DEFINED__ */
 
 
-DEFINE_GUID(CLSID_CDlgRoomWall,0xD46A8485,0xBD10,0x11CE,0xB1,0xC8,0x44,0x45,0x53,0x54,0x00,0x00);
+EXTERN_C const CLSID CLSID_CDlgRoomWall;
 
 #ifdef __cplusplus
 
@@ -4703,7 +5037,7 @@ CDlgRoomWall;
 /* [uuid] */ 
 
 
-DEFINE_GUID(DIID_IDlgRoom,0xD46A8486,0xBD10,0x11CE,0xB1,0xC8,0x44,0x45,0x53,0x54,0x00,0x00);
+EXTERN_C const IID DIID_IDlgRoom;
 
 #if defined(__cplusplus) && !defined(CINTERFACE)
 
@@ -4721,7 +5055,8 @@ DEFINE_GUID(DIID_IDlgRoom,0xD46A8486,0xBD10,0x11CE,0xB1,0xC8,0x44,0x45,0x53,0x54
         HRESULT ( STDMETHODCALLTYPE *QueryInterface )( 
             IDlgRoom * This,
             /* [in] */ REFIID riid,
-            /* [iid_is][out] */ void **ppvObject);
+            /* [annotation][iid_is][out] */ 
+            _COM_Outptr_  void **ppvObject);
         
         ULONG ( STDMETHODCALLTYPE *AddRef )( 
             IDlgRoom * This);
@@ -4743,20 +5078,28 @@ DEFINE_GUID(DIID_IDlgRoom,0xD46A8486,0xBD10,0x11CE,0xB1,0xC8,0x44,0x45,0x53,0x54
             IDlgRoom * This,
             /* [in] */ REFIID riid,
             /* [size_is][in] */ LPOLESTR *rgszNames,
-            /* [in] */ UINT cNames,
+            /* [range][in] */ UINT cNames,
             /* [in] */ LCID lcid,
             /* [size_is][out] */ DISPID *rgDispId);
         
         /* [local] */ HRESULT ( STDMETHODCALLTYPE *Invoke )( 
             IDlgRoom * This,
-            /* [in] */ DISPID dispIdMember,
-            /* [in] */ REFIID riid,
-            /* [in] */ LCID lcid,
-            /* [in] */ WORD wFlags,
-            /* [out][in] */ DISPPARAMS *pDispParams,
-            /* [out] */ VARIANT *pVarResult,
-            /* [out] */ EXCEPINFO *pExcepInfo,
-            /* [out] */ UINT *puArgErr);
+            /* [annotation][in] */ 
+            _In_  DISPID dispIdMember,
+            /* [annotation][in] */ 
+            _In_  REFIID riid,
+            /* [annotation][in] */ 
+            _In_  LCID lcid,
+            /* [annotation][in] */ 
+            _In_  WORD wFlags,
+            /* [annotation][out][in] */ 
+            _In_  DISPPARAMS *pDispParams,
+            /* [annotation][out] */ 
+            _Out_opt_  VARIANT *pVarResult,
+            /* [annotation][out] */ 
+            _Out_opt_  EXCEPINFO *pExcepInfo,
+            /* [annotation][out] */ 
+            _Out_opt_  UINT *puArgErr);
         
         END_INTERFACE
     } IDlgRoomVtbl;
@@ -4772,26 +5115,26 @@ DEFINE_GUID(DIID_IDlgRoom,0xD46A8486,0xBD10,0x11CE,0xB1,0xC8,0x44,0x45,0x53,0x54
 
 
 #define IDlgRoom_QueryInterface(This,riid,ppvObject)	\
-    (This)->lpVtbl -> QueryInterface(This,riid,ppvObject)
+    ( (This)->lpVtbl -> QueryInterface(This,riid,ppvObject) ) 
 
 #define IDlgRoom_AddRef(This)	\
-    (This)->lpVtbl -> AddRef(This)
+    ( (This)->lpVtbl -> AddRef(This) ) 
 
 #define IDlgRoom_Release(This)	\
-    (This)->lpVtbl -> Release(This)
+    ( (This)->lpVtbl -> Release(This) ) 
 
 
 #define IDlgRoom_GetTypeInfoCount(This,pctinfo)	\
-    (This)->lpVtbl -> GetTypeInfoCount(This,pctinfo)
+    ( (This)->lpVtbl -> GetTypeInfoCount(This,pctinfo) ) 
 
 #define IDlgRoom_GetTypeInfo(This,iTInfo,lcid,ppTInfo)	\
-    (This)->lpVtbl -> GetTypeInfo(This,iTInfo,lcid,ppTInfo)
+    ( (This)->lpVtbl -> GetTypeInfo(This,iTInfo,lcid,ppTInfo) ) 
 
 #define IDlgRoom_GetIDsOfNames(This,riid,rgszNames,cNames,lcid,rgDispId)	\
-    (This)->lpVtbl -> GetIDsOfNames(This,riid,rgszNames,cNames,lcid,rgDispId)
+    ( (This)->lpVtbl -> GetIDsOfNames(This,riid,rgszNames,cNames,lcid,rgDispId) ) 
 
 #define IDlgRoom_Invoke(This,dispIdMember,riid,lcid,wFlags,pDispParams,pVarResult,pExcepInfo,puArgErr)	\
-    (This)->lpVtbl -> Invoke(This,dispIdMember,riid,lcid,wFlags,pDispParams,pVarResult,pExcepInfo,puArgErr)
+    ( (This)->lpVtbl -> Invoke(This,dispIdMember,riid,lcid,wFlags,pDispParams,pVarResult,pExcepInfo,puArgErr) ) 
 
 #endif /* COBJMACROS */
 
@@ -4802,7 +5145,7 @@ DEFINE_GUID(DIID_IDlgRoom,0xD46A8486,0xBD10,0x11CE,0xB1,0xC8,0x44,0x45,0x53,0x54
 #endif 	/* __IDlgRoom_DISPINTERFACE_DEFINED__ */
 
 
-DEFINE_GUID(CLSID_CDlgRoom,0xD46A8487,0xBD10,0x11CE,0xB1,0xC8,0x44,0x45,0x53,0x54,0x00,0x00);
+EXTERN_C const CLSID CLSID_CDlgRoom;
 
 #ifdef __cplusplus
 
@@ -4817,7 +5160,7 @@ CDlgRoom;
 /* [uuid] */ 
 
 
-DEFINE_GUID(DIID_IDlgLocations,0x09D96940,0xC10A,0x11CE,0xB1,0xC8,0x44,0x45,0x53,0x54,0x00,0x00);
+EXTERN_C const IID DIID_IDlgLocations;
 
 #if defined(__cplusplus) && !defined(CINTERFACE)
 
@@ -4835,7 +5178,8 @@ DEFINE_GUID(DIID_IDlgLocations,0x09D96940,0xC10A,0x11CE,0xB1,0xC8,0x44,0x45,0x53
         HRESULT ( STDMETHODCALLTYPE *QueryInterface )( 
             IDlgLocations * This,
             /* [in] */ REFIID riid,
-            /* [iid_is][out] */ void **ppvObject);
+            /* [annotation][iid_is][out] */ 
+            _COM_Outptr_  void **ppvObject);
         
         ULONG ( STDMETHODCALLTYPE *AddRef )( 
             IDlgLocations * This);
@@ -4857,20 +5201,28 @@ DEFINE_GUID(DIID_IDlgLocations,0x09D96940,0xC10A,0x11CE,0xB1,0xC8,0x44,0x45,0x53
             IDlgLocations * This,
             /* [in] */ REFIID riid,
             /* [size_is][in] */ LPOLESTR *rgszNames,
-            /* [in] */ UINT cNames,
+            /* [range][in] */ UINT cNames,
             /* [in] */ LCID lcid,
             /* [size_is][out] */ DISPID *rgDispId);
         
         /* [local] */ HRESULT ( STDMETHODCALLTYPE *Invoke )( 
             IDlgLocations * This,
-            /* [in] */ DISPID dispIdMember,
-            /* [in] */ REFIID riid,
-            /* [in] */ LCID lcid,
-            /* [in] */ WORD wFlags,
-            /* [out][in] */ DISPPARAMS *pDispParams,
-            /* [out] */ VARIANT *pVarResult,
-            /* [out] */ EXCEPINFO *pExcepInfo,
-            /* [out] */ UINT *puArgErr);
+            /* [annotation][in] */ 
+            _In_  DISPID dispIdMember,
+            /* [annotation][in] */ 
+            _In_  REFIID riid,
+            /* [annotation][in] */ 
+            _In_  LCID lcid,
+            /* [annotation][in] */ 
+            _In_  WORD wFlags,
+            /* [annotation][out][in] */ 
+            _In_  DISPPARAMS *pDispParams,
+            /* [annotation][out] */ 
+            _Out_opt_  VARIANT *pVarResult,
+            /* [annotation][out] */ 
+            _Out_opt_  EXCEPINFO *pExcepInfo,
+            /* [annotation][out] */ 
+            _Out_opt_  UINT *puArgErr);
         
         END_INTERFACE
     } IDlgLocationsVtbl;
@@ -4886,26 +5238,26 @@ DEFINE_GUID(DIID_IDlgLocations,0x09D96940,0xC10A,0x11CE,0xB1,0xC8,0x44,0x45,0x53
 
 
 #define IDlgLocations_QueryInterface(This,riid,ppvObject)	\
-    (This)->lpVtbl -> QueryInterface(This,riid,ppvObject)
+    ( (This)->lpVtbl -> QueryInterface(This,riid,ppvObject) ) 
 
 #define IDlgLocations_AddRef(This)	\
-    (This)->lpVtbl -> AddRef(This)
+    ( (This)->lpVtbl -> AddRef(This) ) 
 
 #define IDlgLocations_Release(This)	\
-    (This)->lpVtbl -> Release(This)
+    ( (This)->lpVtbl -> Release(This) ) 
 
 
 #define IDlgLocations_GetTypeInfoCount(This,pctinfo)	\
-    (This)->lpVtbl -> GetTypeInfoCount(This,pctinfo)
+    ( (This)->lpVtbl -> GetTypeInfoCount(This,pctinfo) ) 
 
 #define IDlgLocations_GetTypeInfo(This,iTInfo,lcid,ppTInfo)	\
-    (This)->lpVtbl -> GetTypeInfo(This,iTInfo,lcid,ppTInfo)
+    ( (This)->lpVtbl -> GetTypeInfo(This,iTInfo,lcid,ppTInfo) ) 
 
 #define IDlgLocations_GetIDsOfNames(This,riid,rgszNames,cNames,lcid,rgDispId)	\
-    (This)->lpVtbl -> GetIDsOfNames(This,riid,rgszNames,cNames,lcid,rgDispId)
+    ( (This)->lpVtbl -> GetIDsOfNames(This,riid,rgszNames,cNames,lcid,rgDispId) ) 
 
 #define IDlgLocations_Invoke(This,dispIdMember,riid,lcid,wFlags,pDispParams,pVarResult,pExcepInfo,puArgErr)	\
-    (This)->lpVtbl -> Invoke(This,dispIdMember,riid,lcid,wFlags,pDispParams,pVarResult,pExcepInfo,puArgErr)
+    ( (This)->lpVtbl -> Invoke(This,dispIdMember,riid,lcid,wFlags,pDispParams,pVarResult,pExcepInfo,puArgErr) ) 
 
 #endif /* COBJMACROS */
 
@@ -4916,7 +5268,7 @@ DEFINE_GUID(DIID_IDlgLocations,0x09D96940,0xC10A,0x11CE,0xB1,0xC8,0x44,0x45,0x53
 #endif 	/* __IDlgLocations_DISPINTERFACE_DEFINED__ */
 
 
-DEFINE_GUID(CLSID_CDlgLocations,0x09D96941,0xC10A,0x11CE,0xB1,0xC8,0x44,0x45,0x53,0x54,0x00,0x00);
+EXTERN_C const CLSID CLSID_CDlgLocations;
 
 #ifdef __cplusplus
 
@@ -4931,7 +5283,7 @@ CDlgLocations;
 /* [uuid] */ 
 
 
-DEFINE_GUID(DIID_IDlgGenGeneral,0x4AF654E0,0xC1FC,0x11CE,0xB1,0xC8,0x44,0x45,0x53,0x54,0x00,0x00);
+EXTERN_C const IID DIID_IDlgGenGeneral;
 
 #if defined(__cplusplus) && !defined(CINTERFACE)
 
@@ -4949,7 +5301,8 @@ DEFINE_GUID(DIID_IDlgGenGeneral,0x4AF654E0,0xC1FC,0x11CE,0xB1,0xC8,0x44,0x45,0x5
         HRESULT ( STDMETHODCALLTYPE *QueryInterface )( 
             IDlgGenGeneral * This,
             /* [in] */ REFIID riid,
-            /* [iid_is][out] */ void **ppvObject);
+            /* [annotation][iid_is][out] */ 
+            _COM_Outptr_  void **ppvObject);
         
         ULONG ( STDMETHODCALLTYPE *AddRef )( 
             IDlgGenGeneral * This);
@@ -4971,20 +5324,28 @@ DEFINE_GUID(DIID_IDlgGenGeneral,0x4AF654E0,0xC1FC,0x11CE,0xB1,0xC8,0x44,0x45,0x5
             IDlgGenGeneral * This,
             /* [in] */ REFIID riid,
             /* [size_is][in] */ LPOLESTR *rgszNames,
-            /* [in] */ UINT cNames,
+            /* [range][in] */ UINT cNames,
             /* [in] */ LCID lcid,
             /* [size_is][out] */ DISPID *rgDispId);
         
         /* [local] */ HRESULT ( STDMETHODCALLTYPE *Invoke )( 
             IDlgGenGeneral * This,
-            /* [in] */ DISPID dispIdMember,
-            /* [in] */ REFIID riid,
-            /* [in] */ LCID lcid,
-            /* [in] */ WORD wFlags,
-            /* [out][in] */ DISPPARAMS *pDispParams,
-            /* [out] */ VARIANT *pVarResult,
-            /* [out] */ EXCEPINFO *pExcepInfo,
-            /* [out] */ UINT *puArgErr);
+            /* [annotation][in] */ 
+            _In_  DISPID dispIdMember,
+            /* [annotation][in] */ 
+            _In_  REFIID riid,
+            /* [annotation][in] */ 
+            _In_  LCID lcid,
+            /* [annotation][in] */ 
+            _In_  WORD wFlags,
+            /* [annotation][out][in] */ 
+            _In_  DISPPARAMS *pDispParams,
+            /* [annotation][out] */ 
+            _Out_opt_  VARIANT *pVarResult,
+            /* [annotation][out] */ 
+            _Out_opt_  EXCEPINFO *pExcepInfo,
+            /* [annotation][out] */ 
+            _Out_opt_  UINT *puArgErr);
         
         END_INTERFACE
     } IDlgGenGeneralVtbl;
@@ -5000,26 +5361,26 @@ DEFINE_GUID(DIID_IDlgGenGeneral,0x4AF654E0,0xC1FC,0x11CE,0xB1,0xC8,0x44,0x45,0x5
 
 
 #define IDlgGenGeneral_QueryInterface(This,riid,ppvObject)	\
-    (This)->lpVtbl -> QueryInterface(This,riid,ppvObject)
+    ( (This)->lpVtbl -> QueryInterface(This,riid,ppvObject) ) 
 
 #define IDlgGenGeneral_AddRef(This)	\
-    (This)->lpVtbl -> AddRef(This)
+    ( (This)->lpVtbl -> AddRef(This) ) 
 
 #define IDlgGenGeneral_Release(This)	\
-    (This)->lpVtbl -> Release(This)
+    ( (This)->lpVtbl -> Release(This) ) 
 
 
 #define IDlgGenGeneral_GetTypeInfoCount(This,pctinfo)	\
-    (This)->lpVtbl -> GetTypeInfoCount(This,pctinfo)
+    ( (This)->lpVtbl -> GetTypeInfoCount(This,pctinfo) ) 
 
 #define IDlgGenGeneral_GetTypeInfo(This,iTInfo,lcid,ppTInfo)	\
-    (This)->lpVtbl -> GetTypeInfo(This,iTInfo,lcid,ppTInfo)
+    ( (This)->lpVtbl -> GetTypeInfo(This,iTInfo,lcid,ppTInfo) ) 
 
 #define IDlgGenGeneral_GetIDsOfNames(This,riid,rgszNames,cNames,lcid,rgDispId)	\
-    (This)->lpVtbl -> GetIDsOfNames(This,riid,rgszNames,cNames,lcid,rgDispId)
+    ( (This)->lpVtbl -> GetIDsOfNames(This,riid,rgszNames,cNames,lcid,rgDispId) ) 
 
 #define IDlgGenGeneral_Invoke(This,dispIdMember,riid,lcid,wFlags,pDispParams,pVarResult,pExcepInfo,puArgErr)	\
-    (This)->lpVtbl -> Invoke(This,dispIdMember,riid,lcid,wFlags,pDispParams,pVarResult,pExcepInfo,puArgErr)
+    ( (This)->lpVtbl -> Invoke(This,dispIdMember,riid,lcid,wFlags,pDispParams,pVarResult,pExcepInfo,puArgErr) ) 
 
 #endif /* COBJMACROS */
 
@@ -5030,7 +5391,7 @@ DEFINE_GUID(DIID_IDlgGenGeneral,0x4AF654E0,0xC1FC,0x11CE,0xB1,0xC8,0x44,0x45,0x5
 #endif 	/* __IDlgGenGeneral_DISPINTERFACE_DEFINED__ */
 
 
-DEFINE_GUID(CLSID_CDlgGenGeneral,0x4AF654E1,0xC1FC,0x11CE,0xB1,0xC8,0x44,0x45,0x53,0x54,0x00,0x00);
+EXTERN_C const CLSID CLSID_CDlgGenGeneral;
 
 #ifdef __cplusplus
 
@@ -5045,7 +5406,7 @@ CDlgGenGeneral;
 /* [uuid] */ 
 
 
-DEFINE_GUID(DIID_IDlgXfIfft,0x8510D420,0xC283,0x11CE,0xB1,0xC8,0x44,0x45,0x53,0x54,0x00,0x00);
+EXTERN_C const IID DIID_IDlgXfIfft;
 
 #if defined(__cplusplus) && !defined(CINTERFACE)
 
@@ -5063,7 +5424,8 @@ DEFINE_GUID(DIID_IDlgXfIfft,0x8510D420,0xC283,0x11CE,0xB1,0xC8,0x44,0x45,0x53,0x
         HRESULT ( STDMETHODCALLTYPE *QueryInterface )( 
             IDlgXfIfft * This,
             /* [in] */ REFIID riid,
-            /* [iid_is][out] */ void **ppvObject);
+            /* [annotation][iid_is][out] */ 
+            _COM_Outptr_  void **ppvObject);
         
         ULONG ( STDMETHODCALLTYPE *AddRef )( 
             IDlgXfIfft * This);
@@ -5085,20 +5447,28 @@ DEFINE_GUID(DIID_IDlgXfIfft,0x8510D420,0xC283,0x11CE,0xB1,0xC8,0x44,0x45,0x53,0x
             IDlgXfIfft * This,
             /* [in] */ REFIID riid,
             /* [size_is][in] */ LPOLESTR *rgszNames,
-            /* [in] */ UINT cNames,
+            /* [range][in] */ UINT cNames,
             /* [in] */ LCID lcid,
             /* [size_is][out] */ DISPID *rgDispId);
         
         /* [local] */ HRESULT ( STDMETHODCALLTYPE *Invoke )( 
             IDlgXfIfft * This,
-            /* [in] */ DISPID dispIdMember,
-            /* [in] */ REFIID riid,
-            /* [in] */ LCID lcid,
-            /* [in] */ WORD wFlags,
-            /* [out][in] */ DISPPARAMS *pDispParams,
-            /* [out] */ VARIANT *pVarResult,
-            /* [out] */ EXCEPINFO *pExcepInfo,
-            /* [out] */ UINT *puArgErr);
+            /* [annotation][in] */ 
+            _In_  DISPID dispIdMember,
+            /* [annotation][in] */ 
+            _In_  REFIID riid,
+            /* [annotation][in] */ 
+            _In_  LCID lcid,
+            /* [annotation][in] */ 
+            _In_  WORD wFlags,
+            /* [annotation][out][in] */ 
+            _In_  DISPPARAMS *pDispParams,
+            /* [annotation][out] */ 
+            _Out_opt_  VARIANT *pVarResult,
+            /* [annotation][out] */ 
+            _Out_opt_  EXCEPINFO *pExcepInfo,
+            /* [annotation][out] */ 
+            _Out_opt_  UINT *puArgErr);
         
         END_INTERFACE
     } IDlgXfIfftVtbl;
@@ -5114,26 +5484,26 @@ DEFINE_GUID(DIID_IDlgXfIfft,0x8510D420,0xC283,0x11CE,0xB1,0xC8,0x44,0x45,0x53,0x
 
 
 #define IDlgXfIfft_QueryInterface(This,riid,ppvObject)	\
-    (This)->lpVtbl -> QueryInterface(This,riid,ppvObject)
+    ( (This)->lpVtbl -> QueryInterface(This,riid,ppvObject) ) 
 
 #define IDlgXfIfft_AddRef(This)	\
-    (This)->lpVtbl -> AddRef(This)
+    ( (This)->lpVtbl -> AddRef(This) ) 
 
 #define IDlgXfIfft_Release(This)	\
-    (This)->lpVtbl -> Release(This)
+    ( (This)->lpVtbl -> Release(This) ) 
 
 
 #define IDlgXfIfft_GetTypeInfoCount(This,pctinfo)	\
-    (This)->lpVtbl -> GetTypeInfoCount(This,pctinfo)
+    ( (This)->lpVtbl -> GetTypeInfoCount(This,pctinfo) ) 
 
 #define IDlgXfIfft_GetTypeInfo(This,iTInfo,lcid,ppTInfo)	\
-    (This)->lpVtbl -> GetTypeInfo(This,iTInfo,lcid,ppTInfo)
+    ( (This)->lpVtbl -> GetTypeInfo(This,iTInfo,lcid,ppTInfo) ) 
 
 #define IDlgXfIfft_GetIDsOfNames(This,riid,rgszNames,cNames,lcid,rgDispId)	\
-    (This)->lpVtbl -> GetIDsOfNames(This,riid,rgszNames,cNames,lcid,rgDispId)
+    ( (This)->lpVtbl -> GetIDsOfNames(This,riid,rgszNames,cNames,lcid,rgDispId) ) 
 
 #define IDlgXfIfft_Invoke(This,dispIdMember,riid,lcid,wFlags,pDispParams,pVarResult,pExcepInfo,puArgErr)	\
-    (This)->lpVtbl -> Invoke(This,dispIdMember,riid,lcid,wFlags,pDispParams,pVarResult,pExcepInfo,puArgErr)
+    ( (This)->lpVtbl -> Invoke(This,dispIdMember,riid,lcid,wFlags,pDispParams,pVarResult,pExcepInfo,puArgErr) ) 
 
 #endif /* COBJMACROS */
 
@@ -5144,7 +5514,7 @@ DEFINE_GUID(DIID_IDlgXfIfft,0x8510D420,0xC283,0x11CE,0xB1,0xC8,0x44,0x45,0x53,0x
 #endif 	/* __IDlgXfIfft_DISPINTERFACE_DEFINED__ */
 
 
-DEFINE_GUID(CLSID_CDlgXfIfft,0x8510D421,0xC283,0x11CE,0xB1,0xC8,0x44,0x45,0x53,0x54,0x00,0x00);
+EXTERN_C const CLSID CLSID_CDlgXfIfft;
 
 #ifdef __cplusplus
 
@@ -5159,7 +5529,7 @@ CDlgXfIfft;
 /* [uuid] */ 
 
 
-DEFINE_GUID(DIID_IDlgXfFft,0xB5EBC940,0xC294,0x11CE,0xB1,0xC8,0x44,0x45,0x53,0x54,0x00,0x00);
+EXTERN_C const IID DIID_IDlgXfFft;
 
 #if defined(__cplusplus) && !defined(CINTERFACE)
 
@@ -5177,7 +5547,8 @@ DEFINE_GUID(DIID_IDlgXfFft,0xB5EBC940,0xC294,0x11CE,0xB1,0xC8,0x44,0x45,0x53,0x5
         HRESULT ( STDMETHODCALLTYPE *QueryInterface )( 
             IDlgXfFft * This,
             /* [in] */ REFIID riid,
-            /* [iid_is][out] */ void **ppvObject);
+            /* [annotation][iid_is][out] */ 
+            _COM_Outptr_  void **ppvObject);
         
         ULONG ( STDMETHODCALLTYPE *AddRef )( 
             IDlgXfFft * This);
@@ -5199,20 +5570,28 @@ DEFINE_GUID(DIID_IDlgXfFft,0xB5EBC940,0xC294,0x11CE,0xB1,0xC8,0x44,0x45,0x53,0x5
             IDlgXfFft * This,
             /* [in] */ REFIID riid,
             /* [size_is][in] */ LPOLESTR *rgszNames,
-            /* [in] */ UINT cNames,
+            /* [range][in] */ UINT cNames,
             /* [in] */ LCID lcid,
             /* [size_is][out] */ DISPID *rgDispId);
         
         /* [local] */ HRESULT ( STDMETHODCALLTYPE *Invoke )( 
             IDlgXfFft * This,
-            /* [in] */ DISPID dispIdMember,
-            /* [in] */ REFIID riid,
-            /* [in] */ LCID lcid,
-            /* [in] */ WORD wFlags,
-            /* [out][in] */ DISPPARAMS *pDispParams,
-            /* [out] */ VARIANT *pVarResult,
-            /* [out] */ EXCEPINFO *pExcepInfo,
-            /* [out] */ UINT *puArgErr);
+            /* [annotation][in] */ 
+            _In_  DISPID dispIdMember,
+            /* [annotation][in] */ 
+            _In_  REFIID riid,
+            /* [annotation][in] */ 
+            _In_  LCID lcid,
+            /* [annotation][in] */ 
+            _In_  WORD wFlags,
+            /* [annotation][out][in] */ 
+            _In_  DISPPARAMS *pDispParams,
+            /* [annotation][out] */ 
+            _Out_opt_  VARIANT *pVarResult,
+            /* [annotation][out] */ 
+            _Out_opt_  EXCEPINFO *pExcepInfo,
+            /* [annotation][out] */ 
+            _Out_opt_  UINT *puArgErr);
         
         END_INTERFACE
     } IDlgXfFftVtbl;
@@ -5228,26 +5607,26 @@ DEFINE_GUID(DIID_IDlgXfFft,0xB5EBC940,0xC294,0x11CE,0xB1,0xC8,0x44,0x45,0x53,0x5
 
 
 #define IDlgXfFft_QueryInterface(This,riid,ppvObject)	\
-    (This)->lpVtbl -> QueryInterface(This,riid,ppvObject)
+    ( (This)->lpVtbl -> QueryInterface(This,riid,ppvObject) ) 
 
 #define IDlgXfFft_AddRef(This)	\
-    (This)->lpVtbl -> AddRef(This)
+    ( (This)->lpVtbl -> AddRef(This) ) 
 
 #define IDlgXfFft_Release(This)	\
-    (This)->lpVtbl -> Release(This)
+    ( (This)->lpVtbl -> Release(This) ) 
 
 
 #define IDlgXfFft_GetTypeInfoCount(This,pctinfo)	\
-    (This)->lpVtbl -> GetTypeInfoCount(This,pctinfo)
+    ( (This)->lpVtbl -> GetTypeInfoCount(This,pctinfo) ) 
 
 #define IDlgXfFft_GetTypeInfo(This,iTInfo,lcid,ppTInfo)	\
-    (This)->lpVtbl -> GetTypeInfo(This,iTInfo,lcid,ppTInfo)
+    ( (This)->lpVtbl -> GetTypeInfo(This,iTInfo,lcid,ppTInfo) ) 
 
 #define IDlgXfFft_GetIDsOfNames(This,riid,rgszNames,cNames,lcid,rgDispId)	\
-    (This)->lpVtbl -> GetIDsOfNames(This,riid,rgszNames,cNames,lcid,rgDispId)
+    ( (This)->lpVtbl -> GetIDsOfNames(This,riid,rgszNames,cNames,lcid,rgDispId) ) 
 
 #define IDlgXfFft_Invoke(This,dispIdMember,riid,lcid,wFlags,pDispParams,pVarResult,pExcepInfo,puArgErr)	\
-    (This)->lpVtbl -> Invoke(This,dispIdMember,riid,lcid,wFlags,pDispParams,pVarResult,pExcepInfo,puArgErr)
+    ( (This)->lpVtbl -> Invoke(This,dispIdMember,riid,lcid,wFlags,pDispParams,pVarResult,pExcepInfo,puArgErr) ) 
 
 #endif /* COBJMACROS */
 
@@ -5258,7 +5637,7 @@ DEFINE_GUID(DIID_IDlgXfFft,0xB5EBC940,0xC294,0x11CE,0xB1,0xC8,0x44,0x45,0x53,0x5
 #endif 	/* __IDlgXfFft_DISPINTERFACE_DEFINED__ */
 
 
-DEFINE_GUID(CLSID_CDlgXfFft,0xB5EBC941,0xC294,0x11CE,0xB1,0xC8,0x44,0x45,0x53,0x54,0x00,0x00);
+EXTERN_C const CLSID CLSID_CDlgXfFft;
 
 #ifdef __cplusplus
 
@@ -5273,7 +5652,7 @@ CDlgXfFft;
 /* [uuid] */ 
 
 
-DEFINE_GUID(DIID_IDlgRecord,0xAB427A00,0xC39F,0x11CE,0xB1,0xC8,0x44,0x45,0x53,0x54,0x00,0x00);
+EXTERN_C const IID DIID_IDlgRecord;
 
 #if defined(__cplusplus) && !defined(CINTERFACE)
 
@@ -5291,7 +5670,8 @@ DEFINE_GUID(DIID_IDlgRecord,0xAB427A00,0xC39F,0x11CE,0xB1,0xC8,0x44,0x45,0x53,0x
         HRESULT ( STDMETHODCALLTYPE *QueryInterface )( 
             IDlgRecord * This,
             /* [in] */ REFIID riid,
-            /* [iid_is][out] */ void **ppvObject);
+            /* [annotation][iid_is][out] */ 
+            _COM_Outptr_  void **ppvObject);
         
         ULONG ( STDMETHODCALLTYPE *AddRef )( 
             IDlgRecord * This);
@@ -5313,20 +5693,28 @@ DEFINE_GUID(DIID_IDlgRecord,0xAB427A00,0xC39F,0x11CE,0xB1,0xC8,0x44,0x45,0x53,0x
             IDlgRecord * This,
             /* [in] */ REFIID riid,
             /* [size_is][in] */ LPOLESTR *rgszNames,
-            /* [in] */ UINT cNames,
+            /* [range][in] */ UINT cNames,
             /* [in] */ LCID lcid,
             /* [size_is][out] */ DISPID *rgDispId);
         
         /* [local] */ HRESULT ( STDMETHODCALLTYPE *Invoke )( 
             IDlgRecord * This,
-            /* [in] */ DISPID dispIdMember,
-            /* [in] */ REFIID riid,
-            /* [in] */ LCID lcid,
-            /* [in] */ WORD wFlags,
-            /* [out][in] */ DISPPARAMS *pDispParams,
-            /* [out] */ VARIANT *pVarResult,
-            /* [out] */ EXCEPINFO *pExcepInfo,
-            /* [out] */ UINT *puArgErr);
+            /* [annotation][in] */ 
+            _In_  DISPID dispIdMember,
+            /* [annotation][in] */ 
+            _In_  REFIID riid,
+            /* [annotation][in] */ 
+            _In_  LCID lcid,
+            /* [annotation][in] */ 
+            _In_  WORD wFlags,
+            /* [annotation][out][in] */ 
+            _In_  DISPPARAMS *pDispParams,
+            /* [annotation][out] */ 
+            _Out_opt_  VARIANT *pVarResult,
+            /* [annotation][out] */ 
+            _Out_opt_  EXCEPINFO *pExcepInfo,
+            /* [annotation][out] */ 
+            _Out_opt_  UINT *puArgErr);
         
         END_INTERFACE
     } IDlgRecordVtbl;
@@ -5342,26 +5730,26 @@ DEFINE_GUID(DIID_IDlgRecord,0xAB427A00,0xC39F,0x11CE,0xB1,0xC8,0x44,0x45,0x53,0x
 
 
 #define IDlgRecord_QueryInterface(This,riid,ppvObject)	\
-    (This)->lpVtbl -> QueryInterface(This,riid,ppvObject)
+    ( (This)->lpVtbl -> QueryInterface(This,riid,ppvObject) ) 
 
 #define IDlgRecord_AddRef(This)	\
-    (This)->lpVtbl -> AddRef(This)
+    ( (This)->lpVtbl -> AddRef(This) ) 
 
 #define IDlgRecord_Release(This)	\
-    (This)->lpVtbl -> Release(This)
+    ( (This)->lpVtbl -> Release(This) ) 
 
 
 #define IDlgRecord_GetTypeInfoCount(This,pctinfo)	\
-    (This)->lpVtbl -> GetTypeInfoCount(This,pctinfo)
+    ( (This)->lpVtbl -> GetTypeInfoCount(This,pctinfo) ) 
 
 #define IDlgRecord_GetTypeInfo(This,iTInfo,lcid,ppTInfo)	\
-    (This)->lpVtbl -> GetTypeInfo(This,iTInfo,lcid,ppTInfo)
+    ( (This)->lpVtbl -> GetTypeInfo(This,iTInfo,lcid,ppTInfo) ) 
 
 #define IDlgRecord_GetIDsOfNames(This,riid,rgszNames,cNames,lcid,rgDispId)	\
-    (This)->lpVtbl -> GetIDsOfNames(This,riid,rgszNames,cNames,lcid,rgDispId)
+    ( (This)->lpVtbl -> GetIDsOfNames(This,riid,rgszNames,cNames,lcid,rgDispId) ) 
 
 #define IDlgRecord_Invoke(This,dispIdMember,riid,lcid,wFlags,pDispParams,pVarResult,pExcepInfo,puArgErr)	\
-    (This)->lpVtbl -> Invoke(This,dispIdMember,riid,lcid,wFlags,pDispParams,pVarResult,pExcepInfo,puArgErr)
+    ( (This)->lpVtbl -> Invoke(This,dispIdMember,riid,lcid,wFlags,pDispParams,pVarResult,pExcepInfo,puArgErr) ) 
 
 #endif /* COBJMACROS */
 
@@ -5372,7 +5760,7 @@ DEFINE_GUID(DIID_IDlgRecord,0xAB427A00,0xC39F,0x11CE,0xB1,0xC8,0x44,0x45,0x53,0x
 #endif 	/* __IDlgRecord_DISPINTERFACE_DEFINED__ */
 
 
-DEFINE_GUID(CLSID_CDlgRecord,0xAB427A01,0xC39F,0x11CE,0xB1,0xC8,0x44,0x45,0x53,0x54,0x00,0x00);
+EXTERN_C const CLSID CLSID_CDlgRecord;
 
 #ifdef __cplusplus
 
@@ -5387,7 +5775,7 @@ CDlgRecord;
 /* [uuid] */ 
 
 
-DEFINE_GUID(DIID_IDlgXcImpedance,0xA6726FE0,0xC556,0x11CE,0xB1,0xC8,0x44,0x45,0x53,0x54,0x00,0x00);
+EXTERN_C const IID DIID_IDlgXcImpedance;
 
 #if defined(__cplusplus) && !defined(CINTERFACE)
 
@@ -5405,7 +5793,8 @@ DEFINE_GUID(DIID_IDlgXcImpedance,0xA6726FE0,0xC556,0x11CE,0xB1,0xC8,0x44,0x45,0x
         HRESULT ( STDMETHODCALLTYPE *QueryInterface )( 
             IDlgXcImpedance * This,
             /* [in] */ REFIID riid,
-            /* [iid_is][out] */ void **ppvObject);
+            /* [annotation][iid_is][out] */ 
+            _COM_Outptr_  void **ppvObject);
         
         ULONG ( STDMETHODCALLTYPE *AddRef )( 
             IDlgXcImpedance * This);
@@ -5427,20 +5816,28 @@ DEFINE_GUID(DIID_IDlgXcImpedance,0xA6726FE0,0xC556,0x11CE,0xB1,0xC8,0x44,0x45,0x
             IDlgXcImpedance * This,
             /* [in] */ REFIID riid,
             /* [size_is][in] */ LPOLESTR *rgszNames,
-            /* [in] */ UINT cNames,
+            /* [range][in] */ UINT cNames,
             /* [in] */ LCID lcid,
             /* [size_is][out] */ DISPID *rgDispId);
         
         /* [local] */ HRESULT ( STDMETHODCALLTYPE *Invoke )( 
             IDlgXcImpedance * This,
-            /* [in] */ DISPID dispIdMember,
-            /* [in] */ REFIID riid,
-            /* [in] */ LCID lcid,
-            /* [in] */ WORD wFlags,
-            /* [out][in] */ DISPPARAMS *pDispParams,
-            /* [out] */ VARIANT *pVarResult,
-            /* [out] */ EXCEPINFO *pExcepInfo,
-            /* [out] */ UINT *puArgErr);
+            /* [annotation][in] */ 
+            _In_  DISPID dispIdMember,
+            /* [annotation][in] */ 
+            _In_  REFIID riid,
+            /* [annotation][in] */ 
+            _In_  LCID lcid,
+            /* [annotation][in] */ 
+            _In_  WORD wFlags,
+            /* [annotation][out][in] */ 
+            _In_  DISPPARAMS *pDispParams,
+            /* [annotation][out] */ 
+            _Out_opt_  VARIANT *pVarResult,
+            /* [annotation][out] */ 
+            _Out_opt_  EXCEPINFO *pExcepInfo,
+            /* [annotation][out] */ 
+            _Out_opt_  UINT *puArgErr);
         
         END_INTERFACE
     } IDlgXcImpedanceVtbl;
@@ -5456,26 +5853,26 @@ DEFINE_GUID(DIID_IDlgXcImpedance,0xA6726FE0,0xC556,0x11CE,0xB1,0xC8,0x44,0x45,0x
 
 
 #define IDlgXcImpedance_QueryInterface(This,riid,ppvObject)	\
-    (This)->lpVtbl -> QueryInterface(This,riid,ppvObject)
+    ( (This)->lpVtbl -> QueryInterface(This,riid,ppvObject) ) 
 
 #define IDlgXcImpedance_AddRef(This)	\
-    (This)->lpVtbl -> AddRef(This)
+    ( (This)->lpVtbl -> AddRef(This) ) 
 
 #define IDlgXcImpedance_Release(This)	\
-    (This)->lpVtbl -> Release(This)
+    ( (This)->lpVtbl -> Release(This) ) 
 
 
 #define IDlgXcImpedance_GetTypeInfoCount(This,pctinfo)	\
-    (This)->lpVtbl -> GetTypeInfoCount(This,pctinfo)
+    ( (This)->lpVtbl -> GetTypeInfoCount(This,pctinfo) ) 
 
 #define IDlgXcImpedance_GetTypeInfo(This,iTInfo,lcid,ppTInfo)	\
-    (This)->lpVtbl -> GetTypeInfo(This,iTInfo,lcid,ppTInfo)
+    ( (This)->lpVtbl -> GetTypeInfo(This,iTInfo,lcid,ppTInfo) ) 
 
 #define IDlgXcImpedance_GetIDsOfNames(This,riid,rgszNames,cNames,lcid,rgDispId)	\
-    (This)->lpVtbl -> GetIDsOfNames(This,riid,rgszNames,cNames,lcid,rgDispId)
+    ( (This)->lpVtbl -> GetIDsOfNames(This,riid,rgszNames,cNames,lcid,rgDispId) ) 
 
 #define IDlgXcImpedance_Invoke(This,dispIdMember,riid,lcid,wFlags,pDispParams,pVarResult,pExcepInfo,puArgErr)	\
-    (This)->lpVtbl -> Invoke(This,dispIdMember,riid,lcid,wFlags,pDispParams,pVarResult,pExcepInfo,puArgErr)
+    ( (This)->lpVtbl -> Invoke(This,dispIdMember,riid,lcid,wFlags,pDispParams,pVarResult,pExcepInfo,puArgErr) ) 
 
 #endif /* COBJMACROS */
 
@@ -5486,7 +5883,7 @@ DEFINE_GUID(DIID_IDlgXcImpedance,0xA6726FE0,0xC556,0x11CE,0xB1,0xC8,0x44,0x45,0x
 #endif 	/* __IDlgXcImpedance_DISPINTERFACE_DEFINED__ */
 
 
-DEFINE_GUID(CLSID_CDlgXcImpedance,0xA6726FE1,0xC556,0x11CE,0xB1,0xC8,0x44,0x45,0x53,0x54,0x00,0x00);
+EXTERN_C const CLSID CLSID_CDlgXcImpedance;
 
 #ifdef __cplusplus
 
@@ -5501,7 +5898,7 @@ CDlgXcImpedance;
 /* [uuid] */ 
 
 
-DEFINE_GUID(DIID_IDlgPrefTransform,0x37A70D20,0xC757,0x11CE,0xB1,0xC9,0x44,0x45,0x53,0x54,0x00,0x00);
+EXTERN_C const IID DIID_IDlgPrefTransform;
 
 #if defined(__cplusplus) && !defined(CINTERFACE)
 
@@ -5519,7 +5916,8 @@ DEFINE_GUID(DIID_IDlgPrefTransform,0x37A70D20,0xC757,0x11CE,0xB1,0xC9,0x44,0x45,
         HRESULT ( STDMETHODCALLTYPE *QueryInterface )( 
             IDlgPrefTransform * This,
             /* [in] */ REFIID riid,
-            /* [iid_is][out] */ void **ppvObject);
+            /* [annotation][iid_is][out] */ 
+            _COM_Outptr_  void **ppvObject);
         
         ULONG ( STDMETHODCALLTYPE *AddRef )( 
             IDlgPrefTransform * This);
@@ -5541,20 +5939,28 @@ DEFINE_GUID(DIID_IDlgPrefTransform,0x37A70D20,0xC757,0x11CE,0xB1,0xC9,0x44,0x45,
             IDlgPrefTransform * This,
             /* [in] */ REFIID riid,
             /* [size_is][in] */ LPOLESTR *rgszNames,
-            /* [in] */ UINT cNames,
+            /* [range][in] */ UINT cNames,
             /* [in] */ LCID lcid,
             /* [size_is][out] */ DISPID *rgDispId);
         
         /* [local] */ HRESULT ( STDMETHODCALLTYPE *Invoke )( 
             IDlgPrefTransform * This,
-            /* [in] */ DISPID dispIdMember,
-            /* [in] */ REFIID riid,
-            /* [in] */ LCID lcid,
-            /* [in] */ WORD wFlags,
-            /* [out][in] */ DISPPARAMS *pDispParams,
-            /* [out] */ VARIANT *pVarResult,
-            /* [out] */ EXCEPINFO *pExcepInfo,
-            /* [out] */ UINT *puArgErr);
+            /* [annotation][in] */ 
+            _In_  DISPID dispIdMember,
+            /* [annotation][in] */ 
+            _In_  REFIID riid,
+            /* [annotation][in] */ 
+            _In_  LCID lcid,
+            /* [annotation][in] */ 
+            _In_  WORD wFlags,
+            /* [annotation][out][in] */ 
+            _In_  DISPPARAMS *pDispParams,
+            /* [annotation][out] */ 
+            _Out_opt_  VARIANT *pVarResult,
+            /* [annotation][out] */ 
+            _Out_opt_  EXCEPINFO *pExcepInfo,
+            /* [annotation][out] */ 
+            _Out_opt_  UINT *puArgErr);
         
         END_INTERFACE
     } IDlgPrefTransformVtbl;
@@ -5570,26 +5976,26 @@ DEFINE_GUID(DIID_IDlgPrefTransform,0x37A70D20,0xC757,0x11CE,0xB1,0xC9,0x44,0x45,
 
 
 #define IDlgPrefTransform_QueryInterface(This,riid,ppvObject)	\
-    (This)->lpVtbl -> QueryInterface(This,riid,ppvObject)
+    ( (This)->lpVtbl -> QueryInterface(This,riid,ppvObject) ) 
 
 #define IDlgPrefTransform_AddRef(This)	\
-    (This)->lpVtbl -> AddRef(This)
+    ( (This)->lpVtbl -> AddRef(This) ) 
 
 #define IDlgPrefTransform_Release(This)	\
-    (This)->lpVtbl -> Release(This)
+    ( (This)->lpVtbl -> Release(This) ) 
 
 
 #define IDlgPrefTransform_GetTypeInfoCount(This,pctinfo)	\
-    (This)->lpVtbl -> GetTypeInfoCount(This,pctinfo)
+    ( (This)->lpVtbl -> GetTypeInfoCount(This,pctinfo) ) 
 
 #define IDlgPrefTransform_GetTypeInfo(This,iTInfo,lcid,ppTInfo)	\
-    (This)->lpVtbl -> GetTypeInfo(This,iTInfo,lcid,ppTInfo)
+    ( (This)->lpVtbl -> GetTypeInfo(This,iTInfo,lcid,ppTInfo) ) 
 
 #define IDlgPrefTransform_GetIDsOfNames(This,riid,rgszNames,cNames,lcid,rgDispId)	\
-    (This)->lpVtbl -> GetIDsOfNames(This,riid,rgszNames,cNames,lcid,rgDispId)
+    ( (This)->lpVtbl -> GetIDsOfNames(This,riid,rgszNames,cNames,lcid,rgDispId) ) 
 
 #define IDlgPrefTransform_Invoke(This,dispIdMember,riid,lcid,wFlags,pDispParams,pVarResult,pExcepInfo,puArgErr)	\
-    (This)->lpVtbl -> Invoke(This,dispIdMember,riid,lcid,wFlags,pDispParams,pVarResult,pExcepInfo,puArgErr)
+    ( (This)->lpVtbl -> Invoke(This,dispIdMember,riid,lcid,wFlags,pDispParams,pVarResult,pExcepInfo,puArgErr) ) 
 
 #endif /* COBJMACROS */
 
@@ -5600,7 +6006,7 @@ DEFINE_GUID(DIID_IDlgPrefTransform,0x37A70D20,0xC757,0x11CE,0xB1,0xC9,0x44,0x45,
 #endif 	/* __IDlgPrefTransform_DISPINTERFACE_DEFINED__ */
 
 
-DEFINE_GUID(CLSID_CDlgPrefTransform,0x37A70D21,0xC757,0x11CE,0xB1,0xC9,0x44,0x45,0x53,0x54,0x00,0x00);
+EXTERN_C const CLSID CLSID_CDlgPrefTransform;
 
 #ifdef __cplusplus
 
@@ -5615,7 +6021,7 @@ CDlgPrefTransform;
 /* [uuid] */ 
 
 
-DEFINE_GUID(DIID_IDlgPlaySound,0x80FF7480,0xE9E9,0x11CE,0xB1,0xCB,0x44,0x45,0x53,0x54,0x00,0x00);
+EXTERN_C const IID DIID_IDlgPlaySound;
 
 #if defined(__cplusplus) && !defined(CINTERFACE)
 
@@ -5633,7 +6039,8 @@ DEFINE_GUID(DIID_IDlgPlaySound,0x80FF7480,0xE9E9,0x11CE,0xB1,0xCB,0x44,0x45,0x53
         HRESULT ( STDMETHODCALLTYPE *QueryInterface )( 
             IDlgPlaySound * This,
             /* [in] */ REFIID riid,
-            /* [iid_is][out] */ void **ppvObject);
+            /* [annotation][iid_is][out] */ 
+            _COM_Outptr_  void **ppvObject);
         
         ULONG ( STDMETHODCALLTYPE *AddRef )( 
             IDlgPlaySound * This);
@@ -5655,20 +6062,28 @@ DEFINE_GUID(DIID_IDlgPlaySound,0x80FF7480,0xE9E9,0x11CE,0xB1,0xCB,0x44,0x45,0x53
             IDlgPlaySound * This,
             /* [in] */ REFIID riid,
             /* [size_is][in] */ LPOLESTR *rgszNames,
-            /* [in] */ UINT cNames,
+            /* [range][in] */ UINT cNames,
             /* [in] */ LCID lcid,
             /* [size_is][out] */ DISPID *rgDispId);
         
         /* [local] */ HRESULT ( STDMETHODCALLTYPE *Invoke )( 
             IDlgPlaySound * This,
-            /* [in] */ DISPID dispIdMember,
-            /* [in] */ REFIID riid,
-            /* [in] */ LCID lcid,
-            /* [in] */ WORD wFlags,
-            /* [out][in] */ DISPPARAMS *pDispParams,
-            /* [out] */ VARIANT *pVarResult,
-            /* [out] */ EXCEPINFO *pExcepInfo,
-            /* [out] */ UINT *puArgErr);
+            /* [annotation][in] */ 
+            _In_  DISPID dispIdMember,
+            /* [annotation][in] */ 
+            _In_  REFIID riid,
+            /* [annotation][in] */ 
+            _In_  LCID lcid,
+            /* [annotation][in] */ 
+            _In_  WORD wFlags,
+            /* [annotation][out][in] */ 
+            _In_  DISPPARAMS *pDispParams,
+            /* [annotation][out] */ 
+            _Out_opt_  VARIANT *pVarResult,
+            /* [annotation][out] */ 
+            _Out_opt_  EXCEPINFO *pExcepInfo,
+            /* [annotation][out] */ 
+            _Out_opt_  UINT *puArgErr);
         
         END_INTERFACE
     } IDlgPlaySoundVtbl;
@@ -5684,26 +6099,26 @@ DEFINE_GUID(DIID_IDlgPlaySound,0x80FF7480,0xE9E9,0x11CE,0xB1,0xCB,0x44,0x45,0x53
 
 
 #define IDlgPlaySound_QueryInterface(This,riid,ppvObject)	\
-    (This)->lpVtbl -> QueryInterface(This,riid,ppvObject)
+    ( (This)->lpVtbl -> QueryInterface(This,riid,ppvObject) ) 
 
 #define IDlgPlaySound_AddRef(This)	\
-    (This)->lpVtbl -> AddRef(This)
+    ( (This)->lpVtbl -> AddRef(This) ) 
 
 #define IDlgPlaySound_Release(This)	\
-    (This)->lpVtbl -> Release(This)
+    ( (This)->lpVtbl -> Release(This) ) 
 
 
 #define IDlgPlaySound_GetTypeInfoCount(This,pctinfo)	\
-    (This)->lpVtbl -> GetTypeInfoCount(This,pctinfo)
+    ( (This)->lpVtbl -> GetTypeInfoCount(This,pctinfo) ) 
 
 #define IDlgPlaySound_GetTypeInfo(This,iTInfo,lcid,ppTInfo)	\
-    (This)->lpVtbl -> GetTypeInfo(This,iTInfo,lcid,ppTInfo)
+    ( (This)->lpVtbl -> GetTypeInfo(This,iTInfo,lcid,ppTInfo) ) 
 
 #define IDlgPlaySound_GetIDsOfNames(This,riid,rgszNames,cNames,lcid,rgDispId)	\
-    (This)->lpVtbl -> GetIDsOfNames(This,riid,rgszNames,cNames,lcid,rgDispId)
+    ( (This)->lpVtbl -> GetIDsOfNames(This,riid,rgszNames,cNames,lcid,rgDispId) ) 
 
 #define IDlgPlaySound_Invoke(This,dispIdMember,riid,lcid,wFlags,pDispParams,pVarResult,pExcepInfo,puArgErr)	\
-    (This)->lpVtbl -> Invoke(This,dispIdMember,riid,lcid,wFlags,pDispParams,pVarResult,pExcepInfo,puArgErr)
+    ( (This)->lpVtbl -> Invoke(This,dispIdMember,riid,lcid,wFlags,pDispParams,pVarResult,pExcepInfo,puArgErr) ) 
 
 #endif /* COBJMACROS */
 
@@ -5714,7 +6129,7 @@ DEFINE_GUID(DIID_IDlgPlaySound,0x80FF7480,0xE9E9,0x11CE,0xB1,0xCB,0x44,0x45,0x53
 #endif 	/* __IDlgPlaySound_DISPINTERFACE_DEFINED__ */
 
 
-DEFINE_GUID(CLSID_CDlgPlaySound,0x80FF7481,0xE9E9,0x11CE,0xB1,0xCB,0x44,0x45,0x53,0x54,0x00,0x00);
+EXTERN_C const CLSID CLSID_CDlgPlaySound;
 
 #ifdef __cplusplus
 
@@ -5729,7 +6144,7 @@ CDlgPlaySound;
 /* [uuid] */ 
 
 
-DEFINE_GUID(DIID_IDlgPrefNetwork,0xDC271960,0xEDB0,0x11CE,0xB1,0xCB,0x44,0x45,0x53,0x54,0x00,0x00);
+EXTERN_C const IID DIID_IDlgPrefNetwork;
 
 #if defined(__cplusplus) && !defined(CINTERFACE)
 
@@ -5747,7 +6162,8 @@ DEFINE_GUID(DIID_IDlgPrefNetwork,0xDC271960,0xEDB0,0x11CE,0xB1,0xCB,0x44,0x45,0x
         HRESULT ( STDMETHODCALLTYPE *QueryInterface )( 
             IDlgPrefNetwork * This,
             /* [in] */ REFIID riid,
-            /* [iid_is][out] */ void **ppvObject);
+            /* [annotation][iid_is][out] */ 
+            _COM_Outptr_  void **ppvObject);
         
         ULONG ( STDMETHODCALLTYPE *AddRef )( 
             IDlgPrefNetwork * This);
@@ -5769,20 +6185,28 @@ DEFINE_GUID(DIID_IDlgPrefNetwork,0xDC271960,0xEDB0,0x11CE,0xB1,0xCB,0x44,0x45,0x
             IDlgPrefNetwork * This,
             /* [in] */ REFIID riid,
             /* [size_is][in] */ LPOLESTR *rgszNames,
-            /* [in] */ UINT cNames,
+            /* [range][in] */ UINT cNames,
             /* [in] */ LCID lcid,
             /* [size_is][out] */ DISPID *rgDispId);
         
         /* [local] */ HRESULT ( STDMETHODCALLTYPE *Invoke )( 
             IDlgPrefNetwork * This,
-            /* [in] */ DISPID dispIdMember,
-            /* [in] */ REFIID riid,
-            /* [in] */ LCID lcid,
-            /* [in] */ WORD wFlags,
-            /* [out][in] */ DISPPARAMS *pDispParams,
-            /* [out] */ VARIANT *pVarResult,
-            /* [out] */ EXCEPINFO *pExcepInfo,
-            /* [out] */ UINT *puArgErr);
+            /* [annotation][in] */ 
+            _In_  DISPID dispIdMember,
+            /* [annotation][in] */ 
+            _In_  REFIID riid,
+            /* [annotation][in] */ 
+            _In_  LCID lcid,
+            /* [annotation][in] */ 
+            _In_  WORD wFlags,
+            /* [annotation][out][in] */ 
+            _In_  DISPPARAMS *pDispParams,
+            /* [annotation][out] */ 
+            _Out_opt_  VARIANT *pVarResult,
+            /* [annotation][out] */ 
+            _Out_opt_  EXCEPINFO *pExcepInfo,
+            /* [annotation][out] */ 
+            _Out_opt_  UINT *puArgErr);
         
         END_INTERFACE
     } IDlgPrefNetworkVtbl;
@@ -5798,26 +6222,26 @@ DEFINE_GUID(DIID_IDlgPrefNetwork,0xDC271960,0xEDB0,0x11CE,0xB1,0xCB,0x44,0x45,0x
 
 
 #define IDlgPrefNetwork_QueryInterface(This,riid,ppvObject)	\
-    (This)->lpVtbl -> QueryInterface(This,riid,ppvObject)
+    ( (This)->lpVtbl -> QueryInterface(This,riid,ppvObject) ) 
 
 #define IDlgPrefNetwork_AddRef(This)	\
-    (This)->lpVtbl -> AddRef(This)
+    ( (This)->lpVtbl -> AddRef(This) ) 
 
 #define IDlgPrefNetwork_Release(This)	\
-    (This)->lpVtbl -> Release(This)
+    ( (This)->lpVtbl -> Release(This) ) 
 
 
 #define IDlgPrefNetwork_GetTypeInfoCount(This,pctinfo)	\
-    (This)->lpVtbl -> GetTypeInfoCount(This,pctinfo)
+    ( (This)->lpVtbl -> GetTypeInfoCount(This,pctinfo) ) 
 
 #define IDlgPrefNetwork_GetTypeInfo(This,iTInfo,lcid,ppTInfo)	\
-    (This)->lpVtbl -> GetTypeInfo(This,iTInfo,lcid,ppTInfo)
+    ( (This)->lpVtbl -> GetTypeInfo(This,iTInfo,lcid,ppTInfo) ) 
 
 #define IDlgPrefNetwork_GetIDsOfNames(This,riid,rgszNames,cNames,lcid,rgDispId)	\
-    (This)->lpVtbl -> GetIDsOfNames(This,riid,rgszNames,cNames,lcid,rgDispId)
+    ( (This)->lpVtbl -> GetIDsOfNames(This,riid,rgszNames,cNames,lcid,rgDispId) ) 
 
 #define IDlgPrefNetwork_Invoke(This,dispIdMember,riid,lcid,wFlags,pDispParams,pVarResult,pExcepInfo,puArgErr)	\
-    (This)->lpVtbl -> Invoke(This,dispIdMember,riid,lcid,wFlags,pDispParams,pVarResult,pExcepInfo,puArgErr)
+    ( (This)->lpVtbl -> Invoke(This,dispIdMember,riid,lcid,wFlags,pDispParams,pVarResult,pExcepInfo,puArgErr) ) 
 
 #endif /* COBJMACROS */
 
@@ -5828,7 +6252,7 @@ DEFINE_GUID(DIID_IDlgPrefNetwork,0xDC271960,0xEDB0,0x11CE,0xB1,0xCB,0x44,0x45,0x
 #endif 	/* __IDlgPrefNetwork_DISPINTERFACE_DEFINED__ */
 
 
-DEFINE_GUID(CLSID_CDlgPrefNetwork,0xDC271961,0xEDB0,0x11CE,0xB1,0xCB,0x44,0x45,0x53,0x54,0x00,0x00);
+EXTERN_C const CLSID CLSID_CDlgPrefNetwork;
 
 #ifdef __cplusplus
 
@@ -5843,7 +6267,7 @@ CDlgPrefNetwork;
 /* [uuid] */ 
 
 
-DEFINE_GUID(DIID_IDlgPassiveProp,0xF5FCE180,0xEE78,0x11CE,0xB1,0xCB,0x44,0x45,0x53,0x54,0x00,0x00);
+EXTERN_C const IID DIID_IDlgPassiveProp;
 
 #if defined(__cplusplus) && !defined(CINTERFACE)
 
@@ -5861,7 +6285,8 @@ DEFINE_GUID(DIID_IDlgPassiveProp,0xF5FCE180,0xEE78,0x11CE,0xB1,0xCB,0x44,0x45,0x
         HRESULT ( STDMETHODCALLTYPE *QueryInterface )( 
             IDlgPassiveProp * This,
             /* [in] */ REFIID riid,
-            /* [iid_is][out] */ void **ppvObject);
+            /* [annotation][iid_is][out] */ 
+            _COM_Outptr_  void **ppvObject);
         
         ULONG ( STDMETHODCALLTYPE *AddRef )( 
             IDlgPassiveProp * This);
@@ -5883,20 +6308,28 @@ DEFINE_GUID(DIID_IDlgPassiveProp,0xF5FCE180,0xEE78,0x11CE,0xB1,0xCB,0x44,0x45,0x
             IDlgPassiveProp * This,
             /* [in] */ REFIID riid,
             /* [size_is][in] */ LPOLESTR *rgszNames,
-            /* [in] */ UINT cNames,
+            /* [range][in] */ UINT cNames,
             /* [in] */ LCID lcid,
             /* [size_is][out] */ DISPID *rgDispId);
         
         /* [local] */ HRESULT ( STDMETHODCALLTYPE *Invoke )( 
             IDlgPassiveProp * This,
-            /* [in] */ DISPID dispIdMember,
-            /* [in] */ REFIID riid,
-            /* [in] */ LCID lcid,
-            /* [in] */ WORD wFlags,
-            /* [out][in] */ DISPPARAMS *pDispParams,
-            /* [out] */ VARIANT *pVarResult,
-            /* [out] */ EXCEPINFO *pExcepInfo,
-            /* [out] */ UINT *puArgErr);
+            /* [annotation][in] */ 
+            _In_  DISPID dispIdMember,
+            /* [annotation][in] */ 
+            _In_  REFIID riid,
+            /* [annotation][in] */ 
+            _In_  LCID lcid,
+            /* [annotation][in] */ 
+            _In_  WORD wFlags,
+            /* [annotation][out][in] */ 
+            _In_  DISPPARAMS *pDispParams,
+            /* [annotation][out] */ 
+            _Out_opt_  VARIANT *pVarResult,
+            /* [annotation][out] */ 
+            _Out_opt_  EXCEPINFO *pExcepInfo,
+            /* [annotation][out] */ 
+            _Out_opt_  UINT *puArgErr);
         
         END_INTERFACE
     } IDlgPassivePropVtbl;
@@ -5912,26 +6345,26 @@ DEFINE_GUID(DIID_IDlgPassiveProp,0xF5FCE180,0xEE78,0x11CE,0xB1,0xCB,0x44,0x45,0x
 
 
 #define IDlgPassiveProp_QueryInterface(This,riid,ppvObject)	\
-    (This)->lpVtbl -> QueryInterface(This,riid,ppvObject)
+    ( (This)->lpVtbl -> QueryInterface(This,riid,ppvObject) ) 
 
 #define IDlgPassiveProp_AddRef(This)	\
-    (This)->lpVtbl -> AddRef(This)
+    ( (This)->lpVtbl -> AddRef(This) ) 
 
 #define IDlgPassiveProp_Release(This)	\
-    (This)->lpVtbl -> Release(This)
+    ( (This)->lpVtbl -> Release(This) ) 
 
 
 #define IDlgPassiveProp_GetTypeInfoCount(This,pctinfo)	\
-    (This)->lpVtbl -> GetTypeInfoCount(This,pctinfo)
+    ( (This)->lpVtbl -> GetTypeInfoCount(This,pctinfo) ) 
 
 #define IDlgPassiveProp_GetTypeInfo(This,iTInfo,lcid,ppTInfo)	\
-    (This)->lpVtbl -> GetTypeInfo(This,iTInfo,lcid,ppTInfo)
+    ( (This)->lpVtbl -> GetTypeInfo(This,iTInfo,lcid,ppTInfo) ) 
 
 #define IDlgPassiveProp_GetIDsOfNames(This,riid,rgszNames,cNames,lcid,rgDispId)	\
-    (This)->lpVtbl -> GetIDsOfNames(This,riid,rgszNames,cNames,lcid,rgDispId)
+    ( (This)->lpVtbl -> GetIDsOfNames(This,riid,rgszNames,cNames,lcid,rgDispId) ) 
 
 #define IDlgPassiveProp_Invoke(This,dispIdMember,riid,lcid,wFlags,pDispParams,pVarResult,pExcepInfo,puArgErr)	\
-    (This)->lpVtbl -> Invoke(This,dispIdMember,riid,lcid,wFlags,pDispParams,pVarResult,pExcepInfo,puArgErr)
+    ( (This)->lpVtbl -> Invoke(This,dispIdMember,riid,lcid,wFlags,pDispParams,pVarResult,pExcepInfo,puArgErr) ) 
 
 #endif /* COBJMACROS */
 
@@ -5942,7 +6375,7 @@ DEFINE_GUID(DIID_IDlgPassiveProp,0xF5FCE180,0xEE78,0x11CE,0xB1,0xCB,0x44,0x45,0x
 #endif 	/* __IDlgPassiveProp_DISPINTERFACE_DEFINED__ */
 
 
-DEFINE_GUID(CLSID_CDlgPassiveProp,0xF5FCE181,0xEE78,0x11CE,0xB1,0xCB,0x44,0x45,0x53,0x54,0x00,0x00);
+EXTERN_C const CLSID CLSID_CDlgPassiveProp;
 
 #ifdef __cplusplus
 
@@ -5957,7 +6390,7 @@ CDlgPassiveProp;
 /* [uuid] */ 
 
 
-DEFINE_GUID(DIID_IDlgPerturb,0x25A108A0,0xF1DD,0x11CE,0xB1,0xCB,0x44,0x45,0x53,0x54,0x00,0x00);
+EXTERN_C const IID DIID_IDlgPerturb;
 
 #if defined(__cplusplus) && !defined(CINTERFACE)
 
@@ -5975,7 +6408,8 @@ DEFINE_GUID(DIID_IDlgPerturb,0x25A108A0,0xF1DD,0x11CE,0xB1,0xCB,0x44,0x45,0x53,0
         HRESULT ( STDMETHODCALLTYPE *QueryInterface )( 
             IDlgPerturb * This,
             /* [in] */ REFIID riid,
-            /* [iid_is][out] */ void **ppvObject);
+            /* [annotation][iid_is][out] */ 
+            _COM_Outptr_  void **ppvObject);
         
         ULONG ( STDMETHODCALLTYPE *AddRef )( 
             IDlgPerturb * This);
@@ -5997,20 +6431,28 @@ DEFINE_GUID(DIID_IDlgPerturb,0x25A108A0,0xF1DD,0x11CE,0xB1,0xCB,0x44,0x45,0x53,0
             IDlgPerturb * This,
             /* [in] */ REFIID riid,
             /* [size_is][in] */ LPOLESTR *rgszNames,
-            /* [in] */ UINT cNames,
+            /* [range][in] */ UINT cNames,
             /* [in] */ LCID lcid,
             /* [size_is][out] */ DISPID *rgDispId);
         
         /* [local] */ HRESULT ( STDMETHODCALLTYPE *Invoke )( 
             IDlgPerturb * This,
-            /* [in] */ DISPID dispIdMember,
-            /* [in] */ REFIID riid,
-            /* [in] */ LCID lcid,
-            /* [in] */ WORD wFlags,
-            /* [out][in] */ DISPPARAMS *pDispParams,
-            /* [out] */ VARIANT *pVarResult,
-            /* [out] */ EXCEPINFO *pExcepInfo,
-            /* [out] */ UINT *puArgErr);
+            /* [annotation][in] */ 
+            _In_  DISPID dispIdMember,
+            /* [annotation][in] */ 
+            _In_  REFIID riid,
+            /* [annotation][in] */ 
+            _In_  LCID lcid,
+            /* [annotation][in] */ 
+            _In_  WORD wFlags,
+            /* [annotation][out][in] */ 
+            _In_  DISPPARAMS *pDispParams,
+            /* [annotation][out] */ 
+            _Out_opt_  VARIANT *pVarResult,
+            /* [annotation][out] */ 
+            _Out_opt_  EXCEPINFO *pExcepInfo,
+            /* [annotation][out] */ 
+            _Out_opt_  UINT *puArgErr);
         
         END_INTERFACE
     } IDlgPerturbVtbl;
@@ -6026,26 +6468,26 @@ DEFINE_GUID(DIID_IDlgPerturb,0x25A108A0,0xF1DD,0x11CE,0xB1,0xCB,0x44,0x45,0x53,0
 
 
 #define IDlgPerturb_QueryInterface(This,riid,ppvObject)	\
-    (This)->lpVtbl -> QueryInterface(This,riid,ppvObject)
+    ( (This)->lpVtbl -> QueryInterface(This,riid,ppvObject) ) 
 
 #define IDlgPerturb_AddRef(This)	\
-    (This)->lpVtbl -> AddRef(This)
+    ( (This)->lpVtbl -> AddRef(This) ) 
 
 #define IDlgPerturb_Release(This)	\
-    (This)->lpVtbl -> Release(This)
+    ( (This)->lpVtbl -> Release(This) ) 
 
 
 #define IDlgPerturb_GetTypeInfoCount(This,pctinfo)	\
-    (This)->lpVtbl -> GetTypeInfoCount(This,pctinfo)
+    ( (This)->lpVtbl -> GetTypeInfoCount(This,pctinfo) ) 
 
 #define IDlgPerturb_GetTypeInfo(This,iTInfo,lcid,ppTInfo)	\
-    (This)->lpVtbl -> GetTypeInfo(This,iTInfo,lcid,ppTInfo)
+    ( (This)->lpVtbl -> GetTypeInfo(This,iTInfo,lcid,ppTInfo) ) 
 
 #define IDlgPerturb_GetIDsOfNames(This,riid,rgszNames,cNames,lcid,rgDispId)	\
-    (This)->lpVtbl -> GetIDsOfNames(This,riid,rgszNames,cNames,lcid,rgDispId)
+    ( (This)->lpVtbl -> GetIDsOfNames(This,riid,rgszNames,cNames,lcid,rgDispId) ) 
 
 #define IDlgPerturb_Invoke(This,dispIdMember,riid,lcid,wFlags,pDispParams,pVarResult,pExcepInfo,puArgErr)	\
-    (This)->lpVtbl -> Invoke(This,dispIdMember,riid,lcid,wFlags,pDispParams,pVarResult,pExcepInfo,puArgErr)
+    ( (This)->lpVtbl -> Invoke(This,dispIdMember,riid,lcid,wFlags,pDispParams,pVarResult,pExcepInfo,puArgErr) ) 
 
 #endif /* COBJMACROS */
 
@@ -6056,7 +6498,7 @@ DEFINE_GUID(DIID_IDlgPerturb,0x25A108A0,0xF1DD,0x11CE,0xB1,0xCB,0x44,0x45,0x53,0
 #endif 	/* __IDlgPerturb_DISPINTERFACE_DEFINED__ */
 
 
-DEFINE_GUID(CLSID_CDlgPerturb,0x25A108A1,0xF1DD,0x11CE,0xB1,0xCB,0x44,0x45,0x53,0x54,0x00,0x00);
+EXTERN_C const CLSID CLSID_CDlgPerturb;
 
 #ifdef __cplusplus
 
@@ -6071,7 +6513,7 @@ CDlgPerturb;
 /* [uuid] */ 
 
 
-DEFINE_GUID(DIID_IDlgXfCorrelate,0x62C3A720,0xF47A,0x11CE,0xB1,0xCB,0x44,0x45,0x53,0x54,0x00,0x00);
+EXTERN_C const IID DIID_IDlgXfCorrelate;
 
 #if defined(__cplusplus) && !defined(CINTERFACE)
 
@@ -6089,7 +6531,8 @@ DEFINE_GUID(DIID_IDlgXfCorrelate,0x62C3A720,0xF47A,0x11CE,0xB1,0xCB,0x44,0x45,0x
         HRESULT ( STDMETHODCALLTYPE *QueryInterface )( 
             IDlgXfCorrelate * This,
             /* [in] */ REFIID riid,
-            /* [iid_is][out] */ void **ppvObject);
+            /* [annotation][iid_is][out] */ 
+            _COM_Outptr_  void **ppvObject);
         
         ULONG ( STDMETHODCALLTYPE *AddRef )( 
             IDlgXfCorrelate * This);
@@ -6111,20 +6554,28 @@ DEFINE_GUID(DIID_IDlgXfCorrelate,0x62C3A720,0xF47A,0x11CE,0xB1,0xCB,0x44,0x45,0x
             IDlgXfCorrelate * This,
             /* [in] */ REFIID riid,
             /* [size_is][in] */ LPOLESTR *rgszNames,
-            /* [in] */ UINT cNames,
+            /* [range][in] */ UINT cNames,
             /* [in] */ LCID lcid,
             /* [size_is][out] */ DISPID *rgDispId);
         
         /* [local] */ HRESULT ( STDMETHODCALLTYPE *Invoke )( 
             IDlgXfCorrelate * This,
-            /* [in] */ DISPID dispIdMember,
-            /* [in] */ REFIID riid,
-            /* [in] */ LCID lcid,
-            /* [in] */ WORD wFlags,
-            /* [out][in] */ DISPPARAMS *pDispParams,
-            /* [out] */ VARIANT *pVarResult,
-            /* [out] */ EXCEPINFO *pExcepInfo,
-            /* [out] */ UINT *puArgErr);
+            /* [annotation][in] */ 
+            _In_  DISPID dispIdMember,
+            /* [annotation][in] */ 
+            _In_  REFIID riid,
+            /* [annotation][in] */ 
+            _In_  LCID lcid,
+            /* [annotation][in] */ 
+            _In_  WORD wFlags,
+            /* [annotation][out][in] */ 
+            _In_  DISPPARAMS *pDispParams,
+            /* [annotation][out] */ 
+            _Out_opt_  VARIANT *pVarResult,
+            /* [annotation][out] */ 
+            _Out_opt_  EXCEPINFO *pExcepInfo,
+            /* [annotation][out] */ 
+            _Out_opt_  UINT *puArgErr);
         
         END_INTERFACE
     } IDlgXfCorrelateVtbl;
@@ -6140,26 +6591,26 @@ DEFINE_GUID(DIID_IDlgXfCorrelate,0x62C3A720,0xF47A,0x11CE,0xB1,0xCB,0x44,0x45,0x
 
 
 #define IDlgXfCorrelate_QueryInterface(This,riid,ppvObject)	\
-    (This)->lpVtbl -> QueryInterface(This,riid,ppvObject)
+    ( (This)->lpVtbl -> QueryInterface(This,riid,ppvObject) ) 
 
 #define IDlgXfCorrelate_AddRef(This)	\
-    (This)->lpVtbl -> AddRef(This)
+    ( (This)->lpVtbl -> AddRef(This) ) 
 
 #define IDlgXfCorrelate_Release(This)	\
-    (This)->lpVtbl -> Release(This)
+    ( (This)->lpVtbl -> Release(This) ) 
 
 
 #define IDlgXfCorrelate_GetTypeInfoCount(This,pctinfo)	\
-    (This)->lpVtbl -> GetTypeInfoCount(This,pctinfo)
+    ( (This)->lpVtbl -> GetTypeInfoCount(This,pctinfo) ) 
 
 #define IDlgXfCorrelate_GetTypeInfo(This,iTInfo,lcid,ppTInfo)	\
-    (This)->lpVtbl -> GetTypeInfo(This,iTInfo,lcid,ppTInfo)
+    ( (This)->lpVtbl -> GetTypeInfo(This,iTInfo,lcid,ppTInfo) ) 
 
 #define IDlgXfCorrelate_GetIDsOfNames(This,riid,rgszNames,cNames,lcid,rgDispId)	\
-    (This)->lpVtbl -> GetIDsOfNames(This,riid,rgszNames,cNames,lcid,rgDispId)
+    ( (This)->lpVtbl -> GetIDsOfNames(This,riid,rgszNames,cNames,lcid,rgDispId) ) 
 
 #define IDlgXfCorrelate_Invoke(This,dispIdMember,riid,lcid,wFlags,pDispParams,pVarResult,pExcepInfo,puArgErr)	\
-    (This)->lpVtbl -> Invoke(This,dispIdMember,riid,lcid,wFlags,pDispParams,pVarResult,pExcepInfo,puArgErr)
+    ( (This)->lpVtbl -> Invoke(This,dispIdMember,riid,lcid,wFlags,pDispParams,pVarResult,pExcepInfo,puArgErr) ) 
 
 #endif /* COBJMACROS */
 
@@ -6170,7 +6621,7 @@ DEFINE_GUID(DIID_IDlgXfCorrelate,0x62C3A720,0xF47A,0x11CE,0xB1,0xCB,0x44,0x45,0x
 #endif 	/* __IDlgXfCorrelate_DISPINTERFACE_DEFINED__ */
 
 
-DEFINE_GUID(CLSID_CDlgXfCorrelate,0x62C3A721,0xF47A,0x11CE,0xB1,0xCB,0x44,0x45,0x53,0x54,0x00,0x00);
+EXTERN_C const CLSID CLSID_CDlgXfCorrelate;
 
 #ifdef __cplusplus
 
@@ -6185,7 +6636,7 @@ CDlgXfCorrelate;
 /* [uuid] */ 
 
 
-DEFINE_GUID(DIID_IDlgDriver,0xC7800800,0xF5B7,0x11CE,0xB1,0xCB,0x44,0x45,0x53,0x54,0x00,0x00);
+EXTERN_C const IID DIID_IDlgDriver;
 
 #if defined(__cplusplus) && !defined(CINTERFACE)
 
@@ -6203,7 +6654,8 @@ DEFINE_GUID(DIID_IDlgDriver,0xC7800800,0xF5B7,0x11CE,0xB1,0xCB,0x44,0x45,0x53,0x
         HRESULT ( STDMETHODCALLTYPE *QueryInterface )( 
             IDlgDriver * This,
             /* [in] */ REFIID riid,
-            /* [iid_is][out] */ void **ppvObject);
+            /* [annotation][iid_is][out] */ 
+            _COM_Outptr_  void **ppvObject);
         
         ULONG ( STDMETHODCALLTYPE *AddRef )( 
             IDlgDriver * This);
@@ -6225,20 +6677,28 @@ DEFINE_GUID(DIID_IDlgDriver,0xC7800800,0xF5B7,0x11CE,0xB1,0xCB,0x44,0x45,0x53,0x
             IDlgDriver * This,
             /* [in] */ REFIID riid,
             /* [size_is][in] */ LPOLESTR *rgszNames,
-            /* [in] */ UINT cNames,
+            /* [range][in] */ UINT cNames,
             /* [in] */ LCID lcid,
             /* [size_is][out] */ DISPID *rgDispId);
         
         /* [local] */ HRESULT ( STDMETHODCALLTYPE *Invoke )( 
             IDlgDriver * This,
-            /* [in] */ DISPID dispIdMember,
-            /* [in] */ REFIID riid,
-            /* [in] */ LCID lcid,
-            /* [in] */ WORD wFlags,
-            /* [out][in] */ DISPPARAMS *pDispParams,
-            /* [out] */ VARIANT *pVarResult,
-            /* [out] */ EXCEPINFO *pExcepInfo,
-            /* [out] */ UINT *puArgErr);
+            /* [annotation][in] */ 
+            _In_  DISPID dispIdMember,
+            /* [annotation][in] */ 
+            _In_  REFIID riid,
+            /* [annotation][in] */ 
+            _In_  LCID lcid,
+            /* [annotation][in] */ 
+            _In_  WORD wFlags,
+            /* [annotation][out][in] */ 
+            _In_  DISPPARAMS *pDispParams,
+            /* [annotation][out] */ 
+            _Out_opt_  VARIANT *pVarResult,
+            /* [annotation][out] */ 
+            _Out_opt_  EXCEPINFO *pExcepInfo,
+            /* [annotation][out] */ 
+            _Out_opt_  UINT *puArgErr);
         
         END_INTERFACE
     } IDlgDriverVtbl;
@@ -6254,26 +6714,26 @@ DEFINE_GUID(DIID_IDlgDriver,0xC7800800,0xF5B7,0x11CE,0xB1,0xCB,0x44,0x45,0x53,0x
 
 
 #define IDlgDriver_QueryInterface(This,riid,ppvObject)	\
-    (This)->lpVtbl -> QueryInterface(This,riid,ppvObject)
+    ( (This)->lpVtbl -> QueryInterface(This,riid,ppvObject) ) 
 
 #define IDlgDriver_AddRef(This)	\
-    (This)->lpVtbl -> AddRef(This)
+    ( (This)->lpVtbl -> AddRef(This) ) 
 
 #define IDlgDriver_Release(This)	\
-    (This)->lpVtbl -> Release(This)
+    ( (This)->lpVtbl -> Release(This) ) 
 
 
 #define IDlgDriver_GetTypeInfoCount(This,pctinfo)	\
-    (This)->lpVtbl -> GetTypeInfoCount(This,pctinfo)
+    ( (This)->lpVtbl -> GetTypeInfoCount(This,pctinfo) ) 
 
 #define IDlgDriver_GetTypeInfo(This,iTInfo,lcid,ppTInfo)	\
-    (This)->lpVtbl -> GetTypeInfo(This,iTInfo,lcid,ppTInfo)
+    ( (This)->lpVtbl -> GetTypeInfo(This,iTInfo,lcid,ppTInfo) ) 
 
 #define IDlgDriver_GetIDsOfNames(This,riid,rgszNames,cNames,lcid,rgDispId)	\
-    (This)->lpVtbl -> GetIDsOfNames(This,riid,rgszNames,cNames,lcid,rgDispId)
+    ( (This)->lpVtbl -> GetIDsOfNames(This,riid,rgszNames,cNames,lcid,rgDispId) ) 
 
 #define IDlgDriver_Invoke(This,dispIdMember,riid,lcid,wFlags,pDispParams,pVarResult,pExcepInfo,puArgErr)	\
-    (This)->lpVtbl -> Invoke(This,dispIdMember,riid,lcid,wFlags,pDispParams,pVarResult,pExcepInfo,puArgErr)
+    ( (This)->lpVtbl -> Invoke(This,dispIdMember,riid,lcid,wFlags,pDispParams,pVarResult,pExcepInfo,puArgErr) ) 
 
 #endif /* COBJMACROS */
 
@@ -6284,7 +6744,7 @@ DEFINE_GUID(DIID_IDlgDriver,0xC7800800,0xF5B7,0x11CE,0xB1,0xCB,0x44,0x45,0x53,0x
 #endif 	/* __IDlgDriver_DISPINTERFACE_DEFINED__ */
 
 
-DEFINE_GUID(CLSID_CDlgDriver,0xC7800801,0xF5B7,0x11CE,0xB1,0xCB,0x44,0x45,0x53,0x54,0x00,0x00);
+EXTERN_C const CLSID CLSID_CDlgDriver;
 
 #ifdef __cplusplus
 
@@ -6299,7 +6759,7 @@ CDlgDriver;
 /* [uuid] */ 
 
 
-DEFINE_GUID(DIID_IDlgDrData,0xC7800802,0xF5B7,0x11CE,0xB1,0xCB,0x44,0x45,0x53,0x54,0x00,0x00);
+EXTERN_C const IID DIID_IDlgDrData;
 
 #if defined(__cplusplus) && !defined(CINTERFACE)
 
@@ -6317,7 +6777,8 @@ DEFINE_GUID(DIID_IDlgDrData,0xC7800802,0xF5B7,0x11CE,0xB1,0xCB,0x44,0x45,0x53,0x
         HRESULT ( STDMETHODCALLTYPE *QueryInterface )( 
             IDlgDrData * This,
             /* [in] */ REFIID riid,
-            /* [iid_is][out] */ void **ppvObject);
+            /* [annotation][iid_is][out] */ 
+            _COM_Outptr_  void **ppvObject);
         
         ULONG ( STDMETHODCALLTYPE *AddRef )( 
             IDlgDrData * This);
@@ -6339,20 +6800,28 @@ DEFINE_GUID(DIID_IDlgDrData,0xC7800802,0xF5B7,0x11CE,0xB1,0xCB,0x44,0x45,0x53,0x
             IDlgDrData * This,
             /* [in] */ REFIID riid,
             /* [size_is][in] */ LPOLESTR *rgszNames,
-            /* [in] */ UINT cNames,
+            /* [range][in] */ UINT cNames,
             /* [in] */ LCID lcid,
             /* [size_is][out] */ DISPID *rgDispId);
         
         /* [local] */ HRESULT ( STDMETHODCALLTYPE *Invoke )( 
             IDlgDrData * This,
-            /* [in] */ DISPID dispIdMember,
-            /* [in] */ REFIID riid,
-            /* [in] */ LCID lcid,
-            /* [in] */ WORD wFlags,
-            /* [out][in] */ DISPPARAMS *pDispParams,
-            /* [out] */ VARIANT *pVarResult,
-            /* [out] */ EXCEPINFO *pExcepInfo,
-            /* [out] */ UINT *puArgErr);
+            /* [annotation][in] */ 
+            _In_  DISPID dispIdMember,
+            /* [annotation][in] */ 
+            _In_  REFIID riid,
+            /* [annotation][in] */ 
+            _In_  LCID lcid,
+            /* [annotation][in] */ 
+            _In_  WORD wFlags,
+            /* [annotation][out][in] */ 
+            _In_  DISPPARAMS *pDispParams,
+            /* [annotation][out] */ 
+            _Out_opt_  VARIANT *pVarResult,
+            /* [annotation][out] */ 
+            _Out_opt_  EXCEPINFO *pExcepInfo,
+            /* [annotation][out] */ 
+            _Out_opt_  UINT *puArgErr);
         
         END_INTERFACE
     } IDlgDrDataVtbl;
@@ -6368,26 +6837,26 @@ DEFINE_GUID(DIID_IDlgDrData,0xC7800802,0xF5B7,0x11CE,0xB1,0xCB,0x44,0x45,0x53,0x
 
 
 #define IDlgDrData_QueryInterface(This,riid,ppvObject)	\
-    (This)->lpVtbl -> QueryInterface(This,riid,ppvObject)
+    ( (This)->lpVtbl -> QueryInterface(This,riid,ppvObject) ) 
 
 #define IDlgDrData_AddRef(This)	\
-    (This)->lpVtbl -> AddRef(This)
+    ( (This)->lpVtbl -> AddRef(This) ) 
 
 #define IDlgDrData_Release(This)	\
-    (This)->lpVtbl -> Release(This)
+    ( (This)->lpVtbl -> Release(This) ) 
 
 
 #define IDlgDrData_GetTypeInfoCount(This,pctinfo)	\
-    (This)->lpVtbl -> GetTypeInfoCount(This,pctinfo)
+    ( (This)->lpVtbl -> GetTypeInfoCount(This,pctinfo) ) 
 
 #define IDlgDrData_GetTypeInfo(This,iTInfo,lcid,ppTInfo)	\
-    (This)->lpVtbl -> GetTypeInfo(This,iTInfo,lcid,ppTInfo)
+    ( (This)->lpVtbl -> GetTypeInfo(This,iTInfo,lcid,ppTInfo) ) 
 
 #define IDlgDrData_GetIDsOfNames(This,riid,rgszNames,cNames,lcid,rgDispId)	\
-    (This)->lpVtbl -> GetIDsOfNames(This,riid,rgszNames,cNames,lcid,rgDispId)
+    ( (This)->lpVtbl -> GetIDsOfNames(This,riid,rgszNames,cNames,lcid,rgDispId) ) 
 
 #define IDlgDrData_Invoke(This,dispIdMember,riid,lcid,wFlags,pDispParams,pVarResult,pExcepInfo,puArgErr)	\
-    (This)->lpVtbl -> Invoke(This,dispIdMember,riid,lcid,wFlags,pDispParams,pVarResult,pExcepInfo,puArgErr)
+    ( (This)->lpVtbl -> Invoke(This,dispIdMember,riid,lcid,wFlags,pDispParams,pVarResult,pExcepInfo,puArgErr) ) 
 
 #endif /* COBJMACROS */
 
@@ -6398,7 +6867,7 @@ DEFINE_GUID(DIID_IDlgDrData,0xC7800802,0xF5B7,0x11CE,0xB1,0xCB,0x44,0x45,0x53,0x
 #endif 	/* __IDlgDrData_DISPINTERFACE_DEFINED__ */
 
 
-DEFINE_GUID(CLSID_CDlgDrData,0xC7800803,0xF5B7,0x11CE,0xB1,0xCB,0x44,0x45,0x53,0x54,0x00,0x00);
+EXTERN_C const CLSID CLSID_CDlgDrData;
 
 #ifdef __cplusplus
 
@@ -6413,7 +6882,7 @@ CDlgDrData;
 /* [uuid] */ 
 
 
-DEFINE_GUID(DIID_IDlgDrGeneral,0xC7800804,0xF5B7,0x11CE,0xB1,0xCB,0x44,0x45,0x53,0x54,0x00,0x00);
+EXTERN_C const IID DIID_IDlgDrGeneral;
 
 #if defined(__cplusplus) && !defined(CINTERFACE)
 
@@ -6431,7 +6900,8 @@ DEFINE_GUID(DIID_IDlgDrGeneral,0xC7800804,0xF5B7,0x11CE,0xB1,0xCB,0x44,0x45,0x53
         HRESULT ( STDMETHODCALLTYPE *QueryInterface )( 
             IDlgDrGeneral * This,
             /* [in] */ REFIID riid,
-            /* [iid_is][out] */ void **ppvObject);
+            /* [annotation][iid_is][out] */ 
+            _COM_Outptr_  void **ppvObject);
         
         ULONG ( STDMETHODCALLTYPE *AddRef )( 
             IDlgDrGeneral * This);
@@ -6453,20 +6923,28 @@ DEFINE_GUID(DIID_IDlgDrGeneral,0xC7800804,0xF5B7,0x11CE,0xB1,0xCB,0x44,0x45,0x53
             IDlgDrGeneral * This,
             /* [in] */ REFIID riid,
             /* [size_is][in] */ LPOLESTR *rgszNames,
-            /* [in] */ UINT cNames,
+            /* [range][in] */ UINT cNames,
             /* [in] */ LCID lcid,
             /* [size_is][out] */ DISPID *rgDispId);
         
         /* [local] */ HRESULT ( STDMETHODCALLTYPE *Invoke )( 
             IDlgDrGeneral * This,
-            /* [in] */ DISPID dispIdMember,
-            /* [in] */ REFIID riid,
-            /* [in] */ LCID lcid,
-            /* [in] */ WORD wFlags,
-            /* [out][in] */ DISPPARAMS *pDispParams,
-            /* [out] */ VARIANT *pVarResult,
-            /* [out] */ EXCEPINFO *pExcepInfo,
-            /* [out] */ UINT *puArgErr);
+            /* [annotation][in] */ 
+            _In_  DISPID dispIdMember,
+            /* [annotation][in] */ 
+            _In_  REFIID riid,
+            /* [annotation][in] */ 
+            _In_  LCID lcid,
+            /* [annotation][in] */ 
+            _In_  WORD wFlags,
+            /* [annotation][out][in] */ 
+            _In_  DISPPARAMS *pDispParams,
+            /* [annotation][out] */ 
+            _Out_opt_  VARIANT *pVarResult,
+            /* [annotation][out] */ 
+            _Out_opt_  EXCEPINFO *pExcepInfo,
+            /* [annotation][out] */ 
+            _Out_opt_  UINT *puArgErr);
         
         END_INTERFACE
     } IDlgDrGeneralVtbl;
@@ -6482,26 +6960,26 @@ DEFINE_GUID(DIID_IDlgDrGeneral,0xC7800804,0xF5B7,0x11CE,0xB1,0xCB,0x44,0x45,0x53
 
 
 #define IDlgDrGeneral_QueryInterface(This,riid,ppvObject)	\
-    (This)->lpVtbl -> QueryInterface(This,riid,ppvObject)
+    ( (This)->lpVtbl -> QueryInterface(This,riid,ppvObject) ) 
 
 #define IDlgDrGeneral_AddRef(This)	\
-    (This)->lpVtbl -> AddRef(This)
+    ( (This)->lpVtbl -> AddRef(This) ) 
 
 #define IDlgDrGeneral_Release(This)	\
-    (This)->lpVtbl -> Release(This)
+    ( (This)->lpVtbl -> Release(This) ) 
 
 
 #define IDlgDrGeneral_GetTypeInfoCount(This,pctinfo)	\
-    (This)->lpVtbl -> GetTypeInfoCount(This,pctinfo)
+    ( (This)->lpVtbl -> GetTypeInfoCount(This,pctinfo) ) 
 
 #define IDlgDrGeneral_GetTypeInfo(This,iTInfo,lcid,ppTInfo)	\
-    (This)->lpVtbl -> GetTypeInfo(This,iTInfo,lcid,ppTInfo)
+    ( (This)->lpVtbl -> GetTypeInfo(This,iTInfo,lcid,ppTInfo) ) 
 
 #define IDlgDrGeneral_GetIDsOfNames(This,riid,rgszNames,cNames,lcid,rgDispId)	\
-    (This)->lpVtbl -> GetIDsOfNames(This,riid,rgszNames,cNames,lcid,rgDispId)
+    ( (This)->lpVtbl -> GetIDsOfNames(This,riid,rgszNames,cNames,lcid,rgDispId) ) 
 
 #define IDlgDrGeneral_Invoke(This,dispIdMember,riid,lcid,wFlags,pDispParams,pVarResult,pExcepInfo,puArgErr)	\
-    (This)->lpVtbl -> Invoke(This,dispIdMember,riid,lcid,wFlags,pDispParams,pVarResult,pExcepInfo,puArgErr)
+    ( (This)->lpVtbl -> Invoke(This,dispIdMember,riid,lcid,wFlags,pDispParams,pVarResult,pExcepInfo,puArgErr) ) 
 
 #endif /* COBJMACROS */
 
@@ -6512,7 +6990,7 @@ DEFINE_GUID(DIID_IDlgDrGeneral,0xC7800804,0xF5B7,0x11CE,0xB1,0xCB,0x44,0x45,0x53
 #endif 	/* __IDlgDrGeneral_DISPINTERFACE_DEFINED__ */
 
 
-DEFINE_GUID(CLSID_CDlgDrGeneral,0xC7800805,0xF5B7,0x11CE,0xB1,0xCB,0x44,0x45,0x53,0x54,0x00,0x00);
+EXTERN_C const CLSID CLSID_CDlgDrGeneral;
 
 #ifdef __cplusplus
 
@@ -6527,7 +7005,7 @@ CDlgDrGeneral;
 /* [uuid] */ 
 
 
-DEFINE_GUID(DIID_IDlgDrParms,0xC7800806,0xF5B7,0x11CE,0xB1,0xCB,0x44,0x45,0x53,0x54,0x00,0x00);
+EXTERN_C const IID DIID_IDlgDrParms;
 
 #if defined(__cplusplus) && !defined(CINTERFACE)
 
@@ -6545,7 +7023,8 @@ DEFINE_GUID(DIID_IDlgDrParms,0xC7800806,0xF5B7,0x11CE,0xB1,0xCB,0x44,0x45,0x53,0
         HRESULT ( STDMETHODCALLTYPE *QueryInterface )( 
             IDlgDrParms * This,
             /* [in] */ REFIID riid,
-            /* [iid_is][out] */ void **ppvObject);
+            /* [annotation][iid_is][out] */ 
+            _COM_Outptr_  void **ppvObject);
         
         ULONG ( STDMETHODCALLTYPE *AddRef )( 
             IDlgDrParms * This);
@@ -6567,20 +7046,28 @@ DEFINE_GUID(DIID_IDlgDrParms,0xC7800806,0xF5B7,0x11CE,0xB1,0xCB,0x44,0x45,0x53,0
             IDlgDrParms * This,
             /* [in] */ REFIID riid,
             /* [size_is][in] */ LPOLESTR *rgszNames,
-            /* [in] */ UINT cNames,
+            /* [range][in] */ UINT cNames,
             /* [in] */ LCID lcid,
             /* [size_is][out] */ DISPID *rgDispId);
         
         /* [local] */ HRESULT ( STDMETHODCALLTYPE *Invoke )( 
             IDlgDrParms * This,
-            /* [in] */ DISPID dispIdMember,
-            /* [in] */ REFIID riid,
-            /* [in] */ LCID lcid,
-            /* [in] */ WORD wFlags,
-            /* [out][in] */ DISPPARAMS *pDispParams,
-            /* [out] */ VARIANT *pVarResult,
-            /* [out] */ EXCEPINFO *pExcepInfo,
-            /* [out] */ UINT *puArgErr);
+            /* [annotation][in] */ 
+            _In_  DISPID dispIdMember,
+            /* [annotation][in] */ 
+            _In_  REFIID riid,
+            /* [annotation][in] */ 
+            _In_  LCID lcid,
+            /* [annotation][in] */ 
+            _In_  WORD wFlags,
+            /* [annotation][out][in] */ 
+            _In_  DISPPARAMS *pDispParams,
+            /* [annotation][out] */ 
+            _Out_opt_  VARIANT *pVarResult,
+            /* [annotation][out] */ 
+            _Out_opt_  EXCEPINFO *pExcepInfo,
+            /* [annotation][out] */ 
+            _Out_opt_  UINT *puArgErr);
         
         END_INTERFACE
     } IDlgDrParmsVtbl;
@@ -6596,26 +7083,26 @@ DEFINE_GUID(DIID_IDlgDrParms,0xC7800806,0xF5B7,0x11CE,0xB1,0xCB,0x44,0x45,0x53,0
 
 
 #define IDlgDrParms_QueryInterface(This,riid,ppvObject)	\
-    (This)->lpVtbl -> QueryInterface(This,riid,ppvObject)
+    ( (This)->lpVtbl -> QueryInterface(This,riid,ppvObject) ) 
 
 #define IDlgDrParms_AddRef(This)	\
-    (This)->lpVtbl -> AddRef(This)
+    ( (This)->lpVtbl -> AddRef(This) ) 
 
 #define IDlgDrParms_Release(This)	\
-    (This)->lpVtbl -> Release(This)
+    ( (This)->lpVtbl -> Release(This) ) 
 
 
 #define IDlgDrParms_GetTypeInfoCount(This,pctinfo)	\
-    (This)->lpVtbl -> GetTypeInfoCount(This,pctinfo)
+    ( (This)->lpVtbl -> GetTypeInfoCount(This,pctinfo) ) 
 
 #define IDlgDrParms_GetTypeInfo(This,iTInfo,lcid,ppTInfo)	\
-    (This)->lpVtbl -> GetTypeInfo(This,iTInfo,lcid,ppTInfo)
+    ( (This)->lpVtbl -> GetTypeInfo(This,iTInfo,lcid,ppTInfo) ) 
 
 #define IDlgDrParms_GetIDsOfNames(This,riid,rgszNames,cNames,lcid,rgDispId)	\
-    (This)->lpVtbl -> GetIDsOfNames(This,riid,rgszNames,cNames,lcid,rgDispId)
+    ( (This)->lpVtbl -> GetIDsOfNames(This,riid,rgszNames,cNames,lcid,rgDispId) ) 
 
 #define IDlgDrParms_Invoke(This,dispIdMember,riid,lcid,wFlags,pDispParams,pVarResult,pExcepInfo,puArgErr)	\
-    (This)->lpVtbl -> Invoke(This,dispIdMember,riid,lcid,wFlags,pDispParams,pVarResult,pExcepInfo,puArgErr)
+    ( (This)->lpVtbl -> Invoke(This,dispIdMember,riid,lcid,wFlags,pDispParams,pVarResult,pExcepInfo,puArgErr) ) 
 
 #endif /* COBJMACROS */
 
@@ -6626,7 +7113,7 @@ DEFINE_GUID(DIID_IDlgDrParms,0xC7800806,0xF5B7,0x11CE,0xB1,0xCB,0x44,0x45,0x53,0
 #endif 	/* __IDlgDrParms_DISPINTERFACE_DEFINED__ */
 
 
-DEFINE_GUID(CLSID_CDlgDrParms,0xC7800807,0xF5B7,0x11CE,0xB1,0xCB,0x44,0x45,0x53,0x54,0x00,0x00);
+EXTERN_C const CLSID CLSID_CDlgDrParms;
 
 #ifdef __cplusplus
 
@@ -6641,7 +7128,7 @@ CDlgDrParms;
 /* [uuid] */ 
 
 
-DEFINE_GUID(DIID_IDlgSelectObject,0xDDE21BA0,0xF6CB,0x11CE,0xB1,0xCB,0x44,0x45,0x53,0x54,0x00,0x00);
+EXTERN_C const IID DIID_IDlgSelectObject;
 
 #if defined(__cplusplus) && !defined(CINTERFACE)
 
@@ -6659,7 +7146,8 @@ DEFINE_GUID(DIID_IDlgSelectObject,0xDDE21BA0,0xF6CB,0x11CE,0xB1,0xCB,0x44,0x45,0
         HRESULT ( STDMETHODCALLTYPE *QueryInterface )( 
             IDlgSelectObject * This,
             /* [in] */ REFIID riid,
-            /* [iid_is][out] */ void **ppvObject);
+            /* [annotation][iid_is][out] */ 
+            _COM_Outptr_  void **ppvObject);
         
         ULONG ( STDMETHODCALLTYPE *AddRef )( 
             IDlgSelectObject * This);
@@ -6681,20 +7169,28 @@ DEFINE_GUID(DIID_IDlgSelectObject,0xDDE21BA0,0xF6CB,0x11CE,0xB1,0xCB,0x44,0x45,0
             IDlgSelectObject * This,
             /* [in] */ REFIID riid,
             /* [size_is][in] */ LPOLESTR *rgszNames,
-            /* [in] */ UINT cNames,
+            /* [range][in] */ UINT cNames,
             /* [in] */ LCID lcid,
             /* [size_is][out] */ DISPID *rgDispId);
         
         /* [local] */ HRESULT ( STDMETHODCALLTYPE *Invoke )( 
             IDlgSelectObject * This,
-            /* [in] */ DISPID dispIdMember,
-            /* [in] */ REFIID riid,
-            /* [in] */ LCID lcid,
-            /* [in] */ WORD wFlags,
-            /* [out][in] */ DISPPARAMS *pDispParams,
-            /* [out] */ VARIANT *pVarResult,
-            /* [out] */ EXCEPINFO *pExcepInfo,
-            /* [out] */ UINT *puArgErr);
+            /* [annotation][in] */ 
+            _In_  DISPID dispIdMember,
+            /* [annotation][in] */ 
+            _In_  REFIID riid,
+            /* [annotation][in] */ 
+            _In_  LCID lcid,
+            /* [annotation][in] */ 
+            _In_  WORD wFlags,
+            /* [annotation][out][in] */ 
+            _In_  DISPPARAMS *pDispParams,
+            /* [annotation][out] */ 
+            _Out_opt_  VARIANT *pVarResult,
+            /* [annotation][out] */ 
+            _Out_opt_  EXCEPINFO *pExcepInfo,
+            /* [annotation][out] */ 
+            _Out_opt_  UINT *puArgErr);
         
         END_INTERFACE
     } IDlgSelectObjectVtbl;
@@ -6710,26 +7206,26 @@ DEFINE_GUID(DIID_IDlgSelectObject,0xDDE21BA0,0xF6CB,0x11CE,0xB1,0xCB,0x44,0x45,0
 
 
 #define IDlgSelectObject_QueryInterface(This,riid,ppvObject)	\
-    (This)->lpVtbl -> QueryInterface(This,riid,ppvObject)
+    ( (This)->lpVtbl -> QueryInterface(This,riid,ppvObject) ) 
 
 #define IDlgSelectObject_AddRef(This)	\
-    (This)->lpVtbl -> AddRef(This)
+    ( (This)->lpVtbl -> AddRef(This) ) 
 
 #define IDlgSelectObject_Release(This)	\
-    (This)->lpVtbl -> Release(This)
+    ( (This)->lpVtbl -> Release(This) ) 
 
 
 #define IDlgSelectObject_GetTypeInfoCount(This,pctinfo)	\
-    (This)->lpVtbl -> GetTypeInfoCount(This,pctinfo)
+    ( (This)->lpVtbl -> GetTypeInfoCount(This,pctinfo) ) 
 
 #define IDlgSelectObject_GetTypeInfo(This,iTInfo,lcid,ppTInfo)	\
-    (This)->lpVtbl -> GetTypeInfo(This,iTInfo,lcid,ppTInfo)
+    ( (This)->lpVtbl -> GetTypeInfo(This,iTInfo,lcid,ppTInfo) ) 
 
 #define IDlgSelectObject_GetIDsOfNames(This,riid,rgszNames,cNames,lcid,rgDispId)	\
-    (This)->lpVtbl -> GetIDsOfNames(This,riid,rgszNames,cNames,lcid,rgDispId)
+    ( (This)->lpVtbl -> GetIDsOfNames(This,riid,rgszNames,cNames,lcid,rgDispId) ) 
 
 #define IDlgSelectObject_Invoke(This,dispIdMember,riid,lcid,wFlags,pDispParams,pVarResult,pExcepInfo,puArgErr)	\
-    (This)->lpVtbl -> Invoke(This,dispIdMember,riid,lcid,wFlags,pDispParams,pVarResult,pExcepInfo,puArgErr)
+    ( (This)->lpVtbl -> Invoke(This,dispIdMember,riid,lcid,wFlags,pDispParams,pVarResult,pExcepInfo,puArgErr) ) 
 
 #endif /* COBJMACROS */
 
@@ -6740,7 +7236,7 @@ DEFINE_GUID(DIID_IDlgSelectObject,0xDDE21BA0,0xF6CB,0x11CE,0xB1,0xCB,0x44,0x45,0
 #endif 	/* __IDlgSelectObject_DISPINTERFACE_DEFINED__ */
 
 
-DEFINE_GUID(CLSID_CDlgSelectObject,0xDDE21BA1,0xF6CB,0x11CE,0xB1,0xCB,0x44,0x45,0x53,0x54,0x00,0x00);
+EXTERN_C const CLSID CLSID_CDlgSelectObject;
 
 #ifdef __cplusplus
 
@@ -6755,7 +7251,7 @@ CDlgSelectObject;
 /* [uuid] */ 
 
 
-DEFINE_GUID(DIID_IDlgSimpleBox,0xCA31E040,0xF996,0x11CE,0xB1,0xCB,0x44,0x45,0x53,0x54,0x00,0x00);
+EXTERN_C const IID DIID_IDlgSimpleBox;
 
 #if defined(__cplusplus) && !defined(CINTERFACE)
 
@@ -6773,7 +7269,8 @@ DEFINE_GUID(DIID_IDlgSimpleBox,0xCA31E040,0xF996,0x11CE,0xB1,0xCB,0x44,0x45,0x53
         HRESULT ( STDMETHODCALLTYPE *QueryInterface )( 
             IDlgSimpleBox * This,
             /* [in] */ REFIID riid,
-            /* [iid_is][out] */ void **ppvObject);
+            /* [annotation][iid_is][out] */ 
+            _COM_Outptr_  void **ppvObject);
         
         ULONG ( STDMETHODCALLTYPE *AddRef )( 
             IDlgSimpleBox * This);
@@ -6795,20 +7292,28 @@ DEFINE_GUID(DIID_IDlgSimpleBox,0xCA31E040,0xF996,0x11CE,0xB1,0xCB,0x44,0x45,0x53
             IDlgSimpleBox * This,
             /* [in] */ REFIID riid,
             /* [size_is][in] */ LPOLESTR *rgszNames,
-            /* [in] */ UINT cNames,
+            /* [range][in] */ UINT cNames,
             /* [in] */ LCID lcid,
             /* [size_is][out] */ DISPID *rgDispId);
         
         /* [local] */ HRESULT ( STDMETHODCALLTYPE *Invoke )( 
             IDlgSimpleBox * This,
-            /* [in] */ DISPID dispIdMember,
-            /* [in] */ REFIID riid,
-            /* [in] */ LCID lcid,
-            /* [in] */ WORD wFlags,
-            /* [out][in] */ DISPPARAMS *pDispParams,
-            /* [out] */ VARIANT *pVarResult,
-            /* [out] */ EXCEPINFO *pExcepInfo,
-            /* [out] */ UINT *puArgErr);
+            /* [annotation][in] */ 
+            _In_  DISPID dispIdMember,
+            /* [annotation][in] */ 
+            _In_  REFIID riid,
+            /* [annotation][in] */ 
+            _In_  LCID lcid,
+            /* [annotation][in] */ 
+            _In_  WORD wFlags,
+            /* [annotation][out][in] */ 
+            _In_  DISPPARAMS *pDispParams,
+            /* [annotation][out] */ 
+            _Out_opt_  VARIANT *pVarResult,
+            /* [annotation][out] */ 
+            _Out_opt_  EXCEPINFO *pExcepInfo,
+            /* [annotation][out] */ 
+            _Out_opt_  UINT *puArgErr);
         
         END_INTERFACE
     } IDlgSimpleBoxVtbl;
@@ -6824,26 +7329,26 @@ DEFINE_GUID(DIID_IDlgSimpleBox,0xCA31E040,0xF996,0x11CE,0xB1,0xCB,0x44,0x45,0x53
 
 
 #define IDlgSimpleBox_QueryInterface(This,riid,ppvObject)	\
-    (This)->lpVtbl -> QueryInterface(This,riid,ppvObject)
+    ( (This)->lpVtbl -> QueryInterface(This,riid,ppvObject) ) 
 
 #define IDlgSimpleBox_AddRef(This)	\
-    (This)->lpVtbl -> AddRef(This)
+    ( (This)->lpVtbl -> AddRef(This) ) 
 
 #define IDlgSimpleBox_Release(This)	\
-    (This)->lpVtbl -> Release(This)
+    ( (This)->lpVtbl -> Release(This) ) 
 
 
 #define IDlgSimpleBox_GetTypeInfoCount(This,pctinfo)	\
-    (This)->lpVtbl -> GetTypeInfoCount(This,pctinfo)
+    ( (This)->lpVtbl -> GetTypeInfoCount(This,pctinfo) ) 
 
 #define IDlgSimpleBox_GetTypeInfo(This,iTInfo,lcid,ppTInfo)	\
-    (This)->lpVtbl -> GetTypeInfo(This,iTInfo,lcid,ppTInfo)
+    ( (This)->lpVtbl -> GetTypeInfo(This,iTInfo,lcid,ppTInfo) ) 
 
 #define IDlgSimpleBox_GetIDsOfNames(This,riid,rgszNames,cNames,lcid,rgDispId)	\
-    (This)->lpVtbl -> GetIDsOfNames(This,riid,rgszNames,cNames,lcid,rgDispId)
+    ( (This)->lpVtbl -> GetIDsOfNames(This,riid,rgszNames,cNames,lcid,rgDispId) ) 
 
 #define IDlgSimpleBox_Invoke(This,dispIdMember,riid,lcid,wFlags,pDispParams,pVarResult,pExcepInfo,puArgErr)	\
-    (This)->lpVtbl -> Invoke(This,dispIdMember,riid,lcid,wFlags,pDispParams,pVarResult,pExcepInfo,puArgErr)
+    ( (This)->lpVtbl -> Invoke(This,dispIdMember,riid,lcid,wFlags,pDispParams,pVarResult,pExcepInfo,puArgErr) ) 
 
 #endif /* COBJMACROS */
 
@@ -6854,7 +7359,7 @@ DEFINE_GUID(DIID_IDlgSimpleBox,0xCA31E040,0xF996,0x11CE,0xB1,0xCB,0x44,0x45,0x53
 #endif 	/* __IDlgSimpleBox_DISPINTERFACE_DEFINED__ */
 
 
-DEFINE_GUID(CLSID_CDlgSimpleBox,0xCA31E041,0xF996,0x11CE,0xB1,0xCB,0x44,0x45,0x53,0x54,0x00,0x00);
+EXTERN_C const CLSID CLSID_CDlgSimpleBox;
 
 #ifdef __cplusplus
 
@@ -6869,7 +7374,7 @@ CDlgSimpleBox;
 /* [uuid] */ 
 
 
-DEFINE_GUID(DIID_IDlgEnGeneral,0x97906F80,0xDB7E,0x11CD,0xB1,0xCC,0x44,0x45,0x53,0x54,0x00,0x00);
+EXTERN_C const IID DIID_IDlgEnGeneral;
 
 #if defined(__cplusplus) && !defined(CINTERFACE)
 
@@ -6887,7 +7392,8 @@ DEFINE_GUID(DIID_IDlgEnGeneral,0x97906F80,0xDB7E,0x11CD,0xB1,0xCC,0x44,0x45,0x53
         HRESULT ( STDMETHODCALLTYPE *QueryInterface )( 
             IDlgEnGeneral * This,
             /* [in] */ REFIID riid,
-            /* [iid_is][out] */ void **ppvObject);
+            /* [annotation][iid_is][out] */ 
+            _COM_Outptr_  void **ppvObject);
         
         ULONG ( STDMETHODCALLTYPE *AddRef )( 
             IDlgEnGeneral * This);
@@ -6909,20 +7415,28 @@ DEFINE_GUID(DIID_IDlgEnGeneral,0x97906F80,0xDB7E,0x11CD,0xB1,0xCC,0x44,0x45,0x53
             IDlgEnGeneral * This,
             /* [in] */ REFIID riid,
             /* [size_is][in] */ LPOLESTR *rgszNames,
-            /* [in] */ UINT cNames,
+            /* [range][in] */ UINT cNames,
             /* [in] */ LCID lcid,
             /* [size_is][out] */ DISPID *rgDispId);
         
         /* [local] */ HRESULT ( STDMETHODCALLTYPE *Invoke )( 
             IDlgEnGeneral * This,
-            /* [in] */ DISPID dispIdMember,
-            /* [in] */ REFIID riid,
-            /* [in] */ LCID lcid,
-            /* [in] */ WORD wFlags,
-            /* [out][in] */ DISPPARAMS *pDispParams,
-            /* [out] */ VARIANT *pVarResult,
-            /* [out] */ EXCEPINFO *pExcepInfo,
-            /* [out] */ UINT *puArgErr);
+            /* [annotation][in] */ 
+            _In_  DISPID dispIdMember,
+            /* [annotation][in] */ 
+            _In_  REFIID riid,
+            /* [annotation][in] */ 
+            _In_  LCID lcid,
+            /* [annotation][in] */ 
+            _In_  WORD wFlags,
+            /* [annotation][out][in] */ 
+            _In_  DISPPARAMS *pDispParams,
+            /* [annotation][out] */ 
+            _Out_opt_  VARIANT *pVarResult,
+            /* [annotation][out] */ 
+            _Out_opt_  EXCEPINFO *pExcepInfo,
+            /* [annotation][out] */ 
+            _Out_opt_  UINT *puArgErr);
         
         END_INTERFACE
     } IDlgEnGeneralVtbl;
@@ -6938,26 +7452,26 @@ DEFINE_GUID(DIID_IDlgEnGeneral,0x97906F80,0xDB7E,0x11CD,0xB1,0xCC,0x44,0x45,0x53
 
 
 #define IDlgEnGeneral_QueryInterface(This,riid,ppvObject)	\
-    (This)->lpVtbl -> QueryInterface(This,riid,ppvObject)
+    ( (This)->lpVtbl -> QueryInterface(This,riid,ppvObject) ) 
 
 #define IDlgEnGeneral_AddRef(This)	\
-    (This)->lpVtbl -> AddRef(This)
+    ( (This)->lpVtbl -> AddRef(This) ) 
 
 #define IDlgEnGeneral_Release(This)	\
-    (This)->lpVtbl -> Release(This)
+    ( (This)->lpVtbl -> Release(This) ) 
 
 
 #define IDlgEnGeneral_GetTypeInfoCount(This,pctinfo)	\
-    (This)->lpVtbl -> GetTypeInfoCount(This,pctinfo)
+    ( (This)->lpVtbl -> GetTypeInfoCount(This,pctinfo) ) 
 
 #define IDlgEnGeneral_GetTypeInfo(This,iTInfo,lcid,ppTInfo)	\
-    (This)->lpVtbl -> GetTypeInfo(This,iTInfo,lcid,ppTInfo)
+    ( (This)->lpVtbl -> GetTypeInfo(This,iTInfo,lcid,ppTInfo) ) 
 
 #define IDlgEnGeneral_GetIDsOfNames(This,riid,rgszNames,cNames,lcid,rgDispId)	\
-    (This)->lpVtbl -> GetIDsOfNames(This,riid,rgszNames,cNames,lcid,rgDispId)
+    ( (This)->lpVtbl -> GetIDsOfNames(This,riid,rgszNames,cNames,lcid,rgDispId) ) 
 
 #define IDlgEnGeneral_Invoke(This,dispIdMember,riid,lcid,wFlags,pDispParams,pVarResult,pExcepInfo,puArgErr)	\
-    (This)->lpVtbl -> Invoke(This,dispIdMember,riid,lcid,wFlags,pDispParams,pVarResult,pExcepInfo,puArgErr)
+    ( (This)->lpVtbl -> Invoke(This,dispIdMember,riid,lcid,wFlags,pDispParams,pVarResult,pExcepInfo,puArgErr) ) 
 
 #endif /* COBJMACROS */
 
@@ -6968,7 +7482,7 @@ DEFINE_GUID(DIID_IDlgEnGeneral,0x97906F80,0xDB7E,0x11CD,0xB1,0xCC,0x44,0x45,0x53
 #endif 	/* __IDlgEnGeneral_DISPINTERFACE_DEFINED__ */
 
 
-DEFINE_GUID(CLSID_CDlgEnGeneral,0x97906F81,0xDB7E,0x11CD,0xB1,0xCC,0x44,0x45,0x53,0x54,0x00,0x00);
+EXTERN_C const CLSID CLSID_CDlgEnGeneral;
 
 #ifdef __cplusplus
 
@@ -6983,7 +7497,7 @@ CDlgEnGeneral;
 /* [uuid] */ 
 
 
-DEFINE_GUID(DIID_IDlgEnParms,0x97906F82,0xDB7E,0x11CD,0xB1,0xCC,0x44,0x45,0x53,0x54,0x00,0x00);
+EXTERN_C const IID DIID_IDlgEnParms;
 
 #if defined(__cplusplus) && !defined(CINTERFACE)
 
@@ -7001,7 +7515,8 @@ DEFINE_GUID(DIID_IDlgEnParms,0x97906F82,0xDB7E,0x11CD,0xB1,0xCC,0x44,0x45,0x53,0
         HRESULT ( STDMETHODCALLTYPE *QueryInterface )( 
             IDlgEnParms * This,
             /* [in] */ REFIID riid,
-            /* [iid_is][out] */ void **ppvObject);
+            /* [annotation][iid_is][out] */ 
+            _COM_Outptr_  void **ppvObject);
         
         ULONG ( STDMETHODCALLTYPE *AddRef )( 
             IDlgEnParms * This);
@@ -7023,20 +7538,28 @@ DEFINE_GUID(DIID_IDlgEnParms,0x97906F82,0xDB7E,0x11CD,0xB1,0xCC,0x44,0x45,0x53,0
             IDlgEnParms * This,
             /* [in] */ REFIID riid,
             /* [size_is][in] */ LPOLESTR *rgszNames,
-            /* [in] */ UINT cNames,
+            /* [range][in] */ UINT cNames,
             /* [in] */ LCID lcid,
             /* [size_is][out] */ DISPID *rgDispId);
         
         /* [local] */ HRESULT ( STDMETHODCALLTYPE *Invoke )( 
             IDlgEnParms * This,
-            /* [in] */ DISPID dispIdMember,
-            /* [in] */ REFIID riid,
-            /* [in] */ LCID lcid,
-            /* [in] */ WORD wFlags,
-            /* [out][in] */ DISPPARAMS *pDispParams,
-            /* [out] */ VARIANT *pVarResult,
-            /* [out] */ EXCEPINFO *pExcepInfo,
-            /* [out] */ UINT *puArgErr);
+            /* [annotation][in] */ 
+            _In_  DISPID dispIdMember,
+            /* [annotation][in] */ 
+            _In_  REFIID riid,
+            /* [annotation][in] */ 
+            _In_  LCID lcid,
+            /* [annotation][in] */ 
+            _In_  WORD wFlags,
+            /* [annotation][out][in] */ 
+            _In_  DISPPARAMS *pDispParams,
+            /* [annotation][out] */ 
+            _Out_opt_  VARIANT *pVarResult,
+            /* [annotation][out] */ 
+            _Out_opt_  EXCEPINFO *pExcepInfo,
+            /* [annotation][out] */ 
+            _Out_opt_  UINT *puArgErr);
         
         END_INTERFACE
     } IDlgEnParmsVtbl;
@@ -7052,26 +7575,26 @@ DEFINE_GUID(DIID_IDlgEnParms,0x97906F82,0xDB7E,0x11CD,0xB1,0xCC,0x44,0x45,0x53,0
 
 
 #define IDlgEnParms_QueryInterface(This,riid,ppvObject)	\
-    (This)->lpVtbl -> QueryInterface(This,riid,ppvObject)
+    ( (This)->lpVtbl -> QueryInterface(This,riid,ppvObject) ) 
 
 #define IDlgEnParms_AddRef(This)	\
-    (This)->lpVtbl -> AddRef(This)
+    ( (This)->lpVtbl -> AddRef(This) ) 
 
 #define IDlgEnParms_Release(This)	\
-    (This)->lpVtbl -> Release(This)
+    ( (This)->lpVtbl -> Release(This) ) 
 
 
 #define IDlgEnParms_GetTypeInfoCount(This,pctinfo)	\
-    (This)->lpVtbl -> GetTypeInfoCount(This,pctinfo)
+    ( (This)->lpVtbl -> GetTypeInfoCount(This,pctinfo) ) 
 
 #define IDlgEnParms_GetTypeInfo(This,iTInfo,lcid,ppTInfo)	\
-    (This)->lpVtbl -> GetTypeInfo(This,iTInfo,lcid,ppTInfo)
+    ( (This)->lpVtbl -> GetTypeInfo(This,iTInfo,lcid,ppTInfo) ) 
 
 #define IDlgEnParms_GetIDsOfNames(This,riid,rgszNames,cNames,lcid,rgDispId)	\
-    (This)->lpVtbl -> GetIDsOfNames(This,riid,rgszNames,cNames,lcid,rgDispId)
+    ( (This)->lpVtbl -> GetIDsOfNames(This,riid,rgszNames,cNames,lcid,rgDispId) ) 
 
 #define IDlgEnParms_Invoke(This,dispIdMember,riid,lcid,wFlags,pDispParams,pVarResult,pExcepInfo,puArgErr)	\
-    (This)->lpVtbl -> Invoke(This,dispIdMember,riid,lcid,wFlags,pDispParams,pVarResult,pExcepInfo,puArgErr)
+    ( (This)->lpVtbl -> Invoke(This,dispIdMember,riid,lcid,wFlags,pDispParams,pVarResult,pExcepInfo,puArgErr) ) 
 
 #endif /* COBJMACROS */
 
@@ -7082,7 +7605,7 @@ DEFINE_GUID(DIID_IDlgEnParms,0x97906F82,0xDB7E,0x11CD,0xB1,0xCC,0x44,0x45,0x53,0
 #endif 	/* __IDlgEnParms_DISPINTERFACE_DEFINED__ */
 
 
-DEFINE_GUID(CLSID_CDlgEnParms,0x97906F83,0xDB7E,0x11CD,0xB1,0xCC,0x44,0x45,0x53,0x54,0x00,0x00);
+EXTERN_C const CLSID CLSID_CDlgEnParms;
 
 #ifdef __cplusplus
 
@@ -7097,7 +7620,7 @@ CDlgEnParms;
 /* [uuid] */ 
 
 
-DEFINE_GUID(DIID_IDlgEnclosure,0x1C2F3DC0,0xDB7F,0x11CD,0xB1,0xCC,0x44,0x45,0x53,0x54,0x00,0x00);
+EXTERN_C const IID DIID_IDlgEnclosure;
 
 #if defined(__cplusplus) && !defined(CINTERFACE)
 
@@ -7115,7 +7638,8 @@ DEFINE_GUID(DIID_IDlgEnclosure,0x1C2F3DC0,0xDB7F,0x11CD,0xB1,0xCC,0x44,0x45,0x53
         HRESULT ( STDMETHODCALLTYPE *QueryInterface )( 
             IDlgEnclosure * This,
             /* [in] */ REFIID riid,
-            /* [iid_is][out] */ void **ppvObject);
+            /* [annotation][iid_is][out] */ 
+            _COM_Outptr_  void **ppvObject);
         
         ULONG ( STDMETHODCALLTYPE *AddRef )( 
             IDlgEnclosure * This);
@@ -7137,20 +7661,28 @@ DEFINE_GUID(DIID_IDlgEnclosure,0x1C2F3DC0,0xDB7F,0x11CD,0xB1,0xCC,0x44,0x45,0x53
             IDlgEnclosure * This,
             /* [in] */ REFIID riid,
             /* [size_is][in] */ LPOLESTR *rgszNames,
-            /* [in] */ UINT cNames,
+            /* [range][in] */ UINT cNames,
             /* [in] */ LCID lcid,
             /* [size_is][out] */ DISPID *rgDispId);
         
         /* [local] */ HRESULT ( STDMETHODCALLTYPE *Invoke )( 
             IDlgEnclosure * This,
-            /* [in] */ DISPID dispIdMember,
-            /* [in] */ REFIID riid,
-            /* [in] */ LCID lcid,
-            /* [in] */ WORD wFlags,
-            /* [out][in] */ DISPPARAMS *pDispParams,
-            /* [out] */ VARIANT *pVarResult,
-            /* [out] */ EXCEPINFO *pExcepInfo,
-            /* [out] */ UINT *puArgErr);
+            /* [annotation][in] */ 
+            _In_  DISPID dispIdMember,
+            /* [annotation][in] */ 
+            _In_  REFIID riid,
+            /* [annotation][in] */ 
+            _In_  LCID lcid,
+            /* [annotation][in] */ 
+            _In_  WORD wFlags,
+            /* [annotation][out][in] */ 
+            _In_  DISPPARAMS *pDispParams,
+            /* [annotation][out] */ 
+            _Out_opt_  VARIANT *pVarResult,
+            /* [annotation][out] */ 
+            _Out_opt_  EXCEPINFO *pExcepInfo,
+            /* [annotation][out] */ 
+            _Out_opt_  UINT *puArgErr);
         
         END_INTERFACE
     } IDlgEnclosureVtbl;
@@ -7166,26 +7698,26 @@ DEFINE_GUID(DIID_IDlgEnclosure,0x1C2F3DC0,0xDB7F,0x11CD,0xB1,0xCC,0x44,0x45,0x53
 
 
 #define IDlgEnclosure_QueryInterface(This,riid,ppvObject)	\
-    (This)->lpVtbl -> QueryInterface(This,riid,ppvObject)
+    ( (This)->lpVtbl -> QueryInterface(This,riid,ppvObject) ) 
 
 #define IDlgEnclosure_AddRef(This)	\
-    (This)->lpVtbl -> AddRef(This)
+    ( (This)->lpVtbl -> AddRef(This) ) 
 
 #define IDlgEnclosure_Release(This)	\
-    (This)->lpVtbl -> Release(This)
+    ( (This)->lpVtbl -> Release(This) ) 
 
 
 #define IDlgEnclosure_GetTypeInfoCount(This,pctinfo)	\
-    (This)->lpVtbl -> GetTypeInfoCount(This,pctinfo)
+    ( (This)->lpVtbl -> GetTypeInfoCount(This,pctinfo) ) 
 
 #define IDlgEnclosure_GetTypeInfo(This,iTInfo,lcid,ppTInfo)	\
-    (This)->lpVtbl -> GetTypeInfo(This,iTInfo,lcid,ppTInfo)
+    ( (This)->lpVtbl -> GetTypeInfo(This,iTInfo,lcid,ppTInfo) ) 
 
 #define IDlgEnclosure_GetIDsOfNames(This,riid,rgszNames,cNames,lcid,rgDispId)	\
-    (This)->lpVtbl -> GetIDsOfNames(This,riid,rgszNames,cNames,lcid,rgDispId)
+    ( (This)->lpVtbl -> GetIDsOfNames(This,riid,rgszNames,cNames,lcid,rgDispId) ) 
 
 #define IDlgEnclosure_Invoke(This,dispIdMember,riid,lcid,wFlags,pDispParams,pVarResult,pExcepInfo,puArgErr)	\
-    (This)->lpVtbl -> Invoke(This,dispIdMember,riid,lcid,wFlags,pDispParams,pVarResult,pExcepInfo,puArgErr)
+    ( (This)->lpVtbl -> Invoke(This,dispIdMember,riid,lcid,wFlags,pDispParams,pVarResult,pExcepInfo,puArgErr) ) 
 
 #endif /* COBJMACROS */
 
@@ -7196,7 +7728,7 @@ DEFINE_GUID(DIID_IDlgEnclosure,0x1C2F3DC0,0xDB7F,0x11CD,0xB1,0xCC,0x44,0x45,0x53
 #endif 	/* __IDlgEnclosure_DISPINTERFACE_DEFINED__ */
 
 
-DEFINE_GUID(CLSID_CDlgEnclosure,0x1C2F3DC1,0xDB7F,0x11CD,0xB1,0xCC,0x44,0x45,0x53,0x54,0x00,0x00);
+EXTERN_C const CLSID CLSID_CDlgEnclosure;
 
 #ifdef __cplusplus
 
@@ -7211,7 +7743,7 @@ CDlgEnclosure;
 /* [uuid] */ 
 
 
-DEFINE_GUID(DIID_IDlgPrefChart,0xA418ED40,0x00A3,0x11CF,0xB1,0xCD,0x44,0x45,0x53,0x54,0x00,0x00);
+EXTERN_C const IID DIID_IDlgPrefChart;
 
 #if defined(__cplusplus) && !defined(CINTERFACE)
 
@@ -7229,7 +7761,8 @@ DEFINE_GUID(DIID_IDlgPrefChart,0xA418ED40,0x00A3,0x11CF,0xB1,0xCD,0x44,0x45,0x53
         HRESULT ( STDMETHODCALLTYPE *QueryInterface )( 
             IDlgPrefChart * This,
             /* [in] */ REFIID riid,
-            /* [iid_is][out] */ void **ppvObject);
+            /* [annotation][iid_is][out] */ 
+            _COM_Outptr_  void **ppvObject);
         
         ULONG ( STDMETHODCALLTYPE *AddRef )( 
             IDlgPrefChart * This);
@@ -7251,20 +7784,28 @@ DEFINE_GUID(DIID_IDlgPrefChart,0xA418ED40,0x00A3,0x11CF,0xB1,0xCD,0x44,0x45,0x53
             IDlgPrefChart * This,
             /* [in] */ REFIID riid,
             /* [size_is][in] */ LPOLESTR *rgszNames,
-            /* [in] */ UINT cNames,
+            /* [range][in] */ UINT cNames,
             /* [in] */ LCID lcid,
             /* [size_is][out] */ DISPID *rgDispId);
         
         /* [local] */ HRESULT ( STDMETHODCALLTYPE *Invoke )( 
             IDlgPrefChart * This,
-            /* [in] */ DISPID dispIdMember,
-            /* [in] */ REFIID riid,
-            /* [in] */ LCID lcid,
-            /* [in] */ WORD wFlags,
-            /* [out][in] */ DISPPARAMS *pDispParams,
-            /* [out] */ VARIANT *pVarResult,
-            /* [out] */ EXCEPINFO *pExcepInfo,
-            /* [out] */ UINT *puArgErr);
+            /* [annotation][in] */ 
+            _In_  DISPID dispIdMember,
+            /* [annotation][in] */ 
+            _In_  REFIID riid,
+            /* [annotation][in] */ 
+            _In_  LCID lcid,
+            /* [annotation][in] */ 
+            _In_  WORD wFlags,
+            /* [annotation][out][in] */ 
+            _In_  DISPPARAMS *pDispParams,
+            /* [annotation][out] */ 
+            _Out_opt_  VARIANT *pVarResult,
+            /* [annotation][out] */ 
+            _Out_opt_  EXCEPINFO *pExcepInfo,
+            /* [annotation][out] */ 
+            _Out_opt_  UINT *puArgErr);
         
         END_INTERFACE
     } IDlgPrefChartVtbl;
@@ -7280,26 +7821,26 @@ DEFINE_GUID(DIID_IDlgPrefChart,0xA418ED40,0x00A3,0x11CF,0xB1,0xCD,0x44,0x45,0x53
 
 
 #define IDlgPrefChart_QueryInterface(This,riid,ppvObject)	\
-    (This)->lpVtbl -> QueryInterface(This,riid,ppvObject)
+    ( (This)->lpVtbl -> QueryInterface(This,riid,ppvObject) ) 
 
 #define IDlgPrefChart_AddRef(This)	\
-    (This)->lpVtbl -> AddRef(This)
+    ( (This)->lpVtbl -> AddRef(This) ) 
 
 #define IDlgPrefChart_Release(This)	\
-    (This)->lpVtbl -> Release(This)
+    ( (This)->lpVtbl -> Release(This) ) 
 
 
 #define IDlgPrefChart_GetTypeInfoCount(This,pctinfo)	\
-    (This)->lpVtbl -> GetTypeInfoCount(This,pctinfo)
+    ( (This)->lpVtbl -> GetTypeInfoCount(This,pctinfo) ) 
 
 #define IDlgPrefChart_GetTypeInfo(This,iTInfo,lcid,ppTInfo)	\
-    (This)->lpVtbl -> GetTypeInfo(This,iTInfo,lcid,ppTInfo)
+    ( (This)->lpVtbl -> GetTypeInfo(This,iTInfo,lcid,ppTInfo) ) 
 
 #define IDlgPrefChart_GetIDsOfNames(This,riid,rgszNames,cNames,lcid,rgDispId)	\
-    (This)->lpVtbl -> GetIDsOfNames(This,riid,rgszNames,cNames,lcid,rgDispId)
+    ( (This)->lpVtbl -> GetIDsOfNames(This,riid,rgszNames,cNames,lcid,rgDispId) ) 
 
 #define IDlgPrefChart_Invoke(This,dispIdMember,riid,lcid,wFlags,pDispParams,pVarResult,pExcepInfo,puArgErr)	\
-    (This)->lpVtbl -> Invoke(This,dispIdMember,riid,lcid,wFlags,pDispParams,pVarResult,pExcepInfo,puArgErr)
+    ( (This)->lpVtbl -> Invoke(This,dispIdMember,riid,lcid,wFlags,pDispParams,pVarResult,pExcepInfo,puArgErr) ) 
 
 #endif /* COBJMACROS */
 
@@ -7310,7 +7851,7 @@ DEFINE_GUID(DIID_IDlgPrefChart,0xA418ED40,0x00A3,0x11CF,0xB1,0xCD,0x44,0x45,0x53
 #endif 	/* __IDlgPrefChart_DISPINTERFACE_DEFINED__ */
 
 
-DEFINE_GUID(CLSID_CDlgPrefChart,0xA418ED41,0x00A3,0x11CF,0xB1,0xCD,0x44,0x45,0x53,0x54,0x00,0x00);
+EXTERN_C const CLSID CLSID_CDlgPrefChart;
 
 #ifdef __cplusplus
 
@@ -7325,7 +7866,7 @@ CDlgPrefChart;
 /* [uuid] */ 
 
 
-DEFINE_GUID(DIID_IDlgGenUserDef,0x96916B20,0x029C,0x11CF,0xB1,0xCD,0x44,0x45,0x53,0x54,0x00,0x00);
+EXTERN_C const IID DIID_IDlgGenUserDef;
 
 #if defined(__cplusplus) && !defined(CINTERFACE)
 
@@ -7343,7 +7884,8 @@ DEFINE_GUID(DIID_IDlgGenUserDef,0x96916B20,0x029C,0x11CF,0xB1,0xCD,0x44,0x45,0x5
         HRESULT ( STDMETHODCALLTYPE *QueryInterface )( 
             IDlgGenUserDef * This,
             /* [in] */ REFIID riid,
-            /* [iid_is][out] */ void **ppvObject);
+            /* [annotation][iid_is][out] */ 
+            _COM_Outptr_  void **ppvObject);
         
         ULONG ( STDMETHODCALLTYPE *AddRef )( 
             IDlgGenUserDef * This);
@@ -7365,20 +7907,28 @@ DEFINE_GUID(DIID_IDlgGenUserDef,0x96916B20,0x029C,0x11CF,0xB1,0xCD,0x44,0x45,0x5
             IDlgGenUserDef * This,
             /* [in] */ REFIID riid,
             /* [size_is][in] */ LPOLESTR *rgszNames,
-            /* [in] */ UINT cNames,
+            /* [range][in] */ UINT cNames,
             /* [in] */ LCID lcid,
             /* [size_is][out] */ DISPID *rgDispId);
         
         /* [local] */ HRESULT ( STDMETHODCALLTYPE *Invoke )( 
             IDlgGenUserDef * This,
-            /* [in] */ DISPID dispIdMember,
-            /* [in] */ REFIID riid,
-            /* [in] */ LCID lcid,
-            /* [in] */ WORD wFlags,
-            /* [out][in] */ DISPPARAMS *pDispParams,
-            /* [out] */ VARIANT *pVarResult,
-            /* [out] */ EXCEPINFO *pExcepInfo,
-            /* [out] */ UINT *puArgErr);
+            /* [annotation][in] */ 
+            _In_  DISPID dispIdMember,
+            /* [annotation][in] */ 
+            _In_  REFIID riid,
+            /* [annotation][in] */ 
+            _In_  LCID lcid,
+            /* [annotation][in] */ 
+            _In_  WORD wFlags,
+            /* [annotation][out][in] */ 
+            _In_  DISPPARAMS *pDispParams,
+            /* [annotation][out] */ 
+            _Out_opt_  VARIANT *pVarResult,
+            /* [annotation][out] */ 
+            _Out_opt_  EXCEPINFO *pExcepInfo,
+            /* [annotation][out] */ 
+            _Out_opt_  UINT *puArgErr);
         
         END_INTERFACE
     } IDlgGenUserDefVtbl;
@@ -7394,26 +7944,26 @@ DEFINE_GUID(DIID_IDlgGenUserDef,0x96916B20,0x029C,0x11CF,0xB1,0xCD,0x44,0x45,0x5
 
 
 #define IDlgGenUserDef_QueryInterface(This,riid,ppvObject)	\
-    (This)->lpVtbl -> QueryInterface(This,riid,ppvObject)
+    ( (This)->lpVtbl -> QueryInterface(This,riid,ppvObject) ) 
 
 #define IDlgGenUserDef_AddRef(This)	\
-    (This)->lpVtbl -> AddRef(This)
+    ( (This)->lpVtbl -> AddRef(This) ) 
 
 #define IDlgGenUserDef_Release(This)	\
-    (This)->lpVtbl -> Release(This)
+    ( (This)->lpVtbl -> Release(This) ) 
 
 
 #define IDlgGenUserDef_GetTypeInfoCount(This,pctinfo)	\
-    (This)->lpVtbl -> GetTypeInfoCount(This,pctinfo)
+    ( (This)->lpVtbl -> GetTypeInfoCount(This,pctinfo) ) 
 
 #define IDlgGenUserDef_GetTypeInfo(This,iTInfo,lcid,ppTInfo)	\
-    (This)->lpVtbl -> GetTypeInfo(This,iTInfo,lcid,ppTInfo)
+    ( (This)->lpVtbl -> GetTypeInfo(This,iTInfo,lcid,ppTInfo) ) 
 
 #define IDlgGenUserDef_GetIDsOfNames(This,riid,rgszNames,cNames,lcid,rgDispId)	\
-    (This)->lpVtbl -> GetIDsOfNames(This,riid,rgszNames,cNames,lcid,rgDispId)
+    ( (This)->lpVtbl -> GetIDsOfNames(This,riid,rgszNames,cNames,lcid,rgDispId) ) 
 
 #define IDlgGenUserDef_Invoke(This,dispIdMember,riid,lcid,wFlags,pDispParams,pVarResult,pExcepInfo,puArgErr)	\
-    (This)->lpVtbl -> Invoke(This,dispIdMember,riid,lcid,wFlags,pDispParams,pVarResult,pExcepInfo,puArgErr)
+    ( (This)->lpVtbl -> Invoke(This,dispIdMember,riid,lcid,wFlags,pDispParams,pVarResult,pExcepInfo,puArgErr) ) 
 
 #endif /* COBJMACROS */
 
@@ -7424,7 +7974,7 @@ DEFINE_GUID(DIID_IDlgGenUserDef,0x96916B20,0x029C,0x11CF,0xB1,0xCD,0x44,0x45,0x5
 #endif 	/* __IDlgGenUserDef_DISPINTERFACE_DEFINED__ */
 
 
-DEFINE_GUID(CLSID_CDlgGenUserDef,0x96916B21,0x029C,0x11CF,0xB1,0xCD,0x44,0x45,0x53,0x54,0x00,0x00);
+EXTERN_C const CLSID CLSID_CDlgGenUserDef;
 
 #ifdef __cplusplus
 
@@ -7439,7 +7989,7 @@ CDlgGenUserDef;
 /* [uuid] */ 
 
 
-DEFINE_GUID(DIID_IDlgGenWarble,0x96916B22,0x029C,0x11CF,0xB1,0xCD,0x44,0x45,0x53,0x54,0x00,0x00);
+EXTERN_C const IID DIID_IDlgGenWarble;
 
 #if defined(__cplusplus) && !defined(CINTERFACE)
 
@@ -7457,7 +8007,8 @@ DEFINE_GUID(DIID_IDlgGenWarble,0x96916B22,0x029C,0x11CF,0xB1,0xCD,0x44,0x45,0x53
         HRESULT ( STDMETHODCALLTYPE *QueryInterface )( 
             IDlgGenWarble * This,
             /* [in] */ REFIID riid,
-            /* [iid_is][out] */ void **ppvObject);
+            /* [annotation][iid_is][out] */ 
+            _COM_Outptr_  void **ppvObject);
         
         ULONG ( STDMETHODCALLTYPE *AddRef )( 
             IDlgGenWarble * This);
@@ -7479,20 +8030,28 @@ DEFINE_GUID(DIID_IDlgGenWarble,0x96916B22,0x029C,0x11CF,0xB1,0xCD,0x44,0x45,0x53
             IDlgGenWarble * This,
             /* [in] */ REFIID riid,
             /* [size_is][in] */ LPOLESTR *rgszNames,
-            /* [in] */ UINT cNames,
+            /* [range][in] */ UINT cNames,
             /* [in] */ LCID lcid,
             /* [size_is][out] */ DISPID *rgDispId);
         
         /* [local] */ HRESULT ( STDMETHODCALLTYPE *Invoke )( 
             IDlgGenWarble * This,
-            /* [in] */ DISPID dispIdMember,
-            /* [in] */ REFIID riid,
-            /* [in] */ LCID lcid,
-            /* [in] */ WORD wFlags,
-            /* [out][in] */ DISPPARAMS *pDispParams,
-            /* [out] */ VARIANT *pVarResult,
-            /* [out] */ EXCEPINFO *pExcepInfo,
-            /* [out] */ UINT *puArgErr);
+            /* [annotation][in] */ 
+            _In_  DISPID dispIdMember,
+            /* [annotation][in] */ 
+            _In_  REFIID riid,
+            /* [annotation][in] */ 
+            _In_  LCID lcid,
+            /* [annotation][in] */ 
+            _In_  WORD wFlags,
+            /* [annotation][out][in] */ 
+            _In_  DISPPARAMS *pDispParams,
+            /* [annotation][out] */ 
+            _Out_opt_  VARIANT *pVarResult,
+            /* [annotation][out] */ 
+            _Out_opt_  EXCEPINFO *pExcepInfo,
+            /* [annotation][out] */ 
+            _Out_opt_  UINT *puArgErr);
         
         END_INTERFACE
     } IDlgGenWarbleVtbl;
@@ -7508,26 +8067,26 @@ DEFINE_GUID(DIID_IDlgGenWarble,0x96916B22,0x029C,0x11CF,0xB1,0xCD,0x44,0x45,0x53
 
 
 #define IDlgGenWarble_QueryInterface(This,riid,ppvObject)	\
-    (This)->lpVtbl -> QueryInterface(This,riid,ppvObject)
+    ( (This)->lpVtbl -> QueryInterface(This,riid,ppvObject) ) 
 
 #define IDlgGenWarble_AddRef(This)	\
-    (This)->lpVtbl -> AddRef(This)
+    ( (This)->lpVtbl -> AddRef(This) ) 
 
 #define IDlgGenWarble_Release(This)	\
-    (This)->lpVtbl -> Release(This)
+    ( (This)->lpVtbl -> Release(This) ) 
 
 
 #define IDlgGenWarble_GetTypeInfoCount(This,pctinfo)	\
-    (This)->lpVtbl -> GetTypeInfoCount(This,pctinfo)
+    ( (This)->lpVtbl -> GetTypeInfoCount(This,pctinfo) ) 
 
 #define IDlgGenWarble_GetTypeInfo(This,iTInfo,lcid,ppTInfo)	\
-    (This)->lpVtbl -> GetTypeInfo(This,iTInfo,lcid,ppTInfo)
+    ( (This)->lpVtbl -> GetTypeInfo(This,iTInfo,lcid,ppTInfo) ) 
 
 #define IDlgGenWarble_GetIDsOfNames(This,riid,rgszNames,cNames,lcid,rgDispId)	\
-    (This)->lpVtbl -> GetIDsOfNames(This,riid,rgszNames,cNames,lcid,rgDispId)
+    ( (This)->lpVtbl -> GetIDsOfNames(This,riid,rgszNames,cNames,lcid,rgDispId) ) 
 
 #define IDlgGenWarble_Invoke(This,dispIdMember,riid,lcid,wFlags,pDispParams,pVarResult,pExcepInfo,puArgErr)	\
-    (This)->lpVtbl -> Invoke(This,dispIdMember,riid,lcid,wFlags,pDispParams,pVarResult,pExcepInfo,puArgErr)
+    ( (This)->lpVtbl -> Invoke(This,dispIdMember,riid,lcid,wFlags,pDispParams,pVarResult,pExcepInfo,puArgErr) ) 
 
 #endif /* COBJMACROS */
 
@@ -7538,7 +8097,7 @@ DEFINE_GUID(DIID_IDlgGenWarble,0x96916B22,0x029C,0x11CF,0xB1,0xCD,0x44,0x45,0x53
 #endif 	/* __IDlgGenWarble_DISPINTERFACE_DEFINED__ */
 
 
-DEFINE_GUID(CLSID_CDlgGenWarble,0x96916B23,0x029C,0x11CF,0xB1,0xCD,0x44,0x45,0x53,0x54,0x00,0x00);
+EXTERN_C const CLSID CLSID_CDlgGenWarble;
 
 #ifdef __cplusplus
 
@@ -7553,7 +8112,7 @@ CDlgGenWarble;
 /* [uuid] */ 
 
 
-DEFINE_GUID(DIID_IDlgXfInvert,0xF34C3880,0x0676,0x11CF,0xB1,0xCD,0x44,0x45,0x53,0x54,0x00,0x00);
+EXTERN_C const IID DIID_IDlgXfInvert;
 
 #if defined(__cplusplus) && !defined(CINTERFACE)
 
@@ -7571,7 +8130,8 @@ DEFINE_GUID(DIID_IDlgXfInvert,0xF34C3880,0x0676,0x11CF,0xB1,0xCD,0x44,0x45,0x53,
         HRESULT ( STDMETHODCALLTYPE *QueryInterface )( 
             IDlgXfInvert * This,
             /* [in] */ REFIID riid,
-            /* [iid_is][out] */ void **ppvObject);
+            /* [annotation][iid_is][out] */ 
+            _COM_Outptr_  void **ppvObject);
         
         ULONG ( STDMETHODCALLTYPE *AddRef )( 
             IDlgXfInvert * This);
@@ -7593,20 +8153,28 @@ DEFINE_GUID(DIID_IDlgXfInvert,0xF34C3880,0x0676,0x11CF,0xB1,0xCD,0x44,0x45,0x53,
             IDlgXfInvert * This,
             /* [in] */ REFIID riid,
             /* [size_is][in] */ LPOLESTR *rgszNames,
-            /* [in] */ UINT cNames,
+            /* [range][in] */ UINT cNames,
             /* [in] */ LCID lcid,
             /* [size_is][out] */ DISPID *rgDispId);
         
         /* [local] */ HRESULT ( STDMETHODCALLTYPE *Invoke )( 
             IDlgXfInvert * This,
-            /* [in] */ DISPID dispIdMember,
-            /* [in] */ REFIID riid,
-            /* [in] */ LCID lcid,
-            /* [in] */ WORD wFlags,
-            /* [out][in] */ DISPPARAMS *pDispParams,
-            /* [out] */ VARIANT *pVarResult,
-            /* [out] */ EXCEPINFO *pExcepInfo,
-            /* [out] */ UINT *puArgErr);
+            /* [annotation][in] */ 
+            _In_  DISPID dispIdMember,
+            /* [annotation][in] */ 
+            _In_  REFIID riid,
+            /* [annotation][in] */ 
+            _In_  LCID lcid,
+            /* [annotation][in] */ 
+            _In_  WORD wFlags,
+            /* [annotation][out][in] */ 
+            _In_  DISPPARAMS *pDispParams,
+            /* [annotation][out] */ 
+            _Out_opt_  VARIANT *pVarResult,
+            /* [annotation][out] */ 
+            _Out_opt_  EXCEPINFO *pExcepInfo,
+            /* [annotation][out] */ 
+            _Out_opt_  UINT *puArgErr);
         
         END_INTERFACE
     } IDlgXfInvertVtbl;
@@ -7622,26 +8190,26 @@ DEFINE_GUID(DIID_IDlgXfInvert,0xF34C3880,0x0676,0x11CF,0xB1,0xCD,0x44,0x45,0x53,
 
 
 #define IDlgXfInvert_QueryInterface(This,riid,ppvObject)	\
-    (This)->lpVtbl -> QueryInterface(This,riid,ppvObject)
+    ( (This)->lpVtbl -> QueryInterface(This,riid,ppvObject) ) 
 
 #define IDlgXfInvert_AddRef(This)	\
-    (This)->lpVtbl -> AddRef(This)
+    ( (This)->lpVtbl -> AddRef(This) ) 
 
 #define IDlgXfInvert_Release(This)	\
-    (This)->lpVtbl -> Release(This)
+    ( (This)->lpVtbl -> Release(This) ) 
 
 
 #define IDlgXfInvert_GetTypeInfoCount(This,pctinfo)	\
-    (This)->lpVtbl -> GetTypeInfoCount(This,pctinfo)
+    ( (This)->lpVtbl -> GetTypeInfoCount(This,pctinfo) ) 
 
 #define IDlgXfInvert_GetTypeInfo(This,iTInfo,lcid,ppTInfo)	\
-    (This)->lpVtbl -> GetTypeInfo(This,iTInfo,lcid,ppTInfo)
+    ( (This)->lpVtbl -> GetTypeInfo(This,iTInfo,lcid,ppTInfo) ) 
 
 #define IDlgXfInvert_GetIDsOfNames(This,riid,rgszNames,cNames,lcid,rgDispId)	\
-    (This)->lpVtbl -> GetIDsOfNames(This,riid,rgszNames,cNames,lcid,rgDispId)
+    ( (This)->lpVtbl -> GetIDsOfNames(This,riid,rgszNames,cNames,lcid,rgDispId) ) 
 
 #define IDlgXfInvert_Invoke(This,dispIdMember,riid,lcid,wFlags,pDispParams,pVarResult,pExcepInfo,puArgErr)	\
-    (This)->lpVtbl -> Invoke(This,dispIdMember,riid,lcid,wFlags,pDispParams,pVarResult,pExcepInfo,puArgErr)
+    ( (This)->lpVtbl -> Invoke(This,dispIdMember,riid,lcid,wFlags,pDispParams,pVarResult,pExcepInfo,puArgErr) ) 
 
 #endif /* COBJMACROS */
 
@@ -7652,7 +8220,7 @@ DEFINE_GUID(DIID_IDlgXfInvert,0xF34C3880,0x0676,0x11CF,0xB1,0xCD,0x44,0x45,0x53,
 #endif 	/* __IDlgXfInvert_DISPINTERFACE_DEFINED__ */
 
 
-DEFINE_GUID(CLSID_CDlgXfInvert,0xF34C3881,0x0676,0x11CF,0xB1,0xCD,0x44,0x45,0x53,0x54,0x00,0x00);
+EXTERN_C const CLSID CLSID_CDlgXfInvert;
 
 #ifdef __cplusplus
 
@@ -7667,7 +8235,7 @@ CDlgXfInvert;
 /* [uuid] */ 
 
 
-DEFINE_GUID(DIID_IDlgMsrPassive,0x544800A0,0x09B1,0x11CF,0xB1,0xCD,0x44,0x45,0x53,0x54,0x00,0x00);
+EXTERN_C const IID DIID_IDlgMsrPassive;
 
 #if defined(__cplusplus) && !defined(CINTERFACE)
 
@@ -7685,7 +8253,8 @@ DEFINE_GUID(DIID_IDlgMsrPassive,0x544800A0,0x09B1,0x11CF,0xB1,0xCD,0x44,0x45,0x5
         HRESULT ( STDMETHODCALLTYPE *QueryInterface )( 
             IDlgMsrPassive * This,
             /* [in] */ REFIID riid,
-            /* [iid_is][out] */ void **ppvObject);
+            /* [annotation][iid_is][out] */ 
+            _COM_Outptr_  void **ppvObject);
         
         ULONG ( STDMETHODCALLTYPE *AddRef )( 
             IDlgMsrPassive * This);
@@ -7707,20 +8276,28 @@ DEFINE_GUID(DIID_IDlgMsrPassive,0x544800A0,0x09B1,0x11CF,0xB1,0xCD,0x44,0x45,0x5
             IDlgMsrPassive * This,
             /* [in] */ REFIID riid,
             /* [size_is][in] */ LPOLESTR *rgszNames,
-            /* [in] */ UINT cNames,
+            /* [range][in] */ UINT cNames,
             /* [in] */ LCID lcid,
             /* [size_is][out] */ DISPID *rgDispId);
         
         /* [local] */ HRESULT ( STDMETHODCALLTYPE *Invoke )( 
             IDlgMsrPassive * This,
-            /* [in] */ DISPID dispIdMember,
-            /* [in] */ REFIID riid,
-            /* [in] */ LCID lcid,
-            /* [in] */ WORD wFlags,
-            /* [out][in] */ DISPPARAMS *pDispParams,
-            /* [out] */ VARIANT *pVarResult,
-            /* [out] */ EXCEPINFO *pExcepInfo,
-            /* [out] */ UINT *puArgErr);
+            /* [annotation][in] */ 
+            _In_  DISPID dispIdMember,
+            /* [annotation][in] */ 
+            _In_  REFIID riid,
+            /* [annotation][in] */ 
+            _In_  LCID lcid,
+            /* [annotation][in] */ 
+            _In_  WORD wFlags,
+            /* [annotation][out][in] */ 
+            _In_  DISPPARAMS *pDispParams,
+            /* [annotation][out] */ 
+            _Out_opt_  VARIANT *pVarResult,
+            /* [annotation][out] */ 
+            _Out_opt_  EXCEPINFO *pExcepInfo,
+            /* [annotation][out] */ 
+            _Out_opt_  UINT *puArgErr);
         
         END_INTERFACE
     } IDlgMsrPassiveVtbl;
@@ -7736,26 +8313,26 @@ DEFINE_GUID(DIID_IDlgMsrPassive,0x544800A0,0x09B1,0x11CF,0xB1,0xCD,0x44,0x45,0x5
 
 
 #define IDlgMsrPassive_QueryInterface(This,riid,ppvObject)	\
-    (This)->lpVtbl -> QueryInterface(This,riid,ppvObject)
+    ( (This)->lpVtbl -> QueryInterface(This,riid,ppvObject) ) 
 
 #define IDlgMsrPassive_AddRef(This)	\
-    (This)->lpVtbl -> AddRef(This)
+    ( (This)->lpVtbl -> AddRef(This) ) 
 
 #define IDlgMsrPassive_Release(This)	\
-    (This)->lpVtbl -> Release(This)
+    ( (This)->lpVtbl -> Release(This) ) 
 
 
 #define IDlgMsrPassive_GetTypeInfoCount(This,pctinfo)	\
-    (This)->lpVtbl -> GetTypeInfoCount(This,pctinfo)
+    ( (This)->lpVtbl -> GetTypeInfoCount(This,pctinfo) ) 
 
 #define IDlgMsrPassive_GetTypeInfo(This,iTInfo,lcid,ppTInfo)	\
-    (This)->lpVtbl -> GetTypeInfo(This,iTInfo,lcid,ppTInfo)
+    ( (This)->lpVtbl -> GetTypeInfo(This,iTInfo,lcid,ppTInfo) ) 
 
 #define IDlgMsrPassive_GetIDsOfNames(This,riid,rgszNames,cNames,lcid,rgDispId)	\
-    (This)->lpVtbl -> GetIDsOfNames(This,riid,rgszNames,cNames,lcid,rgDispId)
+    ( (This)->lpVtbl -> GetIDsOfNames(This,riid,rgszNames,cNames,lcid,rgDispId) ) 
 
 #define IDlgMsrPassive_Invoke(This,dispIdMember,riid,lcid,wFlags,pDispParams,pVarResult,pExcepInfo,puArgErr)	\
-    (This)->lpVtbl -> Invoke(This,dispIdMember,riid,lcid,wFlags,pDispParams,pVarResult,pExcepInfo,puArgErr)
+    ( (This)->lpVtbl -> Invoke(This,dispIdMember,riid,lcid,wFlags,pDispParams,pVarResult,pExcepInfo,puArgErr) ) 
 
 #endif /* COBJMACROS */
 
@@ -7766,7 +8343,7 @@ DEFINE_GUID(DIID_IDlgMsrPassive,0x544800A0,0x09B1,0x11CF,0xB1,0xCD,0x44,0x45,0x5
 #endif 	/* __IDlgMsrPassive_DISPINTERFACE_DEFINED__ */
 
 
-DEFINE_GUID(CLSID_CDlgMsrPassive,0x544800A1,0x09B1,0x11CF,0xB1,0xCD,0x44,0x45,0x53,0x54,0x00,0x00);
+EXTERN_C const CLSID CLSID_CDlgMsrPassive;
 
 #ifdef __cplusplus
 
@@ -7781,7 +8358,7 @@ CDlgMsrPassive;
 /* [uuid] */ 
 
 
-DEFINE_GUID(DIID_IDlgCalcSealed,0x785A3500,0x0AE5,0x11CF,0xB1,0xCD,0x44,0x45,0x53,0x54,0x00,0x00);
+EXTERN_C const IID DIID_IDlgCalcSealed;
 
 #if defined(__cplusplus) && !defined(CINTERFACE)
 
@@ -7799,7 +8376,8 @@ DEFINE_GUID(DIID_IDlgCalcSealed,0x785A3500,0x0AE5,0x11CF,0xB1,0xCD,0x44,0x45,0x5
         HRESULT ( STDMETHODCALLTYPE *QueryInterface )( 
             IDlgCalcSealed * This,
             /* [in] */ REFIID riid,
-            /* [iid_is][out] */ void **ppvObject);
+            /* [annotation][iid_is][out] */ 
+            _COM_Outptr_  void **ppvObject);
         
         ULONG ( STDMETHODCALLTYPE *AddRef )( 
             IDlgCalcSealed * This);
@@ -7821,20 +8399,28 @@ DEFINE_GUID(DIID_IDlgCalcSealed,0x785A3500,0x0AE5,0x11CF,0xB1,0xCD,0x44,0x45,0x5
             IDlgCalcSealed * This,
             /* [in] */ REFIID riid,
             /* [size_is][in] */ LPOLESTR *rgszNames,
-            /* [in] */ UINT cNames,
+            /* [range][in] */ UINT cNames,
             /* [in] */ LCID lcid,
             /* [size_is][out] */ DISPID *rgDispId);
         
         /* [local] */ HRESULT ( STDMETHODCALLTYPE *Invoke )( 
             IDlgCalcSealed * This,
-            /* [in] */ DISPID dispIdMember,
-            /* [in] */ REFIID riid,
-            /* [in] */ LCID lcid,
-            /* [in] */ WORD wFlags,
-            /* [out][in] */ DISPPARAMS *pDispParams,
-            /* [out] */ VARIANT *pVarResult,
-            /* [out] */ EXCEPINFO *pExcepInfo,
-            /* [out] */ UINT *puArgErr);
+            /* [annotation][in] */ 
+            _In_  DISPID dispIdMember,
+            /* [annotation][in] */ 
+            _In_  REFIID riid,
+            /* [annotation][in] */ 
+            _In_  LCID lcid,
+            /* [annotation][in] */ 
+            _In_  WORD wFlags,
+            /* [annotation][out][in] */ 
+            _In_  DISPPARAMS *pDispParams,
+            /* [annotation][out] */ 
+            _Out_opt_  VARIANT *pVarResult,
+            /* [annotation][out] */ 
+            _Out_opt_  EXCEPINFO *pExcepInfo,
+            /* [annotation][out] */ 
+            _Out_opt_  UINT *puArgErr);
         
         END_INTERFACE
     } IDlgCalcSealedVtbl;
@@ -7850,26 +8436,26 @@ DEFINE_GUID(DIID_IDlgCalcSealed,0x785A3500,0x0AE5,0x11CF,0xB1,0xCD,0x44,0x45,0x5
 
 
 #define IDlgCalcSealed_QueryInterface(This,riid,ppvObject)	\
-    (This)->lpVtbl -> QueryInterface(This,riid,ppvObject)
+    ( (This)->lpVtbl -> QueryInterface(This,riid,ppvObject) ) 
 
 #define IDlgCalcSealed_AddRef(This)	\
-    (This)->lpVtbl -> AddRef(This)
+    ( (This)->lpVtbl -> AddRef(This) ) 
 
 #define IDlgCalcSealed_Release(This)	\
-    (This)->lpVtbl -> Release(This)
+    ( (This)->lpVtbl -> Release(This) ) 
 
 
 #define IDlgCalcSealed_GetTypeInfoCount(This,pctinfo)	\
-    (This)->lpVtbl -> GetTypeInfoCount(This,pctinfo)
+    ( (This)->lpVtbl -> GetTypeInfoCount(This,pctinfo) ) 
 
 #define IDlgCalcSealed_GetTypeInfo(This,iTInfo,lcid,ppTInfo)	\
-    (This)->lpVtbl -> GetTypeInfo(This,iTInfo,lcid,ppTInfo)
+    ( (This)->lpVtbl -> GetTypeInfo(This,iTInfo,lcid,ppTInfo) ) 
 
 #define IDlgCalcSealed_GetIDsOfNames(This,riid,rgszNames,cNames,lcid,rgDispId)	\
-    (This)->lpVtbl -> GetIDsOfNames(This,riid,rgszNames,cNames,lcid,rgDispId)
+    ( (This)->lpVtbl -> GetIDsOfNames(This,riid,rgszNames,cNames,lcid,rgDispId) ) 
 
 #define IDlgCalcSealed_Invoke(This,dispIdMember,riid,lcid,wFlags,pDispParams,pVarResult,pExcepInfo,puArgErr)	\
-    (This)->lpVtbl -> Invoke(This,dispIdMember,riid,lcid,wFlags,pDispParams,pVarResult,pExcepInfo,puArgErr)
+    ( (This)->lpVtbl -> Invoke(This,dispIdMember,riid,lcid,wFlags,pDispParams,pVarResult,pExcepInfo,puArgErr) ) 
 
 #endif /* COBJMACROS */
 
@@ -7880,7 +8466,7 @@ DEFINE_GUID(DIID_IDlgCalcSealed,0x785A3500,0x0AE5,0x11CF,0xB1,0xCD,0x44,0x45,0x5
 #endif 	/* __IDlgCalcSealed_DISPINTERFACE_DEFINED__ */
 
 
-DEFINE_GUID(CLSID_CDlgCalcSealed,0x785A3501,0x0AE5,0x11CF,0xB1,0xCD,0x44,0x45,0x53,0x54,0x00,0x00);
+EXTERN_C const CLSID CLSID_CDlgCalcSealed;
 
 #ifdef __cplusplus
 
@@ -7895,7 +8481,7 @@ CDlgCalcSealed;
 /* [uuid] */ 
 
 
-DEFINE_GUID(DIID_IDlgCalcBandAir,0x785A3502,0x0AE5,0x11CF,0xB1,0xCD,0x44,0x45,0x53,0x54,0x00,0x00);
+EXTERN_C const IID DIID_IDlgCalcBandAir;
 
 #if defined(__cplusplus) && !defined(CINTERFACE)
 
@@ -7913,7 +8499,8 @@ DEFINE_GUID(DIID_IDlgCalcBandAir,0x785A3502,0x0AE5,0x11CF,0xB1,0xCD,0x44,0x45,0x
         HRESULT ( STDMETHODCALLTYPE *QueryInterface )( 
             IDlgCalcBandAir * This,
             /* [in] */ REFIID riid,
-            /* [iid_is][out] */ void **ppvObject);
+            /* [annotation][iid_is][out] */ 
+            _COM_Outptr_  void **ppvObject);
         
         ULONG ( STDMETHODCALLTYPE *AddRef )( 
             IDlgCalcBandAir * This);
@@ -7935,20 +8522,28 @@ DEFINE_GUID(DIID_IDlgCalcBandAir,0x785A3502,0x0AE5,0x11CF,0xB1,0xCD,0x44,0x45,0x
             IDlgCalcBandAir * This,
             /* [in] */ REFIID riid,
             /* [size_is][in] */ LPOLESTR *rgszNames,
-            /* [in] */ UINT cNames,
+            /* [range][in] */ UINT cNames,
             /* [in] */ LCID lcid,
             /* [size_is][out] */ DISPID *rgDispId);
         
         /* [local] */ HRESULT ( STDMETHODCALLTYPE *Invoke )( 
             IDlgCalcBandAir * This,
-            /* [in] */ DISPID dispIdMember,
-            /* [in] */ REFIID riid,
-            /* [in] */ LCID lcid,
-            /* [in] */ WORD wFlags,
-            /* [out][in] */ DISPPARAMS *pDispParams,
-            /* [out] */ VARIANT *pVarResult,
-            /* [out] */ EXCEPINFO *pExcepInfo,
-            /* [out] */ UINT *puArgErr);
+            /* [annotation][in] */ 
+            _In_  DISPID dispIdMember,
+            /* [annotation][in] */ 
+            _In_  REFIID riid,
+            /* [annotation][in] */ 
+            _In_  LCID lcid,
+            /* [annotation][in] */ 
+            _In_  WORD wFlags,
+            /* [annotation][out][in] */ 
+            _In_  DISPPARAMS *pDispParams,
+            /* [annotation][out] */ 
+            _Out_opt_  VARIANT *pVarResult,
+            /* [annotation][out] */ 
+            _Out_opt_  EXCEPINFO *pExcepInfo,
+            /* [annotation][out] */ 
+            _Out_opt_  UINT *puArgErr);
         
         END_INTERFACE
     } IDlgCalcBandAirVtbl;
@@ -7964,26 +8559,26 @@ DEFINE_GUID(DIID_IDlgCalcBandAir,0x785A3502,0x0AE5,0x11CF,0xB1,0xCD,0x44,0x45,0x
 
 
 #define IDlgCalcBandAir_QueryInterface(This,riid,ppvObject)	\
-    (This)->lpVtbl -> QueryInterface(This,riid,ppvObject)
+    ( (This)->lpVtbl -> QueryInterface(This,riid,ppvObject) ) 
 
 #define IDlgCalcBandAir_AddRef(This)	\
-    (This)->lpVtbl -> AddRef(This)
+    ( (This)->lpVtbl -> AddRef(This) ) 
 
 #define IDlgCalcBandAir_Release(This)	\
-    (This)->lpVtbl -> Release(This)
+    ( (This)->lpVtbl -> Release(This) ) 
 
 
 #define IDlgCalcBandAir_GetTypeInfoCount(This,pctinfo)	\
-    (This)->lpVtbl -> GetTypeInfoCount(This,pctinfo)
+    ( (This)->lpVtbl -> GetTypeInfoCount(This,pctinfo) ) 
 
 #define IDlgCalcBandAir_GetTypeInfo(This,iTInfo,lcid,ppTInfo)	\
-    (This)->lpVtbl -> GetTypeInfo(This,iTInfo,lcid,ppTInfo)
+    ( (This)->lpVtbl -> GetTypeInfo(This,iTInfo,lcid,ppTInfo) ) 
 
 #define IDlgCalcBandAir_GetIDsOfNames(This,riid,rgszNames,cNames,lcid,rgDispId)	\
-    (This)->lpVtbl -> GetIDsOfNames(This,riid,rgszNames,cNames,lcid,rgDispId)
+    ( (This)->lpVtbl -> GetIDsOfNames(This,riid,rgszNames,cNames,lcid,rgDispId) ) 
 
 #define IDlgCalcBandAir_Invoke(This,dispIdMember,riid,lcid,wFlags,pDispParams,pVarResult,pExcepInfo,puArgErr)	\
-    (This)->lpVtbl -> Invoke(This,dispIdMember,riid,lcid,wFlags,pDispParams,pVarResult,pExcepInfo,puArgErr)
+    ( (This)->lpVtbl -> Invoke(This,dispIdMember,riid,lcid,wFlags,pDispParams,pVarResult,pExcepInfo,puArgErr) ) 
 
 #endif /* COBJMACROS */
 
@@ -7994,7 +8589,7 @@ DEFINE_GUID(DIID_IDlgCalcBandAir,0x785A3502,0x0AE5,0x11CF,0xB1,0xCD,0x44,0x45,0x
 #endif 	/* __IDlgCalcBandAir_DISPINTERFACE_DEFINED__ */
 
 
-DEFINE_GUID(CLSID_CDlgCalcBandAir,0x785A3503,0x0AE5,0x11CF,0xB1,0xCD,0x44,0x45,0x53,0x54,0x00,0x00);
+EXTERN_C const CLSID CLSID_CDlgCalcBandAir;
 
 #ifdef __cplusplus
 
@@ -8009,7 +8604,7 @@ CDlgCalcBandAir;
 /* [uuid] */ 
 
 
-DEFINE_GUID(DIID_IDlgCalcBandChamber,0x785A3504,0x0AE5,0x11CF,0xB1,0xCD,0x44,0x45,0x53,0x54,0x00,0x00);
+EXTERN_C const IID DIID_IDlgCalcBandChamber;
 
 #if defined(__cplusplus) && !defined(CINTERFACE)
 
@@ -8027,7 +8622,8 @@ DEFINE_GUID(DIID_IDlgCalcBandChamber,0x785A3504,0x0AE5,0x11CF,0xB1,0xCD,0x44,0x4
         HRESULT ( STDMETHODCALLTYPE *QueryInterface )( 
             IDlgCalcBandChamber * This,
             /* [in] */ REFIID riid,
-            /* [iid_is][out] */ void **ppvObject);
+            /* [annotation][iid_is][out] */ 
+            _COM_Outptr_  void **ppvObject);
         
         ULONG ( STDMETHODCALLTYPE *AddRef )( 
             IDlgCalcBandChamber * This);
@@ -8049,20 +8645,28 @@ DEFINE_GUID(DIID_IDlgCalcBandChamber,0x785A3504,0x0AE5,0x11CF,0xB1,0xCD,0x44,0x4
             IDlgCalcBandChamber * This,
             /* [in] */ REFIID riid,
             /* [size_is][in] */ LPOLESTR *rgszNames,
-            /* [in] */ UINT cNames,
+            /* [range][in] */ UINT cNames,
             /* [in] */ LCID lcid,
             /* [size_is][out] */ DISPID *rgDispId);
         
         /* [local] */ HRESULT ( STDMETHODCALLTYPE *Invoke )( 
             IDlgCalcBandChamber * This,
-            /* [in] */ DISPID dispIdMember,
-            /* [in] */ REFIID riid,
-            /* [in] */ LCID lcid,
-            /* [in] */ WORD wFlags,
-            /* [out][in] */ DISPPARAMS *pDispParams,
-            /* [out] */ VARIANT *pVarResult,
-            /* [out] */ EXCEPINFO *pExcepInfo,
-            /* [out] */ UINT *puArgErr);
+            /* [annotation][in] */ 
+            _In_  DISPID dispIdMember,
+            /* [annotation][in] */ 
+            _In_  REFIID riid,
+            /* [annotation][in] */ 
+            _In_  LCID lcid,
+            /* [annotation][in] */ 
+            _In_  WORD wFlags,
+            /* [annotation][out][in] */ 
+            _In_  DISPPARAMS *pDispParams,
+            /* [annotation][out] */ 
+            _Out_opt_  VARIANT *pVarResult,
+            /* [annotation][out] */ 
+            _Out_opt_  EXCEPINFO *pExcepInfo,
+            /* [annotation][out] */ 
+            _Out_opt_  UINT *puArgErr);
         
         END_INTERFACE
     } IDlgCalcBandChamberVtbl;
@@ -8078,26 +8682,26 @@ DEFINE_GUID(DIID_IDlgCalcBandChamber,0x785A3504,0x0AE5,0x11CF,0xB1,0xCD,0x44,0x4
 
 
 #define IDlgCalcBandChamber_QueryInterface(This,riid,ppvObject)	\
-    (This)->lpVtbl -> QueryInterface(This,riid,ppvObject)
+    ( (This)->lpVtbl -> QueryInterface(This,riid,ppvObject) ) 
 
 #define IDlgCalcBandChamber_AddRef(This)	\
-    (This)->lpVtbl -> AddRef(This)
+    ( (This)->lpVtbl -> AddRef(This) ) 
 
 #define IDlgCalcBandChamber_Release(This)	\
-    (This)->lpVtbl -> Release(This)
+    ( (This)->lpVtbl -> Release(This) ) 
 
 
 #define IDlgCalcBandChamber_GetTypeInfoCount(This,pctinfo)	\
-    (This)->lpVtbl -> GetTypeInfoCount(This,pctinfo)
+    ( (This)->lpVtbl -> GetTypeInfoCount(This,pctinfo) ) 
 
 #define IDlgCalcBandChamber_GetTypeInfo(This,iTInfo,lcid,ppTInfo)	\
-    (This)->lpVtbl -> GetTypeInfo(This,iTInfo,lcid,ppTInfo)
+    ( (This)->lpVtbl -> GetTypeInfo(This,iTInfo,lcid,ppTInfo) ) 
 
 #define IDlgCalcBandChamber_GetIDsOfNames(This,riid,rgszNames,cNames,lcid,rgDispId)	\
-    (This)->lpVtbl -> GetIDsOfNames(This,riid,rgszNames,cNames,lcid,rgDispId)
+    ( (This)->lpVtbl -> GetIDsOfNames(This,riid,rgszNames,cNames,lcid,rgDispId) ) 
 
 #define IDlgCalcBandChamber_Invoke(This,dispIdMember,riid,lcid,wFlags,pDispParams,pVarResult,pExcepInfo,puArgErr)	\
-    (This)->lpVtbl -> Invoke(This,dispIdMember,riid,lcid,wFlags,pDispParams,pVarResult,pExcepInfo,puArgErr)
+    ( (This)->lpVtbl -> Invoke(This,dispIdMember,riid,lcid,wFlags,pDispParams,pVarResult,pExcepInfo,puArgErr) ) 
 
 #endif /* COBJMACROS */
 
@@ -8108,7 +8712,7 @@ DEFINE_GUID(DIID_IDlgCalcBandChamber,0x785A3504,0x0AE5,0x11CF,0xB1,0xCD,0x44,0x4
 #endif 	/* __IDlgCalcBandChamber_DISPINTERFACE_DEFINED__ */
 
 
-DEFINE_GUID(CLSID_CDlgCalcBandChamber,0x785A3505,0x0AE5,0x11CF,0xB1,0xCD,0x44,0x45,0x53,0x54,0x00,0x00);
+EXTERN_C const CLSID CLSID_CDlgCalcBandChamber;
 
 #ifdef __cplusplus
 
@@ -8123,7 +8727,7 @@ CDlgCalcBandChamber;
 /* [uuid] */ 
 
 
-DEFINE_GUID(DIID_IDlgCalcVented,0x785A3506,0x0AE5,0x11CF,0xB1,0xCD,0x44,0x45,0x53,0x54,0x00,0x00);
+EXTERN_C const IID DIID_IDlgCalcVented;
 
 #if defined(__cplusplus) && !defined(CINTERFACE)
 
@@ -8141,7 +8745,8 @@ DEFINE_GUID(DIID_IDlgCalcVented,0x785A3506,0x0AE5,0x11CF,0xB1,0xCD,0x44,0x45,0x5
         HRESULT ( STDMETHODCALLTYPE *QueryInterface )( 
             IDlgCalcVented * This,
             /* [in] */ REFIID riid,
-            /* [iid_is][out] */ void **ppvObject);
+            /* [annotation][iid_is][out] */ 
+            _COM_Outptr_  void **ppvObject);
         
         ULONG ( STDMETHODCALLTYPE *AddRef )( 
             IDlgCalcVented * This);
@@ -8163,20 +8768,28 @@ DEFINE_GUID(DIID_IDlgCalcVented,0x785A3506,0x0AE5,0x11CF,0xB1,0xCD,0x44,0x45,0x5
             IDlgCalcVented * This,
             /* [in] */ REFIID riid,
             /* [size_is][in] */ LPOLESTR *rgszNames,
-            /* [in] */ UINT cNames,
+            /* [range][in] */ UINT cNames,
             /* [in] */ LCID lcid,
             /* [size_is][out] */ DISPID *rgDispId);
         
         /* [local] */ HRESULT ( STDMETHODCALLTYPE *Invoke )( 
             IDlgCalcVented * This,
-            /* [in] */ DISPID dispIdMember,
-            /* [in] */ REFIID riid,
-            /* [in] */ LCID lcid,
-            /* [in] */ WORD wFlags,
-            /* [out][in] */ DISPPARAMS *pDispParams,
-            /* [out] */ VARIANT *pVarResult,
-            /* [out] */ EXCEPINFO *pExcepInfo,
-            /* [out] */ UINT *puArgErr);
+            /* [annotation][in] */ 
+            _In_  DISPID dispIdMember,
+            /* [annotation][in] */ 
+            _In_  REFIID riid,
+            /* [annotation][in] */ 
+            _In_  LCID lcid,
+            /* [annotation][in] */ 
+            _In_  WORD wFlags,
+            /* [annotation][out][in] */ 
+            _In_  DISPPARAMS *pDispParams,
+            /* [annotation][out] */ 
+            _Out_opt_  VARIANT *pVarResult,
+            /* [annotation][out] */ 
+            _Out_opt_  EXCEPINFO *pExcepInfo,
+            /* [annotation][out] */ 
+            _Out_opt_  UINT *puArgErr);
         
         END_INTERFACE
     } IDlgCalcVentedVtbl;
@@ -8192,26 +8805,26 @@ DEFINE_GUID(DIID_IDlgCalcVented,0x785A3506,0x0AE5,0x11CF,0xB1,0xCD,0x44,0x45,0x5
 
 
 #define IDlgCalcVented_QueryInterface(This,riid,ppvObject)	\
-    (This)->lpVtbl -> QueryInterface(This,riid,ppvObject)
+    ( (This)->lpVtbl -> QueryInterface(This,riid,ppvObject) ) 
 
 #define IDlgCalcVented_AddRef(This)	\
-    (This)->lpVtbl -> AddRef(This)
+    ( (This)->lpVtbl -> AddRef(This) ) 
 
 #define IDlgCalcVented_Release(This)	\
-    (This)->lpVtbl -> Release(This)
+    ( (This)->lpVtbl -> Release(This) ) 
 
 
 #define IDlgCalcVented_GetTypeInfoCount(This,pctinfo)	\
-    (This)->lpVtbl -> GetTypeInfoCount(This,pctinfo)
+    ( (This)->lpVtbl -> GetTypeInfoCount(This,pctinfo) ) 
 
 #define IDlgCalcVented_GetTypeInfo(This,iTInfo,lcid,ppTInfo)	\
-    (This)->lpVtbl -> GetTypeInfo(This,iTInfo,lcid,ppTInfo)
+    ( (This)->lpVtbl -> GetTypeInfo(This,iTInfo,lcid,ppTInfo) ) 
 
 #define IDlgCalcVented_GetIDsOfNames(This,riid,rgszNames,cNames,lcid,rgDispId)	\
-    (This)->lpVtbl -> GetIDsOfNames(This,riid,rgszNames,cNames,lcid,rgDispId)
+    ( (This)->lpVtbl -> GetIDsOfNames(This,riid,rgszNames,cNames,lcid,rgDispId) ) 
 
 #define IDlgCalcVented_Invoke(This,dispIdMember,riid,lcid,wFlags,pDispParams,pVarResult,pExcepInfo,puArgErr)	\
-    (This)->lpVtbl -> Invoke(This,dispIdMember,riid,lcid,wFlags,pDispParams,pVarResult,pExcepInfo,puArgErr)
+    ( (This)->lpVtbl -> Invoke(This,dispIdMember,riid,lcid,wFlags,pDispParams,pVarResult,pExcepInfo,puArgErr) ) 
 
 #endif /* COBJMACROS */
 
@@ -8222,7 +8835,7 @@ DEFINE_GUID(DIID_IDlgCalcVented,0x785A3506,0x0AE5,0x11CF,0xB1,0xCD,0x44,0x45,0x5
 #endif 	/* __IDlgCalcVented_DISPINTERFACE_DEFINED__ */
 
 
-DEFINE_GUID(CLSID_CDlgCalcVented,0x785A3507,0x0AE5,0x11CF,0xB1,0xCD,0x44,0x45,0x53,0x54,0x00,0x00);
+EXTERN_C const CLSID CLSID_CDlgCalcVented;
 
 #ifdef __cplusplus
 
@@ -8237,7 +8850,7 @@ CDlgCalcVented;
 /* [uuid] */ 
 
 
-DEFINE_GUID(DIID_IDlgFilter,0xE4A434A0,0x0EE5,0x11CF,0xB1,0xCD,0x44,0x45,0x53,0x54,0x00,0x00);
+EXTERN_C const IID DIID_IDlgFilter;
 
 #if defined(__cplusplus) && !defined(CINTERFACE)
 
@@ -8255,7 +8868,8 @@ DEFINE_GUID(DIID_IDlgFilter,0xE4A434A0,0x0EE5,0x11CF,0xB1,0xCD,0x44,0x45,0x53,0x
         HRESULT ( STDMETHODCALLTYPE *QueryInterface )( 
             IDlgFilter * This,
             /* [in] */ REFIID riid,
-            /* [iid_is][out] */ void **ppvObject);
+            /* [annotation][iid_is][out] */ 
+            _COM_Outptr_  void **ppvObject);
         
         ULONG ( STDMETHODCALLTYPE *AddRef )( 
             IDlgFilter * This);
@@ -8277,20 +8891,28 @@ DEFINE_GUID(DIID_IDlgFilter,0xE4A434A0,0x0EE5,0x11CF,0xB1,0xCD,0x44,0x45,0x53,0x
             IDlgFilter * This,
             /* [in] */ REFIID riid,
             /* [size_is][in] */ LPOLESTR *rgszNames,
-            /* [in] */ UINT cNames,
+            /* [range][in] */ UINT cNames,
             /* [in] */ LCID lcid,
             /* [size_is][out] */ DISPID *rgDispId);
         
         /* [local] */ HRESULT ( STDMETHODCALLTYPE *Invoke )( 
             IDlgFilter * This,
-            /* [in] */ DISPID dispIdMember,
-            /* [in] */ REFIID riid,
-            /* [in] */ LCID lcid,
-            /* [in] */ WORD wFlags,
-            /* [out][in] */ DISPPARAMS *pDispParams,
-            /* [out] */ VARIANT *pVarResult,
-            /* [out] */ EXCEPINFO *pExcepInfo,
-            /* [out] */ UINT *puArgErr);
+            /* [annotation][in] */ 
+            _In_  DISPID dispIdMember,
+            /* [annotation][in] */ 
+            _In_  REFIID riid,
+            /* [annotation][in] */ 
+            _In_  LCID lcid,
+            /* [annotation][in] */ 
+            _In_  WORD wFlags,
+            /* [annotation][out][in] */ 
+            _In_  DISPPARAMS *pDispParams,
+            /* [annotation][out] */ 
+            _Out_opt_  VARIANT *pVarResult,
+            /* [annotation][out] */ 
+            _Out_opt_  EXCEPINFO *pExcepInfo,
+            /* [annotation][out] */ 
+            _Out_opt_  UINT *puArgErr);
         
         END_INTERFACE
     } IDlgFilterVtbl;
@@ -8306,26 +8928,26 @@ DEFINE_GUID(DIID_IDlgFilter,0xE4A434A0,0x0EE5,0x11CF,0xB1,0xCD,0x44,0x45,0x53,0x
 
 
 #define IDlgFilter_QueryInterface(This,riid,ppvObject)	\
-    (This)->lpVtbl -> QueryInterface(This,riid,ppvObject)
+    ( (This)->lpVtbl -> QueryInterface(This,riid,ppvObject) ) 
 
 #define IDlgFilter_AddRef(This)	\
-    (This)->lpVtbl -> AddRef(This)
+    ( (This)->lpVtbl -> AddRef(This) ) 
 
 #define IDlgFilter_Release(This)	\
-    (This)->lpVtbl -> Release(This)
+    ( (This)->lpVtbl -> Release(This) ) 
 
 
 #define IDlgFilter_GetTypeInfoCount(This,pctinfo)	\
-    (This)->lpVtbl -> GetTypeInfoCount(This,pctinfo)
+    ( (This)->lpVtbl -> GetTypeInfoCount(This,pctinfo) ) 
 
 #define IDlgFilter_GetTypeInfo(This,iTInfo,lcid,ppTInfo)	\
-    (This)->lpVtbl -> GetTypeInfo(This,iTInfo,lcid,ppTInfo)
+    ( (This)->lpVtbl -> GetTypeInfo(This,iTInfo,lcid,ppTInfo) ) 
 
 #define IDlgFilter_GetIDsOfNames(This,riid,rgszNames,cNames,lcid,rgDispId)	\
-    (This)->lpVtbl -> GetIDsOfNames(This,riid,rgszNames,cNames,lcid,rgDispId)
+    ( (This)->lpVtbl -> GetIDsOfNames(This,riid,rgszNames,cNames,lcid,rgDispId) ) 
 
 #define IDlgFilter_Invoke(This,dispIdMember,riid,lcid,wFlags,pDispParams,pVarResult,pExcepInfo,puArgErr)	\
-    (This)->lpVtbl -> Invoke(This,dispIdMember,riid,lcid,wFlags,pDispParams,pVarResult,pExcepInfo,puArgErr)
+    ( (This)->lpVtbl -> Invoke(This,dispIdMember,riid,lcid,wFlags,pDispParams,pVarResult,pExcepInfo,puArgErr) ) 
 
 #endif /* COBJMACROS */
 
@@ -8336,7 +8958,7 @@ DEFINE_GUID(DIID_IDlgFilter,0xE4A434A0,0x0EE5,0x11CF,0xB1,0xCD,0x44,0x45,0x53,0x
 #endif 	/* __IDlgFilter_DISPINTERFACE_DEFINED__ */
 
 
-DEFINE_GUID(CLSID_CDlgFilter,0xE4A434A1,0x0EE5,0x11CF,0xB1,0xCD,0x44,0x45,0x53,0x54,0x00,0x00);
+EXTERN_C const CLSID CLSID_CDlgFilter;
 
 #ifdef __cplusplus
 
@@ -8351,7 +8973,7 @@ CDlgFilter;
 /* [uuid] */ 
 
 
-DEFINE_GUID(DIID_IDlgPrefMeasure,0x51FCD7A0,0x1242,0x11CF,0xB1,0xCD,0x44,0x45,0x53,0x54,0x00,0x00);
+EXTERN_C const IID DIID_IDlgPrefMeasure;
 
 #if defined(__cplusplus) && !defined(CINTERFACE)
 
@@ -8369,7 +8991,8 @@ DEFINE_GUID(DIID_IDlgPrefMeasure,0x51FCD7A0,0x1242,0x11CF,0xB1,0xCD,0x44,0x45,0x
         HRESULT ( STDMETHODCALLTYPE *QueryInterface )( 
             IDlgPrefMeasure * This,
             /* [in] */ REFIID riid,
-            /* [iid_is][out] */ void **ppvObject);
+            /* [annotation][iid_is][out] */ 
+            _COM_Outptr_  void **ppvObject);
         
         ULONG ( STDMETHODCALLTYPE *AddRef )( 
             IDlgPrefMeasure * This);
@@ -8391,20 +9014,28 @@ DEFINE_GUID(DIID_IDlgPrefMeasure,0x51FCD7A0,0x1242,0x11CF,0xB1,0xCD,0x44,0x45,0x
             IDlgPrefMeasure * This,
             /* [in] */ REFIID riid,
             /* [size_is][in] */ LPOLESTR *rgszNames,
-            /* [in] */ UINT cNames,
+            /* [range][in] */ UINT cNames,
             /* [in] */ LCID lcid,
             /* [size_is][out] */ DISPID *rgDispId);
         
         /* [local] */ HRESULT ( STDMETHODCALLTYPE *Invoke )( 
             IDlgPrefMeasure * This,
-            /* [in] */ DISPID dispIdMember,
-            /* [in] */ REFIID riid,
-            /* [in] */ LCID lcid,
-            /* [in] */ WORD wFlags,
-            /* [out][in] */ DISPPARAMS *pDispParams,
-            /* [out] */ VARIANT *pVarResult,
-            /* [out] */ EXCEPINFO *pExcepInfo,
-            /* [out] */ UINT *puArgErr);
+            /* [annotation][in] */ 
+            _In_  DISPID dispIdMember,
+            /* [annotation][in] */ 
+            _In_  REFIID riid,
+            /* [annotation][in] */ 
+            _In_  LCID lcid,
+            /* [annotation][in] */ 
+            _In_  WORD wFlags,
+            /* [annotation][out][in] */ 
+            _In_  DISPPARAMS *pDispParams,
+            /* [annotation][out] */ 
+            _Out_opt_  VARIANT *pVarResult,
+            /* [annotation][out] */ 
+            _Out_opt_  EXCEPINFO *pExcepInfo,
+            /* [annotation][out] */ 
+            _Out_opt_  UINT *puArgErr);
         
         END_INTERFACE
     } IDlgPrefMeasureVtbl;
@@ -8420,26 +9051,26 @@ DEFINE_GUID(DIID_IDlgPrefMeasure,0x51FCD7A0,0x1242,0x11CF,0xB1,0xCD,0x44,0x45,0x
 
 
 #define IDlgPrefMeasure_QueryInterface(This,riid,ppvObject)	\
-    (This)->lpVtbl -> QueryInterface(This,riid,ppvObject)
+    ( (This)->lpVtbl -> QueryInterface(This,riid,ppvObject) ) 
 
 #define IDlgPrefMeasure_AddRef(This)	\
-    (This)->lpVtbl -> AddRef(This)
+    ( (This)->lpVtbl -> AddRef(This) ) 
 
 #define IDlgPrefMeasure_Release(This)	\
-    (This)->lpVtbl -> Release(This)
+    ( (This)->lpVtbl -> Release(This) ) 
 
 
 #define IDlgPrefMeasure_GetTypeInfoCount(This,pctinfo)	\
-    (This)->lpVtbl -> GetTypeInfoCount(This,pctinfo)
+    ( (This)->lpVtbl -> GetTypeInfoCount(This,pctinfo) ) 
 
 #define IDlgPrefMeasure_GetTypeInfo(This,iTInfo,lcid,ppTInfo)	\
-    (This)->lpVtbl -> GetTypeInfo(This,iTInfo,lcid,ppTInfo)
+    ( (This)->lpVtbl -> GetTypeInfo(This,iTInfo,lcid,ppTInfo) ) 
 
 #define IDlgPrefMeasure_GetIDsOfNames(This,riid,rgszNames,cNames,lcid,rgDispId)	\
-    (This)->lpVtbl -> GetIDsOfNames(This,riid,rgszNames,cNames,lcid,rgDispId)
+    ( (This)->lpVtbl -> GetIDsOfNames(This,riid,rgszNames,cNames,lcid,rgDispId) ) 
 
 #define IDlgPrefMeasure_Invoke(This,dispIdMember,riid,lcid,wFlags,pDispParams,pVarResult,pExcepInfo,puArgErr)	\
-    (This)->lpVtbl -> Invoke(This,dispIdMember,riid,lcid,wFlags,pDispParams,pVarResult,pExcepInfo,puArgErr)
+    ( (This)->lpVtbl -> Invoke(This,dispIdMember,riid,lcid,wFlags,pDispParams,pVarResult,pExcepInfo,puArgErr) ) 
 
 #endif /* COBJMACROS */
 
@@ -8450,7 +9081,7 @@ DEFINE_GUID(DIID_IDlgPrefMeasure,0x51FCD7A0,0x1242,0x11CF,0xB1,0xCD,0x44,0x45,0x
 #endif 	/* __IDlgPrefMeasure_DISPINTERFACE_DEFINED__ */
 
 
-DEFINE_GUID(CLSID_CDlgPrefMeasure,0x51FCD7A1,0x1242,0x11CF,0xB1,0xCD,0x44,0x45,0x53,0x54,0x00,0x00);
+EXTERN_C const CLSID CLSID_CDlgPrefMeasure;
 
 #ifdef __cplusplus
 
@@ -8465,7 +9096,7 @@ CDlgPrefMeasure;
 /* [uuid] */ 
 
 
-DEFINE_GUID(DIID_IDlgTree,0x48089AA1,0x2B82,0x11CF,0xAA,0x03,0x44,0x45,0x53,0x54,0x00,0x00);
+EXTERN_C const IID DIID_IDlgTree;
 
 #if defined(__cplusplus) && !defined(CINTERFACE)
 
@@ -8483,7 +9114,8 @@ DEFINE_GUID(DIID_IDlgTree,0x48089AA1,0x2B82,0x11CF,0xAA,0x03,0x44,0x45,0x53,0x54
         HRESULT ( STDMETHODCALLTYPE *QueryInterface )( 
             IDlgTree * This,
             /* [in] */ REFIID riid,
-            /* [iid_is][out] */ void **ppvObject);
+            /* [annotation][iid_is][out] */ 
+            _COM_Outptr_  void **ppvObject);
         
         ULONG ( STDMETHODCALLTYPE *AddRef )( 
             IDlgTree * This);
@@ -8505,20 +9137,28 @@ DEFINE_GUID(DIID_IDlgTree,0x48089AA1,0x2B82,0x11CF,0xAA,0x03,0x44,0x45,0x53,0x54
             IDlgTree * This,
             /* [in] */ REFIID riid,
             /* [size_is][in] */ LPOLESTR *rgszNames,
-            /* [in] */ UINT cNames,
+            /* [range][in] */ UINT cNames,
             /* [in] */ LCID lcid,
             /* [size_is][out] */ DISPID *rgDispId);
         
         /* [local] */ HRESULT ( STDMETHODCALLTYPE *Invoke )( 
             IDlgTree * This,
-            /* [in] */ DISPID dispIdMember,
-            /* [in] */ REFIID riid,
-            /* [in] */ LCID lcid,
-            /* [in] */ WORD wFlags,
-            /* [out][in] */ DISPPARAMS *pDispParams,
-            /* [out] */ VARIANT *pVarResult,
-            /* [out] */ EXCEPINFO *pExcepInfo,
-            /* [out] */ UINT *puArgErr);
+            /* [annotation][in] */ 
+            _In_  DISPID dispIdMember,
+            /* [annotation][in] */ 
+            _In_  REFIID riid,
+            /* [annotation][in] */ 
+            _In_  LCID lcid,
+            /* [annotation][in] */ 
+            _In_  WORD wFlags,
+            /* [annotation][out][in] */ 
+            _In_  DISPPARAMS *pDispParams,
+            /* [annotation][out] */ 
+            _Out_opt_  VARIANT *pVarResult,
+            /* [annotation][out] */ 
+            _Out_opt_  EXCEPINFO *pExcepInfo,
+            /* [annotation][out] */ 
+            _Out_opt_  UINT *puArgErr);
         
         END_INTERFACE
     } IDlgTreeVtbl;
@@ -8534,26 +9174,26 @@ DEFINE_GUID(DIID_IDlgTree,0x48089AA1,0x2B82,0x11CF,0xAA,0x03,0x44,0x45,0x53,0x54
 
 
 #define IDlgTree_QueryInterface(This,riid,ppvObject)	\
-    (This)->lpVtbl -> QueryInterface(This,riid,ppvObject)
+    ( (This)->lpVtbl -> QueryInterface(This,riid,ppvObject) ) 
 
 #define IDlgTree_AddRef(This)	\
-    (This)->lpVtbl -> AddRef(This)
+    ( (This)->lpVtbl -> AddRef(This) ) 
 
 #define IDlgTree_Release(This)	\
-    (This)->lpVtbl -> Release(This)
+    ( (This)->lpVtbl -> Release(This) ) 
 
 
 #define IDlgTree_GetTypeInfoCount(This,pctinfo)	\
-    (This)->lpVtbl -> GetTypeInfoCount(This,pctinfo)
+    ( (This)->lpVtbl -> GetTypeInfoCount(This,pctinfo) ) 
 
 #define IDlgTree_GetTypeInfo(This,iTInfo,lcid,ppTInfo)	\
-    (This)->lpVtbl -> GetTypeInfo(This,iTInfo,lcid,ppTInfo)
+    ( (This)->lpVtbl -> GetTypeInfo(This,iTInfo,lcid,ppTInfo) ) 
 
 #define IDlgTree_GetIDsOfNames(This,riid,rgszNames,cNames,lcid,rgDispId)	\
-    (This)->lpVtbl -> GetIDsOfNames(This,riid,rgszNames,cNames,lcid,rgDispId)
+    ( (This)->lpVtbl -> GetIDsOfNames(This,riid,rgszNames,cNames,lcid,rgDispId) ) 
 
 #define IDlgTree_Invoke(This,dispIdMember,riid,lcid,wFlags,pDispParams,pVarResult,pExcepInfo,puArgErr)	\
-    (This)->lpVtbl -> Invoke(This,dispIdMember,riid,lcid,wFlags,pDispParams,pVarResult,pExcepInfo,puArgErr)
+    ( (This)->lpVtbl -> Invoke(This,dispIdMember,riid,lcid,wFlags,pDispParams,pVarResult,pExcepInfo,puArgErr) ) 
 
 #endif /* COBJMACROS */
 
@@ -8564,7 +9204,7 @@ DEFINE_GUID(DIID_IDlgTree,0x48089AA1,0x2B82,0x11CF,0xAA,0x03,0x44,0x45,0x53,0x54
 #endif 	/* __IDlgTree_DISPINTERFACE_DEFINED__ */
 
 
-DEFINE_GUID(CLSID_CDlgTree,0x48089AA2,0x2B82,0x11CF,0xAA,0x03,0x44,0x45,0x53,0x54,0x00,0x00);
+EXTERN_C const CLSID CLSID_CDlgTree;
 
 #ifdef __cplusplus
 
@@ -8579,7 +9219,7 @@ CDlgTree;
 /* [uuid] */ 
 
 
-DEFINE_GUID(DIID_IDlgXfFilter,0x930EAE20,0x5B5E,0x11CF,0xAA,0x04,0x44,0x45,0x53,0x54,0x00,0x00);
+EXTERN_C const IID DIID_IDlgXfFilter;
 
 #if defined(__cplusplus) && !defined(CINTERFACE)
 
@@ -8597,7 +9237,8 @@ DEFINE_GUID(DIID_IDlgXfFilter,0x930EAE20,0x5B5E,0x11CF,0xAA,0x04,0x44,0x45,0x53,
         HRESULT ( STDMETHODCALLTYPE *QueryInterface )( 
             IDlgXfFilter * This,
             /* [in] */ REFIID riid,
-            /* [iid_is][out] */ void **ppvObject);
+            /* [annotation][iid_is][out] */ 
+            _COM_Outptr_  void **ppvObject);
         
         ULONG ( STDMETHODCALLTYPE *AddRef )( 
             IDlgXfFilter * This);
@@ -8619,20 +9260,28 @@ DEFINE_GUID(DIID_IDlgXfFilter,0x930EAE20,0x5B5E,0x11CF,0xAA,0x04,0x44,0x45,0x53,
             IDlgXfFilter * This,
             /* [in] */ REFIID riid,
             /* [size_is][in] */ LPOLESTR *rgszNames,
-            /* [in] */ UINT cNames,
+            /* [range][in] */ UINT cNames,
             /* [in] */ LCID lcid,
             /* [size_is][out] */ DISPID *rgDispId);
         
         /* [local] */ HRESULT ( STDMETHODCALLTYPE *Invoke )( 
             IDlgXfFilter * This,
-            /* [in] */ DISPID dispIdMember,
-            /* [in] */ REFIID riid,
-            /* [in] */ LCID lcid,
-            /* [in] */ WORD wFlags,
-            /* [out][in] */ DISPPARAMS *pDispParams,
-            /* [out] */ VARIANT *pVarResult,
-            /* [out] */ EXCEPINFO *pExcepInfo,
-            /* [out] */ UINT *puArgErr);
+            /* [annotation][in] */ 
+            _In_  DISPID dispIdMember,
+            /* [annotation][in] */ 
+            _In_  REFIID riid,
+            /* [annotation][in] */ 
+            _In_  LCID lcid,
+            /* [annotation][in] */ 
+            _In_  WORD wFlags,
+            /* [annotation][out][in] */ 
+            _In_  DISPPARAMS *pDispParams,
+            /* [annotation][out] */ 
+            _Out_opt_  VARIANT *pVarResult,
+            /* [annotation][out] */ 
+            _Out_opt_  EXCEPINFO *pExcepInfo,
+            /* [annotation][out] */ 
+            _Out_opt_  UINT *puArgErr);
         
         END_INTERFACE
     } IDlgXfFilterVtbl;
@@ -8648,26 +9297,26 @@ DEFINE_GUID(DIID_IDlgXfFilter,0x930EAE20,0x5B5E,0x11CF,0xAA,0x04,0x44,0x45,0x53,
 
 
 #define IDlgXfFilter_QueryInterface(This,riid,ppvObject)	\
-    (This)->lpVtbl -> QueryInterface(This,riid,ppvObject)
+    ( (This)->lpVtbl -> QueryInterface(This,riid,ppvObject) ) 
 
 #define IDlgXfFilter_AddRef(This)	\
-    (This)->lpVtbl -> AddRef(This)
+    ( (This)->lpVtbl -> AddRef(This) ) 
 
 #define IDlgXfFilter_Release(This)	\
-    (This)->lpVtbl -> Release(This)
+    ( (This)->lpVtbl -> Release(This) ) 
 
 
 #define IDlgXfFilter_GetTypeInfoCount(This,pctinfo)	\
-    (This)->lpVtbl -> GetTypeInfoCount(This,pctinfo)
+    ( (This)->lpVtbl -> GetTypeInfoCount(This,pctinfo) ) 
 
 #define IDlgXfFilter_GetTypeInfo(This,iTInfo,lcid,ppTInfo)	\
-    (This)->lpVtbl -> GetTypeInfo(This,iTInfo,lcid,ppTInfo)
+    ( (This)->lpVtbl -> GetTypeInfo(This,iTInfo,lcid,ppTInfo) ) 
 
 #define IDlgXfFilter_GetIDsOfNames(This,riid,rgszNames,cNames,lcid,rgDispId)	\
-    (This)->lpVtbl -> GetIDsOfNames(This,riid,rgszNames,cNames,lcid,rgDispId)
+    ( (This)->lpVtbl -> GetIDsOfNames(This,riid,rgszNames,cNames,lcid,rgDispId) ) 
 
 #define IDlgXfFilter_Invoke(This,dispIdMember,riid,lcid,wFlags,pDispParams,pVarResult,pExcepInfo,puArgErr)	\
-    (This)->lpVtbl -> Invoke(This,dispIdMember,riid,lcid,wFlags,pDispParams,pVarResult,pExcepInfo,puArgErr)
+    ( (This)->lpVtbl -> Invoke(This,dispIdMember,riid,lcid,wFlags,pDispParams,pVarResult,pExcepInfo,puArgErr) ) 
 
 #endif /* COBJMACROS */
 
@@ -8678,7 +9327,7 @@ DEFINE_GUID(DIID_IDlgXfFilter,0x930EAE20,0x5B5E,0x11CF,0xAA,0x04,0x44,0x45,0x53,
 #endif 	/* __IDlgXfFilter_DISPINTERFACE_DEFINED__ */
 
 
-DEFINE_GUID(CLSID_CDlgXfFilter,0x930EAE21,0x5B5E,0x11CF,0xAA,0x04,0x44,0x45,0x53,0x54,0x00,0x00);
+EXTERN_C const CLSID CLSID_CDlgXfFilter;
 
 #ifdef __cplusplus
 
@@ -8693,7 +9342,7 @@ CDlgXfFilter;
 /* [uuid] */ 
 
 
-DEFINE_GUID(DIID_IDlgFilterLow,0xB2CCFBC0,0x5B60,0x11CF,0xAA,0x04,0x44,0x45,0x53,0x54,0x00,0x00);
+EXTERN_C const IID DIID_IDlgFilterLow;
 
 #if defined(__cplusplus) && !defined(CINTERFACE)
 
@@ -8711,7 +9360,8 @@ DEFINE_GUID(DIID_IDlgFilterLow,0xB2CCFBC0,0x5B60,0x11CF,0xAA,0x04,0x44,0x45,0x53
         HRESULT ( STDMETHODCALLTYPE *QueryInterface )( 
             IDlgFilterLow * This,
             /* [in] */ REFIID riid,
-            /* [iid_is][out] */ void **ppvObject);
+            /* [annotation][iid_is][out] */ 
+            _COM_Outptr_  void **ppvObject);
         
         ULONG ( STDMETHODCALLTYPE *AddRef )( 
             IDlgFilterLow * This);
@@ -8733,20 +9383,28 @@ DEFINE_GUID(DIID_IDlgFilterLow,0xB2CCFBC0,0x5B60,0x11CF,0xAA,0x04,0x44,0x45,0x53
             IDlgFilterLow * This,
             /* [in] */ REFIID riid,
             /* [size_is][in] */ LPOLESTR *rgszNames,
-            /* [in] */ UINT cNames,
+            /* [range][in] */ UINT cNames,
             /* [in] */ LCID lcid,
             /* [size_is][out] */ DISPID *rgDispId);
         
         /* [local] */ HRESULT ( STDMETHODCALLTYPE *Invoke )( 
             IDlgFilterLow * This,
-            /* [in] */ DISPID dispIdMember,
-            /* [in] */ REFIID riid,
-            /* [in] */ LCID lcid,
-            /* [in] */ WORD wFlags,
-            /* [out][in] */ DISPPARAMS *pDispParams,
-            /* [out] */ VARIANT *pVarResult,
-            /* [out] */ EXCEPINFO *pExcepInfo,
-            /* [out] */ UINT *puArgErr);
+            /* [annotation][in] */ 
+            _In_  DISPID dispIdMember,
+            /* [annotation][in] */ 
+            _In_  REFIID riid,
+            /* [annotation][in] */ 
+            _In_  LCID lcid,
+            /* [annotation][in] */ 
+            _In_  WORD wFlags,
+            /* [annotation][out][in] */ 
+            _In_  DISPPARAMS *pDispParams,
+            /* [annotation][out] */ 
+            _Out_opt_  VARIANT *pVarResult,
+            /* [annotation][out] */ 
+            _Out_opt_  EXCEPINFO *pExcepInfo,
+            /* [annotation][out] */ 
+            _Out_opt_  UINT *puArgErr);
         
         END_INTERFACE
     } IDlgFilterLowVtbl;
@@ -8762,26 +9420,26 @@ DEFINE_GUID(DIID_IDlgFilterLow,0xB2CCFBC0,0x5B60,0x11CF,0xAA,0x04,0x44,0x45,0x53
 
 
 #define IDlgFilterLow_QueryInterface(This,riid,ppvObject)	\
-    (This)->lpVtbl -> QueryInterface(This,riid,ppvObject)
+    ( (This)->lpVtbl -> QueryInterface(This,riid,ppvObject) ) 
 
 #define IDlgFilterLow_AddRef(This)	\
-    (This)->lpVtbl -> AddRef(This)
+    ( (This)->lpVtbl -> AddRef(This) ) 
 
 #define IDlgFilterLow_Release(This)	\
-    (This)->lpVtbl -> Release(This)
+    ( (This)->lpVtbl -> Release(This) ) 
 
 
 #define IDlgFilterLow_GetTypeInfoCount(This,pctinfo)	\
-    (This)->lpVtbl -> GetTypeInfoCount(This,pctinfo)
+    ( (This)->lpVtbl -> GetTypeInfoCount(This,pctinfo) ) 
 
 #define IDlgFilterLow_GetTypeInfo(This,iTInfo,lcid,ppTInfo)	\
-    (This)->lpVtbl -> GetTypeInfo(This,iTInfo,lcid,ppTInfo)
+    ( (This)->lpVtbl -> GetTypeInfo(This,iTInfo,lcid,ppTInfo) ) 
 
 #define IDlgFilterLow_GetIDsOfNames(This,riid,rgszNames,cNames,lcid,rgDispId)	\
-    (This)->lpVtbl -> GetIDsOfNames(This,riid,rgszNames,cNames,lcid,rgDispId)
+    ( (This)->lpVtbl -> GetIDsOfNames(This,riid,rgszNames,cNames,lcid,rgDispId) ) 
 
 #define IDlgFilterLow_Invoke(This,dispIdMember,riid,lcid,wFlags,pDispParams,pVarResult,pExcepInfo,puArgErr)	\
-    (This)->lpVtbl -> Invoke(This,dispIdMember,riid,lcid,wFlags,pDispParams,pVarResult,pExcepInfo,puArgErr)
+    ( (This)->lpVtbl -> Invoke(This,dispIdMember,riid,lcid,wFlags,pDispParams,pVarResult,pExcepInfo,puArgErr) ) 
 
 #endif /* COBJMACROS */
 
@@ -8792,7 +9450,7 @@ DEFINE_GUID(DIID_IDlgFilterLow,0xB2CCFBC0,0x5B60,0x11CF,0xAA,0x04,0x44,0x45,0x53
 #endif 	/* __IDlgFilterLow_DISPINTERFACE_DEFINED__ */
 
 
-DEFINE_GUID(CLSID_CDlgFilterLow,0xB2CCFBC1,0x5B60,0x11CF,0xAA,0x04,0x44,0x45,0x53,0x54,0x00,0x00);
+EXTERN_C const CLSID CLSID_CDlgFilterLow;
 
 #ifdef __cplusplus
 
@@ -8807,7 +9465,7 @@ CDlgFilterLow;
 /* [uuid] */ 
 
 
-DEFINE_GUID(DIID_IdlgFilterHigh,0xB2CCFBC2,0x5B60,0x11CF,0xAA,0x04,0x44,0x45,0x53,0x54,0x00,0x00);
+EXTERN_C const IID DIID_IdlgFilterHigh;
 
 #if defined(__cplusplus) && !defined(CINTERFACE)
 
@@ -8825,7 +9483,8 @@ DEFINE_GUID(DIID_IdlgFilterHigh,0xB2CCFBC2,0x5B60,0x11CF,0xAA,0x04,0x44,0x45,0x5
         HRESULT ( STDMETHODCALLTYPE *QueryInterface )( 
             IdlgFilterHigh * This,
             /* [in] */ REFIID riid,
-            /* [iid_is][out] */ void **ppvObject);
+            /* [annotation][iid_is][out] */ 
+            _COM_Outptr_  void **ppvObject);
         
         ULONG ( STDMETHODCALLTYPE *AddRef )( 
             IdlgFilterHigh * This);
@@ -8847,20 +9506,28 @@ DEFINE_GUID(DIID_IdlgFilterHigh,0xB2CCFBC2,0x5B60,0x11CF,0xAA,0x04,0x44,0x45,0x5
             IdlgFilterHigh * This,
             /* [in] */ REFIID riid,
             /* [size_is][in] */ LPOLESTR *rgszNames,
-            /* [in] */ UINT cNames,
+            /* [range][in] */ UINT cNames,
             /* [in] */ LCID lcid,
             /* [size_is][out] */ DISPID *rgDispId);
         
         /* [local] */ HRESULT ( STDMETHODCALLTYPE *Invoke )( 
             IdlgFilterHigh * This,
-            /* [in] */ DISPID dispIdMember,
-            /* [in] */ REFIID riid,
-            /* [in] */ LCID lcid,
-            /* [in] */ WORD wFlags,
-            /* [out][in] */ DISPPARAMS *pDispParams,
-            /* [out] */ VARIANT *pVarResult,
-            /* [out] */ EXCEPINFO *pExcepInfo,
-            /* [out] */ UINT *puArgErr);
+            /* [annotation][in] */ 
+            _In_  DISPID dispIdMember,
+            /* [annotation][in] */ 
+            _In_  REFIID riid,
+            /* [annotation][in] */ 
+            _In_  LCID lcid,
+            /* [annotation][in] */ 
+            _In_  WORD wFlags,
+            /* [annotation][out][in] */ 
+            _In_  DISPPARAMS *pDispParams,
+            /* [annotation][out] */ 
+            _Out_opt_  VARIANT *pVarResult,
+            /* [annotation][out] */ 
+            _Out_opt_  EXCEPINFO *pExcepInfo,
+            /* [annotation][out] */ 
+            _Out_opt_  UINT *puArgErr);
         
         END_INTERFACE
     } IdlgFilterHighVtbl;
@@ -8876,26 +9543,26 @@ DEFINE_GUID(DIID_IdlgFilterHigh,0xB2CCFBC2,0x5B60,0x11CF,0xAA,0x04,0x44,0x45,0x5
 
 
 #define IdlgFilterHigh_QueryInterface(This,riid,ppvObject)	\
-    (This)->lpVtbl -> QueryInterface(This,riid,ppvObject)
+    ( (This)->lpVtbl -> QueryInterface(This,riid,ppvObject) ) 
 
 #define IdlgFilterHigh_AddRef(This)	\
-    (This)->lpVtbl -> AddRef(This)
+    ( (This)->lpVtbl -> AddRef(This) ) 
 
 #define IdlgFilterHigh_Release(This)	\
-    (This)->lpVtbl -> Release(This)
+    ( (This)->lpVtbl -> Release(This) ) 
 
 
 #define IdlgFilterHigh_GetTypeInfoCount(This,pctinfo)	\
-    (This)->lpVtbl -> GetTypeInfoCount(This,pctinfo)
+    ( (This)->lpVtbl -> GetTypeInfoCount(This,pctinfo) ) 
 
 #define IdlgFilterHigh_GetTypeInfo(This,iTInfo,lcid,ppTInfo)	\
-    (This)->lpVtbl -> GetTypeInfo(This,iTInfo,lcid,ppTInfo)
+    ( (This)->lpVtbl -> GetTypeInfo(This,iTInfo,lcid,ppTInfo) ) 
 
 #define IdlgFilterHigh_GetIDsOfNames(This,riid,rgszNames,cNames,lcid,rgDispId)	\
-    (This)->lpVtbl -> GetIDsOfNames(This,riid,rgszNames,cNames,lcid,rgDispId)
+    ( (This)->lpVtbl -> GetIDsOfNames(This,riid,rgszNames,cNames,lcid,rgDispId) ) 
 
 #define IdlgFilterHigh_Invoke(This,dispIdMember,riid,lcid,wFlags,pDispParams,pVarResult,pExcepInfo,puArgErr)	\
-    (This)->lpVtbl -> Invoke(This,dispIdMember,riid,lcid,wFlags,pDispParams,pVarResult,pExcepInfo,puArgErr)
+    ( (This)->lpVtbl -> Invoke(This,dispIdMember,riid,lcid,wFlags,pDispParams,pVarResult,pExcepInfo,puArgErr) ) 
 
 #endif /* COBJMACROS */
 
@@ -8906,7 +9573,7 @@ DEFINE_GUID(DIID_IdlgFilterHigh,0xB2CCFBC2,0x5B60,0x11CF,0xAA,0x04,0x44,0x45,0x5
 #endif 	/* __IdlgFilterHigh_DISPINTERFACE_DEFINED__ */
 
 
-DEFINE_GUID(CLSID_CdlgFilterHigh,0xB2CCFBC3,0x5B60,0x11CF,0xAA,0x04,0x44,0x45,0x53,0x54,0x00,0x00);
+EXTERN_C const CLSID CLSID_CdlgFilterHigh;
 
 #ifdef __cplusplus
 
@@ -8921,7 +9588,7 @@ CdlgFilterHigh;
 /* [uuid] */ 
 
 
-DEFINE_GUID(DIID_IdlgFilterStop,0xB2CCFBC4,0x5B60,0x11CF,0xAA,0x04,0x44,0x45,0x53,0x54,0x00,0x00);
+EXTERN_C const IID DIID_IdlgFilterStop;
 
 #if defined(__cplusplus) && !defined(CINTERFACE)
 
@@ -8939,7 +9606,8 @@ DEFINE_GUID(DIID_IdlgFilterStop,0xB2CCFBC4,0x5B60,0x11CF,0xAA,0x04,0x44,0x45,0x5
         HRESULT ( STDMETHODCALLTYPE *QueryInterface )( 
             IdlgFilterStop * This,
             /* [in] */ REFIID riid,
-            /* [iid_is][out] */ void **ppvObject);
+            /* [annotation][iid_is][out] */ 
+            _COM_Outptr_  void **ppvObject);
         
         ULONG ( STDMETHODCALLTYPE *AddRef )( 
             IdlgFilterStop * This);
@@ -8961,20 +9629,28 @@ DEFINE_GUID(DIID_IdlgFilterStop,0xB2CCFBC4,0x5B60,0x11CF,0xAA,0x04,0x44,0x45,0x5
             IdlgFilterStop * This,
             /* [in] */ REFIID riid,
             /* [size_is][in] */ LPOLESTR *rgszNames,
-            /* [in] */ UINT cNames,
+            /* [range][in] */ UINT cNames,
             /* [in] */ LCID lcid,
             /* [size_is][out] */ DISPID *rgDispId);
         
         /* [local] */ HRESULT ( STDMETHODCALLTYPE *Invoke )( 
             IdlgFilterStop * This,
-            /* [in] */ DISPID dispIdMember,
-            /* [in] */ REFIID riid,
-            /* [in] */ LCID lcid,
-            /* [in] */ WORD wFlags,
-            /* [out][in] */ DISPPARAMS *pDispParams,
-            /* [out] */ VARIANT *pVarResult,
-            /* [out] */ EXCEPINFO *pExcepInfo,
-            /* [out] */ UINT *puArgErr);
+            /* [annotation][in] */ 
+            _In_  DISPID dispIdMember,
+            /* [annotation][in] */ 
+            _In_  REFIID riid,
+            /* [annotation][in] */ 
+            _In_  LCID lcid,
+            /* [annotation][in] */ 
+            _In_  WORD wFlags,
+            /* [annotation][out][in] */ 
+            _In_  DISPPARAMS *pDispParams,
+            /* [annotation][out] */ 
+            _Out_opt_  VARIANT *pVarResult,
+            /* [annotation][out] */ 
+            _Out_opt_  EXCEPINFO *pExcepInfo,
+            /* [annotation][out] */ 
+            _Out_opt_  UINT *puArgErr);
         
         END_INTERFACE
     } IdlgFilterStopVtbl;
@@ -8990,26 +9666,26 @@ DEFINE_GUID(DIID_IdlgFilterStop,0xB2CCFBC4,0x5B60,0x11CF,0xAA,0x04,0x44,0x45,0x5
 
 
 #define IdlgFilterStop_QueryInterface(This,riid,ppvObject)	\
-    (This)->lpVtbl -> QueryInterface(This,riid,ppvObject)
+    ( (This)->lpVtbl -> QueryInterface(This,riid,ppvObject) ) 
 
 #define IdlgFilterStop_AddRef(This)	\
-    (This)->lpVtbl -> AddRef(This)
+    ( (This)->lpVtbl -> AddRef(This) ) 
 
 #define IdlgFilterStop_Release(This)	\
-    (This)->lpVtbl -> Release(This)
+    ( (This)->lpVtbl -> Release(This) ) 
 
 
 #define IdlgFilterStop_GetTypeInfoCount(This,pctinfo)	\
-    (This)->lpVtbl -> GetTypeInfoCount(This,pctinfo)
+    ( (This)->lpVtbl -> GetTypeInfoCount(This,pctinfo) ) 
 
 #define IdlgFilterStop_GetTypeInfo(This,iTInfo,lcid,ppTInfo)	\
-    (This)->lpVtbl -> GetTypeInfo(This,iTInfo,lcid,ppTInfo)
+    ( (This)->lpVtbl -> GetTypeInfo(This,iTInfo,lcid,ppTInfo) ) 
 
 #define IdlgFilterStop_GetIDsOfNames(This,riid,rgszNames,cNames,lcid,rgDispId)	\
-    (This)->lpVtbl -> GetIDsOfNames(This,riid,rgszNames,cNames,lcid,rgDispId)
+    ( (This)->lpVtbl -> GetIDsOfNames(This,riid,rgszNames,cNames,lcid,rgDispId) ) 
 
 #define IdlgFilterStop_Invoke(This,dispIdMember,riid,lcid,wFlags,pDispParams,pVarResult,pExcepInfo,puArgErr)	\
-    (This)->lpVtbl -> Invoke(This,dispIdMember,riid,lcid,wFlags,pDispParams,pVarResult,pExcepInfo,puArgErr)
+    ( (This)->lpVtbl -> Invoke(This,dispIdMember,riid,lcid,wFlags,pDispParams,pVarResult,pExcepInfo,puArgErr) ) 
 
 #endif /* COBJMACROS */
 
@@ -9020,7 +9696,7 @@ DEFINE_GUID(DIID_IdlgFilterStop,0xB2CCFBC4,0x5B60,0x11CF,0xAA,0x04,0x44,0x45,0x5
 #endif 	/* __IdlgFilterStop_DISPINTERFACE_DEFINED__ */
 
 
-DEFINE_GUID(CLSID_CdlgFilterStop,0xB2CCFBC5,0x5B60,0x11CF,0xAA,0x04,0x44,0x45,0x53,0x54,0x00,0x00);
+EXTERN_C const CLSID CLSID_CdlgFilterStop;
 
 #ifdef __cplusplus
 
@@ -9035,7 +9711,7 @@ CdlgFilterStop;
 /* [uuid] */ 
 
 
-DEFINE_GUID(DIID_IDlgFilterPass,0xB2CCFBC6,0x5B60,0x11CF,0xAA,0x04,0x44,0x45,0x53,0x54,0x00,0x00);
+EXTERN_C const IID DIID_IDlgFilterPass;
 
 #if defined(__cplusplus) && !defined(CINTERFACE)
 
@@ -9053,7 +9729,8 @@ DEFINE_GUID(DIID_IDlgFilterPass,0xB2CCFBC6,0x5B60,0x11CF,0xAA,0x04,0x44,0x45,0x5
         HRESULT ( STDMETHODCALLTYPE *QueryInterface )( 
             IDlgFilterPass * This,
             /* [in] */ REFIID riid,
-            /* [iid_is][out] */ void **ppvObject);
+            /* [annotation][iid_is][out] */ 
+            _COM_Outptr_  void **ppvObject);
         
         ULONG ( STDMETHODCALLTYPE *AddRef )( 
             IDlgFilterPass * This);
@@ -9075,20 +9752,28 @@ DEFINE_GUID(DIID_IDlgFilterPass,0xB2CCFBC6,0x5B60,0x11CF,0xAA,0x04,0x44,0x45,0x5
             IDlgFilterPass * This,
             /* [in] */ REFIID riid,
             /* [size_is][in] */ LPOLESTR *rgszNames,
-            /* [in] */ UINT cNames,
+            /* [range][in] */ UINT cNames,
             /* [in] */ LCID lcid,
             /* [size_is][out] */ DISPID *rgDispId);
         
         /* [local] */ HRESULT ( STDMETHODCALLTYPE *Invoke )( 
             IDlgFilterPass * This,
-            /* [in] */ DISPID dispIdMember,
-            /* [in] */ REFIID riid,
-            /* [in] */ LCID lcid,
-            /* [in] */ WORD wFlags,
-            /* [out][in] */ DISPPARAMS *pDispParams,
-            /* [out] */ VARIANT *pVarResult,
-            /* [out] */ EXCEPINFO *pExcepInfo,
-            /* [out] */ UINT *puArgErr);
+            /* [annotation][in] */ 
+            _In_  DISPID dispIdMember,
+            /* [annotation][in] */ 
+            _In_  REFIID riid,
+            /* [annotation][in] */ 
+            _In_  LCID lcid,
+            /* [annotation][in] */ 
+            _In_  WORD wFlags,
+            /* [annotation][out][in] */ 
+            _In_  DISPPARAMS *pDispParams,
+            /* [annotation][out] */ 
+            _Out_opt_  VARIANT *pVarResult,
+            /* [annotation][out] */ 
+            _Out_opt_  EXCEPINFO *pExcepInfo,
+            /* [annotation][out] */ 
+            _Out_opt_  UINT *puArgErr);
         
         END_INTERFACE
     } IDlgFilterPassVtbl;
@@ -9104,26 +9789,26 @@ DEFINE_GUID(DIID_IDlgFilterPass,0xB2CCFBC6,0x5B60,0x11CF,0xAA,0x04,0x44,0x45,0x5
 
 
 #define IDlgFilterPass_QueryInterface(This,riid,ppvObject)	\
-    (This)->lpVtbl -> QueryInterface(This,riid,ppvObject)
+    ( (This)->lpVtbl -> QueryInterface(This,riid,ppvObject) ) 
 
 #define IDlgFilterPass_AddRef(This)	\
-    (This)->lpVtbl -> AddRef(This)
+    ( (This)->lpVtbl -> AddRef(This) ) 
 
 #define IDlgFilterPass_Release(This)	\
-    (This)->lpVtbl -> Release(This)
+    ( (This)->lpVtbl -> Release(This) ) 
 
 
 #define IDlgFilterPass_GetTypeInfoCount(This,pctinfo)	\
-    (This)->lpVtbl -> GetTypeInfoCount(This,pctinfo)
+    ( (This)->lpVtbl -> GetTypeInfoCount(This,pctinfo) ) 
 
 #define IDlgFilterPass_GetTypeInfo(This,iTInfo,lcid,ppTInfo)	\
-    (This)->lpVtbl -> GetTypeInfo(This,iTInfo,lcid,ppTInfo)
+    ( (This)->lpVtbl -> GetTypeInfo(This,iTInfo,lcid,ppTInfo) ) 
 
 #define IDlgFilterPass_GetIDsOfNames(This,riid,rgszNames,cNames,lcid,rgDispId)	\
-    (This)->lpVtbl -> GetIDsOfNames(This,riid,rgszNames,cNames,lcid,rgDispId)
+    ( (This)->lpVtbl -> GetIDsOfNames(This,riid,rgszNames,cNames,lcid,rgDispId) ) 
 
 #define IDlgFilterPass_Invoke(This,dispIdMember,riid,lcid,wFlags,pDispParams,pVarResult,pExcepInfo,puArgErr)	\
-    (This)->lpVtbl -> Invoke(This,dispIdMember,riid,lcid,wFlags,pDispParams,pVarResult,pExcepInfo,puArgErr)
+    ( (This)->lpVtbl -> Invoke(This,dispIdMember,riid,lcid,wFlags,pDispParams,pVarResult,pExcepInfo,puArgErr) ) 
 
 #endif /* COBJMACROS */
 
@@ -9134,7 +9819,7 @@ DEFINE_GUID(DIID_IDlgFilterPass,0xB2CCFBC6,0x5B60,0x11CF,0xAA,0x04,0x44,0x45,0x5
 #endif 	/* __IDlgFilterPass_DISPINTERFACE_DEFINED__ */
 
 
-DEFINE_GUID(CLSID_CDlgFilterPass,0xB2CCFBC7,0x5B60,0x11CF,0xAA,0x04,0x44,0x45,0x53,0x54,0x00,0x00);
+EXTERN_C const CLSID CLSID_CDlgFilterPass;
 
 #ifdef __cplusplus
 
@@ -9149,7 +9834,7 @@ CDlgFilterPass;
 /* [uuid] */ 
 
 
-DEFINE_GUID(DIID_IDlgMsrDistort,0x11B046E0,0x666C,0x11CF,0xAA,0x04,0x44,0x45,0x53,0x54,0x00,0x00);
+EXTERN_C const IID DIID_IDlgMsrDistort;
 
 #if defined(__cplusplus) && !defined(CINTERFACE)
 
@@ -9167,7 +9852,8 @@ DEFINE_GUID(DIID_IDlgMsrDistort,0x11B046E0,0x666C,0x11CF,0xAA,0x04,0x44,0x45,0x5
         HRESULT ( STDMETHODCALLTYPE *QueryInterface )( 
             IDlgMsrDistort * This,
             /* [in] */ REFIID riid,
-            /* [iid_is][out] */ void **ppvObject);
+            /* [annotation][iid_is][out] */ 
+            _COM_Outptr_  void **ppvObject);
         
         ULONG ( STDMETHODCALLTYPE *AddRef )( 
             IDlgMsrDistort * This);
@@ -9189,20 +9875,28 @@ DEFINE_GUID(DIID_IDlgMsrDistort,0x11B046E0,0x666C,0x11CF,0xAA,0x04,0x44,0x45,0x5
             IDlgMsrDistort * This,
             /* [in] */ REFIID riid,
             /* [size_is][in] */ LPOLESTR *rgszNames,
-            /* [in] */ UINT cNames,
+            /* [range][in] */ UINT cNames,
             /* [in] */ LCID lcid,
             /* [size_is][out] */ DISPID *rgDispId);
         
         /* [local] */ HRESULT ( STDMETHODCALLTYPE *Invoke )( 
             IDlgMsrDistort * This,
-            /* [in] */ DISPID dispIdMember,
-            /* [in] */ REFIID riid,
-            /* [in] */ LCID lcid,
-            /* [in] */ WORD wFlags,
-            /* [out][in] */ DISPPARAMS *pDispParams,
-            /* [out] */ VARIANT *pVarResult,
-            /* [out] */ EXCEPINFO *pExcepInfo,
-            /* [out] */ UINT *puArgErr);
+            /* [annotation][in] */ 
+            _In_  DISPID dispIdMember,
+            /* [annotation][in] */ 
+            _In_  REFIID riid,
+            /* [annotation][in] */ 
+            _In_  LCID lcid,
+            /* [annotation][in] */ 
+            _In_  WORD wFlags,
+            /* [annotation][out][in] */ 
+            _In_  DISPPARAMS *pDispParams,
+            /* [annotation][out] */ 
+            _Out_opt_  VARIANT *pVarResult,
+            /* [annotation][out] */ 
+            _Out_opt_  EXCEPINFO *pExcepInfo,
+            /* [annotation][out] */ 
+            _Out_opt_  UINT *puArgErr);
         
         END_INTERFACE
     } IDlgMsrDistortVtbl;
@@ -9218,26 +9912,26 @@ DEFINE_GUID(DIID_IDlgMsrDistort,0x11B046E0,0x666C,0x11CF,0xAA,0x04,0x44,0x45,0x5
 
 
 #define IDlgMsrDistort_QueryInterface(This,riid,ppvObject)	\
-    (This)->lpVtbl -> QueryInterface(This,riid,ppvObject)
+    ( (This)->lpVtbl -> QueryInterface(This,riid,ppvObject) ) 
 
 #define IDlgMsrDistort_AddRef(This)	\
-    (This)->lpVtbl -> AddRef(This)
+    ( (This)->lpVtbl -> AddRef(This) ) 
 
 #define IDlgMsrDistort_Release(This)	\
-    (This)->lpVtbl -> Release(This)
+    ( (This)->lpVtbl -> Release(This) ) 
 
 
 #define IDlgMsrDistort_GetTypeInfoCount(This,pctinfo)	\
-    (This)->lpVtbl -> GetTypeInfoCount(This,pctinfo)
+    ( (This)->lpVtbl -> GetTypeInfoCount(This,pctinfo) ) 
 
 #define IDlgMsrDistort_GetTypeInfo(This,iTInfo,lcid,ppTInfo)	\
-    (This)->lpVtbl -> GetTypeInfo(This,iTInfo,lcid,ppTInfo)
+    ( (This)->lpVtbl -> GetTypeInfo(This,iTInfo,lcid,ppTInfo) ) 
 
 #define IDlgMsrDistort_GetIDsOfNames(This,riid,rgszNames,cNames,lcid,rgDispId)	\
-    (This)->lpVtbl -> GetIDsOfNames(This,riid,rgszNames,cNames,lcid,rgDispId)
+    ( (This)->lpVtbl -> GetIDsOfNames(This,riid,rgszNames,cNames,lcid,rgDispId) ) 
 
 #define IDlgMsrDistort_Invoke(This,dispIdMember,riid,lcid,wFlags,pDispParams,pVarResult,pExcepInfo,puArgErr)	\
-    (This)->lpVtbl -> Invoke(This,dispIdMember,riid,lcid,wFlags,pDispParams,pVarResult,pExcepInfo,puArgErr)
+    ( (This)->lpVtbl -> Invoke(This,dispIdMember,riid,lcid,wFlags,pDispParams,pVarResult,pExcepInfo,puArgErr) ) 
 
 #endif /* COBJMACROS */
 
@@ -9248,7 +9942,7 @@ DEFINE_GUID(DIID_IDlgMsrDistort,0x11B046E0,0x666C,0x11CF,0xAA,0x04,0x44,0x45,0x5
 #endif 	/* __IDlgMsrDistort_DISPINTERFACE_DEFINED__ */
 
 
-DEFINE_GUID(CLSID_CDlgMsrDistort,0x11B046E1,0x666C,0x11CF,0xAA,0x04,0x44,0x45,0x53,0x54,0x00,0x00);
+EXTERN_C const CLSID CLSID_CDlgMsrDistort;
 
 #ifdef __cplusplus
 
@@ -9263,7 +9957,7 @@ CDlgMsrDistort;
 /* [uuid] */ 
 
 
-DEFINE_GUID(DIID_IDlgPrefReference,0xA308C900,0x6D10,0x11CF,0xAA,0x04,0x44,0x45,0x53,0x54,0x00,0x00);
+EXTERN_C const IID DIID_IDlgPrefReference;
 
 #if defined(__cplusplus) && !defined(CINTERFACE)
 
@@ -9281,7 +9975,8 @@ DEFINE_GUID(DIID_IDlgPrefReference,0xA308C900,0x6D10,0x11CF,0xAA,0x04,0x44,0x45,
         HRESULT ( STDMETHODCALLTYPE *QueryInterface )( 
             IDlgPrefReference * This,
             /* [in] */ REFIID riid,
-            /* [iid_is][out] */ void **ppvObject);
+            /* [annotation][iid_is][out] */ 
+            _COM_Outptr_  void **ppvObject);
         
         ULONG ( STDMETHODCALLTYPE *AddRef )( 
             IDlgPrefReference * This);
@@ -9303,20 +9998,28 @@ DEFINE_GUID(DIID_IDlgPrefReference,0xA308C900,0x6D10,0x11CF,0xAA,0x04,0x44,0x45,
             IDlgPrefReference * This,
             /* [in] */ REFIID riid,
             /* [size_is][in] */ LPOLESTR *rgszNames,
-            /* [in] */ UINT cNames,
+            /* [range][in] */ UINT cNames,
             /* [in] */ LCID lcid,
             /* [size_is][out] */ DISPID *rgDispId);
         
         /* [local] */ HRESULT ( STDMETHODCALLTYPE *Invoke )( 
             IDlgPrefReference * This,
-            /* [in] */ DISPID dispIdMember,
-            /* [in] */ REFIID riid,
-            /* [in] */ LCID lcid,
-            /* [in] */ WORD wFlags,
-            /* [out][in] */ DISPPARAMS *pDispParams,
-            /* [out] */ VARIANT *pVarResult,
-            /* [out] */ EXCEPINFO *pExcepInfo,
-            /* [out] */ UINT *puArgErr);
+            /* [annotation][in] */ 
+            _In_  DISPID dispIdMember,
+            /* [annotation][in] */ 
+            _In_  REFIID riid,
+            /* [annotation][in] */ 
+            _In_  LCID lcid,
+            /* [annotation][in] */ 
+            _In_  WORD wFlags,
+            /* [annotation][out][in] */ 
+            _In_  DISPPARAMS *pDispParams,
+            /* [annotation][out] */ 
+            _Out_opt_  VARIANT *pVarResult,
+            /* [annotation][out] */ 
+            _Out_opt_  EXCEPINFO *pExcepInfo,
+            /* [annotation][out] */ 
+            _Out_opt_  UINT *puArgErr);
         
         END_INTERFACE
     } IDlgPrefReferenceVtbl;
@@ -9332,26 +10035,26 @@ DEFINE_GUID(DIID_IDlgPrefReference,0xA308C900,0x6D10,0x11CF,0xAA,0x04,0x44,0x45,
 
 
 #define IDlgPrefReference_QueryInterface(This,riid,ppvObject)	\
-    (This)->lpVtbl -> QueryInterface(This,riid,ppvObject)
+    ( (This)->lpVtbl -> QueryInterface(This,riid,ppvObject) ) 
 
 #define IDlgPrefReference_AddRef(This)	\
-    (This)->lpVtbl -> AddRef(This)
+    ( (This)->lpVtbl -> AddRef(This) ) 
 
 #define IDlgPrefReference_Release(This)	\
-    (This)->lpVtbl -> Release(This)
+    ( (This)->lpVtbl -> Release(This) ) 
 
 
 #define IDlgPrefReference_GetTypeInfoCount(This,pctinfo)	\
-    (This)->lpVtbl -> GetTypeInfoCount(This,pctinfo)
+    ( (This)->lpVtbl -> GetTypeInfoCount(This,pctinfo) ) 
 
 #define IDlgPrefReference_GetTypeInfo(This,iTInfo,lcid,ppTInfo)	\
-    (This)->lpVtbl -> GetTypeInfo(This,iTInfo,lcid,ppTInfo)
+    ( (This)->lpVtbl -> GetTypeInfo(This,iTInfo,lcid,ppTInfo) ) 
 
 #define IDlgPrefReference_GetIDsOfNames(This,riid,rgszNames,cNames,lcid,rgDispId)	\
-    (This)->lpVtbl -> GetIDsOfNames(This,riid,rgszNames,cNames,lcid,rgDispId)
+    ( (This)->lpVtbl -> GetIDsOfNames(This,riid,rgszNames,cNames,lcid,rgDispId) ) 
 
 #define IDlgPrefReference_Invoke(This,dispIdMember,riid,lcid,wFlags,pDispParams,pVarResult,pExcepInfo,puArgErr)	\
-    (This)->lpVtbl -> Invoke(This,dispIdMember,riid,lcid,wFlags,pDispParams,pVarResult,pExcepInfo,puArgErr)
+    ( (This)->lpVtbl -> Invoke(This,dispIdMember,riid,lcid,wFlags,pDispParams,pVarResult,pExcepInfo,puArgErr) ) 
 
 #endif /* COBJMACROS */
 
@@ -9362,7 +10065,7 @@ DEFINE_GUID(DIID_IDlgPrefReference,0xA308C900,0x6D10,0x11CF,0xAA,0x04,0x44,0x45,
 #endif 	/* __IDlgPrefReference_DISPINTERFACE_DEFINED__ */
 
 
-DEFINE_GUID(CLSID_CDlgPrefReference,0xA308C901,0x6D10,0x11CF,0xAA,0x04,0x44,0x45,0x53,0x54,0x00,0x00);
+EXTERN_C const CLSID CLSID_CDlgPrefReference;
 
 #ifdef __cplusplus
 
@@ -9377,7 +10080,7 @@ CDlgPrefReference;
 /* [uuid] */ 
 
 
-DEFINE_GUID(DIID_IDlgCalibrate,0x235663A0,0x7627,0x11CF,0xAA,0x04,0x44,0x45,0x53,0x54,0x00,0x00);
+EXTERN_C const IID DIID_IDlgCalibrate;
 
 #if defined(__cplusplus) && !defined(CINTERFACE)
 
@@ -9395,7 +10098,8 @@ DEFINE_GUID(DIID_IDlgCalibrate,0x235663A0,0x7627,0x11CF,0xAA,0x04,0x44,0x45,0x53
         HRESULT ( STDMETHODCALLTYPE *QueryInterface )( 
             IDlgCalibrate * This,
             /* [in] */ REFIID riid,
-            /* [iid_is][out] */ void **ppvObject);
+            /* [annotation][iid_is][out] */ 
+            _COM_Outptr_  void **ppvObject);
         
         ULONG ( STDMETHODCALLTYPE *AddRef )( 
             IDlgCalibrate * This);
@@ -9417,20 +10121,28 @@ DEFINE_GUID(DIID_IDlgCalibrate,0x235663A0,0x7627,0x11CF,0xAA,0x04,0x44,0x45,0x53
             IDlgCalibrate * This,
             /* [in] */ REFIID riid,
             /* [size_is][in] */ LPOLESTR *rgszNames,
-            /* [in] */ UINT cNames,
+            /* [range][in] */ UINT cNames,
             /* [in] */ LCID lcid,
             /* [size_is][out] */ DISPID *rgDispId);
         
         /* [local] */ HRESULT ( STDMETHODCALLTYPE *Invoke )( 
             IDlgCalibrate * This,
-            /* [in] */ DISPID dispIdMember,
-            /* [in] */ REFIID riid,
-            /* [in] */ LCID lcid,
-            /* [in] */ WORD wFlags,
-            /* [out][in] */ DISPPARAMS *pDispParams,
-            /* [out] */ VARIANT *pVarResult,
-            /* [out] */ EXCEPINFO *pExcepInfo,
-            /* [out] */ UINT *puArgErr);
+            /* [annotation][in] */ 
+            _In_  DISPID dispIdMember,
+            /* [annotation][in] */ 
+            _In_  REFIID riid,
+            /* [annotation][in] */ 
+            _In_  LCID lcid,
+            /* [annotation][in] */ 
+            _In_  WORD wFlags,
+            /* [annotation][out][in] */ 
+            _In_  DISPPARAMS *pDispParams,
+            /* [annotation][out] */ 
+            _Out_opt_  VARIANT *pVarResult,
+            /* [annotation][out] */ 
+            _Out_opt_  EXCEPINFO *pExcepInfo,
+            /* [annotation][out] */ 
+            _Out_opt_  UINT *puArgErr);
         
         END_INTERFACE
     } IDlgCalibrateVtbl;
@@ -9446,26 +10158,26 @@ DEFINE_GUID(DIID_IDlgCalibrate,0x235663A0,0x7627,0x11CF,0xAA,0x04,0x44,0x45,0x53
 
 
 #define IDlgCalibrate_QueryInterface(This,riid,ppvObject)	\
-    (This)->lpVtbl -> QueryInterface(This,riid,ppvObject)
+    ( (This)->lpVtbl -> QueryInterface(This,riid,ppvObject) ) 
 
 #define IDlgCalibrate_AddRef(This)	\
-    (This)->lpVtbl -> AddRef(This)
+    ( (This)->lpVtbl -> AddRef(This) ) 
 
 #define IDlgCalibrate_Release(This)	\
-    (This)->lpVtbl -> Release(This)
+    ( (This)->lpVtbl -> Release(This) ) 
 
 
 #define IDlgCalibrate_GetTypeInfoCount(This,pctinfo)	\
-    (This)->lpVtbl -> GetTypeInfoCount(This,pctinfo)
+    ( (This)->lpVtbl -> GetTypeInfoCount(This,pctinfo) ) 
 
 #define IDlgCalibrate_GetTypeInfo(This,iTInfo,lcid,ppTInfo)	\
-    (This)->lpVtbl -> GetTypeInfo(This,iTInfo,lcid,ppTInfo)
+    ( (This)->lpVtbl -> GetTypeInfo(This,iTInfo,lcid,ppTInfo) ) 
 
 #define IDlgCalibrate_GetIDsOfNames(This,riid,rgszNames,cNames,lcid,rgDispId)	\
-    (This)->lpVtbl -> GetIDsOfNames(This,riid,rgszNames,cNames,lcid,rgDispId)
+    ( (This)->lpVtbl -> GetIDsOfNames(This,riid,rgszNames,cNames,lcid,rgDispId) ) 
 
 #define IDlgCalibrate_Invoke(This,dispIdMember,riid,lcid,wFlags,pDispParams,pVarResult,pExcepInfo,puArgErr)	\
-    (This)->lpVtbl -> Invoke(This,dispIdMember,riid,lcid,wFlags,pDispParams,pVarResult,pExcepInfo,puArgErr)
+    ( (This)->lpVtbl -> Invoke(This,dispIdMember,riid,lcid,wFlags,pDispParams,pVarResult,pExcepInfo,puArgErr) ) 
 
 #endif /* COBJMACROS */
 
@@ -9476,7 +10188,7 @@ DEFINE_GUID(DIID_IDlgCalibrate,0x235663A0,0x7627,0x11CF,0xAA,0x04,0x44,0x45,0x53
 #endif 	/* __IDlgCalibrate_DISPINTERFACE_DEFINED__ */
 
 
-DEFINE_GUID(CLSID_CDlgCalibrate,0x235663A1,0x7627,0x11CF,0xAA,0x04,0x44,0x45,0x53,0x54,0x00,0x00);
+EXTERN_C const CLSID CLSID_CDlgCalibrate;
 
 #ifdef __cplusplus
 
@@ -9491,7 +10203,7 @@ CDlgCalibrate;
 /* [uuid] */ 
 
 
-DEFINE_GUID(DIID_IDlgCalcTuned,0xB4D31A40,0x78D3,0x11CF,0xAA,0x04,0x44,0x45,0x53,0x54,0x00,0x00);
+EXTERN_C const IID DIID_IDlgCalcTuned;
 
 #if defined(__cplusplus) && !defined(CINTERFACE)
 
@@ -9509,7 +10221,8 @@ DEFINE_GUID(DIID_IDlgCalcTuned,0xB4D31A40,0x78D3,0x11CF,0xAA,0x04,0x44,0x45,0x53
         HRESULT ( STDMETHODCALLTYPE *QueryInterface )( 
             IDlgCalcTuned * This,
             /* [in] */ REFIID riid,
-            /* [iid_is][out] */ void **ppvObject);
+            /* [annotation][iid_is][out] */ 
+            _COM_Outptr_  void **ppvObject);
         
         ULONG ( STDMETHODCALLTYPE *AddRef )( 
             IDlgCalcTuned * This);
@@ -9531,20 +10244,28 @@ DEFINE_GUID(DIID_IDlgCalcTuned,0xB4D31A40,0x78D3,0x11CF,0xAA,0x04,0x44,0x45,0x53
             IDlgCalcTuned * This,
             /* [in] */ REFIID riid,
             /* [size_is][in] */ LPOLESTR *rgszNames,
-            /* [in] */ UINT cNames,
+            /* [range][in] */ UINT cNames,
             /* [in] */ LCID lcid,
             /* [size_is][out] */ DISPID *rgDispId);
         
         /* [local] */ HRESULT ( STDMETHODCALLTYPE *Invoke )( 
             IDlgCalcTuned * This,
-            /* [in] */ DISPID dispIdMember,
-            /* [in] */ REFIID riid,
-            /* [in] */ LCID lcid,
-            /* [in] */ WORD wFlags,
-            /* [out][in] */ DISPPARAMS *pDispParams,
-            /* [out] */ VARIANT *pVarResult,
-            /* [out] */ EXCEPINFO *pExcepInfo,
-            /* [out] */ UINT *puArgErr);
+            /* [annotation][in] */ 
+            _In_  DISPID dispIdMember,
+            /* [annotation][in] */ 
+            _In_  REFIID riid,
+            /* [annotation][in] */ 
+            _In_  LCID lcid,
+            /* [annotation][in] */ 
+            _In_  WORD wFlags,
+            /* [annotation][out][in] */ 
+            _In_  DISPPARAMS *pDispParams,
+            /* [annotation][out] */ 
+            _Out_opt_  VARIANT *pVarResult,
+            /* [annotation][out] */ 
+            _Out_opt_  EXCEPINFO *pExcepInfo,
+            /* [annotation][out] */ 
+            _Out_opt_  UINT *puArgErr);
         
         END_INTERFACE
     } IDlgCalcTunedVtbl;
@@ -9560,26 +10281,26 @@ DEFINE_GUID(DIID_IDlgCalcTuned,0xB4D31A40,0x78D3,0x11CF,0xAA,0x04,0x44,0x45,0x53
 
 
 #define IDlgCalcTuned_QueryInterface(This,riid,ppvObject)	\
-    (This)->lpVtbl -> QueryInterface(This,riid,ppvObject)
+    ( (This)->lpVtbl -> QueryInterface(This,riid,ppvObject) ) 
 
 #define IDlgCalcTuned_AddRef(This)	\
-    (This)->lpVtbl -> AddRef(This)
+    ( (This)->lpVtbl -> AddRef(This) ) 
 
 #define IDlgCalcTuned_Release(This)	\
-    (This)->lpVtbl -> Release(This)
+    ( (This)->lpVtbl -> Release(This) ) 
 
 
 #define IDlgCalcTuned_GetTypeInfoCount(This,pctinfo)	\
-    (This)->lpVtbl -> GetTypeInfoCount(This,pctinfo)
+    ( (This)->lpVtbl -> GetTypeInfoCount(This,pctinfo) ) 
 
 #define IDlgCalcTuned_GetTypeInfo(This,iTInfo,lcid,ppTInfo)	\
-    (This)->lpVtbl -> GetTypeInfo(This,iTInfo,lcid,ppTInfo)
+    ( (This)->lpVtbl -> GetTypeInfo(This,iTInfo,lcid,ppTInfo) ) 
 
 #define IDlgCalcTuned_GetIDsOfNames(This,riid,rgszNames,cNames,lcid,rgDispId)	\
-    (This)->lpVtbl -> GetIDsOfNames(This,riid,rgszNames,cNames,lcid,rgDispId)
+    ( (This)->lpVtbl -> GetIDsOfNames(This,riid,rgszNames,cNames,lcid,rgDispId) ) 
 
 #define IDlgCalcTuned_Invoke(This,dispIdMember,riid,lcid,wFlags,pDispParams,pVarResult,pExcepInfo,puArgErr)	\
-    (This)->lpVtbl -> Invoke(This,dispIdMember,riid,lcid,wFlags,pDispParams,pVarResult,pExcepInfo,puArgErr)
+    ( (This)->lpVtbl -> Invoke(This,dispIdMember,riid,lcid,wFlags,pDispParams,pVarResult,pExcepInfo,puArgErr) ) 
 
 #endif /* COBJMACROS */
 
@@ -9590,7 +10311,7 @@ DEFINE_GUID(DIID_IDlgCalcTuned,0xB4D31A40,0x78D3,0x11CF,0xAA,0x04,0x44,0x45,0x53
 #endif 	/* __IDlgCalcTuned_DISPINTERFACE_DEFINED__ */
 
 
-DEFINE_GUID(CLSID_CDlgCalcTuned,0xB4D31A41,0x78D3,0x11CF,0xAA,0x04,0x44,0x45,0x53,0x54,0x00,0x00);
+EXTERN_C const CLSID CLSID_CDlgCalcTuned;
 
 #ifdef __cplusplus
 
@@ -9605,7 +10326,7 @@ CDlgCalcTuned;
 /* [uuid] */ 
 
 
-DEFINE_GUID(DIID_IDlgCalcPassive,0xB4D31A42,0x78D3,0x11CF,0xAA,0x04,0x44,0x45,0x53,0x54,0x00,0x00);
+EXTERN_C const IID DIID_IDlgCalcPassive;
 
 #if defined(__cplusplus) && !defined(CINTERFACE)
 
@@ -9623,7 +10344,8 @@ DEFINE_GUID(DIID_IDlgCalcPassive,0xB4D31A42,0x78D3,0x11CF,0xAA,0x04,0x44,0x45,0x
         HRESULT ( STDMETHODCALLTYPE *QueryInterface )( 
             IDlgCalcPassive * This,
             /* [in] */ REFIID riid,
-            /* [iid_is][out] */ void **ppvObject);
+            /* [annotation][iid_is][out] */ 
+            _COM_Outptr_  void **ppvObject);
         
         ULONG ( STDMETHODCALLTYPE *AddRef )( 
             IDlgCalcPassive * This);
@@ -9645,20 +10367,28 @@ DEFINE_GUID(DIID_IDlgCalcPassive,0xB4D31A42,0x78D3,0x11CF,0xAA,0x04,0x44,0x45,0x
             IDlgCalcPassive * This,
             /* [in] */ REFIID riid,
             /* [size_is][in] */ LPOLESTR *rgszNames,
-            /* [in] */ UINT cNames,
+            /* [range][in] */ UINT cNames,
             /* [in] */ LCID lcid,
             /* [size_is][out] */ DISPID *rgDispId);
         
         /* [local] */ HRESULT ( STDMETHODCALLTYPE *Invoke )( 
             IDlgCalcPassive * This,
-            /* [in] */ DISPID dispIdMember,
-            /* [in] */ REFIID riid,
-            /* [in] */ LCID lcid,
-            /* [in] */ WORD wFlags,
-            /* [out][in] */ DISPPARAMS *pDispParams,
-            /* [out] */ VARIANT *pVarResult,
-            /* [out] */ EXCEPINFO *pExcepInfo,
-            /* [out] */ UINT *puArgErr);
+            /* [annotation][in] */ 
+            _In_  DISPID dispIdMember,
+            /* [annotation][in] */ 
+            _In_  REFIID riid,
+            /* [annotation][in] */ 
+            _In_  LCID lcid,
+            /* [annotation][in] */ 
+            _In_  WORD wFlags,
+            /* [annotation][out][in] */ 
+            _In_  DISPPARAMS *pDispParams,
+            /* [annotation][out] */ 
+            _Out_opt_  VARIANT *pVarResult,
+            /* [annotation][out] */ 
+            _Out_opt_  EXCEPINFO *pExcepInfo,
+            /* [annotation][out] */ 
+            _Out_opt_  UINT *puArgErr);
         
         END_INTERFACE
     } IDlgCalcPassiveVtbl;
@@ -9674,26 +10404,26 @@ DEFINE_GUID(DIID_IDlgCalcPassive,0xB4D31A42,0x78D3,0x11CF,0xAA,0x04,0x44,0x45,0x
 
 
 #define IDlgCalcPassive_QueryInterface(This,riid,ppvObject)	\
-    (This)->lpVtbl -> QueryInterface(This,riid,ppvObject)
+    ( (This)->lpVtbl -> QueryInterface(This,riid,ppvObject) ) 
 
 #define IDlgCalcPassive_AddRef(This)	\
-    (This)->lpVtbl -> AddRef(This)
+    ( (This)->lpVtbl -> AddRef(This) ) 
 
 #define IDlgCalcPassive_Release(This)	\
-    (This)->lpVtbl -> Release(This)
+    ( (This)->lpVtbl -> Release(This) ) 
 
 
 #define IDlgCalcPassive_GetTypeInfoCount(This,pctinfo)	\
-    (This)->lpVtbl -> GetTypeInfoCount(This,pctinfo)
+    ( (This)->lpVtbl -> GetTypeInfoCount(This,pctinfo) ) 
 
 #define IDlgCalcPassive_GetTypeInfo(This,iTInfo,lcid,ppTInfo)	\
-    (This)->lpVtbl -> GetTypeInfo(This,iTInfo,lcid,ppTInfo)
+    ( (This)->lpVtbl -> GetTypeInfo(This,iTInfo,lcid,ppTInfo) ) 
 
 #define IDlgCalcPassive_GetIDsOfNames(This,riid,rgszNames,cNames,lcid,rgDispId)	\
-    (This)->lpVtbl -> GetIDsOfNames(This,riid,rgszNames,cNames,lcid,rgDispId)
+    ( (This)->lpVtbl -> GetIDsOfNames(This,riid,rgszNames,cNames,lcid,rgDispId) ) 
 
 #define IDlgCalcPassive_Invoke(This,dispIdMember,riid,lcid,wFlags,pDispParams,pVarResult,pExcepInfo,puArgErr)	\
-    (This)->lpVtbl -> Invoke(This,dispIdMember,riid,lcid,wFlags,pDispParams,pVarResult,pExcepInfo,puArgErr)
+    ( (This)->lpVtbl -> Invoke(This,dispIdMember,riid,lcid,wFlags,pDispParams,pVarResult,pExcepInfo,puArgErr) ) 
 
 #endif /* COBJMACROS */
 
@@ -9704,7 +10434,7 @@ DEFINE_GUID(DIID_IDlgCalcPassive,0xB4D31A42,0x78D3,0x11CF,0xAA,0x04,0x44,0x45,0x
 #endif 	/* __IDlgCalcPassive_DISPINTERFACE_DEFINED__ */
 
 
-DEFINE_GUID(CLSID_CDlgCalcPassive,0xB4D31A43,0x78D3,0x11CF,0xAA,0x04,0x44,0x45,0x53,0x54,0x00,0x00);
+EXTERN_C const CLSID CLSID_CDlgCalcPassive;
 
 #ifdef __cplusplus
 
@@ -9719,7 +10449,7 @@ CDlgCalcPassive;
 /* [uuid] */ 
 
 
-DEFINE_GUID(DIID_IDlgPrefMarker,0xF0549AC0,0x7EC4,0x11CF,0xAA,0x04,0x44,0x45,0x53,0x54,0x00,0x00);
+EXTERN_C const IID DIID_IDlgPrefMarker;
 
 #if defined(__cplusplus) && !defined(CINTERFACE)
 
@@ -9737,7 +10467,8 @@ DEFINE_GUID(DIID_IDlgPrefMarker,0xF0549AC0,0x7EC4,0x11CF,0xAA,0x04,0x44,0x45,0x5
         HRESULT ( STDMETHODCALLTYPE *QueryInterface )( 
             IDlgPrefMarker * This,
             /* [in] */ REFIID riid,
-            /* [iid_is][out] */ void **ppvObject);
+            /* [annotation][iid_is][out] */ 
+            _COM_Outptr_  void **ppvObject);
         
         ULONG ( STDMETHODCALLTYPE *AddRef )( 
             IDlgPrefMarker * This);
@@ -9759,20 +10490,28 @@ DEFINE_GUID(DIID_IDlgPrefMarker,0xF0549AC0,0x7EC4,0x11CF,0xAA,0x04,0x44,0x45,0x5
             IDlgPrefMarker * This,
             /* [in] */ REFIID riid,
             /* [size_is][in] */ LPOLESTR *rgszNames,
-            /* [in] */ UINT cNames,
+            /* [range][in] */ UINT cNames,
             /* [in] */ LCID lcid,
             /* [size_is][out] */ DISPID *rgDispId);
         
         /* [local] */ HRESULT ( STDMETHODCALLTYPE *Invoke )( 
             IDlgPrefMarker * This,
-            /* [in] */ DISPID dispIdMember,
-            /* [in] */ REFIID riid,
-            /* [in] */ LCID lcid,
-            /* [in] */ WORD wFlags,
-            /* [out][in] */ DISPPARAMS *pDispParams,
-            /* [out] */ VARIANT *pVarResult,
-            /* [out] */ EXCEPINFO *pExcepInfo,
-            /* [out] */ UINT *puArgErr);
+            /* [annotation][in] */ 
+            _In_  DISPID dispIdMember,
+            /* [annotation][in] */ 
+            _In_  REFIID riid,
+            /* [annotation][in] */ 
+            _In_  LCID lcid,
+            /* [annotation][in] */ 
+            _In_  WORD wFlags,
+            /* [annotation][out][in] */ 
+            _In_  DISPPARAMS *pDispParams,
+            /* [annotation][out] */ 
+            _Out_opt_  VARIANT *pVarResult,
+            /* [annotation][out] */ 
+            _Out_opt_  EXCEPINFO *pExcepInfo,
+            /* [annotation][out] */ 
+            _Out_opt_  UINT *puArgErr);
         
         END_INTERFACE
     } IDlgPrefMarkerVtbl;
@@ -9788,26 +10527,26 @@ DEFINE_GUID(DIID_IDlgPrefMarker,0xF0549AC0,0x7EC4,0x11CF,0xAA,0x04,0x44,0x45,0x5
 
 
 #define IDlgPrefMarker_QueryInterface(This,riid,ppvObject)	\
-    (This)->lpVtbl -> QueryInterface(This,riid,ppvObject)
+    ( (This)->lpVtbl -> QueryInterface(This,riid,ppvObject) ) 
 
 #define IDlgPrefMarker_AddRef(This)	\
-    (This)->lpVtbl -> AddRef(This)
+    ( (This)->lpVtbl -> AddRef(This) ) 
 
 #define IDlgPrefMarker_Release(This)	\
-    (This)->lpVtbl -> Release(This)
+    ( (This)->lpVtbl -> Release(This) ) 
 
 
 #define IDlgPrefMarker_GetTypeInfoCount(This,pctinfo)	\
-    (This)->lpVtbl -> GetTypeInfoCount(This,pctinfo)
+    ( (This)->lpVtbl -> GetTypeInfoCount(This,pctinfo) ) 
 
 #define IDlgPrefMarker_GetTypeInfo(This,iTInfo,lcid,ppTInfo)	\
-    (This)->lpVtbl -> GetTypeInfo(This,iTInfo,lcid,ppTInfo)
+    ( (This)->lpVtbl -> GetTypeInfo(This,iTInfo,lcid,ppTInfo) ) 
 
 #define IDlgPrefMarker_GetIDsOfNames(This,riid,rgszNames,cNames,lcid,rgDispId)	\
-    (This)->lpVtbl -> GetIDsOfNames(This,riid,rgszNames,cNames,lcid,rgDispId)
+    ( (This)->lpVtbl -> GetIDsOfNames(This,riid,rgszNames,cNames,lcid,rgDispId) ) 
 
 #define IDlgPrefMarker_Invoke(This,dispIdMember,riid,lcid,wFlags,pDispParams,pVarResult,pExcepInfo,puArgErr)	\
-    (This)->lpVtbl -> Invoke(This,dispIdMember,riid,lcid,wFlags,pDispParams,pVarResult,pExcepInfo,puArgErr)
+    ( (This)->lpVtbl -> Invoke(This,dispIdMember,riid,lcid,wFlags,pDispParams,pVarResult,pExcepInfo,puArgErr) ) 
 
 #endif /* COBJMACROS */
 
@@ -9818,7 +10557,7 @@ DEFINE_GUID(DIID_IDlgPrefMarker,0xF0549AC0,0x7EC4,0x11CF,0xAA,0x04,0x44,0x45,0x5
 #endif 	/* __IDlgPrefMarker_DISPINTERFACE_DEFINED__ */
 
 
-DEFINE_GUID(CLSID_CDlgPrefMarker,0xF0549AC1,0x7EC4,0x11CF,0xAA,0x04,0x44,0x45,0x53,0x54,0x00,0x00);
+EXTERN_C const CLSID CLSID_CDlgPrefMarker;
 
 #ifdef __cplusplus
 
@@ -9833,7 +10572,7 @@ CDlgPrefMarker;
 /* [uuid] */ 
 
 
-DEFINE_GUID(DIID_IDlgOptXover,0x1B6B9BA0,0x895B,0x11CF,0xAA,0x04,0x44,0x45,0x53,0x54,0x00,0x00);
+EXTERN_C const IID DIID_IDlgOptXover;
 
 #if defined(__cplusplus) && !defined(CINTERFACE)
 
@@ -9851,7 +10590,8 @@ DEFINE_GUID(DIID_IDlgOptXover,0x1B6B9BA0,0x895B,0x11CF,0xAA,0x04,0x44,0x45,0x53,
         HRESULT ( STDMETHODCALLTYPE *QueryInterface )( 
             IDlgOptXover * This,
             /* [in] */ REFIID riid,
-            /* [iid_is][out] */ void **ppvObject);
+            /* [annotation][iid_is][out] */ 
+            _COM_Outptr_  void **ppvObject);
         
         ULONG ( STDMETHODCALLTYPE *AddRef )( 
             IDlgOptXover * This);
@@ -9873,20 +10613,28 @@ DEFINE_GUID(DIID_IDlgOptXover,0x1B6B9BA0,0x895B,0x11CF,0xAA,0x04,0x44,0x45,0x53,
             IDlgOptXover * This,
             /* [in] */ REFIID riid,
             /* [size_is][in] */ LPOLESTR *rgszNames,
-            /* [in] */ UINT cNames,
+            /* [range][in] */ UINT cNames,
             /* [in] */ LCID lcid,
             /* [size_is][out] */ DISPID *rgDispId);
         
         /* [local] */ HRESULT ( STDMETHODCALLTYPE *Invoke )( 
             IDlgOptXover * This,
-            /* [in] */ DISPID dispIdMember,
-            /* [in] */ REFIID riid,
-            /* [in] */ LCID lcid,
-            /* [in] */ WORD wFlags,
-            /* [out][in] */ DISPPARAMS *pDispParams,
-            /* [out] */ VARIANT *pVarResult,
-            /* [out] */ EXCEPINFO *pExcepInfo,
-            /* [out] */ UINT *puArgErr);
+            /* [annotation][in] */ 
+            _In_  DISPID dispIdMember,
+            /* [annotation][in] */ 
+            _In_  REFIID riid,
+            /* [annotation][in] */ 
+            _In_  LCID lcid,
+            /* [annotation][in] */ 
+            _In_  WORD wFlags,
+            /* [annotation][out][in] */ 
+            _In_  DISPPARAMS *pDispParams,
+            /* [annotation][out] */ 
+            _Out_opt_  VARIANT *pVarResult,
+            /* [annotation][out] */ 
+            _Out_opt_  EXCEPINFO *pExcepInfo,
+            /* [annotation][out] */ 
+            _Out_opt_  UINT *puArgErr);
         
         END_INTERFACE
     } IDlgOptXoverVtbl;
@@ -9902,26 +10650,26 @@ DEFINE_GUID(DIID_IDlgOptXover,0x1B6B9BA0,0x895B,0x11CF,0xAA,0x04,0x44,0x45,0x53,
 
 
 #define IDlgOptXover_QueryInterface(This,riid,ppvObject)	\
-    (This)->lpVtbl -> QueryInterface(This,riid,ppvObject)
+    ( (This)->lpVtbl -> QueryInterface(This,riid,ppvObject) ) 
 
 #define IDlgOptXover_AddRef(This)	\
-    (This)->lpVtbl -> AddRef(This)
+    ( (This)->lpVtbl -> AddRef(This) ) 
 
 #define IDlgOptXover_Release(This)	\
-    (This)->lpVtbl -> Release(This)
+    ( (This)->lpVtbl -> Release(This) ) 
 
 
 #define IDlgOptXover_GetTypeInfoCount(This,pctinfo)	\
-    (This)->lpVtbl -> GetTypeInfoCount(This,pctinfo)
+    ( (This)->lpVtbl -> GetTypeInfoCount(This,pctinfo) ) 
 
 #define IDlgOptXover_GetTypeInfo(This,iTInfo,lcid,ppTInfo)	\
-    (This)->lpVtbl -> GetTypeInfo(This,iTInfo,lcid,ppTInfo)
+    ( (This)->lpVtbl -> GetTypeInfo(This,iTInfo,lcid,ppTInfo) ) 
 
 #define IDlgOptXover_GetIDsOfNames(This,riid,rgszNames,cNames,lcid,rgDispId)	\
-    (This)->lpVtbl -> GetIDsOfNames(This,riid,rgszNames,cNames,lcid,rgDispId)
+    ( (This)->lpVtbl -> GetIDsOfNames(This,riid,rgszNames,cNames,lcid,rgDispId) ) 
 
 #define IDlgOptXover_Invoke(This,dispIdMember,riid,lcid,wFlags,pDispParams,pVarResult,pExcepInfo,puArgErr)	\
-    (This)->lpVtbl -> Invoke(This,dispIdMember,riid,lcid,wFlags,pDispParams,pVarResult,pExcepInfo,puArgErr)
+    ( (This)->lpVtbl -> Invoke(This,dispIdMember,riid,lcid,wFlags,pDispParams,pVarResult,pExcepInfo,puArgErr) ) 
 
 #endif /* COBJMACROS */
 
@@ -9932,7 +10680,7 @@ DEFINE_GUID(DIID_IDlgOptXover,0x1B6B9BA0,0x895B,0x11CF,0xAA,0x04,0x44,0x45,0x53,
 #endif 	/* __IDlgOptXover_DISPINTERFACE_DEFINED__ */
 
 
-DEFINE_GUID(CLSID_DLGOPTXOVER,0x1B6B9BA1,0x895B,0x11CF,0xAA,0x04,0x44,0x45,0x53,0x54,0x00,0x00);
+EXTERN_C const CLSID CLSID_DLGOPTXOVER;
 
 #ifdef __cplusplus
 
@@ -9947,7 +10695,7 @@ DLGOPTXOVER;
 /* [uuid] */ 
 
 
-DEFINE_GUID(DIID_IDlgCrossover,0x1B6B9BA2,0x895B,0x11CF,0xAA,0x04,0x44,0x45,0x53,0x54,0x00,0x00);
+EXTERN_C const IID DIID_IDlgCrossover;
 
 #if defined(__cplusplus) && !defined(CINTERFACE)
 
@@ -9965,7 +10713,8 @@ DEFINE_GUID(DIID_IDlgCrossover,0x1B6B9BA2,0x895B,0x11CF,0xAA,0x04,0x44,0x45,0x53
         HRESULT ( STDMETHODCALLTYPE *QueryInterface )( 
             IDlgCrossover * This,
             /* [in] */ REFIID riid,
-            /* [iid_is][out] */ void **ppvObject);
+            /* [annotation][iid_is][out] */ 
+            _COM_Outptr_  void **ppvObject);
         
         ULONG ( STDMETHODCALLTYPE *AddRef )( 
             IDlgCrossover * This);
@@ -9987,20 +10736,28 @@ DEFINE_GUID(DIID_IDlgCrossover,0x1B6B9BA2,0x895B,0x11CF,0xAA,0x04,0x44,0x45,0x53
             IDlgCrossover * This,
             /* [in] */ REFIID riid,
             /* [size_is][in] */ LPOLESTR *rgszNames,
-            /* [in] */ UINT cNames,
+            /* [range][in] */ UINT cNames,
             /* [in] */ LCID lcid,
             /* [size_is][out] */ DISPID *rgDispId);
         
         /* [local] */ HRESULT ( STDMETHODCALLTYPE *Invoke )( 
             IDlgCrossover * This,
-            /* [in] */ DISPID dispIdMember,
-            /* [in] */ REFIID riid,
-            /* [in] */ LCID lcid,
-            /* [in] */ WORD wFlags,
-            /* [out][in] */ DISPPARAMS *pDispParams,
-            /* [out] */ VARIANT *pVarResult,
-            /* [out] */ EXCEPINFO *pExcepInfo,
-            /* [out] */ UINT *puArgErr);
+            /* [annotation][in] */ 
+            _In_  DISPID dispIdMember,
+            /* [annotation][in] */ 
+            _In_  REFIID riid,
+            /* [annotation][in] */ 
+            _In_  LCID lcid,
+            /* [annotation][in] */ 
+            _In_  WORD wFlags,
+            /* [annotation][out][in] */ 
+            _In_  DISPPARAMS *pDispParams,
+            /* [annotation][out] */ 
+            _Out_opt_  VARIANT *pVarResult,
+            /* [annotation][out] */ 
+            _Out_opt_  EXCEPINFO *pExcepInfo,
+            /* [annotation][out] */ 
+            _Out_opt_  UINT *puArgErr);
         
         END_INTERFACE
     } IDlgCrossoverVtbl;
@@ -10016,26 +10773,26 @@ DEFINE_GUID(DIID_IDlgCrossover,0x1B6B9BA2,0x895B,0x11CF,0xAA,0x04,0x44,0x45,0x53
 
 
 #define IDlgCrossover_QueryInterface(This,riid,ppvObject)	\
-    (This)->lpVtbl -> QueryInterface(This,riid,ppvObject)
+    ( (This)->lpVtbl -> QueryInterface(This,riid,ppvObject) ) 
 
 #define IDlgCrossover_AddRef(This)	\
-    (This)->lpVtbl -> AddRef(This)
+    ( (This)->lpVtbl -> AddRef(This) ) 
 
 #define IDlgCrossover_Release(This)	\
-    (This)->lpVtbl -> Release(This)
+    ( (This)->lpVtbl -> Release(This) ) 
 
 
 #define IDlgCrossover_GetTypeInfoCount(This,pctinfo)	\
-    (This)->lpVtbl -> GetTypeInfoCount(This,pctinfo)
+    ( (This)->lpVtbl -> GetTypeInfoCount(This,pctinfo) ) 
 
 #define IDlgCrossover_GetTypeInfo(This,iTInfo,lcid,ppTInfo)	\
-    (This)->lpVtbl -> GetTypeInfo(This,iTInfo,lcid,ppTInfo)
+    ( (This)->lpVtbl -> GetTypeInfo(This,iTInfo,lcid,ppTInfo) ) 
 
 #define IDlgCrossover_GetIDsOfNames(This,riid,rgszNames,cNames,lcid,rgDispId)	\
-    (This)->lpVtbl -> GetIDsOfNames(This,riid,rgszNames,cNames,lcid,rgDispId)
+    ( (This)->lpVtbl -> GetIDsOfNames(This,riid,rgszNames,cNames,lcid,rgDispId) ) 
 
 #define IDlgCrossover_Invoke(This,dispIdMember,riid,lcid,wFlags,pDispParams,pVarResult,pExcepInfo,puArgErr)	\
-    (This)->lpVtbl -> Invoke(This,dispIdMember,riid,lcid,wFlags,pDispParams,pVarResult,pExcepInfo,puArgErr)
+    ( (This)->lpVtbl -> Invoke(This,dispIdMember,riid,lcid,wFlags,pDispParams,pVarResult,pExcepInfo,puArgErr) ) 
 
 #endif /* COBJMACROS */
 
@@ -10046,7 +10803,7 @@ DEFINE_GUID(DIID_IDlgCrossover,0x1B6B9BA2,0x895B,0x11CF,0xAA,0x04,0x44,0x45,0x53
 #endif 	/* __IDlgCrossover_DISPINTERFACE_DEFINED__ */
 
 
-DEFINE_GUID(CLSID_DLGCROSSOVER,0x1B6B9BA3,0x895B,0x11CF,0xAA,0x04,0x44,0x45,0x53,0x54,0x00,0x00);
+EXTERN_C const CLSID CLSID_DLGCROSSOVER;
 
 #ifdef __cplusplus
 
@@ -10061,7 +10818,7 @@ DLGCROSSOVER;
 /* [uuid] */ 
 
 
-DEFINE_GUID(DIID_IDlgAddPassive,0x615486C0,0x8967,0x11CF,0xAA,0x04,0x44,0x45,0x53,0x54,0x00,0x00);
+EXTERN_C const IID DIID_IDlgAddPassive;
 
 #if defined(__cplusplus) && !defined(CINTERFACE)
 
@@ -10079,7 +10836,8 @@ DEFINE_GUID(DIID_IDlgAddPassive,0x615486C0,0x8967,0x11CF,0xAA,0x04,0x44,0x45,0x5
         HRESULT ( STDMETHODCALLTYPE *QueryInterface )( 
             IDlgAddPassive * This,
             /* [in] */ REFIID riid,
-            /* [iid_is][out] */ void **ppvObject);
+            /* [annotation][iid_is][out] */ 
+            _COM_Outptr_  void **ppvObject);
         
         ULONG ( STDMETHODCALLTYPE *AddRef )( 
             IDlgAddPassive * This);
@@ -10101,20 +10859,28 @@ DEFINE_GUID(DIID_IDlgAddPassive,0x615486C0,0x8967,0x11CF,0xAA,0x04,0x44,0x45,0x5
             IDlgAddPassive * This,
             /* [in] */ REFIID riid,
             /* [size_is][in] */ LPOLESTR *rgszNames,
-            /* [in] */ UINT cNames,
+            /* [range][in] */ UINT cNames,
             /* [in] */ LCID lcid,
             /* [size_is][out] */ DISPID *rgDispId);
         
         /* [local] */ HRESULT ( STDMETHODCALLTYPE *Invoke )( 
             IDlgAddPassive * This,
-            /* [in] */ DISPID dispIdMember,
-            /* [in] */ REFIID riid,
-            /* [in] */ LCID lcid,
-            /* [in] */ WORD wFlags,
-            /* [out][in] */ DISPPARAMS *pDispParams,
-            /* [out] */ VARIANT *pVarResult,
-            /* [out] */ EXCEPINFO *pExcepInfo,
-            /* [out] */ UINT *puArgErr);
+            /* [annotation][in] */ 
+            _In_  DISPID dispIdMember,
+            /* [annotation][in] */ 
+            _In_  REFIID riid,
+            /* [annotation][in] */ 
+            _In_  LCID lcid,
+            /* [annotation][in] */ 
+            _In_  WORD wFlags,
+            /* [annotation][out][in] */ 
+            _In_  DISPPARAMS *pDispParams,
+            /* [annotation][out] */ 
+            _Out_opt_  VARIANT *pVarResult,
+            /* [annotation][out] */ 
+            _Out_opt_  EXCEPINFO *pExcepInfo,
+            /* [annotation][out] */ 
+            _Out_opt_  UINT *puArgErr);
         
         END_INTERFACE
     } IDlgAddPassiveVtbl;
@@ -10130,26 +10896,26 @@ DEFINE_GUID(DIID_IDlgAddPassive,0x615486C0,0x8967,0x11CF,0xAA,0x04,0x44,0x45,0x5
 
 
 #define IDlgAddPassive_QueryInterface(This,riid,ppvObject)	\
-    (This)->lpVtbl -> QueryInterface(This,riid,ppvObject)
+    ( (This)->lpVtbl -> QueryInterface(This,riid,ppvObject) ) 
 
 #define IDlgAddPassive_AddRef(This)	\
-    (This)->lpVtbl -> AddRef(This)
+    ( (This)->lpVtbl -> AddRef(This) ) 
 
 #define IDlgAddPassive_Release(This)	\
-    (This)->lpVtbl -> Release(This)
+    ( (This)->lpVtbl -> Release(This) ) 
 
 
 #define IDlgAddPassive_GetTypeInfoCount(This,pctinfo)	\
-    (This)->lpVtbl -> GetTypeInfoCount(This,pctinfo)
+    ( (This)->lpVtbl -> GetTypeInfoCount(This,pctinfo) ) 
 
 #define IDlgAddPassive_GetTypeInfo(This,iTInfo,lcid,ppTInfo)	\
-    (This)->lpVtbl -> GetTypeInfo(This,iTInfo,lcid,ppTInfo)
+    ( (This)->lpVtbl -> GetTypeInfo(This,iTInfo,lcid,ppTInfo) ) 
 
 #define IDlgAddPassive_GetIDsOfNames(This,riid,rgszNames,cNames,lcid,rgDispId)	\
-    (This)->lpVtbl -> GetIDsOfNames(This,riid,rgszNames,cNames,lcid,rgDispId)
+    ( (This)->lpVtbl -> GetIDsOfNames(This,riid,rgszNames,cNames,lcid,rgDispId) ) 
 
 #define IDlgAddPassive_Invoke(This,dispIdMember,riid,lcid,wFlags,pDispParams,pVarResult,pExcepInfo,puArgErr)	\
-    (This)->lpVtbl -> Invoke(This,dispIdMember,riid,lcid,wFlags,pDispParams,pVarResult,pExcepInfo,puArgErr)
+    ( (This)->lpVtbl -> Invoke(This,dispIdMember,riid,lcid,wFlags,pDispParams,pVarResult,pExcepInfo,puArgErr) ) 
 
 #endif /* COBJMACROS */
 
@@ -10160,7 +10926,7 @@ DEFINE_GUID(DIID_IDlgAddPassive,0x615486C0,0x8967,0x11CF,0xAA,0x04,0x44,0x45,0x5
 #endif 	/* __IDlgAddPassive_DISPINTERFACE_DEFINED__ */
 
 
-DEFINE_GUID(CLSID_DLGADDPASSIVE,0x615486C1,0x8967,0x11CF,0xAA,0x04,0x44,0x45,0x53,0x54,0x00,0x00);
+EXTERN_C const CLSID CLSID_DLGADDPASSIVE;
 
 #ifdef __cplusplus
 
@@ -10175,7 +10941,7 @@ DLGADDPASSIVE;
 /* [uuid] */ 
 
 
-DEFINE_GUID(DIID_IDlgZobel,0x5401F4E0,0x897F,0x11CF,0xAA,0x04,0x44,0x45,0x53,0x54,0x00,0x00);
+EXTERN_C const IID DIID_IDlgZobel;
 
 #if defined(__cplusplus) && !defined(CINTERFACE)
 
@@ -10193,7 +10959,8 @@ DEFINE_GUID(DIID_IDlgZobel,0x5401F4E0,0x897F,0x11CF,0xAA,0x04,0x44,0x45,0x53,0x5
         HRESULT ( STDMETHODCALLTYPE *QueryInterface )( 
             IDlgZobel * This,
             /* [in] */ REFIID riid,
-            /* [iid_is][out] */ void **ppvObject);
+            /* [annotation][iid_is][out] */ 
+            _COM_Outptr_  void **ppvObject);
         
         ULONG ( STDMETHODCALLTYPE *AddRef )( 
             IDlgZobel * This);
@@ -10215,20 +10982,28 @@ DEFINE_GUID(DIID_IDlgZobel,0x5401F4E0,0x897F,0x11CF,0xAA,0x04,0x44,0x45,0x53,0x5
             IDlgZobel * This,
             /* [in] */ REFIID riid,
             /* [size_is][in] */ LPOLESTR *rgszNames,
-            /* [in] */ UINT cNames,
+            /* [range][in] */ UINT cNames,
             /* [in] */ LCID lcid,
             /* [size_is][out] */ DISPID *rgDispId);
         
         /* [local] */ HRESULT ( STDMETHODCALLTYPE *Invoke )( 
             IDlgZobel * This,
-            /* [in] */ DISPID dispIdMember,
-            /* [in] */ REFIID riid,
-            /* [in] */ LCID lcid,
-            /* [in] */ WORD wFlags,
-            /* [out][in] */ DISPPARAMS *pDispParams,
-            /* [out] */ VARIANT *pVarResult,
-            /* [out] */ EXCEPINFO *pExcepInfo,
-            /* [out] */ UINT *puArgErr);
+            /* [annotation][in] */ 
+            _In_  DISPID dispIdMember,
+            /* [annotation][in] */ 
+            _In_  REFIID riid,
+            /* [annotation][in] */ 
+            _In_  LCID lcid,
+            /* [annotation][in] */ 
+            _In_  WORD wFlags,
+            /* [annotation][out][in] */ 
+            _In_  DISPPARAMS *pDispParams,
+            /* [annotation][out] */ 
+            _Out_opt_  VARIANT *pVarResult,
+            /* [annotation][out] */ 
+            _Out_opt_  EXCEPINFO *pExcepInfo,
+            /* [annotation][out] */ 
+            _Out_opt_  UINT *puArgErr);
         
         END_INTERFACE
     } IDlgZobelVtbl;
@@ -10244,26 +11019,26 @@ DEFINE_GUID(DIID_IDlgZobel,0x5401F4E0,0x897F,0x11CF,0xAA,0x04,0x44,0x45,0x53,0x5
 
 
 #define IDlgZobel_QueryInterface(This,riid,ppvObject)	\
-    (This)->lpVtbl -> QueryInterface(This,riid,ppvObject)
+    ( (This)->lpVtbl -> QueryInterface(This,riid,ppvObject) ) 
 
 #define IDlgZobel_AddRef(This)	\
-    (This)->lpVtbl -> AddRef(This)
+    ( (This)->lpVtbl -> AddRef(This) ) 
 
 #define IDlgZobel_Release(This)	\
-    (This)->lpVtbl -> Release(This)
+    ( (This)->lpVtbl -> Release(This) ) 
 
 
 #define IDlgZobel_GetTypeInfoCount(This,pctinfo)	\
-    (This)->lpVtbl -> GetTypeInfoCount(This,pctinfo)
+    ( (This)->lpVtbl -> GetTypeInfoCount(This,pctinfo) ) 
 
 #define IDlgZobel_GetTypeInfo(This,iTInfo,lcid,ppTInfo)	\
-    (This)->lpVtbl -> GetTypeInfo(This,iTInfo,lcid,ppTInfo)
+    ( (This)->lpVtbl -> GetTypeInfo(This,iTInfo,lcid,ppTInfo) ) 
 
 #define IDlgZobel_GetIDsOfNames(This,riid,rgszNames,cNames,lcid,rgDispId)	\
-    (This)->lpVtbl -> GetIDsOfNames(This,riid,rgszNames,cNames,lcid,rgDispId)
+    ( (This)->lpVtbl -> GetIDsOfNames(This,riid,rgszNames,cNames,lcid,rgDispId) ) 
 
 #define IDlgZobel_Invoke(This,dispIdMember,riid,lcid,wFlags,pDispParams,pVarResult,pExcepInfo,puArgErr)	\
-    (This)->lpVtbl -> Invoke(This,dispIdMember,riid,lcid,wFlags,pDispParams,pVarResult,pExcepInfo,puArgErr)
+    ( (This)->lpVtbl -> Invoke(This,dispIdMember,riid,lcid,wFlags,pDispParams,pVarResult,pExcepInfo,puArgErr) ) 
 
 #endif /* COBJMACROS */
 
@@ -10274,7 +11049,7 @@ DEFINE_GUID(DIID_IDlgZobel,0x5401F4E0,0x897F,0x11CF,0xAA,0x04,0x44,0x45,0x53,0x5
 #endif 	/* __IDlgZobel_DISPINTERFACE_DEFINED__ */
 
 
-DEFINE_GUID(CLSID_DLGZOBEL,0x5401F4E1,0x897F,0x11CF,0xAA,0x04,0x44,0x45,0x53,0x54,0x00,0x00);
+EXTERN_C const CLSID CLSID_DLGZOBEL;
 
 #ifdef __cplusplus
 
@@ -10289,7 +11064,7 @@ DLGZOBEL;
 /* [uuid] */ 
 
 
-DEFINE_GUID(DIID_IDlgNotch,0x5401F4E2,0x897F,0x11CF,0xAA,0x04,0x44,0x45,0x53,0x54,0x00,0x00);
+EXTERN_C const IID DIID_IDlgNotch;
 
 #if defined(__cplusplus) && !defined(CINTERFACE)
 
@@ -10307,7 +11082,8 @@ DEFINE_GUID(DIID_IDlgNotch,0x5401F4E2,0x897F,0x11CF,0xAA,0x04,0x44,0x45,0x53,0x5
         HRESULT ( STDMETHODCALLTYPE *QueryInterface )( 
             IDlgNotch * This,
             /* [in] */ REFIID riid,
-            /* [iid_is][out] */ void **ppvObject);
+            /* [annotation][iid_is][out] */ 
+            _COM_Outptr_  void **ppvObject);
         
         ULONG ( STDMETHODCALLTYPE *AddRef )( 
             IDlgNotch * This);
@@ -10329,20 +11105,28 @@ DEFINE_GUID(DIID_IDlgNotch,0x5401F4E2,0x897F,0x11CF,0xAA,0x04,0x44,0x45,0x53,0x5
             IDlgNotch * This,
             /* [in] */ REFIID riid,
             /* [size_is][in] */ LPOLESTR *rgszNames,
-            /* [in] */ UINT cNames,
+            /* [range][in] */ UINT cNames,
             /* [in] */ LCID lcid,
             /* [size_is][out] */ DISPID *rgDispId);
         
         /* [local] */ HRESULT ( STDMETHODCALLTYPE *Invoke )( 
             IDlgNotch * This,
-            /* [in] */ DISPID dispIdMember,
-            /* [in] */ REFIID riid,
-            /* [in] */ LCID lcid,
-            /* [in] */ WORD wFlags,
-            /* [out][in] */ DISPPARAMS *pDispParams,
-            /* [out] */ VARIANT *pVarResult,
-            /* [out] */ EXCEPINFO *pExcepInfo,
-            /* [out] */ UINT *puArgErr);
+            /* [annotation][in] */ 
+            _In_  DISPID dispIdMember,
+            /* [annotation][in] */ 
+            _In_  REFIID riid,
+            /* [annotation][in] */ 
+            _In_  LCID lcid,
+            /* [annotation][in] */ 
+            _In_  WORD wFlags,
+            /* [annotation][out][in] */ 
+            _In_  DISPPARAMS *pDispParams,
+            /* [annotation][out] */ 
+            _Out_opt_  VARIANT *pVarResult,
+            /* [annotation][out] */ 
+            _Out_opt_  EXCEPINFO *pExcepInfo,
+            /* [annotation][out] */ 
+            _Out_opt_  UINT *puArgErr);
         
         END_INTERFACE
     } IDlgNotchVtbl;
@@ -10358,26 +11142,26 @@ DEFINE_GUID(DIID_IDlgNotch,0x5401F4E2,0x897F,0x11CF,0xAA,0x04,0x44,0x45,0x53,0x5
 
 
 #define IDlgNotch_QueryInterface(This,riid,ppvObject)	\
-    (This)->lpVtbl -> QueryInterface(This,riid,ppvObject)
+    ( (This)->lpVtbl -> QueryInterface(This,riid,ppvObject) ) 
 
 #define IDlgNotch_AddRef(This)	\
-    (This)->lpVtbl -> AddRef(This)
+    ( (This)->lpVtbl -> AddRef(This) ) 
 
 #define IDlgNotch_Release(This)	\
-    (This)->lpVtbl -> Release(This)
+    ( (This)->lpVtbl -> Release(This) ) 
 
 
 #define IDlgNotch_GetTypeInfoCount(This,pctinfo)	\
-    (This)->lpVtbl -> GetTypeInfoCount(This,pctinfo)
+    ( (This)->lpVtbl -> GetTypeInfoCount(This,pctinfo) ) 
 
 #define IDlgNotch_GetTypeInfo(This,iTInfo,lcid,ppTInfo)	\
-    (This)->lpVtbl -> GetTypeInfo(This,iTInfo,lcid,ppTInfo)
+    ( (This)->lpVtbl -> GetTypeInfo(This,iTInfo,lcid,ppTInfo) ) 
 
 #define IDlgNotch_GetIDsOfNames(This,riid,rgszNames,cNames,lcid,rgDispId)	\
-    (This)->lpVtbl -> GetIDsOfNames(This,riid,rgszNames,cNames,lcid,rgDispId)
+    ( (This)->lpVtbl -> GetIDsOfNames(This,riid,rgszNames,cNames,lcid,rgDispId) ) 
 
 #define IDlgNotch_Invoke(This,dispIdMember,riid,lcid,wFlags,pDispParams,pVarResult,pExcepInfo,puArgErr)	\
-    (This)->lpVtbl -> Invoke(This,dispIdMember,riid,lcid,wFlags,pDispParams,pVarResult,pExcepInfo,puArgErr)
+    ( (This)->lpVtbl -> Invoke(This,dispIdMember,riid,lcid,wFlags,pDispParams,pVarResult,pExcepInfo,puArgErr) ) 
 
 #endif /* COBJMACROS */
 
@@ -10388,7 +11172,7 @@ DEFINE_GUID(DIID_IDlgNotch,0x5401F4E2,0x897F,0x11CF,0xAA,0x04,0x44,0x45,0x53,0x5
 #endif 	/* __IDlgNotch_DISPINTERFACE_DEFINED__ */
 
 
-DEFINE_GUID(CLSID_DLGNOTCH,0x5401F4E3,0x897F,0x11CF,0xAA,0x04,0x44,0x45,0x53,0x54,0x00,0x00);
+EXTERN_C const CLSID CLSID_DLGNOTCH;
 
 #ifdef __cplusplus
 
@@ -10403,7 +11187,7 @@ DLGNOTCH;
 /* [uuid] */ 
 
 
-DEFINE_GUID(DIID_IDlgNetLayout,0xA9092EE0,0x8AEC,0x11CF,0xAA,0x04,0x44,0x45,0x53,0x54,0x00,0x00);
+EXTERN_C const IID DIID_IDlgNetLayout;
 
 #if defined(__cplusplus) && !defined(CINTERFACE)
 
@@ -10421,7 +11205,8 @@ DEFINE_GUID(DIID_IDlgNetLayout,0xA9092EE0,0x8AEC,0x11CF,0xAA,0x04,0x44,0x45,0x53
         HRESULT ( STDMETHODCALLTYPE *QueryInterface )( 
             IDlgNetLayout * This,
             /* [in] */ REFIID riid,
-            /* [iid_is][out] */ void **ppvObject);
+            /* [annotation][iid_is][out] */ 
+            _COM_Outptr_  void **ppvObject);
         
         ULONG ( STDMETHODCALLTYPE *AddRef )( 
             IDlgNetLayout * This);
@@ -10443,20 +11228,28 @@ DEFINE_GUID(DIID_IDlgNetLayout,0xA9092EE0,0x8AEC,0x11CF,0xAA,0x04,0x44,0x45,0x53
             IDlgNetLayout * This,
             /* [in] */ REFIID riid,
             /* [size_is][in] */ LPOLESTR *rgszNames,
-            /* [in] */ UINT cNames,
+            /* [range][in] */ UINT cNames,
             /* [in] */ LCID lcid,
             /* [size_is][out] */ DISPID *rgDispId);
         
         /* [local] */ HRESULT ( STDMETHODCALLTYPE *Invoke )( 
             IDlgNetLayout * This,
-            /* [in] */ DISPID dispIdMember,
-            /* [in] */ REFIID riid,
-            /* [in] */ LCID lcid,
-            /* [in] */ WORD wFlags,
-            /* [out][in] */ DISPPARAMS *pDispParams,
-            /* [out] */ VARIANT *pVarResult,
-            /* [out] */ EXCEPINFO *pExcepInfo,
-            /* [out] */ UINT *puArgErr);
+            /* [annotation][in] */ 
+            _In_  DISPID dispIdMember,
+            /* [annotation][in] */ 
+            _In_  REFIID riid,
+            /* [annotation][in] */ 
+            _In_  LCID lcid,
+            /* [annotation][in] */ 
+            _In_  WORD wFlags,
+            /* [annotation][out][in] */ 
+            _In_  DISPPARAMS *pDispParams,
+            /* [annotation][out] */ 
+            _Out_opt_  VARIANT *pVarResult,
+            /* [annotation][out] */ 
+            _Out_opt_  EXCEPINFO *pExcepInfo,
+            /* [annotation][out] */ 
+            _Out_opt_  UINT *puArgErr);
         
         END_INTERFACE
     } IDlgNetLayoutVtbl;
@@ -10472,26 +11265,26 @@ DEFINE_GUID(DIID_IDlgNetLayout,0xA9092EE0,0x8AEC,0x11CF,0xAA,0x04,0x44,0x45,0x53
 
 
 #define IDlgNetLayout_QueryInterface(This,riid,ppvObject)	\
-    (This)->lpVtbl -> QueryInterface(This,riid,ppvObject)
+    ( (This)->lpVtbl -> QueryInterface(This,riid,ppvObject) ) 
 
 #define IDlgNetLayout_AddRef(This)	\
-    (This)->lpVtbl -> AddRef(This)
+    ( (This)->lpVtbl -> AddRef(This) ) 
 
 #define IDlgNetLayout_Release(This)	\
-    (This)->lpVtbl -> Release(This)
+    ( (This)->lpVtbl -> Release(This) ) 
 
 
 #define IDlgNetLayout_GetTypeInfoCount(This,pctinfo)	\
-    (This)->lpVtbl -> GetTypeInfoCount(This,pctinfo)
+    ( (This)->lpVtbl -> GetTypeInfoCount(This,pctinfo) ) 
 
 #define IDlgNetLayout_GetTypeInfo(This,iTInfo,lcid,ppTInfo)	\
-    (This)->lpVtbl -> GetTypeInfo(This,iTInfo,lcid,ppTInfo)
+    ( (This)->lpVtbl -> GetTypeInfo(This,iTInfo,lcid,ppTInfo) ) 
 
 #define IDlgNetLayout_GetIDsOfNames(This,riid,rgszNames,cNames,lcid,rgDispId)	\
-    (This)->lpVtbl -> GetIDsOfNames(This,riid,rgszNames,cNames,lcid,rgDispId)
+    ( (This)->lpVtbl -> GetIDsOfNames(This,riid,rgszNames,cNames,lcid,rgDispId) ) 
 
 #define IDlgNetLayout_Invoke(This,dispIdMember,riid,lcid,wFlags,pDispParams,pVarResult,pExcepInfo,puArgErr)	\
-    (This)->lpVtbl -> Invoke(This,dispIdMember,riid,lcid,wFlags,pDispParams,pVarResult,pExcepInfo,puArgErr)
+    ( (This)->lpVtbl -> Invoke(This,dispIdMember,riid,lcid,wFlags,pDispParams,pVarResult,pExcepInfo,puArgErr) ) 
 
 #endif /* COBJMACROS */
 
@@ -10502,7 +11295,7 @@ DEFINE_GUID(DIID_IDlgNetLayout,0xA9092EE0,0x8AEC,0x11CF,0xAA,0x04,0x44,0x45,0x53
 #endif 	/* __IDlgNetLayout_DISPINTERFACE_DEFINED__ */
 
 
-DEFINE_GUID(CLSID_DLGNETLAYOUT,0xA9092EE1,0x8AEC,0x11CF,0xAA,0x04,0x44,0x45,0x53,0x54,0x00,0x00);
+EXTERN_C const CLSID CLSID_DLGNETLAYOUT;
 
 #ifdef __cplusplus
 
@@ -10517,7 +11310,7 @@ DLGNETLAYOUT;
 /* [uuid] */ 
 
 
-DEFINE_GUID(DIID_IDlgDriverEstimate,0x2D835140,0xA4CF,0x11CF,0xAA,0x03,0x44,0x45,0x53,0x54,0x00,0x00);
+EXTERN_C const IID DIID_IDlgDriverEstimate;
 
 #if defined(__cplusplus) && !defined(CINTERFACE)
 
@@ -10535,7 +11328,8 @@ DEFINE_GUID(DIID_IDlgDriverEstimate,0x2D835140,0xA4CF,0x11CF,0xAA,0x03,0x44,0x45
         HRESULT ( STDMETHODCALLTYPE *QueryInterface )( 
             IDlgDriverEstimate * This,
             /* [in] */ REFIID riid,
-            /* [iid_is][out] */ void **ppvObject);
+            /* [annotation][iid_is][out] */ 
+            _COM_Outptr_  void **ppvObject);
         
         ULONG ( STDMETHODCALLTYPE *AddRef )( 
             IDlgDriverEstimate * This);
@@ -10557,20 +11351,28 @@ DEFINE_GUID(DIID_IDlgDriverEstimate,0x2D835140,0xA4CF,0x11CF,0xAA,0x03,0x44,0x45
             IDlgDriverEstimate * This,
             /* [in] */ REFIID riid,
             /* [size_is][in] */ LPOLESTR *rgszNames,
-            /* [in] */ UINT cNames,
+            /* [range][in] */ UINT cNames,
             /* [in] */ LCID lcid,
             /* [size_is][out] */ DISPID *rgDispId);
         
         /* [local] */ HRESULT ( STDMETHODCALLTYPE *Invoke )( 
             IDlgDriverEstimate * This,
-            /* [in] */ DISPID dispIdMember,
-            /* [in] */ REFIID riid,
-            /* [in] */ LCID lcid,
-            /* [in] */ WORD wFlags,
-            /* [out][in] */ DISPPARAMS *pDispParams,
-            /* [out] */ VARIANT *pVarResult,
-            /* [out] */ EXCEPINFO *pExcepInfo,
-            /* [out] */ UINT *puArgErr);
+            /* [annotation][in] */ 
+            _In_  DISPID dispIdMember,
+            /* [annotation][in] */ 
+            _In_  REFIID riid,
+            /* [annotation][in] */ 
+            _In_  LCID lcid,
+            /* [annotation][in] */ 
+            _In_  WORD wFlags,
+            /* [annotation][out][in] */ 
+            _In_  DISPPARAMS *pDispParams,
+            /* [annotation][out] */ 
+            _Out_opt_  VARIANT *pVarResult,
+            /* [annotation][out] */ 
+            _Out_opt_  EXCEPINFO *pExcepInfo,
+            /* [annotation][out] */ 
+            _Out_opt_  UINT *puArgErr);
         
         END_INTERFACE
     } IDlgDriverEstimateVtbl;
@@ -10586,26 +11388,26 @@ DEFINE_GUID(DIID_IDlgDriverEstimate,0x2D835140,0xA4CF,0x11CF,0xAA,0x03,0x44,0x45
 
 
 #define IDlgDriverEstimate_QueryInterface(This,riid,ppvObject)	\
-    (This)->lpVtbl -> QueryInterface(This,riid,ppvObject)
+    ( (This)->lpVtbl -> QueryInterface(This,riid,ppvObject) ) 
 
 #define IDlgDriverEstimate_AddRef(This)	\
-    (This)->lpVtbl -> AddRef(This)
+    ( (This)->lpVtbl -> AddRef(This) ) 
 
 #define IDlgDriverEstimate_Release(This)	\
-    (This)->lpVtbl -> Release(This)
+    ( (This)->lpVtbl -> Release(This) ) 
 
 
 #define IDlgDriverEstimate_GetTypeInfoCount(This,pctinfo)	\
-    (This)->lpVtbl -> GetTypeInfoCount(This,pctinfo)
+    ( (This)->lpVtbl -> GetTypeInfoCount(This,pctinfo) ) 
 
 #define IDlgDriverEstimate_GetTypeInfo(This,iTInfo,lcid,ppTInfo)	\
-    (This)->lpVtbl -> GetTypeInfo(This,iTInfo,lcid,ppTInfo)
+    ( (This)->lpVtbl -> GetTypeInfo(This,iTInfo,lcid,ppTInfo) ) 
 
 #define IDlgDriverEstimate_GetIDsOfNames(This,riid,rgszNames,cNames,lcid,rgDispId)	\
-    (This)->lpVtbl -> GetIDsOfNames(This,riid,rgszNames,cNames,lcid,rgDispId)
+    ( (This)->lpVtbl -> GetIDsOfNames(This,riid,rgszNames,cNames,lcid,rgDispId) ) 
 
 #define IDlgDriverEstimate_Invoke(This,dispIdMember,riid,lcid,wFlags,pDispParams,pVarResult,pExcepInfo,puArgErr)	\
-    (This)->lpVtbl -> Invoke(This,dispIdMember,riid,lcid,wFlags,pDispParams,pVarResult,pExcepInfo,puArgErr)
+    ( (This)->lpVtbl -> Invoke(This,dispIdMember,riid,lcid,wFlags,pDispParams,pVarResult,pExcepInfo,puArgErr) ) 
 
 #endif /* COBJMACROS */
 
@@ -10616,7 +11418,7 @@ DEFINE_GUID(DIID_IDlgDriverEstimate,0x2D835140,0xA4CF,0x11CF,0xAA,0x03,0x44,0x45
 #endif 	/* __IDlgDriverEstimate_DISPINTERFACE_DEFINED__ */
 
 
-DEFINE_GUID(CLSID_DLGDRIVERESTIMATE,0x2D835141,0xA4CF,0x11CF,0xAA,0x03,0x44,0x45,0x53,0x54,0x00,0x00);
+EXTERN_C const CLSID CLSID_DLGDRIVERESTIMATE;
 
 #ifdef __cplusplus
 
@@ -10631,7 +11433,7 @@ DLGDRIVERESTIMATE;
 /* [uuid] */ 
 
 
-DEFINE_GUID(DIID_IDlgXfSplice,0x86088380,0xA862,0x11CF,0xAA,0x03,0x44,0x45,0x53,0x54,0x00,0x00);
+EXTERN_C const IID DIID_IDlgXfSplice;
 
 #if defined(__cplusplus) && !defined(CINTERFACE)
 
@@ -10649,7 +11451,8 @@ DEFINE_GUID(DIID_IDlgXfSplice,0x86088380,0xA862,0x11CF,0xAA,0x03,0x44,0x45,0x53,
         HRESULT ( STDMETHODCALLTYPE *QueryInterface )( 
             IDlgXfSplice * This,
             /* [in] */ REFIID riid,
-            /* [iid_is][out] */ void **ppvObject);
+            /* [annotation][iid_is][out] */ 
+            _COM_Outptr_  void **ppvObject);
         
         ULONG ( STDMETHODCALLTYPE *AddRef )( 
             IDlgXfSplice * This);
@@ -10671,20 +11474,28 @@ DEFINE_GUID(DIID_IDlgXfSplice,0x86088380,0xA862,0x11CF,0xAA,0x03,0x44,0x45,0x53,
             IDlgXfSplice * This,
             /* [in] */ REFIID riid,
             /* [size_is][in] */ LPOLESTR *rgszNames,
-            /* [in] */ UINT cNames,
+            /* [range][in] */ UINT cNames,
             /* [in] */ LCID lcid,
             /* [size_is][out] */ DISPID *rgDispId);
         
         /* [local] */ HRESULT ( STDMETHODCALLTYPE *Invoke )( 
             IDlgXfSplice * This,
-            /* [in] */ DISPID dispIdMember,
-            /* [in] */ REFIID riid,
-            /* [in] */ LCID lcid,
-            /* [in] */ WORD wFlags,
-            /* [out][in] */ DISPPARAMS *pDispParams,
-            /* [out] */ VARIANT *pVarResult,
-            /* [out] */ EXCEPINFO *pExcepInfo,
-            /* [out] */ UINT *puArgErr);
+            /* [annotation][in] */ 
+            _In_  DISPID dispIdMember,
+            /* [annotation][in] */ 
+            _In_  REFIID riid,
+            /* [annotation][in] */ 
+            _In_  LCID lcid,
+            /* [annotation][in] */ 
+            _In_  WORD wFlags,
+            /* [annotation][out][in] */ 
+            _In_  DISPPARAMS *pDispParams,
+            /* [annotation][out] */ 
+            _Out_opt_  VARIANT *pVarResult,
+            /* [annotation][out] */ 
+            _Out_opt_  EXCEPINFO *pExcepInfo,
+            /* [annotation][out] */ 
+            _Out_opt_  UINT *puArgErr);
         
         END_INTERFACE
     } IDlgXfSpliceVtbl;
@@ -10700,26 +11511,26 @@ DEFINE_GUID(DIID_IDlgXfSplice,0x86088380,0xA862,0x11CF,0xAA,0x03,0x44,0x45,0x53,
 
 
 #define IDlgXfSplice_QueryInterface(This,riid,ppvObject)	\
-    (This)->lpVtbl -> QueryInterface(This,riid,ppvObject)
+    ( (This)->lpVtbl -> QueryInterface(This,riid,ppvObject) ) 
 
 #define IDlgXfSplice_AddRef(This)	\
-    (This)->lpVtbl -> AddRef(This)
+    ( (This)->lpVtbl -> AddRef(This) ) 
 
 #define IDlgXfSplice_Release(This)	\
-    (This)->lpVtbl -> Release(This)
+    ( (This)->lpVtbl -> Release(This) ) 
 
 
 #define IDlgXfSplice_GetTypeInfoCount(This,pctinfo)	\
-    (This)->lpVtbl -> GetTypeInfoCount(This,pctinfo)
+    ( (This)->lpVtbl -> GetTypeInfoCount(This,pctinfo) ) 
 
 #define IDlgXfSplice_GetTypeInfo(This,iTInfo,lcid,ppTInfo)	\
-    (This)->lpVtbl -> GetTypeInfo(This,iTInfo,lcid,ppTInfo)
+    ( (This)->lpVtbl -> GetTypeInfo(This,iTInfo,lcid,ppTInfo) ) 
 
 #define IDlgXfSplice_GetIDsOfNames(This,riid,rgszNames,cNames,lcid,rgDispId)	\
-    (This)->lpVtbl -> GetIDsOfNames(This,riid,rgszNames,cNames,lcid,rgDispId)
+    ( (This)->lpVtbl -> GetIDsOfNames(This,riid,rgszNames,cNames,lcid,rgDispId) ) 
 
 #define IDlgXfSplice_Invoke(This,dispIdMember,riid,lcid,wFlags,pDispParams,pVarResult,pExcepInfo,puArgErr)	\
-    (This)->lpVtbl -> Invoke(This,dispIdMember,riid,lcid,wFlags,pDispParams,pVarResult,pExcepInfo,puArgErr)
+    ( (This)->lpVtbl -> Invoke(This,dispIdMember,riid,lcid,wFlags,pDispParams,pVarResult,pExcepInfo,puArgErr) ) 
 
 #endif /* COBJMACROS */
 
@@ -10730,7 +11541,7 @@ DEFINE_GUID(DIID_IDlgXfSplice,0x86088380,0xA862,0x11CF,0xAA,0x03,0x44,0x45,0x53,
 #endif 	/* __IDlgXfSplice_DISPINTERFACE_DEFINED__ */
 
 
-DEFINE_GUID(CLSID_DLGXFSPLICE,0x86088381,0xA862,0x11CF,0xAA,0x03,0x44,0x45,0x53,0x54,0x00,0x00);
+EXTERN_C const CLSID CLSID_DLGXFSPLICE;
 
 #ifdef __cplusplus
 
@@ -10745,7 +11556,7 @@ DLGXFSPLICE;
 /* [uuid] */ 
 
 
-DEFINE_GUID(DIID_IDlgPrefImpedance,0x57BA63E0,0xAFDD,0x11CF,0xAA,0x03,0x44,0x45,0x53,0x54,0x00,0x00);
+EXTERN_C const IID DIID_IDlgPrefImpedance;
 
 #if defined(__cplusplus) && !defined(CINTERFACE)
 
@@ -10763,7 +11574,8 @@ DEFINE_GUID(DIID_IDlgPrefImpedance,0x57BA63E0,0xAFDD,0x11CF,0xAA,0x03,0x44,0x45,
         HRESULT ( STDMETHODCALLTYPE *QueryInterface )( 
             IDlgPrefImpedance * This,
             /* [in] */ REFIID riid,
-            /* [iid_is][out] */ void **ppvObject);
+            /* [annotation][iid_is][out] */ 
+            _COM_Outptr_  void **ppvObject);
         
         ULONG ( STDMETHODCALLTYPE *AddRef )( 
             IDlgPrefImpedance * This);
@@ -10785,20 +11597,28 @@ DEFINE_GUID(DIID_IDlgPrefImpedance,0x57BA63E0,0xAFDD,0x11CF,0xAA,0x03,0x44,0x45,
             IDlgPrefImpedance * This,
             /* [in] */ REFIID riid,
             /* [size_is][in] */ LPOLESTR *rgszNames,
-            /* [in] */ UINT cNames,
+            /* [range][in] */ UINT cNames,
             /* [in] */ LCID lcid,
             /* [size_is][out] */ DISPID *rgDispId);
         
         /* [local] */ HRESULT ( STDMETHODCALLTYPE *Invoke )( 
             IDlgPrefImpedance * This,
-            /* [in] */ DISPID dispIdMember,
-            /* [in] */ REFIID riid,
-            /* [in] */ LCID lcid,
-            /* [in] */ WORD wFlags,
-            /* [out][in] */ DISPPARAMS *pDispParams,
-            /* [out] */ VARIANT *pVarResult,
-            /* [out] */ EXCEPINFO *pExcepInfo,
-            /* [out] */ UINT *puArgErr);
+            /* [annotation][in] */ 
+            _In_  DISPID dispIdMember,
+            /* [annotation][in] */ 
+            _In_  REFIID riid,
+            /* [annotation][in] */ 
+            _In_  LCID lcid,
+            /* [annotation][in] */ 
+            _In_  WORD wFlags,
+            /* [annotation][out][in] */ 
+            _In_  DISPPARAMS *pDispParams,
+            /* [annotation][out] */ 
+            _Out_opt_  VARIANT *pVarResult,
+            /* [annotation][out] */ 
+            _Out_opt_  EXCEPINFO *pExcepInfo,
+            /* [annotation][out] */ 
+            _Out_opt_  UINT *puArgErr);
         
         END_INTERFACE
     } IDlgPrefImpedanceVtbl;
@@ -10814,26 +11634,26 @@ DEFINE_GUID(DIID_IDlgPrefImpedance,0x57BA63E0,0xAFDD,0x11CF,0xAA,0x03,0x44,0x45,
 
 
 #define IDlgPrefImpedance_QueryInterface(This,riid,ppvObject)	\
-    (This)->lpVtbl -> QueryInterface(This,riid,ppvObject)
+    ( (This)->lpVtbl -> QueryInterface(This,riid,ppvObject) ) 
 
 #define IDlgPrefImpedance_AddRef(This)	\
-    (This)->lpVtbl -> AddRef(This)
+    ( (This)->lpVtbl -> AddRef(This) ) 
 
 #define IDlgPrefImpedance_Release(This)	\
-    (This)->lpVtbl -> Release(This)
+    ( (This)->lpVtbl -> Release(This) ) 
 
 
 #define IDlgPrefImpedance_GetTypeInfoCount(This,pctinfo)	\
-    (This)->lpVtbl -> GetTypeInfoCount(This,pctinfo)
+    ( (This)->lpVtbl -> GetTypeInfoCount(This,pctinfo) ) 
 
 #define IDlgPrefImpedance_GetTypeInfo(This,iTInfo,lcid,ppTInfo)	\
-    (This)->lpVtbl -> GetTypeInfo(This,iTInfo,lcid,ppTInfo)
+    ( (This)->lpVtbl -> GetTypeInfo(This,iTInfo,lcid,ppTInfo) ) 
 
 #define IDlgPrefImpedance_GetIDsOfNames(This,riid,rgszNames,cNames,lcid,rgDispId)	\
-    (This)->lpVtbl -> GetIDsOfNames(This,riid,rgszNames,cNames,lcid,rgDispId)
+    ( (This)->lpVtbl -> GetIDsOfNames(This,riid,rgszNames,cNames,lcid,rgDispId) ) 
 
 #define IDlgPrefImpedance_Invoke(This,dispIdMember,riid,lcid,wFlags,pDispParams,pVarResult,pExcepInfo,puArgErr)	\
-    (This)->lpVtbl -> Invoke(This,dispIdMember,riid,lcid,wFlags,pDispParams,pVarResult,pExcepInfo,puArgErr)
+    ( (This)->lpVtbl -> Invoke(This,dispIdMember,riid,lcid,wFlags,pDispParams,pVarResult,pExcepInfo,puArgErr) ) 
 
 #endif /* COBJMACROS */
 
@@ -10844,7 +11664,7 @@ DEFINE_GUID(DIID_IDlgPrefImpedance,0x57BA63E0,0xAFDD,0x11CF,0xAA,0x03,0x44,0x45,
 #endif 	/* __IDlgPrefImpedance_DISPINTERFACE_DEFINED__ */
 
 
-DEFINE_GUID(CLSID_DLGPREFIMPEDANCE,0x57BA63E1,0xAFDD,0x11CF,0xAA,0x03,0x44,0x45,0x53,0x54,0x00,0x00);
+EXTERN_C const CLSID CLSID_DLGPREFIMPEDANCE;
 
 #ifdef __cplusplus
 
@@ -10859,7 +11679,7 @@ DLGPREFIMPEDANCE;
 /* [uuid] */ 
 
 
-DEFINE_GUID(DIID_IDlgPrefGeneral,0x013D3B80,0x3171,0x11D0,0xAA,0x04,0x44,0x45,0x53,0x54,0x00,0x00);
+EXTERN_C const IID DIID_IDlgPrefGeneral;
 
 #if defined(__cplusplus) && !defined(CINTERFACE)
 
@@ -10877,7 +11697,8 @@ DEFINE_GUID(DIID_IDlgPrefGeneral,0x013D3B80,0x3171,0x11D0,0xAA,0x04,0x44,0x45,0x
         HRESULT ( STDMETHODCALLTYPE *QueryInterface )( 
             IDlgPrefGeneral * This,
             /* [in] */ REFIID riid,
-            /* [iid_is][out] */ void **ppvObject);
+            /* [annotation][iid_is][out] */ 
+            _COM_Outptr_  void **ppvObject);
         
         ULONG ( STDMETHODCALLTYPE *AddRef )( 
             IDlgPrefGeneral * This);
@@ -10899,20 +11720,28 @@ DEFINE_GUID(DIID_IDlgPrefGeneral,0x013D3B80,0x3171,0x11D0,0xAA,0x04,0x44,0x45,0x
             IDlgPrefGeneral * This,
             /* [in] */ REFIID riid,
             /* [size_is][in] */ LPOLESTR *rgszNames,
-            /* [in] */ UINT cNames,
+            /* [range][in] */ UINT cNames,
             /* [in] */ LCID lcid,
             /* [size_is][out] */ DISPID *rgDispId);
         
         /* [local] */ HRESULT ( STDMETHODCALLTYPE *Invoke )( 
             IDlgPrefGeneral * This,
-            /* [in] */ DISPID dispIdMember,
-            /* [in] */ REFIID riid,
-            /* [in] */ LCID lcid,
-            /* [in] */ WORD wFlags,
-            /* [out][in] */ DISPPARAMS *pDispParams,
-            /* [out] */ VARIANT *pVarResult,
-            /* [out] */ EXCEPINFO *pExcepInfo,
-            /* [out] */ UINT *puArgErr);
+            /* [annotation][in] */ 
+            _In_  DISPID dispIdMember,
+            /* [annotation][in] */ 
+            _In_  REFIID riid,
+            /* [annotation][in] */ 
+            _In_  LCID lcid,
+            /* [annotation][in] */ 
+            _In_  WORD wFlags,
+            /* [annotation][out][in] */ 
+            _In_  DISPPARAMS *pDispParams,
+            /* [annotation][out] */ 
+            _Out_opt_  VARIANT *pVarResult,
+            /* [annotation][out] */ 
+            _Out_opt_  EXCEPINFO *pExcepInfo,
+            /* [annotation][out] */ 
+            _Out_opt_  UINT *puArgErr);
         
         END_INTERFACE
     } IDlgPrefGeneralVtbl;
@@ -10928,26 +11757,26 @@ DEFINE_GUID(DIID_IDlgPrefGeneral,0x013D3B80,0x3171,0x11D0,0xAA,0x04,0x44,0x45,0x
 
 
 #define IDlgPrefGeneral_QueryInterface(This,riid,ppvObject)	\
-    (This)->lpVtbl -> QueryInterface(This,riid,ppvObject)
+    ( (This)->lpVtbl -> QueryInterface(This,riid,ppvObject) ) 
 
 #define IDlgPrefGeneral_AddRef(This)	\
-    (This)->lpVtbl -> AddRef(This)
+    ( (This)->lpVtbl -> AddRef(This) ) 
 
 #define IDlgPrefGeneral_Release(This)	\
-    (This)->lpVtbl -> Release(This)
+    ( (This)->lpVtbl -> Release(This) ) 
 
 
 #define IDlgPrefGeneral_GetTypeInfoCount(This,pctinfo)	\
-    (This)->lpVtbl -> GetTypeInfoCount(This,pctinfo)
+    ( (This)->lpVtbl -> GetTypeInfoCount(This,pctinfo) ) 
 
 #define IDlgPrefGeneral_GetTypeInfo(This,iTInfo,lcid,ppTInfo)	\
-    (This)->lpVtbl -> GetTypeInfo(This,iTInfo,lcid,ppTInfo)
+    ( (This)->lpVtbl -> GetTypeInfo(This,iTInfo,lcid,ppTInfo) ) 
 
 #define IDlgPrefGeneral_GetIDsOfNames(This,riid,rgszNames,cNames,lcid,rgDispId)	\
-    (This)->lpVtbl -> GetIDsOfNames(This,riid,rgszNames,cNames,lcid,rgDispId)
+    ( (This)->lpVtbl -> GetIDsOfNames(This,riid,rgszNames,cNames,lcid,rgDispId) ) 
 
 #define IDlgPrefGeneral_Invoke(This,dispIdMember,riid,lcid,wFlags,pDispParams,pVarResult,pExcepInfo,puArgErr)	\
-    (This)->lpVtbl -> Invoke(This,dispIdMember,riid,lcid,wFlags,pDispParams,pVarResult,pExcepInfo,puArgErr)
+    ( (This)->lpVtbl -> Invoke(This,dispIdMember,riid,lcid,wFlags,pDispParams,pVarResult,pExcepInfo,puArgErr) ) 
 
 #endif /* COBJMACROS */
 
@@ -10958,7 +11787,7 @@ DEFINE_GUID(DIID_IDlgPrefGeneral,0x013D3B80,0x3171,0x11D0,0xAA,0x04,0x44,0x45,0x
 #endif 	/* __IDlgPrefGeneral_DISPINTERFACE_DEFINED__ */
 
 
-DEFINE_GUID(CLSID_DLGPREFGENERAL,0x013D3B81,0x3171,0x11D0,0xAA,0x04,0x44,0x45,0x53,0x54,0x00,0x00);
+EXTERN_C const CLSID CLSID_DLGPREFGENERAL;
 
 #ifdef __cplusplus
 
@@ -10973,7 +11802,7 @@ DLGPREFGENERAL;
 /* [uuid] */ 
 
 
-DEFINE_GUID(DIID_IDlgCalJig3,0xDA743AC0,0x338D,0x11D0,0xAA,0x04,0x44,0x45,0x53,0x54,0x00,0x00);
+EXTERN_C const IID DIID_IDlgCalJig3;
 
 #if defined(__cplusplus) && !defined(CINTERFACE)
 
@@ -10991,7 +11820,8 @@ DEFINE_GUID(DIID_IDlgCalJig3,0xDA743AC0,0x338D,0x11D0,0xAA,0x04,0x44,0x45,0x53,0
         HRESULT ( STDMETHODCALLTYPE *QueryInterface )( 
             IDlgCalJig3 * This,
             /* [in] */ REFIID riid,
-            /* [iid_is][out] */ void **ppvObject);
+            /* [annotation][iid_is][out] */ 
+            _COM_Outptr_  void **ppvObject);
         
         ULONG ( STDMETHODCALLTYPE *AddRef )( 
             IDlgCalJig3 * This);
@@ -11013,20 +11843,28 @@ DEFINE_GUID(DIID_IDlgCalJig3,0xDA743AC0,0x338D,0x11D0,0xAA,0x04,0x44,0x45,0x53,0
             IDlgCalJig3 * This,
             /* [in] */ REFIID riid,
             /* [size_is][in] */ LPOLESTR *rgszNames,
-            /* [in] */ UINT cNames,
+            /* [range][in] */ UINT cNames,
             /* [in] */ LCID lcid,
             /* [size_is][out] */ DISPID *rgDispId);
         
         /* [local] */ HRESULT ( STDMETHODCALLTYPE *Invoke )( 
             IDlgCalJig3 * This,
-            /* [in] */ DISPID dispIdMember,
-            /* [in] */ REFIID riid,
-            /* [in] */ LCID lcid,
-            /* [in] */ WORD wFlags,
-            /* [out][in] */ DISPPARAMS *pDispParams,
-            /* [out] */ VARIANT *pVarResult,
-            /* [out] */ EXCEPINFO *pExcepInfo,
-            /* [out] */ UINT *puArgErr);
+            /* [annotation][in] */ 
+            _In_  DISPID dispIdMember,
+            /* [annotation][in] */ 
+            _In_  REFIID riid,
+            /* [annotation][in] */ 
+            _In_  LCID lcid,
+            /* [annotation][in] */ 
+            _In_  WORD wFlags,
+            /* [annotation][out][in] */ 
+            _In_  DISPPARAMS *pDispParams,
+            /* [annotation][out] */ 
+            _Out_opt_  VARIANT *pVarResult,
+            /* [annotation][out] */ 
+            _Out_opt_  EXCEPINFO *pExcepInfo,
+            /* [annotation][out] */ 
+            _Out_opt_  UINT *puArgErr);
         
         END_INTERFACE
     } IDlgCalJig3Vtbl;
@@ -11042,26 +11880,26 @@ DEFINE_GUID(DIID_IDlgCalJig3,0xDA743AC0,0x338D,0x11D0,0xAA,0x04,0x44,0x45,0x53,0
 
 
 #define IDlgCalJig3_QueryInterface(This,riid,ppvObject)	\
-    (This)->lpVtbl -> QueryInterface(This,riid,ppvObject)
+    ( (This)->lpVtbl -> QueryInterface(This,riid,ppvObject) ) 
 
 #define IDlgCalJig3_AddRef(This)	\
-    (This)->lpVtbl -> AddRef(This)
+    ( (This)->lpVtbl -> AddRef(This) ) 
 
 #define IDlgCalJig3_Release(This)	\
-    (This)->lpVtbl -> Release(This)
+    ( (This)->lpVtbl -> Release(This) ) 
 
 
 #define IDlgCalJig3_GetTypeInfoCount(This,pctinfo)	\
-    (This)->lpVtbl -> GetTypeInfoCount(This,pctinfo)
+    ( (This)->lpVtbl -> GetTypeInfoCount(This,pctinfo) ) 
 
 #define IDlgCalJig3_GetTypeInfo(This,iTInfo,lcid,ppTInfo)	\
-    (This)->lpVtbl -> GetTypeInfo(This,iTInfo,lcid,ppTInfo)
+    ( (This)->lpVtbl -> GetTypeInfo(This,iTInfo,lcid,ppTInfo) ) 
 
 #define IDlgCalJig3_GetIDsOfNames(This,riid,rgszNames,cNames,lcid,rgDispId)	\
-    (This)->lpVtbl -> GetIDsOfNames(This,riid,rgszNames,cNames,lcid,rgDispId)
+    ( (This)->lpVtbl -> GetIDsOfNames(This,riid,rgszNames,cNames,lcid,rgDispId) ) 
 
 #define IDlgCalJig3_Invoke(This,dispIdMember,riid,lcid,wFlags,pDispParams,pVarResult,pExcepInfo,puArgErr)	\
-    (This)->lpVtbl -> Invoke(This,dispIdMember,riid,lcid,wFlags,pDispParams,pVarResult,pExcepInfo,puArgErr)
+    ( (This)->lpVtbl -> Invoke(This,dispIdMember,riid,lcid,wFlags,pDispParams,pVarResult,pExcepInfo,puArgErr) ) 
 
 #endif /* COBJMACROS */
 
@@ -11072,7 +11910,7 @@ DEFINE_GUID(DIID_IDlgCalJig3,0xDA743AC0,0x338D,0x11D0,0xAA,0x04,0x44,0x45,0x53,0
 #endif 	/* __IDlgCalJig3_DISPINTERFACE_DEFINED__ */
 
 
-DEFINE_GUID(CLSID_DLGCALJIG3,0xDA743AC1,0x338D,0x11D0,0xAA,0x04,0x44,0x45,0x53,0x54,0x00,0x00);
+EXTERN_C const CLSID CLSID_DLGCALJIG3;
 
 #ifdef __cplusplus
 
@@ -11087,7 +11925,7 @@ DLGCALJIG3;
 /* [uuid] */ 
 
 
-DEFINE_GUID(DIID_IDlgWizLoop,0x1E22DC40,0x3519,0x11D0,0xAA,0x04,0x44,0x45,0x53,0x54,0x00,0x00);
+EXTERN_C const IID DIID_IDlgWizLoop;
 
 #if defined(__cplusplus) && !defined(CINTERFACE)
 
@@ -11105,7 +11943,8 @@ DEFINE_GUID(DIID_IDlgWizLoop,0x1E22DC40,0x3519,0x11D0,0xAA,0x04,0x44,0x45,0x53,0
         HRESULT ( STDMETHODCALLTYPE *QueryInterface )( 
             IDlgWizLoop * This,
             /* [in] */ REFIID riid,
-            /* [iid_is][out] */ void **ppvObject);
+            /* [annotation][iid_is][out] */ 
+            _COM_Outptr_  void **ppvObject);
         
         ULONG ( STDMETHODCALLTYPE *AddRef )( 
             IDlgWizLoop * This);
@@ -11127,20 +11966,28 @@ DEFINE_GUID(DIID_IDlgWizLoop,0x1E22DC40,0x3519,0x11D0,0xAA,0x04,0x44,0x45,0x53,0
             IDlgWizLoop * This,
             /* [in] */ REFIID riid,
             /* [size_is][in] */ LPOLESTR *rgszNames,
-            /* [in] */ UINT cNames,
+            /* [range][in] */ UINT cNames,
             /* [in] */ LCID lcid,
             /* [size_is][out] */ DISPID *rgDispId);
         
         /* [local] */ HRESULT ( STDMETHODCALLTYPE *Invoke )( 
             IDlgWizLoop * This,
-            /* [in] */ DISPID dispIdMember,
-            /* [in] */ REFIID riid,
-            /* [in] */ LCID lcid,
-            /* [in] */ WORD wFlags,
-            /* [out][in] */ DISPPARAMS *pDispParams,
-            /* [out] */ VARIANT *pVarResult,
-            /* [out] */ EXCEPINFO *pExcepInfo,
-            /* [out] */ UINT *puArgErr);
+            /* [annotation][in] */ 
+            _In_  DISPID dispIdMember,
+            /* [annotation][in] */ 
+            _In_  REFIID riid,
+            /* [annotation][in] */ 
+            _In_  LCID lcid,
+            /* [annotation][in] */ 
+            _In_  WORD wFlags,
+            /* [annotation][out][in] */ 
+            _In_  DISPPARAMS *pDispParams,
+            /* [annotation][out] */ 
+            _Out_opt_  VARIANT *pVarResult,
+            /* [annotation][out] */ 
+            _Out_opt_  EXCEPINFO *pExcepInfo,
+            /* [annotation][out] */ 
+            _Out_opt_  UINT *puArgErr);
         
         END_INTERFACE
     } IDlgWizLoopVtbl;
@@ -11156,26 +12003,26 @@ DEFINE_GUID(DIID_IDlgWizLoop,0x1E22DC40,0x3519,0x11D0,0xAA,0x04,0x44,0x45,0x53,0
 
 
 #define IDlgWizLoop_QueryInterface(This,riid,ppvObject)	\
-    (This)->lpVtbl -> QueryInterface(This,riid,ppvObject)
+    ( (This)->lpVtbl -> QueryInterface(This,riid,ppvObject) ) 
 
 #define IDlgWizLoop_AddRef(This)	\
-    (This)->lpVtbl -> AddRef(This)
+    ( (This)->lpVtbl -> AddRef(This) ) 
 
 #define IDlgWizLoop_Release(This)	\
-    (This)->lpVtbl -> Release(This)
+    ( (This)->lpVtbl -> Release(This) ) 
 
 
 #define IDlgWizLoop_GetTypeInfoCount(This,pctinfo)	\
-    (This)->lpVtbl -> GetTypeInfoCount(This,pctinfo)
+    ( (This)->lpVtbl -> GetTypeInfoCount(This,pctinfo) ) 
 
 #define IDlgWizLoop_GetTypeInfo(This,iTInfo,lcid,ppTInfo)	\
-    (This)->lpVtbl -> GetTypeInfo(This,iTInfo,lcid,ppTInfo)
+    ( (This)->lpVtbl -> GetTypeInfo(This,iTInfo,lcid,ppTInfo) ) 
 
 #define IDlgWizLoop_GetIDsOfNames(This,riid,rgszNames,cNames,lcid,rgDispId)	\
-    (This)->lpVtbl -> GetIDsOfNames(This,riid,rgszNames,cNames,lcid,rgDispId)
+    ( (This)->lpVtbl -> GetIDsOfNames(This,riid,rgszNames,cNames,lcid,rgDispId) ) 
 
 #define IDlgWizLoop_Invoke(This,dispIdMember,riid,lcid,wFlags,pDispParams,pVarResult,pExcepInfo,puArgErr)	\
-    (This)->lpVtbl -> Invoke(This,dispIdMember,riid,lcid,wFlags,pDispParams,pVarResult,pExcepInfo,puArgErr)
+    ( (This)->lpVtbl -> Invoke(This,dispIdMember,riid,lcid,wFlags,pDispParams,pVarResult,pExcepInfo,puArgErr) ) 
 
 #endif /* COBJMACROS */
 
@@ -11186,7 +12033,7 @@ DEFINE_GUID(DIID_IDlgWizLoop,0x1E22DC40,0x3519,0x11D0,0xAA,0x04,0x44,0x45,0x53,0
 #endif 	/* __IDlgWizLoop_DISPINTERFACE_DEFINED__ */
 
 
-DEFINE_GUID(CLSID_DLGWIZLOOP,0x1E22DC41,0x3519,0x11D0,0xAA,0x04,0x44,0x45,0x53,0x54,0x00,0x00);
+EXTERN_C const CLSID CLSID_DLGWIZLOOP;
 
 #ifdef __cplusplus
 
@@ -11201,7 +12048,7 @@ DLGWIZLOOP;
 /* [uuid] */ 
 
 
-DEFINE_GUID(DIID_IDlgWizLoopBegin,0x1E22DC42,0x3519,0x11D0,0xAA,0x04,0x44,0x45,0x53,0x54,0x00,0x00);
+EXTERN_C const IID DIID_IDlgWizLoopBegin;
 
 #if defined(__cplusplus) && !defined(CINTERFACE)
 
@@ -11219,7 +12066,8 @@ DEFINE_GUID(DIID_IDlgWizLoopBegin,0x1E22DC42,0x3519,0x11D0,0xAA,0x04,0x44,0x45,0
         HRESULT ( STDMETHODCALLTYPE *QueryInterface )( 
             IDlgWizLoopBegin * This,
             /* [in] */ REFIID riid,
-            /* [iid_is][out] */ void **ppvObject);
+            /* [annotation][iid_is][out] */ 
+            _COM_Outptr_  void **ppvObject);
         
         ULONG ( STDMETHODCALLTYPE *AddRef )( 
             IDlgWizLoopBegin * This);
@@ -11241,20 +12089,28 @@ DEFINE_GUID(DIID_IDlgWizLoopBegin,0x1E22DC42,0x3519,0x11D0,0xAA,0x04,0x44,0x45,0
             IDlgWizLoopBegin * This,
             /* [in] */ REFIID riid,
             /* [size_is][in] */ LPOLESTR *rgszNames,
-            /* [in] */ UINT cNames,
+            /* [range][in] */ UINT cNames,
             /* [in] */ LCID lcid,
             /* [size_is][out] */ DISPID *rgDispId);
         
         /* [local] */ HRESULT ( STDMETHODCALLTYPE *Invoke )( 
             IDlgWizLoopBegin * This,
-            /* [in] */ DISPID dispIdMember,
-            /* [in] */ REFIID riid,
-            /* [in] */ LCID lcid,
-            /* [in] */ WORD wFlags,
-            /* [out][in] */ DISPPARAMS *pDispParams,
-            /* [out] */ VARIANT *pVarResult,
-            /* [out] */ EXCEPINFO *pExcepInfo,
-            /* [out] */ UINT *puArgErr);
+            /* [annotation][in] */ 
+            _In_  DISPID dispIdMember,
+            /* [annotation][in] */ 
+            _In_  REFIID riid,
+            /* [annotation][in] */ 
+            _In_  LCID lcid,
+            /* [annotation][in] */ 
+            _In_  WORD wFlags,
+            /* [annotation][out][in] */ 
+            _In_  DISPPARAMS *pDispParams,
+            /* [annotation][out] */ 
+            _Out_opt_  VARIANT *pVarResult,
+            /* [annotation][out] */ 
+            _Out_opt_  EXCEPINFO *pExcepInfo,
+            /* [annotation][out] */ 
+            _Out_opt_  UINT *puArgErr);
         
         END_INTERFACE
     } IDlgWizLoopBeginVtbl;
@@ -11270,26 +12126,26 @@ DEFINE_GUID(DIID_IDlgWizLoopBegin,0x1E22DC42,0x3519,0x11D0,0xAA,0x04,0x44,0x45,0
 
 
 #define IDlgWizLoopBegin_QueryInterface(This,riid,ppvObject)	\
-    (This)->lpVtbl -> QueryInterface(This,riid,ppvObject)
+    ( (This)->lpVtbl -> QueryInterface(This,riid,ppvObject) ) 
 
 #define IDlgWizLoopBegin_AddRef(This)	\
-    (This)->lpVtbl -> AddRef(This)
+    ( (This)->lpVtbl -> AddRef(This) ) 
 
 #define IDlgWizLoopBegin_Release(This)	\
-    (This)->lpVtbl -> Release(This)
+    ( (This)->lpVtbl -> Release(This) ) 
 
 
 #define IDlgWizLoopBegin_GetTypeInfoCount(This,pctinfo)	\
-    (This)->lpVtbl -> GetTypeInfoCount(This,pctinfo)
+    ( (This)->lpVtbl -> GetTypeInfoCount(This,pctinfo) ) 
 
 #define IDlgWizLoopBegin_GetTypeInfo(This,iTInfo,lcid,ppTInfo)	\
-    (This)->lpVtbl -> GetTypeInfo(This,iTInfo,lcid,ppTInfo)
+    ( (This)->lpVtbl -> GetTypeInfo(This,iTInfo,lcid,ppTInfo) ) 
 
 #define IDlgWizLoopBegin_GetIDsOfNames(This,riid,rgszNames,cNames,lcid,rgDispId)	\
-    (This)->lpVtbl -> GetIDsOfNames(This,riid,rgszNames,cNames,lcid,rgDispId)
+    ( (This)->lpVtbl -> GetIDsOfNames(This,riid,rgszNames,cNames,lcid,rgDispId) ) 
 
 #define IDlgWizLoopBegin_Invoke(This,dispIdMember,riid,lcid,wFlags,pDispParams,pVarResult,pExcepInfo,puArgErr)	\
-    (This)->lpVtbl -> Invoke(This,dispIdMember,riid,lcid,wFlags,pDispParams,pVarResult,pExcepInfo,puArgErr)
+    ( (This)->lpVtbl -> Invoke(This,dispIdMember,riid,lcid,wFlags,pDispParams,pVarResult,pExcepInfo,puArgErr) ) 
 
 #endif /* COBJMACROS */
 
@@ -11300,7 +12156,7 @@ DEFINE_GUID(DIID_IDlgWizLoopBegin,0x1E22DC42,0x3519,0x11D0,0xAA,0x04,0x44,0x45,0
 #endif 	/* __IDlgWizLoopBegin_DISPINTERFACE_DEFINED__ */
 
 
-DEFINE_GUID(CLSID_DLGWIZLPBEGIN,0x1E22DC43,0x3519,0x11D0,0xAA,0x04,0x44,0x45,0x53,0x54,0x00,0x00);
+EXTERN_C const CLSID CLSID_DLGWIZLPBEGIN;
 
 #ifdef __cplusplus
 
@@ -11315,7 +12171,7 @@ DLGWIZLPBEGIN;
 /* [uuid] */ 
 
 
-DEFINE_GUID(DIID_IDlgCalWizLoopEnd,0x1E22DC44,0x3519,0x11D0,0xAA,0x04,0x44,0x45,0x53,0x54,0x00,0x00);
+EXTERN_C const IID DIID_IDlgCalWizLoopEnd;
 
 #if defined(__cplusplus) && !defined(CINTERFACE)
 
@@ -11333,7 +12189,8 @@ DEFINE_GUID(DIID_IDlgCalWizLoopEnd,0x1E22DC44,0x3519,0x11D0,0xAA,0x04,0x44,0x45,
         HRESULT ( STDMETHODCALLTYPE *QueryInterface )( 
             IDlgCalWizLoopEnd * This,
             /* [in] */ REFIID riid,
-            /* [iid_is][out] */ void **ppvObject);
+            /* [annotation][iid_is][out] */ 
+            _COM_Outptr_  void **ppvObject);
         
         ULONG ( STDMETHODCALLTYPE *AddRef )( 
             IDlgCalWizLoopEnd * This);
@@ -11355,20 +12212,28 @@ DEFINE_GUID(DIID_IDlgCalWizLoopEnd,0x1E22DC44,0x3519,0x11D0,0xAA,0x04,0x44,0x45,
             IDlgCalWizLoopEnd * This,
             /* [in] */ REFIID riid,
             /* [size_is][in] */ LPOLESTR *rgszNames,
-            /* [in] */ UINT cNames,
+            /* [range][in] */ UINT cNames,
             /* [in] */ LCID lcid,
             /* [size_is][out] */ DISPID *rgDispId);
         
         /* [local] */ HRESULT ( STDMETHODCALLTYPE *Invoke )( 
             IDlgCalWizLoopEnd * This,
-            /* [in] */ DISPID dispIdMember,
-            /* [in] */ REFIID riid,
-            /* [in] */ LCID lcid,
-            /* [in] */ WORD wFlags,
-            /* [out][in] */ DISPPARAMS *pDispParams,
-            /* [out] */ VARIANT *pVarResult,
-            /* [out] */ EXCEPINFO *pExcepInfo,
-            /* [out] */ UINT *puArgErr);
+            /* [annotation][in] */ 
+            _In_  DISPID dispIdMember,
+            /* [annotation][in] */ 
+            _In_  REFIID riid,
+            /* [annotation][in] */ 
+            _In_  LCID lcid,
+            /* [annotation][in] */ 
+            _In_  WORD wFlags,
+            /* [annotation][out][in] */ 
+            _In_  DISPPARAMS *pDispParams,
+            /* [annotation][out] */ 
+            _Out_opt_  VARIANT *pVarResult,
+            /* [annotation][out] */ 
+            _Out_opt_  EXCEPINFO *pExcepInfo,
+            /* [annotation][out] */ 
+            _Out_opt_  UINT *puArgErr);
         
         END_INTERFACE
     } IDlgCalWizLoopEndVtbl;
@@ -11384,26 +12249,26 @@ DEFINE_GUID(DIID_IDlgCalWizLoopEnd,0x1E22DC44,0x3519,0x11D0,0xAA,0x04,0x44,0x45,
 
 
 #define IDlgCalWizLoopEnd_QueryInterface(This,riid,ppvObject)	\
-    (This)->lpVtbl -> QueryInterface(This,riid,ppvObject)
+    ( (This)->lpVtbl -> QueryInterface(This,riid,ppvObject) ) 
 
 #define IDlgCalWizLoopEnd_AddRef(This)	\
-    (This)->lpVtbl -> AddRef(This)
+    ( (This)->lpVtbl -> AddRef(This) ) 
 
 #define IDlgCalWizLoopEnd_Release(This)	\
-    (This)->lpVtbl -> Release(This)
+    ( (This)->lpVtbl -> Release(This) ) 
 
 
 #define IDlgCalWizLoopEnd_GetTypeInfoCount(This,pctinfo)	\
-    (This)->lpVtbl -> GetTypeInfoCount(This,pctinfo)
+    ( (This)->lpVtbl -> GetTypeInfoCount(This,pctinfo) ) 
 
 #define IDlgCalWizLoopEnd_GetTypeInfo(This,iTInfo,lcid,ppTInfo)	\
-    (This)->lpVtbl -> GetTypeInfo(This,iTInfo,lcid,ppTInfo)
+    ( (This)->lpVtbl -> GetTypeInfo(This,iTInfo,lcid,ppTInfo) ) 
 
 #define IDlgCalWizLoopEnd_GetIDsOfNames(This,riid,rgszNames,cNames,lcid,rgDispId)	\
-    (This)->lpVtbl -> GetIDsOfNames(This,riid,rgszNames,cNames,lcid,rgDispId)
+    ( (This)->lpVtbl -> GetIDsOfNames(This,riid,rgszNames,cNames,lcid,rgDispId) ) 
 
 #define IDlgCalWizLoopEnd_Invoke(This,dispIdMember,riid,lcid,wFlags,pDispParams,pVarResult,pExcepInfo,puArgErr)	\
-    (This)->lpVtbl -> Invoke(This,dispIdMember,riid,lcid,wFlags,pDispParams,pVarResult,pExcepInfo,puArgErr)
+    ( (This)->lpVtbl -> Invoke(This,dispIdMember,riid,lcid,wFlags,pDispParams,pVarResult,pExcepInfo,puArgErr) ) 
 
 #endif /* COBJMACROS */
 
@@ -11414,7 +12279,7 @@ DEFINE_GUID(DIID_IDlgCalWizLoopEnd,0x1E22DC44,0x3519,0x11D0,0xAA,0x04,0x44,0x45,
 #endif 	/* __IDlgCalWizLoopEnd_DISPINTERFACE_DEFINED__ */
 
 
-DEFINE_GUID(CLSID_DLGCALWIZLOOPEND,0x1E22DC45,0x3519,0x11D0,0xAA,0x04,0x44,0x45,0x53,0x54,0x00,0x00);
+EXTERN_C const CLSID CLSID_DLGCALWIZLOOPEND;
 
 #ifdef __cplusplus
 
@@ -11429,7 +12294,7 @@ DLGCALWIZLOOPEND;
 /* [uuid] */ 
 
 
-DEFINE_GUID(DIID_IDlgCalLoopJig,0x1E22DC46,0x3519,0x11D0,0xAA,0x04,0x44,0x45,0x53,0x54,0x00,0x00);
+EXTERN_C const IID DIID_IDlgCalLoopJig;
 
 #if defined(__cplusplus) && !defined(CINTERFACE)
 
@@ -11447,7 +12312,8 @@ DEFINE_GUID(DIID_IDlgCalLoopJig,0x1E22DC46,0x3519,0x11D0,0xAA,0x04,0x44,0x45,0x5
         HRESULT ( STDMETHODCALLTYPE *QueryInterface )( 
             IDlgCalLoopJig * This,
             /* [in] */ REFIID riid,
-            /* [iid_is][out] */ void **ppvObject);
+            /* [annotation][iid_is][out] */ 
+            _COM_Outptr_  void **ppvObject);
         
         ULONG ( STDMETHODCALLTYPE *AddRef )( 
             IDlgCalLoopJig * This);
@@ -11469,20 +12335,28 @@ DEFINE_GUID(DIID_IDlgCalLoopJig,0x1E22DC46,0x3519,0x11D0,0xAA,0x04,0x44,0x45,0x5
             IDlgCalLoopJig * This,
             /* [in] */ REFIID riid,
             /* [size_is][in] */ LPOLESTR *rgszNames,
-            /* [in] */ UINT cNames,
+            /* [range][in] */ UINT cNames,
             /* [in] */ LCID lcid,
             /* [size_is][out] */ DISPID *rgDispId);
         
         /* [local] */ HRESULT ( STDMETHODCALLTYPE *Invoke )( 
             IDlgCalLoopJig * This,
-            /* [in] */ DISPID dispIdMember,
-            /* [in] */ REFIID riid,
-            /* [in] */ LCID lcid,
-            /* [in] */ WORD wFlags,
-            /* [out][in] */ DISPPARAMS *pDispParams,
-            /* [out] */ VARIANT *pVarResult,
-            /* [out] */ EXCEPINFO *pExcepInfo,
-            /* [out] */ UINT *puArgErr);
+            /* [annotation][in] */ 
+            _In_  DISPID dispIdMember,
+            /* [annotation][in] */ 
+            _In_  REFIID riid,
+            /* [annotation][in] */ 
+            _In_  LCID lcid,
+            /* [annotation][in] */ 
+            _In_  WORD wFlags,
+            /* [annotation][out][in] */ 
+            _In_  DISPPARAMS *pDispParams,
+            /* [annotation][out] */ 
+            _Out_opt_  VARIANT *pVarResult,
+            /* [annotation][out] */ 
+            _Out_opt_  EXCEPINFO *pExcepInfo,
+            /* [annotation][out] */ 
+            _Out_opt_  UINT *puArgErr);
         
         END_INTERFACE
     } IDlgCalLoopJigVtbl;
@@ -11498,26 +12372,26 @@ DEFINE_GUID(DIID_IDlgCalLoopJig,0x1E22DC46,0x3519,0x11D0,0xAA,0x04,0x44,0x45,0x5
 
 
 #define IDlgCalLoopJig_QueryInterface(This,riid,ppvObject)	\
-    (This)->lpVtbl -> QueryInterface(This,riid,ppvObject)
+    ( (This)->lpVtbl -> QueryInterface(This,riid,ppvObject) ) 
 
 #define IDlgCalLoopJig_AddRef(This)	\
-    (This)->lpVtbl -> AddRef(This)
+    ( (This)->lpVtbl -> AddRef(This) ) 
 
 #define IDlgCalLoopJig_Release(This)	\
-    (This)->lpVtbl -> Release(This)
+    ( (This)->lpVtbl -> Release(This) ) 
 
 
 #define IDlgCalLoopJig_GetTypeInfoCount(This,pctinfo)	\
-    (This)->lpVtbl -> GetTypeInfoCount(This,pctinfo)
+    ( (This)->lpVtbl -> GetTypeInfoCount(This,pctinfo) ) 
 
 #define IDlgCalLoopJig_GetTypeInfo(This,iTInfo,lcid,ppTInfo)	\
-    (This)->lpVtbl -> GetTypeInfo(This,iTInfo,lcid,ppTInfo)
+    ( (This)->lpVtbl -> GetTypeInfo(This,iTInfo,lcid,ppTInfo) ) 
 
 #define IDlgCalLoopJig_GetIDsOfNames(This,riid,rgszNames,cNames,lcid,rgDispId)	\
-    (This)->lpVtbl -> GetIDsOfNames(This,riid,rgszNames,cNames,lcid,rgDispId)
+    ( (This)->lpVtbl -> GetIDsOfNames(This,riid,rgszNames,cNames,lcid,rgDispId) ) 
 
 #define IDlgCalLoopJig_Invoke(This,dispIdMember,riid,lcid,wFlags,pDispParams,pVarResult,pExcepInfo,puArgErr)	\
-    (This)->lpVtbl -> Invoke(This,dispIdMember,riid,lcid,wFlags,pDispParams,pVarResult,pExcepInfo,puArgErr)
+    ( (This)->lpVtbl -> Invoke(This,dispIdMember,riid,lcid,wFlags,pDispParams,pVarResult,pExcepInfo,puArgErr) ) 
 
 #endif /* COBJMACROS */
 
@@ -11528,7 +12402,7 @@ DEFINE_GUID(DIID_IDlgCalLoopJig,0x1E22DC46,0x3519,0x11D0,0xAA,0x04,0x44,0x45,0x5
 #endif 	/* __IDlgCalLoopJig_DISPINTERFACE_DEFINED__ */
 
 
-DEFINE_GUID(CLSID_DLGCALLOOPJIG,0x1E22DC47,0x3519,0x11D0,0xAA,0x04,0x44,0x45,0x53,0x54,0x00,0x00);
+EXTERN_C const CLSID CLSID_DLGCALLOOPJIG;
 
 #ifdef __cplusplus
 

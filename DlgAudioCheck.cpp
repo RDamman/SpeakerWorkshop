@@ -498,7 +498,7 @@ CString csr;
 			SetIDText( IDC_STEREO, IDS_MONO);
 		else
 			SetIDText( IDC_STEREO, IDS_UNKNOWN);
-		csr.Format("%d.%d", HIBYTE(m_Caps.vDriverVersion), LOBYTE(m_Caps.vDriverVersion));
+		csr.Format(_T("%d.%d"), HIBYTE(m_Caps.vDriverVersion), LOBYTE(m_Caps.vDriverVersion));
 		SetDlgItemText( IDC_VERSION, csr);
 		csr = m_Caps.szPname;
 		SetDlgItemText( IDC_AUDCHKNAME, csr);
@@ -565,7 +565,7 @@ CString csr;
 			SetIDText( IDC_STEREO, IDS_MONO);
 		else
 			SetIDText( IDC_STEREO, IDS_UNKNOWN);
-		csr.Format("%d.%d", HIBYTE(m_Caps.vDriverVersion), LOBYTE(m_Caps.vDriverVersion));
+		csr.Format(_T("%d.%d"), HIBYTE(m_Caps.vDriverVersion), LOBYTE(m_Caps.vDriverVersion));
 		SetDlgItemText( IDC_VERSION, csr);
 		csr = m_Caps.szPname;
 		SetDlgItemText( IDC_AUDCHKNAME, csr);

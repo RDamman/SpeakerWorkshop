@@ -1281,7 +1281,7 @@ double ddiv;
 	{
 	CString csform;
 		csform.GetBuffer(1024);	// this could be pretty long
-		csform.Format( IDS_MERGEDESC, (LPCSTR )pport->GetName(), (LPCSTR )pdriver->GetName() );
+		csform.Format( IDS_MERGEDESC, (LPCTSTR )pport->GetName(), (LPCTSTR )pdriver->GetName() );
 	ptarget->SetDescription( csform);
 	}
 
@@ -1484,8 +1484,8 @@ CDataSet *cother = (CDataSet *)GetOther();
 //	{
 //	CString csform, cres;
 //		csform.GetBuffer(1024);	// this could be pretty long
-//		cres.Format( "%d", m_nOperation);
-//		csform.Format( IDS_COMBINEDESC, (LPCSTR )cdSource->GetName(), (LPCSTR )cother->GetName(), (LPCSTR )cres);
+//		cres.Format(_T("%d"), m_nOperation);
+//		csform.Format( IDS_COMBINEDESC, (LPCTSTR )cdSource->GetName(), (LPCTSTR )cother->GetName(), (LPCTSTR )cres);
 //	cdnew->SetDescription( csform);
 //	}
 
@@ -1633,8 +1633,8 @@ ZComplex zres, zcap;
 	{
 	CString csform, cres;
 		csform.GetBuffer(1024);	// this could be pretty long
-		cres.Format( "%f", m_fResistor);
-		csform.Format( IDS_IMPEDDESC, (LPCSTR )cdSource->GetName(), (LPCSTR )ccalib->GetName(), (LPCSTR )cres);
+		cres.Format(_T("%f"), m_fResistor);
+		csform.Format( IDS_IMPEDDESC, (LPCTSTR )cdSource->GetName(), (LPCTSTR )ccalib->GetName(), (LPCTSTR )cres);
 	cdnew->SetDescription( csform);
 	}
 

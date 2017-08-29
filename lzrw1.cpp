@@ -2,7 +2,7 @@
 // addapted to MFVC++ by Neal White III
 
 #include "stdafx.h"
-#include "Wally.h"
+//#include "Wally.h"
 
 #define FLAG_BYTES    4     /* Number of bytes used by copy flag. */
 #define FLAG_COMPRESS 0     /* Signals that compression occurred. */
@@ -198,6 +198,46 @@ void LzrwDecompress( const BYTE* p_src_first, DWORD src_len, BYTE* p_dst_first, 
 	*p_dst_len = dwSize;
 }
 
+HGLOBAL DecompressMemory(HGLOBAL* phCompressedSrc, BOOL bFreeSrc)
+{
+	BYTE* lpSrc = (BYTE*)GlobalLock(*phCompressedSrc);
+	DWORD dwSize = *(DWORD*)(lpSrc);
+	DWORD dwCompressedSize = *(DWORD*)(lpSrc + sizeof(DWORD));
+	DWORD dwUncompressedSize = dwSize;
+
+	//#ifdef _DEBUG
+	//	HGLOBAL hDest = GlobalAlloc( GMEM_MOVEABLE| GMEM_ZEROINIT, dwSize);
+	//#else
+
+	// neal - +1024 because decompress often over-flows by a few bytes
+	// (I've seen at least by 7 bytes)
+
+	//HGLOBAL hDest = GlobalAlloc( GMEM_MOVEABLE, dwUncompressedSize+1024);
+	// The bug is now FIXED!
+
+	HGLOBAL hDest = GlobalAlloc(GMEM_MOVEABLE, dwUncompressedSize);
+	//#endif
+
+	if (hDest)
+	{
+		BYTE* lpDest = (BYTE*)GlobalLock(hDest);
+
+		LzrwDecompress(lpSrc + 2 * sizeof(DWORD), dwCompressedSize, lpDest, &dwSize);
+
+		if (bFreeSrc)
+		{
+			GlobalUnlock(*phCompressedSrc);
+			GlobalFree(*phCompressedSrc);
+
+			*phCompressedSrc = NULL;
+		}
+
+		GlobalUnlock(hDest);
+		//GlobalReAlloc( hDest, dwUncompressedSize, GMEM_MOVEABLE);
+	}
+	return hDest;
+}
+
 HGLOBAL CompressMemory( HGLOBAL* phSrc, DWORD dwOriginalSize, DWORD* pdwSize, BOOL bFreeSrc)
 {
 	BYTE* lpSrc               = (BYTE* )GlobalLock( *phSrc);
@@ -261,46 +301,6 @@ HGLOBAL CompressMemory( HGLOBAL* phSrc, DWORD dwOriginalSize, DWORD* pdwSize, BO
 
 			*phSrc = NULL;
 		}
-	}
-	return hDest;
-}
-
-HGLOBAL DecompressMemory( HGLOBAL* phCompressedSrc, BOOL bFreeSrc)
-{
-	BYTE* lpSrc               = (BYTE* )GlobalLock( *phCompressedSrc);
-	DWORD dwSize              = *(DWORD* )(lpSrc);
-	DWORD dwCompressedSize    = *(DWORD* )(lpSrc + sizeof( DWORD));
-	DWORD dwUncompressedSize  = dwSize;
-
-//#ifdef _DEBUG
-//	HGLOBAL hDest = GlobalAlloc( GMEM_MOVEABLE| GMEM_ZEROINIT, dwSize);
-//#else
-
-	// neal - +1024 because decompress often over-flows by a few bytes
-	// (I've seen at least by 7 bytes)
-
-	//HGLOBAL hDest = GlobalAlloc( GMEM_MOVEABLE, dwUncompressedSize+1024);
-	// The bug is now FIXED!
-
-	HGLOBAL hDest = GlobalAlloc( GMEM_MOVEABLE, dwUncompressedSize);
-//#endif
-
-	if (hDest)
-	{
-		BYTE* lpDest = (BYTE* )GlobalLock( hDest);
-
-		LzrwDecompress( lpSrc + 2*sizeof( DWORD), dwCompressedSize, lpDest, &dwSize);
-
-		if (bFreeSrc)
-		{
-			GlobalUnlock( *phCompressedSrc);
-			GlobalFree(   *phCompressedSrc);
-
-			*phCompressedSrc = NULL;
-		}
-
-		GlobalUnlock( hDest);
-		//GlobalReAlloc( hDest, dwUncompressedSize, GMEM_MOVEABLE);
 	}
 	return hDest;
 }

@@ -24,6 +24,7 @@
 #ifdef _DEBUG
 #undef THIS_FILE
 static char BASED_CODE THIS_FILE[] = __FILE__;
+
 #endif
 
 /////////////////////////////////////////////////////////////////////////////
@@ -133,11 +134,11 @@ CFolder *pbase = (CFolder *)GetTargetObject();
 		pbase->SetDateStrings( m_cRootView.m_csFolderDate, m_cRootView.m_csFolderLast);
 		m_cRootView.m_csComments = pbase->GetDescription();
 		ncount = pbase->GetCount( ntDriver);
-			m_cRootView.m_csDrivers.Format( "%d", ncount);
+		m_cRootView.m_csDrivers.Format(_T("%d"), ncount);
 		ncount = pbase->GetCount( ntEnclosure);
-			m_cRootView.m_csEnclosures.Format( "%d", ncount);
+		m_cRootView.m_csEnclosures.Format(_T("%d"), ncount);
 		ncount = pbase->GetCount( ntNetwork);
-			m_cRootView.m_csNetworks.Format( "%d", ncount);
+		m_cRootView.m_csNetworks.Format(_T("%d"), ncount);
 
 		m_cRootView.UpdateData( FALSE);	
 		}

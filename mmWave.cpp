@@ -26,6 +26,7 @@
 #ifdef _DEBUG
 #undef THIS_FILE
 static char BASED_CODE THIS_FILE[] = __FILE__;
+
 #endif
 
 static CMMWave *CMWavePlayer = NULL;		// who is currently playing????
@@ -758,12 +759,12 @@ float ftoffset = 0.16f;			// white space at the front
 	return 0;    
 }
 
-int  CMMWave::SaveWave( const char* pszPathName)
+int  CMMWave::SaveWave(CString sFileName)
 {
 CFile file;
 CFileException fe;
 
-	if (!file.Open(pszPathName, CFile::modeCreate | CFile::modeReadWrite | CFile::shareExclusive, &fe))
+	if (!file.Open(sFileName, CFile::modeCreate | CFile::modeReadWrite | CFile::shareExclusive, &fe))
 	{
 //		ReportSaveLoadException(pszPathName, &fe, TRUE, AFX_IDP_INVALID_FILENAME);
 		return FALSE;
@@ -796,20 +797,18 @@ CFileException fe;
 	return 0;
 }
 
-int  CMMWave::LoadWave( const char* pszPathName)
+int  CMMWave::LoadWave(CString sFileName)
 {
-CFile file;
-CFileException fe;
+	CFile file;
+	CFileException fe;
 
 	DeleteContents();		// get rid of anything prior
 
-	if ( ! pszPathName[0])	// empty string
+	if (sFileName.IsEmpty())	// empty string
 		return 1;			// whoops
 
-	if (!file.Open(pszPathName, CFile::modeRead | CFile::shareDenyWrite, &fe))
-	{
+	if (!file.Open(sFileName, CFile::modeRead | CFile::shareDenyWrite, &fe))
 		return 1;
-	}
 
 	CArchive loadArchive(&file, CArchive::load | CArchive::bNoFlushOnDelete);
 	TRY
@@ -2067,7 +2066,7 @@ CMMWarbleWave::CMMWarbleWave()
 }   
 
 
-CMMWarbleWave::CreateWave( enChannel enType)
+int CMMWarbleWave::CreateWave( enChannel enType)
 {
 double dstart, dend;
 double dfreq;
@@ -2179,7 +2178,7 @@ int    CMMUserDefWave::CreateWave( enChannel enType)
 								// now build the full data set
 		m_dwDataSize = 0;
 
-		if( LoadWave( (LPCSTR )m_csPathName))	// it loaded ok
+		if( LoadWave( (LPCTSTR )m_csPathName))	// it loaded ok
 			{
 			return 1;
 			}

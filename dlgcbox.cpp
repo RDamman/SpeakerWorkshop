@@ -317,7 +317,7 @@ CHAMBER *ch;
 	ch = pDest->GetChamber( 1);
 	ch->bUsePort = FALSE;
 					// now transfer the design parameters
-//	if ( 1 == sscanf( (LPCSTR )m_csVb, "%f", &ch->fVolume))
+//	if ( 1 == sscanf( (LPCTSTR )m_csVb, "%f", &ch->fVolume))
 //		ch->fVolume /= 1000;				// rescale
 	ch->fVolume = m_fVb / 1000;
 	ch->fSeriesRes = m_fSeriesRes;

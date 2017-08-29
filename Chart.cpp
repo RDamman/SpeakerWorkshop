@@ -690,7 +690,7 @@ float fYoffset;					// the offset per item
 
 					// calculate typical string sizes
 	rcuse = rcDraw;
-	nchheight = CAudtestApp::GetAppFont( ftAxisTitle).DrawString( pDC, "-123.3K", rcuse,  
+	nchheight = CAudtestApp::GetAppFont( ftAxisTitle).DrawString( pDC, _T("-123.3K"), rcuse,  
 					DT_CALCRECT | DT_LEFT | DT_TOP | DT_SINGLELINE | DT_NOPREFIX);
 	nchwidth = rcuse.Width();
 	
@@ -733,7 +733,7 @@ float fYoffset;					// the offset per item
 			{				// get the data and calc the rectangles
 			cnow = GetDataAt(i);
 			cdata = (CDataSet *)psData[i];
-			m_cLegend.AddStringData( (LPCSTR )cdata->GetName(), (DWORD )cnow->GetColor()->GetColor());
+			m_cLegend.AddStringData( (LPCTSTR )cdata->GetName(), (DWORD )cnow->GetColor()->GetColor());
 			}
 
 		m_cLegend.DoDraw( pDC, rcDraw);
@@ -969,7 +969,7 @@ CGrid *CSubChart::GetGrid( eCoord ecGrid)
 // set to the default parameters for this data set
 // ---------------------------------------------------------------------------
 // ---------------------------------------------------------------------------
-void CSubChart::CreateDefault(LPCSTR szName, UNITMSR uUom )
+void CSubChart::CreateDefault(LPCTSTR szName, UNITMSR uUom )
 {
 CString cs;
 TESTMARK tm;
@@ -1024,7 +1024,7 @@ TESTMARK tm;
 			break;
 		}
 
-	if ( strcmp( szName, "xxx")	)		// the special no-inherit default
+	if ( CString(szName).Compare(_T("xxx"))	)		// the special no-inherit default
 		InheritDefault( CAudtestApp::GetDefaultChart( uUom));
 	else
 	{
@@ -1784,7 +1784,7 @@ void CLegend::Dump(CDumpContext& dc) const
 
 // ---------------------------------------------------------------------------
 // ---------------------------------------------------------------------------
-void	CLegend::AddStringData( LPCSTR lpNew, COLORREF rgbNew)
+void	CLegend::AddStringData( LPCTSTR lpNew, COLORREF rgbNew)
 {
  	m_pcNames.Add( lpNew);
 	m_pcColors.Add( (DWORD )rgbNew);
@@ -1824,7 +1824,7 @@ int nheight;
 		RECT rcuse;
 
 		::SetRect( &rcuse, 0,0,1000,1000);
-		pDC->DrawText( (LPCSTR )csmax, -1, &rcuse,  DT_LEFT | DT_TOP | DT_NOPREFIX | DT_CALCRECT);
+		pDC->DrawText( (LPCTSTR )csmax, -1, &rcuse,  DT_LEFT | DT_TOP | DT_NOPREFIX | DT_CALCRECT);
 
 		if ( rcuse.right > rcmax.right)
 			rcmax.right = rcuse.right;
@@ -1874,7 +1874,7 @@ int nheight;
 
 		rcuse.left += 15;			// move over
 
-		pDC->DrawText( (LPCSTR )csmax, -1, &rcuse,  DT_LEFT | DT_TOP | DT_NOPREFIX);
+		pDC->DrawText( (LPCTSTR )csmax, -1, &rcuse,  DT_LEFT | DT_TOP | DT_NOPREFIX);
 		}
 
 	pDC->SelectObject( cfold);

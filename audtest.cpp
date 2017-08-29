@@ -1,8 +1,8 @@
-// audtest.cpp : Defines the class behaviors for the application.
+// Audtest.cpp : Defines the entry point for the application.
 //
 
 #include "stdafx.h"
-#include "audtest.h"
+#include "Audtest.h"
 
 #include "Winreg.h"
 
@@ -72,11 +72,11 @@ END_MESSAGE_MAP()
 /////////////////////////////////////////////////////////////////////////////
 // CAudtestApp construction
 
-static char *strDisplay = "Display";
-static char *strTransform = "Transform";
-static char *strNetwork = "Network";
-static char *strInterface = "Interface";
-static char *strColorDef = "ColorDefinitions";
+static CString strDisplay = _T("Display");
+static CString strTransform = _T("Transform");
+static CString strNetwork = _T("Network");
+static CString strInterface = _T("Interface");
+static CString strColorDef = _T("ColorDefinitions");
 
 			// the dialog we communicate with to show coordinates
 static CDlgLocations *dlg_Location = NULL;
@@ -142,20 +142,21 @@ static const CLSID BASED_CODE clsid =
 /////////////////////////////////////////////////////////////////////////////
 // CAudtestApp initialization
 
-static void get_MostRecent( CString &csFile)
+static CString get_MostRecent()
 {
 const TCHAR szFileSection[] = _T("Recent File List");
 const TCHAR szFileEntry[] = _T("File%d");
 int nmaxmru = 1;
 CRecentFileList recent( 0, szFileSection, szFileEntry, nmaxmru);
 	recent.ReadList();
+	CString sFile;
 	if ( recent.GetSize() && recent[0].GetLength())
-	{
-		csFile = recent[0];
-	}
+		sFile = recent[0];
 	else
-		csFile = "";
+		sFile = _T("");
+	return sFile;
 }
+
 
 BOOL CAudtestApp::InitInstance()
 {
@@ -175,7 +176,7 @@ BOOL CAudtestApp::InitInstance()
 	{
 					// TEMPORARY RESET HELP FILE NAME
 	free( (void *)m_pszHelpFilePath);
-	m_pszHelpFilePath = _tcsdup("SpkrWork.Hlp");
+	m_pszHelpFilePath = _tcsdup(_T("SpkrWork.Hlp"));
 	}
 
 	// Initialize OLE libraries
@@ -192,7 +193,7 @@ BOOL CAudtestApp::InitInstance()
 	//  of your final executable, you should remove from the following
 	//  the specific initialization routines you do not need.
 
-	SetRegistryKey( "Audua");			// !!!!
+	SetRegistryKey(_T("Audua"));			// !!!!
 
 	FixRegistry();						// make sure valid registry
 
@@ -262,7 +263,7 @@ BOOL CAudtestApp::InitInstance()
 				// --------------------------------------------------------------------
 				// get and then set the locale early so we interpret floats right
 				// when reading from the registry
-	m_iAllowedLocale	= GetProfileInt( strInterface,	"AllowedLocale", 0);
+	m_iAllowedLocale = GetProfileInt(strInterface, _T("AllowedLocale"), 0);
 	{
 	char *locl;
 
@@ -280,34 +281,34 @@ BOOL CAudtestApp::InitInstance()
 	}
 				// --------------------------------------------------------------------
 
-	m_nFftWindow		= GetProfileInt( strTransform, "FftWindow", 0);
-	m_bUnaryInPlace		= GetProfileInt( strTransform, "UnaryInPlace", 1);
-	m_bUnaryIncrement	= GetProfileInt( strTransform, "UnaryIncrement", 0);
-	m_bBinaryInPlace	= GetProfileInt( strTransform, "BinaryIncrement", 0);
-	m_bBinaryIncrement	= GetProfileInt( strTransform, "BinaryInPlace", 0);
+	m_nFftWindow		= GetProfileInt( strTransform, _T("FftWindow"), 0);
+	m_bUnaryInPlace		= GetProfileInt( strTransform, _T("UnaryInPlace"), 1);
+	m_bUnaryIncrement	= GetProfileInt( strTransform, _T("UnaryIncrement"), 0);
+	m_bBinaryInPlace	= GetProfileInt( strTransform, _T("BinaryIncrement"), 0);
+	m_bBinaryIncrement	= GetProfileInt( strTransform, _T("BinaryInPlace"), 0);
 
-	m_bShowLongTitle	= GetProfileInt( strDisplay,	"ShowLongTitle", 0);
-	m_bShowPath			= GetProfileInt( strDisplay,	"ShowPath", 0);
-	m_bIsMetric			= GetProfileInt( strDisplay,	"IsMetric", 0);
-	m_bLongStatus		= GetProfileInt( strDisplay,	"LongStatus", 1);
-	m_fRightShift		= GetProfileFloat( strDisplay,	"RightShift", 0);
+	m_bShowLongTitle    = GetProfileInt( strDisplay,   _T("ShowLongTitle"), 0);
+	m_bShowPath         = GetProfileInt( strDisplay,   _T("ShowPath"), 0);
+	m_bIsMetric			= GetProfileInt( strDisplay,	_T("IsMetric"), 0);
+	m_bLongStatus		= GetProfileInt( strDisplay,	_T("LongStatus"), 1);
+	m_fRightShift		= GetProfileFloat( strDisplay,	_T("RightShift"), 0);
 
-	m_ptNetGrid.x		= GetProfileInt( strNetwork,	"NetGridX", 0);
-	m_ptNetGrid.y		= GetProfileInt( strNetwork,	"NetGridY", 0);
-	m_nResistorType		= GetProfileInt( strNetwork,	"ResistorType", 0);
-	m_nDrawEndpoints	= GetProfileInt( strNetwork,	"DrawEndpoints", 1);
+	m_ptNetGrid.x		= GetProfileInt( strNetwork,	_T("NetGridX"), 0);
+	m_ptNetGrid.y		= GetProfileInt( strNetwork,	_T("NetGridY"), 0);
+	m_nResistorType		= GetProfileInt( strNetwork,	_T("ResistorType"), 0);
+	m_nDrawEndpoints	= GetProfileInt( strNetwork,	_T("DrawEndpoints"), 1);
 
-	m_bSingleClick		= GetProfileInt( strInterface,	"SingleClick", 0);
-	m_nLastPreference	= GetProfileInt( strInterface,	"LastPreference", 0);
-	m_iMeasureTrails	= GetProfileInt( strInterface,	"MeasureTrails", 0);
-	m_bDisable48K		= 0 != GetProfileInt( strInterface,	"Disable48K", 0);
-	m_bDisable96K		= 0 != GetProfileInt( strInterface,	"Disable96K", 1);
-	m_iAutoSaveTime		= GetProfileInt( strInterface,	"AutoSaveTime", 10);
-	m_bAutoSave			= GetProfileInt( strInterface,  "AutoSave", 0);
+	m_bSingleClick		= GetProfileInt( strInterface,	_T("SingleClick"), 0);
+	m_nLastPreference	= GetProfileInt( strInterface,	_T("LastPreference"), 0);
+	m_iMeasureTrails	= GetProfileInt( strInterface,	_T("MeasureTrails"), 0);
+	m_bDisable48K		= 0 != GetProfileInt( strInterface,	_T("Disable48K"), 0);
+	m_bDisable96K		= 0 != GetProfileInt( strInterface,	_T("Disable96K"), 1);
+	m_iAutoSaveTime		= GetProfileInt( strInterface,	_T("AutoSaveTime"), 10);
+	m_bAutoSave			= GetProfileInt( strInterface,  _T("AutoSave"), 0);
 
-	m_csLastImport		= GetProfileString( strInterface, "ImportFile");
-	m_csLastExport		= GetProfileString( strInterface, "ExportFile");
-	m_csLastFile		= GetProfileString( strInterface, "DocFile");
+	m_csLastImport		= GetProfileString( strInterface, _T("ImportFile"));
+	m_csLastExport		= GetProfileString( strInterface, _T("ExportFile"));
+	m_csLastFile		= GetProfileString( strInterface, _T("DocFile"));
 
 	{			// set up the default colors
 	int i;
@@ -333,18 +334,18 @@ BOOL CAudtestApp::InitInstance()
 
 	ReadRegistry( strColorDef, m_ColorDefs, sizeof( m_ColorDefs));
 
-	m_bUseLast			= GetProfileInt( "Startup",		"UseLast", 1);
+	m_bUseLast = GetProfileInt(_T("Startup"), _T("UseLast"), 1);
 
 	m_bIsWorking		= FALSE;			// not loaded, but set
 
-	m_nPrecisions[0] = GetProfileInt( strNetwork, "Precision", 3);
+	m_nPrecisions[0] = GetProfileInt( strNetwork, _T("Precision"), 3);
 
-	m_nShowChannels  = (enChannel )GetProfileInt("Signal", "ShowChannels", chMono);
+	m_nShowChannels  = (enChannel )GetProfileInt(_T("Signal"), _T("ShowChannels"), chMono);
 
 	// ---------------- ---------------- ---------------- ---------------- 
 	// ---------------- Measurement Preferences
 	// ---------------- ---------------- ---------------- ---------------- 
-	if (  ReadRegistry( "Measure", &m_Measures, sizeof( m_Measures) ))
+	if (  ReadRegistry( _T("Measure"), &m_Measures, sizeof( m_Measures) ))
 		{			// not yet saved a change...
 		m_Measures.nSampleRate = 44100;
 		m_Measures.nSampleSize = 2048;
@@ -361,12 +362,12 @@ BOOL CAudtestApp::InitInstance()
 	// ---------------- ---------------- ---------------- ---------------- 
 	// ---------------- Latency Preferences
 	// ---------------- ---------------- ---------------- ---------------- 
-	if (  ReadRegistry( "Latency", &m_fLatency, sizeof( float) ))
+	if (  ReadRegistry( _T("Latency"), &m_fLatency, sizeof( float) ))
 		{			// not yet saved a change...
 		m_fLatency = 0.0f;
 		}
 
-	if (  ReadRegistry( "Warmup", &m_iWarmup, sizeof( int) ))
+	if (  ReadRegistry( _T("Warmup"), &m_iWarmup, sizeof( int) ))
 		{			// not yet saved a change...
 		m_iWarmup = 100;
 		}
@@ -374,7 +375,7 @@ BOOL CAudtestApp::InitInstance()
 	// ---------------- ---------------- ---------------- ---------------- 
 	// ---------------- Marker Preferences
 	// ---------------- ---------------- ---------------- ---------------- 
-	if (  ReadRegistry( "Marker", &m_Markers, sizeof( m_Markers) ))
+	if (  ReadRegistry( _T("Marker"), &m_Markers, sizeof( m_Markers) ))
 		{			// not yet saved a change...
 		m_Markers.tmTime.bUse = FALSE;		// use time markers
 		m_Markers.tmFreq.bUse = FALSE;		// use frequency markers
@@ -402,7 +403,7 @@ BOOL CAudtestApp::InitInstance()
 	// ---------------- ---------------- ---------------- ---------------- 
 	// ---------------- Enclosure Preferences
 	// ---------------- ---------------- ---------------- ---------------- 
-	if (  ReadRegistry( "EnclosureInfo", &m_EnclosureInfo, sizeof( m_EnclosureInfo) ))
+	if (  ReadRegistry( _T("EnclosureInfo"), &m_EnclosureInfo, sizeof( m_EnclosureInfo) ))
 		{
 		m_EnclosureInfo.bConeExcursion = 1;
 		m_EnclosureInfo.bFreqResponse = 1;
@@ -429,13 +430,13 @@ BOOL CAudtestApp::InitInstance()
 	COleObjectFactory::UpdateRegistryAll();
 
 	m_CChartDefaults[uomTime] = new CSubChart();
-	m_CChartDefaults[uomTime]->CreateDefault("xxx", uomTime);
+	m_CChartDefaults[uomTime]->CreateDefault(_T("xxx"), uomTime);
 
 	m_CChartDefaults[uomFreq] = new CSubChart();
-	m_CChartDefaults[uomFreq]->CreateDefault("xxx", uomFreq);
+	m_CChartDefaults[uomFreq]->CreateDefault(_T("xxx"), uomFreq);
 
 	m_CChartDefaults[uomOhms] = new CSubChart();
-	m_CChartDefaults[uomOhms]->CreateDefault("xxx", uomOhms);
+	m_CChartDefaults[uomOhms]->CreateDefault(_T("xxx"), uomOhms);
 
 	// simple command line parsing
 	if (m_lpCmdLine[0] == '\0')
@@ -443,13 +444,24 @@ BOOL CAudtestApp::InitInstance()
 		// create a new (empty) document
 		if ( m_bUseLast)	// default to no last document
 			{				// create file MRU since nMaxMRU not zero
-			CString csfile;
-
-			get_MostRecent( csfile);
-			if (! csfile.IsEmpty())
+			CString sfile = get_MostRecent();
+			if (! sfile.IsEmpty())
 			{
-				OpenDocumentFile( csfile);
-				SetLastFile( csfile);			// last opened
+				CDocument *pdocument = OpenDocumentFile(sfile);
+				if (pdocument != NULL)
+					SetLastFile(sfile);			// last opened
+				else
+				{
+					SetLastFile("");
+					if (m_pRecentFileList->GetSize() > 0)
+					{
+						m_pRecentFileList->Remove(0);
+						m_pRecentFileList->WriteList();
+						//
+						ENSURE_VALID(m_pDocManager);
+						m_pDocManager->CloseAllDocuments(false);
+					}
+				}
 			}
 			else
 				OnFileNew();
@@ -474,7 +486,7 @@ BOOL CAudtestApp::InitInstance()
 	{
 	WINDOWPLACEMENT wp;
 
-		if ( ! ReadRegistry( "WindowPlace", &wp, sizeof( wp) ))	// it worked
+		if ( ! ReadRegistry( _T("WindowPlace"), &wp, sizeof( wp) ))	// it worked
 			{
 			wp.length = sizeof( wp);
 			wp.flags = 0;
@@ -593,7 +605,7 @@ void CAudtestApp::SetDisable48K( bool bNew)
 CAudtestApp *capp = (CAudtestApp *)AfxGetApp();
 
 	capp->m_bDisable48K = bNew;
-	capp->WriteProfileInt( strInterface, "Disable48K", bNew ? 1 : 0);
+	capp->WriteProfileInt( strInterface, _T("Disable48K"), bNew ? 1 : 0);
 }
 
 bool CAudtestApp::GetDisable96K()
@@ -608,7 +620,7 @@ void CAudtestApp::SetDisable96K( bool bNew)
 CAudtestApp *capp = (CAudtestApp *)AfxGetApp();
 
 	capp->m_bDisable96K = bNew;
-	capp->WriteProfileInt( strInterface, "Disable96K", bNew ? 1 : 0);
+	capp->WriteProfileInt( strInterface, _T("Disable96K"), bNew ? 1 : 0);
 }
 
 bool CAudtestApp::GetDisable48K()
@@ -621,52 +633,45 @@ CAudtestApp *capp = (CAudtestApp *)AfxGetApp();
 void 	CAudtestApp::SetFftWindow(int nNew)
 {
 	m_nFftWindow = nNew;
-	WriteProfileInt( strTransform, "FftWindow", m_nFftWindow);
+	WriteProfileInt( strTransform, _T("FftWindow"), m_nFftWindow);
 }
 
-void	CAudtestApp::GetLastImport( CString &csImport)
+CString	CAudtestApp::GetLastImport()
 {
-CAudtestApp *capp = (CAudtestApp *)AfxGetApp();
-
-	csImport = capp->m_csLastImport;
+	return ((CAudtestApp *)AfxGetApp())->m_csLastImport;
 }
 
-void	CAudtestApp::SetLastImport( LPCTSTR csImport)
+void	CAudtestApp::SetLastImport(CString sFile)
 {
-CAudtestApp *capp = (CAudtestApp *)AfxGetApp();
-
-	capp->m_csLastImport = csImport;
-	capp->WriteProfileString( strInterface, "ImportFile", csImport);
+	CAudtestApp *capp = (CAudtestApp *)AfxGetApp();
+	capp->m_csLastImport = sFile;
+	capp->WriteProfileString( strInterface, _T("ImportFile"), sFile);
 }
 
-void	CAudtestApp::GetLastExport( CString &csExport)
+CString	CAudtestApp::GetLastExport()
 {
-CAudtestApp *capp = (CAudtestApp *)AfxGetApp();
-
-	csExport = capp->m_csLastExport;
+	CAudtestApp *capp = (CAudtestApp *)AfxGetApp();
+	return capp->m_csLastExport;
 }
 
-void	CAudtestApp::SetLastExport( LPCTSTR csExport)
+void	CAudtestApp::SetLastExport(CString sFile)
 {
-CAudtestApp *capp = (CAudtestApp *)AfxGetApp();
-
-	capp->m_csLastExport = csExport;
-	capp->WriteProfileString( strInterface, "ExportFile", csExport);
+	CAudtestApp *capp = (CAudtestApp *)AfxGetApp();
+	capp->m_csLastExport = sFile;
+	capp->WriteProfileString( strInterface, _T("ExportFile"), sFile);
 }
 
-void	CAudtestApp::GetLastFile( CString &csFile)
+CString	CAudtestApp::GetLastFile()
 {
-CAudtestApp *capp = (CAudtestApp *)AfxGetApp();
-
-	csFile = capp->m_csLastFile;
+	CAudtestApp *capp = (CAudtestApp *)AfxGetApp();
+	return capp->m_csLastFile;
 }
 
-void	CAudtestApp::SetLastFile( LPCTSTR csFile)
+void	CAudtestApp::SetLastFile(CString sFile)
 {
-CAudtestApp *capp = (CAudtestApp *)AfxGetApp();
-
-	capp->m_csLastFile = csFile;
-	capp->WriteProfileString( strInterface, "DocFile", csFile);
+	CAudtestApp *capp = (CAudtestApp *)AfxGetApp();
+	capp->m_csLastFile = sFile;
+	capp->WriteProfileString( strInterface, _T("DocFile"), sFile);
 }
 
 
@@ -677,7 +682,7 @@ TESTMSR tm;
 
 	capp->m_Measures = *lpSource;
 	tm = *lpSource;
-	capp->WriteRegistry( "Measure", &tm, sizeof( tm));
+	capp->WriteRegistry( _T("Measure"), &tm, sizeof( tm));
 }
 
 void CAudtestApp::GetMeasures( LPTESTMSR lpDest)
@@ -692,7 +697,7 @@ void CAudtestApp::SetLatency( float fNew)
 CAudtestApp *capp = (CAudtestApp *)AfxGetApp();
 
 	capp->m_fLatency = fNew;
-	capp->WriteRegistry( "Latency", &fNew, sizeof( float));
+	capp->WriteRegistry( _T("Latency"), &fNew, sizeof( float));
 }
 
 void CAudtestApp::GetLatency( float *fGot)
@@ -710,7 +715,7 @@ void CAudtestApp::SetWarmup( int iNew)
 CAudtestApp *capp = (CAudtestApp *)AfxGetApp();
 
 	capp->m_iWarmup = iNew;
-	capp->WriteRegistry( "Warmup", &iNew, sizeof( int));
+	capp->WriteRegistry( _T("Warmup"), &iNew, sizeof( int));
 
 }
 
@@ -784,7 +789,7 @@ CAudtestApp *capp = (CAudtestApp *)AfxGetApp();
 	if ( nType != capp->m_iMeasureTrails)
 		{
 		capp->m_iMeasureTrails = nType;
-		capp->WriteProfileInt( strInterface, "MeasureTrails", nType);
+		capp->WriteProfileInt( strInterface, _T("MeasureTrails"), nType);
 		}
 
 }
@@ -808,7 +813,7 @@ CAudtestApp *capp = (CAudtestApp *)AfxGetApp();
 	if ( nType != capp->m_iAllowedLocale)
 		{
 			capp->m_iAllowedLocale = nType;
-			capp->WriteProfileInt( strInterface, "AllowedLocale", nType);
+			capp->WriteProfileInt( strInterface, _T("AllowedLocale"), nType);
 			if (capp->m_pcslLocale)
 				delete capp->m_pcslLocale;		// delete the locale guy
 			capp->m_pcslLocale = NULL;
@@ -847,7 +852,7 @@ CAudtestApp *capp = (CAudtestApp *)AfxGetApp();
 	if ( bNew != capp->m_bAutoSave)
 		{
 		capp->m_bAutoSave = bNew;
-		capp->WriteProfileInt( strInterface, "AutoSave", bNew);
+		capp->WriteProfileInt( strInterface, _T("AutoSave"), bNew);
 		}
 
 }
@@ -867,7 +872,7 @@ CAudtestApp *capp = (CAudtestApp *)AfxGetApp();
 	if ( iNew != capp->m_iAutoSaveTime)
 		{
 		capp->m_iAutoSaveTime = iNew;
-		capp->WriteProfileInt( strInterface, "AutoSaveTime", iNew);
+		capp->WriteProfileInt( strInterface, _T("AutoSaveTime"), iNew);
 		}
 
 
@@ -883,7 +888,7 @@ void CAudtestApp::SetEnclosureInfo( ENCLINFO& cNew)
 CAudtestApp *capp = (CAudtestApp *)AfxGetApp();
 
 	capp->m_EnclosureInfo = cNew;
-	capp->WriteRegistry( "EnclosureInfo", &cNew, sizeof( cNew));
+	capp->WriteRegistry( _T("EnclosureInfo"), &cNew, sizeof( cNew));
 }
 
 void CAudtestApp::GetEnclosureInfo( ENCLINFO& nDest)
@@ -974,7 +979,7 @@ LPMARKERINFO lpmark = capp->GetMarkerInfo();
 			break;
 		}
 
-	capp->WriteRegistry( "Marker", lpmark, sizeof( MARKERINFO));
+	capp->WriteRegistry( _T("Marker"), lpmark, sizeof( MARKERINFO));
 }
 
 BOOL CAudtestApp::IsMarkerShown( int nMarker)
@@ -1030,7 +1035,7 @@ LPMARKERINFO lpmark = capp->GetMarkerInfo();
 			break;
 		}
 
-	capp->WriteRegistry( "Marker", lpmark, sizeof( MARKERINFO));
+	capp->WriteRegistry( _T("Marker"), lpmark, sizeof( MARKERINFO));
 }
 
 
@@ -1039,12 +1044,12 @@ void	CAudtestApp::SetInPlace( BOOL bBinary, BOOL bNew)
 	if ( bBinary)
 		{
 		m_bBinaryInPlace = bNew;
-		WriteProfileInt( strTransform, "BinaryIncrement", m_bBinaryInPlace);
+		WriteProfileInt( strTransform, _T("BinaryIncrement"), m_bBinaryInPlace);
 		}
 	else
 		{
 		m_bUnaryInPlace = bNew;
-		WriteProfileInt( strTransform, "UnaryInPlace", m_bUnaryInPlace);
+		WriteProfileInt( strTransform, _T("UnaryInPlace"), m_bUnaryInPlace);
 		}
 }
 
@@ -1053,12 +1058,12 @@ void	CAudtestApp::SetIncrement( BOOL bBinary, BOOL bNew)
 	if ( bBinary)
 		{
 		m_bBinaryIncrement = bNew;
-	 	WriteProfileInt( strTransform, "BinaryInPlace", m_bBinaryIncrement);
+	 	WriteProfileInt( strTransform, _T("BinaryInPlace"), m_bBinaryIncrement);
 		}
 	else
 		{
 		m_bUnaryIncrement = bNew;
-		WriteProfileInt( strTransform, "UnaryIncrement", m_bUnaryIncrement);
+		WriteProfileInt( strTransform, _T("UnaryIncrement"), m_bUnaryIncrement);
 		}
 }
 
@@ -1154,7 +1159,7 @@ CAudtestApp *capp = (CAudtestApp *)AfxGetApp();
 	if ( nType < NUMPRECISIONS)
 		{
 		capp->m_nPrecisions[nType] = nNewPrecision;
-		capp->WriteProfileInt( strNetwork, "Precision", nNewPrecision);
+		capp->WriteProfileInt( strNetwork, _T("Precision"), nNewPrecision);
 		}
 	else
 		ASSERT(0);
@@ -1180,7 +1185,7 @@ CAudtestApp *capp = (CAudtestApp *)AfxGetApp();
 	if ( nType != capp->m_nResistorType)
 		{
 		capp->m_nResistorType = nType;
-		capp->WriteProfileInt( strNetwork, "ResistorType", nType);
+		capp->WriteProfileInt( strNetwork, _T("ResistorType"), nType);
 		}
 
 }
@@ -1204,7 +1209,7 @@ CAudtestApp *capp = (CAudtestApp *)AfxGetApp();
 	if ( nType != capp->m_nDrawEndpoints)
 		{
 		capp->m_nDrawEndpoints = nType;
-		capp->WriteProfileInt( strNetwork, "DrawEndpoints", nType);
+		capp->WriteProfileInt( strNetwork, _T("DrawEndpoints"), nType);
 		}
 
 }
@@ -1244,7 +1249,7 @@ CAudtestApp *capp = (CAudtestApp *)AfxGetApp();
 	if ( bIsMetric != capp->m_bIsMetric)
 		{
 		capp->m_bIsMetric = bIsMetric;
-		capp->WriteProfileInt( strDisplay, "IsMetric", bIsMetric);
+		capp->WriteProfileInt( strDisplay, _T("IsMetric"), bIsMetric);
 		}
 }
 
@@ -1266,8 +1271,8 @@ CAudtestApp *capp = (CAudtestApp *)AfxGetApp();
 	if ( capp->m_ptNetGrid.x != ptNew.x || capp->m_ptNetGrid.y != ptNew.y)
 		{
 		capp->m_ptNetGrid = ptNew;
-		capp->WriteProfileInt( strNetwork, "NetGridX", ptNew.x);
-		capp->WriteProfileInt( strNetwork, "NetGridY", ptNew.y);
+		capp->WriteProfileInt( strNetwork, _T("NetGridX"), ptNew.x);
+		capp->WriteProfileInt( strNetwork, _T("NetGridY"), ptNew.y);
 		}
 }
 
@@ -1289,7 +1294,7 @@ CAudtestApp *capp = (CAudtestApp *)AfxGetApp();
 	if ( bLongStatus != capp->m_bLongStatus)
 		{
 		capp->m_bLongStatus = bLongStatus;
-		capp->WriteProfileInt( strDisplay, "LongStatus", bLongStatus);
+		capp->WriteProfileInt( strDisplay, _T("LongStatus"), bLongStatus);
 		}
 }
 
@@ -1311,7 +1316,7 @@ CAudtestApp *capp = (CAudtestApp *)AfxGetApp();
 	if ( fRightShift != capp->m_fRightShift)
 		{
 		capp->m_fRightShift = fRightShift;
-		capp->WriteProfileFloat( strDisplay, "RightShift", fRightShift);
+		capp->WriteProfileFloat( strDisplay, _T("RightShift"), fRightShift);
 		}
 }
 
@@ -1332,7 +1337,7 @@ CAudtestApp *capp = (CAudtestApp *)AfxGetApp();
 	if ( bSingleClick != capp->m_bSingleClick)
 		{
 		capp->m_bSingleClick = bSingleClick;
-		capp->WriteProfileInt( strInterface, "SingleClick", bSingleClick);
+		capp->WriteProfileInt( strInterface, _T("SingleClick"), bSingleClick);
 		}
 }
 
@@ -1353,7 +1358,7 @@ CAudtestApp *capp = (CAudtestApp *)AfxGetApp();
 	if ( nLastPreference != capp->m_nLastPreference)
 		{
 		capp->m_nLastPreference = nLastPreference;
-		capp->WriteProfileInt( strInterface, "LastPreference", nLastPreference);
+		capp->WriteProfileInt( strInterface, _T("LastPreference"), nLastPreference);
 		}
 }
 
@@ -1374,7 +1379,7 @@ CAudtestApp *capp = (CAudtestApp *)AfxGetApp();
 	if ( bUseLast != capp->m_bUseLast)
 		{
 		capp->m_bUseLast = bUseLast;
-		capp->WriteProfileInt( "Startup", "UseLast", bUseLast);
+		capp->WriteProfileInt( _T("Startup"), _T("UseLast"), bUseLast);
 		}
 }
 
@@ -1413,7 +1418,7 @@ CAudtestApp *capp = (CAudtestApp *)AfxGetApp();
 	if ( bIsWorking != capp->m_bIsWorking)
 		{
 		capp->m_bIsWorking = bIsWorking;
-//		capp->WriteProfileInt( strDisplay, "IsWorking", bIsWorking);
+//		capp->WriteProfileInt( strDisplay, _T("IsWorking", bIsWorking);
 		}
 }
 
@@ -1425,13 +1430,13 @@ CAudtestApp *capp = (CAudtestApp *)AfxGetApp();
 	if ( bLongTitle != capp->m_bShowLongTitle)
 		{
 		capp->m_bShowLongTitle = bLongTitle;
-		capp->WriteProfileInt( strDisplay, "ShowLongTitle", bLongTitle);
+		capp->WriteProfileInt( strDisplay, _T("ShowLongTitle"), bLongTitle);
 		}
 
 	if ( bShowPath != capp->m_bShowPath)
 		{
 		capp->m_bShowPath = bShowPath;
-		capp->WriteProfileInt( strDisplay, "ShowPath", bShowPath);
+		capp->WriteProfileInt( strDisplay, _T("ShowPath"), bShowPath);
 		}
 }
 
@@ -1450,7 +1455,7 @@ void	CAudtestApp::SetShowChannels( enChannel nNewShowChannels)
 CAudtestApp *capp = (CAudtestApp *)AfxGetApp();
 
 	capp->m_nShowChannels = nNewShowChannels;
-	capp->WriteProfileInt( "Signal", "ShowChannels", nNewShowChannels);
+	capp->WriteProfileInt( _T("Signal"), _T("ShowChannels"), nNewShowChannels);
 
 }
 
@@ -1475,11 +1480,11 @@ CWnd *dlgloc;
 //	return CWinApp::PreTranslateMessage(pMsg);
 //}
 
-int		CAudtestApp::WriteRegistry( LPCSTR lpszName, const void *pStruct, int nStructSize)
+int		CAudtestApp::WriteRegistry( LPCTSTR lpszName, const void *pStruct, int nStructSize)
 {
 HKEY hmain;
 HKEY hrslt;
-CString csname = "Software\\";
+CString csname = _T("Software\\");
 
 	csname += m_pszRegistryKey;
 	csname += "\\";
@@ -1493,7 +1498,7 @@ CString csname = "Software\\";
 
 		lrslt = ::RegCreateKeyEx(
 				hmain,	// HKEY  hKey,	// handle of an open key 
-				"Structures", // LPCTSTR  lpSubKey,	// address of subkey name 
+				_T("Structures"), // LPCTSTR  lpSubKey,	// address of subkey name 
 				0,		 // DWORD  Reserved,	// reserved 
 				NULL,	// LPTSTR  lpClass,	// address of class string 
 				REG_OPTION_NON_VOLATILE, 	// DWORD  dwOptions,	// special options flag 
@@ -1536,7 +1541,7 @@ int nout;
 CMemFile pfile(20);		// grow by 20 bytes at a time
 CArchive carc( &pfile, CArchive::store);
 BYTE *ploc;				// where the memfile is
-int nsize;
+ULONGLONG nsize;
 CRuntimeClass *pcl;
 
 	pcl = pObject->GetRuntimeClass();
@@ -1558,27 +1563,21 @@ CRuntimeClass *pcl;
 	return nout;
 }
 
-float		CAudtestApp::GetProfileFloat( LPCSTR lpszAppName, LPCSTR lpszName, float fDefault)
+float		CAudtestApp::GetProfileFloat( LPCTSTR lpszAppName, LPCTSTR lpszName, float fDefault)
 {
-CString str;
-
-
-	str = GetProfileString( lpszAppName, lpszName, "");
-	str.TrimLeft();
-	str.TrimRight();
+	CString str = GetProfileString(lpszAppName, lpszName, _T(""));
+	str.Trim();
 	if ( str.IsEmpty())
 		return fDefault;
 
-	return (float )atof( str);
-
+	return _ttof( str);
 }
 
 
-int		CAudtestApp::WriteProfileFloat( LPCSTR lpszAppName, LPCSTR lpszName, float fData)
+int		CAudtestApp::WriteProfileFloat( LPCTSTR lpszAppName, LPCTSTR lpszName, float fData)
 {
 	CString strf;
-
-	strf.Format("%f", fData);
+	strf.Format(_T("%f"), fData);
 	return WriteProfileString( lpszAppName, lpszName, strf);
 }
 
@@ -1639,7 +1638,7 @@ int nout;
 }
 
 
-int		CAudtestApp::ReadRegistry( LPCSTR lpszName, void *pStruct, int nStructSize)
+int		CAudtestApp::ReadRegistry( LPCTSTR lpszName, void *pStruct, int nStructSize)
 {
 HKEY hmain;
 HKEY hrslt;
@@ -1656,7 +1655,7 @@ LONG lrslt = RegOpenKeyEx( HKEY_CURRENT_USER, csname, 0, KEY_READ, &hmain);
 		{
 		lrslt = RegOpenKeyEx(
 				hmain,	// HKEY  hKey,	// handle of an open key 
-				"Structures", // LPCTSTR  lpSubKey,	// address of subkey name 
+				_T("Structures"), // LPCTSTR  lpSubKey,	// address of subkey name 
 				0, 	// DWORD  ulOptions,	// special options flag 
 			    KEY_ALL_ACCESS, // REGSAM  samDesired,	// desired security access 
 				&hrslt	    // PHKEY  phkResult,	// address of buffer for opened handle  
@@ -1695,7 +1694,7 @@ DWORD dwDummy;
 
 	if ( lrslt != ERROR_SUCCESS)
 		{
-		lrslt = RegCreateKeyEx( HKEY_CURRENT_USER, csname, 0, "", REG_OPTION_NON_VOLATILE, 
+		lrslt = RegCreateKeyEx( HKEY_CURRENT_USER, csname, 0, _T(""), REG_OPTION_NON_VOLATILE, 
 								KEY_ALL_ACCESS,  NULL, &hmain, &dwDummy);
 		if ( lrslt == ERROR_SUCCESS)
 			RegCloseKey( hmain);
@@ -1722,7 +1721,7 @@ int i;
 	}
 }
 
-void		CAudtestApp::DumpRegistry( LPCSTR lpszFileName)
+void		CAudtestApp::DumpRegistry( LPCTSTR lpszFileName)
 {
 HKEY hmain;
 HKEY hsub;
@@ -1755,7 +1754,7 @@ CString filename("");
 
 		cstitle.LoadString( IDS_SAVEREGISTRY);
 
-		cdlg.m_ofn.lpstrTitle = (LPCSTR )cstitle;
+		cdlg.m_ofn.lpstrTitle = (LPCTSTR )cstitle;
 
 		if ( IDOK == cdlg.DoModal())
 			{					// import cdlg.GetPathname();
@@ -1810,7 +1809,7 @@ CString filename("");
 						bcontinue = false;
 					else
 					{
-						csout.Format(":: %s\n", szname);
+						csout.Format(_T(":: %s\n"), szname);
 						file.WriteString( csout);
 						csout = cregname;
 						csout += "\\";
@@ -1842,21 +1841,21 @@ CString filename("");
 									{
 									case REG_BINARY :
 										to_hex( szclass, dwclass);			// convert to hex
-										csout.Format("%s = %s\n", szvalue, szclass);
+										csout.Format(_T("%s = %s\n"), szvalue, szclass);
 										file.WriteString( csout);
 										break;
 									case REG_DWORD :
 										dwvalue = *(DWORD *)szclass;
-										csout.Format("%s = %d\n", szvalue, dwvalue);
+										csout.Format(_T("%s = %d\n"), szvalue, dwvalue);
 										file.WriteString( csout);
 										break;
 									case REG_DWORD_BIG_ENDIAN :
 										dwvalue = *(DWORD *)szclass;
-										csout.Format("%s = %d\n", szvalue, dwvalue);
+										csout.Format(_T("%s = %d\n"), szvalue, dwvalue);
 										file.WriteString( csout);
 										break;
 									case REG_SZ :
-										csout.Format("%s = %s\n", szvalue, szclass);
+										csout.Format(_T("%s = %s\n"), szvalue, szclass);
 										file.WriteString( csout);
 										break;
 									default:
@@ -1893,7 +1892,7 @@ CString filename("");
 
 // ========================================================
 
-typedef WINBASEAPI BOOL WINAPI DISKFREE( LPCSTR, PULARGE_INTEGER, PULARGE_INTEGER, PULARGE_INTEGER);
+typedef WINBASEAPI BOOL WINAPI DISKFREE( LPCTSTR, PULARGE_INTEGER, PULARGE_INTEGER, PULARGE_INTEGER);
 // typedef FARPROC DISKFREE;
 
 BOOL CAboutDlg::OnInitDialog()
@@ -1925,7 +1924,7 @@ BOOL CAboutDlg::OnInitDialog()
 	ULARGE_INTEGER TotalNumberOfFreeBytes;
 	DWORD dwtotal;
 	BOOL fResult;
-	HMODULE hkernel = GetModuleHandle("kernel32.dll");
+	HMODULE hkernel = GetModuleHandle(_T("kernel32.dll"));
 	DISKFREE *pGetDiskFreeSpaceEx = NULL;
 	FARPROC pdiskfree = NULL;
 
@@ -1977,7 +1976,7 @@ BOOL CAboutDlg::OnInitDialog()
 	csout += "may result in severe criminal and civil penalties, ";
 	csout += "and will be prosecuted to the maximum extent possible under the law.";
 
-	SetDlgItemText( IDC_WARNING, (LPCSTR )csout);
+	SetDlgItemText( IDC_WARNING, (LPCTSTR )csout);
 
 	return TRUE;
 }
@@ -2140,10 +2139,10 @@ CString csuffix;
 CString cstitle;
 
 CFileDialog cdlg( TRUE, NULL, NULL, OFN_FILEMUSTEXIST | OFN_PATHMUSTEXIST, 
-		"Speaker Workshop Files (*.SWD)|*.SWD|All Files (*.*)|*.*||",
+		_T("Speaker Workshop Files (*.SWD)|*.SWD|All Files (*.*)|*.*||"),
 		 NULL );
 
-	CAudtestApp::GetLastFile( csfile);			// get last file imported
+	csfile = CAudtestApp::GetLastFile();			// get last file imported
 
 	{			// get the initial directory
 	CString csdir;

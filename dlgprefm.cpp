@@ -63,7 +63,6 @@ void CDlgPrefMeasure::DoDataExchange(CDataExchange* pDX)
 
 	if ( ! pDX->m_bSaveAndValidate )
 		{
-		char csout[100];
 		int nstart, nend;		// start and end freqs
 		float foffset;			// delta
 		CString csformat;
@@ -73,14 +72,9 @@ void CDlgPrefMeasure::DoDataExchange(CDataExchange* pDX)
 			nstart = (int )foffset;
 
 			csformat.LoadString( IDS_RANGESHOW);
-			sprintf( csout, (LPCSTR )csformat, nstart, nend, foffset);
-			m_csShowFreq = csout;
-
-			sprintf( csout, "%d", m_nSize);
-			m_csSize = csout;
-			sprintf( csout, "%d", m_nRate);
-			m_csRate = csout;
-
+			m_csShowFreq.Format(csformat, nstart, nend, foffset);
+			m_csSize.Format(_T("%d"), m_nSize);
+			m_csRate.Format(_T("%d"), m_nRate);
 		}
 
 	//{{AFX_DATA_MAP(CDlgPrefMeasure)
@@ -145,7 +139,7 @@ const CDWordArray *parray = CMMWave::GetRateArray();
 	int nmax = parray->GetAt( parray->GetSize()-1);
 	CString cs;
 
-		cs.Format( "%d", nmax);
+	cs.Format(_T("%d"), nmax);
 		m_csMaxRate = cs;
 	}
 

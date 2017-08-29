@@ -621,14 +621,14 @@ float f;
 		for ( i=0; i<m_pKnown->GetSize(); i++)
 			{
 			f = m_pKnown->GetAt(i);
-			cs.Format("%.3f", (double )f);
+			cs.Format(_T("%.3f"), (double )f);
 			m_cKnown.AddString( cs);
 			}
 
 		for ( i=0; i<m_pMeasured->GetSize(); i++)
 			{	// calculations are based on 0.0 series res (see COpMsrJig1)
 			f = m_pMeasured->GetAt(i) - m_fSeriesOld;
-			cs.Format("%.3f", (double )f);
+			cs.Format(_T("%.3f"), (double )f);
 			m_cMsrOld.AddString( cs);
 			}
 					// now convert from old measurements to new
@@ -641,7 +641,7 @@ float f;
 			else
 				f *= m_fRefNew;
 			f -= m_fSeriesNew;				// remove new series res
-			cs.Format("%.3f", (double )f);
+			cs.Format(_T("%.3f"), (double )f);
 			m_cMsrNew.AddString( cs);
 			}
 

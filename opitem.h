@@ -19,7 +19,7 @@ public:
 	virtual int		DoExe( bool bRedo = true);		// execute the operation
 	virtual int		DoRedo( void);					// redo the operation
 public:
-	COpRename(CNamed *cTarget, LPCSTR lpszNewName);
+	COpRename(CNamed *cTarget, LPCTSTR lpszNewName);
 	~COpRename();
 
 };
@@ -148,7 +148,7 @@ public:
 	virtual int		DoExe( bool bRedo = true);	// execute the operation
 		CNamed		*GetFound();				// who did you find/build?
 public:
-	COpFindOrCreate(CNamed *cTarget, LPCSTR lpszNewName, NAMETYPES ntNewType);
+	COpFindOrCreate(CNamed *cTarget, LPCTSTR lpszNewName, NAMETYPES ntNewType);
 	~COpFindOrCreate();
 
 };

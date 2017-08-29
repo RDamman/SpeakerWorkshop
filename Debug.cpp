@@ -88,15 +88,15 @@ WINDOWPLACEMENT wndpl;
 	crbuild.SetRect( 0,0,100,100);
 	if ( ! GetSafeHwnd())
 		{
-		Create( NULL, "Debugger", WS_CHILD | WS_VISIBLE | WS_OVERLAPPEDWINDOW, 
+		Create( NULL, _T("Debugger"), WS_CHILD | WS_VISIBLE | WS_OVERLAPPEDWINDOW, 
 			crbuild, pParent, cdID);
 		m_wDebug.Create(WS_CHILD | WS_VISIBLE | WS_VSCROLL | ES_MULTILINE | ES_READONLY | ES_AUTOVSCROLL, 
 			crbuild, this, cdID+1);
 		}
-	csw = AfxGetApp()->GetProfileString( ctDebug, ctWindow, "");
+	csw = AfxGetApp()->GetProfileString( ctDebug, ctWindow, _T(""));
 	if ( csw && csw.GetLength())		// we have some
 		{
-		if ( 11 == sscanf( csw, "%d,%d,%d,%d,%d,%d,%d,%d,%d,%d,%d", 
+		if ( 11 == swscanf_s( csw, _T("%d,%d,%d,%d,%d,%d,%d,%d,%d,%d,%d"), 
 			&wndpl.flags, &wndpl.length, 
 			&wndpl.ptMinPosition.x, &wndpl.ptMinPosition.y, 
 			&wndpl.ptMaxPosition.x, &wndpl.ptMaxPosition.y,
@@ -109,8 +109,8 @@ WINDOWPLACEMENT wndpl;
 			}
 		}
 
-	SetWindowText("Debug output");
-	m_wDebug.SetWindowText("");
+	SetWindowText(_T("Debug output"));
+	m_wDebug.SetWindowText(_T(""));
 	BringWindowToTop();
 	
 }
@@ -132,7 +132,7 @@ void CTopDebug::SetDebugLevel(int nNewLevel)
 }
 
 
-void CTopDebug::PrintString(LPCSTR lpcsOut)
+void CTopDebug::PrintString(LPCTSTR lpcsOut)
 {
 CString csout;
 
@@ -143,7 +143,7 @@ CString csout;
 
 }
 
-void CTopDebug::PrintTwo(LPCSTR lpcsOut, LPCSTR lpcsO2)
+void CTopDebug::PrintTwo(LPCTSTR lpcsOut, LPCTSTR lpcsO2)
 {
 CString csout;
 CString css;
@@ -157,7 +157,7 @@ CString css;
 
 }
 
-void CTopDebug::PrintInt(LPCSTR lpcsOut, int nOut)
+void CTopDebug::PrintInt(LPCTSTR lpcsOut, int nOut)
 {
 CString csout;
 CString css;
@@ -185,7 +185,7 @@ CRect crc;
 	
 }
 
-void CDebug::AddLine(LPCSTR lpNew)
+void CDebug::AddLine(LPCTSTR lpNew)
 {
 CString csout;
 CString csnew;
@@ -197,7 +197,7 @@ int nlength;
 	m_nLine++;
 
 	GetWindowText( csout);		// get current text
-	csnew.Format("\r\n%5d: %s", m_nLine, lpNew);
+	csnew.Format(_T("\r\n%5d: %s"), m_nLine, lpNew);
 	csout += csnew;
 	SetWindowText( csout);
 
@@ -217,7 +217,7 @@ void CTopDebug::OnDestroy()
 		WINDOWPLACEMENT wndpl;
 
 			GetWindowPlacement( &wndpl);
-			csout.Format( "%d,%d,%d,%d,%d,%d,%d,%d,%d,%d,%d", 
+			csout.Format(_T("%d,%d,%d,%d,%d,%d,%d,%d,%d,%d,%d"),
 				wndpl.flags, wndpl.length, 
 				wndpl.ptMinPosition.x, wndpl.ptMinPosition.y, 
 				wndpl.ptMaxPosition.x, wndpl.ptMaxPosition.y,
