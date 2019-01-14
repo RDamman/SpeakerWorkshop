@@ -64,24 +64,43 @@ END
 // Icon with lowest ID value placed first to ensure application icon
 // remains consistent on all systems.
 IDR_MAINFRAME           ICON                    "res\\audtest.ico"
+
 IDR_AUDTESTYPE          ICON                    "res\\audtedoc.ico"
+
 IDR_COMPHORZ1           ICON                    "res\\idr_comp.ico"
+
 IDR_COMPHORZ2           ICON                    "res\\ico00001.ico"
+
 IDR_COMPHORZ3           ICON                    "res\\ico00005.ico"
+
 IDR_COMPVERT1           ICON                    "res\\ico00002.ico"
+
 IDR_COMPVERT2           ICON                    "res\\ico00003.ico"
+
 IDR_COMPVERT3           ICON                    "res\\ico00004.ico"
+
 IDI_AUDCHK_DUPLEX       ICON                    "res\\chkduplex.ico"
+
 IDI_AUDCHK_INPUT        ICON                    "res\\chkin.ico"
+
 IDI_AUDCHK_OUTPUT       ICON                    "res\\chkout.ico"
+
 IDR_AUDTREETYPE         ICON                    "res\\idr_tree.ico"
+
 IDR_AUDDRIVETYPE        ICON                    "res\\idr_drive.ico"
+
 IDR_AUDNETTYPE          ICON                    "res\\idr_net.ico"
+
 IDR_AUDCHARTTYPE        ICON                    "res\\idr_chart.ico"
+
 IDR_AUDENCLTYPE         ICON                    "res\\idr_encl.ico"
+
 IDR_AUDROOMTYPE         ICON                    "res\\idr_room.ico"
+
 IDR_AUDDATATYPE         ICON                    "res\\idr_data.ico"
+
 IDR_AUDGENTYPE          ICON                    "res\\idr_gen.ico"
+
 
 /////////////////////////////////////////////////////////////////////////////
 //
@@ -89,38 +108,71 @@ IDR_AUDGENTYPE          ICON                    "res\\idr_gen.ico"
 //
 
 IDR_AUDTESTYPE_SRVR_IP  BITMAP                  "res\\itoolbar.bmp"
+
 IDB_TREELIST            BITMAP                  "res\\treelist.bmp"
+
 IDB_TREELIST1           BITMAP                  "res\\bmp00001.bmp"
+
 IDB_LOWPASS             BITMAP                  "res\\bitmap1.bmp"
+
 IDB_HIGHPASS            BITMAP                  "res\\lowpass1.bmp"
+
 IDB_BANDSTOP            BITMAP                  "res\\lowpass2.bmp"
+
 IDB_BANDPASS            BITMAP                  "res\\lowpass3.bmp"
+
 IDB_DRAGCURSORS         BITMAP                  "res\\bmp00002.bmp"
+
 IDB_SPLASH256           BITMAP                  "res\\splsh256.bmp"
+
 IDB_XVHIGH4             BITMAP                  "res\\xvhigh4.bmp"
+
 IDB_XVHIGH3             BITMAP                  "res\\xvhigh3.bmp"
+
 IDR_MAINFRAME           BITMAP                  "res\\Toolbar.bmp"
+
 IDB_BITMAP1             BITMAP                  "res\\bmp00003.bmp"
+
 IDB_BANDPASS1           BITMAP                  "res\\bandpass.bmp"
+
 IDB_BANDSTOP1           BITMAP                  "res\\bandstop.bmp"
+
 IDB_HIGHPASS1           BITMAP                  "res\\highpass.bmp"
+
 IDB_LOWPASS1            BITMAP                  "res\\bmp00004.bmp"
+
 IDB_WIZ_BRD_END         BITMAP                  "res\\wiz_cal4.bmp"
+
 IDR_TOOLCHART           BITMAP                  "res\\toolchar.bmp"
+
 IDR_TOOLSIGNAL          BITMAP                  "res\\toolsign.bmp"
+
 IDR_TOOLDRIVER          BITMAP                  "res\\tooldriv.bmp"
+
 IDR_TOOLNETWORK         BITMAP                  "res\\toolnetw.bmp"
+
 IDR_TOOLENCL            BITMAP                  "res\\toolencl.bmp"
+
 IDB_WIZ_IMP_BEGIN       BITMAP                  "RES\\Wz_impbe.bmp"
+
 IDB_WIZ_IMP_JIG1        BITMAP                  "RES\\Wz_impj1.bmp"
+
 IDB_WIZ_IMP_JIG2        BITMAP                  "RES\\Wz_impj2.bmp"
+
 IDB_WIZ_LP_BEGIN        BITMAP                  "res\\wiz_lp_b.bmp"
+
 IDB_WIZ_BRD_BEGIN       BITMAP                  "res\\bmp00005.bmp"
+
 IDB_WIZ_BRD_JIG         BITMAP                  "res\\wiz_brd_.bmp"
+
 IDB_WIZ_LP_JIG          BITMAP                  "RES\\Wz_lp1.bmp"
+
 IDB_WIZ_AMP_BEGIN       BITMAP                  "res\\wiz_amp_.bmp"
+
 IDB_RESISTOR            BITMAP                  "res\\resistor.bmp"
+
 IDB_WIZ_VOL_BEGIN       BITMAP                  "res\\bmp00006.bmp"
+
 
 /////////////////////////////////////////////////////////////////////////////
 //
@@ -1629,10 +1681,10 @@ CAPTION "    About Speaker Workshop"
 FONT 8, "MS Sans Serif", 0, 0, 0x0
 BEGIN
     ICON            IDR_MAINFRAME,IDC_STATIC,11,17,21,20
-    LTEXT           "Speaker Workshop Version 1.1.0",IDC_STATIC,40,10,119,8
-    LTEXT           "Copyright © 2017 Community / 1996-2001 Audua Incorporated",IDC_STATIC,40,25,198,8
+    LTEXT           "Speaker Workshop Version 1.1.1",IDC_STATIC,40,10,119,8
+    LTEXT           "Copyright © 2017-2019 Community / 1996-2001 Audua Incorporated",IDC_STATIC,40,22,203,16
+    LTEXT           "All Rights Reserved.",IDC_STATIC,40,44,119,8
     DEFPUSHBUTTON   "OK",IDOK,207,6,32,14,WS_GROUP
-    LTEXT           "All Rights Reserved.",IDC_STATIC,40,41,119,8
     LTEXT           "Static",IDC_PHYSICAL_MEM,90,68,120,8
     LTEXT           "Static",IDC_DISK_SPACE,90,85,123,8
     LTEXT           "Available memory:",IDC_STATIC,16,68,58,8
@@ -4248,8 +4300,8 @@ END
 //
 
 VS_VERSION_INFO VERSIONINFO
- FILEVERSION 1,1,0,0
- PRODUCTVERSION 1,1,0,0
+ FILEVERSION 1,1,1,0
+ PRODUCTVERSION 1,1,1,0
  FILEFLAGSMASK 0x3fL
 #ifdef _DEBUG
  FILEFLAGS 0x3L
@@ -4267,13 +4319,13 @@ BEGIN
             VALUE "Comments", "Speaker Design and Test Application"
             VALUE "CompanyName", "Original work: Audua, Inc."
             VALUE "FileDescription", "Speaker Workshop"
-            VALUE "FileVersion", "1.1.0.0"
+            VALUE "FileVersion", "1.1.1.0"
             VALUE "InternalName", "SpeakerWorkshop"
-            VALUE "LegalCopyright", "Copyright © 2017 Github Community Edition / Copyright © 1996-2001 Audua, Incorporated"
+            VALUE "LegalCopyright", "Copyright © 2017-2019 Github Community Edition / Copyright © 1996-2001 Audua, Incorporated"
             VALUE "LegalTrademarks", "Speaker Workshop is a trademark of Audua, Incorporated"
             VALUE "OriginalFilename", "SpeakerWorkshop.EXE"
             VALUE "ProductName", "Speaker Workshop"
-            VALUE "ProductVersion", "1.1.0.0"
+            VALUE "ProductVersion", "1.1.1.0"
         END
     END
     BLOCK "VarFileInfo"
@@ -4397,13 +4449,21 @@ END
 //
 
 IDC_SMALLCROSS          CURSOR                  "res\\cursor1.cur"
+
 IDC_MOVER               CURSOR                  "res\\mover.cur"
+
 IDC_POINTER             CURSOR                  "res\\arrow.cur"
+
 IDC_POINTER_COPY        CURSOR                  "res\\arrowcop.cur"
+
 IDC_NODROP              CURSOR                  "res\\nodrop.cur"
+
 IDC_SPLIT               CURSOR                  "res\\mover1.cur"
+
 IDC_CROSSPLUS           CURSOR                  "res\\smallcro.cur"
+
 IDC_UNITER              CURSOR                  "res\\uniter.cur"
+
 
 /////////////////////////////////////////////////////////////////////////////
 //
@@ -4415,7 +4475,6 @@ GUIDELINES DESIGNINFO
 BEGIN
     IDD_ABOUTBOX, DIALOG
     BEGIN
-        RIGHTMARGIN, 217
     END
 
     IDD_XFIFFT, DIALOG
@@ -4771,6 +4830,17 @@ IDR_TOOLENCL TOOLBAR 16, 15
 BEGIN
     BUTTON      ID_CALC_SEALED
     BUTTON      ID_CALC_VENTED
+END
+
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// AFX_DIALOG_LAYOUT
+//
+
+IDD_ABOUTBOX AFX_DIALOG_LAYOUT
+BEGIN
+    0
 END
 
 

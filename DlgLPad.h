@@ -87,7 +87,7 @@ class CXtLPad : public CXunary
 		float	m_fRe;
 
 	public:
-		virtual UINT DoDialog( void);		// xeq dbox
+		virtual INT_PTR DoDialog( void);		// xeq dbox
 		virtual UINT GetDialog(void);		// get the dialog id
 		virtual int  DoOperation( void);		// do it
 		UINT GetNameID()					{ return IDOP_LPAD; }

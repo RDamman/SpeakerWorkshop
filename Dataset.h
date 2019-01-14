@@ -57,7 +57,7 @@ public:
 	void	SetUOM(UNITMSR nSet)		{ m_nBaseUnit = nSet;	}
 	DATAMSR GetDOM()					{ return m_nDataUnit;		}
 	void	SetDOM(DATAMSR nSet)		{ m_nDataUnit = nSet;		}
-	int		GetCount()					{ return m_ciData.GetSize(); }
+	INT_PTR	GetCount()					{ return m_ciData.GetSize(); }
 	void	DeleteAll()					{ m_ciData.RemoveAll(); m_ciPhase.RemoveAll(); }
 	bool	DeleteLeft( int iCount);	// remove data from the left
 

@@ -31,6 +31,7 @@ protected:
 	void	*m_pOperation;				// the thing we're current executing
 
 	CPoint	 m_ptMouseDown;			// where the mouse went down
+	CPoint	 m_ptMouseDownRight;			// where the mouse went down
 	CPoint	 m_ptMouseUp;			// where the mouse went up
 	CRectTracker *m_pTracker;		// track that rectangle
 	NAMETYPES	m_nTrackType;		// type of track

@@ -356,7 +356,7 @@ public:
 	void	FixRegistry( void);
 	void	DumpRegistry( LPCTSTR lpszFileName = (LPCTSTR )NULL);
 	int		WriteProfileFloat( LPCTSTR lpszAppName, LPCTSTR lpszName, float fData);
-	float	GetProfileFloat( LPCTSTR lpszAppName, LPCTSTR lpszName, float fDefault );
+	double	GetProfileFloat( LPCTSTR lpszAppName, LPCTSTR lpszName, float fDefault );
 	int		WriteRegistry( UINT lpszName, CObject *pSource);
 	int		ReadRegistry( UINT uidName, CObject *pDest);
 	int		WriteRegistry( LPCTSTR lpszName, const void *pStruct, int nStructSize);

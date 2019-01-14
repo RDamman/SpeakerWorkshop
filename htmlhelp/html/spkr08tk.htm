@@ -1,0 +1,58 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 3.2 Final//EN">
+<HTML>
+<HEAD>
+<META HTTP-EQUIV="Content-Type" Content="text/html; charset=Windows-1252">
+<TITLE>Cables and Connectors</TITLE>
+</HEAD>
+
+<BODY BGCOLOR="#FFFFFF" TEXT="#000000">
+
+<OBJECT TYPE="application/x-oleobject" CLASSID="clsid:1e2a7bd0-dab9-11d0-b93a-00c04fc99f9e">
+	<PARAM NAME="Keyword" VALUE="Cables">
+	<PARAM NAME="Keyword" VALUE="Cables and Connectors">
+	<PARAM NAME="Keyword" VALUE="Connectors">
+	<PARAM NAME="Keyword" VALUE="Construction">
+	<PARAM NAME="Keyword" VALUE="Impedance Jig">
+	<PARAM NAME="Keyword" VALUE="Loop Cable">
+	<PARAM NAME="Keyword" VALUE="Solder">
+	<PARAM NAME="Keyword" VALUE="Test Resistor">
+</OBJECT>
+
+<H1><A NAME="10h_eqh"></A>Cables and Connectors</H1>
+
+<P>You can perform nearly every required speaker test using hardware that should cost less than $20 total (other than the cost of the sound card).  You can test either with an amplifier handling the output of the sound board (recommended) or just naked from the sound board.  You can use a preamp as an input buffer or just right into the sound card.</P>
+
+<P>Warning: many sound cards have no internal voltage limiting and will fry if you apply more than perhaps 3 volts. Use a preamp or be careful of your input. If you don't use a preamp use the x10 cable or don't measure amp output levels.</P>
+
+<P>To test adequately you will need</P>
+
+<P>·A <A HREF="spkr7voh.htm">standard cable</A>A standard output cable is a cable that connects the left channel output to either the device under test or to an amplifier.  In the case of the device under test, just put two large alligator clips at one end or solder that end to two large binding posts.  A standard input cable has three large alligator clips (ground, left, right).  This is used for low-voltage testing.</P>
+
+<P>·An <A HREF="spkr9tx5.htm">x10 cable</A>. An x10 cable is an input cable that reduces the input voltage to the sound card. The simplest circuit is a series resistor in the left and right input lines (not the ground line).  That series resistor should be approximately 10 times the input impedance of the sound card (calculated in the calibration sequence).  Use this input cable for higher voltage (up to 10 watts with a standard card. Change the values in the Options Preference dialog (the new input impedance is the (sum of) the sound card input impedance plus the series resistor.  <BR>
+<BR>
+A <B>better</B> circuit is a real voltage divider – see <A HREF="spkr9tx5.htm">the glossary link</A> for pictures.</P>
+
+<P>·A <A HREF="spkr4bxb.htm">loop cable</A>A loop cable is a cable that connects the left channel output to both the right and left channel input.  This is used for calibration and sound card setup only.  You can substitute the standard cable appropriately jumpered.</P>
+
+<P>·An <A HREF="spkr5z01.htm">impedance jig</A>.An impedance jig is made from one loop cable, a resistor, and some connectors. Specifically</P>
+
+<P>1)The mono cable runs from the left channel output to one connector and to ground.</P>
+
+<P>1)One end of the resistor is connected to the left channel output.</P>
+
+<P>1)The stereo cable has both grounds connected to the left out ground (and connector), the left input is connected to the left out signal and the right input is connected to the other end of the resistor.</P>
+
+<P>·A <U>microphone</U>.  The standard electret is a panasonic capsule that is available for less than $10 from digikey.  Many of the better sound cards support electrets (with their phantom power requirements) directly.  Check your sound card manual.  If your card does not support the electret, then we recommend you purchase a good quality microphone that will work with the sound card.</P>
+
+<P>Proper Construction</P>
+
+<P>In order to get good and reliable readings you should ensure that</P>
+
+<P>1) Make good strong solder connections.  A good solder connection is a good connection even without the solder.  The solder just stops it from ever coming undone.  The resistance of solder is too high to use it as the conductor in a joint.  Consider getting a high-quality <A HREF="spkr7dm6.htm">miniplug</A> to miniplug cable, then cutting it in half - using each half separately.  This avoids the relatively tough task of soldering miniplugs.</P>
+
+<P>1) Use large and solid connectors for the jig.  If you use 2 alligator clips then use big ones and solder the other ends in-circuit to keep series resistance less than .2 ohms.  Clamp the reference resistor with some good clamping posts; large speaker binding posts work great, solder the wires to their other ends.</P>
+
+<P>1) Use ½ watt or bigger metal film or non-inductive wirewound resistors for all impedance measurements.  The larger resistors are usually more stable and generate less noise. </P>
+
+</BODY>
+</HTML>

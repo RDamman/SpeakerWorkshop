@@ -1,0 +1,54 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 3.2 Final//EN">
+<HTML>
+<HEAD>
+<META HTTP-EQUIV="Content-Type" Content="text/html; charset=Windows-1252">
+<TITLE>Merge Port Response Dialog</TITLE>
+</HEAD>
+
+<BODY BGCOLOR="#FFFFFF" TEXT="#000000">
+
+<OBJECT TYPE="application/x-oleobject" CLASSID="clsid:1e2a7bd0-dab9-11d0-b93a-00c04fc99f9e">
+	<PARAM NAME="Keyword" VALUE="Merge Port Response dialog calculation">
+</OBJECT>
+
+<H1><A NAME="12pi768"></A>Merge Port Response dialog (Calculate Merge Port Response for Enclosures)</H1>
+
+<P>Use this command to correctly merge a nearfield woofer and port response to get the combined woofer nearfield response of a ported enclosure.</P>
+
+<TABLE cols=3 width=523>
+
+<TR VALIGN="top">
+<TD width=17%>Fields:</TD>
+<TD width=28%>&nbsp;</TD>
+<TD width=55%>&nbsp;</TD>
+</TR>
+
+<TR VALIGN="top">
+<TD width=17%>&nbsp;</TD>
+<TD width=28%>Driver Nearfield</TD>
+<TD width=55%>Select the appropriate nearfield driver response. Press the ? to select from the resource tree. This will be filled in with the nearfield response for the driver in the enclosure – by default.</TD>
+</TR>
+
+<TR VALIGN="top">
+<TD width=17%>&nbsp;</TD>
+<TD width=28%>Port Nearfield</TD>
+<TD width=55%>Select the appropriate nearfield port response. Press the ? to select from the resource tree.</TD>
+</TR>
+
+<TR VALIGN="top">
+<TD width=17%>&nbsp;</TD>
+<TD width=28%>Piston Area</TD>
+<TD width=55%>This shows the piston area for the driver in the enclosure. This is not editable. To change it go to the driver properties and change it there.</TD>
+</TR>
+
+<TR VALIGN="top">
+<TD width=17%>&nbsp;</TD>
+<TD width=28%>Port Area</TD>
+<TD width=55%>This shows the area of the port in the enclosure. This is not editable. To change it go to the Enclosure Properties and change it there.</TD>
+</TR>
+</TABLE><BR>
+
+<P>When this command completes it will build a new dataset named <I>Myenclosure</I>.Merged Response that contains the appropriate summed response.</P>
+
+</BODY>
+</HTML>

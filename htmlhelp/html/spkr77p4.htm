@@ -1,0 +1,77 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 3.2 Final//EN">
+<HTML>
+<HEAD>
+<META HTTP-EQUIV="Content-Type" Content="text/html; charset=Windows-1252">
+<TITLE>Harmonic distortion Dialog</TITLE>
+</HEAD>
+
+<BODY BGCOLOR="#FFFFFF" TEXT="#000000">
+
+<OBJECT TYPE="application/x-oleobject" CLASSID="clsid:1e2a7bd0-dab9-11d0-b93a-00c04fc99f9e">
+	<PARAM NAME="Keyword" VALUE="harmonic distortion dialog">
+</OBJECT>
+
+<H1><A NAME="114_zox"></A>Harmonic distortion Dialog (Measure, Harmonic Distortion, for Signals)</H1>
+
+<P>Use this command to measure the harmonic distortion of a circuit or a speaker. This command generates different output signals depending on which distortion option is selected in the Harmonic Distortion dialog.</P>
+
+<TABLE cols=1 width=43>
+
+<TR VALIGN="top">
+<TD width=100%>Fields:</TD>
+</TR>
+</TABLE><BR>
+
+<TABLE cols=3 width=535>
+
+<TR VALIGN="top">
+<TD width=13%>Style</TD>
+<TD width=26%>Spectrum at 1 power / 1 frequency</TD>
+<TD width=61%>Select this to generate a sine wave at 1 frequency.  The result is the power spectrum of the input - showing distortion.</TD>
+</TR>
+
+<TR VALIGN="top">
+<TD width=13%>&nbsp;</TD>
+<TD width=26%>vs Frequency at 1 Power</TD>
+<TD width=61%>Select this to generate a sweep over the selected frequency range.  The result is a graph showing 2nd ,3rd , and more harmonic distortion.</TD>
+</TR>
+
+<TR VALIGN="top">
+<TD width=13%>&nbsp;</TD>
+<TD width=26%>vs Power at 1 Frequency</TD>
+<TD width=61%>Select this to generate a power sweep (1 frequency, increasing power).  The result is a graph showing 2nd, 3rd, and more harmonic distortion.</TD>
+</TR>
+
+<TR VALIGN="top">
+<TD width=13%>Ranges</TD>
+<TD width=26%>Frequency</TD>
+<TD width=61%>Select a frequency range to be tested for option 2.  Select a specific frequency for options 1 and 3.</TD>
+</TR>
+
+<TR VALIGN="top">
+<TD width=13%>&nbsp;</TD>
+<TD width=26%>Volume</TD>
+<TD width=61%>Enter starting and ending volume control settings (0 to 100)</TD>
+</TR>
+
+<TR VALIGN="top">
+<TD width=13%>Equates</TD>
+<TD width=26%>&nbsp;</TD>
+<TD width=61%>Enter the volume setting equal to 1 watt of power.</TD>
+</TR>
+
+<TR VALIGN="top">
+<TD width=13%>Options</TD>
+<TD width=26%>&nbsp;</TD>
+<TD width=61%>Check Logarithmic to perform a logarithmic frequency sweep for option 2.</TD>
+</TR>
+</TABLE><BR>
+
+<P>This command creates or replaces a dataset named <I>mysignal</I>.Harmonic.  It may also change a number of datasets in the System folder.</P>
+
+<P><B>See also</B></P>
+
+<P><A HREF="spkr2u9d.htm">Data Entry</A></P>
+
+</BODY>
+</HTML>

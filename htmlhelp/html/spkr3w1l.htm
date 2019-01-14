@@ -1,0 +1,61 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 3.2 Final//EN">
+<HTML>
+<HEAD>
+<META HTTP-EQUIV="Content-Type" Content="text/html; charset=Windows-1252">
+<TITLE>Crossover Design</TITLE>
+</HEAD>
+
+<BODY BGCOLOR="#FFFFFF" TEXT="#000000">
+
+<OBJECT TYPE="application/x-oleobject" CLASSID="clsid:1e2a7bd0-dab9-11d0-b93a-00c04fc99f9e">
+	<PARAM NAME="Keyword" VALUE="Crossover Design">
+</OBJECT>
+
+<H1><A NAME="2v4e99"></A>How to Design a Crossover</H1>
+
+<P>The design of a crossover is really outside the scope of this help manual. Some general discussion follows, but for a good crossover treatment you really need a book, such as Vance Dickason's Loudspeaker Cookbook. Reading a reference like that will also improve your comprehension of Speaker Workshop's other features.</P>
+
+<P>A crossover is a network of passive components and drivers that connects to the output of an amplifier. The purpose of the crossover is two-fold:</P>
+
+<P>1. To separate the signal into pieces suitable for each driver, in order to get near-flat response and to improve power handling.</P>
+
+<P>1. To compensate for gradual response irregularities caused by non-flat drivers or other issues.</P>
+
+<P>Usually, crossover design discussions home in on topic 1 above. In real life other issues intrude - primarily the non-resistive and non-linear impedance of the drivers.</P>
+
+<P>Speaker Workshop lets you model the actual network results because it uses the measured impedance and acoustic response of each driver to calculate network (crossover) response. You can easily add the series resistance of each inductor to the network for precise modeling.</P>
+
+<P>The easiest crossover to design is a two-way crossover. This handles a woofer and a tweeter. The low-pass portion of the crossover produces low notes for the woofer while the high-pass portion passes the high notes to the tweeter. The simplest form of stock crossover looks like this:</P>
+
+<P><IMG SRC="../images/bm16.gif" ALT="" BORDER=0></P>
+
+<P>If you assume that each driver is resistive then this is a 6dB per octave crossover. The crossover point is the frequency at which the capactive and inductive reactance equals (in magnitude) the resistance.</P>
+
+<P>Although this crossover doesn't work in practice, it can be a good starting point. The same is true of other crossovers. In particular, Speaker Workshop supports 1,2,3 and 4th order stock crossovers. For each crossover order, Speaker Workshop supports a number of types of crossovers.</P>
+
+<P>Refer to Types of Crossovers or</P>
+
+<P>Refer to Crossover Order</P>
+
+<P>Once you have decided on the crossover type and order a number of other things need to be done. The simplest way to match a crossover to the drivers is by adding an impedance compensation circuit (usually called a <I>Zobel</I> circuit) to each driver. A Zobel is a circuit that makes the driver impedance look resistive and constant over a range of frequencies adequate to cover the crossover. In the case of the inductive rise of a woofer, the circuit looks like:</P>
+
+<P><IMG SRC="../images/bm17.gif" ALT="" BORDER=0></P>
+
+<P>By putting a zobel circuit between the crossover and driver the crossover sees much more of a constant resistive value and the stock crossovers are more applicable. The end result will use more components than a finely optimized crossover, but excellent results are possible with this approach via simple hand-tuning.</P>
+
+<P>Speaker Workshop supports both kinds of Zobels.</P>
+
+<P>Refer to Impedance Compensation Circuits</P>
+
+<P>Very often tweeters that are damped with fluids do not require impedance compensation circuits for their resonant peak, but they may need one for their inductive rise. As long as the crossover frequency is 2-3 octaves above from their resonant frequency, woofers usually only need compensation for their inductive rise. In a three-way the midrange needs compensation on both sides (resonant peak and inductive rise).</P>
+
+<P>In order to compensate for the dropoff in frequency response of the drivers you can either place the crossover frequency well away from that point (usually in a many driver system) or take the dropoff directly into account (by adding it into the crossover synthesis) or indirectly into account (by putting the crossover as far as possible form there).</P>
+
+<P>Tweeters are really just drivers with built-in enclosures. They come in 2nd order and 4th order (most often) depending on whether or not they are a vented design. A 2nd order tweeter melded with the right 2nd order crossover can produce a good 4th order acoustic crossover. When using a 4th order tweeter use a higher order crossover to improve power handling.</P>
+
+<P>Woofer acoustic dropoff is a function of all sorts of things and well out of the scope of this help system.</P>
+
+<P>Once the crossover is prototyped (using the network subsystem), build it carefully using strong solder joints (to reduce series resistance) then measure the acoustic response of the final system (crossover and drivers) to see if it agrees with the prototype. You should get pretty good agreement if your acoustic measurements are repeatable - put the microphone in a fixed location relative to the speaker for all tests.</P>
+
+</BODY>
+</HTML>

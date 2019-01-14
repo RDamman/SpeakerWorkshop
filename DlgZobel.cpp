@@ -218,11 +218,11 @@ CXtZobel::~CXtZobel()
 }
 
 
-UINT CXtZobel::DoDialog( )		// xeq dbox
+INT_PTR CXtZobel::DoDialog()		// xeq dbox
 {
 CDlgZobel cdlg;
 CNetwork *cname;
-UINT uout;
+INT_PTR uout;
 
 	cname = (CNetwork *)FindTargetObject();
 

@@ -302,11 +302,11 @@ UINT CXtAddPassive::GetNameID()
 }
 
 
-UINT CXtAddPassive::DoDialog( )		// xeq dbox
+INT_PTR CXtAddPassive::DoDialog()		// xeq dbox
 {
 CDlgAddPassive cdlg;
 CNetwork *cname;
-UINT uout;
+INT_PTR uout;
 
 	cname = (CNetwork *)FindTargetObject();
 

@@ -1,0 +1,229 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 3.2 Final//EN">
+<HTML>
+<HEAD>
+<META HTTP-EQUIV="Content-Type" Content="text/html; charset=Windows-1252">
+<TITLE>Import and Export Formats</TITLE>
+</HEAD>
+
+<BODY BGCOLOR="#FFFFFF" TEXT="#000000">
+
+<OBJECT TYPE="application/x-oleobject" CLASSID="clsid:1e2a7bd0-dab9-11d0-b93a-00c04fc99f9e">
+	<PARAM NAME="Keyword" VALUE="export formats">
+	<PARAM NAME="Keyword" VALUE="import formats">
+</OBJECT>
+
+<H1><A NAME="1mjncbi"></A>Import and Export Formats</H1>
+
+<P>Speaker Workshop can export to and import from a number of different formats.  These are:</P>
+
+<TABLE cols=3 width=566>
+
+<TR VALIGN="top">
+<TD width=24%>Impedance data</TD>
+<TD width=18%>ZMA</TD>
+<TD width=58%>The IMP ascii impedance format.</TD>
+</TR>
+
+<TR VALIGN="top">
+<TD width=24%>Frequency data</TD>
+<TD width=18%>FRD</TD>
+<TD width=58%>The IMP ascii frequency format.</TD>
+</TR>
+
+<TR VALIGN="top">
+<TD width=24%>Time data</TD>
+<TD width=18%>IMP</TD>
+<TD width=58%>The IMP ascii time format.</TD>
+</TR>
+
+<TR VALIGN="top">
+<TD width=24%>Signals</TD>
+<TD width=18%>WAV</TD>
+<TD width=58%>Windows standard wave files.</TD>
+</TR>
+
+<TR VALIGN="top">
+<TD width=24%>Network</TD>
+<TD width=18%>CIR</TD>
+<TD width=58%>An ascii format similar to SPICE format.</TD>
+</TR>
+</TABLE><BR>
+
+<P>Note that signals are imported by being defined as custom, not through the Resource Import command.</P>
+
+<P>The formats are:</P>
+
+<P><B>Impedance (ZMA)</B></P>
+
+<TABLE cols=3 width=499>
+
+<TR VALIGN="top">
+<TD width=19%>Line</TD>
+<TD width=25%>Name</TD>
+<TD width=56%>Description</TD>
+</TR>
+
+<TR VALIGN="top">
+<TD width=19%>1…N</TD>
+<TD width=25%>Data Values</TD>
+<TD width=56%>Frequency, Amplitude, and Phase in floating point</TD>
+</TR>
+</TABLE><BR>
+
+<P><B>Frequency (FRD)</B></P>
+
+<TABLE cols=3 width=499>
+
+<TR VALIGN="top">
+<TD width=19%>Line</TD>
+<TD width=25%>Name</TD>
+<TD width=56%>Description</TD>
+</TR>
+
+<TR VALIGN="top">
+<TD width=19%>1…N</TD>
+<TD width=25%>Data Values</TD>
+<TD width=56%>Frequency, Amplitude, and Phase in floating point</TD>
+</TR>
+</TABLE><BR>
+
+<P><B>Time (IMP)</B></P>
+
+<TABLE cols=3 width=499>
+
+<TR VALIGN="top">
+<TD width=19%>Line</TD>
+<TD width=25%>Name</TD>
+<TD width=56%>Description</TD>
+</TR>
+
+<TR VALIGN="top">
+<TD width=19%>1</TD>
+<TD width=25%>Sample Size</TD>
+<TD width=56%>Number of data points (integer)</TD>
+</TR>
+
+<TR VALIGN="top">
+<TD width=19%>2</TD>
+<TD width=25%>Sample Size</TD>
+<TD width=56%>Number of data points (integer)</TD>
+</TR>
+
+<TR VALIGN="top">
+<TD width=19%>3</TD>
+<TD width=25%>Sample Rate</TD>
+<TD width=56%>Number of samples per second (integer)</TD>
+</TR>
+
+<TR VALIGN="top">
+<TD width=19%>4</TD>
+<TD width=25%>???</TD>
+<TD width=56%>unknown - set to 1</TD>
+</TR>
+
+<TR VALIGN="top">
+<TD width=19%>5</TD>
+<TD width=25%>Date</TD>
+<TD width=56%>Sample date and time in ascii hh:mm:ss mm/dd/yy</TD>
+</TR>
+
+<TR VALIGN="top">
+<TD width=19%>6</TD>
+<TD width=25%>Starting Marker</TD>
+<TD width=56%>An integer - used by IMP for gating.</TD>
+</TR>
+
+<TR VALIGN="top">
+<TD width=19%>7</TD>
+<TD width=25%>End Marker</TD>
+<TD width=56%>An integer - used by IMP for gating.</TD>
+</TR>
+
+<TR VALIGN="top">
+<TD width=19%>8</TD>
+<TD width=25%>???</TD>
+<TD width=56%>unknown, set to 1.0000000E+00</TD>
+</TR>
+
+<TR VALIGN="top">
+<TD width=19%>9…N</TD>
+<TD width=25%>Data Values</TD>
+<TD width=56%>Frequency, Amplitude, and Phase in floating point</TD>
+</TR>
+</TABLE><BR>
+
+<P><B>Wave (WAV)</B></P>
+
+<P>See the relevant Microsoft documentation about WAV files.  Speaker Workshop WAV files are compatible with all Windows 95 wav programs.</P>
+
+<P><B>Circuit (CIR)</B></P>
+
+<TABLE cols=3 width=499>
+
+<TR VALIGN="top">
+<TD width=19%>Line</TD>
+<TD width=25%>Name</TD>
+<TD width=56%>Description</TD>
+</TR>
+
+<TR VALIGN="top">
+<TD width=19%>1…N</TD>
+<TD width=25%>Data Values</TD>
+<TD width=56%>This data is formatted one line per component, using the fields below.  For example
+<P>R_R1 $N_2 $N_3 1.00K 45 50 0</P>
+</TD>
+</TR>
+
+<TR VALIGN="top">
+<TD width=19%>Fields:</TD>
+<TD width=25%>1</TD>
+<TD width=56%>R_<I>name</I> if a resistor<I>,</I>
+<P>C_<I>name</I> if a capacitor<I>,</I></P>
+
+<P>L_<I>name</I> if an inductor<I>,</I></P>
+
+<P>V_<I>name</I> if a voltage source<I>,</I></P>
+
+<P>D_<I>name</I> if a driver</P>
+</TD>
+</TR>
+
+<TR VALIGN="top">
+<TD width=19%>&nbsp;</TD>
+<TD width=25%>2</TD>
+<TD width=56%>$N_<I>node1</I></TD>
+</TR>
+
+<TR VALIGN="top">
+<TD width=19%>&nbsp;</TD>
+<TD width=25%>3</TD>
+<TD width=56%>$N_<I>node2</I></TD>
+</TR>
+
+<TR VALIGN="top">
+<TD width=19%>&nbsp;</TD>
+<TD width=25%>4</TD>
+<TD width=56%>value</TD>
+</TR>
+
+<TR VALIGN="top">
+<TD width=19%>&nbsp;</TD>
+<TD width=25%>5</TD>
+<TD width=56%>X Position</TD>
+</TR>
+
+<TR VALIGN="top">
+<TD width=19%>&nbsp;</TD>
+<TD width=25%>6</TD>
+<TD width=56%>Y Position</TD>
+</TR>
+
+<TR VALIGN="top">
+<TD width=19%>&nbsp;</TD>
+<TD width=25%>7</TD>
+<TD width=56%>Orientation</TD>
+</TR>
+</TABLE><BR>
+
+</BODY>
+</HTML>

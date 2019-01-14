@@ -203,10 +203,10 @@ CXformCalcDriver::~CXformCalcDriver( )
 {
 }
 
-UINT CXformCalcDriver::DoDialog( )		// xeq dbox
+INT_PTR CXformCalcDriver::DoDialog()		// xeq dbox
 {
 CDlgDriverEstimate cdlg;
-UINT uout;
+INT_PTR uout;
 TESTMARK tm;
 
 	tm = *CAudtestApp::GetMarker( 2);	// get the impedance markers

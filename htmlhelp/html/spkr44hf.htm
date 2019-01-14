@@ -1,0 +1,75 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 3.2 Final//EN">
+<HTML>
+<HEAD>
+<META HTTP-EQUIV="Content-Type" Content="text/html; charset=Windows-1252">
+<TITLE>Frequency Response Dialog (Datasets)</TITLE>
+</HEAD>
+
+<BODY BGCOLOR="#FFFFFF" TEXT="#000000">
+
+<OBJECT TYPE="application/x-oleobject" CLASSID="clsid:1e2a7bd0-dab9-11d0-b93a-00c04fc99f9e">
+	<PARAM NAME="Keyword" VALUE="calculate frequency response dialog (datasets)">
+	<PARAM NAME="Keyword" VALUE="frequency response dialog">
+	<PARAM NAME="Keyword" VALUE="frequency response dialog (datasets)">
+</OBJECT>
+
+<H1><A NAME="1wbpph3"></A>Frequency Response Dialog (Calculate Frequency Response for Datasets)</H1>
+
+<P>Use this dialog to perform the same calculations as Measure Frequency Response, but after the fact for Post Mortem analysis.  It can use two datasets (input data and reference data) and any channel calibration data to calculate a final response.</P>
+
+<TABLE cols=3 width=591>
+
+<TR VALIGN="top">
+<TD width=16%>Fields</TD>
+<TD width=42%>&nbsp;</TD>
+<TD width=42%>&nbsp;</TD>
+</TR>
+
+<TR VALIGN="top">
+<TD width=16%>&nbsp;</TD>
+<TD width=42%>Windowing</TD>
+<TD width=42%>The FFT windowing applied during the analysis.  Measurements always use Uniform (none).</TD>
+</TR>
+
+<TR VALIGN="top">
+<TD width=16%>&nbsp;</TD>
+<TD width=42%>Calibration</TD>
+<TD width=42%>Select no calibration to perform a transfer function analysis.  Use channel calibration to correct for L-R imbalances in the test sound board.  Use microphone calibration when the input data is acoustic.</TD>
+</TR>
+
+<TR VALIGN="top">
+<TD width=16%>&nbsp;</TD>
+<TD width=42%>Reference response</TD>
+<TD width=42%>Equivalent to the second channel during measurements.  The final response is Input / Reference.</TD>
+</TR>
+
+<TR VALIGN="top">
+<TD width=16%>&nbsp;</TD>
+<TD width=42%>Time Range</TD>
+<TD width=42%>Select the range of data to be analyzed.</TD>
+</TR>
+</TABLE><BR>
+
+<TABLE cols=3 width=591>
+
+<TR VALIGN="top">
+<TD width=16%>Actions</TD>
+<TD width=42%>&nbsp;</TD>
+<TD width=42%>&nbsp;</TD>
+</TR>
+
+<TR VALIGN="top">
+<TD width=16%>&nbsp;</TD>
+<TD width=42%>?</TD>
+<TD width=42%>Press the ? button to browse for a reference response.</TD>
+</TR>
+
+<TR VALIGN="top">
+<TD width=16%>&nbsp;</TD>
+<TD width=42%>OK</TD>
+<TD width=42%>Click OK to perform the calculation.  This creates a new dataset with a Freq suffix.</TD>
+</TR>
+</TABLE><BR>
+
+</BODY>
+</HTML>

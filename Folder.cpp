@@ -138,15 +138,13 @@ void CFolder::Dump(CDumpContext& dc) const
 
 static int get_Pos( CNamedArray *pArray, DWORD dwID)
 {
-int nsize = pArray->GetSize();
-int i;
-
-	for (i=0; i<nsize; i++)
-		{
-		if ( dwID == (pArray->GetNamedAt(i))->GetID() )
-			return i;
-		}
-	return -1;		// we didn't find one
+	INT_PTR nsize = pArray->GetSize();
+	for (int i = 0; i<nsize; i++)
+			{
+			if ( dwID == (pArray->GetNamedAt(i))->GetID() )
+				return i;
+			}
+		return -1;		// we didn't find one
 }
 
 static int get_PosByName( CNamedArray *pArray, LPCTSTR lpszNewName)
@@ -496,7 +494,8 @@ CNamed *cnam;
 	for (i=0; i<ntotal; i++)
 		{
 		cnam = m_coArray.GetNamedAt(i);
-		dwsize += cnam->GetObjectSize( bDive);
+		if (cnam != NULL)
+			dwsize += cnam->GetObjectSize( bDive);
 		}
 
 	return dwsize;
@@ -512,15 +511,18 @@ CNamed *cnam;
 int ncount = 0;
 
 	for (i=0; i<ntotal; i++)
-		{
+	{
 		cnam = m_coArray.GetNamedAt(i);
-		if ( nType == cnam->GetType())
-			ncount++;
-		else if ( ntFolder == cnam->GetType())
+		if (cnam != NULL)
+		{
+			if (nType == cnam->GetType())
+				ncount++;
+			else if (ntFolder == cnam->GetType())
 			{
-			ncount += ((CFolder *)cnam)->GetCount( nType);
+				ncount += ((CFolder *)cnam)->GetCount(nType);
 			}
 		}
+	}
 
 	return ncount;
 

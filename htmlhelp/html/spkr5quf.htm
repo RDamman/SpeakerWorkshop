@@ -1,0 +1,106 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 3.2 Final//EN">
+<HTML>
+<HEAD>
+<META HTTP-EQUIV="Content-Type" Content="text/html; charset=Windows-1252">
+<TITLE>Vented Dialog</TITLE>
+</HEAD>
+
+<BODY BGCOLOR="#FFFFFF" TEXT="#000000">
+
+<OBJECT TYPE="application/x-oleobject" CLASSID="clsid:1e2a7bd0-dab9-11d0-b93a-00c04fc99f9e">
+	<PARAM NAME="Keyword" VALUE="vented dialog calculation">
+</OBJECT>
+
+<H1><A NAME="c5a6qg"></A>Vented dialog (Calculate Vented for Enclosures)</H1>
+
+<P>Use this command to select an optimum ported box enclosure for a specific driver.</P>
+
+<TABLE cols=3 width=523>
+
+<TR VALIGN="top">
+<TD width=17%>Fields:</TD>
+<TD width=28%>&nbsp;</TD>
+<TD width=55%>&nbsp;</TD>
+</TR>
+
+<TR VALIGN="top">
+<TD width=17%>&nbsp;</TD>
+<TD width=28%>Alignment</TD>
+<TD width=55%>Select an alignment for the enclosure.  Changing alignments changes the Box Volume and Port Length fields, as well. Chebychev (C4) is probably the best workhorse of the bunch. QB3 only works for driver Q’s less than 0.4.</TD>
+</TR>
+
+<TR VALIGN="top">
+<TD width=17%>&nbsp;</TD>
+<TD width=28%>Series Resistance</TD>
+<TD width=55%>Include cable and crossover series resistance in this amount.  Changing this will also change Box Volume and Port Length.</TD>
+</TR>
+
+<TR VALIGN="top">
+<TD width=17%>&nbsp;</TD>
+<TD width=28%>Number of Ports</TD>
+<TD width=55%>The number of ports you are putting the enclosure.</TD>
+</TR>
+
+<TR VALIGN="top">
+<TD width=17%>&nbsp;</TD>
+<TD width=28%>Number of Drivers</TD>
+<TD width=55%>The number of drivers in the enclosure.</TD>
+</TR>
+
+<TR VALIGN="top">
+<TD width=17%>&nbsp;</TD>
+<TD width=28%>Port Diameter</TD>
+<TD width=55%>The inside diameter of each port. If using a rectangular port, use the diameter which produces the same internal area.</TD>
+</TR>
+
+<TR VALIGN="top">
+<TD width=17%>&nbsp;</TD>
+<TD width=28%>Port Length</TD>
+<TD width=55%>The necessary length for the alignment. Changing this also changes box volume to keep tuning frequency constant.</TD>
+</TR>
+
+<TR VALIGN="top">
+<TD width=17%>&nbsp;</TD>
+<TD width=28%>Box Volume</TD>
+<TD width=55%>The necessary internal box volume for the desired alignment.</TD>
+</TR>
+
+<TR VALIGN="top">
+<TD width=17%>&nbsp;</TD>
+<TD width=28%>Tuning Frequency</TD>
+<TD width=55%>The box tuning frequency. If you change this both Port Length and Box Volume will change to keep the “box Q” relatively constant.</TD>
+</TR>
+
+<TR VALIGN="top">
+<TD width=17%>Commands</TD>
+<TD width=28%>&nbsp;</TD>
+<TD width=55%>&nbsp;</TD>
+</TR>
+
+<TR VALIGN="top">
+<TD width=17%>&nbsp;</TD>
+<TD width=28%>Compare</TD>
+<TD width=55%>Press this command button to compare the box based on the dialog entries to the current box.  See below.</TD>
+</TR>
+</TABLE><BR>
+
+<P>Note that Box Volume and Port Length can be set independently of the alignment.  Changing either parameter will alter the box from a standard alignment, but can still attain a good frequency response.</P>
+
+<P>This command requires that a valid driver be entered into the enclosure (see <A HREF="spkr2v5k.htm">Enclosure Properties</A>) and the driver has valid T/S parameters.  Get Speaker Workshop to estimate the driver T/S parameters (via impedance measurements) or enter them manually prior to executing this command.</P>
+
+<P>This command changes the current properties of the enclosure, to match the settings selected in the Vented dialog.</P>
+
+<P><B>The Compare Command</B></P>
+
+<P>When you press the Compare button, Speaker Workshop builds an enclosure named “Compare” in the System directory, generates the desired curves for the compare enclosure (based on the menu settings) and charts the Compare frequency response vs the current frequency response on-screen.</P>
+
+<P>Note that the Compare enclosure and associated datasets are not deleted when you exit this dialog!  This allows you to create comparison charts for other than frequency response (using the Compare.xxx datasets and the current datasets) and then using the Vented dialog you can compare impedance, cone excursion, and group delay.</P>
+
+<P>For example, after running the Vented dialog once, open the <I>myenclosure.Group Delay</I> dataset, Add the <I>System\Compare.Group Delay</I> dataset and then bring up the Vented dialog again (while keeping the group delay dataset visible on screen).  As you press compare you will note that the secondary chart (group delay) also changes each time the command is executed.</P>
+
+<P><B>See also</B></P>
+
+<P><A HREF="spkr2u9d.htm">Data Entry</A></P>
+
+</BODY>
+</HTML>

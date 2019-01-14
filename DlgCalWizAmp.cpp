@@ -146,7 +146,7 @@ CPropertySheet *cwnd = (CPropertySheet *)GetParent();
 	return CPropertyPage::OnSetActive();
 }
 
-void CDlgCalWizAmpEnd::OnTimer(UINT nIDEvent) 
+void CDlgCalWizAmpEnd::OnTimer(UINT_PTR nIDEvent) 
 {
 CDlgCalWizAmp *cwnd = (CDlgCalWizAmp *)GetParent();
 CAudtestView *pView;			// the parent view

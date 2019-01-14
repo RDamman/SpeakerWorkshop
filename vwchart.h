@@ -16,7 +16,7 @@ protected: // create from serialization only
 	CWnd 	*m_pLocations;
 protected:
 // Operations
-	afx_msg LONG OnLocationGone( WPARAM wParam, LPARAM lParam );
+	afx_msg LRESULT OnLocationGone( WPARAM wParam, LPARAM lParam );
 
 // Overrides
 	// ClassWizard generated virtual function overrides

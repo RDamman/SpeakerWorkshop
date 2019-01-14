@@ -1,0 +1,141 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 3.2 Final//EN">
+<HTML>
+<HEAD>
+<META HTTP-EQUIV="Content-Type" Content="text/html; charset=Windows-1252">
+<TITLE>File menu commands</TITLE>
+</HEAD>
+
+<BODY BGCOLOR="#FFFFFF" TEXT="#000000">
+
+<OBJECT TYPE="application/x-oleobject" CLASSID="clsid:1e2a7bd0-dab9-11d0-b93a-00c04fc99f9e">
+	<PARAM NAME="Keyword" VALUE="files: managing">
+</OBJECT>
+
+<H1><A NAME="458g_lm"></A>How to Measure Driver Acoustic Response</H1>
+
+<P>Measuring the acoustic response (frequency response) of a driver is one of the most important parts of designing a speaker.  You can design a pretty good speaker just by examining the impedance of the speaker drivers and by examining manufacturers specifications. Designing a great speaker requires that you know each driver's acoustic response.</P>
+
+<H2>Driver Response on a Baffle</H2>
+
+<P>The size of the front baffle of a speaker affects the measured frequency response of the driver significantly. At frequencies where the baffle dimensions are small compared to the wavelength, the sound will wrap around the speaker.  At frequencies where the baffle dimensions are large compared to the wavelength, the sound will radiate primarily forward.  Thus, at low frequencies only half of the sound is radiated forward.  At high frequencies all of the sound is radiated forward. As a result, the measured on-axis frequency response will show a 6dB rise in the range where the wavelength / baffle comparison changes.</P>
+
+<P>Therefore, always measure the driver response when the driver is mounted in the final enclosure. Measuring response when the driver is floating in air or on an infinite baffle will produce inaccurate results for the final speaker crossover synthesis.</P>
+
+<P>Technical Note: sound travels in air at approximately 1130 ft/s.  Or, an 800Hz signal has a wavelength of 1 foot (approximately). A 1.6KHz signal has a wavelength of 6 inches and a 400 Hz signal has a wavelength of 2 feet. Thus, for example, a baffle that is 1 foot square will show a 6dB response step at approximately 800Hz. The response step can be widened (slower rise) by making the front baffle rectangular (not square).  It can be minimized by making the front baffle tiny - thus moving the response step partially beyond the response of the woofer or midrange.</P>
+
+<H2>Hardware Setup</H2>
+
+<P>Measuring acoustic response requires an amplifier in order to get loud enough signals for most microphones. The on-board amplifier in the sound card might work, but it is unlikely that the sound card can produce enough clean power for good measurements. We recommend an external amplifier.</P>
+
+<P>The schematic looks like:</P>
+
+<P><IMG SRC="../images/bm14.gif" ALT="" BORDER=0></P>
+
+<P>Which input you use for the microphone depends on the microphone and on the sound card. If the microphone is amplified and has line-level outputs then use the line-in.  If the microphone is an electret or standard dynamic unamplified microphone then use the Mic in.</P>
+
+<P>If you use the microphone input, then Speaker Workshop runs without a reference signal. This is not generally recommended. You will get much better results with a reference signal, so we recommend that you get a microphone with a preamp or a microphone preamp for your microphone. Using a reference signal lets Speaker Workshop be much more accurate (particularly for phase measurements).</P>
+
+<P>Note the connection from the amplifier to the line in port. This connection should be established <I>only</I> while measuring the amplifier response, unless you have a microphone preamp (so microphone input goes to line in). You may wish to use an x10 cable there (or put a 3-terminal 50K potentiometer in the line). NOTE that many sound cards can not handle excess voltages at the line-in port - they will fry. </P>
+
+<H2>The Amplifier Reference Response</H2>
+
+<P>Because many sound boards have monaural microphone input (and the mic input is not really where you want a reference voltage to be measured). Speaker Workshop allows the use of an external reference for all acoustic measurements. Because your amplifier / sound board combination does not have flat frequency response you should measure the amplifier response before acoustic measurements.</P>
+
+<P>To measure the amplifier response, the easiest solution is to execute <A HREF="spkr0rjn.htm">Options Calibrate</A>then click the test button in the Amplifier Reference section. This will save a time response of the amplifier. Perform this test using the dotted connection shown above with enough volume on the amplifier to get a good test, then remove the connection so that the amp voltage can be increased beyond the sound card capabilities.</P>
+
+<P>This test uses the current Measurement settings from Options Preferences. Set these appropriately for your acoustic measurements before performing the test. The program will work even if the Amplifier Reference is tested at a different sample rate and sample size, but accuracy may suffer.</P>
+
+<P>You can run acoustic measurements without any Amplifier Reference - we do not recommend this unless you are using the line-in for microphone input.</P>
+
+<P>If you create an amplifier reference manually, you should place the reference dataset into the System folder. That will reduce storage and speed up execution because System folder resource transformation are not undoable - hence they don't have to make a copy of the original data.</P>
+
+<H2>Software Setup</H2>
+
+<P>Speaker Workshop can not control which input is actually measured, nor can it set the input volume - you need to select the input and volume level using the standard Windows volume control (or mixer that came with your sound card).</P>
+
+<P>Your microphone should have come with a calibration curve on disk (or you know the microphone calibration curve).  Either way, use the Options Calibrate command to set the microphone calibration curve.</P>
+
+<P>To set the input volume, use the Loop Record command with the hardware setup above and play with the input volume until the measured values peak at about 16K. Set the output volume in Speaker Workshop to produce an audible but not overloud tone. For more details, examine the Sound Card Setup section.</P>
+
+<H2>Driver and Microphone Positioning</H2>
+
+<P>For best results the driver should be located as far from any other surfaces (walls and floors) as possible. The distance between driver and microphone should be significantly smaller than any other distances between driver and walls.  The microphone should also be located far from walls and other surfaces. Although there are ways in software to minimize wall reflection effects these same methods reduce the low frequency accuracy of the measurements.</P>
+
+<P>If you have a smallish room with a vaulted (high) ceiling, one very good approach for driver positioning is to place the mounted driver in the center of a room on a speaker stand facing upwards, then put the microphone above the speaker facing down at the driver. In a large room, just use the room dimensions to get maximum wall distances.</P>
+
+<P>Technical Note: look at the diagram below.</P>
+
+<P><IMG SRC="../images/bm15.gif" ALT="" BORDER=0></P>
+
+<P>Here, the path length of the reflected sound is what matters.  Assume that the direct sound is 2 feet from the microphone and the path length of reflection 1 is 6 feet (speaker 2 feet from back wall) and the path length of reflection 2 is 8 feet (speaker about 4 feet from side wall). Then, acoustic measurements will fall apart below approximately 4 feet (6 foot minimum reflection length - 2 foot direct length) of wavelength (or about 200 Hz).</P>
+
+<P>Obviously, increasing the reflection path length helps measurements substantially.</P>
+
+<H2>Setting the Volume</H2>
+
+<P>Unfortunately, Speaker Workshop can not control the volume of your amplifier. You will need to do this manually. The easiest way to set the amp volume is by creating a new signal (use a sweep from 20-20K, perhaps) and then executing Sound Record for time data.  Examine the height of the time data and set your amplifier volume so that it reaches +/- 10K-15K. You can do this pretty easily with the Vu Meter. Look at the maximum levels on the Vu Meter and set the recording and playback volumes on your sound mixer to get an input near 25K as the best possible.</P>
+
+<P>Also, note that volume settings may change when you are recording MLS signals, so if you plan to do measurements we recommend you set the volume using an MLS signal. Just do the measurement and look at the Vu Meter while performing the measurement. Tweak your mixer controls until the maximum input values are near 20-25K.</P>
+
+<H2>Acoustic Response</H2>
+
+<P>There are three ways to measure acoustic response.</P>
+
+<H2>Nearfield Measurements</H2>
+
+<P>A driver is measured in the Nearfield when the microphone is positioned very close to the driver.  Distances of ¼" and less are common.  In this mode the low frequency response will be very close to the true response of the driver. Use Nearfield measurements to accurately measure the response below perhaps 300Hz (the upper limit is a function of the driver diameter - the bigger the driver the lower the cutoff).</P>
+
+<P>In normal measurements, the Nearfield response is spliced into the gated response (see below) to produce a full-range frequency response measurement.</P>
+
+<H2>Gated Measurements</H2>
+
+<P>The measurements are <I>gated</I> when the microphone is effectively turned off just before the first reflection hits. This measurement will be equal to a standard anechoic measurement for frequencies above the gate cutoff (see the discussion above).</P>
+
+<P>Gating in Speaker Workshop is done by setting the time markers at the spot where the gating should occur. Gated frequency response measurements always use the time markers as cutoff spots - even if the markers are invisible.</P>
+
+<P>Set the gating by measuring the Pulse response of the driver and examining the results.  If reflections are a problem (always) you will see many reflections (copies of the original pulse but lower in value) after the first pulse.  Set the first marker usually at 0, set the second marker just before the first reflection pulse.</P>
+
+<P>In Speaker Workshop, the On Axis, 30, and 60 degrees off-axis driver responses are gated (for example, the command Measure Frequency Response On-Axis). Also, the generator command Measure Gated Response does a gated response measurement.</P>
+
+<P>Due to the high latency in Windows 95 sound card operations, Speaker Workshop always detects the start of data by scanning the input stream for data - rather than relying on critical synchronicity within Windows. Thus, time-delayed data such as acoustic measurements will still create pulse responses that start at time 0.</P>
+
+<H2>Farfield Measurements</H2>
+
+<P>A <I>farfield</I>, or non-gated acoustic measurement measures the driver response in the room with all reflections and other room anomalies. This is a good way to see how the speaker will actually perform in your listening room. Generally a 1/3 octave smoothing is done to the data to simulate the ear's normal internal operation.</P>
+
+<P>Before smoothing this data will look extremely rough - that is normal.</P>
+
+<P>The driver command Measure Frequency Response Farfield and the generator command Measure Frequency Response both use ungated (farfield) measurements.</P>
+
+<H2>Step by Step Summary</H2>
+
+<P>To measure the final frequency response of a driver for use in crossover synthesis the correct technique is therefore</P>
+
+<TABLE cols=2 width=543>
+
+<TR VALIGN="top">
+<TD width=49%>Measure Nearfield</TD>
+<TD width=51%>Measure the driver response in the nearfield using the nearfield measurement while placing the microphone very close to the driver dustcap.<BR>
+</TD>
+</TR>
+
+<TR VALIGN="top">
+<TD width=49%>Measure On-Axis</TD>
+<TD width=51%>Measure the driver on-axis response after setting the gate times correctly (see above).<BR>
+</TD>
+</TR>
+
+<TR VALIGN="top">
+<TD width=49%>Transform Scale</TD>
+<TD width=51%>Scale the nearfield response so that the flat level is at the same value as the flat of the gated response.<BR>
+</TD>
+</TR>
+
+<TR VALIGN="top">
+<TD width=49%>Calculate Splice</TD>
+<TD width=51%>Splice the nearfield response to the on-axis responses to get a final full-range response saved into the on-axis slot of the driver.</TD>
+</TR>
+</TABLE><BR>
+
+</BODY>
+</HTML>

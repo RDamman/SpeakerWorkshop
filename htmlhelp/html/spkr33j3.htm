@@ -1,0 +1,65 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 3.2 Final//EN">
+<HTML>
+<HEAD>
+<META HTTP-EQUIV="Content-Type" Content="text/html; charset=Windows-1252">
+<TITLE>Measurement Preferences</TITLE>
+</HEAD>
+
+<BODY BGCOLOR="#FFFFFF" TEXT="#000000">
+
+<OBJECT TYPE="application/x-oleobject" CLASSID="clsid:1e2a7bd0-dab9-11d0-b93a-00c04fc99f9e">
+	<PARAM NAME="Keyword" VALUE="Options Preferences, Measurement tab">
+</OBJECT>
+
+<H2><A NAME="1.350o_"></A>Measurements tab (Options Preferences dialog)</H2>
+
+<P>This dialog page is used to change parameters relating to measurements. These apply to nearly all commands in the (Driver) Measure and (Signal) Measure menus. </P>
+
+<TABLE cols=2 width=547>
+
+<TR VALIGN="top">
+<TD width=22%>Sample Rate</TD>
+<TD width=78%>Use low sample rates (11 KHz) for low frequency testing, such as woofer impedance and nearfield response.  Use high sample rates (44 KHz) for general frequency response testing.<BR>
+</TD>
+</TR>
+
+<TR VALIGN="top">
+<TD width=22%>Sample Size</TD>
+<TD width=78%>Increasing the size increases the resolution (smaller step sizes) and improves noise immunity at the cost of more data.  Generally 8K - 16K are reasonable sample sizes for a medium speed Pentium.<BR>
+</TD>
+</TR>
+
+<TR VALIGN="top">
+<TD width=22%>Volume</TD>
+<TD width=78%>Set this to 0…100 to get volume changed logarithmically proportional to the #. This is via the Windows mixer and is usually an analog volume control.<BR>
+</TD>
+</TR>
+
+<TR VALIGN="top">
+<TD width=22%>Reverse Channels</TD>
+<TD width=78%>Switch source and reference input channels - for times when the leads are backwards.<BR>
+</TD>
+</TR>
+
+<TR VALIGN="top">
+<TD width=22%>Use Preemphasis</TD>
+<TD width=78%>This applies a low pass filter to the MLS data. The volume can be increased without overload, increasing the low frequency accuracy.<BR>
+</TD>
+</TR>
+
+<TR VALIGN="top">
+<TD width=22%>Precision Results</TD>
+<TD width=78%>This output field shows the range and resolution of the measurement using the selected Sample Rate and Sample Size.<BR>
+</TD>
+</TR>
+
+<TR VALIGN="top">
+<TD width=22%>Repeat Count</TD>
+<TD width=78%>Set this to a value greater than 1 to have the MLS data repeated multiple times. The program will average the readings and this will reduce noise in the sampling (theoretically by 6dB for each doubling of the count).
+<P>For acoustic measurements make sure the measurement is long enough to let echoes die away if you use repeat counts &gt; 1. Even then, this may not be recommended. For impedance measurements this works extremely well – try a count of 6.</P>
+</TD>
+</TR>
+</TABLE><BR>
+
+</BODY>
+</HTML>

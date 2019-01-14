@@ -1021,7 +1021,7 @@ CzFormatEdit *pedit;
 	return NULL;
 }
 
-CzFormatEdit *CzFormatGroup::GetBuddy( UINT uID)
+CzFormatEdit *CzFormatGroup::GetBuddy(UINT_PTR uID)
 {
 CzFormatEdit *pedit;
 

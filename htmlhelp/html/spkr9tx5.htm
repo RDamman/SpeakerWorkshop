@@ -1,0 +1,31 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 3.2 Final//EN">
+<HTML>
+<HEAD>
+<META HTTP-EQUIV="Content-Type" Content="text/html; charset=Windows-1252">
+<TITLE>X10 cable</TITLE>
+</HEAD>
+
+<BODY BGCOLOR="#FFFFFF" TEXT="#000000">
+
+<OBJECT TYPE="application/x-oleobject" CLASSID="clsid:1e2a7bd0-dab9-11d0-b93a-00c04fc99f9e">
+	<PARAM NAME="Keyword" VALUE="X10 cable">
+</OBJECT>
+
+<P><A NAME="2hqaiv9"></A>An x10 cable is an input cable that reduces the voltage input to the sound card for protection from high voltages. Most sound cards will fry if you deliver more than a volt or two to their input.</P>
+
+<P>The simplest circuit is just a series resistor in the left and right input lines (not the ground line).  </P>
+
+<P>That series resistor should be at least 10 times the input impedance of the sound card (calculated in the calibration sequence). You can do the same with any series resistor for even higher voltages. Remember to change the values in the Options Preference dialog (the new input impedance is the (sum of) the sound card input impedance plus the series resistor.  If you use an amplifier for output during testing then always consider using an x10 cable.</P>
+
+<P><IMG SRC="../images/bm48.gif" ALT="" BORDER=0></P>
+
+<P>A MUCH better solution is a voltage divider. This will work no matter what the input impedance of the sound card is, and it does not suffer from parasitic capacitance effects. The simplest divide by 10 circuit would be something like:</P>
+
+<P><IMG SRC="../images/bm49.gif" ALT="" BORDER=0></P>
+
+<P>The input impedance (used in Options Preferences) of this circuit is 1000 (series) + parallel of 100 and the card input impedance or approximately 1100 ohms</P>
+
+<P>For an interesting overview, see <A HREF="spkr08tk.htm">Cables and Connectors</A></P>
+
+</BODY>
+</HTML>

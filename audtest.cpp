@@ -109,7 +109,8 @@ CAudtestApp::CAudtestApp()
 	m_CChartDefaults[uomTime] = NULL;
 	m_CChartDefaults[uomFreq] = NULL;
 	m_CChartDefaults[uomOhms] = NULL;
-	
+	//
+	EnableHtmlHelp();
 }
 
 static CMultiDocTemplate *doc_Template( UINT iType, CRuntimeClass *cNew)
@@ -176,7 +177,7 @@ BOOL CAudtestApp::InitInstance()
 	{
 					// TEMPORARY RESET HELP FILE NAME
 	free( (void *)m_pszHelpFilePath);
-	m_pszHelpFilePath = _tcsdup(_T("SpkrWork.Hlp"));
+	m_pszHelpFilePath = _tcsdup(_T("SpeakerWorkshop.chm"));
 	}
 
 	// Initialize OLE libraries
@@ -447,12 +448,21 @@ BOOL CAudtestApp::InitInstance()
 			CString sfile = get_MostRecent();
 			if (! sfile.IsEmpty())
 			{
-				CDocument *pdocument = OpenDocumentFile(sfile);
+				CDocument *pdocument = NULL;
+				try
+				{
+					CDocument *pdocument = OpenDocumentFile(sfile);
+				}
+				catch (char *e)
+				{
+				}
+
 				if (pdocument != NULL)
 					SetLastFile(sfile);			// last opened
 				else
 				{
-					SetLastFile("");
+					CString sHelp = _T("");
+					SetLastFile(sHelp);
 					if (m_pRecentFileList->GetSize() > 0)
 					{
 						m_pRecentFileList->Remove(0);
@@ -1556,14 +1566,14 @@ CRuntimeClass *pcl;
 	{
 		nsize = pfile.GetLength();
 		ploc = pfile.Detach();		// this closes the memfile
-		nout = WriteRegistry( csn, ploc, nsize);
+		nout = WriteRegistry( csn, ploc, (int)nsize);
 		free( ploc);
 	}
 
 	return nout;
 }
 
-float		CAudtestApp::GetProfileFloat( LPCTSTR lpszAppName, LPCTSTR lpszName, float fDefault)
+double	CAudtestApp::GetProfileFloat( LPCTSTR lpszAppName, LPCTSTR lpszName, float fDefault)
 {
 	CString str = GetProfileString(lpszAppName, lpszName, _T(""));
 	str.Trim();
@@ -1642,7 +1652,7 @@ int		CAudtestApp::ReadRegistry( LPCTSTR lpszName, void *pStruct, int nStructSize
 {
 HKEY hmain;
 HKEY hrslt;
-CString csname = "Software\\";
+CString csname = _T("Software\\");
 
 	csname += m_pszRegistryKey;
 	csname += "\\";
@@ -1713,7 +1723,7 @@ int i;
 	for ( i = iCount-1; i >= 0; i--)
 	{
 		pend = pBuffer + i * 3;			// 3 bytes per entry
-		unsigned char c = pend[i];
+		TCHAR c = pend[i];
 
 			pend[0] = "0123456789ABCDEF"[(c / 16)];
 			pend[1] = "0123456789ABCDEF"[(c % 16)];
@@ -1747,7 +1757,7 @@ CString filename("");
 	else
 	{
 	CString csext = "RDP";			// reg dump
-	CString csfilter = _T("Registry Dump Files (*.rdp)||*.RDP|All Files (*.*)||*.*||");
+	CString csfilter = "Registry Dump Files (*.rdp)||*.RDP|All Files (*.*)||*.*||";
 	CFileDialog cdlg( FALSE, csext, NULL, OFN_OVERWRITEPROMPT | OFN_PATHMUSTEXIST, 
 						csfilter, AfxGetMainWnd() );
 	CString cstitle;
@@ -1971,10 +1981,10 @@ BOOL CAboutDlg::OnInitDialog()
 #endif //_MAC
 	}
 
-	CString csout = "Warning: this computer program is protected by copyright law and international treaties. ";
-	csout += "Unauthorized reproduction or distribution of this program, or any portion of it, ";
-	csout += "may result in severe criminal and civil penalties, ";
-	csout += "and will be prosecuted to the maximum extent possible under the law.";
+	CString csout = _T("Warning: this computer program is protected by copyright law and international treaties. ");
+	csout += _T("Unauthorized reproduction or distribution of this program, or any portion of it, ");
+	csout += _T("may result in severe criminal and civil penalties, ");
+	csout += _T("and will be prosecuted to the maximum extent possible under the law.");
 
 	SetDlgItemText( IDC_WARNING, (LPCTSTR )csout);
 

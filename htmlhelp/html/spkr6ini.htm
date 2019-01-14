@@ -1,0 +1,46 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 3.2 Final//EN">
+<HTML>
+<HEAD>
+<META HTTP-EQUIV="Content-Type" Content="text/html; charset=Windows-1252">
+<TITLE>Impedance Compensation Dialog</TITLE>
+</HEAD>
+
+<BODY BGCOLOR="#FFFFFF" TEXT="#000000">
+
+<OBJECT TYPE="application/x-oleobject" CLASSID="clsid:1e2a7bd0-dab9-11d0-b93a-00c04fc99f9e">
+	<PARAM NAME="Keyword" VALUE="Insert impedance compensation dialog">
+</OBJECT>
+
+<H1><A NAME=".lldhn"></A>Impedance compensation dialog (Network , Insert , Impedance Compensation)</H1>
+
+<P>Use this dialog to add impedance compensation (often called a Zobel circuit) to the current network.  The impedance compensation can be based on any driver in the network, or on the input impedance of the network.  It can compensate for the inductive rise of a driver or for the resonant peak of a driver.</P>
+
+<TABLE cols=3 width=517>
+
+<TR VALIGN="top">
+<TD width=16%>Fields:</TD>
+<TD width=36%>&nbsp;</TD>
+<TD width=48%>&nbsp;</TD>
+</TR>
+
+<TR VALIGN="top">
+<TD width=16%>&nbsp;</TD>
+<TD width=36%>Input</TD>
+<TD width=48%>Select either the current input impedance, or a specific driver.</TD>
+</TR>
+
+<TR VALIGN="top">
+<TD width=16%>&nbsp;</TD>
+<TD width=36%>Compensation</TD>
+<TD width=48%>Select inductive rise or resonant peak to be compensated.  The chosen frequency will be the frequency where the program tries to achieve a flat resistive response.</TD>
+</TR>
+</TABLE><BR>
+
+<P>This command changes the current network, by adding an impedance compensation circuit.</P>
+
+<P>In general, a driver will be selected.  To use the “input impedance” option, calculate the input impedance of the network and then add this impedance compensation.  Input impedance is often selected to handle more than one driver (e.g. a D’Appolito configuration), or to add compensation to a circuit that already has one type of compensation.</P>
+
+<P>Select a high frequency for inductive rise to get minimal compensation.  Select a low frequency to over-compensate.  In general, select the correct frequency when using resonant peak compensation. </P>
+
+</BODY>
+</HTML>

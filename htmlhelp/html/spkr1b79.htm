@@ -1,0 +1,67 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 3.2 Final//EN">
+<HTML>
+<HEAD>
+<META HTTP-EQUIV="Content-Type" Content="text/html; charset=Windows-1252">
+<TITLE>Filter Dialog (Datasets)</TITLE>
+</HEAD>
+
+<BODY BGCOLOR="#FFFFFF" TEXT="#000000">
+
+<OBJECT TYPE="application/x-oleobject" CLASSID="clsid:1e2a7bd0-dab9-11d0-b93a-00c04fc99f9e">
+	<PARAM NAME="Keyword" VALUE="filter dialog">
+	<PARAM NAME="Keyword" VALUE="filter dialog (datasets)">
+</OBJECT>
+
+<H1><A NAME="gvk3bu"></A>Filter dialog (Transform Filter for Datasets)</H1>
+
+<P>Use this command to filter data using a lowpass, highpass, or bandpass filter. Frequency data is filtered by multiplying the data by the filter response curve.  Time data is filtered by executing a digital filter. </P>
+
+<TABLE cols=3 width=541>
+
+<TR VALIGN="top">
+<TD width=12%>Fields</TD>
+<TD width=21%>&nbsp;</TD>
+<TD width=67%>&nbsp;</TD>
+</TR>
+
+<TR VALIGN="top">
+<TD width=12%>&nbsp;</TD>
+<TD width=21%>Type</TD>
+<TD width=67%>Select lowpass, highpass, bandpass, or bandstop.</TD>
+</TR>
+
+<TR VALIGN="top">
+<TD width=12%>&nbsp;</TD>
+<TD width=21%>Shape</TD>
+<TD width=67%>Shapes include Chebychev (minimize passband ripple or minimize stopband ripple), Butterworth, and Bessel, </TD>
+</TR>
+
+<TR VALIGN="top">
+<TD width=12%>&nbsp;</TD>
+<TD width=21%>Order</TD>
+<TD width=67%>Select an order for the filter (the filter slope is 6dB * Order)</TD>
+</TR>
+
+<TR VALIGN="top">
+<TD width=12%>&nbsp;</TD>
+<TD width=21%>Attenuation</TD>
+<TD width=67%>For the two chebychev responses, enter the target attenuation in the stopband.</TD>
+</TR>
+
+<TR VALIGN="top">
+<TD width=12%>&nbsp;</TD>
+<TD width=21%>Frequencies</TD>
+<TD width=67%>Look at the drawing in the dialog to determine the interpretation of 1,2,3,4 for the frequencies.  For example, a lowpass butterworth will only use frequency 1 (the cutoff frequency).</TD>
+</TR>
+</TABLE><BR>
+
+<P>This command is most commonly used to remove noise, to bandlimit data, or to simulate an active filter operation.</P>
+
+<P>This command changes the current dataset.</P>
+
+<P><B>See also</B></P>
+
+<P><A HREF="spkr2u9d.htm">Data Entry</A></P>
+
+</BODY>
+</HTML>

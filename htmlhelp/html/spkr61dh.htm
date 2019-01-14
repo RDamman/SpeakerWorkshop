@@ -1,0 +1,118 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 3.2 Final//EN">
+<HTML>
+<HEAD>
+<META HTTP-EQUIV="Content-Type" Content="text/html; charset=Windows-1252">
+<TITLE>How to Measure T/S Parameters</TITLE>
+</HEAD>
+
+<BODY BGCOLOR="#FFFFFF" TEXT="#000000">
+
+<OBJECT TYPE="application/x-oleobject" CLASSID="clsid:1e2a7bd0-dab9-11d0-b93a-00c04fc99f9e">
+	<PARAM NAME="Keyword" VALUE="Measuring T/S Parameters">
+	<PARAM NAME="Keyword" VALUE="Small Parameters">
+	<PARAM NAME="Keyword" VALUE="T/S Parameters, Measuring">
+	<PARAM NAME="Keyword" VALUE="Thiele Parameters">
+</OBJECT>
+
+<H1><A NAME="14a10vu"></A>How to Measure T/S Parameters</H1>
+
+<P>T/S parameters are named after two scientists (Neville Thiele and Richard Small) who wrote the seminal papers about enclosure design.  T/S Parameters are a few parameters that together determine what size enclosure a driver requires.</P>
+
+<P>T/S Parameters include QMS, QES, FS, RE, VAS and others.</P>
+
+<P>You can get T/S parameters from driver datasheets, but in our experience these values are only a guide to the driver.  To find out the actual T/S parameters for a driver you must measure them. You don’t actually measure T/S parameters, you measure driver impedance(s) and then calculate the T/S parameters based on the measured impedances.</P>
+
+<H2>Step by Step using Delta Compliance (Sealed Box)</H2>
+
+<P><I>for all steps the assumption is that you have created a driver resource and the driver window is opened and on top</I></P>
+
+<TABLE cols=2 width=571>
+
+<TR VALIGN="top">
+<TD width=28%>1. Free Air Impedance</TD>
+<TD width=72%>Measure the driver impedance in free air using the <B>Measure Impedance in Free Air</B> command(see <A HREF="spkr9e73.htm">Measuring Driver Impedance</A>).</TD>
+</TR>
+
+<TR VALIGN="top">
+<TD width=28%>2. Build a Test Box</TD>
+<TD width=72%>Build a simple box for the driver whose internal volume is approximately 1/3 to ½ the manufacturer’s VAS.  This box needs to be airtight when the driver is mounted, but otherwise the dimensions and appearance are irrelevant.
+<P>Mount the driver to the outside of the box.</P>
+</TD>
+</TR>
+
+<TR VALIGN="top">
+<TD width=28%>3. Enter Volume</TD>
+<TD width=72%>Open the window for the driver you are measuring.
+<P>Select <B>Edit Properties</B>, go to the Data tab and set the Sealed Volume entry to match the volume of your test box.</P>
+</TD>
+</TR>
+
+<TR VALIGN="top">
+<TD width=28%>4. Sealed Impedance</TD>
+<TD width=72%>Select <B>Measure Impedance in Sealed Box</B> and measure it.</TD>
+</TR>
+
+<TR VALIGN="top">
+<TD width=28%>5. Set Markers</TD>
+<TD width=72%>Examine the two impedance charts, <I>mydriver</I>.Free Air and <I>mydriver</I>.Sealed. Drag the impedance markers to enclose only good data (usually there will be garbage at both ends of the spectrum).</TD>
+</TR>
+
+<TR VALIGN="top">
+<TD width=28%>6. Calculate the T/S parameters.</TD>
+<TD width=72%>Select <B>Driver Estimate Parameters…</B> - pick the frequency range based on markers and wait for it to complete (this may take a while for high resolution measurements).  This goes through an iterative optimization process that usually (but not always) finds the T/S parameters to a high level of accuracy.</TD>
+</TR>
+</TABLE><BR>
+
+<P>You can omit steps 2,3,4 if you do not want to calculate Vas but instead will use published data. We recommend you check Vas, but it is optional.</P>
+
+<P>If you want to check the results, bring up the <A HREF="spkr55bd.htm">Driver Properties Dialog</A> and examine the parameters.  Compare to manufacturers specifications - errors of up to 30% in Qts, VAS and Fs are not uncommon.</P>
+
+<P>If you want to see how the model fits the data, just open the <I>mydriver</I>.Free Air dataset, then right click (to get the popup menu) and select Add data…  Pick the <I>mydriver</I>.Estimate dataset.  Now the Free Air chart will also show the mathematical estimate and you can compare the two.</P>
+
+<H2>Step by Step using Added Mass (Delta Mass)</H2>
+
+<P><I>for all steps the assumption is that you have created a driver resource and the driver window is opened and on top</I></P>
+
+<TABLE cols=2 width=571>
+
+<TR VALIGN="top">
+<TD width=28%>1. Free Air Impedance</TD>
+<TD width=72%>Measure the driver impedance in free air using the <B>Measure Impedance in Free Air</B> command(see <A HREF="spkr9e73.htm">Measuring Driver Impedance</A>).</TD>
+</TR>
+
+<TR VALIGN="top">
+<TD width=28%>2. Add extra mass</TD>
+<TD width=72%>Add additional mass to the cone in such a way that the additional mass is known exactly and the mass won’t flex when the cone moves.</TD>
+</TR>
+
+<TR VALIGN="top">
+<TD width=28%>3. Enter Mass</TD>
+<TD width=72%>Open the window for the driver you are measuring.
+<P>Select <B>Edit Properties</B>, go to the Data tab and set Added Mass entry to match the mass you have added to the driver. Make sure that the Piston Area (in the parameters tab) for your driver is accurate, as well.</P>
+</TD>
+</TR>
+
+<TR VALIGN="top">
+<TD width=28%>4. Added Mass Impedance</TD>
+<TD width=72%>Select <B>Measure Impedance with Added Mass</B> and measure it.</TD>
+</TR>
+
+<TR VALIGN="top">
+<TD width=28%>5. Set Markers</TD>
+<TD width=72%>Examine the two impedance charts, <I>mydriver</I>.Free Air and <I>mydriver</I>.Added Mass. Drag the impedance markers to enclose only good data (usually there will be garbage at both ends of the spectrum).</TD>
+</TR>
+
+<TR VALIGN="top">
+<TD width=28%>6. Calculate the T/S parameters.</TD>
+<TD width=72%>Select <B>Driver Estimate Parameters…</B> - pick the frequency range based on markers and wait for it to complete (this may take a while for high resolution measurements).  This goes through an iterative optimization process that usually (but not always) finds the T/S parameters to a high level of accuracy.</TD>
+</TR>
+</TABLE><BR>
+
+<P>You can omit steps 2,3,4 if you do not want to calculate Vas but instead will use published data. We recommend you check Vas, but it is optional.</P>
+
+<P>If you want to check the results, bring up the <A HREF="spkr55bd.htm">Driver Properties Dialog</A> and examine the parameters.  Compare to manufacturers specifications - errors of up to 30% in Qts, VAS and Fs are not uncommon.</P>
+
+<P>If you want to see how the model fits the data, just open the <I>mydriver</I>.Free Air dataset, then right click (to get the popup menu) and select Add data…  Pick the <I>mydriver</I>.Estimate dataset.  Now the Free Air chart will also show the mathematical estimate and you can compare the two.</P>
+
+</BODY>
+</HTML>

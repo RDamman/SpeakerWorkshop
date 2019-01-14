@@ -1,0 +1,31 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 3.2 Final//EN">
+<HTML>
+<HEAD>
+<META HTTP-EQUIV="Content-Type" Content="text/html; charset=Windows-1252">
+<TITLE>Debug Preferences</TITLE>
+</HEAD>
+
+<BODY BGCOLOR="#FFFFFF" TEXT="#000000">
+
+<OBJECT TYPE="application/x-oleobject" CLASSID="clsid:1e2a7bd0-dab9-11d0-b93a-00c04fc99f9e">
+	<PARAM NAME="Keyword" VALUE="Options Preferences, Debug tab">
+</OBJECT>
+
+<H2><A NAME="ob6lrm"></A>Debug tab (Options Preferences dialog)</H2>
+
+<P>This tab contains system specific settings. There is a checkbox to let you enter debugging mode (don’t use this unless asked to by Audua personnel), and there is a data entry field to set the Latency value.</P>
+
+<P>Latency:</P>
+
+<P>When Speaker Workshop performs a record operation it synchronizes the input and output signals using capabilities of Windows. This synchronization could be slightly off, depending on the speed of your computer and sound hardware. Set this value to adjust the synchronization to compensate for those effects. A value of 0 uses the standard synchronization. Non-zero values adjust the synch point forward and backward in milliseconds.</P>
+
+<P>To set the value: perform a signal record operation using an MLS signal in loopback mode (just because an MLS is easy to see) and look at the recorded signal. The MLS should start at the left edge of the chart. Expand the left edge to examine the signal closely. If the signal starts before the chart begins (valid data is visible at time 0) you should try shifting the latency using negative values, perhaps –5 to start. If there is blank space and then the signal starts you should adjust the latency forward by the millisecond delay you want to introduce. A delay of &lt;5ms is adequate and will work fine with Speaker Workshop, although you might want to tweak the delay to less than 2ms for slightly better noise results. Perform this operation a few times to make sure your computer system is consistent – the delay doesn’t vary.</P>
+
+<P>Latency is stored in the system registry and will be used for all record operations, including measurements, and with all databases.</P>
+
+<P>MLS Warm up</P>
+
+<P>The sound card you use may very well have startup issues when starting a record operation due to things like capacitors charging up and clocks getting to speed. As an option, Speaker Workshop lets you send a short low-level signal to the card before the actual data is sent. This seriously improves the measurement quality for a single sample and marginally improves multi-sample tests as well. The default of 100 seems to work well. A longer default would help with a card that takes a long time to get to full performance. This can be checked by doing a simple Measure Impedance of a driver with a single MLS sample with different warmup settings.</P>
+
+</BODY>
+</HTML>

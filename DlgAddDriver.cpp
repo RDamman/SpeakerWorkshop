@@ -289,11 +289,11 @@ UINT CXtAddDriver::GetNameID()
 // ---------------------------------------------------------------------------
 //			DoDialog
 // ---------------------------------------------------------------------------
-UINT CXtAddDriver::DoDialog( )		// xeq dbox
+INT_PTR CXtAddDriver::DoDialog()		// xeq dbox
 {
 CDlgAddDriver cdlg;
 CNetwork *cname;
-UINT uout;
+INT_PTR uout;
 
 	cname = (CNetwork *)FindTargetObject();
 

@@ -30,7 +30,7 @@ class CXformLimit : public CXunary
 {
 
 	public:
-		virtual UINT DoDialog( void);		// xeq dbox
+		virtual INT_PTR DoDialog( void);		// xeq dbox
 		virtual UINT GetDialog(void);		// get the dialog id
 		virtual int  DoOperation( void);		// do it
 		UINT GetNameID()					{ return IDOP_LIMIT; }
@@ -52,7 +52,7 @@ class CXformCorrelate : public CXunary
 {
 
 	public:
-		virtual UINT DoDialog( void);		// xeq dbox
+		virtual INT_PTR DoDialog( void);		// xeq dbox
 		virtual UINT GetDialog(void);		// get the dialog id
 		virtual int  DoOperation( void);		// do it
 		virtual UINT GetNameID()					{ return IDOP_LIMIT; }
@@ -73,7 +73,7 @@ class CXformScale : public CXunary
 {
 
 	public:
-		virtual UINT DoDialog( void);		// xeq dbox
+		virtual INT_PTR DoDialog( void);		// xeq dbox
 		virtual UINT GetDialog(void);		// get the dialog id
 		virtual int  DoOperation( void);		// do it
 		virtual UINT GetNameID()					{ return IDOP_SCALE; }
@@ -94,7 +94,7 @@ class CXformInvert : public CXunary
 {
 
 	public:
-		virtual UINT DoDialog( void);		// xeq dbox
+		virtual INT_PTR DoDialog( void);		// xeq dbox
 		virtual UINT GetDialog(void);		// get the dialog id
 		virtual int  DoOperation( void);		// do it
 		virtual UINT GetNameID()					{ return IDOP_INVERT; }
@@ -114,7 +114,7 @@ class CXformTruncate : public CXunary
 {
 
 	public:
-		virtual UINT DoDialog( void);		// xeq dbox
+		virtual INT_PTR DoDialog(void);		// xeq dbox
 		virtual UINT GetDialog(void);		// get the dialog id
 		virtual int  DoOperation( void);		// do it
 		virtual UINT GetNameID()					{ return IDOP_TRUNCATE; }
@@ -131,7 +131,7 @@ class CXformExtend : public CXunary
 {
 
 	public:
-		virtual UINT DoDialog( void);		// xeq dbox
+		virtual INT_PTR DoDialog(void);		// xeq dbox
 		virtual UINT GetDialog(void);		// get the dialog id
 		virtual int  DoOperation( void);		// do it
 		virtual UINT GetNameID()				{ return IDOP_TRUNCATE; }
@@ -150,7 +150,7 @@ class CXformDelay : public CXunary
 {
 
 	public:
-		virtual UINT DoDialog( void);		// xeq dbox
+		virtual INT_PTR DoDialog(void);		// xeq dbox
 		virtual UINT GetDialog(void);		// get the dialog id
 		virtual int  DoOperation( void);		// do it
 		virtual UINT GetNameID()					{ return IDOP_DELAY; }
@@ -176,7 +176,7 @@ class CXformSmooth : public CXunary
 		void	SetCustom( float fNew)		{ m_fCustom = fNew; }
 
 	public:
-		virtual UINT DoDialog( void);		// xeq dbox
+		virtual INT_PTR DoDialog(void);		// xeq dbox
 		virtual UINT GetDialog(void);		// get the dialog id
 		virtual int  DoOperation( void);		// do it
 		virtual UINT GetNameID()					{ return IDOP_SMOOTH; }
@@ -195,7 +195,7 @@ class CXformCombine : public CXbinary			// this uses the dataset stuff
 	public:
 		void SetOperation( int nNew)				{ m_nOperation = nNew; }
 
-		virtual UINT DoDialog( void);		// xeq dbox
+		virtual INT_PTR DoDialog(void);		// xeq dbox
 		virtual UINT GetDialog(void);		// get the dialog id
 		virtual int  DoOperation( void);		// do it
 		virtual UINT GetNameID()					{ return IDOP_COMBINE; }

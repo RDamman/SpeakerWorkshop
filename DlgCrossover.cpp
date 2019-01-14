@@ -421,11 +421,11 @@ CXtCrossover::~CXtCrossover()
 }
 
 
-UINT CXtCrossover::DoDialog( )		// xeq dbox
+INT_PTR CXtCrossover::DoDialog()		// xeq dbox
 {
 CDlgCrossover cdlg;
 CNetwork *cname;
-UINT uout;
+INT_PTR uout;
 
 	cname = (CNetwork *)FindTargetObject();
 

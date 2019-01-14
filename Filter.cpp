@@ -111,10 +111,10 @@ CXtFilter::~CXtFilter()
 
 
 
-UINT CXtFilter::DoDialog( )		// xeq dbox
+INT_PTR CXtFilter::DoDialog()		// xeq dbox
 {
 CDlgFilter cdlg;
-UINT uout;
+INT_PTR uout;
 
 				// fill the function with defaults for this dataset
 	cdlg.m_nShape	=	m_nShape	;

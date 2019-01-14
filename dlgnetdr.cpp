@@ -225,7 +225,7 @@ void CDlgNetDriver::OnRemove()
 	UpdateData( TRUE);
 
 	{
-	int i = m_cComponentList.GetCurSel();
+	DWORD_PTR i = m_cComponentList.GetCurSel();
 	if ( LB_ERR != i)			// we have one to remove
 		{
 		i = m_cComponentList.GetItemData( i);	// get the index into netlist
@@ -244,7 +244,7 @@ void CDlgNetDriver::OnRemove()
 void CDlgNetDriver::fill_Box( )
 {
 int ncursel;
-DWORD dwi = 0;		// just to remove initialization warning
+DWORD_PTR dwi = 0;		// just to remove initialization warning
 
 	ncursel = m_cComponentList.GetCurSel();
 	if( LB_ERR != ncursel)
@@ -331,7 +331,7 @@ BOOL CDlgNetDriver::OnInitDialog()
 // ----------------------------------------------------------------------------------
 void CDlgNetDriver::OnSelchangeComplist() 
 {
-int i;
+DWORD_PTR i;
 ZpPassive *pcz;
 BOOL bfill = FALSE;
 

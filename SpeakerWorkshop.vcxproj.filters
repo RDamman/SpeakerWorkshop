@@ -1212,7 +1212,4 @@
       <Filter>Resource Files</Filter>
     </Image>
   </ItemGroup>
-  <ItemGroup>
-    <Manifest Include="SpeakerWorkshop.exe.manifest" />
-  </ItemGroup>
 </Project>

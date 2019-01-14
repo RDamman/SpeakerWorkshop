@@ -182,7 +182,7 @@ void CDlgNetList::OnAddnew()
 {
 	// TODO: Add your control notification handler code here
 ZpPassive *pnew = new ZpResistor();
-int i;
+INT_PTR i;
 CString csname;
 
 	UpdateData( TRUE);
@@ -213,7 +213,7 @@ void CDlgNetList::OnRemove()
 	UpdateData( TRUE);
 
 	{
-	int i = m_cComponentList.GetCurSel();
+	DWORD_PTR i = m_cComponentList.GetCurSel();
 	if ( LB_ERR != i)			// we have one to remove
 		{
 		i = m_cComponentList.GetItemData( i);	// get the index into netlist
@@ -238,7 +238,7 @@ void CDlgNetList::OnRemove()
 void CDlgNetList::fill_Box( )
 {
 int ncursel;
-DWORD dwi = 0;		// initialize to remove warnings
+DWORD_PTR dwi = 0;		// initialize to remove warnings
 
 	ncursel = m_cComponentList.GetCurSel();
 	if( LB_ERR != ncursel)
@@ -246,7 +246,7 @@ DWORD dwi = 0;		// initialize to remove warnings
 
 	m_cComponentList.ResetContent();		// remove all
 	{
-	int i = m_coNetlist.GetSize();
+	INT_PTR i = m_coNetlist.GetSize();
 	int nloc;
 
 		while( i--)
@@ -336,7 +336,7 @@ BOOL CDlgNetList::OnInitDialog()
 void CDlgNetList::OnSelchangeComplist() 
 {
 	// TODO: Add your control notification handler code here
-int i;
+DWORD_PTR i;
 ZpPassive *pcz;
 BOOL bfill = FALSE;
 
@@ -539,7 +539,7 @@ int nprev = m_nType;		// before updating
 	// TODO: Add your control notification handler code here
 	UpdateData( TRUE);
 	{
-	int i = m_cComponentList.GetCurSel();
+	DWORD_PTR i = m_cComponentList.GetCurSel();
 	if ( LB_ERR != i)			// we have one to remove
 		{
 		i = m_cComponentList.GetItemData( i);	// get the index into netlist

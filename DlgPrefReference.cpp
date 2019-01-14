@@ -91,7 +91,7 @@ END_INTERFACE_MAP()
 static int do_HitButton( CFolder *cRoot, CString& csName, DWORD& dwID, UNITMSR uom)
 {
 CDlgSelectObject cdlg;
-int nrslt;
+INT_PTR nrslt;
 
 	cdlg.SetParms( cRoot, dwID, ntDataSet, uom);
 

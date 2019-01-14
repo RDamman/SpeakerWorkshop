@@ -89,10 +89,10 @@ CXformCalcEquiv::~CXformCalcEquiv( )
 {
 }
 
-UINT CXformCalcEquiv::DoDialog( )		// xeq dbox
+INT_PTR CXformCalcEquiv::DoDialog()		// xeq dbox
 {
 CDlgDrvEquiv cdlg;
-UINT uout;
+INT_PTR uout;
 
 	cdlg.m_Driver = (CDriver *)FindTargetObject();
 

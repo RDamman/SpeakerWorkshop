@@ -1,0 +1,33 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 3.2 Final//EN">
+<HTML>
+<HEAD>
+<META HTTP-EQUIV="Content-Type" Content="text/html; charset=Windows-1252">
+<TITLE>Using Speaker Workshop</TITLE>
+</HEAD>
+
+<BODY BGCOLOR="#FFFFFF" TEXT="#000000">
+
+<OBJECT TYPE="application/x-oleobject" CLASSID="clsid:1e2a7bd0-dab9-11d0-b93a-00c04fc99f9e">
+	<PARAM NAME="Keyword" VALUE="Normal use">
+	<PARAM NAME="Keyword" VALUE="Overview">
+	<PARAM NAME="Keyword" VALUE="summary">
+</OBJECT>
+
+<H1><A NAME="_gwho"></A>Using Speaker Workshop to Design a Speaker</H1>
+
+<P>Generally, one begins by deciding on the type of speaker to be built, 2 way, 3 way, subwoofer, or more esoteric design.  Similarly, drivers should be selected for the design.  Both topics are well beyond the scope of this document.  Speaker Workshop will, however, work along the way once these decisions are made.  It can also help with the driver decision.</P>
+
+<P>Still, assume that the decision as to drivers and style are made.</P>
+
+<P>Once the drivers are received they should be tested.  Create a new driver resource for each driver type.  Then perform free air and sealed box impedance tests on one or more drivers of each species.  These two measurements let Speaker Workshop determine the size of enclosure and low end response of the system. </P>
+
+<P>Next, create an enclosure resource for each driver type that requires an actual enclosure (the woofer and maybe a midrange, for example).  In the <A HREF="spkr2v5k.htm">enclosure properties</A> dialog enter the driver into the appropriate field. For each enclosure, use the Sealed Box or Vented Box dialog and determine an appropriate volume / size for the enclosure. Don’t forget that a crossover inductor in series can add ½ ohm or more of series resistance.</P>
+
+<P>Next, build at least one wooden enclosure and put a set of drivers into it.  Test these drivers acoustically with a microphone using at least the On Axis measurement command Also, test the final impedance now using a high sample rate (although lower resolution is acceptable). This data is needed to accurately design a crossover. If you want full-range results also test acoustically using the Nearfield command and splice it into the On Axis measurement.</P>
+
+<P>Create a new network resource.  Name it appropriate to the crossover design.  Add the driver complement of the new speaker in the <A HREF="spkr3v1r.htm">network properties dialog</A>.  Then move them around on screen and attach them correctly to the source.  At this point it is common to insert impedance compensation circuits (use the Network Insert Impedance Compensation command).  Then insert a stock crossover based on feel - to make the result close to the desired result.</P>
+
+<P>Finally, tweak that crossover using some of the network tools and use Network Calculate Response to see the response of the final driver/enclosure/network combination.</P>
+
+</BODY>
+</HTML>

@@ -106,7 +106,7 @@ public:
 	int	AttachMetrics( const GroupMetric pBaseMetrics[]);
 	void DetachGroup( void);
 	CzFormatEdit *GetControl( UINT idControl);
-	CzFormatEdit *GetBuddy( UINT idBuddy);
+	CzFormatEdit *GetBuddy( UINT_PTR idBuddy);
 
 	void	DDX_All( CDataExchange *pDX);				// for dboxes
 	void	ProcessAllDelta( NMHDR* pNMHDR);

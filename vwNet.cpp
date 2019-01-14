@@ -55,6 +55,7 @@ BEGIN_MESSAGE_MAP(CAudNetView, CAudtestView)
 	//{{AFX_MSG_MAP(CAudNetView)
 	ON_COMMAND(ID_CANCEL_EDIT_SRVR, OnCancelEditSrvr)
 	ON_COMMAND(ID_CALCULATE_FREQUENCYRESPONSE, OnCalculateFrequency)
+	ON_COMMAND(ID_EDIT_PROPERTIES, OnEditProperties)
 	ON_WM_LBUTTONDOWN()
 	ON_WM_LBUTTONUP()
 	ON_WM_MOUSEMOVE()
@@ -714,6 +715,27 @@ void CAudNetView::OnMouseMove(UINT nFlags, CPoint point)
 	CAudtestView::OnMouseMove(nFlags, point);
 }
 
+
+void CAudNetView::OnEditProperties()
+{
+	CAudtestDoc* pDoc = GetDocument();
+	CNetwork *cnet;
+
+	to_Logical(m_ptMouseDownRight);
+
+	cnet = (CNetwork *)GetTargetObject();
+	if (!cnet)
+		return;
+
+	CObject *cgot = cnet->GetClosest(&m_ptMouseDownRight);
+	if (cgot == NULL)
+		cgot = cnet->GetHighlighted();
+	cnet->SetHighlighted(cgot, true);
+
+	if (cnet->EditProperties(this, cgot) == 0)
+		;
+	pDoc->UpdateAll(NULL);
+}
 
 void CAudNetView::OnLButtonDblClk(UINT nFlags, CPoint point) 
 {

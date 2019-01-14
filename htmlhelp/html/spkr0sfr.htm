@@ -1,0 +1,30 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 3.2 Final//EN">
+<HTML>
+<HEAD>
+<META HTTP-EQUIV="Content-Type" Content="text/html; charset=Windows-1252">
+<TITLE>Gated Command</TITLE>
+</HEAD>
+
+<BODY BGCOLOR="#FFFFFF" TEXT="#000000">
+
+<OBJECT TYPE="application/x-oleobject" CLASSID="clsid:1e2a7bd0-dab9-11d0-b93a-00c04fc99f9e">
+	<PARAM NAME="Keyword" VALUE="frequency response measurement">
+	<PARAM NAME="Keyword" VALUE="gated">
+</OBJECT>
+
+<H1><A NAME="b7inu7"></A>Gated command (Measure menu, Frequency Response submenu, for Drivers)</H1>
+
+<P>Use this command to measure the gated response of a driver. This command assumes that the time data <B>is</B> gated to the two time markers.  Input is assumed to be from a Microphone and any Microphone calibration is used. </P>
+
+<P>The measurement is performed by sending an MLS (Maximum Length Sequence) wave out through the sound board. The source input wave is analyzed and combined with the reference input and the Microphone calibration, and the result is stored in the driver properties.</P>
+
+<P>Change the volume, the length of the sequence, and other settings in the Options Preferences dialog.  If you want to switch to the microphone input on the sound board, go to the mixer panel and switch the input there - sorry, there is no programmatic way to do this.</P>
+
+<P>This command is optional.</P>
+
+<P>This command changes the current properties of the driver, inserting a new dataset entry into one slot.</P>
+
+<P>This command is identical to the Measure Frequency Response command, except for where the dataset is placed. It is primarily used as a second storage location for a gated response or when calculating full response of a woofer using nearfield, gated, and (possibly) the port responses.</P>
+
+</BODY>
+</HTML>

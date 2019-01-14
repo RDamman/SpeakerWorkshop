@@ -1,0 +1,101 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 3.2 Final//EN">
+<HTML>
+<HEAD>
+<META HTTP-EQUIV="Content-Type" Content="text/html; charset=Windows-1252">
+<TITLE>Parameters, Driver Properties</TITLE>
+</HEAD>
+
+<BODY BGCOLOR="#FFFFFF" TEXT="#000000">
+
+<OBJECT TYPE="application/x-oleobject" CLASSID="clsid:1e2a7bd0-dab9-11d0-b93a-00c04fc99f9e">
+	<PARAM NAME="Keyword" VALUE="Driver Properties, Parameters tab">
+</OBJECT>
+
+<H2><A NAME="2azs52n"></A>Parameters tab (Driver Properties dialog)</H2>
+
+<P>This page contains:</P>
+
+<TABLE cols=2 width=427>
+
+<TR VALIGN="top">
+<TD width=35%>Maximum Excursion</TD>
+<TD width=65%>The maximum excursion distance of the driver (p-p). This parameter is not currently used.</TD>
+</TR>
+
+<TR VALIGN="top">
+<TD width=35%>Motor Strength</TD>
+<TD width=65%>&nbsp;</TD>
+</TR>
+
+<TR VALIGN="top">
+<TD width=35%>Maximum Power</TD>
+<TD width=65%>The maximum RMS power the driver can handle. This parameter is not currently used.</TD>
+</TR>
+
+<TR VALIGN="top">
+<TD width=35%>Efficiency</TD>
+<TD width=65%>The output of the driver (in dB at 1 meter) for 1 Watt of input. This parameter is not currently used.</TD>
+</TR>
+
+<TR VALIGN="top">
+<TD width=35%>Piston Area</TD>
+<TD width=65%>The piston area of the driver. This is usually supplied by the manufacturer and not just Pi*R**2.</TD>
+</TR>
+</TABLE><BR>
+
+<TABLE cols=2 width=427>
+
+<TR VALIGN="top">
+<TD width=43%>DC Resistance (Re or Rdc)</TD>
+<TD width=57%>The DC resistance of the driver.</TD>
+</TR>
+
+<TR VALIGN="top">
+<TD width=43%>Mechanical Q (Qms)</TD>
+<TD width=57%>&nbsp;</TD>
+</TR>
+
+<TR VALIGN="top">
+<TD width=43%>Electrical Q (Qes)</TD>
+<TD width=57%>&nbsp;</TD>
+</TR>
+
+<TR VALIGN="top">
+<TD width=43%>Total Q (Qts)</TD>
+<TD width=57%>&nbsp;</TD>
+</TR>
+
+<TR VALIGN="top">
+<TD width=43%>Compliance (Vas)</TD>
+<TD width=57%>The effective volume of the driver.</TD>
+</TR>
+
+<TR VALIGN="top">
+<TD width=43%>Voice Coil inductance (Le)</TD>
+<TD width=57%>See below</TD>
+</TR>
+
+<TR VALIGN="top">
+<TD width=43%>Voice Coil Series (L1)</TD>
+<TD width=57%>See below</TD>
+</TR>
+
+<TR VALIGN="top">
+<TD width=43%>Voice Coil Series (R1)</TD>
+<TD width=57%>See below</TD>
+</TR>
+
+<TR VALIGN="top">
+<TD width=43%>Free Air Resonance (Fs)</TD>
+<TD width=57%>The free air resonant frequency of the driver.</TD>
+</TR>
+</TABLE><BR>
+
+<P>The driver model is slightly more complex than the traditional driver model. Rather than the usual Le (voice coil inductance) the model uses Le in series with a parallel combination of L1 and R1. These values are shown above.</P>
+
+<P>The equivalent circuit of a driver looks like:</P>
+
+<P><IMG SRC="../images/bm53.gif" ALT="" BORDER=0></P>
+
+</BODY>
+</HTML>

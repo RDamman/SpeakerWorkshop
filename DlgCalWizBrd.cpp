@@ -224,7 +224,7 @@ CPropertySheet *cwnd = (CPropertySheet *)GetParent();
 	return CPropertyPage::OnSetActive();
 }
 
-void CDlgCalWizBrdEnd::OnTimer(UINT nIDEvent) 
+void CDlgCalWizBrdEnd::OnTimer(UINT_PTR nIDEvent) 
 {
 CDlgCalWizBoard *cwnd = (CDlgCalWizBoard *)GetParent();
 TESTMSR deftest;

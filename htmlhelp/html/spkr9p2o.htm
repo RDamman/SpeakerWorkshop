@@ -1,0 +1,58 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 3.2 Final//EN">
+<HTML>
+<HEAD>
+<META HTTP-EQUIV="Content-Type" Content="text/html; charset=Windows-1252">
+<TITLE>Sound Card Setup</TITLE>
+</HEAD>
+
+<BODY BGCOLOR="#FFFFFF" TEXT="#000000">
+
+<OBJECT TYPE="application/x-oleobject" CLASSID="clsid:1e2a7bd0-dab9-11d0-b93a-00c04fc99f9e">
+	<PARAM NAME="Keyword" VALUE="Setup">
+	<PARAM NAME="Keyword" VALUE="Setup,Sound Card">
+	<PARAM NAME="Keyword" VALUE="Sound Card Setup">
+	<PARAM NAME="Keyword" VALUE="Volume Settings">
+</OBJECT>
+
+<H1><A NAME="idh_soundsetup"></A>Sound Card Setup</H1>
+
+<P>Setting up your sound card takes only a few minutes.  You might want to do it every few weeks in case values drift.  Always let your computer and sound board warm up for 15 minutes before performing the setup procedure.</P>
+
+<P>Speaker Workshop is only able to control one volume setting - the wave output volume.  The other controls are usually in the Windows volume control (often a speaker icon in the taskbar status area). The other volume controls of interest include "master volume", "line input volume", and "mixer volume". You may have others. Before doing the following, you may wish to enable the Resource Bar (in the View menu) to save on keystrokes. In any case, manually set the controls following this procedure:</P>
+
+<P>1) Using the volume control… if your sound board has a “Loop” option for input, select it.  If not, select line input (not microphone) and run a <A HREF="spkr4bxb.htm">loop cable</A>.</P>
+
+<P>1) Run Speaker Workshop and select Resource/New/Signal (pull down the <B>Resource</B> menu, select the <B>New</B> submenu; then select <B>Signal</B>). Name the signal Test. It will default to a 1KHz sinewave.</P>
+
+<P>1) Select Sound/Play and give the signal perhaps .1 Sec of play. Set the volume to 50. Click OK and verify that sound (a tone) comes out.</P>
+
+<P>1) Select Sound/Play Loop.  While this runs adjust the output volume control until the meter is not quite red-lined.</P>
+
+<P>1) Select Sound/Stop to stop the sound.</P>
+
+<P>1) Select View / Show / Left Input.  This will show the left input signal in the signal window.</P>
+
+<P>1) Select Sound/Record Loop.  When you do, the signal window will flash like an oscilloscope readout, showing the left channel input.  Adjust the input volume control until the values are in the plus/minus 15-23K range.</P>
+
+<P>1) Select Sound/Stop to stop the loop recording</P>
+
+<P>If you can not get this to work well, try lowering the Volume setting in the Play dialog. This will suffice for most operations.  </P>
+
+<P>Perform the following test once, then write down the results. </P>
+
+<P>Reduce the volume until the harmonic distortion in the loop is acceptable (for a good card this should be &lt;.05% 2nd harmonic).  If the distortion is already within tolerance then you might try increasing the different volumes to get least noise in the measurements.  Increase the volume until distortion starts rising. Do this via:</P>
+
+<P>To check the harmonic distortion…</P>
+
+<P>1) Highlight the signal window.</P>
+
+<P>1) Select Measure/Harmonic Distortion and pick the spectrum at 1 power  option.  Click OK.  That produces a window showing the various harmonics (along with noise and measurement error).  </P>
+
+<P>1) If the second or third harmonic are above your tolerance then lower the volume until distortion reaches acceptability.  The easiest way to do that is to change the 1Watt = volume setting while leaving the power at 1 Watt. A good sound card should be able to hit less than 0.1% distortion.</P>
+
+<P>1) Write down the volume setting just in case. </P>
+
+<P>In our experience, good sound boards produce unacceptable amounts of distortion at what seem to be normal volume settings (e.g. an input of plus/minus 32K for full dynamic range).  Running 6dB down at 16K seems to work much better. Often all two or three relevant volume sliders have to be reduced to get the distortion down, just reducing one slider may not do it.</P>
+
+</BODY>
+</HTML>

@@ -376,7 +376,7 @@ CNamed *pcgen;
 	return CPropertyPage::OnWizardNext();
 }
 
-void CDlgCalWizImpJig2::OnTimer(UINT nIDEvent) 
+void CDlgCalWizImpJig2::OnTimer(UINT_PTR nIDEvent) 
 {
 CDlgCalWizImpedance *cwnd = (CDlgCalWizImpedance *)GetParent();
 
@@ -436,7 +436,7 @@ CDlgCalWizImpedance *cwnd = (CDlgCalWizImpedance *)GetParent();
 	CPropertyPage::OnTimer(nIDEvent);
 }
 
-void CDlgCalWizImpEnd::OnTimer(UINT nIDEvent) 
+void CDlgCalWizImpEnd::OnTimer(UINT_PTR nIDEvent) 
 {
 CDlgCalWizImpedance *cwnd = (CDlgCalWizImpedance *)GetParent();
 

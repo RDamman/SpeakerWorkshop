@@ -1,0 +1,117 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 3.2 Final//EN">
+<HTML>
+<HEAD>
+<META HTTP-EQUIV="Content-Type" Content="text/html; charset=Windows-1252">
+<TITLE>Note Properties</TITLE>
+</HEAD>
+
+<BODY BGCOLOR="#FFFFFF" TEXT="#000000">
+
+<OBJECT TYPE="application/x-oleobject" CLASSID="clsid:1e2a7bd0-dab9-11d0-b93a-00c04fc99f9e">
+	<PARAM NAME="Keyword" VALUE="Note Properties">
+</OBJECT>
+
+<H2><A NAME="tkb_ku"></A>Note Properties Dialog</H2>
+
+<P>The note properties dialog lets you change where and how a note is displayed on a chart. The options are: </P>
+
+<TABLE cols=3 width=512>
+
+<TR VALIGN="top">
+<TD width=16%>Frequency</TD>
+<TD colspan=2 width=84%>The X Value (usually frequency) the note is attached to. This value is used to draw a line from the data point to the note box. It also determines value fill-in (see below).</TD>
+</TR>
+
+<TR VALIGN="top">
+<TD width=16%>Dataset</TD>
+<TD colspan=2 width=84%>Which data set the note is attached to</TD>
+</TR>
+
+<TR VALIGN="top">
+<TD width=16%>Text</TD>
+<TD colspan=2 width=84%>The text to show in the note. This includes fill-in fields.</TD>
+</TR>
+
+<TR VALIGN="top">
+<TD width=16%>Font</TD>
+<TD colspan=2 width=84%>The font to display the note in.</TD>
+</TR>
+
+<TR VALIGN="top">
+<TD width=16%>Line</TD>
+<TD width=48%>Draw Line</TD>
+<TD width=36%>Turn this off if you don’t want to see the connecting line (good for headings).</TD>
+</TR>
+
+<TR VALIGN="top">
+<TD width=16%>&nbsp;</TD>
+<TD width=48%>Weight</TD>
+<TD width=36%>The connecting line weight</TD>
+</TR>
+
+<TR VALIGN="top">
+<TD width=16%>&nbsp;</TD>
+<TD width=48%>Style</TD>
+<TD width=36%>The connecting line style</TD>
+</TR>
+
+<TR VALIGN="top">
+<TD width=16%>Box</TD>
+<TD width=48%>Draw Outline</TD>
+<TD width=36%>Turn this off to not draw an outline around the text box</TD>
+</TR>
+
+<TR VALIGN="top">
+<TD width=16%>&nbsp;</TD>
+<TD width=48%>Fill box</TD>
+<TD width=36%>Turn this off to draw the box transparently</TD>
+</TR>
+
+<TR VALIGN="top">
+<TD width=16%>&nbsp;</TD>
+<TD width=48%>Fill color</TD>
+<TD width=36%>Select a fill color for the box (if not transparent)</TD>
+</TR>
+</TABLE><BR>
+
+<P>To get a note that has more than one line in it, just press Ctrl+Enter at the end of the line when typing in the Text box.</P>
+
+<P>Speaker Workshop allows you to use some data fields when defining a note. These fields are all started with a % sign:</P>
+
+<TABLE cols=2 width=512>
+
+<TR VALIGN="top">
+<TD width=16%>%f</TD>
+<TD width=84%>The frequency the note is attached to</TD>
+</TR>
+
+<TR VALIGN="top">
+<TD width=16%>%y<I>d</I></TD>
+<TD width=84%>The data value. The <I>d</I> is optional and signifies a specific dataset (the default is to use the attached dataset). E.g. %1y uses the first dataset, %y2 uses the second dataset.</TD>
+</TR>
+
+<TR VALIGN="top">
+<TD width=16%>%p<I>d</I></TD>
+<TD width=84%>The phase value. The d is optional and signifies a specific dataset.</TD>
+</TR>
+</TABLE><BR>
+
+<P>For example, assume the note is attached to a dataset at 950 Hz with a data value of 12.3dB at that point. The string</P>
+
+<P>Using %fHz with value %y1dB</P>
+
+<P>will show on-screen as</P>
+
+<P>Using 950Hz with value 12.3dB</P>
+
+<P>If you change the frequency the note is attached to, the field values shown will change in keeping with the frequency shift.</P>
+
+<TABLE cols=1 width=531>
+
+<TR VALIGN="top">
+<TD width=100%>NOTE: Although you can add notes to dataset charts (and other charts), only resources called “Chart” have the notes saved when you do a save. If you want to keep your notes around, create a chart (Resource / New / Chart) and use it to display your datasets and notes.</TD>
+</TR>
+</TABLE><BR>
+
+</BODY>
+</HTML>

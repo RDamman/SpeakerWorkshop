@@ -13,6 +13,10 @@
 /////////////////////////////////////////////////////////////////////////////
 // #define DONATIONAL
 
+#include "res\translation\dutch.rc"
+
+
+
 #ifdef DONATIONAL
 LANGUAGE 16, 1
 #pragma code_page(1252)

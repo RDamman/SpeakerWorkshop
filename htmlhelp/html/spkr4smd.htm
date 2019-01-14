@@ -1,0 +1,40 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 3.2 Final//EN">
+<HTML>
+<HEAD>
+<META HTTP-EQUIV="Content-Type" Content="text/html; charset=Windows-1252">
+<TITLE>memory requirements</TITLE>
+</HEAD>
+
+<BODY BGCOLOR="#FFFFFF" TEXT="#000000">
+
+<OBJECT TYPE="application/x-oleobject" CLASSID="clsid:1e2a7bd0-dab9-11d0-b93a-00c04fc99f9e">
+	<PARAM NAME="Keyword" VALUE="memory requirements">
+</OBJECT>
+
+<H2><A NAME="memory_require"></A>Memory Requirements</H2>
+
+<P>Speaker Workshop can use up plenty of memory.  This memory is taken from the Windows 95 virtual memory manager and need not be real RAM, but it must be available.</P>
+
+<P>To calculate approximate memory requirements for a project….</P>
+
+<TABLE cols=2 width=543>
+
+<TR VALIGN="top">
+<TD width=49%>Document</TD>
+<TD width=51%>Each document that is loaded is stored entirely in memory and will require storage as below.</TD>
+</TR>
+
+<TR VALIGN="top">
+<TD width=49%>Undo/Redo Buffer</TD>
+<TD width=51%>When an operation proceeds, the undo/redo buffer obviously contains the prior dataset.  For operations like transforms, that can be a pretty big object (see below)</TD>
+</TR>
+</TABLE><BR>
+
+<P>To clear the undo/redo buffer, just save the document (via File Save). This can potentially free up large amounts of memory.</P>
+
+<P>Memory requirements per data point</P>
+
+<P>When an object is a dataset, it occupies approximately 8 times its length.  Thus, a 16K measurement will take up 8*16K = 128K Bytes of virtual memory.  Put it another way, every 8 datasets take up 1MB.  If you instead use a 128K measurement the storage requirement balloons to 1MB per dataset!</P>
+
+</BODY>
+</HTML>

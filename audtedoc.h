@@ -7,7 +7,7 @@
 #include "folder.h"
 #include "opcode.h"
 
-
+#define FILE_VERSION 1236
 
 typedef struct tagTESTCAL
 	{
@@ -40,7 +40,7 @@ protected:
 	CFolder 			m_cRoot;
 	DWORD				m_dwSystem;		// the system id (usually 1?)
 	CObArray			m_cOpcodeQueue;
-	int					m_nUndoLocation;
+	INT_PTR					m_nUndoLocation;
 	DWORD				m_dwGenerator;	// the default generator
 	TESTCAL				m_cCalib;		// the calibration curves for the system
 	time_t				m_tLastSaveTime;	// when last autosaved
@@ -108,7 +108,11 @@ public:
 	virtual void Dump(CDumpContext& dc) const;
 #endif
 
-protected:
+public:
+	static void SetCurrentFileVersion(int iCurrentFileVersion) { s_iCurrentFileVersion = iCurrentFileVersion; }
+	static int	GetCurrentFileVersion() { return s_iCurrentFileVersion; }
+private:
+	static int	s_iCurrentFileVersion;
 
 // Generated message map functions
 protected:

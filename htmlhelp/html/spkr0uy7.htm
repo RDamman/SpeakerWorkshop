@@ -1,0 +1,50 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 3.2 Final//EN">
+<HTML>
+<HEAD>
+<META HTTP-EQUIV="Content-Type" Content="text/html; charset=Windows-1252">
+<TITLE>How to Measure a Component</TITLE>
+</HEAD>
+
+<BODY BGCOLOR="#FFFFFF" TEXT="#000000">
+
+<OBJECT TYPE="application/x-oleobject" CLASSID="clsid:1e2a7bd0-dab9-11d0-b93a-00c04fc99f9e">
+	<PARAM NAME="Keyword" VALUE="Component, Measurement">
+	<PARAM NAME="Keyword" VALUE="Passive Component Measurement">
+	<PARAM NAME="Keyword" VALUE="RLC Measurement">
+</OBJECT>
+
+<H1><A NAME="4lyx3eo"></A>How to Measure a Component</H1>
+
+<P>Speaker Workshop has provisions for measuring passive components.  These are resistors, inductors, and capacitors. Best results are obtained if the component impedance is approximately 10 ohms (or your reference resistor) somewhere in the 200Hz to 5KHz audio range. </P>
+
+<P>In order to measure a component, you must first create a signal (for stupid historical reasons). Then just execute the <A HREF="spkr1mcr.htm">Measure Passive Component</A> command.</P>
+
+<H2>Step by Step</H2>
+
+<TABLE cols=2 width=571>
+
+<TR VALIGN="top">
+<TD width=28%>1. Create a <B>signal</B></TD>
+<TD width=72%>Create a new signal (Resource New Signal) or use an existing signal. Bring the window to top if the signal exists. This will add a <B>Measure</B> menu to the menubar.</TD>
+</TR>
+
+<TR VALIGN="top">
+<TD width=28%>2. Hook the component into your impedance jig</TD>
+<TD width=72%>Connect the component carefully to the <A HREF="spkr5z01.htm">impedance jig</A>. If the component’s impedance is high (for example a small capacitor) use a large reference resistor. Otherwise, just use the standard 10 ohm reference resistor.</TD>
+</TR>
+
+<TR VALIGN="top">
+<TD width=28%>3. Check settings</TD>
+<TD width=72%>Select the <A HREF="spkr4rdr.htm">Option Preferences</A> command and check the impedance and measurements tabs.  The impedance tab should have correct data for the impedance jig. The measurements tab should be set for a sample size of perhaps 8K or 16K  and a sample rate to get the component impedance near 10 ohms at perhaps ¼ or ½ the sample rate. Resistors seem to test best at a sample rate of 44KHz.</TD>
+</TR>
+
+<TR VALIGN="top">
+<TD width=28%>4. Execute the <B>Measure Passive Component</B> command</TD>
+<TD width=72%>Just select the measure menu and the passive component command within that menu.  This will send an MLS signal through the component.  The input is then analyzed and a best fit is found for the component value.
+<P>The component type and value will be displayed in a dialog.</P>
+</TD>
+</TR>
+</TABLE>
+
+</BODY>
+</HTML>

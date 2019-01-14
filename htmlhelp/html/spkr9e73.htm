@@ -1,0 +1,95 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 3.2 Final//EN">
+<HTML>
+<HEAD>
+<META HTTP-EQUIV="Content-Type" Content="text/html; charset=Windows-1252">
+<TITLE>Measuring Driver Impedance</TITLE>
+</HEAD>
+
+<BODY BGCOLOR="#FFFFFF" TEXT="#000000">
+
+<OBJECT TYPE="application/x-oleobject" CLASSID="clsid:1e2a7bd0-dab9-11d0-b93a-00c04fc99f9e">
+	<PARAM NAME="Keyword" VALUE="Driver, Measure Impedance">
+	<PARAM NAME="Keyword" VALUE="Impedance, Driver, Measuring">
+	<PARAM NAME="Keyword" VALUE="Measure Driver Impedance">
+</OBJECT>
+
+<H1><A NAME="k1ri7_"></A>Measuring Driver Impedance</H1>
+
+<P>Driver impedance is measured at 3 stages.</P>
+
+<TABLE cols=2 width=469>
+
+<TR VALIGN="top">
+<TD width=32%>In Free Air</TD>
+<TD width=68%>Drivers are measured in Free Air in order to estimate their T/S parameters.</TD>
+</TR>
+
+<TR VALIGN="top">
+<TD width=32%>In a Sealed Box or with Added Mass</TD>
+<TD width=68%>Measurement in a sealed box of the right size, or by adding mass to the cone, is the second step in estimating T/S parameters.</TD>
+</TR>
+
+<TR VALIGN="top">
+<TD width=32%>In the Final Enclosure</TD>
+<TD width=68%>Because mounting in a sealed (or ported) enclosure changes the impedance, the final exact impedance measurement is used to calculate network response for crossover design.</TD>
+</TR>
+</TABLE><BR>
+
+<H2>Electrical Setup</H2>
+
+<P>In all cases, to measure driver impedance you hook the driver into the <A HREF="spkr5z01.htm">impedance jig</A>. The circuit looks like:</P>
+
+<P><IMG SRC="../images/bm12.gif" ALT="" BORDER=0></P>
+
+<H2>Physical Setup</H2>
+
+<P>Depending on which impedance you are testing the physical setup differs.</P>
+
+<P><I>Impedance in Free Air</I></P>
+
+<P>To measure driver impedance in free air, the driver should be suspended in air far from any acoustically interfering surfaces.  Hanging it from the ceiling will NOT work - the driver must be kept physically stable or the shaking from the sound will affect the impedance measurements.  The recommended approach is to take two heavy tables and two clamps then put the tables near each other and clamp the driver between them.  </P>
+
+<P><I>Impedance in Sealed Box</I></P>
+
+<P>When measuring the impedance in a sealed box (for estimating T/S parameters) the critical value is the volume of the box.  To make the box volume known and measurable mount the driver on the <B>outside</B> of the box. Mounting the driver in the box reduces the box volume by the driver volume displacement (usually unknown). When building a box don’t forget to add some extra volume for the driver volume displacement (as well as any bracing and crossover volume). This measurement is only used for estimation of Vas.</P>
+
+<P><I>Impedance in Final Enclosure</I></P>
+
+<P>When measuring the final impedance mount the driver on the inside of the enclosure, tune the port (if there is one) and stuff the box with any filling that you may wish.  In other words - complete the process of construction so that the driver sees exactly the internal volume (and port) that the final speaker will have.  The impedance measurement for crossover calculation will then be accurate. For crossover calculations, use the highest sampling rate, but the number of samples may be relatively small.</P>
+
+<P><I>Caveats</I></P>
+
+<P>When measuring impedance of a driver in an enclosure it is very very important that the enclosure be fully sealed. You can check the seal of the enclosure by lightly pressing on the driver cone to get the cone to depress then watching the cone recenter itself.  If it takes time to recenter then the air is not coming through a hole.  If the cone recenters quickly then you have a leak.</P>
+
+<P>Another way to check for a leak is by examining the impedance curve.  If the curve has a bump at the free air resonance of the driver then there is an air leak. The most common air leaks occur at the gasket of the driver.  To stop these use something like blu-tac or some other tacky gum to temporarily mount the driver for testing.</P>
+
+<H2>Software Step by Step</H2>
+
+<P>To measure driver impedance, you first create the driver resource and then measure the impedance for that driver.</P>
+
+<P>1. Select Resource/New/Driver and name the new driver appropriately.</P>
+
+<P>1. Select </P>
+
+<P>·Measure/<A HREF="spkr4k9y.htm">Impedance in Free Air</A> <I>or</I></P>
+
+<P>·Measure/<A HREF="spkr3a9c.htm">Impedance in Sealed Box</A> <I>or</I></P>
+
+<P>·Measure/Impedance</P>
+
+<P>This process will create a dataset named <I>driver</I>.Free Air or <I>driver</I>.Sealed or <I>driver</I>.Impedance that contains the impedance information.</P>
+
+<H2>Changing Frequency Range and Resolution</H2>
+
+<P>If you want a lower (or higher) frequency range or more (or less) resolution, just select Options/Preferences then go to the Measurements tab and move the sliders until the resolution and frequency range match your desires (note that both are shown at the bottom as you move the sliders).</P>
+
+<P>Large values of sample size (greater than 8K) may not provide much additional resolution for speaker testing, while requiring substantially more execution time. They will, however, improve accuracy at the lower frequencies. Processing time is roughly proportional to N*log(N).</P>
+
+<P>If you need low frequency information, it is more efficient to reduce the sample rate than to increase the sample size.  </P>
+
+<P>To just just measure the impedance of an object, look at <A HREF="spkr7261.htm">Signal Measure Impedance</A>.  To find the value of a passive component look at <A HREF="spkr1mcr.htm">Signal Measure Passive Component</A>.</P>
+
+<P>.</P>
+
+</BODY>
+</HTML>

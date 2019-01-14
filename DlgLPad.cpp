@@ -312,11 +312,11 @@ CXtLPad::~CXtLPad()
 }
 
 
-UINT CXtLPad::DoDialog( )		// xeq dbox
+INT_PTR CXtLPad::DoDialog()		// xeq dbox
 {
 CDlgLPad cdlg;
 CNetwork *cname;
-UINT uout;
+INT_PTR uout;
 
 	cname = (CNetwork *)FindTargetObject();
 

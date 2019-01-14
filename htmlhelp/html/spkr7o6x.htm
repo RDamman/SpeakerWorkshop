@@ -1,0 +1,37 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 3.2 Final//EN">
+<HTML>
+<HEAD>
+<META HTTP-EQUIV="Content-Type" Content="text/html; charset=Windows-1252">
+<TITLE>MLS Impulse Signal Properties</TITLE>
+</HEAD>
+
+<BODY BGCOLOR="#FFFFFF" TEXT="#000000">
+
+<OBJECT TYPE="application/x-oleobject" CLASSID="clsid:1e2a7bd0-dab9-11d0-b93a-00c04fc99f9e">
+	<PARAM NAME="Keyword" VALUE="Signal Properties, MLS Impulse tab">
+</OBJECT>
+
+<H2><A NAME="xwp8d9"></A>MLS Impulse tab (Signal Properties dialog)</H2>
+
+<P>This page contains settings for the MLS Impulse type of signal.  An MLS impulse is a pseudo-random white noise signal. The method of generating it guarantees that it can be processed in a way similar to an impulse response, but with greater noise immunity. Fields are:</P>
+
+<TABLE cols=2 width=427>
+
+<TR VALIGN="top">
+<TD width=31%>Sample Size</TD>
+<TD width=69%>Select a value between 1024 and 128K as the number of samples to be taken. A common value is 8K or 16K. Lower values will run much quicker at lower precision.</TD>
+</TR>
+
+<TR VALIGN="top">
+<TD width=31%>Preemphasis</TD>
+<TD width=69%>Select this to have the MLS noise source be pink noise rather than white noise. This reduces accuracy at high frequencies but may improve the noise performance at lower frequencies.</TD>
+</TR>
+
+<TR VALIGN="top">
+<TD width=31%>Perform Correlation</TD>
+<TD width=69%>Leave this on.</TD>
+</TR>
+</TABLE><BR>
+
+</BODY>
+</HTML>

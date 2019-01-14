@@ -1,0 +1,93 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 3.2 Final//EN">
+<HTML>
+<HEAD>
+<META HTTP-EQUIV="Content-Type" Content="text/html; charset=Windows-1252">
+<TITLE>Data, Driver Properties</TITLE>
+</HEAD>
+
+<BODY BGCOLOR="#FFFFFF" TEXT="#000000">
+
+<OBJECT TYPE="application/x-oleobject" CLASSID="clsid:1e2a7bd0-dab9-11d0-b93a-00c04fc99f9e">
+	<PARAM NAME="Keyword" VALUE="Driver Properties, Data tab">
+</OBJECT>
+
+<H2><A NAME="2ans6qn"></A>Data tab (Driver Properties dialog)</H2>
+
+<P>This page primarily contains references to other datasets that together define the driver. </P>
+
+<TABLE cols=2 width=543>
+
+<TR VALIGN="top">
+<TD width=38%>Impedance</TD>
+<TD width=62%>The dataset that defines the impedance of the driver as a function of frequency.  Used for network calculations.</TD>
+</TR>
+
+<TR VALIGN="top">
+<TD width=38%>Pulse Response</TD>
+<TD width=62%>The pulse response of the driver. Not used by Speaker Workshop.</TD>
+</TR>
+
+<TR VALIGN="top">
+<TD width=38%>Frequency Response</TD>
+<TD width=62%>The on-axis frequency response of the driver.  Used for network calculations.</TD>
+</TR>
+
+<TR VALIGN="top">
+<TD width=38%>Nearfield Response</TD>
+<TD width=62%>The response of the driver in the nearfield.  Not used by Speaker Workshop.</TD>
+</TR>
+
+<TR VALIGN="top">
+<TD width=38%>Response at 30 deg</TD>
+<TD width=62%>The response of the driver 30 degrees off-axis.  Not used by Speaker Workshop.</TD>
+</TR>
+
+<TR VALIGN="top">
+<TD width=38%>Response at 60 deg</TD>
+<TD width=62%>The response of the driver 60 degrees off-axis.  Not used by Speaker Workshop.</TD>
+</TR>
+</TABLE><BR>
+
+<P>These fields are only used for T/S parameter estimation.</P>
+
+<TABLE cols=2 width=543>
+
+<TR VALIGN="top">
+<TD width=38%>Impedance in Free Air</TD>
+<TD width=62%>The measured impedance of the driver in free air.</TD>
+</TR>
+
+<TR VALIGN="top">
+<TD width=38%>Use this DC Res</TD>
+<TD width=62%>The DC resistance of the driver, if known.  If this is not checked, then the DC resistance will be estimated with the other T/S parameters.  If this is checked, the DC resistance will be as entered.</TD>
+</TR>
+
+<TR VALIGN="top">
+<TD width=38%>Impedance in Sealed Box</TD>
+<TD width=62%>The measured impedance of the driver in a closed box.</TD>
+</TR>
+
+<TR VALIGN="top">
+<TD width=38%>Sealed Volume</TD>
+<TD width=62%>The volume of the closed box for T/S parameter estimation.</TD>
+</TR>
+
+<TR VALIGN="top">
+<TD width=38%>Impedance with Added Mass</TD>
+<TD width=62%>The measured impedance of the driver when mass is added to the cone</TD>
+</TR>
+
+<TR VALIGN="top">
+<TD width=38%>Added Mass</TD>
+<TD width=62%>The amount of mass added to the cone.</TD>
+</TR>
+</TABLE><BR>
+
+<P>To change a dataset linkage, click the ? button next to the dataset name. This brings up the usual Select Dataset dialog where a dataset can be picked. To remove a dataset linkage just click the X button next to the dataset name.</P>
+
+<P>To select between the added mass and the delta compliance (sealed box) methods, just click the radio button on the left of the appropriate data set. Only one of these needs to be filled in to estimate driver parameters (you don’t use both added mass and sealed box methods).</P>
+
+<P>The units of measure for volume and mass are selectable, click the unit to switch between the various metric and English units.</P>
+
+</BODY>
+</HTML>

@@ -1,0 +1,69 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 3.2 Final//EN">
+<HTML>
+<HEAD>
+<META HTTP-EQUIV="Content-Type" Content="text/html; charset=Windows-1252">
+<TITLE>Optimize Network Dialog</TITLE>
+</HEAD>
+
+<BODY BGCOLOR="#FFFFFF" TEXT="#000000">
+
+<OBJECT TYPE="application/x-oleobject" CLASSID="clsid:1e2a7bd0-dab9-11d0-b93a-00c04fc99f9e">
+	<PARAM NAME="Keyword" VALUE="network, optimize dialog">
+	<PARAM NAME="Keyword" VALUE="optimize network dialog">
+</OBJECT>
+
+<H1><A NAME="gfr4e2"></A>Optimize Network dialog (Network, Optimize Network…)</H1>
+
+<P>Use this command to have Speaker Workshop attempt to pick the best component values to match a crossover+driver response to a desired goal response. This is not guaranteed to always work, and you may need to fiddle the frequency range / number of points / components to vary options until you get results you really like.</P>
+
+<TABLE cols=3 width=511>
+
+<TR VALIGN="top">
+<TD width=23%>Fields:</TD>
+<TD width=21%>&nbsp;</TD>
+<TD width=56%>&nbsp;</TD>
+</TR>
+
+<TR VALIGN="top">
+<TD width=23%>Frequency Range</TD>
+<TD width=21%>Start</TD>
+<TD width=56%>Set the lower frequency (for a woofer) to a point where the crossover has some impact, perhaps 1-2 octaves below the crossover frequency.</TD>
+</TR>
+
+<TR VALIGN="top">
+<TD width=23%>&nbsp;</TD>
+<TD width=21%>End</TD>
+<TD width=56%>Set the higher frequency (for a woofer) to the point where the desired response is down 20-40dB (say 1-2 octaves above the crossover frequency)</TD>
+</TR>
+
+<TR VALIGN="top">
+<TD width=23%>&nbsp;</TD>
+<TD width=21%>Number of Points</TD>
+<TD width=56%>Start with a small number of points (must be more than the number of components), say 10-20 and then increase the # of points as you zero in on a good result.</TD>
+</TR>
+
+<TR VALIGN="top">
+<TD width=23%>Target frequency response</TD>
+<TD colspan=2 width=77%>This is the goal you want the optimizer to match to. Make sure the level of this response is appropriate for the driver output (the driver’s frequency response dataset).</TD>
+</TR>
+
+<TR VALIGN="top">
+<TD width=23%>Components to vary</TD>
+<TD colspan=2 width=77%>You may wish to not have the optimizer act on some of the components, either to keep standard values for capacitors (for example) or to stop it from incorrectly removing impedance matching components. Check the components you DO want to have the optimizer work with.</TD>
+</TR>
+</TABLE><BR>
+
+<P>This command changes the current network. You can undo this.</P>
+
+<P>For best results, we recommend that you examine a chart containing the goal and the crossover response. Recalculate the crossover response after this completes and compare the two.</P>
+
+<P>Also, you may wish to add/subtract components based on the results of the optimize routine.</P>
+
+<P>Comments: this routine only works with a single driver in the network. It also requires just a single generator. The driver must have both a frequency response and an impedance (Driver Properties / Data tab).</P>
+
+<P><B>See also</B></P>
+
+<P><A HREF="spkr2u9d.htm">Data Entry</A></P>
+
+</BODY>
+</HTML>

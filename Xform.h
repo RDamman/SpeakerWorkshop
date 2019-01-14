@@ -16,7 +16,7 @@ protected:
 		CNamed    * m_cNewObject;
 
 public:
-		virtual UINT DoDialog( void) = NULL;			// xeq dbox
+		virtual INT_PTR DoDialog( void) = NULL;			// xeq dbox
 		virtual UINT GetDialog( void) = NULL;		// get the dialog id
 		virtual int  DoOperation( void) = NULL;		// do it
 		virtual UINT	GetNameID(void );

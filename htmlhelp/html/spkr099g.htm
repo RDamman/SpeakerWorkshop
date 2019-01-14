@@ -1,0 +1,80 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 3.2 Final//EN">
+<HTML>
+<HEAD>
+<META HTTP-EQUIV="Content-Type" Content="text/html; charset=Windows-1252">
+<TITLE>Drivers, Network Properties</TITLE>
+</HEAD>
+
+<BODY BGCOLOR="#FFFFFF" TEXT="#000000">
+
+<OBJECT TYPE="application/x-oleobject" CLASSID="clsid:1e2a7bd0-dab9-11d0-b93a-00c04fc99f9e">
+	<PARAM NAME="Keyword" VALUE="Network Properties, Drivers tab">
+</OBJECT>
+
+<H2><A NAME="kig4bd"></A>Drivers tab (Network Properties dialog)</H2>
+
+<P>This page contains settings for the drivers in the network. Networks can contain more than 1 driver (and more than 1 of each kind of driver). Select a driver in the driver list to edit the driver's properties, or use Add/Remove to change the driver complement.</P>
+
+<P>Driver List</P>
+
+<P>This is a list of drivers in the network.  Click</P>
+
+<TABLE cols=2 width=439>
+
+<TR VALIGN="top">
+<TD width=31%>Remove</TD>
+<TD width=69%>Remove a selected driver from the network.</TD>
+</TR>
+
+<TR VALIGN="top">
+<TD width=31%>Add new</TD>
+<TD width=69%>Add a new driver to the network - brings up the Select a Driver dialog..</TD>
+</TR>
+</TABLE><BR>
+
+<P>Each driver in the network has a number of editable properties.  They are:</P>
+
+<TABLE cols=2 width=439>
+
+<TR VALIGN="top">
+<TD width=31%>Name</TD>
+<TD width=69%>The display name of the driver. This can be different from the actual name of the driver.</TD>
+</TR>
+
+<TR VALIGN="top">
+<TD width=31%>Offset</TD>
+<TD width=69%>The linear offset of the driver.  This is relative to other drivers in the network and allows for sloped cabinets and physical driver offsets.</TD>
+</TR>
+
+<TR VALIGN="top">
+<TD width=31%>Flip Polarity</TD>
+<TD width=69%>Select this to simulate connecting the driver flipped (plus to ground, minus to signal). For crossovers where one driver may be connected out of phase.</TD>
+</TR>
+
+<TR VALIGN="top">
+<TD width=31%>Individual response</TD>
+<TD width=69%>Check this to have Speaker Workshop calculate the driver's individual response when calculating the total network response. This is used with the automatic overview chart feature.</TD>
+</TR>
+</TABLE><BR>
+
+<P>In addition, each driver's location and connections can be edited via:</P>
+
+<TABLE cols=2 width=439>
+
+<TR VALIGN="top">
+<TD width=21%>Nodes</TD>
+<TD width=79%>Which nodes this driver is connected to</TD>
+</TR>
+
+<TR VALIGN="top">
+<TD width=21%>Position</TD>
+<TD width=79%>X,Y location of the driver</TD>
+</TR>
+</TABLE><BR>
+
+<P>Node numbers are constantly recalculated, and are only valid during this dialog.  Connections based on the node numbers are sticky, however. Position information is based on a maximum size of 1024x1024 for the network.</P>
+
+<P>Obviously node numbers and locations are more easily set with the mouse in the network display using drag and drop.  See editing networks with the mouse.</P>
+
+</BODY>
+</HTML>

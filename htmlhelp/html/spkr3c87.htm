@@ -1,0 +1,82 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 3.2 Final//EN">
+<HTML>
+<HEAD>
+<META HTTP-EQUIV="Content-Type" Content="text/html; charset=Windows-1252">
+<TITLE>Kgoals, create dialog$Create Goal Dialog</TITLE>
+</HEAD>
+
+<BODY BGCOLOR="#FFFFFF" TEXT="#000000">
+
+<OBJECT TYPE="application/x-oleobject" CLASSID="clsid:1e2a7bd0-dab9-11d0-b93a-00c04fc99f9e">
+	<PARAM NAME="Keyword" VALUE="create goal dialog">
+</OBJECT>
+
+<H1><A NAME="kbaacg"></A>Create Goal dialog (Network, Create Goal…)</H1>
+
+<P>Use this command to build a goal dataset. This dataset simulates a perfect driver with a given crossover type.  The crossover frequency is based on a selected resonant frequency. The crossover base value is based on another dataset or driver or a given value.</P>
+
+<TABLE cols=3 width=511>
+
+<TR VALIGN="top">
+<TD width=16%>Fields:</TD>
+<TD width=28%>&nbsp;</TD>
+<TD width=56%>&nbsp;</TD>
+</TR>
+
+<TR VALIGN="top">
+<TD width=16%>&nbsp;</TD>
+<TD width=28%>Order</TD>
+<TD width=56%>Select 1st, 2nd, 3rd, or 4th order crossovers.</TD>
+</TR>
+
+<TR VALIGN="top">
+<TD width=16%>&nbsp;</TD>
+<TD width=28%>Style</TD>
+<TD width=56%>Select highpass (tweeter) or lowpass (woofer).</TD>
+</TR>
+
+<TR VALIGN="top">
+<TD width=16%>&nbsp;</TD>
+<TD width=28%>Type</TD>
+<TD width=56%>The types available are dependent on the order of the crossover.  E.g. a 1st order crossover must be Butterworth.  Second order can pick from Bessel, Butterworth, Chebychev, and Linkwitz-Riley.</TD>
+</TR>
+
+<TR VALIGN="top">
+<TD width=16%>&nbsp;</TD>
+<TD width=28%>Resonant frequency</TD>
+<TD width=56%>Select the resonant frequency.</TD>
+</TR>
+
+<TR VALIGN="top">
+<TD width=16%>&nbsp;</TD>
+<TD width=28%>Base Value</TD>
+<TD width=56%>Select a value for the base dataset.</TD>
+</TR>
+
+<TR VALIGN="top">
+<TD width=16%>&nbsp;</TD>
+<TD width=28%>Driver</TD>
+<TD width=56%>Select a driver to match to. This will match the base value to the driver’s frequency response at the selected frequency.</TD>
+</TR>
+
+<TR VALIGN="top">
+<TD width=16%>&nbsp;</TD>
+<TD width=28%>Dataset</TD>
+<TD width=56%>Pick a response dataset to match to. This will match the base value to the dataset’s amplitude at the selected frequency.</TD>
+</TR>
+
+<TR VALIGN="top">
+<TD width=16%>&nbsp;</TD>
+<TD width=28%>Frequency Start/End</TD>
+<TD width=56%>Pick a start and end frequency. The selected dataset or driver is averaged over this range to calculate the base value for the goal.</TD>
+</TR>
+</TABLE><BR>
+
+<P>This command creates a new dataset named <I>mynetwork</I>.Goal. If the Goal dataset already exists it is overwritten with the new goal values.</P>
+
+<P><B>See also</B></P>
+
+<P><A HREF="spkr2u9d.htm">Data Entry</A></P>
+
+</BODY>
+</HTML>

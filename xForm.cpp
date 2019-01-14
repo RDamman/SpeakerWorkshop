@@ -285,11 +285,11 @@ CXformLimit::~CXformLimit()
 {
 }
 
-UINT CXformLimit::DoDialog( )		// xeq dbox
+INT_PTR CXformLimit::DoDialog( )		// xeq dbox
 {
 CDataSet *cdSource = (CDataSet *)FindTargetObject();
 CDlgXfLimit cdlg;
-UINT uout;
+INT_PTR uout;
 
 				// fill the function with defaults for this dataset
 	cdlg.m_fCurrentMin = cdSource->Minimum( dataAmp);
@@ -312,7 +312,8 @@ UINT uout;
 int CXformLimit::DoOperation( )	// xeq xform
 {
 CDataSet *cdSource = (CDataSet *)FindTargetObject();
-int i, ncount;
+int i;
+INT_PTR ncount;
 INT32 idat;
 INT32 imin, imax;
 
@@ -353,10 +354,10 @@ CXformCorrelate::~CXformCorrelate()
 {
 }
 
-UINT CXformCorrelate::DoDialog( )		// xeq dbox
+INT_PTR CXformCorrelate::DoDialog( )		// xeq dbox
 {
 CDlgXfCorrelate cdlg;
-UINT uout;
+INT_PTR uout;
 CDataSet *cdSource = (CDataSet *)FindTargetObject();
 
 				// fill the function with defaults for this dataset
@@ -416,10 +417,10 @@ void CXformScale::SetVars( float fdB, float fFactor, int nMethod, BOOL bUseDb)
 }
 
 
-UINT CXformScale::DoDialog( )		// xeq dbox
+INT_PTR CXformScale::DoDialog( )		// xeq dbox
 {
 CDlgXfScale cdlg;
-UINT uout;
+INT_PTR uout;
 
 				// fill the function with defaults for this dataset
 	cdlg.m_cdSource = (CNamed *)FindTargetObject();
@@ -438,7 +439,8 @@ UINT uout;
 int CXformScale::DoOperation( )	// xeq xform
 {
 CDataSet *cdSource = (CDataSet *)FindTargetObject();
-int i, ncount;
+int i;
+INT_PTR ncount;
 float factor = m_fFactor;
 float fdata;
 int nmethod = m_nMethod;
@@ -539,10 +541,10 @@ CXformInvert::~CXformInvert()
 {
 }
 
-UINT CXformInvert::DoDialog( )		// xeq dbox
+INT_PTR CXformInvert::DoDialog( )		// xeq dbox
 {
 CDlgXfInvert cdlg;
-UINT uout;
+INT_PTR uout;
 
 	uout = cdlg.DoModal();
 
@@ -559,7 +561,8 @@ UINT uout;
 int CXformInvert::DoOperation( )	// xeq xform
 {
 CDataSet *cdSource = (CDataSet *)FindTargetObject();
-int i, ncount;
+int i;
+INT_PTR ncount;
 INT32 idat;
 BOOL bisdb;
 BOOL busephase;			// in case there is none
@@ -613,11 +616,11 @@ CXformTruncate::~CXformTruncate()
 {
 }
 
-UINT CXformTruncate::DoDialog( )		// xeq dbox
+INT_PTR CXformTruncate::DoDialog( )		// xeq dbox
 {
 CDataSet *cdSource = (CDataSet *)FindTargetObject();
 CDlgXfTruncate cdlg;
-UINT uout;
+INT_PTR uout;
 
 				// fill the function with defaults for this dataset
 
@@ -665,7 +668,8 @@ UINT uout;
 int CXformTruncate::DoOperation( )	// xeq xform
 {
 CDataSet *cdSource = (CDataSet *)FindTargetObject();
-int i, ncount;
+int i;
+INT_PTR ncount;
 INT32 idat, iphase;
 float fnow, fstart, fdelta;
 int j;
@@ -720,7 +724,7 @@ CXformExtend::~CXformExtend()
 {
 }
 
-UINT CXformExtend::DoDialog( )		// xeq dbox
+INT_PTR CXformExtend::DoDialog()		// xeq dbox
 {
 	return IDOK;
 }
@@ -773,9 +777,9 @@ int ncount;
 int CXformExtend::DoOperation( )	// xeq xform
 {
 CDataSet *cdSource = (CDataSet *)FindTargetObject();
-int i;
+INT_PTR i;
 INT32 idat, iphase;
-int ncount;
+INT_PTR ncount;
 int nmin, nmax;
 INT32 icomp;
 BOOL bphase = cdSource->HasPhase();
@@ -859,10 +863,10 @@ CXformSmooth::~CXformSmooth()
 {
 }
 
-UINT CXformSmooth::DoDialog( )		// xeq dbox
+INT_PTR CXformSmooth::DoDialog( )		// xeq dbox
 {
 CDlgXfSmooth cdlg;
-UINT uout;
+INT_PTR uout;
 
 				// fill the function with defaults for this dataset
 	m_nStyle = 0;
@@ -889,7 +893,7 @@ UINT uout;
 int CXformSmooth::DoOperation( void )	// xeq xform
 {
 CDataSet *cdSource = (CDataSet *)FindTargetObject();
-int i, ncount;
+INT_PTR i, ncount;
 double dsumx, dsumy;
 float *hpw, *hpi;
 double dwidth;					// window width based on m_nStyle
@@ -924,9 +928,9 @@ static const double dws[8] = { 1.0, 0.5, (1/3.0), 0.25, (1/6.0), 0.125, 0.1, (1/
 			{
 			case 0 :	// absolute averaging
 			case 2 :	// RMS averaging
-				hpw[i] = cdSource->DataValueAt( i, 1);	// convert to absolute
+				hpw[i] = cdSource->DataValueAt((int) i, 1);	// convert to absolute
 				if ( bhasphase)
-					hpi[i] = cdSource->PhaseValueAt( i);
+					hpi[i] = cdSource->PhaseValueAt((int) i);
 				else
 					hpi[i] = 0.0f;
 				break;
@@ -935,7 +939,7 @@ static const double dws[8] = { 1.0, 0.5, (1/3.0), 0.25, (1/6.0), 0.125, 0.1, (1/
 					cdSource->GetRectangularAt( ffreq, hpw+i, hpi+i);
 				else
 					{
-					hpw[i] = cdSource->DataValueAt( i, 1);	// convert to absolute
+					hpw[i] = cdSource->DataValueAt((int) i, 1);	// convert to absolute
 					hpi[i] = 0.0f;
 					}
 				break;
@@ -1031,10 +1035,10 @@ CXformDelay::~CXformDelay()
 {
 }
 
-UINT CXformDelay::DoDialog( void )		// xeq dbox
+INT_PTR CXformDelay::DoDialog( void )		// xeq dbox
 {
 CDlgXfDelay cdlg;
-UINT uout;
+INT_PTR uout;
 
 	cdlg.SetSource( (CNamed *)FindTargetObject());		// set the dialog's source object
 				// fill the function with defaults for this dataset
@@ -1053,7 +1057,7 @@ UINT uout;
 int CXformDelay::DoOperation( void )	// xeq xform
 {
 CDataSet *cdSource = (CDataSet *)FindTargetObject();
-int i, ncount;
+INT_PTR i, ncount;
 float fphase;
 double dtime;
 double dtotphase;
@@ -1221,7 +1225,7 @@ CDataSet *ptarget = (CDataSet *)cdDest;
 CDataSet *pdriver;
 CDataSet *pport;
 CFolder *proot;
-int i, ncount;
+INT_PTR i, ncount;
 float freq;
 ZComplex zcdriver, zcport;
 double ddiv;
@@ -1305,11 +1309,11 @@ CXformCombine::~CXformCombine()
 {
 }
 
-UINT CXformCombine::DoDialog( void )		// xeq dbox
+INT_PTR CXformCombine::DoDialog( void )		// xeq dbox
 {
 CDataSet *cdSource = (CDataSet *)FindTargetObject();
 CDlgXcAdd cdlg;
-UINT uout;
+INT_PTR uout;
 
 				// fill the function with defaults for this dataset
 	cdlg.m_dwSource = cdSource->GetID();			// so name can be filled in, and uom found
@@ -1333,7 +1337,7 @@ UINT uout;
 
 void	ExecuteCombine( CDataSet *cdTarget, CDataSet *cdOther, int nOperation)
 {
-int i, ncount;
+INT_PTR i, ncount;
 float freq;
 float fdat, fphase;
 double damp, ddat, dphase;
@@ -1351,8 +1355,8 @@ double damp, ddat, dphase;
 
 			freq = cdTarget->DataAt( dataFreq, i);		// get current freq
 
-			ddat = cdTarget->DataValueAt( i, 1);
-			dphase = cdTarget->PhaseValueAt(i);
+			ddat = cdTarget->DataValueAt((int) i, 1);
+			dphase = cdTarget->PhaseValueAt((int) i);
 			fdat = cdOther->DataValueAt( freq, 1);	// use freq in case of differing orgs
 			fphase = cdOther->PhaseValueAt(freq );
 
@@ -1403,8 +1407,8 @@ double damp, ddat, dphase;
 					ShowProgressBar( (100 * i) / ncount);
 				freq = cdTarget->DataAt( dataFreq, i);		// get current freq
 
-				ddat = cdTarget->DataValueAt( i, 0);
-				dphase = cdTarget->PhaseValueAt(i, 0);
+				ddat = cdTarget->DataValueAt((int) i, 0);
+				dphase = cdTarget->PhaseValueAt((int) i, 0);
 				fdat = cdOther->DataValueAt( freq, 0);		// don't use I, use frequency
 				fphase = cdOther->PhaseValueAt(freq, 0 );
 
@@ -1438,8 +1442,8 @@ double damp, ddat, dphase;
 					ShowProgressBar( (100 * i) / ncount);
 				freq = cdTarget->DataAt( dataFreq, i);		// get current freq
 
-				ddat = cdTarget->DataValueAt( i, 1);
-				dphase = cdTarget->PhaseValueAt(i, 0);
+				ddat = cdTarget->DataValueAt((int) i, 1);
+				dphase = cdTarget->PhaseValueAt((int) i, 0);
 				fdat = cdOther->DataValueAt( freq, 1);
 				fphase = cdOther->PhaseValueAt(freq, 0 );
 
@@ -1516,7 +1520,7 @@ int CXformDistort::DoOperation( CNamed *cDest )	// xeq xform
 {
 CDataSet *cdSource = (CDataSet *)FindTargetObject();
 CDataSet *cdest = (CDataSet *)cDest;
-int i, ncount;
+INT_PTR i, ncount;
 double fdat;
 double damp, ddat, dphase;
 int nfinal;
@@ -1535,8 +1539,8 @@ int nfinal;
 
 	for ( i=nfinal; i <ncount; i++)
 		{
-		ddat = cdSource->DataValueAt( i, 1);		// and data value (absolute)
-		dphase = cdSource->PhaseValueAt(i, 0 );
+		ddat = cdSource->DataValueAt((int) i, 1);		// and data value (absolute)
+		dphase = cdSource->PhaseValueAt((int) i, 0 );
 
 		damp = ddat / fdat;
 
@@ -1564,7 +1568,7 @@ int CXformIntermod::DoOperation( CNamed *cDest )	// xeq xform
 CDataSet *cdSource = (CDataSet *)FindTargetObject();
 CDataSet *cdest = (CDataSet *)cDest;
 
-int i, ncount;
+INT_PTR i, ncount;
 double fdat;
 double damp, ddat, dphase;
 int nfinal;
@@ -1582,8 +1586,8 @@ int nfinal;
 
 	for ( i=0; i <nfinal; i++)
 		{
-		ddat = cdSource->DataValueAt( i, 1);
-		dphase = cdSource->PhaseValueAt(i, 0 );
+		ddat = cdSource->DataValueAt((int) i, 1);
+		dphase = cdSource->PhaseValueAt((int) i, 0 );
 
 		damp = ddat / fdat;
 
@@ -1624,7 +1628,7 @@ int CXformImpedance::DoOperation( CNamed *cdDest )	// xeq xform
 {
 CDataSet *cdSource = (CDataSet *)FindTargetObject();
 CDataSet *cdnew = (CDataSet *)cdDest;
-int i, ncount;
+INT_PTR i, ncount;
 float freq;
 CDataSet *ccalib = (CDataSet *)GetOther();
 ZComplex zc, za;

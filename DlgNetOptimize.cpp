@@ -282,11 +282,11 @@ CXtNetOptimize::~CXtNetOptimize()
 }
 
 
-UINT CXtNetOptimize::DoDialog( )		// xeq dbox
+INT_PTR CXtNetOptimize::DoDialog()		// xeq dbox
 {
 CDlgNetOptimize cdlg;
 CNetwork *cname;
-UINT uout;
+INT_PTR uout;
 
 	cname = (CNetwork *)FindTargetObject();
 

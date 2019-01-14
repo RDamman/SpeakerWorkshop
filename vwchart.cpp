@@ -69,7 +69,7 @@ void CAudChartView::OnDraw(CDC* pDC)
 /////////////////////////////////////////////////////////////////////////////
 // CAudChartView printing
 
-LONG CAudChartView::OnLocationGone( WPARAM , LPARAM  )
+LRESULT CAudChartView::OnLocationGone( WPARAM , LPARAM  )
 {
 	m_pLocations = NULL;
     return 0L;

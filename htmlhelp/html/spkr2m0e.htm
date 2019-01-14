@@ -1,0 +1,86 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 3.2 Final//EN">
+<HTML>
+<HEAD>
+<META HTTP-EQUIV="Content-Type" Content="text/html; charset=Windows-1252">
+<TITLE>Sealed Dialog</TITLE>
+</HEAD>
+
+<BODY BGCOLOR="#FFFFFF" TEXT="#000000">
+
+<OBJECT TYPE="application/x-oleobject" CLASSID="clsid:1e2a7bd0-dab9-11d0-b93a-00c04fc99f9e">
+	<PARAM NAME="Keyword" VALUE="sealed dialog">
+</OBJECT>
+
+<H1><A NAME="1ogkxu."></A>Sealed dialog (Calculate Sealed for Enclosures)</H1>
+
+<P>Use this dialog to select an optimum sealed box enclosure for a specific driver.  </P>
+
+<TABLE cols=3 width=511>
+
+<TR VALIGN="top">
+<TD width=17%>Fields</TD>
+<TD width=27%>&nbsp;</TD>
+<TD width=56%>&nbsp;</TD>
+</TR>
+
+<TR VALIGN="top">
+<TD width=17%>&nbsp;</TD>
+<TD width=27%>Alignment</TD>
+<TD width=56%>Use this to select one of the standard alignments (Custom implies not one of the standards).</TD>
+</TR>
+
+<TR VALIGN="top">
+<TD width=17%>&nbsp;</TD>
+<TD width=27%>Total System Q</TD>
+<TD width=56%>The Q of the enclosure / driver system.  This is set one a standard alignment is picked.  This can also be edited to select an system Q.</TD>
+</TR>
+
+<TR VALIGN="top">
+<TD width=17%>&nbsp;</TD>
+<TD width=27%>Series Resistance</TD>
+<TD width=56%>Enter any known resistance in the crossover as well as expected cable resistance.</TD>
+</TR>
+
+<TR VALIGN="top">
+<TD width=17%>&nbsp;</TD>
+<TD width=27%>Number of Drivers</TD>
+<TD width=56%>If there is more than one driver in the enclosure, enter the number of drivers.</TD>
+</TR>
+
+<TR VALIGN="top">
+<TD width=17%>&nbsp;</TD>
+<TD width=27%>Results</TD>
+<TD width=56%>This displays the results of selecting an Alignment/Q/Resistance. The box volume is for all drivers together if you have selected more than 1 driver.</TD>
+</TR>
+
+<TR VALIGN="top">
+<TD width=17%>Commands</TD>
+<TD width=27%>&nbsp;</TD>
+<TD width=56%>&nbsp;</TD>
+</TR>
+
+<TR VALIGN="top">
+<TD width=17%>&nbsp;</TD>
+<TD width=27%>Compare</TD>
+<TD width=56%>Press this command button to compare the box based on the dialog entries to the current box.  See below.</TD>
+</TR>
+</TABLE><BR>
+
+<P>This command requires that a valid driver be entered into the enclosure (see <A HREF="spkr2v5k.htm">Enclosure Properties</A>) and the driver has valid T/S parameters.  Get Speaker Workshop to estimate the driver T/S parameters (via impedance measurements) or enter them manually prior to executing this command.</P>
+
+<P>This command changes the current properties of the enclosure, to match the settings selected in the Sealed dialog.</P>
+
+<P><B>The Compare Command</B></P>
+
+<P>When you press the Compare button, Speaker Workshop builds an enclosure named “Compare” in the System directory, generates the desired curves for the compare enclosure (based on the menu settings) and charts the Compare frequency response vs the current frequency response on-screen.</P>
+
+<P>Note that the Compare enclosure and associated datasets are not deleted when you exit this dialog!  This allows you to create comparison charts for other than frequency response (using the Compare.xxx datasets and the current datasets) and then using the Sealed dialog you can compare impedance, cone excursion, and group delay.</P>
+
+<P>For example, after running the Sealed dialog once, open the <I>myenclosure.Group Delay</I> dataset, Add the <I>System\Compare.Group Delay</I> dataset and then bring up the Sealed dialog again (while keeping the group delay dataset visible on screen).  As you press compare you will note that the secondary chart (group delay) also changes each time the command is executed.</P>
+
+<P><B>See also</B></P>
+
+<P><A HREF="spkr2u9d.htm">Data Entry</A></P>
+
+</BODY>
+</HTML>

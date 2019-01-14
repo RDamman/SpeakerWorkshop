@@ -237,7 +237,7 @@ BOOL CDlgCalWizLoopEnd::OnSetActive()
 	return CPropertyPage::OnSetActive();
 }
 
-void CDlgCalWizLoopEnd::OnTimer(UINT nIDEvent) 
+void CDlgCalWizLoopEnd::OnTimer(UINT_PTR nIDEvent) 
 {
 	CPropertySheet *cwnd = (CPropertySheet *)GetParent();
 

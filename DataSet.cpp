@@ -5,6 +5,7 @@
 #include "stdafx.h"
 #include "audtest.h"
 
+#include "audtedoc.h"
 #include "zFormEdt.h"
 #include "dataset.h"
 #include "dlgdatas.h"
@@ -91,7 +92,14 @@ WORD w;
 	}
 	else
 	{								// loading code here 
-		ar >>  m_tTime;
+		if (CAudtestDoc::GetCurrentFileVersion() < 1236)
+		{
+			__time32_t timeHelp;
+			ar >> timeHelp;
+			m_tTime = timeHelp;
+		}
+		else
+			ar >> m_tTime;
 		ar >>  dw; m_nIdGenerator = (int )dw;
 		ar >> m_fStart;
 		ar >> m_fDelta;
@@ -340,7 +348,8 @@ float fx, fy;
 void CDataSet::GetRectangularAt( float fFreq, float *fX, float *fY)
 {
 INT32 dwamp, dwphase;
-float fd, fangle;
+float fd;
+double fangle;
 int ncoord;
 float fdif;
 

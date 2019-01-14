@@ -1,0 +1,129 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 3.2 Final//EN">
+<HTML>
+<HEAD>
+<META HTTP-EQUIV="Content-Type" Content="text/html; charset=Windows-1252">
+<TITLE>Designing an Enclosure</TITLE>
+</HEAD>
+
+<BODY BGCOLOR="#FFFFFF" TEXT="#000000">
+
+<OBJECT TYPE="application/x-oleobject" CLASSID="clsid:1e2a7bd0-dab9-11d0-b93a-00c04fc99f9e">
+	<PARAM NAME="Keyword" VALUE="Enclosure, design">
+</OBJECT>
+
+<H1><A NAME="j2c8v1"></A>How to Design an Enclosure</H1>
+
+<P>When designing the enclosure, the most important variable is the <B>volume</B> of the enclosure. The volume of the enclosure determines the low frequency response of the driver. In a ported enclosure, the port size also determines the low frequency response of the driver. In a sealed box, the filling will tend to increase the apparent volume of the enclosure - take this into account.</P>
+
+<P>Assuming that you have a driver resource created and the T/S parameters are accurately entered into the driver properties, </P>
+
+<H2>Step by Step</H2>
+
+<TABLE cols=2 width=571>
+
+<TR VALIGN="top">
+<TD width=28%>1. Create an <B>enclosure</B></TD>
+<TD width=72%>Create a new enclosure (Resource New Enclosure)</TD>
+</TR>
+
+<TR VALIGN="top">
+<TD width=28%>2. Attach the driver resource to the enclosure</TD>
+<TD width=72%>Edit the enclosure properties (Edit Properties command) and click the Select button.  This will let you pick a driver from the tree to attach to the enclosure. Click OK</TD>
+</TR>
+
+<TR VALIGN="top">
+<TD width=28%>3. Execute the Driver <B>Sealed</B> or Driver <B>Vented</B> command</TD>
+<TD width=72%>Depending on whether you want a sealed enclosure or a vented enclosure select the appropriate command. If you just want to check an existing enclosure, enter values manually using the <B>Edit Properties</B> command.</TD>
+</TR>
+
+<TR VALIGN="top">
+<TD width=28%>4. Fiddle the parameters</TD>
+<TD width=72%>Select alignment, Q, series resistance and use the compare button to compare results with your current box definition.</TD>
+</TR>
+</TABLE><BR>
+
+<H2>More detail</H2>
+
+<P>Speaker workshop supports two types of enclosures - sealed and ported (or vented).  </P>
+
+<P>Sealed vs Vented decision</P>
+
+<TABLE cols=3 width=543>
+
+<TR VALIGN="top">
+<TD width=32%>&nbsp;</TD>
+<TD width=29%><B>Sealed</B></TD>
+<TD width=39%><B>Vented</B></TD>
+</TR>
+
+<TR VALIGN="top">
+<TD width=32%><B>Low frequency response</B></TD>
+<TD width=29%>Drop off early</TD>
+<TD width=39%>Extends lower</TD>
+</TR>
+
+<TR VALIGN="top">
+<TD width=32%>&nbsp;</TD>
+<TD width=29%>Slow drop</TD>
+<TD width=39%>Quick drop</TD>
+</TR>
+
+<TR VALIGN="top">
+<TD width=32%><B>Transient Response</B></TD>
+<TD width=29%>Can be perfect</TD>
+<TD width=39%>Tends to (audibly?) ring more</TD>
+</TR>
+
+<TR VALIGN="top">
+<TD width=32%><B>Power Handling</B></TD>
+<TD width=29%>Good</TD>
+<TD width=39%>Better near port resonance, worse at very low frequencies - may require a rumble filter</TD>
+</TR>
+
+<TR VALIGN="top">
+<TD width=32%><B>Distortion</B></TD>
+<TD width=29%>Good</TD>
+<TD width=39%>Better near port resonance</TD>
+</TR>
+
+<TR VALIGN="top">
+<TD width=32%><B>Box volume</B></TD>
+<TD width=29%>Smaller</TD>
+<TD width=39%>Larger</TD>
+</TR>
+
+<TR VALIGN="top">
+<TD width=32%><B>Tuning</B></TD>
+<TD width=29%>Easy</TD>
+<TD width=39%>More critical of port tuning and box volume</TD>
+</TR>
+
+<TR VALIGN="top">
+<TD width=32%><B>Driver Q</B></TD>
+<TD width=29%>Use QTS between .3 and .6</TD>
+<TD width=39%>Optimal QTS is ~.3, others are usable but less acceptable.</TD>
+</TR>
+</TABLE><BR>
+
+<P>Essentially a ported enclosure will go lower but requires a larger box and more critical tuning of the box. Here’s an example of a ported vs sealed frequency response comparison. </P>
+
+<P><IMG SRC="../images/bm13.gif" ALT="" BORDER=0></P>
+
+<P>In order to calculate response, the driver T/S parameters must be accurate.  These can be entered from specifications or they can be measured (see <A HREF="spkr61dh.htm">Measuring T/S Parameters</A></P>
+
+<P>After the box volume, other parameters of interest include the box dimensions and the front baffle dimensions.</P>
+
+<P>The box dimensions should be selected more or less by golden ratio (1.6) so that the three dimensions are 1:1.6:2.5  any ratios other than that will cause internal irregularities in frequency response.  These are not major and this rule is often ignored.</P>
+
+<P>The front baffle causes a frequency response rise because of changes from full-space to half-space.  When the sound wavelength is much larger than the front baffle dimensions then the sound works in full-space (wraps around the speaker and radiates in all directions).  When the sound wavelength is less than the front baffle dimensions the sound works in half-space (most of the sound is radiated towards the front) which causes a 6dB step in the response at the frequency where the wavelength switches from greater than to less than the baffle dimensions.  Not only is there a frequency response step, but the radiation pattern obviously changes at that frequency.</P>
+
+<P>To minimize these effects, the front baffle should be as small as possible and the edges of the baffle should be heavily radiused.</P>
+
+<P>Another thing to consider with regards to enclosures is resonances of the enclosure walls.  An enclosure wall is a flexing object and it can resonate.  To minimize resonances use plenty of internal bracing in the enclosure - the larger the wall the more bracing is required.  This is particularly critical for the front panel (where most resonances become audible).  Generally the front panel of an enclosure is very thick (perhaps two wood depths) and well-braced.</P>
+
+<P>Finally, there is wood selection.  The best wood to use is called MDF (medium density fiberboard).  Get MDF that is uniform throughout - without gaps in the internal fiberboard.  Using standard HDF (high density fiberboard) is not nearly as good - it will resonate more than MDF.  You can also use uniform plywood (some veneered plywoods are very good) or a sandwich of MDF and plywood.  More exotic materials (such as cement) may work well but are well beyond the scope of this help file.</P>
+
+<P>Do not use a medium density natural wood (such as ash).  It will resonate far more than MDF.  Some manufacturers like low-density natural woods (such as pine) and high-density natural woods (usually exotics), but MDF is cheaper and actually as good as or better than these woods. MDF is available (perhaps by special order) from most general lumber / hardware stores such as Home Depot.</P>
+
+</BODY>
+</HTML>

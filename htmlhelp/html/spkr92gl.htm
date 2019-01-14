@@ -1,0 +1,96 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 3.2 Final//EN">
+<HTML>
+<HEAD>
+<META HTTP-EQUIV="Content-Type" Content="text/html; charset=Windows-1252">
+<TITLE>Adding notes to charts</TITLE>
+</HEAD>
+
+<BODY BGCOLOR="#FFFFFF" TEXT="#000000">
+
+<OBJECT TYPE="application/x-oleobject" CLASSID="clsid:1e2a7bd0-dab9-11d0-b93a-00c04fc99f9e">
+	<PARAM NAME="Keyword" VALUE="Adding notes to charts">
+	<PARAM NAME="Keyword" VALUE="notes, chart editing">
+</OBJECT>
+
+<H1><A NAME="3a9u53u"></A>Adding notes to charts (annotation)</H1>
+
+<P>Much of your time with Speaker Workshop is spent looking at charts and graphs.  It is easy to add notes to charts so that you can keep track of specific issues with datasets.</P>
+
+<TABLE cols=1 width=531>
+
+<TR VALIGN="top">
+<TD width=100%>NOTE: Although you can add notes to dataset charts (and other charts) only resources called “Chart” have the notes saved when you do a save. If you want to keep your notes around, create a chart (Resource / New / Chart) and use it to display your datasets and notes.</TD>
+</TR>
+</TABLE><BR>
+
+<TABLE cols=2 width=481>
+
+<TR VALIGN="top">
+<TD width=38%>To add a note to a chart.</TD>
+<TD width=62%>Select Chart / Note (in the menu) or use the right mouse button in the view and select Note…</TD>
+</TR>
+
+<TR VALIGN="top">
+<TD width=38%>To edit an existing note</TD>
+<TD width=62%>Double-click the note in the chart</TD>
+</TR>
+
+<TR VALIGN="top">
+<TD width=38%>To delete a note</TD>
+<TD width=62%>Select the note and use Edit / Delete (or right mouse button Delete from the menu)</TD>
+</TR>
+
+<TR VALIGN="top">
+<TD width=38%>To move a note</TD>
+<TD width=62%>To move a note on-screen highlight the note (click on it) then press inside the box or on the box and drag the box where you want the note to be placed</TD>
+</TR>
+
+<TR VALIGN="top">
+<TD width=38%>To change a note frequency (time) spot</TD>
+<TD width=62%>Double-click the note and change the frequency/time in the Note Properties dialog.</TD>
+</TR>
+
+<TR VALIGN="top">
+<TD width=38%>To get multiple line notes</TD>
+<TD width=62%>Press Ctrl+Enter at the end of the line in the Text edit box to get a new line</TD>
+</TR>
+</TABLE><BR>
+
+<P>Notes are text box areas that are attached to a specific frequency (or time) in a dataset. When you create a note you select what frequency to attach it to. The text box then has a line that goes from the box to the data point you have selected. You can move the box and the line will stay connected to the data point. You can move the frequency (via Edit Properties) as well.</P>
+
+<P>If you just want a note in a chart you can turn off the connecting line, but the box is always defined at a specific frequency (time).</P>
+
+<P>Speaker Workshop allows you to use some data fields when defining a note. These fields are all started with a % sign:</P>
+
+<TABLE cols=2 width=512>
+
+<TR VALIGN="top">
+<TD width=16%>%f</TD>
+<TD width=84%>The frequency the note is attached to</TD>
+</TR>
+
+<TR VALIGN="top">
+<TD width=16%>%y<I>d</I></TD>
+<TD width=84%>The data value. The <I>d</I> is optional and signifies a specific dataset (the default is to use the attached dataset). E.g. %1y uses the first dataset, %y2 uses the second dataset.</TD>
+</TR>
+
+<TR VALIGN="top">
+<TD width=16%>%p<I>d</I></TD>
+<TD width=84%>The phase value. The d is optional and signifies a specific dataset.</TD>
+</TR>
+</TABLE><BR>
+
+<P>For example, assume the note is attached to a dataset at 950 Hz with a data value of 12.3dB at that point. The string</P>
+
+<P>Using %fHz with value %y1dB</P>
+
+<P>will show on-screen as</P>
+
+<P>Using 950Hz with value 12.3dB</P>
+
+<P>If you change the frequency the note is attached to, the field values shown will change in keeping with the frequency shift.</P>
+
+<P>See Also <A HREF="spkr19h1.htm">Note Edit Properties Dialog</A></P>
+
+</BODY>
+</HTML>

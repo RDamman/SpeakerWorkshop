@@ -173,7 +173,7 @@ WORD w;
 			{
 			m_cDataLines.GetAt(i)->Serialize(ar);
 			}
-		int itags = m_cTags.GetSize();
+		INT_PTR itags = m_cTags.GetSize();
 
 		ar << itags;
 
@@ -308,7 +308,7 @@ int CSubChart::Attach( DWORD dwID, BOOL bUsePhase)
 {
 CDataLine *cnew;
 CObjColor *cclr;
-int nsize = m_cDataLines.GetSize();
+INT_PTR nsize = m_cDataLines.GetSize();
 CDataSet *pdata = NULL;
 ColorDefinition cdef;
 UNITMSR uuom;
@@ -492,8 +492,8 @@ CDataSet *cdata;
 CRect rcDraw;
 CRect rcuse;
 CPtrArray psData;				// array of all datasets
-float fXoffset;					// the offset per item
-float fYoffset;					// the offset per item
+double fXoffset;					// the offset per item
+double fYoffset;					// the offset per item
 
 	psData.SetSize(0,10);		// make it ten max, ten growth
 

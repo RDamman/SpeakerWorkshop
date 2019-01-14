@@ -288,8 +288,19 @@ void CNamed::Serialize(CArchive& ar)
 		ar >> m_szName;
 		ar >> m_szDescription;
 		ar >> m_dwID;
-		ar >> m_tCreated;			// date and time created
-		ar >> m_tLastEdit;			// date and time of last edit
+		if (CAudtestDoc::GetCurrentFileVersion() < 1236)
+		{
+			__time32_t timeHelp;
+			ar >> timeHelp;
+			m_tCreated = timeHelp;			// date and time created
+			ar >> timeHelp;
+			m_tLastEdit = timeHelp;			// date and time of last edit
+		}
+		else
+		{
+			ar >> m_tCreated;			// date and time created
+			ar >> m_tLastEdit;			// date and time of last edit
+		}
 		ar >> m_dwAttributes;
 		CheckID( m_dwID);			// make it unique
 		if ( ar.m_pDocument)		// from file open or save

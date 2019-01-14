@@ -77,7 +77,7 @@ public:
 protected:
 	// Generated message map functions
 	//{{AFX_MSG(CDlgCalWizImpEnd)
-	afx_msg void OnTimer(UINT nIDEvent);
+	afx_msg void OnTimer(UINT_PTR nIDEvent);
 	afx_msg void OnMeasured();
 	//}}AFX_MSG
 	DECLARE_MESSAGE_MAP()
@@ -167,7 +167,7 @@ public:
 protected:
 	// Generated message map functions
 	//{{AFX_MSG(CDlgCalWizImpJig2)
-	afx_msg void OnTimer(UINT nIDEvent);
+	afx_msg void OnTimer(UINT_PTR nIDEvent);
 	virtual BOOL OnInitDialog();
 	afx_msg void OnDeltaposSpin1(NMHDR* pNMHDR, LRESULT* pResult);
 	//}}AFX_MSG

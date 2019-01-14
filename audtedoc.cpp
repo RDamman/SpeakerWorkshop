@@ -33,8 +33,7 @@
 static char BASED_CODE THIS_FILE[] = __FILE__;
 #endif
 
-#define FILE_VERSION 1235
-
+int CAudtestDoc::s_iCurrentFileVersion = FILE_VERSION;
 /////////////////////////////////////////////////////////////////////////////
 // CAudtestDoc
 
@@ -75,7 +74,7 @@ CAudtestDoc::CAudtestDoc()	: m_cRoot(), m_cOpcodeQueue()
 	m_cRoot.SetRootObject( &m_cRoot);
 	m_cRoot.SetDocument( this);
 	m_cRoot.SetAttributes( ATTRIB_READONLY | ATTRIB_SYSTEM);
-	m_cRoot.SetName("Root");
+	m_cRoot.SetName(CString("Root"));
 
 	{
 	CFolder *psys = new CFolder();
@@ -83,7 +82,7 @@ CAudtestDoc::CAudtestDoc()	: m_cRoot(), m_cOpcodeQueue()
 			{
 			CString csi;
 			csi.LoadString( IDS_SYSDESCRIPT);
-			psys->SetName("System");
+			psys->SetName(CString("System"));
 			psys->SetDescription( csi);
 			psys->SetAttributes( ATTRIB_READONLY | ATTRIB_SYSTEM);
 			m_cRoot.AddItem( psys);
@@ -170,7 +169,8 @@ WORD w = FILE_VERSION;
 		{
 			// loading code here
 		ar >> w;
-		if ( w < (FILE_VERSION-1) || w > FILE_VERSION)
+		CAudtestDoc::SetCurrentFileVersion(w);
+		if ( w < (1234) || w > FILE_VERSION)
 			return;
 
 		if ( m_dwSystem)			// we have built a system folder...
@@ -461,7 +461,7 @@ CString cs2;					// type name
 	if (! cs.Right(4).CompareNoCase(_T(".swd")) )		// it is an swd file
 		cs = cs.Left( cs.GetLength() - 4);			// strip the suffix
 	if ( CAudtestApp::GetShowLongTitle())
-		cs += ":" + cTarget->GetName();						// name
+		cs += _T(":") + cTarget->GetName();						// name
 	else
 		cs = cTarget->GetName();						// name
 
@@ -563,9 +563,7 @@ void			CAudtestDoc::AddOpcode(COpCode *cNew)
 {
 	if ( m_nUndoLocation < m_cOpcodeQueue.GetSize())	// hmm, truncate the queue
 		{
-		int i;
-
-			for ( i=m_cOpcodeQueue.GetSize()-1; i >= m_nUndoLocation; i--)
+			for (INT_PTR i=m_cOpcodeQueue.GetSize()-1; i >= m_nUndoLocation; i--)
 				{
 				delete m_cOpcodeQueue.GetAt(i);
 				m_cOpcodeQueue.RemoveAt(i);

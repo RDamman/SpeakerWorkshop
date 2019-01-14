@@ -69,7 +69,7 @@ class CXtAddPassive : public CXunary
 		CString		m_csName;
 
 	public:
-		virtual UINT DoDialog( void);		// xeq dbox
+		virtual INT_PTR DoDialog(void);		// xeq dbox
 		virtual UINT GetDialog(void);		// get the dialog id
 		virtual int  DoOperation( void);		// do it
 		UINT GetNameID();

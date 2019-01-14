@@ -1,0 +1,89 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 3.2 Final//EN">
+<HTML>
+<HEAD>
+<META HTTP-EQUIV="Content-Type" Content="text/html; charset=Windows-1252">
+<TITLE>Estimate Parameters Dialog</TITLE>
+</HEAD>
+
+<BODY BGCOLOR="#FFFFFF" TEXT="#000000">
+
+<OBJECT TYPE="application/x-oleobject" CLASSID="clsid:1e2a7bd0-dab9-11d0-b93a-00c04fc99f9e">
+	<PARAM NAME="Keyword" VALUE="estimate parameters dialog">
+</OBJECT>
+
+<H1><A NAME="eokoxl"></A>Estimate Parameters dialog</H1>
+
+<P>This dialog lets you set a frequency range for estimating the driver T/S parameters. Do this when some of the data for the driver is invalid, overly noisy, or just not relevant. You can also decide to not estimate the free air parameters again, if you are just trying to fit sealed box or added mass data.</P>
+
+<P>Set the low frequency limit so that the very first zero-phase crossing after the low frequency limit is the one corresponding to the resonant hump (if you are using two impedance charts make sure both charts work with the low frequency limit). Set the high frequency limit so as to clip off overly noisy high frequency data.</P>
+
+<P>If you are using Sealed Box data, make sure the sealed box volume is set correctly. If you are using Added Mass data make sure the added mass and the piston area parameters are set correctly (you can get piston area from the driver specifications).</P>
+
+<P>Estimate Parameters uses the driver Free Air impedance curve and Sealed Box (or Added Mass) Impedance curve to calculate the T/S parameters.  If there is no Sealed Box (or Added Mass) dataset, this command will still estimate most of the T/S parameters.  If the DC Resistance field (in Driver Properties) is filled in, and checked on, then this value will be used rather than estimated.  For best results, measure the DC resistance of the driver using a good quality ohmmeter (if possible, accurate to .1 ohms). This will work better than any parametric estimate.</P>
+
+<P>Once this command completes, a dataset is created named <I>mydriver</I>.Estimate.  It contains the calculated impedance based on the new T/S drivers.  Compare this with the Free Air impedance to make sure that the command has completed successfully and that the estimated T/S parameters provide a good fit.  </P>
+
+<P>If the fit seems way off, perhaps an impedance has end range data that is invalid, or you have asked it to estimate the DC resistance and the data indicates too low a resistance.  Reduce the frequency range to clip those pesky off-data points and re-estimate.</P>
+
+<P>Note: because the estimation is based on a multivariate optimization there is no real way to know when it will end.  As a result, the progress bar at the bottom is a guide only.  It may fill before the operation completes (in which case it cycles again).</P>
+
+<TABLE cols=2 width=421>
+
+<TR VALIGN="top">
+<TD width=40%>Estimated T/S parameter</TD>
+<TD width=60%>Description</TD>
+</TR>
+</TABLE><BR>
+
+<TABLE cols=2 width=397>
+
+<TR VALIGN="top">
+<TD width=36%>RE</TD>
+<TD width=64%>DC Resistance</TD>
+</TR>
+
+<TR VALIGN="top">
+<TD width=36%>QMS</TD>
+<TD width=64%>Mechanical Q</TD>
+</TR>
+
+<TR VALIGN="top">
+<TD width=36%>QES</TD>
+<TD width=64%>Electrical Q</TD>
+</TR>
+
+<TR VALIGN="top">
+<TD width=36%>QTS</TD>
+<TD width=64%>Q of the total system</TD>
+</TR>
+
+<TR VALIGN="top">
+<TD width=36%>VAS</TD>
+<TD width=64%>Compliance (only if sealed box data is provided)</TD>
+</TR>
+
+<TR VALIGN="top">
+<TD width=36%>LE</TD>
+<TD width=64%>Voice Coil effective Inductance</TD>
+</TR>
+
+<TR VALIGN="top">
+<TD width=36%>RE1</TD>
+<TD width=64%>Series DC Resistance</TD>
+</TR>
+
+<TR VALIGN="top">
+<TD width=36%>LE1</TD>
+<TD width=64%>Series Voice Coil Inductance</TD>
+</TR>
+
+<TR VALIGN="top">
+<TD width=36%>FS</TD>
+<TD width=64%>Resonant frequency in free air</TD>
+</TR>
+</TABLE><BR>
+
+<P>Note that estimation uses a slightly more sophisticated model than the standard T/S model, in that there is a parallel RL circuit added in series with the LE inductance.  This method seems to produce a tighter fit than the simpler T/S circuit.</P>
+
+</BODY>
+</HTML>

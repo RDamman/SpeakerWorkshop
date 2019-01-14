@@ -341,8 +341,13 @@ DWORD dwid;
 		return;
 	dwid = cname->GetID();		// do it before the edit properties, since that does a change
 
-	if ( IDOK == cname->EditProperties( this))
-		pDoc->UpdateAll( NULL, dwid);
+	//CObject *cgot = NULL;
+	//if (dynamic_cast<const CNetwork*>(cname))
+	//	cgot = ((CNetwork *)cname)->GetHighlighted();
+	//if (IDOK == cname->EditProperties(this, cgot))
+
+	if (IDOK == cname->EditProperties(this, NULL))
+		pDoc->UpdateAll(NULL, dwid);
 	
 }
 
@@ -518,6 +523,7 @@ void CAudtestView::OnLButtonDown(UINT nFlags, CPoint point)
 void CAudtestView::OnRButtonDown(UINT nFlags, CPoint point) 
 {
 	m_ptMouseDown = point;
+	m_ptMouseDownRight = point;
 
 	CView::OnRButtonDown(nFlags, point);
 }
